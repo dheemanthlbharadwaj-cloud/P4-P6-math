@@ -5,7 +5,7 @@ import {
 } from "../src/logic/dates";
 import { buildEntries, pickMedalWinners, rankDeltas, rankMap, sortRows } from "../src/logic/ranking";
 import { isContentVersionAccepted, isFriendCode, makeFriendCode, normalizeFriendCode, pairId, validateFriendRequest, validateLevelResult, validatePurchase, validateReferral } from "../src/logic/rules";
-import { authHeaderMatches, isActiveAt, mapRevenueCatEvent, pickUid } from "../src/logic/revenuecat";
+import { authHeaderMatches, isActiveAt, isSubscribed, mapRevenueCatEvent, pickUid } from "../src/logic/revenuecat";
 import { timingSafeEqual } from "node:crypto";
 
 const utc = (s: string) => Date.parse(s);
@@ -202,5 +202,26 @@ describe("revenuecat", () => {
     expect(authHeaderMatches("nope", "s3cret", timingSafeEqual)).toBe(false);
     expect(authHeaderMatches(undefined, "s3cret", timingSafeEqual)).toBe(false);
     expect(authHeaderMatches("x", "", timingSafeEqual)).toBe(false);
+  });
+});
+
+describe("integration seams", () => {
+  it("isSubscribed ignores expired or missing entitlements", () => {
+    const now = utc("2026-10-01T00:00:00Z");
+    expect(isSubscribed(undefined, now)).toBe(false);
+    expect(isSubscribed({ unlimited: false }, now)).toBe(false);
+    expect(isSubscribed({ unlimited: true, expiresAt: now - 1 }, now)).toBe(false);
+    expect(isSubscribed({ unlimited: true, expiresAt: now + 1 }, now)).toBe(true);
+    expect(isSubscribed({ unlimited: true }, now)).toBe(true);
+  });
+  it("leaderboard entries expose only colour + hat of the cat look", () => {
+    const profiles = new Map([["a", { displayName: "A", cat: { name: "Secret", colorId: "color-ginger", hatId: "hat-cap" } }]]);
+    const [e] = buildEntries([{ uid: "a", stars: 1, questionsDone: 1 }], { prevStars: null, profiles: profiles as never, medals: new Map() });
+    expect(e.cat).toEqual({ colorId: "color-ginger", hatId: "hat-cap" });
+  });
+  it("a skipped-then-corrected question still counts once the student got it right (client sends skipped=false)", () => {
+    const answers = ["q1", "q2", "q3", "q4", "q5"].map((questionId) => ({ questionId, correct: true, skipped: false }));
+    const v = validateLevelResult({ attemptId: "abcdefgh-1234", grade: "P6", contentVersion: "v1", subtopicId: "p6-fractions-x1", level: 2, answers, completed: true, finishedAt: 1 });
+    expect(v.ok && v.stars).toBe(2);
   });
 });

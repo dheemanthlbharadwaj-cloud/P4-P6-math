@@ -3,11 +3,11 @@ import { getAuth } from "firebase-admin/auth";
 import { FieldValue, getFirestore } from "firebase-admin/firestore";
 import { HttpsError, type CallableRequest } from "firebase-functions/v2/https";
 import { setGlobalOptions } from "firebase-functions/v2";
-import { TIMEZONE } from "./shared/index.js";
+import { FUNCTIONS_REGION, TIMEZONE } from "./shared/index.js";
 import type { Fail } from "./logic/rules.js";
 
 if (!getApps().length) initializeApp();
-export const REGION = "asia-southeast1";
+export const REGION = FUNCTIONS_REGION;
 export const SCHEDULE_TZ = TIMEZONE; // Asia/Singapore
 setGlobalOptions({ region: REGION, maxInstances: 20 });
 

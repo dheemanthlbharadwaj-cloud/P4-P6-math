@@ -48,7 +48,7 @@ export function buildEntries(
     const e: LeaderboardEntry = {
       uid: r.uid,
       displayName: p?.displayName ?? "Player",
-      cat: p?.cat ?? { colorId: "color-black", hatId: null },
+      cat: p ? { colorId: p.cat.colorId, hatId: p.cat.hatId ?? null } : { colorId: "color-black", hatId: null },
       stars: r.stars,
       questionsDone: r.questionsDone,
       rank: start + i,

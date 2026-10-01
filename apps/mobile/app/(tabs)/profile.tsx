@@ -8,9 +8,12 @@ import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
 import { ParentalGate } from "../../src/components/ParentalGate";
 import { Paywall } from "../../src/components/Paywall";
+import { FriendRequests } from "../../src/components/FriendRequests";
 import { TopBar } from "../../src/components/TopBar";
 import { api, ApiError } from "../../src/services/api";
 import { signOut } from "../../src/services/auth";
+import { refreshFriends } from "../../src/services/bootstrap";
+import { pushProfile, startCloudSync, stopCloudSync } from "../../src/services/cloudSync";
 import { showRewardedAd } from "../../src/services/ads";
 import { extra } from "../../src/services/config";
 import { catPoses } from "../../src/theme/cats";
@@ -46,7 +49,9 @@ export default function ProfileTab() {
 
   const save = () => {
     if (!isValidIso(psle)) return flash("PSLE date must look like 2026-10-01.");
-    profile.set({ fullName: name.trim(), school: school.trim(), psleDate: psle });
+    if (!name.trim()) return flash("Please enter your name.");
+    profile.set({ fullName: name.trim().slice(0, 60), school: school.trim().slice(0, 80), psleDate: psle });
+    void pushProfile(); // users/{uid} (the public profile used by leaderboards follows via the backend trigger)
     flash("Saved!");
   };
 
@@ -65,18 +70,29 @@ export default function ProfileTab() {
   const addFriend = async () => {
     try {
       const r = await api.sendFriendRequest({ friendCode: friendCode.trim().toUpperCase() });
-      flash(r.status === "already-friends" ? "You're already friends." : "Friend request sent!");
+      flash(r.status === "accepted" ? "You're friends now!" : "Friend request sent!");
       setFriendCode("");
-    } catch (e) { flash(e instanceof ApiError && e.transient ? "Connect to the internet to add friends." : "That friend code didn't work."); }
+      if (r.status === "accepted") void refreshFriends();
+    } catch (e) {
+      const code = e instanceof ApiError ? e.code : "";
+      flash(e instanceof ApiError && e.transient ? "Connect to the internet to add friends."
+        : code === "already-exists" ? "You're already friends, or a request is already waiting."
+        : "That friend code didn't work.");
+    }
   };
 
   const redeemCode = async () => {
     try {
-      const r = await api.redeemReferral({ code: redeem.trim().toUpperCase() });
-      profile.set({ starBalance: r.starBalance });
-      flash(`Code accepted. Your friend earned ${REFERRAL_STARS} stars!`);
+      const r = await api.redeemReferral({ friendCode: redeem.trim().toUpperCase() });
+      flash(`Code accepted. Your friend earned ${r.starsAwarded} stars, and you are friends now!`);
       setRedeem("");
-    } catch (e) { flash(e instanceof ApiError && e.transient ? "Connect to the internet to redeem." : "That code didn't work."); }
+      void refreshFriends();
+    } catch (e) {
+      const code = e instanceof ApiError ? e.code : "";
+      flash(e instanceof ApiError && e.transient ? "Connect to the internet to redeem."
+        : code === "already-exists" ? "You already used an invite code."
+        : "That code didn't work.");
+    }
   };
 
   const logout = async () => {
@@ -91,8 +107,10 @@ export default function ProfileTab() {
         text: "Delete everything", style: "destructive",
         onPress: async () => {
           try {
+            stopCloudSync(); // no more pushes for an account that is about to disappear
             if (profile.uid !== "guest") await api.deleteAccount();
           } catch (e) {
+            startCloudSync();
             Alert.alert("Could not delete", e instanceof ApiError && e.transient ? "You need an internet connection to delete your account." : "Please try again later.");
             return;
           }
@@ -138,6 +156,8 @@ export default function ProfileTab() {
           <TextInput style={[field, { marginTop: 12 }]} value={friendCode} onChangeText={setFriendCode} autoCapitalize="characters" autoCorrect={false} placeholder="Enter a friend's code" placeholderTextColor={colors.muted} accessibilityLabel="Friend code" />
           <Button title="Send friend request" onPress={addFriend} disabled={friendCode.trim().length < 4} />
         </Card>
+
+        <FriendRequests onMessage={flash} />
 
         <Card>
           <H2>Invite friends, get {REFERRAL_STARS} stars</H2>

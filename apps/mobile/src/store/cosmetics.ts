@@ -10,6 +10,8 @@ interface CosmeticsState {
   grantOwned: (ids: string[]) => void;
   equip: (itemId: string, kind: "hat" | "color") => void;
   unequipHat: () => void;
+  /** Adopt the server-confirmed look (new device / restore). */
+  setLook: (look: CatLook) => void;
   look: () => CatLook;
   reset: () => void;
 }
@@ -23,6 +25,7 @@ export const useCosmetics = create<CosmeticsState>()(
       grantOwned: (ids) => set({ owned: [...new Set([...get().owned, ...ids])] }),
       equip: (id, kind) => (kind === "hat" ? set({ hatId: id }) : set({ colorId: id })),
       unequipHat: () => set({ hatId: null }),
+      setLook: (look) => set({ colorId: look.colorId, hatId: look.hatId }),
       look: () => ({ colorId: get().colorId, hatId: get().hatId }),
       reset: () => set(initial()),
     }),

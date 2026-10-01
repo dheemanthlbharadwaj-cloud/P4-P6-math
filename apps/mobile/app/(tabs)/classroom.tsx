@@ -3,7 +3,7 @@ import { ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { TIMED_GAME_SECONDS_PER_QUESTION } from "@p6/shared";
 import { Body, Button, Card, Chip, H1, H2, Screen } from "../../src/components/ui";
-import { getAllLv1, getTopics } from "../../src/content";
+import { getAllLv1, getPool, getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
 import { useWrong } from "../../src/store/wrong";
 import { colors, space } from "../../src/theme/colors";
@@ -16,6 +16,16 @@ export default function ClassroomTab() {
   const flagged = useWrong((s) => Object.keys(s.byGrade[grade] ?? {}).length);
   const ever = useWrong((s) => (s.history[grade] ?? []).length);
   const lv1Count = useMemo(() => getAllLv1(grade, topicId).length, [grade, topicId]);
+
+  const [practiceTopic, setPracticeTopic] = useState<string | undefined>(undefined);
+  const [selfMarkOnly, setSelfMarkOnly] = useState(false);
+  const practiceId = practiceTopic ?? topics[0]?.id;
+  const practiceCount = useMemo(
+    () => (practiceId ? getPool(grade, { topicId: practiceId }).filter((q) => !selfMarkOnly || !q.autoMarkable).length : 0),
+    [grade, practiceId, selfMarkOnly],
+  );
+  const startPractice = () =>
+    router.push({ pathname: "/practice/[topicId]", params: { topicId: practiceId as string, grade, ...(selfMarkOnly ? { selfMarkOnly: "1" } : {}) } });
 
   const go = (mode: "timed" | "wrong" | "all-wrong") =>
     router.push({ pathname: "/minigame/[mode]", params: { mode, grade, ...(topicId && mode === "timed" ? { topicId } : {}) } });
@@ -37,6 +47,22 @@ export default function ClassroomTab() {
           </View>
           <Text style={{ color: colors.inkSoft, fontWeight: "700", marginBottom: 8 }}>{lv1Count} questions available</Text>
           <Button title="Start timed game" variant="gold" onPress={() => go("timed")} disabled={lv1Count === 0} />
+        </Card>
+
+        <Card>
+          <H2>Practice (show answer)</H2>
+          <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>
+            Pick a topic, read the question, then reveal the answer and mark yourself. Includes drawing and explain-why questions. No hearts, no stars.
+          </Body>
+          <View style={{ flexDirection: "row", flexWrap: "wrap", marginTop: 4 }}>
+            {topics.map((t) => <Chip key={t.id} label={t.name} selected={practiceId === t.id} onPress={() => setPracticeTopic(t.id)} />)}
+          </View>
+          <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+            <Chip label="All pool questions" selected={!selfMarkOnly} onPress={() => setSelfMarkOnly(false)} />
+            <Chip label="Self-marking only" selected={selfMarkOnly} onPress={() => setSelfMarkOnly(true)} />
+          </View>
+          <Text style={{ color: colors.inkSoft, fontWeight: "700", marginBottom: 8 }}>{practiceCount} questions</Text>
+          <Button title="Start practice" onPress={startPractice} disabled={practiceCount === 0} />
         </Card>
 
         <Card>

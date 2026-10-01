@@ -9,5 +9,5 @@ interface Extra {
 }
 
 export const extra = (Constants.expoConfig?.extra ?? {}) as Extra;
-export const FUNCTIONS_REGION = "asia-southeast1";
+export { FUNCTIONS_REGION } from "@p6/shared"; // asia-southeast1, same constant the backend deploys to
 export const isFirebaseConfigured = !!extra.firebase?.apiKey && extra.firebase.apiKey !== "PLACEHOLDER";

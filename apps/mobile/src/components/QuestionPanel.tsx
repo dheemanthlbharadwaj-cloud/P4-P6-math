@@ -26,6 +26,8 @@ interface Props {
   onSkip?: () => void;
   canSkip?: boolean;
   submitLabel?: string;
+  /** Classroom "Practice (show answer)": no answer boxes or submit bar; the parent reveals the answer and self-marks. */
+  viewOnly?: boolean;
 }
 
 function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
@@ -34,7 +36,7 @@ function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
   return "numbers-and-punctuation"; // fraction ("a/b", "w a/b") and ratio ("a:b")
 }
 
-export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit" }: Props) {
+export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false }: Props) {
   const nInputs = q.type === "mcq" ? 1 : Math.max(1, q.parts?.length ?? 1);
   const [responses, setResponses] = useState<string[]>(() => Array(nInputs).fill(""));
   const [calc, setCalc] = useState(false);
@@ -42,7 +44,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   useEffect(() => setResponses(Array(nInputs).fill("")), [q.id, nInputs]);
 
   const fig = getFigure(grade, q.figure);
-  const locked = !!reveal;
+  const locked = !!reveal || viewOnly;
   const ready = responses.every((r) => r.trim().length > 0);
   const setAt = (i: number, v: string) => setResponses((rs) => rs.map((x, j) => (j === i ? v : x)));
 
@@ -113,7 +115,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                       {p.label?.length ? <View style={{ flex: 1 }}><RichText tokens={p.label} size={font.body} /></View> : null}
                     </View>
                   ) : null}
-                  <View style={{ flexDirection: "row", alignItems: "center" }}>
+                  {viewOnly ? null : <View style={{ flexDirection: "row", alignItems: "center" }}>
                     <TextInput
                       value={responses[i] ?? ""}
                       editable={!locked}
@@ -127,7 +129,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                       style={[styles.input, state === "right" && { backgroundColor: colors.goodBg, borderColor: colors.good }, state === "wrong" && { backgroundColor: colors.badBg, borderColor: colors.bad }]}
                     />
                     {unit ? <Text style={styles.unit}>{unit}</Text> : null}
-                  </View>
+                  </View>}
                   {kind === "fraction" && !locked ? (
                     <View style={{ flexDirection: "row", marginTop: 6, gap: 8 }}>
                       <Button title="/" small variant="ghost" style={styles.helper} onPress={() => setAt(i, (responses[i] ?? "") + "/")} />
@@ -135,7 +137,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                       <Text style={styles.hint}>Mixed number: whole, space, then a/b</Text>
                     </View>
                   ) : null}
-                  {reveal?.showAnswer ? <Text style={styles.answerLine}>Answer: {p.display}</Text> : null}
+                  {reveal?.showAnswer ? <Text style={styles.answerLine}>Answer: {p.display || "no model answer in the question bank yet"}</Text> : null}
                 </View>
               );
             })}

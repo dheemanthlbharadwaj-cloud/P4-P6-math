@@ -3,7 +3,7 @@
 Placeholder project id `p6-math-game` (`.firebaserc`), Firestore + Functions in `asia-southeast1`, schedules in `Asia/Singapore`.
 
 - `functions/` is **not** an npm workspace member (Firebase deploys it standalone). Pure shared modules
-  (`types.ts`, `gameRules.ts`) are copied from `packages/shared/src` into `functions/src/shared` by
+  (`types.ts`, `gameRules.ts`, `api.ts` = the callable contract) are copied from `packages/shared/src` into `functions/src/shared` by
   `functions/scripts/copy-shared.mjs`, which runs automatically before `build`, `typecheck` and `test`
   (generated, git-ignored). Re-run after changing packages/shared.
 - `cd functions && npm install && npm test` — unit tests for the pure logic (no emulator needed).

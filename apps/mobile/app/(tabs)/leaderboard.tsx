@@ -1,11 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, RefreshControl, ScrollView, Text, View } from "react-native";
-import type { LeaderboardEntry } from "@p6/shared";
+import type { GetLeaderboardResponse, LeaderboardEntry, LeaderboardScope } from "@p6/shared";
 import { Body, Chip, H1, H2, Screen } from "../../src/components/ui";
 import { RunningTrack } from "../../src/components/RunningTrack";
 import { api } from "../../src/services/api";
-import type { GetLeaderboardResponse, LeaderboardScope } from "../../src/services/apiTypes";
-import { useProfile } from "../../src/store/profile";
 import { colors, space } from "../../src/theme/colors";
 
 const medalColor = { gold: colors.gold, silver: colors.silver, bronze: colors.bronze } as const;
@@ -26,7 +24,6 @@ function Delta({ d }: { d: number }) {
 }
 
 export default function LeaderboardTab() {
-  const grade = useProfile((s) => s.grade);
   const [scope, setScope] = useState<LeaderboardScope>("daily");
   const [data, setData] = useState<GetLeaderboardResponse | null>(null);
   const [loading, setLoading] = useState(false);
@@ -34,10 +31,10 @@ export default function LeaderboardTab() {
 
   const load = useCallback(async () => {
     setLoading(true); setError(null);
-    try { setData(await api.getLeaderboard({ scope, grade })); }
+    try { setData(await api.getLeaderboard({ scope })); }
     catch { setData(null); setError("Can't load the leaderboard. Check your internet connection."); }
     finally { setLoading(false); }
-  }, [scope, grade]);
+  }, [scope]);
   useEffect(() => { void load(); }, [load]);
 
   const entries = [...(data?.entries ?? [])].sort((a, b) => a.rank - b.rank);
@@ -94,7 +91,7 @@ export default function LeaderboardTab() {
           </View>
         ) : null}
         <Text style={{ color: colors.inkSoft, fontSize: 12 }}>
-          {scope === "daily" ? "Refreshed every midnight (Singapore time). Arrows show places gained or lost since yesterday." : "Ranking = stars earned this month. Resets on the last day of the month at midnight."}
+          {scope === "daily" ? "Refreshed every midnight (Singapore time). Arrows show places gained or lost since yesterday." : "Ranking = stars earned this month. Resets at midnight at the end of the last day of the month (00:00 on the 1st, Singapore time)."}
         </Text>
       </ScrollView>
     </Screen>

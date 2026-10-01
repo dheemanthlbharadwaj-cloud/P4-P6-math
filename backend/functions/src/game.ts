@@ -1,5 +1,8 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
-import { REFERRAL_STARS, STORE_ITEMS, type LevelResultResponse } from "./shared/index.js";
+import {
+  REFERRAL_STARS, STORE_ITEMS, type LevelResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
+  type RedeemReferralRequest, type RedeemReferralResponse,
+} from "./shared/index.js";
 import { col, dailyBoard, db, entriesRef, FieldValue, monthlyBoard, requireUid, throwFail } from "./admin.js";
 import { effectiveResultTime, sgtDate, sgtMonth } from "./logic/dates.js";
 import {
@@ -29,10 +32,14 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
 
   return db.runTransaction(async (tx) => {
     const [attempt, wallet, month] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef)]);
-    if (attempt.exists) return { ...(attempt.data()!.response as LevelResultResponse), duplicate: true };
-
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
+    if (attempt.exists) {
+      // Replay of an already-counted attempt: report the CURRENT balances, not the (stale) ones stored with the
+      // attempt, so a client that applies the response never overwrites a newer balance (e.g. after a purchase).
+      const prev = attempt.data()!.response as LevelResultResponse;
+      return { starsAwarded: prev.starsAwarded, starBalance: balance, monthlyStars: (month.data()?.stars as number | undefined) ?? 0, duplicate: true };
+    }
     const monthlyStars = ((month.data()?.stars as number | undefined) ?? 0) + stars;
     const response: LevelResultResponse = { starsAwarded: stars, starBalance: balance + stars, monthlyStars, duplicate: false };
 
@@ -56,9 +63,9 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
 });
 
 /** Atomic star deduction + inventory grant. Equipping is a normal profile update (rules check ownership). */
-export const purchaseItem = onCall(async (req) => {
+export const purchaseItem = onCall(async (req): Promise<PurchaseItemResponse> => {
   const uid = requireUid(req);
-  const itemId = String((req.data as { itemId?: unknown })?.itemId ?? "");
+  const itemId = String((req.data as Partial<PurchaseItemRequest> | undefined)?.itemId ?? "");
   const item = STORE_ITEMS.find((i) => i.id === itemId);
   const walletRef = db.collection(col.wallets).doc(uid);
   return db.runTransaction(async (tx) => {
@@ -72,14 +79,14 @@ export const purchaseItem = onCall(async (req) => {
     tx.set(db.collection(col.users).doc(uid).collection("ledger").doc(), {
       type: "purchase", itemId: item!.id, delta: -item!.price, balanceAfter: v.newBalance, createdAt: FieldValue.serverTimestamp(),
     });
-    return { starBalance: v.newBalance, inventory: newInventory };
+    return { starBalance: v.newBalance, ownedItems: newInventory };
   });
 });
 
 /** The caller (referred user) enters a referrer's friend code: referrer gets +REFERRAL_STARS once per referred account. */
-export const redeemReferral = onCall(async (req) => {
+export const redeemReferral = onCall(async (req): Promise<RedeemReferralResponse> => {
   const uid = requireUid(req);
-  const code = normalizeFriendCode((req.data as { friendCode?: unknown })?.friendCode);
+  const code = normalizeFriendCode((req.data as Partial<RedeemReferralRequest> | undefined)?.friendCode);
   const codeSnap = code ? await db.collection(col.friendCodes).doc(code).get() : null;
   const referrerUid = (codeSnap?.exists ? (codeSnap.data()!.uid as string) : null) ?? null;
   const refRef = db.collection(col.referrals).doc(uid);
@@ -97,6 +104,6 @@ export const redeemReferral = onCall(async (req) => {
     });
     // referral link also makes them friends
     tx.set(db.collection(col.friendships).doc(pairId(uid, referrerUid!)), { members: [uid, referrerUid!].sort(), createdAt: FieldValue.serverTimestamp() }, { merge: true });
-    return { referrerUid, starsAwarded: REFERRAL_STARS };
+    return { starsAwarded: REFERRAL_STARS };
   });
 });

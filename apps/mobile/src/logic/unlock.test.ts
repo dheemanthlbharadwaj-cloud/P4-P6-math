@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, isTopicUnlocked, unlockTopic } from "./unlock";
+import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, isTopicUnlocked, mergeGradeProgress, unlockTopic } from "./unlock";
+import { mergeWrong, wrongDocsToPush } from "./wrongSync";
 import { answer, isDone, skip, startSession, toAnswers, correctCount } from "./levelSession";
 
 describe("level unlock", () => {
@@ -44,5 +45,49 @@ describe("level session", () => {
     expect(s.queue).toEqual(["b", "c", "a"]);
     expect(s.skipped.a).toBe(true);
     expect(skip(startSession(["z"])).queue).toEqual(["z"]);
+  });
+});
+
+describe("level session answers for the server", () => {
+  it("a skipped-then-answered question is sent as done, not skipped (server only counts non-skipped correct)", () => {
+    let s = startSession(["a", "b"]);
+    s = skip(s);
+    s = answer(s, true); // b
+    s = answer(s, true); // a
+    expect(toAnswers(s, ["a", "b"]).every((x) => x.correct && !x.skipped)).toBe(true);
+  });
+});
+
+describe("progress merge (restore / multi-device)", () => {
+  it("merges by max and never drops completion or topics", () => {
+    const a = applyLevelResult(emptyGradeProgress("P6", ["ratio"]), "s1", 1, 5, true, 10);
+    const b = applyLevelResult(applyLevelResult(emptyGradeProgress("P6", ["fractions"]), "s1", 1, 2, false, 20), "s2", 1, 3, false, 20);
+    const m = mergeGradeProgress(a, b);
+    expect(m.unlockedTopics.sort()).toEqual(["fractions", "ratio"]);
+    expect(m.levels["s1#1"]).toEqual({ completed: true, bestCorrect: 5, completedAt: 10 });
+    expect(m.levels["s2#1"]).toEqual({ completed: false, bestCorrect: 3 });
+    expect("completedAt" in m.levels["s2#1"]).toBe(false); // Firestore cannot store undefined
+    expect(mergeGradeProgress(a, undefined)).toBe(a);
+  });
+});
+
+describe("wrong bookmark sync", () => {
+  it("restores unknown questions, keeps local state for known ones", () => {
+    const local = { byGrade: { P6: { q1: 5 } }, history: { P6: ["q1", "q2"] } };
+    const m = mergeWrong(local, "P6", [
+      { id: "q1", active: false, flaggedAt: 1 },
+      { id: "q3", active: true, flaggedAt: 7 },
+      { id: "q4", active: false, flaggedAt: 0 },
+    ]);
+    expect(m.byGrade.P6).toEqual({ q1: 5, q3: 7 });
+    expect(m.history.P6?.sort()).toEqual(["q1", "q2", "q3", "q4"]);
+  });
+  it("pushes only what changed since the last sync", () => {
+    const local = { byGrade: { P6: { q1: 5 } }, history: { P6: ["q1", "q2"] } };
+    expect(wrongDocsToPush(local, "P6", new Map([["q1", true], ["q2", false]]))).toEqual([]);
+    expect(wrongDocsToPush(local, "P6", new Map([["q1", false]]))).toEqual([
+      { id: "q1", active: true, flaggedAt: 5 },
+      { id: "q2", active: false, flaggedAt: 0 },
+    ]);
   });
 });

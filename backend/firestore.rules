@@ -37,11 +37,29 @@ service cloud.firestore {
         && catOk(uid, request.resource.data.cat);
 
       // progress (synced from device, merged by max) and wrong-question bookmarks
+      // No economy data here (stars/inventory live in server-only wallets/{uid}), so the owner may write, but the
+      // shape is pinned so the collection cannot be abused as free storage.
       match /progress/{grade} {
-        allow read, write: if isOwner(uid);
+        allow read: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && grade in ['P4', 'P5', 'P6']
+          && request.resource.data.keys().hasOnly(['grade', 'unlockedTopics', 'levels', 'updatedAt'])
+          && request.resource.data.grade == grade
+          && request.resource.data.unlockedTopics is list && request.resource.data.unlockedTopics.size() <= 30
+          && request.resource.data.levels is map && request.resource.data.levels.size() <= 600
+          && request.resource.data.updatedAt is number;
+        allow delete: if false; // removed by deleteAccount only
       }
       match /wrong/{questionId} {
-        allow read, write: if isOwner(uid);
+        allow read: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && questionId.size() <= 120
+          && request.resource.data.keys().hasOnly(['grade', 'active', 'flaggedAt', 'updatedAt'])
+          && request.resource.data.grade in ['P4', 'P5', 'P6']
+          && request.resource.data.active is bool
+          && request.resource.data.flaggedAt is number
+          && request.resource.data.updatedAt is number;
+        allow delete: if false;
       }
       // star ledger: owner may read, only the server writes
       match /ledger/{entryId} {

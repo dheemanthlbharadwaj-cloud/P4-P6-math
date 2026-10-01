@@ -7,8 +7,15 @@
     "apps/*"
   ],
   "scripts": {
-    "typecheck": "npm run typecheck --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present"
+    "install:backend": "npm --prefix backend install && npm --prefix backend/functions install",
+    "typecheck": "npm run typecheck --workspaces --if-present && npm --prefix backend/functions run typecheck",
+    "test": "npm run test --workspaces --if-present && npm --prefix backend/functions test",
+    "test:rules": "npm --prefix backend run test:rules",
+    "build:functions": "npm --prefix backend/functions run build",
+    "content:mock": "npm run mock -w @p6/content",
+    "content:sync": "npm run sync -w @p6/content --",
+    "content:audit": "npm run audit -w @p6/content --",
+    "content:build": "npm run build -w @p6/content --"
   },
   "overrides": {
     "react": "19.2.3"

@@ -4,7 +4,8 @@ import { STORE_ITEMS, type StoreItem } from "@p6/shared";
 import { Body, Button, Card, Chip, H1, Screen } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { Stat } from "../../src/components/TopBar";
-import { api, setCatLook } from "../../src/services/api";
+import { api } from "../../src/services/api";
+import { pushProfile } from "../../src/services/cloudSync";
 import { catColors, catPoses } from "../../src/theme/cats";
 import { uiAssets } from "../../src/theme/assets";
 import { useCosmetics } from "../../src/store/cosmetics";
@@ -28,7 +29,8 @@ export default function StoreTab() {
   const isOwned = !!selected && (owned.includes(selected.id) || selected.price === 0);
   const isEquipped = !!selected && (selected.id === colorId || selected.id === hatId);
 
-  const syncLook = () => { void setCatLook(useCosmetics.getState().look()).catch(() => undefined); };
+  // Equipping is a direct write of users/{uid}.cat; the Firestore rules refuse items the wallet does not own.
+  const syncLook = () => { void pushProfile(); };
 
   const buy = async () => {
     if (!selected) return;

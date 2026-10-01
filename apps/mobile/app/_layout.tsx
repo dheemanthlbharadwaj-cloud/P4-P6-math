@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -8,7 +8,8 @@ import { isFirebaseConfigured } from "../src/services/config";
 import { initAds } from "../src/services/ads";
 import { initPurchases } from "../src/services/purchases";
 import { flushOfflineQueue } from "../src/services/sync";
-import { bootstrapServerProfile, refreshFriends } from "../src/services/bootstrap";
+import { bootstrapServerProfile, refreshFriends, restoreAccount } from "../src/services/bootstrap";
+import { stopCloudSync } from "../src/services/cloudSync";
 import { useAuth } from "../src/store/auth";
 import { useProfile } from "../src/store/profile";
 import { useProgress } from "../src/store/progress";
@@ -40,11 +41,22 @@ export default function RootLayout() {
     useProfile.getState().set({ uid: user.uid, email: user.email });
   }, [hydrated, user]);
 
+  // New device / reinstall: after sign-in, look the account up on the server BEFORE showing onboarding, so an
+  // existing student gets progress, stars, inventory, look and entitlement back instead of a blank start.
+  const [restore, setRestore] = useState<"idle" | "checking" | "done">("idle");
+  useEffect(() => { if (!user) setRestore("idle"); }, [user]);
+  useEffect(() => {
+    if (!hydrated || !user || onboarded || restore !== "idle") return;
+    setRestore("checking");
+    void restoreAccount().finally(() => setRestore("done"));
+  }, [hydrated, user, onboarded, restore]);
+  const restoring = !!user && !onboarded && restore !== "done";
+
   const signedIn = !!user || uid === "guest"; // "guest" = dev-only mode when Firebase is not configured
 
   // Route guard.
   useEffect(() => {
-    if (!hydrated || !ready) return;
+    if (!hydrated || !ready || restoring) return;
     const group = segments[0] as string | undefined;
     const inOnboarding = group === "(onboarding)";
     const onLogin = inOnboarding && (segments as string[])[1] === "login";
@@ -55,7 +67,7 @@ export default function RootLayout() {
     } else if (inOnboarding || group === undefined) {
       router.replace("/(tabs)/map");
     }
-  }, [hydrated, ready, signedIn, onboarded, segments, router]);
+  }, [hydrated, ready, restoring, signedIn, onboarded, segments, router]);
 
   // Keep progress initialised for the active grade.
   useEffect(() => {
@@ -74,14 +86,14 @@ export default function RootLayout() {
       await flushOfflineQueue();
       await refreshFriends();
     };
-    void bootstrapServerProfile().then(run);
-    void initPurchases(user.uid);
+    // RevenueCat last: when configured it is the live source of truth for the entitlement (server value otherwise).
+    void bootstrapServerProfile().then(run).then(() => initPurchases(user.uid));
     const unsub = NetInfo.addEventListener((s) => { if (s.isConnected) void run(); });
     const timer = setInterval(run, 60_000);
-    return () => { cancelled = true; unsub(); clearInterval(timer); };
+    return () => { cancelled = true; unsub(); clearInterval(timer); stopCloudSync(); };
   }, [hydrated, user, onboarded]);
 
-  if (!hydrated || !ready) {
+  if (!hydrated || !ready || restoring) {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: colors.bg }}>
         <ActivityIndicator size="large" color={colors.primary} />

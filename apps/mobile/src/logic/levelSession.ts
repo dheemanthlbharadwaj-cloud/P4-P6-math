@@ -33,10 +33,11 @@ export function skip(s: SessionState): SessionState {
   return { ...s, queue: [...s.queue.slice(1), id], skipped: { ...s.skipped, [id]: true } };
 }
 
+/** `skipped` means "skipped and never answered": a skipped question that was later answered right counts as done. */
 export function toAnswers(s: SessionState, allIds: string[]) {
   return allIds.map((questionId) => ({
     questionId,
     correct: !!s.correct[questionId],
-    skipped: !!s.skipped[questionId],
+    skipped: !!s.skipped[questionId] && !s.correct[questionId],
   }));
 }

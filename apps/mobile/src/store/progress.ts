@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { Grade, GradeProgress, LevelNo } from "@p6/shared";
-import { applyLevelResult, emptyGradeProgress, unlockTopic } from "../logic/unlock";
+import { applyLevelResult, emptyGradeProgress, mergeGradeProgress, unlockTopic } from "../logic/unlock";
 import { persistStorage, STORE_PREFIX } from "./storage";
 
 interface ProgressState {
@@ -10,6 +10,8 @@ interface ProgressState {
   ensureGrade: (grade: Grade, initialTopics?: string[]) => void;
   unlockTopic: (grade: Grade, topicId: string) => void;
   recordLevel: (grade: Grade, subtopicId: string, level: LevelNo, correct: number, completed: boolean) => void;
+  /** Merge a copy from the server (restore / other device) by max. */
+  mergeRemote: (grade: Grade, remote: GradeProgress) => void;
   reset: () => void;
 }
 
@@ -34,6 +36,10 @@ export const useProgress = create<ProgressState>()(
       recordLevel: (grade, subtopicId, level, correct, completed) => {
         const g = get().grades[grade] ?? emptyGradeProgress(grade);
         set({ grades: { ...get().grades, [grade]: applyLevelResult(g, subtopicId, level, correct, completed, Date.now()) } });
+      },
+      mergeRemote: (grade, remote) => {
+        const g = get().grades[grade] ?? emptyGradeProgress(grade);
+        set({ grades: { ...get().grades, [grade]: mergeGradeProgress(g, remote) } });
       },
       reset: () => set({ grades: {} }),
     }),

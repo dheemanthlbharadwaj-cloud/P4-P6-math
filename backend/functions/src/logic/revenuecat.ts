@@ -33,6 +33,12 @@ export function isActiveAt(expiresAt: number | null, now: number): boolean {
   return expiresAt == null || expiresAt > now;
 }
 
+/** entitlements/{uid} doc → is the "unlimited" entitlement active at `now` (expired subscriptions never count). */
+export function isSubscribed(ent: { unlimited?: unknown; expiresAt?: unknown } | undefined, now: number): boolean {
+  if (!ent || ent.unlimited !== true) return false;
+  return isActiveAt(typeof ent.expiresAt === "number" ? ent.expiresAt : null, now);
+}
+
 export function pickUid(e: RcEvent): string | null {
   const candidates = [e.app_user_id, e.original_app_user_id, ...(e.aliases ?? [])].filter((x): x is string => !!x);
   return candidates.find((c) => !c.startsWith("$RCAnonymousID")) ?? null;

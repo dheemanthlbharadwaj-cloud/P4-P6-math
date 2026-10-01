@@ -5,5 +5,6 @@ import type { PublicProfile } from "@p6/shared";
 interface FriendsState {
   friends: PublicProfile[];
   set: (f: PublicProfile[]) => void;
+  reset: () => void;
 }
-export const useFriends = create<FriendsState>((set) => ({ friends: [], set: (friends) => set({ friends }) }));
+export const useFriends = create<FriendsState>((set) => ({ friends: [], set: (friends) => set({ friends }), reset: () => set({ friends: [] }) }));

@@ -1,7 +1,10 @@
 import { randomInt } from "node:crypto";
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import { onDocumentWritten } from "firebase-functions/v2/firestore";
-import { ACTIVE_GRADES, type Grade, type UserProfile } from "./shared/index.js";
+import {
+  ACTIVE_GRADES, type BootstrapProfileRequest, type BootstrapProfileResponse, type DeleteAccountResponse, type Grade, type UserProfile,
+} from "./shared/index.js";
+import { loadAccountState } from "./account.js";
 import { auth, col, db, FieldValue, REGION, requireUid } from "./admin.js";
 import { makeFriendCode } from "./logic/rules.js";
 
@@ -20,12 +23,20 @@ export const publicProfileOf = (uid: string, p: Pick<UserProfile, "fullName" | "
   cat: { name: p.cat.name, colorId: p.cat.colorId, hatId: p.cat.hatId ?? null },
 });
 
-/** Called once after onboarding. Idempotent: returns the existing profile if there already is one. */
-export const bootstrapProfile = onCall(async (req) => {
+/**
+ * Called once after onboarding, and with `{ restoreOnly: true }` right after sign-in on a new device.
+ * Idempotent: returns the existing profile if there already is one. Always returns the server-owned account state
+ * (stars, inventory, equipped look, entitlement) so the app can rebuild itself.
+ */
+export const bootstrapProfile = onCall(async (req): Promise<BootstrapProfileResponse> => {
   const uid = requireUid(req);
-  const d = (req.data ?? {}) as Record<string, unknown>;
+  const d = (req.data ?? {}) as Partial<BootstrapProfileRequest> & { restoreOnly?: unknown };
   const existing = await db.collection(col.users).doc(uid).get();
-  if (existing.exists) return { profile: existing.data(), created: false };
+  if (existing.exists) {
+    const profile = existing.data() as UserProfile;
+    return { profile, created: false, ...(await loadAccountState(uid, profile)) };
+  }
+  if (d.restoreOnly === true) return { profile: null, created: false, ...(await loadAccountState(uid, null)) };
 
   const grade = String(d.grade ?? "P6") as Grade;
   if (!ACTIVE_GRADES.includes(grade)) throw new HttpsError("invalid-argument", "bad grade");
@@ -58,7 +69,7 @@ export const bootstrapProfile = onCall(async (req) => {
         tx.set(db.collection(col.wallets).doc(uid), { starBalance: 0, totalStars: 0, inventory: ["color-black"], updatedAt: FieldValue.serverTimestamp() });
         return full as UserProfile;
       });
-      return { profile, created: true };
+      return { profile, created: true, ...(await loadAccountState(uid, profile)) };
     } catch (e) {
       if ((e as Error).message !== "code-collision") throw e;
     }
@@ -76,16 +87,17 @@ export const syncPublicProfile = onDocumentWritten({ document: "users/{uid}", re
 });
 
 /** Deletes the Auth user and every document that belongs to them. */
-export const deleteAccount = onCall(async (req) => {
+export const deleteAccount = onCall(async (req): Promise<DeleteAccountResponse> => {
   const uid = requireUid(req);
   const userRef = db.collection(col.users).doc(uid);
   const user = (await userRef.get()).data() as UserProfile | undefined;
 
-  // friendships / requests
+  // friendships / requests / referrals pointing at this account
   for (const q of [
     db.collection(col.friendships).where("members", "array-contains", uid),
     db.collection(col.friendRequests).where("from", "==", uid),
     db.collection(col.friendRequests).where("to", "==", uid),
+    db.collection(col.referrals).where("referrerUid", "==", uid), // referrals this account was the referrer of
   ]) {
     const s = await q.get();
     await Promise.all(s.docs.map((d) => d.ref.delete()));

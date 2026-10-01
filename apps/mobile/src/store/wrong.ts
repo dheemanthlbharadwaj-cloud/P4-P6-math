@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { Grade } from "@p6/shared";
+import { mergeWrong, type WrongDoc } from "../logic/wrongSync";
 import { persistStorage, STORE_PREFIX } from "./storage";
 
 interface WrongState {
@@ -10,6 +11,8 @@ interface WrongState {
   remove: (grade: Grade, questionId: string) => void;
   ids: (grade: Grade) => string[];
   historyIds: (grade: Grade) => string[];
+  /** Merge bookmarks read from the server (restore / other device). */
+  mergeRemote: (grade: Grade, docs: WrongDoc[]) => void;
   reset: () => void;
 }
 
@@ -30,6 +33,7 @@ export const useWrong = create<WrongState>()(
       },
       ids: (grade) => Object.keys(get().byGrade[grade] ?? {}),
       historyIds: (grade) => get().history[grade] ?? [],
+      mergeRemote: (grade, docs) => set(mergeWrong({ byGrade: get().byGrade, history: get().history }, grade, docs)),
       reset: () => set({ byGrade: {}, history: {} }),
     }),
     { name: `${STORE_PREFIX}wrong`, storage: persistStorage },

@@ -56,34 +56,65 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
 
 ## Backend (new Firebase project, placeholder id `p6-math-game`)
 - **Auth:** Email/password, Google, Sign in with Apple (required by Apple if Google sign-in is offered).
-- **Firestore** (`users/{uid}` owner-only except public profile fields):
-  - `users/{uid}`: profile (fullName, school, grade, topicsLearnt[], psleDate, cat {name,colorId,hatId}), friendCode,
-    createdAt.
-  - `publicProfiles/{uid}`: displayName, cat look, school — readable by signed-in users (leaderboards, friends on map).
-  - `users/{uid}/progress/{grade}`: node/level completion, unlocked topics (synced from the device, merged by max).
-  - `users/{uid}/wrong/{questionId}`: wrong-question bookmarks.
-  - `users/{uid}/ledger/{entryId}`: star ledger (server-written only).
-  - `friendships/{pairId}`, `friendRequests/{id}`.
-  - `leaderboards/daily/{yyyy-mm-dd}/entries/{uid}`, `leaderboards/monthly/{yyyy-mm}/entries/{uid}`, `medals/{uid}`.
-  - `entitlements/{uid}`: server-written from the RevenueCat webhook.
+- **Callable contract:** `packages/shared/src/api.ts` is the single source of truth for every callable's request/response
+  types, error codes and region (`FUNCTIONS_REGION = asia-southeast1`). The app imports it from `@p6/shared`; the functions
+  get a copy through `backend/functions/scripts/copy-shared.mjs` (`types`, `gameRules`, `api` → `functions/src/shared`).
+  Never hand-type a callable shape on either side.
+- **Firestore data model** (rules: `backend/firestore.rules`; Admin SDK writes bypass them). "Owner" = the signed-in uid.
+  | Path | Written by | Notes |
+  |---|---|---|
+  | `users/{uid}` | created by `bootstrapProfile`; owner may update `fullName, school, topicsLearnt, psleDate, cat` | `cat {name,colorId,hatId}`: rules reject an item that is not in `wallets/{uid}.inventory` (`color-black` always allowed, `hatId: null` allowed). This is how equipping works (no callable). |
+  | `users/{uid}/progress/{grade}` | owner (shape pinned by rules) | `{grade, unlockedTopics[], levels{"<subtopicId>#<level>": {completed,bestCorrect,completedAt?}}, updatedAt}`, merged by max on the device (`mergeGradeProgress`) |
+  | `users/{uid}/wrong/{questionId}` | owner (shape pinned) | `{grade, active, flaggedAt, updatedAt}`; `active=false` keeps the "all wrong ever" history |
+  | `users/{uid}/ledger/{entryId}` | server only | star ledger (`level_<attemptId>`, `referral_<referredUid>`, purchases); owner may read |
+  | `users/{uid}/attempts/{attemptId}` | server only | idempotency record + response of `submitLevelResult` |
+  | `wallets/{uid}` | server only | `{starBalance, totalStars, inventory[]}`; owner may read |
+  | `entitlements/{uid}` | RevenueCat webhook | `{unlimited, willRenew, expiresAt, ...}`; owner may read. `subscribed` = `unlimited` and not expired |
+  | `publicProfiles/{uid}` | `bootstrapProfile` + `syncPublicProfile` trigger (mirrors `users/{uid}`) | `{uid, displayName, school, grade, cat}`; any signed-in user may read |
+  | `friendCodes/{code}` | server only | `{uid}`, 8 chars, no 0/O/1/I; lookups only through callables |
+  | `referrals/{referredUid}` | server only | `{referrerUid, referredUid, stars}`; one per referred account |
+  | `friendships/{pairId}` | server only | `pairId = sorted(uidA_uidB)`, `{members[2]}`; members may read |
+  | `friendRequests/{from_to}` | server only | `{from,to,status}`; from/to may read (the app lists `where to == me, status == pending`) |
+  | `leaderboards/daily-{yyyy-mm-dd}/entries/{uid}` | server only | `{uid, stars, questionsDone}` for that SGT day (path is `leaderboards/{boardId}/entries/{uid}`) |
+  | `leaderboards/monthly-{yyyy-mm}/entries/{uid}` | server only | monthly stars (the ranking key) and questions done; a new month starts empty |
+  | `leaderboardSnapshots/{yyyy-mm-dd}/entries/{uid}` | `dailySnapshot` | `{uid, stars}` monthly stars at 00:00 SGT; last 3 days kept; source of the rank arrows |
+  | `leaderboardMeta/monthly-{yyyy-mm}` | `monthlyClose` | marks a month as closed (idempotency) + winners |
+  | `medals/{uid}` | `monthlyClose` | previous month's top 3: `{medal, month, stars}`; signed-in users may read |
+  | `config/content` | operator | optional `{acceptedVersions: {P6: [...]}}`; absent = every content version accepted |
+  No client can write stars, inventory, entitlements, leaderboards, medals, friendships or public profiles.
 - **Cloud Functions (TS, region asia-southeast1, timezone Asia/Singapore):**
-  - `submitLevelResult` (callable): idempotent per (uid, grade, nodeId, level, attemptId); validates against the bundled
-    curriculum manifest hash; awards stars into the ledger and monthly/daily totals.
-  - `purchaseItem` (callable): atomic star deduction + inventory grant.
-  - `redeemReferral` (callable): +5 stars to the referrer, once per referred account.
-  - Friends: `sendFriendRequest`, `respondFriendRequest` (by friend code).
-  - Scheduled: daily rank snapshot at 00:00 SGT (rank delta arrows); monthly close at 00:00 on the last day of the
-    month (medals top 1–3, new month).
+  - `bootstrapProfile` (callable): creates `users`, `publicProfiles`, `wallets`, `friendCodes` once. Always returns
+    `{profile, created} + AccountState` (stars, monthly stars, owned items, equipped look, subscribed). `{restoreOnly: true}`
+    returns `profile: null` instead of creating (used right after sign-in on a new device).
+  - `submitLevelResult` (callable): idempotent per `attemptId`; checks `contentVersion` against `config/content` (when set);
+    awards `STARS_PER_LEVEL` for completed levels into wallet, ledger and the daily + monthly entries. A replay of an
+    attempt returns the current balances with `duplicate: true`.
+  - `purchaseItem` (callable): atomic star deduction + inventory grant → `{starBalance, ownedItems}`.
+  - `redeemReferral` (callable, `{friendCode}`): the caller is the referred user; the referrer gets +5 stars once per referred
+    account and both become friends.
+  - `sendFriendRequest {friendCode}` / `respondFriendRequest {requestId, accept}`.
+  - `getLeaderboard {scope: "daily" | "monthly"}` → `{scope, periodKey, selfUid, friendUids, friends: PublicProfile[], entries}`;
+    entries carry `rank, rankDelta, medal`. Daily = me + friends, ranked by monthly stars; monthly = global top 100 (+ me).
+  - Scheduled: `dailySnapshot` 00:00 SGT (rank arrows); `monthlyClose` 00:00 SGT on the 1st (see OPEN_QUESTIONS #14).
   - `revenuecatWebhook` (HTTPS) → `entitlements/{uid}`.
-  - `deleteAccount` (callable): deletes Auth user + all user docs (store requirement).
+  - `deleteAccount` (callable): deletes Auth user + every document that belongs to them (incl. leaderboard entries/snapshots,
+    friendships, requests, referrals, wallet, medals, entitlement, friend code).
+- **Restore on a new device / reinstall:** after sign-in the app calls `bootstrapProfile({restoreOnly: true})`. If a profile
+  exists it rebuilds profile, look, stars, inventory and entitlement from the response, then reads
+  `users/{uid}/progress/{grade}` + `users/{uid}/wrong/*` and merges them by max/union (`services/cloudSync.ts`); onboarding is
+  skipped. While playing, progress and bookmarks are pushed (debounced) and re-pushed at every launch.
 - Hearts/energy live on the device (offline play); the server is the source of truth only for stars, purchases,
-  entitlements and leaderboards. Offline level results are queued and replayed through `submitLevelResult`.
+  entitlements and leaderboards. Offline level results are queued (with a fixed `attemptId`) and replayed through
+  `submitLevelResult`.
 
 ## Mobile app (apps/mobile)
 - expo-router routes: `(onboarding)/*`, `(tabs)/map`, `(tabs)/classroom`, `(tabs)/store`, `(tabs)/leaderboard`,
   `(tabs)/profile`, `level/[grade]/[nodeId]/[level]`, `minigame/*`.
 - State: zustand + persisted storage (MMKV) for hearts/energy/progress/wrong list/offline queue.
-- Content access only through `src/content/` (loads `assets/content/<grade>/*`); screens never import JSON directly.
+- Content access only through `src/content/` (loads `assets/content/<grade>/*` via the generated `assets/content/index.ts`
+  `contentFor(grade)`); screens never import JSON directly. `LevelResult.contentVersion` = `QuestionBundle.version`.
+- Classroom: timed LV1 game, previously-wrong review, and "Practice (show answer)" (`app/practice/[topicId]`): browse a
+  topic's pool (the not-auto-markable questions first), reveal the answer, self-mark; no hearts/stars/bookmarks.
 - Asset registry `src/theme/assets.ts`: every map/toolbar/button image the owner will supply is referenced only here.
 - Companion cat (`CatCompanion`) uses `assets/cats/animations/*.webp`: idle = groom-idle, correct = cute-eyes pose,
   wrong = confused-wrong, thinking = laptop-thinking, out-of-hearts = lie-down-sad.

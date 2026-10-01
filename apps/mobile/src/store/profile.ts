@@ -16,6 +16,8 @@ export interface ProfileState {
   friendCode: string;
   starBalance: number; // last server-confirmed balance
   monthlyStars: number;
+  /** true once this device has exchanged state with the server profile (bootstrap or restore succeeded). */
+  serverSynced: boolean;
   set: (p: Partial<Omit<ProfileState, "set" | "reset">>) => void;
   reset: () => void;
 }
@@ -28,7 +30,7 @@ export function defaultPsleDate(now = new Date()): string {
 
 const initial = () => ({
   uid: null, email: null, onboarded: false, grade: "P6" as Grade, fullName: "", school: "", topicsLearnt: [] as string[],
-  psleDate: defaultPsleDate(), catName: "", friendCode: "", starBalance: 0, monthlyStars: 0,
+  psleDate: defaultPsleDate(), catName: "", friendCode: "", starBalance: 0, monthlyStars: 0, serverSynced: false,
 });
 
 export const useProfile = create<ProfileState>()(
