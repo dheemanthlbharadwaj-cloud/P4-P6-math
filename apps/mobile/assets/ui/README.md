@@ -20,6 +20,5 @@ sizes in the components that render them (`NodeButton`, `LevelButton`, `TabIcon`
 | `cloud.png` | Cloud overlay on locked topics (tiled across the lower map) | 512x256 |
 | `hat-cap.png`, `hat-crown.png`, `hat-wizard.png`, `hat-grad.png` | Hats (id = `hat-*` in the store catalogue); drawn on top of the cat's head | 256x256, hat centred horizontally, brim near the bottom edge |
 
-Not here: cat art lives in `assets/cats/` (artist). The running-cat GIF for the daily leaderboard is still pending;
-drop it in and update `catPoses`/`LeaderboardTrack` in `src/theme/cats.ts` / `src/components/RunningTrack.tsx`.
+Not here: cat art (poses and animations) lives in `assets/cats/`. The leaderboard race uses the chasing-mouse pose.
 App icon / splash: add `app-icon.png` (1024x1024) and `splash.png` here and uncomment `icon` in `app.config.ts`.

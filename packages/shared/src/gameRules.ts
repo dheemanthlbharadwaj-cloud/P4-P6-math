@@ -32,6 +32,6 @@ export const STORE_ITEMS: StoreItem[] = [
   { id: "color-calico", kind: "color", name: "Calico", price: 25 },
   { id: "hat-cap", kind: "hat", name: "School Cap", price: 8 },
   { id: "hat-crown", kind: "hat", name: "Crown", price: 30 },
-  { id: "hat-wizard", kind: "hat", name: "Magician's Top Hat", price: 40 },
+  { id: "hat-wizard", kind: "hat", name: "Math Wizard", price: 40 },
   { id: "hat-grad", kind: "hat", name: "Graduation Cap", price: 50 },
 ];

@@ -1,5 +1,4 @@
-// CatAvatar: the ONLY place that knows how cat colour + hat are rendered. Isolated so the artist's coloured
-// variants can replace it later (swap `source` per colourId and drop the overlay logic).
+// CatAvatar: the ONLY place that knows how cat colour + hat are rendered.
 // Approach: the pose is black art. We stack (1) the pose tinted to a flat colour (silhouette) and (2) the original
 // pose on top at reduced opacity so eyes/outline/shading show through. Black colour = just the pose.
 import React from "react";
@@ -36,7 +35,7 @@ export function CatAvatar({ source = catPoses.curious, colorId = "color-black", 
         <Image source={source} style={{ position: "absolute", width: size, height: h }} contentFit="contain" />
       )}
       {hat ? (
-        // Placeholder anchor: top-centre of the pose. Per-pose anchors can be added when the artist's art lands.
+        // Hat sits at the top-centre of the pose.
         <Image source={hat} style={{ position: "absolute", width: size * 0.5, height: size * 0.5, left: size * 0.25, top: -size * 0.2 }} contentFit="contain" />
       ) : null}
     </View>

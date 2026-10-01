@@ -1,6 +1,5 @@
 // Daily race track: friends' cats on a scrolling track, position ~ questions done today.
-// PLACEHOLDER: uses the static "chasing mouse" pose with a bobbing animation until the artist's running GIF arrives
-// (swap `runnerSource` below; CatAvatar keeps colour/hat).
+// Runners use the existing "chasing mouse" pose with a bobbing run animation; CatAvatar adds colour and hat.
 import React, { useEffect, useRef } from "react";
 import { Animated, Easing, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import type { LeaderboardEntry } from "@p6/shared";
@@ -8,7 +7,7 @@ import { CatAvatar } from "./CatAvatar";
 import { catPoses } from "../theme/cats";
 import { colors } from "../theme/colors";
 
-const runnerSource = catPoses.chasing; // TODO(artist): replace with the running-cat animation
+const runnerSource = catPoses.chasing;
 
 function Runner({ entry, x, self }: { entry: LeaderboardEntry; x: number; self: boolean }) {
   const bob = useRef(new Animated.Value(0)).current;

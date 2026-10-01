@@ -25,8 +25,7 @@ export const catPoses = {
 export const catMoodImage = (mood: CatMood): number =>
   mood === "correct" ? catPoses.cute : catAnimations[mood];
 
-// Placeholder colour palette for the store colours (ids from packages/shared STORE_ITEMS).
-// The artist's coloured variants will replace CatAvatar's overlay approach.
+// Store cat colours (ids from packages/shared STORE_ITEMS), applied by CatAvatar as a tint over the black art.
 export const catColors: Record<string, string> = {
   "color-black": "#1d1d27",
   "color-ginger": "#e8892b",
