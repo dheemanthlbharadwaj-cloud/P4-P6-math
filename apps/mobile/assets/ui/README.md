@@ -7,11 +7,11 @@ sizes in the components that render them (`NodeButton`, `LevelButton`, `TabIcon`
 
 | File | Used for | Recommended size |
 |---|---|---|
-| `map-bg-1.png`, `map-bg-2.png`, `map-bg-3.png` | Map backgrounds, cycled by topic order (add more files + entries in assets.ts for per-topic art) | 1080x1920 (portrait), no text |
-| `node-default.png` | Subtopic node button (open) | 256x256 |
+| `map-bg-1.webp` … `map-bg-12.webp` | One slice per chapter of the GraphicRiver "Game Level Map for Water Games" river map (source PSD/PNG kept outside the repo), centred on that chapter's island. `aspect` and island side are set in `src/theme/assets.ts` | 1080 wide, height = 1080 × aspect |
+| `node-default.png` | Subtopic node button (open) — blue button from the map pack | 256x256 |
 | `node-current.png` | Node the student should play next | 256x256 |
-| `node-gold.png` | Node whose 3 levels are all complete | 256x256 |
-| `node-locked.png` | Node inside a locked topic | 256x256 |
+| `node-gold.png` | Node whose 3 levels are all complete — gold star from the map pack | 256x256 |
+| `node-locked.png` | Node inside a locked topic — grey button from the map pack | 256x256 |
 | `level-1.png`, `level-2.png`, `level-3.png` | Level selector buttons | 192x192 |
 | `level-gold.png` | Completed level (gold button) | 192x192 |
 | `tab-map.png`, `tab-book.png`, `tab-cat.png`, `tab-trophy.png`, `tab-person.png` | Bottom toolbar, in this order | 128x128, single-colour dark art (shown at 50% opacity when inactive) |

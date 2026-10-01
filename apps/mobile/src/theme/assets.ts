@@ -5,11 +5,22 @@
 import type { ImageSourcePropType } from "react-native";
 
 export const uiAssets = {
-  mapBackgrounds: [
-    require("../../assets/ui/map-bg-1.png"),
-    require("../../assets/ui/map-bg-2.png"),
-    require("../../assets/ui/map-bg-3.png"),
-  ] as ImageSourcePropType[], // cycled by topic order
+  // One slice of the long river map per chapter (map order 1..12), centred on that chapter's island.
+  // aspect = height / width of the image; island = which side the island sits, so nodes go on the water side.
+  maps: [
+    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 1.9, island: "left" },
+    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 1.9, island: "right" },
+    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 2.026, island: "left" },
+    { bg: require("../../assets/ui/map-bg-4.webp"), aspect: 1.9, island: "right" },
+    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 2.354, island: "left" },
+    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 2.026, island: "right" },
+    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 2.354, island: "left" },
+    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 3.338, island: "right" },
+    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 2.026, island: "left" },
+    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 2.354, island: "right" },
+    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 2.354, island: "left" },
+    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 1.9, island: "right" },
+  ] as MapTheme[], // cycled by topic order
   node: {
     default: require("../../assets/ui/node-default.png") as ImageSourcePropType,
     current: require("../../assets/ui/node-current.png") as ImageSourcePropType,
@@ -47,7 +58,15 @@ export const uiAssets = {
   } as Record<string, ImageSourcePropType>,
 };
 
-export function mapBackgroundFor(topicOrder: number): ImageSourcePropType {
-  const list = uiAssets.mapBackgrounds;
-  return list[((topicOrder % list.length) + list.length) % list.length];
+export interface MapTheme {
+  bg: ImageSourcePropType;
+  aspect: number;
+  island: "left" | "right";
+}
+
+/** Map art for a topic (1-based order). Grades with more than 12 topics reuse the maps in order. */
+export function mapThemeFor(topicOrder: number): MapTheme {
+  const list = uiAssets.maps;
+  const i = topicOrder - 1;
+  return list[((i % list.length) + list.length) % list.length];
 }

@@ -1,9 +1,9 @@
 // One topic = one map page. Subtopic nodes wind up a path; friends' mini cats stand next to nodes.
 import React, { useMemo, useRef } from "react";
-import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import type { GradeProgress, PublicProfile, TopicMap } from "@p6/shared";
 import { CatAvatar } from "./CatAvatar";
-import { mapBackgroundFor, uiAssets } from "../theme/assets";
+import { mapThemeFor, uiAssets } from "../theme/assets";
 import { catPoses } from "../theme/cats";
 import { isLevelComplete } from "../logic/unlock";
 import { colors } from "../theme/colors";
@@ -27,10 +27,13 @@ export function TopicMapPage({ topic, width, unlocked, progress, friends, onNode
   const ref = useRef<ScrollView>(null);
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
   const n = subs.length;
-  const height = n * ROW + 150;
-  const amp = Math.min(width * 0.26, 120);
-  // Path progresses bottom → top.
-  const pos = subs.map((_, i) => ({ x: width / 2 + Math.sin(i * 1.15) * amp, y: height - 90 - i * ROW }));
+  const theme = mapThemeFor(topic.order);
+  const height = Math.max(width * theme.aspect, n * ROW + 150);
+  // Nodes follow the river on the side away from this chapter's island; the path runs bottom → top.
+  const centre = width * (theme.island === "left" ? 0.62 : 0.38);
+  const amp = Math.min(width * 0.14, 64);
+  const row = (height - 180) / Math.max(1, n);
+  const pos = subs.map((_, i) => ({ x: centre + Math.sin(i * 1.15) * amp, y: height - 120 - i * row }));
   const currentIdx = subs.findIndex((s) => !([1, 2, 3] as const).every((l) => isLevelComplete(progress, s.id, l)));
 
   const dots: { x: number; y: number; k: string }[] = [];
@@ -43,8 +46,9 @@ export function TopicMapPage({ topic, width, unlocked, progress, friends, onNode
 
   return (
     <View style={{ width, flex: 1 }}>
-      <ImageBackground source={mapBackgroundFor(topic.order)} style={{ flex: 1 }} resizeMode="cover">
+      <View style={{ flex: 1, backgroundColor: "#5fd3e0" }}>
         <ScrollView ref={ref} contentContainerStyle={{ height }} onContentSizeChange={() => ref.current?.scrollToEnd({ animated: false })} showsVerticalScrollIndicator={false}>
+          <Image source={theme.bg} style={{ position: "absolute", top: 0, left: 0, width, height }} resizeMode="cover" accessibilityIgnoresInvertColors />
           {dots.map((d) => (
             <View key={d.k} style={[styles.dot, { left: d.x - 5, top: d.y + NODE / 2 - 5 }]} />
           ))}
@@ -99,13 +103,13 @@ export function TopicMapPage({ topic, width, unlocked, progress, friends, onNode
             </View>
           </Pressable>
         ) : null}
-      </ImageBackground>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(43,45,66,0.45)" },
+  dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
   nodeWrap: { position: "absolute", width: NODE, alignItems: "center" },
   pips: { flexDirection: "row", gap: 4, marginTop: -2 },
   pip: { width: 12, height: 12, borderRadius: 6, backgroundColor: "#fff", borderWidth: 2, borderColor: colors.border },
