@@ -16,14 +16,18 @@ export class CredentialsError extends Error {}
 
 export function loadCredentials(env = process.env): ServiceAccount {
   let text: string | undefined;
-  if (env.FIREBASE_SERVICE_ACCOUNT_JSON?.trim()) text = env.FIREBASE_SERVICE_ACCOUNT_JSON;
+  // Base64 form fits single-line KEY=value environment editors (raw JSON has quotes, spaces and "=").
+  const b64 = env.FIREBASE_SERVICE_ACCOUNT_B64?.trim();
+  const json = env.FIREBASE_SERVICE_ACCOUNT_JSON?.trim();
+  if (b64) text = Buffer.from(b64, "base64").toString("utf8");
+  else if (json) text = json.startsWith("{") ? json : Buffer.from(json, "base64").toString("utf8");
   else if (env.GOOGLE_APPLICATION_CREDENTIALS) {
     if (!fs.existsSync(env.GOOGLE_APPLICATION_CREDENTIALS)) throw new CredentialsError(`GOOGLE_APPLICATION_CREDENTIALS points to a missing file: ${env.GOOGLE_APPLICATION_CREDENTIALS}`);
     text = fs.readFileSync(env.GOOGLE_APPLICATION_CREDENTIALS, "utf8");
   }
   if (!text) {
     throw new CredentialsError(
-      "No Firebase credentials found.\nSet FIREBASE_SERVICE_ACCOUNT_JSON (the service-account JSON as a string) or GOOGLE_APPLICATION_CREDENTIALS (path to the key file).\nA read-only role (Cloud Datastore Viewer) on project " + EDITOR_PROJECT + " is enough.",
+      "No Firebase credentials found.\nSet FIREBASE_SERVICE_ACCOUNT_B64 (the key file base64-encoded: `base64 -w0 key.json`), FIREBASE_SERVICE_ACCOUNT_JSON (the JSON as a string) or GOOGLE_APPLICATION_CREDENTIALS (path to the key file).\nA read-only role (Cloud Datastore Viewer) on project " + EDITOR_PROJECT + " is enough.",
     );
   }
   let j: ServiceAccount;

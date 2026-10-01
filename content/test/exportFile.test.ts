@@ -1,5 +1,17 @@
 import { describe, expect, it } from "vitest";
-import { docsFromExport } from "../src/sync";
+import { docsFromExport, loadCredentials } from "../src/sync";
+
+describe("loadCredentials", () => {
+  const key = { client_email: "a@b.iam.gserviceaccount.com", private_key: "-----BEGIN PRIVATE KEY-----\nx\n-----END PRIVATE KEY-----\n" };
+  const b64 = Buffer.from(JSON.stringify(key)).toString("base64");
+  it("reads FIREBASE_SERVICE_ACCOUNT_B64", () => {
+    expect(loadCredentials({ FIREBASE_SERVICE_ACCOUNT_B64: b64 }).client_email).toBe(key.client_email);
+  });
+  it("reads raw or base64 JSON from FIREBASE_SERVICE_ACCOUNT_JSON", () => {
+    expect(loadCredentials({ FIREBASE_SERVICE_ACCOUNT_JSON: JSON.stringify(key) }).private_key).toBe(key.private_key);
+    expect(loadCredentials({ FIREBASE_SERVICE_ACCOUNT_JSON: b64 }).private_key).toBe(key.private_key);
+  });
+});
 
 const q = { question: "What is 1/2 of 10?", difficulty: "LV2", topic_primary: "Fractions" };
 
