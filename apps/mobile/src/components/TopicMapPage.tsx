@@ -8,8 +8,7 @@ import { catPoses } from "../theme/cats";
 import { isLevelComplete } from "../logic/unlock";
 import { colors } from "../theme/colors";
 
-const ROW = 128;
-const NODE = 84;
+const NODE = 56; // fits the narrowest measured water spot on every map (see scripts/map-paths.py)
 
 export interface TopicMapPageProps {
   topic: TopicMap;
@@ -21,6 +20,28 @@ export interface TopicMapPageProps {
   onLockPress: () => void;
 }
 
+/** Even spots along the route (t = 0 top … 1 bottom), first subtopic at the bottom. */
+function evenSpots(n: number): number[] {
+  return Array.from({ length: n }, (_, i) => 0.94 - (0.88 * (i + 0.5)) / Math.max(1, n));
+}
+
+/** Arc-length parametrised water route scaled to the page. */
+function buildRoute(path: [number, number, 0 | 1][], width: number, height: number) {
+  const pts = path.map(([x, y, open]) => ({ x: x * width, y: y * height, open: open === 1 }));
+  const cum = [0];
+  for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y));
+  const length = cum[cum.length - 1] || 1;
+  const at = (t: number) => {
+    const d = Math.min(1, Math.max(0, t)) * length;
+    let i = 1;
+    while (i < cum.length - 1 && cum[i] < d) i++;
+    const f = (d - cum[i - 1]) / (cum[i] - cum[i - 1] || 1);
+    const p = pts[i - 1], q = pts[i];
+    return { x: p.x + (q.x - p.x) * f, y: p.y + (q.y - p.y) * f, open: p.open && q.open };
+  };
+  return { at, length };
+}
+
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 export function TopicMapPage({ topic, width, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
@@ -28,19 +49,24 @@ export function TopicMapPage({ topic, width, unlocked, progress, friends, onNode
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
   const n = subs.length;
   const theme = mapThemeFor(topic.order);
-  const height = Math.max(width * theme.aspect, n * ROW + 150);
-  // Nodes follow the river on the side away from this chapter's island; the path runs bottom → top.
-  const centre = width * (theme.island === "left" ? 0.62 : 0.38);
-  const amp = Math.min(width * 0.14, 64);
-  const row = (height - 180) / Math.max(1, n);
-  const pos = subs.map((_, i) => ({ x: centre + Math.sin(i * 1.15) * amp, y: height - 120 - i * row }));
+  const height = width * theme.aspect;
+  // Nodes sit on spots measured from the art: open water, clear of buildings and objects. Other node counts
+  // (P4/P5 later) fall back to even spacing along the same water route.
+  const route = useMemo(() => buildRoute(theme.route.path, width, height), [theme, width, height]);
+  const ts = theme.route.nodes.length === n ? theme.route.nodes : evenSpots(n);
+  const pos = ts.map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
   const currentIdx = subs.findIndex((s) => !([1, 2, 3] as const).every((l) => isLevelComplete(progress, s.id, l)));
 
+  // Trail dots follow the water route between consecutive nodes, skipping stretches hidden behind objects.
   const dots: { x: number; y: number; k: string }[] = [];
   for (let i = 0; i < n - 1; i++) {
-    for (let k = 1; k <= 4; k++) {
-      const t = k / 5;
-      dots.push({ x: pos[i].x + (pos[i + 1].x - pos[i].x) * t, y: pos[i].y + (pos[i + 1].y - pos[i].y) * t, k: `${i}-${k}` });
+    const a = ts[i], b = ts[i + 1];
+    const steps = Math.max(2, Math.round((Math.abs(b - a) * route.length) / 26));
+    for (let k = 1; k < steps; k++) {
+      const p = route.at(a + ((b - a) * k) / steps);
+      if (p.open && Math.hypot(p.x - pos[i].x, p.y - pos[i].y - NODE / 2) > NODE * 0.7 && Math.hypot(p.x - pos[i + 1].x, p.y - pos[i + 1].y - NODE / 2) > NODE * 0.7) {
+        dots.push({ x: p.x, y: p.y - NODE / 2, k: `${i}-${k}` });
+      }
     }
   }
 
@@ -79,10 +105,12 @@ export function TopicMapPage({ topic, width, unlocked, progress, friends, onNode
             ? friends.slice(0, 8).map((f) => {
                 // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
                 const i = hash(f.uid) % Math.max(1, n);
-                const side = hash(f.uid + "s") % 2 === 0 ? 1 : -1;
-                const x = Math.min(width - 60, Math.max(4, pos[i].x + side * (NODE / 2 + 8) - 22));
+                // Stand on the water route just below the node (toward the previous one), never on scenery.
+                const gap = i > 0 ? ts[i - 1] - ts[i] : 0.94 - ts[i];
+                const spot = route.at(ts[i] + Math.max(0.012, gap * 0.4));
+                const x = Math.min(width - 64, Math.max(0, spot.x - 32));
                 return (
-                  <View key={f.uid} style={[styles.friend, { left: x, top: pos[i].y + 10 }]} pointerEvents="none">
+                  <View key={f.uid} style={[styles.friend, { left: x, top: spot.y - 22 }]} pointerEvents="none">
                     <CatAvatar source={catPoses.curious} colorId={f.cat.colorId} hatId={f.cat.hatId} size={44} />
                     <Text style={styles.friendName} numberOfLines={1}>{f.displayName}</Text>
                   </View>

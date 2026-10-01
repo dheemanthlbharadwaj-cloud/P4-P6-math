@@ -3,6 +3,7 @@
 // else needs to change. See assets/ui/README.md for names and recommended sizes.
 // Cat art lives in assets/cats/ (artist-supplied) and is referenced in src/theme/cats.ts.
 import type { ImageSourcePropType } from "react-native";
+import { mapPaths, type MapPath } from "./mapPaths";
 
 export const uiAssets = {
   // One slice of the long river map per chapter (map order 1..12), centred on that chapter's island.
@@ -20,7 +21,7 @@ export const uiAssets = {
     { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 2.354, island: "right" },
     { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 2.354, island: "left" },
     { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 1.9, island: "right" },
-  ] as MapTheme[], // cycled by topic order
+  ] as Omit<MapTheme, "route">[], // cycled by topic order
   node: {
     default: require("../../assets/ui/node-default.png") as ImageSourcePropType,
     current: require("../../assets/ui/node-current.png") as ImageSourcePropType,
@@ -62,11 +63,12 @@ export interface MapTheme {
   bg: ImageSourcePropType;
   aspect: number;
   island: "left" | "right";
+  route: MapPath; // water route + node spots, measured from the art (src/theme/mapPaths.ts)
 }
 
 /** Map art for a topic (1-based order). Grades with more than 12 topics reuse the maps in order. */
 export function mapThemeFor(topicOrder: number): MapTheme {
   const list = uiAssets.maps;
-  const i = topicOrder - 1;
-  return list[((i % list.length) + list.length) % list.length];
+  const i = (((topicOrder - 1) % list.length) + list.length) % list.length;
+  return { ...list[i], route: mapPaths[i] };
 }
