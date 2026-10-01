@@ -25,7 +25,7 @@ async function main() {
   const sf = typeof flags["subtopic-field"] === "string" ? (flags["subtopic-field"] as string) : undefined;
   switch (cmd) {
     case "sync":
-      await runSync(grade, { mode: (flags.mode as "auto" | "rest" | "admin") ?? "auto", skipFigures: !!flags["skip-figures"] });
+      await runSync(grade, { mode: (flags.mode as "auto" | "rest" | "admin") ?? "auto", skipFigures: !!flags["skip-figures"], fromFile: flags["from-file"] as string | undefined });
       break;
     case "audit": {
       const r = runAudit(grade, { subtopicField: sf });
@@ -45,7 +45,7 @@ async function main() {
       break;
     }
     default:
-      console.error("Usage: cli <sync|audit|build|mock> --grade P6 [--subtopic-field name] [--mode auto|rest|admin] [--skip-figures]");
+      console.error("Usage: cli <sync|audit|build|mock> --grade P6 [--subtopic-field name] [--mode auto|rest|admin] [--skip-figures] [--from-file export.json]");
       process.exit(2);
   }
 }

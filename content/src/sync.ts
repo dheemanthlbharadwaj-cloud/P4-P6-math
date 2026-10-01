@@ -168,9 +168,51 @@ export async function downloadFigures(docs: RawDoc[], grade: Grade, log = consol
   return { total: todo.length, downloaded: done, skipped, failed };
 }
 
-export async function runSync(grade: Grade, o: { mode?: "auto" | "rest" | "admin"; skipFigures?: boolean } = {}, log = console.log) {
+/**
+ * Read an editor "Export JSON" file (or any dump of the questions collection) without credentials.
+ * Accepts: an array of docs, {questions: [...]}, {questions: {id: doc}}, or a plain {id: doc} map.
+ * Docs without `id` take it from their map key or `source_id` + `year`.
+ */
+export function docsFromExport(data: unknown): RawDoc[] {
+  const body = (data && typeof data === "object" && !Array.isArray(data) && "questions" in data)
+    ? (data as { questions: unknown }).questions
+    : data;
+  const entries: [string | undefined, unknown][] = Array.isArray(body)
+    ? body.map((d) => [undefined, d])
+    : body && typeof body === "object" ? Object.entries(body as Record<string, unknown>) : [];
+  const docs: RawDoc[] = [];
+  for (const [key, d] of entries) {
+    if (!d || typeof d !== "object") continue;
+    const r = d as Record<string, unknown>;
+    const id = (r.id as string) ?? key ?? (r.source_id && r.year ? `${r.year}_${r.source_id}` : undefined);
+    if (!id || !("question" in r || "question_type" in r)) continue;
+    docs.push({ ...r, id: String(id) });
+  }
+  return docs;
+}
+
+export async function runSync(
+  grade: Grade,
+  o: { mode?: "auto" | "rest" | "admin"; skipFigures?: boolean; fromFile?: string } = {},
+  log = console.log,
+) {
+  let docs: RawDoc[];
+  if (o.fromFile) {
+    docs = docsFromExport(JSON.parse(fs.readFileSync(o.fromFile, "utf8")));
+    log(`Read ${docs.length} question docs from export file ${o.fromFile}`);
+  } else {
+    docs = await fetchLive(log, o.mode ?? "auto");
+  }
+  writeSnapshot(grade, docs, o.fromFile ? `file:${path.basename(o.fromFile)}` : EDITOR_PROJECT, log);
+  if (!o.skipFigures) {
+    const f = await downloadFigures(docs, grade, log);
+    log(`Figures: ${f.downloaded} downloaded, ${f.skipped} already present, ${f.failed.length} failed (of ${f.total})`);
+    for (const x of f.failed.slice(0, 10)) log(`  failed ${x.id}: ${x.error}`);
+  }
+}
+
+async function fetchLive(log: typeof console.log, mode: "auto" | "rest" | "admin"): Promise<RawDoc[]> {
   const sa = loadCredentials(); // throws CredentialsError before any network
-  const mode = o.mode ?? "auto";
   log(`Syncing ${EDITOR_PROJECT} (database "${EDITOR_DATABASE}") collection "questions" [${mode}]${process.env.HTTPS_PROXY ? " via HTTPS_PROXY" : ""}`);
   let docs: RawDoc[];
   if (mode === "admin") docs = await fetchViaAdmin(sa);
@@ -182,13 +224,12 @@ export async function runSync(grade: Grade, o: { mode?: "auto" | "rest" | "admin
     }
   }
   if (docs.length === 0) log(`WARNING: 0 documents. Check the database id: it must be "${EDITOR_DATABASE}" (not "(default)") and the collection "questions".`);
+  return docs;
+}
+
+function writeSnapshot(grade: Grade, docs: RawDoc[], source: string, log: typeof console.log) {
   docs.sort((a, b) => (a.id < b.id ? -1 : 1));
   fs.mkdirSync(rawDir(grade), { recursive: true });
-  fs.writeFileSync(snapshotPath(grade), JSON.stringify({ grade, project: EDITOR_PROJECT, database: EDITOR_DATABASE, fetchedAt: new Date().toISOString(), count: docs.length, questions: docs }));
+  fs.writeFileSync(snapshotPath(grade), JSON.stringify({ grade, project: source, database: EDITOR_DATABASE, fetchedAt: new Date().toISOString(), count: docs.length, questions: docs }));
   log(`Wrote ${docs.length} docs → ${snapshotPath(grade)}`);
-  if (!o.skipFigures) {
-    const f = await downloadFigures(docs, grade, log);
-    log(`Figures: ${f.downloaded} downloaded, ${f.skipped} already present, ${f.failed.length} failed (of ${f.total})`);
-    for (const x of f.failed.slice(0, 10)) log(`  failed ${x.id}: ${x.error}`);
-  }
 }
