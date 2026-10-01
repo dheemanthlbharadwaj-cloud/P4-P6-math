@@ -1,0 +1,9 @@
+{
+  "name": "p4-p6-math",
+  "private": true,
+  "workspaces": ["packages/*", "content", "apps/*"],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  }
+}

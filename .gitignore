@@ -1,0 +1,14 @@
+node_modules/
+.expo/
+dist/
+build/
+*.log
+.env
+.env.*
+service-account*.json
+*-firebase-adminsdk-*.json
+content/raw/
+backend/functions/lib/
+ios/
+android/
+.DS_Store
