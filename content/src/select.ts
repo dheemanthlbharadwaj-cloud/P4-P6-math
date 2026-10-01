@@ -9,8 +9,10 @@ export interface SelCandidate {
   verified: boolean;
   hasError: boolean;
   school: string;
+  selectedRank?: number | null; // editor's own 5/5/5 pick
 }
-export interface SubtopicDef { id: string; topic: string; name: string }
+/** `topic` is the map the node sits on: the editor chapter when present, else the canonical topic. */
+export interface SubtopicDef { id: string; topic: string; name: string; topicOrder?: number }
 
 const cmp = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
 const isMulti = (q: Question) => (q.parts?.length ?? 0) > 1;
@@ -43,7 +45,13 @@ export function buildSubtopicNode(def: SubtopicDef, order: number, cands: SelCan
   const used = new Set<string>();
   const shortfall: SubtopicNode["shortfall"] = {};
   for (const lv of [1, 2, 3] as LevelNo[]) {
-    const got = pickLevel(cands, lv);
+    // The editor team's selection wins; anything unusable in it is backfilled by the scorer.
+    const chosen = cands
+      .filter((c) => c.selectedRank && c.q.difficulty === LEVEL_DIFF[lv] && !c.hasError && c.q.autoMarkable)
+      .sort((a, b) => a.selectedRank! - b.selectedRank! || cmp(a.q.id, b.q.id))
+      .slice(0, QUESTIONS_PER_LEVEL);
+    const chosenIds = new Set(chosen.map((c) => c.q.id));
+    const got = [...chosen, ...pickLevel(cands.filter((c) => !chosenIds.has(c.q.id)), lv, QUESTIONS_PER_LEVEL - chosen.length)];
     main[lv] = got.map((c) => c.q.id);
     got.forEach((c) => used.add(c.q.id));
     if (got.length < QUESTIONS_PER_LEVEL) shortfall[lv] = QUESTIONS_PER_LEVEL - got.length;
@@ -80,14 +88,18 @@ export interface CurriculumInput {
 
 export function buildCurriculum(inp: CurriculumInput): Curriculum {
   const known = new Set(CANONICAL_TOPICS);
-  const topicNames = [...CANONICAL_TOPICS, ...[...new Set(inp.subtopics.map((s) => s.topic))].filter((t) => !known.has(t)).sort()];
+  const chapterMode = inp.subtopics.some((s) => s.topicOrder !== undefined);
+  const topicNames = chapterMode
+    ? [...new Map(inp.subtopics.map((s) => [s.topic, s.topicOrder ?? 999] as const))].sort((a, b) => a[1] - b[1] || cmp(a[0], b[0])).map(([t]) => t)
+    : [...CANONICAL_TOPICS, ...[...new Set(inp.subtopics.map((s) => s.topic))].filter((t) => !known.has(t)).sort()];
   const topics: TopicMap[] = [];
   for (const name of topicNames) {
     const defs = inp.subtopics.filter((s) => s.topic === name);
     if (!defs.length) continue;
     const subtopics = defs.map((def, i) => buildSubtopicNode(def, i + 1, inp.candidates.filter((c) => c.q.subtopicId === def.id)));
     const mainIds = new Set(subtopics.flatMap((s) => [...s.main[1], ...s.main[2], ...s.main[3]]));
-    const topicCands = inp.candidates.filter((c) => c.q.topic === name);
+    const nodeIds = new Set(defs.map((d) => d.id));
+    const topicCands = inp.candidates.filter((c) => nodeIds.has(c.q.subtopicId));
     topics.push({
       id: slugify(name),
       name,

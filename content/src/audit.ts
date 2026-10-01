@@ -29,34 +29,42 @@ export function runAuditOn(docs: RawDoc[], grade: Grade, o: { subtopicField?: st
   if (!det.field) L.push("> **WARNING: no subtopic field found in the data. Provide content/mapping/" + grade + "-subtopics.csv or --subtopic-field.**", "");
   L.push("| field | docs with value | distinct values |", "|---|---|---|");
   for (const c of det.candidates) L.push(`| ${c.field} | ${c.coverage} | ${c.distinct} |`);
-  L.push("", `Subtopics (topic+subtopic pairs): **${count}**${expected ? ` (expected ${expected}) ${countOk ? "OK" : "MISMATCH"}` : ""}`, "");
+  L.push("", `Subtopics (map nodes): **${count}**${expected ? ` (expected ${expected}) ${countOk ? "OK" : "MISMATCH"}` : ""}`, "");
 
-  // counts
-  type Cnt = { LV1: number; LV2: number; LV3: number; ok: { LV1: number; LV2: number; LV3: number } };
+  // counts, keyed by map node (chapter or topic + subtopic)
+  type Cnt = { LV1: number; LV2: number; LV3: number; ok: { LV1: number; LV2: number; LV3: number }; sel: { LV1: number; LV2: number; LV3: number } };
   const cnt = new Map<string, Cnt>();
-  const nd = new Map(prep.norm.map((n) => [n.id, n]));
+  const badPicks: string[] = [];
   for (const c of prep.candidates) {
-    const n = nd.get(c.q.id)!;
-    const key = n.topic + "\0" + n.subtopic;
-    const e = cnt.get(key) ?? { LV1: 0, LV2: 0, LV3: 0, ok: { LV1: 0, LV2: 0, LV3: 0 } };
+    const e = cnt.get(c.q.subtopicId) ?? { LV1: 0, LV2: 0, LV3: 0, ok: { LV1: 0, LV2: 0, LV3: 0 }, sel: { LV1: 0, LV2: 0, LV3: 0 } };
     e[c.q.difficulty]++;
-    if (!c.hasError && c.q.autoMarkable) e.ok[c.q.difficulty]++;
-    cnt.set(key, e);
+    const usable = !c.hasError && c.q.autoMarkable;
+    if (usable) e.ok[c.q.difficulty]++;
+    if (c.selectedRank) {
+      if (usable) e.sel[c.q.difficulty]++;
+      else badPicks.push(`${c.q.id} (${c.q.difficulty}, rank ${c.selectedRank}): ${c.hasError ? "has_error" : (prep.nonAutoReasons.get(c.q.id) ?? ["not auto-markable"]).join("; ")}`);
+    }
+    cnt.set(c.q.subtopicId, e);
   }
-  L.push("## Questions per topic / subtopic", "", "Cells are `usable (total)`; usable = no has_error and auto-markable.", "");
+  const anySelection = prep.candidates.some((c) => c.selectedRank);
+  L.push("## Questions per map / subtopic", "", `Cells are \`usable (total)\`; usable = no has_error and auto-markable.${anySelection ? " `★n` = usable editor picks (selected) at that level." : ""}`, "");
   const short: string[] = [];
-  for (const topic of CANONICAL_TOPICS) {
+  const maps = [...new Set(prep.defs.map((d) => d.topic))];
+  for (const topic of maps) {
     const defs = prep.defs.filter((d) => d.topic === topic);
-    if (!defs.length) { L.push(`### ${topic}`, "", "_no subtopics_", ""); continue; }
-    const tot = prep.candidates.filter((c) => c.q.topic === topic).length;
+    const ids = new Set(defs.map((d) => d.id));
+    const tot = prep.candidates.filter((c) => ids.has(c.q.subtopicId)).length;
     L.push(`### ${topic} (${tot} questions, ${defs.length} subtopics)`, "", "| subtopic | LV1 | LV2 | LV3 |", "|---|---|---|---|");
     for (const d of defs) {
-      const e = cnt.get(topic + "\0" + d.name)!;
-      const cell = (k: "LV1" | "LV2" | "LV3") => `${e.ok[k]} (${e[k]})${e.ok[k] < 5 ? " ⚠" : ""}`;
+      const e = cnt.get(d.id)!;
+      const cell = (k: "LV1" | "LV2" | "LV3") => `${e.ok[k]} (${e[k]})${anySelection ? ` ★${e.sel[k]}` : ""}${e.ok[k] < 5 ? " ⚠" : ""}`;
       L.push(`| ${d.name} | ${cell("LV1")} | ${cell("LV2")} | ${cell("LV3")} |`);
       for (const k of ["LV1", "LV2", "LV3"] as const) if (e.ok[k] < 5) short.push(`${topic} / ${d.name} / ${k}: ${e.ok[k]} usable`);
     }
     L.push("");
+  }
+  if (anySelection) {
+    L.push(`## Editor picks that can't be used in the main path: ${badPicks.length}`, "", "These are replaced by the next best question at the same level (see build).", "", ...(badPicks.length ? badPicks.map((b) => `- ${b}`) : ["none"]), "");
   }
   L.push(`## Shortfalls (< 5 usable at a level): ${short.length}`, "", ...(short.length ? short.map((s) => `- ${s}`) : ["none"]), "");
 

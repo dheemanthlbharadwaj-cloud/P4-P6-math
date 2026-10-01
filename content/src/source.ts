@@ -132,6 +132,12 @@ export interface NormDoc {
   school: string;
   year: number;
   fromMapping: boolean;
+  /** Editor curriculum (chapters = maps). Absent in older banks → topics are used as maps. */
+  chapter: string | null;
+  chapterNo: number | null;
+  excluded: boolean;
+  /** Editor's own 5/5/5 pick: rank 1..5 within (subtopic, difficulty) when `selected`. */
+  selectedRank: number | null;
 }
 
 export function schoolOf(d: RawDoc): string {
@@ -156,6 +162,10 @@ export function normalizeDocs(docs: RawDoc[], opts: { subtopicField?: string | n
       school: schoolOf(d),
       year,
       fromMapping: !!map,
+      chapter: typeof d.chapter === "string" && d.chapter ? d.chapter : null,
+      chapterNo: Number.isFinite(Number(d.chapter_no)) && d.chapter_no !== null && d.chapter_no !== "" ? Number(d.chapter_no) : null,
+      excluded: d.excluded === true || d.excluded === "true",
+      selectedRank: (d.selected === true || d.selected === "true") && Number(d.selected_rank) > 0 ? Number(d.selected_rank) : null,
     };
   });
 }

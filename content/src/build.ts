@@ -44,7 +44,11 @@ export function prepare(docs: RawDoc[], grade: Grade, o: { subtopicField?: strin
   const stats = newStats();
   const skipped: Prepared["skipped"] = [];
   const known = new Set(CANONICAL_TOPICS);
+  const chapterMode = norm.some((n) => n.chapter);
+  const mapOf = (n: NormDoc) => (chapterMode ? n.chapter ?? "" : n.topic);
   const usable = norm.filter((n) => {
+    if (n.excluded) return skipped.push({ id: n.id, reason: `excluded by editor (${n.raw.excluded_reason ?? "no reason"})` }), false;
+    if (chapterMode && !n.chapter) return skipped.push({ id: n.id, reason: "no chapter" }), false;
     if (!known.has(n.topic)) return skipped.push({ id: n.id, reason: `non-canonical topic "${n.topic}"` }), false;
     if (!n.subtopic) return skipped.push({ id: n.id, reason: "no subtopic" }), false;
     if (!n.difficulty) return skipped.push({ id: n.id, reason: "no/invalid difficulty" }), false;
@@ -53,28 +57,30 @@ export function prepare(docs: RawDoc[], grade: Grade, o: { subtopicField?: strin
   // subtopic defs
   const pairs = new Map<string, SubtopicDef>();
   const usedIds = new Set<string>();
-  for (const n of [...usable].sort((a, b) => (a.topic + "\0" + a.subtopic < b.topic + "\0" + b.subtopic ? -1 : 1))) {
-    const key = n.topic + "\0" + n.subtopic;
+  const keyOf = (n: NormDoc) => mapOf(n) + "\0" + n.subtopic;
+  for (const n of [...usable].sort((a, b) => (keyOf(a) < keyOf(b) ? -1 : 1))) {
+    const key = keyOf(n);
     if (pairs.has(key)) continue;
-    let id = subtopicId(grade, n.topic, n.subtopic);
+    let id = subtopicId(grade, mapOf(n), n.subtopic);
     while (usedIds.has(id)) id += "-2";
     usedIds.add(id);
-    pairs.set(key, { id, topic: n.topic, name: n.subtopic });
+    pairs.set(key, { id, topic: mapOf(n), name: n.subtopic, ...(chapterMode ? { topicOrder: n.chapterNo ?? 999 } : {}) });
   }
-  const defs = [...pairs.values()].sort((a, b) => CANONICAL_TOPICS.indexOf(a.topic) - CANONICAL_TOPICS.indexOf(b.topic) || (a.name < b.name ? -1 : 1));
+  const order = (d: SubtopicDef) => (chapterMode ? d.topicOrder ?? 999 : CANONICAL_TOPICS.indexOf(d.topic));
+  const defs = [...pairs.values()].sort((a, b) => order(a) - order(b) || (a.name < b.name ? -1 : 1));
 
   const candidates: SelCandidate[] = [];
   const figures: FigureSource[] = [];
   const missingFigures: string[] = [];
   const nonAutoReasons = new Map<string, string[]>();
   for (const n of usable) {
-    const def = pairs.get(n.topic + "\0" + n.subtopic)!;
+    const def = pairs.get(keyOf(n))!;
     const figFile = findFigureFile(grade, n.id, o.figDir);
     if (wantsFigure(n.raw) && !figFile) missingFigures.push(n.id);
     const { question, reasons } = convertQuestion(n, n.topic, { grade, subtopicId: def.id, stats, hasFigure: !!figFile });
     if (reasons.length) nonAutoReasons.set(n.id, reasons);
     if (figFile && !n.hasError) figures.push({ id: n.id, input: figFile });
-    candidates.push({ q: question, verified: n.verified, hasError: n.hasError, school: n.school });
+    candidates.push({ q: question, verified: n.verified, hasError: n.hasError, school: n.school, selectedRank: n.selectedRank });
   }
   return { norm, subtopicField: det.field, defs, candidates, figures, skipped, nonAutoReasons, missingFigures, stats };
 }

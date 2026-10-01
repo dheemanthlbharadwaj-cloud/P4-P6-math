@@ -5,7 +5,7 @@
 |---|---|
 | Mobile | **Expo React Native (TypeScript)**, expo-router, EAS Build → iOS App Store + Google Play. Dev builds (not Expo Go) because of ads/IAP native modules. |
 | Questions | **Bundled in the app, fully offline.** Built from the editor's Firestore bank (`primary-math-sg`, database id `"default"`) by the content pipeline. |
-| Map unit | **Subtopic = map node (P6 has 62 subtopics)**, each with 5/5/5. **Topic = swipeable map.** |
+| Map unit | **Subtopic = map node (P6 has 62 subtopics)**, each with 5/5/5. **Editor chapter (`chapter`, `chapter_no`; 12 for P6) = swipeable map.** Chapter 99 "Removed" / `excluded` questions are dropped. |
 | Backend | **New Firebase project** for the student app (separate from the `primary-math-sg` editor project). Auth, Firestore, Cloud Functions (TypeScript). |
 | Ads | Google AdMob via `react-native-google-mobile-ads`, rewarded ads for +hearts/+energy. Child-directed settings (see Compliance). |
 | Subscription | In-app purchase via RevenueCat (`react-native-purchases`). Apple/Google require store billing for digital subscriptions. Entitlement `unlimited`. |
@@ -40,6 +40,7 @@ docs/                       WORKFLOW.md (spec), ARCHITECTURE.md (this), OPEN_QUE
    - Math text pre-tokenized into `RichText` (no KaTeX/WebView at runtime).
 4. `mock` — generates a schema-identical fake bundle so the app runs before the real sync.
 
+**The editor team's own pick wins:** questions with `selected: true` fill level N (LV N) of their subtopic in `selected_rank` order. A pick that has `has_error` or can't be auto-marked is replaced by the scorer below and listed in `content/reports/<grade>-audit.md`.
 Selection is deterministic (stable sort by score then id) so rebuilds do not reshuffle a student's map.
 Selection order for the main 5/5/5: exclude `has_error`; exclude questions that can't be auto-marked; prefer
 `verified`; prefer no multi-part over multi-part for L1/L2; spread across years/schools. Everything else → `pool`.

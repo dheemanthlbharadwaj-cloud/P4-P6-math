@@ -48,3 +48,24 @@ describe("splitLetteredAnswer", () => {
   it("splits", () => expect(splitLetteredAnswer("(a) 5 cm, (b) 12")).toEqual([{ part: "a", value: "5 cm" }, { part: "b", value: "12" }]));
   it("null for single", () => expect(splitLetteredAnswer("5")).toBeNull());
 });
+
+describe("editor bank answer shapes", () => {
+  it("uses answer_symbol when it is the only answer", () => {
+    expect(extractSpec({ symbol: "10 1/2" })).toMatchObject({ autoMarkable: true, spec: { kind: "fraction", whole: 10, num: 1, den: 2 } });
+    expect(extractSpec({ symbol: "5 : 4" })).toMatchObject({ autoMarkable: true, spec: { kind: "ratio", terms: [5, 4] } });
+    expect(extractSpec({ symbol: "520%" })).toMatchObject({ autoMarkable: true, spec: { kind: "number", value: 520 } });
+  });
+  it("reads {numerator, denominator, whole} fraction objects", () => {
+    expect(extractSpec({ fraction: { numerator: 3, denominator: 5, whole: 25 } })).toMatchObject({ autoMarkable: true, spec: { kind: "fraction", whole: 25, num: 3, den: 5 } });
+    expect(extractSpec({ fraction: { numerator: 3, denominator: 14, whole: 0 } })).toMatchObject({ autoMarkable: true, spec: { kind: "fraction", num: 3, den: 14 } });
+  });
+  it("prefers the numeric value over a descriptive symbol", () => {
+    expect(extractSpec({ value: 57.6, unit: "＄", symbol: "Banana — ＄57.60" })).toMatchObject({ autoMarkable: true, spec: { kind: "number", value: 57.6 } });
+  });
+  it("accepts short word answers as text", () => {
+    for (const s of ["Kai", "2 p.m.", "True", "$5y+2$"]) expect(extractSpec({ symbol: s }).autoMarkable).toBe(true);
+  });
+  it("does not auto-mark drawing instructions", () => {
+    expect(extractSpec({ symbol: "Drawing required: complete the trapezium PQRS in the square grid." }).autoMarkable).toBe(false);
+  });
+});

@@ -20,6 +20,18 @@ export function plainAnswer(v: unknown, stats?: TokenizeStats): string {
 
 const MONEY = /[＄$]/;
 
+/** The editor stores part fractions as {numerator, denominator, whole}; turn any such object into "w n/d". */
+function fractionText(v: unknown): unknown {
+  if (!v || typeof v !== "object") return v;
+  const o = v as Record<string, unknown>;
+  const n = Number(o.numerator ?? o.num), d = Number(o.denominator ?? o.den), w = Number(o.whole ?? 0);
+  if (!Number.isFinite(n) || !Number.isFinite(d) || d === 0) return null;
+  return w ? `${w} ${n}/${d}` : `${n}/${d}`;
+}
+
+/** Answers that are instructions to the student rather than something to type. */
+const NOT_TYPEABLE = /^(drawing required|draw|shade|show|explain|complete the|construct|mark)\b/i;
+
 function fromNormalized(norm: string, unit: string | undefined, money: boolean): AnswerSpec | null {
   const u = unit ? { unit } : {};
   if (/^[+-]?(\d+(\.\d*)?|\.\d+)$/.test(norm)) {
@@ -48,7 +60,8 @@ export function extractSpec(raw: RawAnswer, stats?: TokenizeStats): ExtractResul
   const unitRaw = plainAnswer(raw.unit, stats);
   const symbol = str(raw.symbol);
   const valuePlain = plainAnswer(raw.value, stats);
-  const fracPlain = plainAnswer(raw.fraction, stats);
+  const fracPlain = plainAnswer(fractionText(raw.fraction), stats);
+  const symPlain = plainAnswer(raw.symbol, stats);
   const money = MONEY.test(symbol) || MONEY.test(valuePlain) || MONEY.test(fracPlain) || /^(dollars?|\$)$/i.test(unitRaw);
   const unit = unitRaw && !/^(dollars?|\$)$/i.test(unitRaw) ? unitRaw : money ? "$" : undefined;
 
@@ -60,6 +73,8 @@ export function extractSpec(raw: RawAnswer, stats?: TokenizeStats): ExtractResul
   const attempts: string[] = [];
   if (fracPlain) attempts.push(fracPlain);
   if (valuePlain) attempts.push(valuePlain);
+  // answer_symbol often holds the only answer ("10 1/2", "5 : 4", "520%")
+  if (symPlain) attempts.push(symPlain, symPlain.replace(/%$/, ""));
   for (const a of attempts) {
     const norm = normalizeInput(a);
     const spec = fromNormalized(norm, unit, money);
@@ -67,7 +82,8 @@ export function extractSpec(raw: RawAnswer, stats?: TokenizeStats): ExtractResul
   }
 
   // short textual answers ("isosceles triangle", "3x + 2")
-  const text = valuePlain || fracPlain;
+  const text = valuePlain || fracPlain || symPlain;
+  if (text && NOT_TYPEABLE.test(text)) return { spec: { kind: "text", accepted: [text] }, display: text, autoMarkable: false };
   if (text) {
     const words = text.split(/\s+/).length;
     const isShort = text.length <= 40 && words <= 5 && !/[.!?]\s+\w/.test(text);
