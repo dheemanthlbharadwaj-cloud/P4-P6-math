@@ -1,0 +1,76 @@
+import type { ExpoConfig, ConfigContext } from "expo/config";
+
+// All secrets / ids come from EXPO_PUBLIC_* env vars (see .env.example). Placeholders keep the build working.
+const env = (k: string, fallback: string) => process.env[k] || fallback;
+
+// Google's published test app ids: safe placeholders until the real AdMob apps exist (open question #13).
+const ADMOB_ANDROID_APP_ID = env("EXPO_PUBLIC_ADMOB_ANDROID_APP_ID", "ca-app-pub-3940256099942544~3347511713");
+const ADMOB_IOS_APP_ID = env("EXPO_PUBLIC_ADMOB_IOS_APP_ID", "ca-app-pub-3940256099942544~1458002511");
+const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.p6math.app");
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
+  name: "P6 Math Cats",
+  slug: "p6-math-cats",
+  scheme: "p6math",
+  version: "0.1.0",
+  orientation: "default",
+  userInterfaceStyle: "light",
+  // TODO(owner): supply icon.png (1024x1024) and splash.png in assets/ui, then uncomment.
+  // icon: "./assets/ui/app-icon.png",
+  ios: {
+    bundleIdentifier: BUNDLE_ID,
+    supportsTablet: true,
+    usesAppleSignIn: true,
+    config: { usesNonExemptEncryption: false },
+  },
+  android: {
+    package: BUNDLE_ID,
+  },
+  plugins: [
+    "expo-router",
+    "expo-apple-authentication",
+    [
+      "expo-build-properties",
+      {
+        android: { minSdkVersion: 24 },
+        ios: { deploymentTarget: "16.4" },
+      },
+    ],
+    [
+      "react-native-google-mobile-ads",
+      {
+        androidAppId: ADMOB_ANDROID_APP_ID,
+        iosAppId: ADMOB_IOS_APP_ID,
+        // Child-directed app: no ATT prompt, no tracking.
+        delayAppMeasurementInit: true,
+      },
+    ],
+  ],
+  experiments: { typedRoutes: false },
+  extra: {
+    firebase: {
+      apiKey: env("EXPO_PUBLIC_FIREBASE_API_KEY", "PLACEHOLDER"),
+      authDomain: env("EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN", "p6-math-game.firebaseapp.com"),
+      projectId: env("EXPO_PUBLIC_FIREBASE_PROJECT_ID", "p6-math-game"),
+      storageBucket: env("EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET", "p6-math-game.appspot.com"),
+      messagingSenderId: env("EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID", "0"),
+      appId: env("EXPO_PUBLIC_FIREBASE_APP_ID", "PLACEHOLDER"),
+    },
+    revenueCat: {
+      ios: env("EXPO_PUBLIC_REVENUECAT_IOS_KEY", ""),
+      android: env("EXPO_PUBLIC_REVENUECAT_ANDROID_KEY", ""),
+    },
+    admob: {
+      rewardedAndroid: env("EXPO_PUBLIC_ADMOB_REWARDED_ANDROID", ""),
+      rewardedIos: env("EXPO_PUBLIC_ADMOB_REWARDED_IOS", ""),
+    },
+    auth: {
+      // TODO(owner): OAuth client ids from the Firebase/Google Cloud console.
+      googleWebClientId: env("EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID", ""),
+      googleIosClientId: env("EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID", ""),
+      googleAndroidClientId: env("EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID", ""),
+    },
+    referralBaseUrl: env("EXPO_PUBLIC_REFERRAL_BASE_URL", "https://p6math.app/r"),
+  },
+});
