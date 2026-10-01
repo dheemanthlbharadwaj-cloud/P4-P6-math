@@ -8,8 +8,10 @@ import { Button } from "./ui";
 export function FigureViewer({ source, visible, onClose }: { source: number; visible: boolean; onClose: () => void }) {
   const { width, height } = useWindowDimensions();
   const [zoom, setZoom] = useState(1);
-  const resolved = Image.resolveAssetSource(source);
-  const ratio = resolved ? resolved.width / resolved.height : 1;
+  // resolveAssetSource exists on iOS/Android only; on web the bundled asset already carries its size.
+  const resolved: { width?: number; height?: number } | null =
+    typeof Image.resolveAssetSource === "function" ? Image.resolveAssetSource(source) : typeof source === "object" ? (source as object) : null;
+  const ratio = resolved?.width && resolved?.height ? resolved.width / resolved.height : 1;
   const baseW = Math.min(width, height * ratio);
   const w = baseW * zoom;
   return (

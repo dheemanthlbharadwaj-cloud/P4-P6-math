@@ -13,6 +13,7 @@ const NODE = 56; // fits the narrowest measured water spot on every map (see scr
 export interface TopicMapPageProps {
   topic: TopicMap;
   width: number;
+  height: number; // viewport height of the page (0 until measured)
   unlocked: boolean;
   progress: GradeProgress | undefined;
   friends: PublicProfile[];
@@ -44,7 +45,7 @@ function buildRoute(path: [number, number, 0 | 1][], width: number, height: numb
 
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
-export function TopicMapPage({ topic, width, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
+export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
   const ref = useRef<ScrollView>(null);
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
   const n = subs.length;
@@ -71,7 +72,7 @@ export function TopicMapPage({ topic, width, unlocked, progress, friends, onNode
   }
 
   return (
-    <View style={{ width, flex: 1 }}>
+    <View style={pageHeight ? { width, height: pageHeight } : { width, flex: 1 }}>
       <View style={{ flex: 1, backgroundColor: "#5fd3e0" }}>
         <ScrollView ref={ref} contentContainerStyle={{ height }} onContentSizeChange={() => ref.current?.scrollToEnd({ animated: false })} showsVerticalScrollIndicator={false}>
           <Image source={theme.bg} style={{ position: "absolute", top: 0, left: 0, width, height }} resizeMode="cover" accessibilityIgnoresInvertColors />

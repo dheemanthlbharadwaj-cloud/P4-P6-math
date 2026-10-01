@@ -171,6 +171,11 @@ export function normalizeDocs(docs: RawDoc[], opts: { subtopicField?: string | n
 }
 
 // ---------- conversion ----------
+/** Drop the paper's own numbering ("6. What is…", "Q12) Find…"); "6.5 kg" is untouched (no space after the dot). */
+export function stripQuestionNumber(text: string): string {
+  return text.replace(/^\s*(?:Q(?:uestion)?\s*)?\d{1,2}\s*[.)]\s+/, "");
+}
+
 const PAPERS: Paper[] = ["Paper 1 Booklet A", "Paper 1 Booklet B", "Paper 2"];
 function toPaper(p: unknown, type: "mcq" | "open", diff: Difficulty | null): Paper {
   const s = String(p ?? "").toLowerCase();
@@ -216,7 +221,7 @@ export function convertQuestion(n: NormDoc, topicCanonical: string, ctx: Convert
     type,
     paper,
     calculatorAllowed: typeof d.calculator_allowed === "boolean" ? d.calculator_allowed : paper === "Paper 2",
-    stem: tokenize(d.question, ctx.stats),
+    stem: tokenize(stripQuestionNumber(String(d.question ?? "")), ctx.stats),
     autoMarkable: true,
   };
   if (ctx.hasFigure) q.figure = n.id;

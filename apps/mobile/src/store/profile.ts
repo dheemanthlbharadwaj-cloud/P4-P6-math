@@ -22,11 +22,8 @@ export interface ProfileState {
   reset: () => void;
 }
 
-/** ASSUMPTION (open question #10): default PSLE date = early Oct of the current year, editable. */
-export function defaultPsleDate(now = new Date()): string {
-  const y = now.getMonth() >= 9 && now.getDate() > 20 ? now.getFullYear() + 1 : now.getFullYear();
-  return `${y}-10-01`;
-}
+export { defaultPsleDate } from "../logic/psle";
+import { defaultPsleDate } from "../logic/psle";
 
 const initial = () => ({
   uid: null, email: null, onboarded: false, grade: "P6" as Grade, fullName: "", school: "", topicsLearnt: [] as string[],

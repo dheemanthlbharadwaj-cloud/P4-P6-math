@@ -60,3 +60,17 @@ describe("tokenizer", () => {
   });
   it("null/empty", () => { expect(tokenize(null)).toEqual([]); expect(tokenize("")).toEqual([]); });
 });
+
+describe("stripQuestionNumber", () => {
+  it("removes the paper's question number", async () => {
+    const { stripQuestionNumber } = await import("../src/source");
+    expect(stripQuestionNumber("6. What is the reading?")).toBe("What is the reading?");
+    expect(stripQuestionNumber("Q12) Find x.")).toBe("Find x.");
+    expect(stripQuestionNumber("44. By rounding")).toBe("By rounding");
+  });
+  it("keeps numbers that are part of the question", async () => {
+    const { stripQuestionNumber } = await import("../src/source");
+    expect(stripQuestionNumber("6.5 kg of rice")).toBe("6.5 kg of rice");
+    expect(stripQuestionNumber("6 boys share 3 pizzas.")).toBe("6 boys share 3 pizzas.");
+  });
+});

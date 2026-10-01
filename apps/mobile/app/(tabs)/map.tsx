@@ -25,6 +25,9 @@ export default function MapTab() {
   const friends = useFriends((s) => s.friends);
   const listRef = useRef<FlatList>(null);
   const [index, setIndex] = useState(0);
+  // Pages must be exactly as tall as the list viewport; a horizontal list does not stretch its items, and an
+  // unstretched page grows to its map image so the map can no longer scroll and the bottom is hidden.
+  const [pageHeight, setPageHeight] = useState(0);
   const [sheetSub, setSheetSub] = useState<string | null>(null);
   const [keyTopic, setKeyTopic] = useState<string | null>(null);
   const [gate, setGate] = useState<null | "energy" | "hearts">(null);
@@ -79,6 +82,8 @@ export default function MapTab() {
 
       <FlatList
         ref={listRef}
+        style={{ flex: 1 }}
+        onLayout={(e) => setPageHeight(e.nativeEvent.layout.height)}
         data={topics}
         keyExtractor={(t) => t.id}
         horizontal
@@ -92,6 +97,7 @@ export default function MapTab() {
           <TopicMapPage
             topic={item}
             width={width}
+            height={pageHeight}
             unlocked={isTopicUnlocked(progress, item.id)}
             progress={progress}
             friends={friends}

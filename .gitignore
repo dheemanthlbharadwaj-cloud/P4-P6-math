@@ -12,3 +12,5 @@ backend/functions/lib/
 ios/
 android/
 .DS_Store
+dist-web/
+dist-dev/
