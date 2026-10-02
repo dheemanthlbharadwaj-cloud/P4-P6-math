@@ -143,13 +143,18 @@ export async function downloadFigures(docs: RawDoc[], grade: Grade, log = consol
   fs.mkdirSync(dir, { recursive: true });
   const dispatcher = makeDispatcher();
   const todo = docs.filter((d) => typeof d.figure_url === "string" && /^https:\/\//.test(d.figure_url));
+  // Which URL each cached figure came from: a re-cropped figure gets a new URL in the editor, so a changed URL means
+  // the cached file is stale and is downloaded again.
+  const manifestFile = path.join(dir, ".sources.json");
+  const manifest: Record<string, string> = fs.existsSync(manifestFile) ? JSON.parse(fs.readFileSync(manifestFile, "utf8")) : {};
   let done = 0, skipped = 0;
   const failed: { id: string; error: string }[] = [];
   let next = 0;
   const worker = async () => {
     while (next < todo.length) {
       const d = todo[next++];
-      if (existingFigure(dir, d.id)) { skipped++; continue; }
+      const cached = existingFigure(dir, d.id);
+      if (cached && manifest[d.id] === d.figure_url) { skipped++; continue; }
       try {
         await withRetry(async () => {
           const r = await ufetch(d.figure_url, { dispatcher });
@@ -161,7 +166,9 @@ export async function downloadFigures(docs: RawDoc[], grade: Grade, log = consol
           const buf = Buffer.from(await r.arrayBuffer());
           const file = path.join(dir, `${sanitizeId(d.id)}.${ext}`);
           fs.writeFileSync(file + ".part", buf);
+          if (cached && cached !== file) fs.rmSync(cached, { force: true });
           fs.renameSync(file + ".part", file);
+          manifest[d.id] = d.figure_url;
         }, 5, 700, `figure ${d.id}`);
         done++;
       } catch (e) { failed.push({ id: d.id, error: (e as Error).message }); }
@@ -169,6 +176,7 @@ export async function downloadFigures(docs: RawDoc[], grade: Grade, log = consol
     }
   };
   await Promise.all(Array.from({ length: concurrency }, worker));
+  fs.writeFileSync(manifestFile, JSON.stringify(manifest, null, 0));
   return { total: todo.length, downloaded: done, skipped, failed };
 }
 
