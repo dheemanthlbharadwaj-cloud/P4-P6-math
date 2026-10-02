@@ -118,10 +118,18 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
     }
   }
 
+  // Maps are walked bottom → top, so open at the bottom (the first subtopic). On web the first scroll can land before
+  // layout, so also retry once after the page has its measured height.
+  const toStart = () => ref.current?.scrollToEnd({ animated: false });
+  useEffect(() => {
+    const t = setTimeout(toStart, 60);
+    return () => clearTimeout(t);
+  }, [height, pageHeight]);
+
   return (
     <View style={[pageHeight ? { width, height: pageHeight } : { width, flex: 1 }, { overflow: "hidden" }]}>
       <View style={{ flex: 1, backgroundColor: "#6cdde7" }}>
-        <ScrollView ref={ref} contentContainerStyle={{ height }} onContentSizeChange={() => ref.current?.scrollToEnd({ animated: false })} showsVerticalScrollIndicator={false}>
+        <ScrollView ref={ref} contentContainerStyle={{ height: height + 40 }} onLayout={toStart} onContentSizeChange={toStart} showsVerticalScrollIndicator={false}>
           <Image source={theme.bg} style={{ position: "absolute", top: 0, left: 0, width, height }} resizeMode="cover" accessibilityIgnoresInvertColors />
           {dots.map((d) => (
             <View key={d.k} style={[styles.dot, { left: d.x - 5, top: d.y + NODE / 2 - 5 }]} />
