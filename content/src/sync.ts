@@ -77,7 +77,7 @@ export function fromFsFields(fields: Record<string, FsValue>): Record<string, un
   return o;
 }
 
-async function accessToken(sa: ServiceAccount): Promise<string> {
+export async function accessToken(sa: ServiceAccount): Promise<string> {
   const { JWT } = await import("google-auth-library");
   const jwt = new JWT({ email: sa.client_email, key: sa.private_key, scopes: ["https://www.googleapis.com/auth/datastore"] });
   const t = await jwt.getAccessToken();
