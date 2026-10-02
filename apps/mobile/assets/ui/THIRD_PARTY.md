@@ -2,10 +2,12 @@
 
 | Files | Source | Licence |
 |---|---|---|
-| `icon-heart.png`, `icon-energy.png`, `icon-star.png`, `icon-timer.png`, `lock.png`, `cloud.png` (3D style), `hat-cap.png`, `hat-crown.png`, `hat-grad.png`, `hat-wizard.png` | [Microsoft Fluent Emoji](https://github.com/microsoft/fluentui-emoji), Flat style, rendered from SVG (wizard hat = the hat from the "Mage" emoji plus the Star emoji) | MIT (below) |
+| `icon-heart.png`, `icon-energy.png`, `icon-star.png`, `icon-timer.png`, `lock.png`, `cloud.png` (3D style), `hat-cap.png`, `hat-crown.png`, `hat-grad.png`, `hat-wizard.png` | [Microsoft Fluent Emoji](https://github.com/microsoft/fluentui-emoji), Flat style, rendered from SVG (wizard hat = the hat from the "Mage" emoji plus the Star emoji; graduation cap with the tassel shortened so it stays clear of the eyes) | MIT (below) |
 | `map-bg-*.webp`, `node-*.png`, `level-*.png` | GraphicRiver "Game Level Map for Water Games" (purchased by the product owner) | GraphicRiver licence |
 | `icon-calculator.png`, `icon-no-calculator.png` (red slash added) | [Streamline](https://github.com/webalys-hq/streamline-vectors) "Plump Color" calculator-1 icon, rendered from SVG | CC BY 4.0, attribution: "Calculator icon by Streamline (streamlinehq.com), CC BY 4.0" (include in the app's credits/licences screen) |
 | `tab-*.png` | Supplied by the product owner | — |
+| Fredoka font (titles, buttons, labels; npm `@expo-google-fonts/fredoka`) | [Fredoka](https://fonts.google.com/specimen/Fredoka) by Milena Brandão, via Google Fonts | SIL Open Font License 1.1 (licence text ships in the npm package) |
+| `assets/cats/colors/*` | Recoloured from the artist's black cats (`assets/cats/poses`, `assets/cats/animations`) | Same as the cat art |
 
 ## Fluent Emoji — MIT License
 

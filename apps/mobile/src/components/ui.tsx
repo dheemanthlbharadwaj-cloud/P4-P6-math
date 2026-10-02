@@ -1,10 +1,12 @@
 import React from "react";
 import { Modal, Pressable, StyleSheet, Text, View, type StyleProp, type TextStyle, type ViewStyle } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { colors, font, MIN_TOUCH, radius, space } from "../theme/colors";
+import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 
 type Variant = "primary" | "good" | "bad" | "ghost" | "gold";
 const bg: Record<Variant, string> = { primary: colors.primary, good: colors.good, bad: colors.bad, ghost: colors.card, gold: colors.accent };
+// Darker lip under each candy button (its "depth").
+const lip: Record<Variant, string> = { primary: "#1f2f8a", good: "#16645b", bad: "#9b1b26", ghost: colors.border, gold: "#b07a00" };
 
 export function Button({
   title, onPress, variant = "primary", disabled, small, style, textStyle, testID,
@@ -21,11 +23,12 @@ export function Button({
       disabled={disabled}
       onPress={onPress}
       style={({ pressed }) => [
-        styles.btn, small && styles.btnSmall, { backgroundColor: bg[variant] },
-        disabled && { opacity: 0.45 }, pressed && { transform: [{ translateY: 2 }] }, style,
+        styles.btn, small && styles.btnSmall, { backgroundColor: bg[variant], borderBottomColor: lip[variant] },
+        disabled && { opacity: 0.45 }, pressed && { transform: [{ translateY: 3 }], borderBottomWidth: 3 }, style,
       ]}
     >
-      <Text style={[styles.btnText, dark && { color: colors.ink }, small && { fontSize: font.small }, textStyle]}>{title}</Text>
+      {variant !== "ghost" ? <View pointerEvents="none" style={styles.gloss} /> : null}
+      <Text style={[styles.btnText, dark && { color: colors.ink }, !dark && styles.btnTextShadow, small && { fontSize: font.small + 1 }, textStyle]}>{title}</Text>
     </Pressable>
   );
 }
@@ -43,10 +46,10 @@ export function Screen({ children, style, edges = ["top"] }: { children: React.R
 }
 
 export function H1({ children, style }: { children: React.ReactNode; style?: StyleProp<TextStyle> }) {
-  return <Text style={[{ fontSize: font.h1, fontWeight: "900", color: colors.ink }, style]}>{children}</Text>;
+  return <Text style={[{ fontSize: font.h1 + 2, fontFamily: fonts.display, color: colors.ink }, style]}>{children}</Text>;
 }
 export function H2({ children, style }: { children: React.ReactNode; style?: StyleProp<TextStyle> }) {
-  return <Text style={[{ fontSize: font.h2, fontWeight: "800", color: colors.ink }, style]}>{children}</Text>;
+  return <Text style={[{ fontSize: font.h2, fontFamily: fonts.display, color: colors.ink }, style]}>{children}</Text>;
 }
 export function Body({ children, style }: { children: React.ReactNode; style?: StyleProp<TextStyle> }) {
   return <Text style={[{ fontSize: font.body, color: colors.ink, lineHeight: 24 }, style]}>{children}</Text>;
@@ -102,12 +105,14 @@ const styles = StyleSheet.create({
     borderWidth: 3, borderColor: colors.border, borderBottomWidth: 6,
   },
   btnSmall: { minHeight: 44, paddingVertical: space.s, paddingHorizontal: space.m },
-  btnText: { color: "#fff", fontSize: font.body, fontWeight: "900", textAlign: "center" },
+  btnText: { color: "#fff", fontSize: font.body + 1, fontFamily: fonts.display, textAlign: "center", letterSpacing: 0.3 },
+  btnTextShadow: { textShadowColor: "rgba(0,0,0,0.28)", textShadowOffset: { width: 0, height: 1.5 }, textShadowRadius: 0 },
+  gloss: { position: "absolute", top: 3, left: 8, right: 8, height: "42%", borderRadius: 10, backgroundColor: "rgba(255,255,255,0.24)" },
   card: { backgroundColor: colors.card, borderRadius: radius.l, padding: space.l, borderWidth: 3, borderColor: colors.border },
-  track: { height: 16, borderRadius: 8, backgroundColor: "#e3e6f0", borderWidth: 2, borderColor: colors.border, overflow: "hidden" },
-  fill: { height: "100%", backgroundColor: colors.good },
+  track: { height: 18, borderRadius: 9, backgroundColor: "#e3e6f0", borderWidth: 2, borderColor: colors.border, overflow: "hidden" },
+  fill: { height: "100%", backgroundColor: "#3ccf6e" },
   chip: { minHeight: 44, paddingHorizontal: space.l, borderRadius: 22, justifyContent: "center", backgroundColor: colors.card, borderWidth: 2, borderColor: colors.border, marginRight: space.s, marginBottom: space.s },
-  chipText: { fontSize: font.small, fontWeight: "800", color: colors.ink },
+  chipText: { fontSize: font.small + 1, fontFamily: fonts.displayMedium, color: colors.ink },
   scrim: { flex: 1, backgroundColor: "rgba(20,20,40,0.55)" },
   sheet: { backgroundColor: colors.bg, borderTopLeftRadius: 28, borderTopRightRadius: 28, padding: space.l, borderWidth: 3, borderColor: colors.border, maxHeight: "85%" },
   dialog: { backgroundColor: colors.bg, borderRadius: radius.l, padding: space.l, borderWidth: 3, borderColor: colors.border, maxHeight: "90%", width: "100%", maxWidth: 520, alignSelf: "center" },

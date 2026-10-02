@@ -11,7 +11,7 @@ import { FigureViewer } from "./FigureViewer";
 import { Scratchpad } from "./Scratchpad";
 import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
-import { colors, font, MIN_TOUCH, radius, space } from "../theme/colors";
+import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 
 export interface Reveal {
   correct: boolean;
@@ -30,6 +30,8 @@ interface Props {
   submitLabel?: string;
   /** Classroom "Practice (show answer)": no answer boxes or submit bar; the parent reveals the answer and self-marks. */
   viewOnly?: boolean;
+  /** Companion cat shown beside the tools row in portrait (hidden in landscape to leave room for the scratchpad). */
+  companion?: React.ReactNode;
 }
 
 function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
@@ -40,7 +42,7 @@ function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
 
 let hintDismissed = false; // once per app session
 
-export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false }: Props) {
+export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false, companion }: Props) {
   const nInputs = q.type === "mcq" ? 1 : Math.max(1, q.parts?.length ?? 1);
   const [responses, setResponses] = useState<string[]>(() => Array(nInputs).fill(""));
   const [calc, setCalc] = useState(false);
@@ -65,7 +67,8 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
             <Text style={styles.rotateHintX}>✕</Text>
           </Pressable>
         ) : null}
-        <View style={styles.tools}>
+        <View style={styles.toolsRow}>
+        <View style={[styles.tools, { flex: 1, flexWrap: "wrap", alignItems: "flex-start", alignContent: "flex-start" }]}>
           {q.calculatorAllowed ? (
             <Pressable onPress={() => setCalc(true)} accessibilityRole="button" accessibilityLabel="Open calculator"
               style={({ pressed }) => [styles.toolBtn, styles.toolRow, { backgroundColor: "#dfe8ff" }, pressed && { transform: [{ scale: 0.96 }] }]}>
@@ -83,6 +86,8 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
               <Text style={[styles.toolText, { color: colors.ink }]}>Picture</Text>
             </Pressable>
           ) : null}
+        </View>
+        {companion && !landscape ? <View style={{ marginLeft: 6, marginTop: -4 }}>{companion}</View> : null}
         </View>
 
         <RichText tokens={q.stem} size={font.body + 2} />
@@ -108,8 +113,8 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                   accessibilityState={{ selected: picked, disabled: locked }}
                   style={[styles.option, picked && styles.optionPicked, isRight && styles.optionRight, isWrongPick && styles.optionWrong]}
                 >
-                  <View style={[styles.optKey, picked && { backgroundColor: colors.primary }]}>
-                    <Text style={[styles.optKeyText, picked && { color: "#fff" }]}>{o.key}</Text>
+                  <View style={[styles.optKey, { backgroundColor: OPTION_COLORS[(Number(o.key) - 1 + OPTION_COLORS.length) % OPTION_COLORS.length] ?? colors.primary }, picked && styles.optKeyPicked]}>
+                    <Text style={styles.optKeyText}>{o.key}</Text>
                   </View>
                   <View style={{ flex: 1 }}>
                     <RichText tokens={o.text} size={font.body} />
@@ -184,13 +189,17 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   );
 }
 
+// Candy colours for the option number badges (1–4), like game answer buttons.
+const OPTION_COLORS = ["#4361ee", "#f3722c", "#2a9d8f", "#b5179e"];
+
 const styles = StyleSheet.create({
   rotateHint: { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", gap: 8, minHeight: 32, marginBottom: space.s, paddingHorizontal: 10, borderRadius: radius.s, backgroundColor: colors.highlight },
   rotateHintText: { fontSize: 12, fontWeight: "700", color: colors.inkSoft },
-  rotateHintX: { fontSize: 12, fontWeight: "900", color: colors.inkSoft },
+  rotateHintX: { fontSize: 12, fontFamily: fonts.display, color: colors.inkSoft },
+  toolsRow: { flexDirection: "row", alignItems: "flex-start" },
   tools: { flexDirection: "row", gap: 10, marginBottom: space.m },
   toolBtn: { minHeight: 44, paddingHorizontal: 14, borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, justifyContent: "center" },
-  toolText: { color: "#fff", fontWeight: "900", fontSize: font.small },
+  toolText: { color: "#fff", fontFamily: fonts.display, fontSize: font.small },
   toolRow: { flexDirection: "row", alignItems: "center", gap: 6, paddingLeft: 8 },
   toolIcon: { width: 28, height: 28 },
   figWrap: { marginTop: space.m, backgroundColor: "#fff", borderRadius: radius.m, borderWidth: 2, borderColor: colors.border, padding: 6 },
@@ -199,13 +208,14 @@ const styles = StyleSheet.create({
   optionPicked: { borderColor: colors.primary, backgroundColor: "#eaf0ff" },
   optionRight: { borderColor: colors.good, backgroundColor: colors.goodBg },
   optionWrong: { borderColor: colors.bad, backgroundColor: colors.badBg },
-  optKey: { width: 36, height: 36, borderRadius: 18, borderWidth: 2, borderColor: colors.border, alignItems: "center", justifyContent: "center", backgroundColor: "#fff" },
-  optKeyText: { fontWeight: "900", fontSize: font.body, color: colors.ink },
-  partTag: { fontWeight: "900", fontSize: font.body, color: colors.primaryDark },
+  optKey: { width: 38, height: 38, borderRadius: 12, borderWidth: 2, borderColor: colors.border, borderBottomWidth: 4, alignItems: "center", justifyContent: "center" },
+  optKeyPicked: { transform: [{ scale: 1.12 }], borderColor: colors.primaryDark },
+  optKeyText: { fontFamily: fonts.display, fontSize: font.body + 1, color: "#fff", textShadowColor: "rgba(0,0,0,0.3)", textShadowOffset: { width: 0, height: 1 }, textShadowRadius: 0 },
+  partTag: { fontFamily: fonts.display, fontSize: font.body, color: colors.primaryDark },
   input: { flex: 1, minHeight: 56, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 22, backgroundColor: "#fff", color: colors.ink },
   unit: { marginLeft: 8, fontSize: font.body, fontWeight: "800", color: colors.inkSoft },
   helper: { minWidth: 56 },
   hint: { alignSelf: "center", color: colors.inkSoft, fontSize: 12, flexShrink: 1 },
-  answerLine: { marginTop: 4, color: colors.good, fontWeight: "900", fontSize: font.body },
+  answerLine: { marginTop: 4, color: colors.good, fontFamily: fonts.display, fontSize: font.body },
   bar: { flexDirection: "row", gap: 12, padding: space.l, paddingTop: space.s, backgroundColor: colors.bg, borderTopWidth: 3, borderTopColor: colors.border },
 });

@@ -4,15 +4,13 @@ import { Animated, Easing, Image, Pressable, ScrollView, StyleSheet, Text, View 
 import type { GradeProgress, PublicProfile, TopicMap } from "@p6/shared";
 import { CatAvatar } from "./CatAvatar";
 import { mapThemeFor, uiAssets } from "../theme/assets";
-import { catAnimations, catPoses } from "../theme/cats";
+import { catPoses } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
 import { isLevelComplete } from "../logic/unlock";
-import { colors } from "../theme/colors";
+import { colors, fonts } from "../theme/colors";
 
-const NODE = 56; // fits the narrowest measured water spot on every map (see scripts/map-paths.py)
+const NODE = 56; // fits the narrowest measured water spot on every map (see scripts/map-sections.py)
 const LABEL_W = 132; // node column width: button, stars and the subtopic name underneath
-// Friends' cats: a different cat for each friend, from all the artist's poses and animations.
-const FRIEND_CATS = [catAnimations.idle, catPoses.box, catPoses.cup, catPoses.wool, catPoses.banana, catPoses.laptop, catPoses.curious, catPoses.chasing, catAnimations.thinking];
 // Clouds covering a locked map: [left, top] as fractions of the page, and width as a fraction of page width.
 const CLOUDS: [number, number, number][] = [
   [-0.18, 0.0, 0.75], [0.42, 0.04, 0.7], [0.1, 0.16, 0.62], [-0.2, 0.3, 0.7], [0.48, 0.28, 0.72], [0.12, 0.44, 0.68],
@@ -122,7 +120,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 
   return (
     <View style={[pageHeight ? { width, height: pageHeight } : { width, flex: 1 }, { overflow: "hidden" }]}>
-      <View style={{ flex: 1, backgroundColor: "#5fd3e0" }}>
+      <View style={{ flex: 1, backgroundColor: "#6cdde7" }}>
         <ScrollView ref={ref} contentContainerStyle={{ height }} onContentSizeChange={() => ref.current?.scrollToEnd({ animated: false })} showsVerticalScrollIndicator={false}>
           <Image source={theme.bg} style={{ position: "absolute", top: 0, left: 0, width, height }} resizeMode="cover" accessibilityIgnoresInvertColors />
           {dots.map((d) => (
@@ -155,20 +153,27 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
             );
           })}
           {unlocked
-            ? friends.slice(0, 8).map((f) => {
-                // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
-                const i = hash(f.uid) % Math.max(1, n);
-                // Stand on the water route just below the node (toward the previous one), never on scenery.
-                const gap = i > 0 ? ts[i - 1] - ts[i] : 0.94 - ts[i];
-                const spot = route.at(ts[i] + Math.max(0.012, gap * 0.4));
-                const x = Math.min(width - 64, Math.max(0, spot.x - 32));
-                return (
-                  <View key={f.uid} style={[styles.friend, { left: x, top: spot.y - 22 }]} pointerEvents="none">
-                    <CatAvatar source={FRIEND_CATS[hash(f.uid + "pose") % FRIEND_CATS.length]} colorId={f.cat.colorId} hatId={f.cat.hatId} size={50} />
-                    <Text style={styles.friendName} numberOfLines={1}>{f.displayName}</Text>
-                  </View>
-                );
-              })
+            ? (() => {
+                const perNode = new Map<number, number>();
+                return friends.slice(0, 8).map((f) => {
+                  // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
+                  const i = hash(f.uid) % Math.max(1, n);
+                  const k = perNode.get(i) ?? 0;
+                  perNode.set(i, k + 1);
+                  // Stand beside the button on the open-water side (away from the island); a second friend takes the other side.
+                  const openRight = theme.island === "left";
+                  const right = k % 2 === 0 ? openRight : !openRight;
+                  const fits = right ? pos[i].x + NODE / 2 + 64 <= width : pos[i].x - NODE / 2 - 64 >= 0;
+                  const side = fits ? right : !right;
+                  const x = side ? pos[i].x + NODE / 2 : pos[i].x - NODE / 2 - 64;
+                  return (
+                    <View key={f.uid} style={[styles.friend, { left: Math.min(width - 64, Math.max(0, x)), top: pos[i].y - 4 + Math.floor(k / 2) * 30 }]} pointerEvents="none">
+                      <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={46} />
+                      <Text style={styles.friendName} numberOfLines={1}>{f.displayName.replace(/\s*\(sample\)$/, "")}</Text>
+                    </View>
+                  );
+                });
+              })()
             : null}
         </ScrollView>
 
@@ -196,10 +201,10 @@ const styles = StyleSheet.create({
   stars: { flexDirection: "row", gap: 2, marginTop: -6, backgroundColor: "rgba(255,255,255,0.85)", borderRadius: 10, paddingHorizontal: 4, paddingVertical: 1, borderWidth: 2, borderColor: colors.border },
   star: { width: 16, height: 16 },
   starEmpty: { tintColor: "#c3c8d6" },
-  nodeName: { marginTop: 3, fontSize: 11, lineHeight: 13, fontWeight: "900", color: colors.ink, textAlign: "center", backgroundColor: "rgba(255,255,255,0.88)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden", maxWidth: LABEL_W },
+  nodeName: { marginTop: 3, fontSize: 11, lineHeight: 13, fontFamily: fonts.display, color: colors.ink, textAlign: "center", backgroundColor: "rgba(255,255,255,0.88)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden", maxWidth: LABEL_W },
   friend: { position: "absolute", width: 64, alignItems: "center" },
-  friendName: { fontSize: 11, fontWeight: "900", color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 4, borderRadius: 6, overflow: "hidden", maxWidth: 70 },
+  friendName: { fontSize: 11, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 4, borderRadius: 6, overflow: "hidden", maxWidth: 70 },
   lockWrap: { position: "absolute", bottom: 40, left: 0, right: 0, alignItems: "center" },
   keyBadge: { backgroundColor: colors.accent, borderRadius: 20, borderWidth: 3, borderColor: colors.border, paddingHorizontal: 16, minHeight: 44, justifyContent: "center", marginTop: 4 },
-  keyText: { fontWeight: "900", color: colors.ink, fontSize: 16 },
+  keyText: { fontFamily: fonts.display, color: colors.ink, fontSize: 16 },
 });

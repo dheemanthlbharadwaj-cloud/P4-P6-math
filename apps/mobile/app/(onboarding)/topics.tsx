@@ -5,7 +5,7 @@ import { OnboardingFrame } from "../../src/components/OnboardingFrame";
 import { catPoses } from "../../src/theme/cats";
 import { getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
-import { colors, MIN_TOUCH } from "../../src/theme/colors";
+import { colors, fonts, MIN_TOUCH } from "../../src/theme/colors";
 
 export default function TopicsStep() {
   const router = useRouter();
@@ -28,7 +28,7 @@ export default function TopicsStep() {
                 transform: [{ scale: pressed ? 0.96 : 1 }],
               })}>
               <View style={{ width: 30, height: 30, borderRadius: 15, borderWidth: 2.5, borderColor: on ? "#fff" : colors.border, alignItems: "center", justifyContent: "center", backgroundColor: on ? "rgba(255,255,255,0.18)" : colors.highlight }}>
-                <Text style={{ fontSize: 18, fontWeight: "900", color: on ? "#fff" : colors.ink, marginTop: -2 }}>{on ? "✓" : "+"}</Text>
+                <Text style={{ fontSize: 18, fontFamily: fonts.display, color: on ? "#fff" : colors.ink, marginTop: -2 }}>{on ? "✓" : "+"}</Text>
               </View>
               <Text style={{ fontSize: 16, fontWeight: "800", color: on ? "#fff" : colors.ink }}>{t.name}</Text>
             </Pressable>

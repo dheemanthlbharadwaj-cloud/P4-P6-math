@@ -3,6 +3,7 @@ import { ActivityIndicator, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import NetInfo from "@react-native-community/netinfo";
+import { useFonts, Fredoka_600SemiBold, Fredoka_700Bold } from "@expo-google-fonts/fredoka";
 import { watchAuth } from "../src/services/auth";
 import { isFirebaseConfigured } from "../src/services/config";
 import { initAds } from "../src/services/ads";
@@ -20,6 +21,8 @@ import { lockPortrait } from "../src/hooks/useQuestionOrientation";
 
 export default function RootLayout() {
   const hydrated = useHydrated();
+  const [fontsLoaded, fontError] = useFonts({ Fredoka_600SemiBold, Fredoka_700Bold });
+  const fontsReady = fontsLoaded || !!fontError; // a font failure falls back to the system font
   const { user, ready, setUser } = useAuth();
   const uid = useProfile((s) => s.uid);
   const onboarded = useProfile((s) => s.onboarded);
@@ -97,7 +100,7 @@ export default function RootLayout() {
     return () => { cancelled = true; unsub(); clearInterval(timer); stopCloudSync(); };
   }, [hydrated, user, onboarded]);
 
-  if (!hydrated || !ready || restoring) {
+  if (!hydrated || !ready || restoring || !fontsReady) {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: colors.bg }}>
         <ActivityIndicator size="large" color={colors.primary} />

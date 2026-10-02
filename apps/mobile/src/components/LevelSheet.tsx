@@ -5,7 +5,7 @@ import { STARS_PER_LEVEL, type GradeProgress, type LevelNo, type SubtopicNode } 
 import { Body, H2, Sheet } from "./ui";
 import { uiAssets } from "../theme/assets";
 import { isLevelComplete, isLevelUnlocked } from "../logic/unlock";
-import { colors } from "../theme/colors";
+import { colors, fonts } from "../theme/colors";
 
 export function LevelSheet({ subtopic, progress, onClose, onStart }: { subtopic: SubtopicNode | null; progress: GradeProgress | undefined; onClose: () => void; onStart: (level: LevelNo) => void }) {
   return (
@@ -27,7 +27,7 @@ export function LevelSheet({ subtopic, progress, onClose, onStart }: { subtopic:
                     <Image source={done ? uiAssets.level.gold : uiAssets.level[l]} style={{ width: 88, height: 88, opacity: open ? 1 : 0.35 }} />
                     {!open ? <Image source={uiAssets.overlays.lock} style={{ position: "absolute", width: 40, height: 40, left: 24, top: 24 }} /> : null}
                   </View>
-                  <Text style={{ fontWeight: "900", fontSize: 16, color: colors.ink }}>Level {l}</Text>
+                  <Text style={{ fontFamily: fonts.display, fontSize: 16, color: colors.ink }}>Level {l}</Text>
                   <Text style={{ fontSize: 13, color: colors.inkSoft, fontWeight: "700" }}>
                     {done ? "Complete" : `${STARS_PER_LEVEL[l]} star${STARS_PER_LEVEL[l] > 1 ? "s" : ""}`}{count < 5 ? ` · ${count} Qs` : ""}
                   </Text>

@@ -7,9 +7,10 @@ import type { Grade } from "@p6/shared";
 import { Body, Button, H1, ProgressBar, Screen } from "../../src/components/ui";
 import { QuestionPanel } from "../../src/components/QuestionPanel";
 import { CatCompanion } from "../../src/components/CatCompanion";
+import { useLeaveConfirm } from "../../src/components/LeaveConfirm";
 import { getPool, getTopic } from "../../src/content";
 import { useQuestionOrientation } from "../../src/hooks/useQuestionOrientation";
-import { colors, space } from "../../src/theme/colors";
+import { colors, fonts, space } from "../../src/theme/colors";
 
 const SHOWN: { correct: boolean; perPart: boolean[]; showAnswer: true } = { correct: true, perPart: [], showAnswer: true };
 
@@ -30,6 +31,12 @@ export default function Practice() {
   const [revealed, setRevealed] = useState(false);
   const [right, setRight] = useState(0);
   const q = questions[i];
+  const leaveConfirm = useLeaveConfirm({
+    enabled: !!q,
+    title: "Leave practice?",
+    body: "Nothing is lost: practice has no hearts or stars.",
+    fallback: "/(tabs)/classroom",
+  });
 
   const mark = (ok: boolean) => {
     if (ok) setRight((n) => n + 1);
@@ -43,22 +50,23 @@ export default function Practice() {
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: space.l }}>
           <CatCompanion mood={questions.length && right === questions.length ? "correct" : "idle"} size={150} />
           <H1 style={{ marginTop: 12 }}>{questions.length ? "All done!" : "Nothing to practise here"}</H1>
-          {questions.length ? <Text style={{ fontSize: 40, fontWeight: "900", color: colors.primary, marginVertical: 8 }}>{right} / {questions.length}</Text> : null}
+          {questions.length ? <Text style={{ fontSize: 40, fontFamily: fonts.display, color: colors.primary, marginVertical: 8 }}>{right} / {questions.length}</Text> : null}
           {questions.length ? <Body style={{ textAlign: "center", color: colors.inkSoft }}>That is how many you marked as right yourself.</Body> : null}
         </View>
-        <View style={{ padding: space.l }}><Button title="Back to classroom" onPress={() => router.back()} /></View>
+        <View style={{ padding: space.l }}><Button title="Back to classroom" onPress={() => (router.canGoBack() ? router.back() : router.replace("/(tabs)/classroom"))} /></View>
       </Screen>
     );
   }
 
   return (
     <Screen edges={["top", "bottom"]}>
+      {leaveConfirm.modal}
       <View style={{ flexDirection: "row", alignItems: "center", paddingHorizontal: space.m, paddingVertical: space.s, gap: 10 }}>
-        <Pressable onPress={() => router.back()} accessibilityRole="button" accessibilityLabel="Quit practice" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center" }}>
-          <Text style={{ fontSize: 26, fontWeight: "900", color: colors.ink }}>✕</Text>
+        <Pressable onPress={leaveConfirm.ask} accessibilityRole="button" accessibilityLabel="Quit practice" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ fontSize: 26, fontFamily: fonts.display, color: colors.ink }}>✕</Text>
         </Pressable>
         <View style={{ flex: 1 }}>
-          <Text style={{ fontWeight: "900", color: colors.ink }} numberOfLines={1}>Practice · {topic?.name} · {i + 1}/{questions.length}</Text>
+          <Text style={{ fontFamily: fonts.display, color: colors.ink }} numberOfLines={1}>Practice · {topic?.name} · {i + 1}/{questions.length}</Text>
           <ProgressBar value={i / questions.length} />
         </View>
       </View>

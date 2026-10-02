@@ -3,7 +3,7 @@ import React, { useCallback, useMemo, useRef, useState } from "react";
 import { PanResponder, Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from "react-native";
 import Svg, { Line, Path } from "react-native-svg";
 import { eraseAt, strokePath, type Pt, type Stroke } from "../logic/strokes";
-import { colors, MIN_TOUCH, radius, space } from "../theme/colors";
+import { colors, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 
 const INKS = [{ name: "Dark ink", c: colors.ink }, { name: "Blue", c: colors.primary }, { name: "Red", c: colors.bad }];
 const WIDTHS = [{ name: "Thin", w: 2.5 }, { name: "Thick", w: 6 }];
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   toolbar: { flexDirection: "row", flexWrap: "wrap", gap: 6, marginBottom: space.s },
   tool: { minWidth: MIN_TOUCH - 4, minHeight: 44, paddingHorizontal: 8, borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, backgroundColor: colors.card, alignItems: "center", justifyContent: "center" },
   toolOn: { backgroundColor: colors.highlight, borderColor: colors.primary },
-  toolText: { fontWeight: "900", fontSize: 14, color: colors.ink },
+  toolText: { fontFamily: fonts.display, fontSize: 14, color: colors.ink },
   swatch: { width: 22, height: 22, borderRadius: 11, borderWidth: 2, borderColor: colors.border },
   paper: { flex: 1, backgroundColor: "#fff", borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, overflow: "hidden", ...({ touchAction: "none", userSelect: "none", cursor: "crosshair" } as object) },
   empty: { position: "absolute", top: "45%", alignSelf: "center", color: colors.muted, fontWeight: "800", fontSize: 18 },

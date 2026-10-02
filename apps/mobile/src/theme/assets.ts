@@ -6,21 +6,21 @@ import type { ImageSourcePropType } from "react-native";
 import { mapPaths, type MapPath } from "./mapPaths";
 
 export const uiAssets = {
-  // One slice of the long river map per chapter (map order 1..12), centred on that chapter's island.
+  // One island section of the river-map pack per chapter (map order 1..12), built by scripts/map-sections.py.
   // aspect = height / width of the image; island = which side the island sits, so nodes go on the water side.
   maps: [
-    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 1.9, island: "left" },
-    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 1.9, island: "right" },
-    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 2.026, island: "left" },
-    { bg: require("../../assets/ui/map-bg-4.webp"), aspect: 1.9, island: "right" },
-    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 2.354, island: "left" },
-    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 2.026, island: "right" },
-    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 2.354, island: "left" },
-    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 3.338, island: "right" },
-    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 2.026, island: "left" },
-    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 2.354, island: "right" },
-    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 2.354, island: "left" },
-    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 1.9, island: "right" },
+    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 1.75, island: "left" },
+    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 1.75, island: "right" },
+    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 1.75, island: "left" },
+    { bg: require("../../assets/ui/map-bg-4.webp"), aspect: 1.75, island: "right" },
+    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 1.778, island: "left" },
+    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 1.75, island: "right" },
+    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 1.778, island: "left" },
+    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 2.539, island: "right" },
+    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 1.75, island: "left" },
+    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 1.778, island: "right" },
+    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 1.778, island: "left" },
+    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 1.75, island: "right" },
   ] as Omit<MapTheme, "route">[], // cycled by topic order
   node: {
     default: require("../../assets/ui/node-default.png") as ImageSourcePropType,

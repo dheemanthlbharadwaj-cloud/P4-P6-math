@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { evaluate, formatResult } from "../logic/calculator";
 import { uiAssets } from "../theme/assets";
 import { catPoses } from "../theme/cats";
-import { colors } from "../theme/colors";
+import { colors, fonts } from "../theme/colors";
 
 type Kind = "num" | "op" | "eq" | "clear" | "fn";
 const KEYS: { k: string; kind: Kind; label?: string }[][] = [
@@ -100,23 +100,23 @@ const styles = StyleSheet.create({
   },
   peekCat: { position: "absolute", top: -58, right: 26, width: 78, height: 72 },
   header: { flexDirection: "row", alignItems: "center", gap: 10, marginBottom: 12 },
-  title: { flex: 1, fontSize: 22, fontWeight: "900", color: "#ffffff", letterSpacing: 0.3 },
+  title: { flex: 1, fontSize: 22, fontFamily: fonts.display, color: "#ffffff", letterSpacing: 0.3 },
   closeBtn: {
     width: 44, height: 44, borderRadius: 22, backgroundColor: "#ffffff", borderWidth: 3, borderColor: colors.border,
     alignItems: "center", justifyContent: "center",
   },
-  closeX: { fontSize: 20, fontWeight: "900", color: colors.ink },
+  closeX: { fontSize: 20, fontFamily: fonts.display, color: colors.ink },
   screen: {
     backgroundColor: "#203040", borderRadius: 18, borderWidth: 3, borderColor: colors.border, paddingVertical: 10,
     paddingHorizontal: 14, marginBottom: 14, minHeight: 92, justifyContent: "flex-end",
   },
   expr: { fontSize: 22, color: "#9fe8c4", textAlign: "right", fontVariant: ["tabular-nums"] },
-  result: { fontSize: 38, fontWeight: "900", color: "#c8ffe0", textAlign: "right", fontVariant: ["tabular-nums"] },
+  result: { fontSize: 38, fontFamily: fonts.display, color: "#c8ffe0", textAlign: "right", fontVariant: ["tabular-nums"] },
   row: { flexDirection: "row", gap: 10 },
   key: {
     flex: 1, minHeight: 58, borderRadius: 16, borderWidth: 3, borderBottomWidth: 7, borderColor: colors.border,
     alignItems: "center", justifyContent: "center",
   },
   keyDown: { borderBottomWidth: 3, transform: [{ translateY: 4 }] },
-  keyText: { fontSize: 26, fontWeight: "900" },
+  keyText: { fontSize: 26, fontFamily: fonts.display },
 });

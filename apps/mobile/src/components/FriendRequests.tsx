@@ -9,7 +9,7 @@ import { currentUser } from "../services/auth";
 import { refreshFriends } from "../services/bootstrap";
 import { firebaseFirestore } from "../services/firebase";
 import { isFirebaseConfigured } from "../services/config";
-import { colors } from "../theme/colors";
+import { colors, fonts } from "../theme/colors";
 import { SAMPLE_FRIEND_REQUEST, SAMPLE_REQUEST_PROFILE, SHOW_SAMPLES } from "../dev/samples";
 import { useFriends } from "../store/friends";
 
@@ -66,7 +66,7 @@ export function FriendRequests({ onMessage }: { onMessage: (m: string) => void }
       <H2>Friend requests</H2>
       {items.map((r) => (
         <View key={r.id} style={{ marginTop: 10 }}>
-          <Body style={{ fontWeight: "900", color: colors.ink }}>{r.name} wants to be your friend</Body>
+          <Body style={{ fontFamily: fonts.display, color: colors.ink }}>{r.name} wants to be your friend</Body>
           <View style={{ flexDirection: "row", gap: 10, marginTop: 6 }}>
             <Button title="Accept" variant="good" small disabled={busy === r.id} onPress={() => void respond(r.id, true)} style={{ flex: 1 }} />
             <Button title="Decline" variant="ghost" small disabled={busy === r.id} onPress={() => void respond(r.id, false)} style={{ flex: 1 }} />

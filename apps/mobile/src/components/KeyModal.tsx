@@ -8,7 +8,7 @@ import { Body, Button, H2 } from "./ui";
 import { CatCompanion } from "./CatCompanion";
 import { getUnlockQuestion } from "../content";
 import { useProgress } from "../store/progress";
-import { colors, space } from "../theme/colors";
+import { colors, fonts, space } from "../theme/colors";
 
 export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; topic: TopicMap | null; visible: boolean; onClose: () => void }) {
   const [attempt, setAttempt] = useState(0);
@@ -40,7 +40,7 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
         )}
         {reveal ? (
           <View style={{ padding: space.l, gap: 10 }}>
-            <Text style={{ fontSize: 22, fontWeight: "900", color: reveal.correct ? colors.good : colors.bad, textAlign: "center" }}>
+            <Text style={{ fontSize: 22, fontFamily: fonts.display, color: reveal.correct ? colors.good : colors.bad, textAlign: "center" }}>
               {reveal.correct ? "Unlocked! Have fun exploring." : "Not quite. Try another key."}
             </Text>
             {reveal.correct ? (

@@ -7,7 +7,7 @@ import { Body, Button, Card, Chip, H1, H2, Screen } from "../../src/components/u
 import { getAllLv1, getPool, getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
 import { useWrong } from "../../src/store/wrong";
-import { colors, space } from "../../src/theme/colors";
+import { colors, fonts, space } from "../../src/theme/colors";
 
 export default function ClassroomTab() {
   const router = useRouter();
@@ -78,7 +78,7 @@ export default function ClassroomTab() {
             <H2 style={{ flex: 1 }}>Previously wrong</H2>
           </View>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Untimed. Get one right to take its flag off.</Body>
-          <Text style={{ fontWeight: "900", fontSize: 18, color: flagged ? colors.bad : colors.good, marginBottom: 8 }}>{flagged} flagged</Text>
+          <Text style={{ fontFamily: fonts.display, fontSize: 18, color: flagged ? colors.bad : colors.good, marginBottom: 8 }}>{flagged} flagged</Text>
           <Button title="Practise flagged questions" onPress={() => go("wrong")} disabled={flagged === 0} />
           <Button title={`Test all wrong ever (${ever})`} variant="ghost" onPress={() => go("all-wrong")} disabled={ever === 0} style={{ marginTop: 10 }} />
         </Card>

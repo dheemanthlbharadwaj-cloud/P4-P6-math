@@ -1,6 +1,6 @@
 // Level / question screen: 5 questions, progress bar, cat companion, hearts, skip, calculator, picture viewer.
 import React, { useMemo, useRef, useState } from "react";
-import { Alert, Image, Pressable, Text, useWindowDimensions, View } from "react-native";
+import { Image, Pressable, Text, useWindowDimensions, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Crypto from "expo-crypto";
 import { markQuestion, STARS_PER_LEVEL, MAX_HEARTS, type Grade, type LevelNo, type LevelResult } from "@p6/shared";
@@ -8,6 +8,7 @@ import { Body, Button, H1, H2, ProgressBar, Screen } from "../../../../src/compo
 import { QuestionPanel, type Reveal } from "../../../../src/components/QuestionPanel";
 import { CatCompanion } from "../../../../src/components/CatCompanion";
 import { ResourceModal } from "../../../../src/components/ResourceModal";
+import { useLeaveConfirm } from "../../../../src/components/LeaveConfirm";
 import { Stat } from "../../../../src/components/TopBar";
 import { getContentVersion, getLevelQuestions, getSubtopic } from "../../../../src/content";
 import { answer, correctCount, currentId, isDone, progressFraction, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
@@ -21,7 +22,7 @@ import { flushOfflineQueue } from "../../../../src/services/sync";
 import { uiAssets } from "../../../../src/theme/assets";
 import type { CatMood } from "../../../../src/theme/cats";
 import { useQuestionOrientation } from "../../../../src/hooks/useQuestionOrientation";
-import { colors, space } from "../../../../src/theme/colors";
+import { colors, fonts, space } from "../../../../src/theme/colors";
 
 export default function LevelScreen() {
   const router = useRouter();
@@ -86,22 +87,24 @@ export default function LevelScreen() {
 
   const giveUp = () => { setGate(false); save(false, session); setPhase("gaveup"); };
 
-  const confirmLeave = () =>
-    Alert.alert("Leave this level?", "Your progress in this attempt will be lost.", [
-      { text: "Keep playing", style: "cancel" },
-      { text: "Leave", style: "destructive", onPress: () => router.back() },
-    ]);
+  const [needEnergy, setNeedEnergy] = useState(false);
+  const leaveConfirm = useLeaveConfirm({
+    enabled: phase === "playing",
+    title: "Leave this level?",
+    body: "Your progress in this attempt will be lost, and the energy you already spent is not refunded.",
+  });
+  const goMap = () => { if (router.canGoBack()) router.back(); else router.replace("/(tabs)/map"); };
 
   const startNext = () => {
     const nl = nextLevel(level);
     if (!nl) return;
-    if (!usePlayer.getState().spendEnergy()) { Alert.alert("Out of energy", "Watch an ad on the Profile tab or wait for energy to recover."); return; }
+    if (!usePlayer.getState().spendEnergy()) { setNeedEnergy(true); return; }
     router.replace({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: subtopicId, level: String(nl) } });
   };
 
   if (!questions.length) {
     return (
-      <Screen><View style={{ padding: space.l }}><H2>No questions here yet</H2><Button title="Back" onPress={() => router.back()} style={{ marginTop: 12 }} /></View></Screen>
+      <Screen><View style={{ padding: space.l }}><H2>No questions here yet</H2><Button title="Back" onPress={goMap} style={{ marginTop: 12 }} /></View></Screen>
     );
   }
 
@@ -128,8 +131,9 @@ export default function LevelScreen() {
         </View>
         <View style={{ padding: space.l, gap: 10 }}>
           {won && nextLevel(level) ? <Button title={`Next: Level ${nextLevel(level)}`} variant="good" onPress={startNext} /> : null}
-          <Button title="Back to map" variant={won && nextLevel(level) ? "ghost" : "primary"} onPress={() => router.back()} />
+          <Button title="Back to map" variant={won && nextLevel(level) ? "ghost" : "primary"} onPress={goMap} />
         </View>
+        <ResourceModal kind="energy" visible={needEnergy} onRewarded={() => { setNeedEnergy(false); startNext(); }} onGiveUp={() => setNeedEnergy(false)} giveUpLabel="Not now" />
       </Screen>
     );
   }
@@ -139,24 +143,19 @@ export default function LevelScreen() {
   return (
     <Screen edges={["top", "bottom"]}>
       <View style={{ flexDirection: "row", alignItems: "center", paddingHorizontal: space.m, paddingVertical: space.s, gap: 10 }}>
-        <Pressable onPress={confirmLeave} accessibilityRole="button" accessibilityLabel="Leave level" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center" }}>
-          <Text style={{ fontSize: 26, fontWeight: "900", color: colors.ink }}>✕</Text>
+        <Pressable onPress={leaveConfirm.ask} accessibilityRole="button" accessibilityLabel="Leave level" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ fontSize: 26, fontFamily: fonts.display, color: colors.ink }}>✕</Text>
         </Pressable>
         <ProgressBar value={progressFraction(session)} style={{ flex: 1 }} />
+        {landscape ? <CatCompanion mood={mood} size={52} /> : null}
         <Stat icon={uiAssets.icons.heart as number} text={meters.subscribed ? "∞" : `${meters.hearts}/${MAX_HEARTS}`} />
       </View>
-      {landscape ? null : (
-        <View style={{ flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: space.l }}>
-          <CatCompanion mood={mood} size={84} message={message} />
-        </View>
-      )}
-
       {question ? (
         <View style={{ flex: 1 }}>
-          <QuestionPanel key={question.id} question={question} grade={grade} reveal={reveal} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
+          <QuestionPanel key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} />} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
           {reveal ? (
             <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
-              <Text style={{ fontSize: 20, fontWeight: "900", color: reveal.correct ? colors.good : colors.bad, marginBottom: 8 }}>
+              <Text style={{ fontSize: 20, fontFamily: fonts.display, color: reveal.correct ? colors.good : colors.bad, marginBottom: 8 }}>
                 {reveal.correct ? "Correct!" : "Not quite. -1 heart. This question will come back."}
               </Text>
               <Button title={isDone(answer(session, reveal.correct)) ? "Finish" : "Continue"} variant={reveal.correct ? "good" : "primary"} onPress={next} disabled={gate} />
@@ -165,6 +164,7 @@ export default function LevelScreen() {
         </View>
       ) : null}
 
+      {leaveConfirm.modal}
       <ResourceModal kind="hearts" visible={gate} onRewarded={() => { setGate(false); setMood("wrong"); }} onGiveUp={giveUp} />
     </Screen>
   );

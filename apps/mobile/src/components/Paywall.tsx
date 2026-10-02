@@ -5,7 +5,7 @@ import { Body, Button, CenterModal, H2 } from "./ui";
 import { catPoses } from "../theme/cats";
 import { loadPaywall, purchaseSubscription, restorePurchases, type PaywallInfo } from "../services/purchases";
 import { usePlayer } from "../store/player";
-import { colors } from "../theme/colors";
+import { colors, fonts } from "../theme/colors";
 import { SUBSCRIPTION_PRICE_LABEL } from "@p6/shared";
 
 export function Paywall({ visible, onClose }: { visible: boolean; onClose: () => void }) {
@@ -33,7 +33,7 @@ export function Paywall({ visible, onClose }: { visible: boolean; onClose: () =>
     <CenterModal visible={visible} onClose={onClose}>
       <Image source={catPoses.banana} style={{ width: 110, height: 100, alignSelf: "center" }} resizeMode="contain" />
       <H2 style={{ textAlign: "center" }}>Unlimited Cats</H2>
-      <Text style={{ fontSize: 34, fontWeight: "900", color: colors.primary, textAlign: "center", marginVertical: 8 }}>{info.priceLabel}</Text>
+      <Text style={{ fontSize: 34, fontFamily: fonts.display, color: colors.primary, textAlign: "center", marginVertical: 8 }}>{info.priceLabel}</Text>
       <Body style={{ textAlign: "center" }}>Unlimited hearts and unlimited energy. No ads needed. Cancel any time in your store account settings.</Body>
       <Body style={{ textAlign: "center", fontSize: 13, color: colors.inkSoft, marginTop: 8 }}>
         Payment is charged to your App Store / Google Play account and renews monthly until cancelled.

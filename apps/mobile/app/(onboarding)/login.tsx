@@ -9,7 +9,7 @@ import { catAnimations } from "../../src/theme/cats";
 import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInEmail, signInGoogleIdToken, signUpEmail } from "../../src/services/auth";
 import { isFirebaseConfigured } from "../../src/services/config";
 import { useProfile } from "../../src/store/profile";
-import { colors, radius, space } from "../../src/theme/colors";
+import { colors, fonts, radius, space } from "../../src/theme/colors";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -46,7 +46,9 @@ export default function Login() {
   }
 
   const submit = () => {
-    if (!isFirebaseConfigured) { setError("Firebase is not configured yet (set EXPO_PUBLIC_FIREBASE_* in .env)."); return; }
+    if (!isFirebaseConfigured) { setError("Sign-in is not available yet because Firebase is not configured (set EXPO_PUBLIC_FIREBASE_* in .env). Use \"Continue as guest\" below to try the app."); return; }
+    if (!email.trim()) { setError("Please enter your email."); return; }
+    if (password.length < 6) { setError("Password needs at least 6 characters."); return; }
     void run(() => (mode === "signup" ? signUpEmail(email, password) : signInEmail(email, password)));
   };
 
@@ -63,7 +65,7 @@ export default function Login() {
         <ScrollView contentContainerStyle={{ padding: space.l, flexGrow: 1, justifyContent: "center" }}>
           <View style={{ alignItems: "center" }}>
             <Image source={catAnimations.thinking} style={{ width: 230, height: 230 }} contentFit="contain" accessibilityLabel="A cat working on a laptop" />
-            <Text style={{ fontSize: 44, lineHeight: 50, fontWeight: "900", color: colors.ink, textAlign: "center", marginTop: 4 }} accessibilityRole="header">
+            <Text style={{ fontSize: 44, lineHeight: 50, fontFamily: fonts.display, color: colors.ink, textAlign: "center", marginTop: 4 }} accessibilityRole="header">
               {"Catapult\nMath\nAthletes"}
             </Text>
             <Body style={{ textAlign: "center", color: colors.inkSoft, marginTop: 8 }}>PSLE maths practice with your cat buddy.</Body>
@@ -89,7 +91,7 @@ export default function Login() {
         <TextInput style={input} value={email} onChangeText={setEmail} placeholder="Email" placeholderTextColor={colors.muted} autoCapitalize="none" keyboardType="email-address" autoComplete="email" accessibilityLabel="Email" />
         <TextInput style={input} value={password} onChangeText={setPassword} placeholder="Password (6+ characters)" placeholderTextColor={colors.muted} secureTextEntry autoCapitalize="none" accessibilityLabel="Password" />
         {error ? <Text style={{ color: colors.bad, fontWeight: "800", marginBottom: 10 }}>{error}</Text> : null}
-        <Button title={mode === "signup" ? "Create account" : "Log in"} onPress={submit} disabled={busy || !email || password.length < 6} />
+        <Button title={mode === "signup" ? "Create account" : "Log in"} onPress={submit} disabled={busy} />
         <Button title={mode === "signup" ? "I already have an account" : "I'm new here"} variant="ghost" onPress={() => setMode(mode === "signup" ? "login" : "signup")} style={{ marginTop: 10 }} />
 
         <Text style={{ textAlign: "center", color: colors.inkSoft, marginVertical: space.l, fontWeight: "700" }}>or</Text>

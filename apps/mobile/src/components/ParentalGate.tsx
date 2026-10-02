@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { Text, TextInput, View } from "react-native";
 import { Body, Button, CenterModal, H2 } from "./ui";
-import { colors, radius } from "../theme/colors";
+import { colors, fonts, radius } from "../theme/colors";
 
 export function ParentalGate({ visible, onPass, onCancel }: { visible: boolean; onPass: () => void; onCancel: () => void }) {
   const [seed, setSeed] = useState(0);
@@ -23,7 +23,7 @@ export function ParentalGate({ visible, onPass, onCancel }: { visible: boolean; 
     <CenterModal visible={visible} onClose={cancel}>
       <H2>Grown-ups only</H2>
       <Body style={{ marginVertical: 8 }}>Ask a parent or guardian to solve this to continue.</Body>
-      <Text style={{ fontSize: 32, fontWeight: "900", color: colors.ink, textAlign: "center", marginVertical: 8 }}>{a} × {b} = ?</Text>
+      <Text style={{ fontSize: 32, fontFamily: fonts.display, color: colors.ink, textAlign: "center", marginVertical: 8 }}>{a} × {b} = ?</Text>
       <TextInput
         value={value}
         onChangeText={(t) => { setValue(t.replace(/[^0-9]/g, "")); setWrong(false); }}

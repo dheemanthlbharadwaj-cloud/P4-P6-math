@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Alert, Linking, ScrollView, Share, Text, TextInput, View } from "react-native";
-import * as Clipboard from "expo-clipboard";
+import { ScrollView, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
 import { ENERGY_PER_AD, HEARTS_PER_AD, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL } from "@p6/shared";
 import { Body, Button, Card, CenterModal, H1, H2, Screen } from "../../src/components/ui";
@@ -10,6 +9,8 @@ import { ParentalGate } from "../../src/components/ParentalGate";
 import { Paywall } from "../../src/components/Paywall";
 import { FriendRequests } from "../../src/components/FriendRequests";
 import { TopBar } from "../../src/components/TopBar";
+import { useToast } from "../../src/components/Toast";
+import { copyText, openLink, shareText } from "../../src/services/share";
 import { api, ApiError } from "../../src/services/api";
 import { signOut } from "../../src/services/auth";
 import { refreshFriends } from "../../src/services/bootstrap";
@@ -22,7 +23,7 @@ import { useCosmetics } from "../../src/store/cosmetics";
 import { useFriends } from "../../src/store/friends";
 import { usePlayer } from "../../src/store/player";
 import { resetAllStores } from "../../src/store/reset";
-import { colors, radius, space } from "../../src/theme/colors";
+import { colors, fonts, radius, space } from "../../src/theme/colors";
 
 const PRIVACY_URL = "https://p6math.app/privacy"; // TODO(owner): real URLs
 const TERMS_URL = "https://p6math.app/terms";
@@ -46,7 +47,8 @@ export default function ProfileTab() {
   const afterGate = useRef<() => void>(() => undefined);
 
   const gated = (fn: () => void) => { afterGate.current = fn; setGateOpen(true); };
-  const flash = (m: string) => setMsg(m);
+  const toast = useToast();
+  const flash = (m: string) => { setMsg(m); toast.show(m); };
 
   const save = () => {
     if (!isValidIso(psle)) return flash("PSLE date must look like 2026-10-01.");
@@ -66,7 +68,11 @@ export default function ProfileTab() {
   };
 
   const referralLink = `${extra.referralBaseUrl ?? "https://p6math.app/r"}?code=${profile.friendCode}`;
-  const share = () => Share.share({ message: `Join me on Catapult Math Athletes! Use my code ${profile.friendCode}: ${referralLink}` }).catch(() => undefined);
+  const share = async () => {
+    const r = await shareText(`Join me on Catapult Math Athletes! Use my code ${profile.friendCode}: ${referralLink}`);
+    if (r === "copied") flash("Invite link copied. Paste it in a message to your friend.");
+    else if (r === "failed") flash(`Couldn't share automatically. Your link: ${referralLink}`);
+  };
 
   const addFriend = async () => {
     try {
@@ -97,8 +103,10 @@ export default function ProfileTab() {
   };
 
   const logout = async () => {
+    stopCloudSync();
     if (profile.uid === "guest") profile.set({ uid: null });
-    else { try { await signOut(); } catch { /* ignore */ } }
+    else { try { await signOut(); } catch { /* ignore */ } profile.set({ uid: null }); }
+    router.replace("/(onboarding)/login");
   };
 
   // Delete: type DELETE to confirm (no system dialog, so it works everywhere including the web preview).
@@ -124,21 +132,21 @@ export default function ProfileTab() {
     router.replace("/(onboarding)/login");
   };
 
-  const openUrl = (url: string) => gated(() => { void Linking.openURL(url); });
+  const openUrl = (url: string) => gated(() => { void openLink(url).then((ok) => { if (!ok) flash(`Couldn't open the link. Visit ${url}`); }); });
 
   return (
     <Screen>
       <TopBar />
       <ScrollView contentContainerStyle={{ padding: space.l, gap: space.l }} keyboardShouldPersistTaps="handled">
         <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
-          <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={96} style={{ marginTop: hatId ? 30 : 0 }} />
+          <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={96} style={{ marginTop: hatId ? 6 : 0 }} />
           <View style={{ flex: 1 }}>
             <H1 style={{ fontSize: 24 }}>{profile.fullName || "Student"}</H1>
             <Body style={{ color: colors.inkSoft }}>{profile.catName ? `with ${profile.catName}` : ""}</Body>
-            <Text style={{ fontWeight: "900", color: colors.primary }}>{daysToPsle(profile.psleDate)} days to PSLE</Text>
+            <Text style={{ fontFamily: fonts.display, color: colors.primary }}>{daysToPsle(profile.psleDate)} days to PSLE</Text>
           </View>
         </View>
-        {msg ? <Text style={{ fontWeight: "900", color: colors.ink, backgroundColor: colors.highlight, padding: 10, borderRadius: 12 }} onPress={() => setMsg(null)}>{msg}</Text> : null}
+        {msg ? <Text style={{ fontFamily: fonts.display, color: colors.ink, backgroundColor: colors.highlight, padding: 10, borderRadius: 12 }} onPress={() => setMsg(null)}>{msg}</Text> : null}
 
         <Card>
           <H2>My details</H2>
@@ -153,8 +161,8 @@ export default function ProfileTab() {
           <H2>Friends</H2>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Your friend code</Body>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-            <Text style={{ fontSize: 28, fontWeight: "900", letterSpacing: 2, color: colors.ink, flex: 1 }} selectable>{profile.friendCode || "—"}</Text>
-            <Button title="Copy" small variant="ghost" disabled={!profile.friendCode} onPress={() => { void Clipboard.setStringAsync(profile.friendCode); flash("Code copied."); }} />
+            <Text style={{ fontSize: 28, fontFamily: fonts.display, letterSpacing: 2, color: colors.ink, flex: 1 }} selectable>{profile.friendCode || "—"}</Text>
+            <Button title="Copy" small variant="ghost" disabled={!profile.friendCode} onPress={() => { void copyText(profile.friendCode).then((ok) => flash(ok ? "Code copied." : `Couldn't copy. Your code is ${profile.friendCode}.`)); }} />
           </View>
           <TextInput style={[field, { marginTop: 12 }]} value={friendCode} onChangeText={setFriendCode} autoCapitalize="characters" autoCorrect={false} placeholder="Enter a friend's code" placeholderTextColor={colors.muted} accessibilityLabel="Friend code" />
           <Button title="Send friend request" onPress={addFriend} disabled={friendCode.trim().length < 4} />
@@ -168,9 +176,9 @@ export default function ProfileTab() {
             <View style={{ gap: 10, marginTop: 8 }}>
               {friendList.map((f) => (
                 <View key={f.uid} style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-                  <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={44} style={{ marginTop: f.cat.hatId ? 14 : 0 }} />
+                  <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={44} style={{ marginTop: f.cat.hatId ? 3 : 0 }} />
                   <View style={{ flex: 1 }}>
-                    <Text style={{ fontWeight: "900", color: colors.ink, fontSize: 16 }}>{f.displayName}</Text>
+                    <Text style={{ fontFamily: fonts.display, color: colors.ink, fontSize: 16 }}>{f.displayName}</Text>
                     <Text style={{ color: colors.inkSoft }}>{f.school ?? ""}{f.school ? " · " : ""}cat: {f.cat.name}</Text>
                   </View>
                 </View>
@@ -185,6 +193,7 @@ export default function ProfileTab() {
           <H2>Invite friends, get {REFERRAL_STARS} stars</H2>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Share your link. When a friend joins with it you earn {REFERRAL_STARS} stars.</Body>
           <Button title="Share my invite link" variant="gold" onPress={share} disabled={!profile.friendCode} />
+          {!profile.friendCode ? <Body style={{ color: colors.inkSoft, marginTop: 6, fontSize: 14 }}>Your friend code appears once you are signed in with an account.</Body> : null}
           <TextInput style={[field, { marginTop: 12 }]} value={redeem} onChangeText={setRedeem} autoCapitalize="characters" autoCorrect={false} placeholder="Got a friend's invite code?" placeholderTextColor={colors.muted} accessibilityLabel="Invite code" />
           <Button title="Redeem code" variant="ghost" onPress={redeemCode} disabled={redeem.trim().length < 4} />
         </Card>
@@ -223,12 +232,13 @@ export default function ProfileTab() {
         <TextInput
           value={deleteText} onChangeText={setDeleteText} placeholder="DELETE" placeholderTextColor={colors.muted}
           autoCapitalize="characters" autoCorrect={false} accessibilityLabel="Type DELETE to confirm"
-          style={{ minHeight: 52, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 20, fontWeight: "900", textAlign: "center", backgroundColor: "#fff", color: colors.ink, marginTop: 14 }}
+          style={{ minHeight: 52, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 20, fontFamily: fonts.display, textAlign: "center", backgroundColor: "#fff", color: colors.ink, marginTop: 14 }}
         />
         {deleteMsg ? <Text style={{ color: colors.bad, fontWeight: "800", marginTop: 8, textAlign: "center" }}>{deleteMsg}</Text> : null}
         <Button title={deleting ? "Deleting..." : "Delete everything"} variant="bad" disabled={deleting || deleteText.trim().toUpperCase() !== "DELETE"} onPress={() => void deleteAccount()} style={{ marginTop: 14 }} />
         <Button title="Cancel" variant="ghost" disabled={deleting} onPress={() => setDeleteOpen(false)} style={{ marginTop: 10 }} />
       </CenterModal>
+      {toast.node}
       <ParentalGate visible={gateOpen} onCancel={() => setGateOpen(false)} onPass={() => { setGateOpen(false); afterGate.current(); }} />
       <Paywall visible={paywall} onClose={() => setPaywall(false)} />
     </Screen>

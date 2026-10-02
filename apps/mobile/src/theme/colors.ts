@@ -22,3 +22,6 @@ export const radius = { s: 10, m: 16, l: 24 };
 export const space = { xs: 4, s: 8, m: 12, l: 16, xl: 24 };
 export const MIN_TOUCH = 48;
 export const font = { body: 17, small: 14, h1: 28, h2: 22, huge: 36 };
+/** Rounded game font (Fredoka, SIL OFL) for titles, buttons and labels; loaded in app/_layout.tsx. Body and question
+ *  text stay in the system font for easy reading. Custom fonts carry their own weight, so don't add fontWeight. */
+export const fonts = { display: "Fredoka_700Bold", displayMedium: "Fredoka_600SemiBold" };

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { STORE_ITEMS, type StoreItem } from "@p6/shared";
 import { Body, Button, Card, Chip, H1, Screen } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { Stat } from "../../src/components/TopBar";
 import { api } from "../../src/services/api";
 import { pushProfile } from "../../src/services/cloudSync";
-import { catColors, catPoses } from "../../src/theme/cats";
+import { catPoses } from "../../src/theme/cats";
 import { uiAssets } from "../../src/theme/assets";
 import { useCosmetics } from "../../src/store/cosmetics";
 import { useProfile } from "../../src/store/profile";
 import { pendingStarEstimate, useOfflineQueue } from "../../src/store/queue";
-import { colors, radius, space } from "../../src/theme/colors";
+import { colors, fonts, radius, space } from "../../src/theme/colors";
 
 export default function StoreTab() {
   const [kind, setKind] = useState<"color" | "hat">("color");
@@ -70,12 +70,12 @@ export default function StoreTab() {
 
         <Card style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "flex-end" }}>
           <View style={{ alignItems: "center" }}>
-            <Text style={{ fontWeight: "900", color: colors.inkSoft, marginBottom: 44 }}>Now</Text>
+            <Text style={{ fontFamily: fonts.display, color: colors.inkSoft, marginBottom: 44 }}>Now</Text>
             <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={130} label="Current look" />
           </View>
-          <Text style={{ fontSize: 28, fontWeight: "900", color: colors.inkSoft, marginBottom: 50 }}>›</Text>
+          <Text style={{ fontSize: 28, fontFamily: fonts.display, color: colors.inkSoft, marginBottom: 50 }}>›</Text>
           <View style={{ alignItems: "center" }}>
-            <Text style={{ fontWeight: "900", color: colors.primary, marginBottom: 44 }}>{selected ? "Preview" : "Pick an item"}</Text>
+            <Text style={{ fontFamily: fonts.display, color: colors.primary, marginBottom: 44 }}>{selected ? "Preview" : "Pick an item"}</Text>
             <CatAvatar source={catPoses.cute} colorId={preview.colorId} hatId={preview.hatId} size={130} label="Preview look" />
           </View>
         </Card>
@@ -94,12 +94,13 @@ export default function StoreTab() {
               <Pressable key={it.id} onPress={() => { setSelected(it); setMsg(null); }} accessibilityRole="button" accessibilityState={{ selected: on }}
                 accessibilityLabel={`${it.name}, ${own ? (eq ? "equipped" : "owned") : `${it.price} stars`}`}
                 style={{ width: "30%", flexGrow: 1, minWidth: 96, minHeight: 130, borderRadius: radius.m, borderWidth: 3, borderColor: on ? colors.primary : colors.border, backgroundColor: on ? "#eaf0ff" : colors.card, alignItems: "center", justifyContent: "center", padding: 8 }}>
+                {/* Each item shown on the student's own cat: colours on the bare cat, hats on the cat in its current colour. */}
                 {it.kind === "color" ? (
-                  <View style={{ width: 52, height: 52, borderRadius: 26, backgroundColor: catColors[it.id], borderWidth: 3, borderColor: colors.border }} />
+                  <CatAvatar source={catPoses.cute} colorId={it.id} size={64} />
                 ) : (
-                  <Image source={uiAssets.hats[it.id]} style={{ width: 56, height: 56 }} resizeMode="contain" />
+                  <CatAvatar source={catPoses.cute} colorId={colorId} hatId={it.id} size={64} />
                 )}
-                <Text style={{ fontWeight: "900", color: colors.ink, marginTop: 6, textAlign: "center" }} numberOfLines={1}>{it.name}</Text>
+                <Text style={{ fontFamily: fonts.display, color: colors.ink, marginTop: 6, textAlign: "center" }} numberOfLines={1}>{it.name}</Text>
                 <Text style={{ fontWeight: "800", color: eq ? colors.good : own ? colors.inkSoft : colors.primaryDark }}>{eq ? "Equipped" : own ? "Owned" : `${it.price} stars`}</Text>
               </Pressable>
             );

@@ -14,7 +14,7 @@ import { useProgress } from "../../src/store/progress";
 import { useFriends } from "../../src/store/friends";
 import { usePlayer, computeMeters } from "../../src/store/player";
 import { isTopicUnlocked } from "../../src/logic/unlock";
-import { colors } from "../../src/theme/colors";
+import { colors, fonts } from "../../src/theme/colors";
 
 export default function MapTab() {
   const router = useRouter();
@@ -69,14 +69,14 @@ export default function MapTab() {
       <TopBar />
       <View style={{ flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, backgroundColor: colors.bg, borderBottomWidth: 3, borderBottomColor: colors.border }}>
         <Pressable onPress={() => go(index - 1)} disabled={index === 0} accessibilityLabel="Previous topic" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center", opacity: index === 0 ? 0.3 : 1 }}>
-          <Text style={{ fontSize: 30, fontWeight: "900", color: colors.ink }}>‹</Text>
+          <Text style={{ fontSize: 30, fontFamily: fonts.display, color: colors.ink }}>‹</Text>
         </Pressable>
         <View style={{ flex: 1, alignItems: "center" }}>
-          <Text style={{ fontSize: 20, lineHeight: 24, fontWeight: "900", color: colors.ink, textAlign: "center" }} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.8} accessibilityRole="header">{topic?.name ?? ""}</Text>
+          <Text style={{ fontSize: 20, lineHeight: 24, fontFamily: fonts.display, color: colors.ink, textAlign: "center" }} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.8} accessibilityRole="header">{topic?.name ?? ""}</Text>
           <Text style={{ fontSize: 12, color: colors.inkSoft, fontWeight: "700" }}>{index + 1} / {topics.length} · swipe for more topics</Text>
         </View>
         <Pressable onPress={() => go(index + 1)} disabled={index >= topics.length - 1} accessibilityLabel="Next topic" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center", opacity: index >= topics.length - 1 ? 0.3 : 1 }}>
-          <Text style={{ fontSize: 30, fontWeight: "900", color: colors.ink }}>›</Text>
+          <Text style={{ fontSize: 30, fontFamily: fonts.display, color: colors.ink }}>›</Text>
         </Pressable>
       </View>
 

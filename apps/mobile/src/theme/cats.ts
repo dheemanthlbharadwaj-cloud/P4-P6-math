@@ -24,11 +24,21 @@ export const catPoses = {
 /** Head of the front-facing cat, used as the onboarding progress marks. */
 export const catHead: number = require("../../assets/cats/cat-head.png");
 
+/** Width / height of a cat image. Poses are 512×473; the animations are trimmed to the cat (no empty padding). */
+const ANIMATION_ASPECT = new Map<number, number>([
+  [catAnimations.idle, 341 / 332],
+  [catAnimations.thinking, 247 / 168],
+  [catAnimations.wrong, 225 / 161],
+  [catAnimations.sad, 304 / 196],
+]);
+export const catAspect = (source: unknown): number => ANIMATION_ASPECT.get(source as number) ?? 512 / 473;
+
 // "correct" = cute-eyes pose (ARCHITECTURE.md).
 export const catMoodImage = (mood: CatMood): number =>
   mood === "correct" ? catPoses.cute : catAnimations[mood];
 
-/** Coloured coats for every pose and animation (shaded body, matching outline; eyes and whiskers kept).
+/** Coloured coats for every pose and animation (flat cel colour, darker same-hue ink lines and outline, one soft
+ *  cel shadow; calico gets orange and dark patches).
  *  Generated from the black art; black is the original file. */
 export const catColorVariants = new Map<number, Record<string, number>>([
   [catPoses.banana, {
