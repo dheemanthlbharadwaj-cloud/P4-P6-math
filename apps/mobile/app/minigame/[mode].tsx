@@ -1,6 +1,6 @@
 // Mini games: timed all-LV1 ("timed"), previously wrong ("wrong", unflag on correct), all wrong ever ("all-wrong").
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, useWindowDimensions, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { markQuestion, TIMED_GAME_SECONDS_PER_QUESTION, type Grade, type Question } from "@p6/shared";
 import { Body, Button, H1, ProgressBar, Screen } from "../../src/components/ui";
@@ -10,6 +10,7 @@ import { getAllLv1, getQuestion } from "../../src/content";
 import { useWrong } from "../../src/store/wrong";
 import { useNow } from "../../src/hooks/useNow";
 import type { CatMood } from "../../src/theme/cats";
+import { useQuestionOrientation } from "../../src/hooks/useQuestionOrientation";
 import { colors, space } from "../../src/theme/colors";
 
 const ROUND_SIZE = 20; // ASSUMPTION: a timed round is 20 random LV1 questions (spec says "all LV1, timed")
@@ -25,6 +26,9 @@ function shuffle<T>(a: T[]): T[] {
 
 export default function MiniGame() {
   const router = useRouter();
+  useQuestionOrientation();
+  const dim = useWindowDimensions();
+  const landscape = dim.width > dim.height;
   const { mode, grade: g, topicId } = useLocalSearchParams<{ mode: string; grade: string; topicId?: string }>();
   const grade = g as Grade;
   const timed = mode === "timed";
@@ -120,12 +124,15 @@ export default function MiniGame() {
           </View>
         ) : null}
       </View>
-      <View style={{ alignItems: "flex-end", paddingHorizontal: space.l }}>
-        <CatCompanion mood={mood} size={76} message={note ?? undefined} />
-      </View>
+      {landscape ? null : (
+        <View style={{ alignItems: "flex-end", paddingHorizontal: space.l }}>
+          <CatCompanion mood={mood} size={76} message={note ?? undefined} />
+        </View>
+      )}
       <QuestionPanel key={q.id} question={q} grade={grade} reveal={reveal} onSubmit={submit} onSkip={skip} canSkip={queue.length > 1} />
       {reveal ? (
         <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
+          {landscape && note ? <Text style={{ fontWeight: "900", fontSize: 18, color: colors.ink, marginBottom: 6 }}>{note}</Text> : null}
           <Button title={queue.length === 1 ? "Finish" : "Next"} variant={reveal.correct ? "good" : "primary"} onPress={advance} />
         </View>
       ) : null}

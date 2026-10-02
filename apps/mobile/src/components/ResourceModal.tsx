@@ -1,4 +1,6 @@
 // Out-of-hearts / out-of-energy pop-up: Watch Ad (rewarded) or Give up / close.
+import { Image as ExpoImage } from "expo-image";
+import { catAnimations, catPoses } from "../theme/cats";
 import React, { useState } from "react";
 import { Image, Text, View } from "react-native";
 import { ENERGY_PER_AD, HEARTS_PER_AD } from "@p6/shared";
@@ -31,7 +33,8 @@ export function ResourceModal({
   return (
     <CenterModal visible={visible}>
       <View style={{ alignItems: "center" }}>
-        <Image source={kind === "hearts" ? uiAssets.icons.heart : uiAssets.icons.energy} style={{ width: 64, height: 64 }} />
+        <ExpoImage source={kind === "hearts" ? catAnimations.sad : catPoses.box} style={{ width: 140, height: 120 }} contentFit="contain" />
+        <Image source={kind === "hearts" ? uiAssets.icons.heart : uiAssets.icons.energy} style={{ width: 44, height: 44, marginTop: -10 }} />
         <H2 style={{ marginTop: 8 }}>{kind === "hearts" ? "Out of hearts!" : "Out of energy!"}</H2>
         <Body style={{ textAlign: "center", marginVertical: 8 }}>
           Watch a short ad to get +{amount} {kind}, or {kind === "hearts" ? "give up this level" : "come back later"}. Recovery takes time.

@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { catPoses } from "../../src/theme/cats";
+import { Image, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { TIMED_GAME_SECONDS_PER_QUESTION } from "@p6/shared";
 import { Body, Button, Card, Chip, H1, H2, Screen } from "../../src/components/ui";
@@ -37,7 +38,10 @@ export default function ClassroomTab() {
         <Body style={{ color: colors.inkSoft, marginTop: -8 }}>Mini games. No hearts or energy needed.</Body>
 
         <Card>
-          <H2>Beat the clock</H2>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <Image source={catPoses.chasing} style={{ width: 64, height: 60 }} resizeMode="contain" />
+            <H2 style={{ flex: 1 }}>Beat the clock</H2>
+          </View>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>
             LV1 questions, {TIMED_GAME_SECONDS_PER_QUESTION} seconds each. Practice only, no stars.
           </Body>
@@ -50,7 +54,10 @@ export default function ClassroomTab() {
         </Card>
 
         <Card>
-          <H2>Practice (show answer)</H2>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <Image source={catPoses.cup} style={{ width: 64, height: 60 }} resizeMode="contain" />
+            <H2 style={{ flex: 1 }}>Practice (show answer)</H2>
+          </View>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>
             Pick a topic, read the question, then reveal the answer and mark yourself. Includes drawing and explain-why questions. No hearts, no stars.
           </Body>
@@ -66,7 +73,10 @@ export default function ClassroomTab() {
         </Card>
 
         <Card>
-          <H2>Previously wrong</H2>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <Image source={catPoses.confused} style={{ width: 64, height: 60 }} resizeMode="contain" />
+            <H2 style={{ flex: 1 }}>Previously wrong</H2>
+          </View>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Untimed. Get one right to take its flag off.</Body>
           <Text style={{ fontWeight: "900", fontSize: 18, color: flagged ? colors.bad : colors.good, marginBottom: 8 }}>{flagged} flagged</Text>
           <Button title="Practise flagged questions" onPress={() => go("wrong")} disabled={flagged === 0} />

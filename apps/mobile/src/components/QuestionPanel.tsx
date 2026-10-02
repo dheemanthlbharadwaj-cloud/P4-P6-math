@@ -2,12 +2,13 @@
 // calculator button / "No calculator" badge, Submit and optional Skip. Marking is done by the parent via
 // markQuestion() from @p6/shared; this component only collects responses and shows feedback.
 import React, { useEffect, useState } from "react";
-import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View, type KeyboardTypeOptions } from "react-native";
+import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View, type KeyboardTypeOptions } from "react-native";
 import type { Grade, Question } from "@p6/shared";
 import { RichText } from "./RichText";
 import { Button } from "./ui";
 import { CalculatorModal } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
+import { Scratchpad } from "./Scratchpad";
 import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
 import { colors, font, MIN_TOUCH, radius, space } from "../theme/colors";
@@ -37,11 +38,17 @@ function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
   return "numbers-and-punctuation"; // fraction ("a/b", "w a/b") and ratio ("a:b")
 }
 
+let hintDismissed = false; // once per app session
+
 export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false }: Props) {
   const nInputs = q.type === "mcq" ? 1 : Math.max(1, q.parts?.length ?? 1);
   const [responses, setResponses] = useState<string[]>(() => Array(nInputs).fill(""));
   const [calc, setCalc] = useState(false);
   const [figOpen, setFigOpen] = useState(false);
+  const { width, height } = useWindowDimensions();
+  const landscape = width > height;
+  const [hintGone, setHintGone] = useState(hintDismissed);
+  const showHint = !landscape && !hintGone && (Platform.OS !== "web" || width >= 600);
   useEffect(() => setResponses(Array(nInputs).fill("")), [q.id, nInputs]);
 
   const fig = getFigure(grade, q.figure);
@@ -49,9 +56,15 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const ready = responses.every((r) => r.trim().length > 0);
   const setAt = (i: number, v: string) => setResponses((rs) => rs.map((x, j) => (j === i ? v : x)));
 
-  return (
+  const left = (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined}>
-      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: space.l, paddingBottom: space.xl }} keyboardShouldPersistTaps="handled">
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: landscape ? space.m : space.l, paddingBottom: space.xl }} keyboardShouldPersistTaps="handled">
+        {showHint ? (
+          <Pressable onPress={() => { hintDismissed = true; setHintGone(true); }} accessibilityRole="button" accessibilityLabel="Dismiss hint" style={styles.rotateHint}>
+            <Text style={styles.rotateHintText}>Turn your phone sideways for a working space</Text>
+            <Text style={styles.rotateHintX}>✕</Text>
+          </Pressable>
+        ) : null}
         <View style={styles.tools}>
           {q.calculatorAllowed ? (
             <Pressable onPress={() => setCalc(true)} accessibilityRole="button" accessibilityLabel="Open calculator"
@@ -160,9 +173,21 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
       {fig ? <FigureViewer source={fig} visible={figOpen} onClose={() => setFigOpen(false)} /> : null}
     </KeyboardAvoidingView>
   );
+
+  if (!landscape) return left;
+  // Landscape: question on the left (~45%), working space on the right (~55%).
+  return (
+    <View style={{ flex: 1, flexDirection: "row" }}>
+      <View style={{ flex: 45 }}>{left}</View>
+      <View style={{ flex: 55, padding: space.m, paddingLeft: space.s }}><Scratchpad /></View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
+  rotateHint: { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", gap: 8, minHeight: 32, marginBottom: space.s, paddingHorizontal: 10, borderRadius: radius.s, backgroundColor: colors.highlight },
+  rotateHintText: { fontSize: 12, fontWeight: "700", color: colors.inkSoft },
+  rotateHintX: { fontSize: 12, fontWeight: "900", color: colors.inkSoft },
   tools: { flexDirection: "row", gap: 10, marginBottom: space.m },
   toolBtn: { minHeight: 44, paddingHorizontal: 14, borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, justifyContent: "center" },
   toolText: { color: "#fff", fontWeight: "900", fontSize: font.small },

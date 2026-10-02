@@ -8,12 +8,14 @@ import { Body, Button, H1, ProgressBar, Screen } from "../../src/components/ui";
 import { QuestionPanel } from "../../src/components/QuestionPanel";
 import { CatCompanion } from "../../src/components/CatCompanion";
 import { getPool, getTopic } from "../../src/content";
+import { useQuestionOrientation } from "../../src/hooks/useQuestionOrientation";
 import { colors, space } from "../../src/theme/colors";
 
 const SHOWN: { correct: boolean; perPart: boolean[]; showAnswer: true } = { correct: true, perPart: [], showAnswer: true };
 
 export default function Practice() {
   const router = useRouter();
+  useQuestionOrientation();
   const { topicId, grade: g, selfMarkOnly } = useLocalSearchParams<{ topicId: string; grade: string; selfMarkOnly?: string }>();
   const grade = g as Grade;
   const topic = getTopic(grade, topicId);

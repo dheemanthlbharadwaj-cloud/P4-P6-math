@@ -16,6 +16,7 @@ import { useProgress } from "../src/store/progress";
 import { resetAllStores } from "../src/store/reset";
 import { useHydrated } from "../src/hooks/useHydrated";
 import { colors } from "../src/theme/colors";
+import { lockPortrait } from "../src/hooks/useQuestionOrientation";
 
 export default function RootLayout() {
   const hydrated = useHydrated();
@@ -32,6 +33,9 @@ export default function RootLayout() {
   }, [setUser]);
 
   useEffect(() => { void initAds(); }, []);
+
+  // Portrait everywhere; question screens unlock themselves (useQuestionOrientation).
+  useEffect(() => { void lockPortrait(); }, []);
 
   // A different account on this device starts clean; same account keeps local progress.
   useEffect(() => {

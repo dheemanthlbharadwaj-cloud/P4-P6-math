@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { ActivityIndicator, RefreshControl, ScrollView, Text, View } from "react-native";
+import { catPoses } from "../../src/theme/cats";
+import { ActivityIndicator, Image, RefreshControl, ScrollView, Text, View } from "react-native";
 import type { GetLeaderboardResponse, LeaderboardEntry, LeaderboardScope } from "@p6/shared";
 import { Body, Chip, H1, H2, Screen } from "../../src/components/ui";
 import { RunningTrack } from "../../src/components/RunningTrack";
@@ -51,7 +52,12 @@ export default function LeaderboardTab() {
         </View>
 
         {loading && !data ? <ActivityIndicator color={colors.primary} style={{ marginTop: 24 }} /> : null}
-        {error ? <Body style={{ color: colors.bad, fontWeight: "800" }}>{error}</Body> : null}
+        {error ? (
+          <View style={{ alignItems: "center", gap: 8, marginVertical: 12 }}>
+            <Image source={catPoses.scared} style={{ width: 120, height: 110 }} resizeMode="contain" />
+            <Body style={{ color: colors.bad, fontWeight: "800", textAlign: "center" }}>{error}</Body>
+          </View>
+        ) : null}
 
         {scope === "daily" && data && entries.length ? (
           <>

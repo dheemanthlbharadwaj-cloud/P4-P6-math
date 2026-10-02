@@ -1,6 +1,6 @@
 // Level / question screen: 5 questions, progress bar, cat companion, hearts, skip, calculator, picture viewer.
 import React, { useMemo, useRef, useState } from "react";
-import { Alert, Image, Pressable, Text, View } from "react-native";
+import { Alert, Image, Pressable, Text, useWindowDimensions, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Crypto from "expo-crypto";
 import { markQuestion, STARS_PER_LEVEL, MAX_HEARTS, type Grade, type LevelNo, type LevelResult } from "@p6/shared";
@@ -20,10 +20,14 @@ import { useMeters } from "../../../../src/hooks/useNow";
 import { flushOfflineQueue } from "../../../../src/services/sync";
 import { uiAssets } from "../../../../src/theme/assets";
 import type { CatMood } from "../../../../src/theme/cats";
+import { useQuestionOrientation } from "../../../../src/hooks/useQuestionOrientation";
 import { colors, space } from "../../../../src/theme/colors";
 
 export default function LevelScreen() {
   const router = useRouter();
+  useQuestionOrientation();
+  const dim = useWindowDimensions();
+  const landscape = dim.width > dim.height;
   const params = useLocalSearchParams<{ grade: string; nodeId: string; level: string }>();
   const grade = params.grade as Grade;
   const subtopicId = params.nodeId as string;
@@ -141,9 +145,11 @@ export default function LevelScreen() {
         <ProgressBar value={progressFraction(session)} style={{ flex: 1 }} />
         <Stat icon={uiAssets.icons.heart as number} text={meters.subscribed ? "∞" : `${meters.hearts}/${MAX_HEARTS}`} />
       </View>
-      <View style={{ flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: space.l }}>
-        <CatCompanion mood={mood} size={84} message={message} />
-      </View>
+      {landscape ? null : (
+        <View style={{ flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: space.l }}>
+          <CatCompanion mood={mood} size={84} message={message} />
+        </View>
+      )}
 
       {question ? (
         <View style={{ flex: 1 }}>

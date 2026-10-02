@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { OnboardingFrame } from "../../src/components/OnboardingFrame";
+import { catPoses } from "../../src/theme/cats";
 import { getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
 import { colors, MIN_TOUCH } from "../../src/theme/colors";
@@ -13,7 +14,7 @@ export default function TopicsStep() {
   const topics = getTopics(grade);
   const toggle = (id: string) => setSel((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
   return (
-    <OnboardingFrame step={3} title="What have you learnt so far?" subtitle="Tap every topic you have learnt. Their maps start open; the rest stay under clouds until you find the key." onBack={() => router.back()}
+    <OnboardingFrame cat={catPoses.wool} step={3} title="What have you learnt so far?" subtitle="Tap every topic you have learnt. Their maps start open; the rest stay under clouds until you find the key." onBack={() => router.back()}
       onNext={() => { useProfile.getState().set({ topicsLearnt: sel }); router.push("/(onboarding)/cat"); }}
       nextLabel={sel.length ? `Next (${sel.length} chosen)` : "Next (none yet)"}>
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>

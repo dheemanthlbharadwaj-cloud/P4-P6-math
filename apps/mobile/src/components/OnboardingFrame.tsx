@@ -19,9 +19,9 @@ function CatHeads({ step, total }: { step: number; total: number }) {
 }
 
 export function OnboardingFrame({
-  step, total = 5, title, subtitle, children, onNext, nextLabel = "Next", nextDisabled, onBack,
+  step, total = 5, title, subtitle, children, onNext, nextLabel = "Next", nextDisabled, onBack, cat,
 }: {
-  step: number; total?: number; title: string; subtitle?: string; children: React.ReactNode;
+  step: number; total?: number; title: string; subtitle?: string; children: React.ReactNode; cat?: number;
   onNext: () => void; nextLabel?: string; nextDisabled?: boolean; onBack?: () => void;
 }) {
   return (
@@ -31,6 +31,7 @@ export function OnboardingFrame({
           <CatHeads step={step} total={total} />
         </View>
         <ScrollView contentContainerStyle={{ padding: space.l, flexGrow: 1 }} keyboardShouldPersistTaps="handled">
+          {cat ? <Image source={cat} style={{ width: 120, height: 110, alignSelf: "center", marginBottom: 6 }} resizeMode="contain" /> : null}
           {title ? <H1>{title}</H1> : null}
           {subtitle ? <Text style={{ fontSize: 17, color: colors.inkSoft, marginTop: 6, marginBottom: space.l }}>{subtitle}</Text> : <View style={{ height: space.l }} />}
           {children}

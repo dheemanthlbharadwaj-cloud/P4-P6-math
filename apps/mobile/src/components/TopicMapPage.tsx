@@ -10,6 +10,14 @@ import { isLevelComplete } from "../logic/unlock";
 import { colors } from "../theme/colors";
 
 const NODE = 56; // fits the narrowest measured water spot on every map (see scripts/map-paths.py)
+const LABEL_W = 132; // node column width: button, stars and the subtopic name underneath
+// Friends' cats: a different cat for each friend, from all the artist's poses and animations.
+const FRIEND_CATS = [catAnimations.idle, catPoses.box, catPoses.cup, catPoses.wool, catPoses.banana, catPoses.laptop, catPoses.curious, catPoses.chasing, catAnimations.thinking];
+// Clouds covering a locked map: [left, top] as fractions of the page, and width as a fraction of page width.
+const CLOUDS: [number, number, number][] = [
+  [-0.18, 0.0, 0.75], [0.42, 0.04, 0.7], [0.1, 0.16, 0.62], [-0.2, 0.3, 0.7], [0.48, 0.28, 0.72], [0.12, 0.44, 0.68],
+  [-0.15, 0.58, 0.66], [0.5, 0.55, 0.7], [0.15, 0.7, 0.62], [-0.2, 0.83, 0.75], [0.45, 0.82, 0.72],
+];
 
 export interface TopicMapPageProps {
   topic: TopicMap;
@@ -23,7 +31,7 @@ export interface TopicMapPageProps {
 }
 
 /** The student's own cat, in its colour and hat, bobbing gently on the water. */
-function PlayerCat({ x, y }: { x: number; y: number }) {
+function PlayerCat() {
   const colorId = useCosmetics((c) => c.colorId);
   const hatId = useCosmetics((c) => c.hatId);
   const bob = useRef(new Animated.Value(0)).current;
@@ -35,11 +43,30 @@ function PlayerCat({ x, y }: { x: number; y: number }) {
     loop.start();
     return () => loop.stop();
   }, [bob]);
-  const size = 88;
+  const size = 78;
   return (
-    <Animated.View pointerEvents="none" style={{ position: "absolute", left: x - size / 2, top: y - size * 0.92, transform: [{ translateY: bob }] }}>
+    <Animated.View pointerEvents="none" style={{ position: "absolute", left: (LABEL_W - size) / 2, top: -size * 0.66, transform: [{ translateY: bob }] }}>
       <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={size} label="You are here" />
     </Animated.View>
+  );
+}
+
+/** A 3D cloud that drifts slowly side to side. */
+function DriftingCloud({ left, top, width, delay }: { left: number; top: `${number}%`; width: number; delay: number }) {
+  const x = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    const loop = Animated.loop(Animated.sequence([
+      Animated.delay(delay),
+      Animated.timing(x, { toValue: 14, duration: 3200, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
+      Animated.timing(x, { toValue: -14, duration: 3200, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
+      Animated.timing(x, { toValue: 0, duration: 1600, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
+    ]));
+    loop.start();
+    return () => loop.stop();
+  }, [x, delay]);
+  return (
+    <Animated.Image source={uiAssets.overlays.cloud} resizeMode="contain"
+      style={{ position: "absolute", left, top, width, height: width * 0.65, transform: [{ translateX: x }] }} />
   );
 }
 
@@ -106,31 +133,27 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
             const gold = done.length === 3;
             const src = !unlocked ? uiAssets.node.locked : gold ? uiAssets.node.gold : i === currentIdx ? uiAssets.node.current : uiAssets.node.default;
             return (
-              <View key={s.id} style={[styles.nodeWrap, { left: pos[i].x - NODE / 2, top: pos[i].y }]}>
+              <View key={s.id} style={[styles.nodeWrap, { left: Math.min(width - LABEL_W, Math.max(0, pos[i].x - LABEL_W / 2)), top: pos[i].y }]}>
                 <Pressable
                   onPress={() => onNodePress(s.id)}
                   disabled={!unlocked}
                   accessibilityRole="button"
                   accessibilityLabel={`${s.name}. ${done.length} of 3 levels complete`}
                   hitSlop={8}
+                  style={{ alignItems: "center" }}
                 >
                   <Image source={src} style={{ width: NODE, height: NODE }} />
+                  <View style={styles.stars}>
+                    {([1, 2, 3] as const).map((l) => (
+                      <Image key={l} source={uiAssets.icons.star} style={[styles.star, !isLevelComplete(progress, s.id, l) && styles.starEmpty]} />
+                    ))}
+                  </View>
+                  <Text style={styles.nodeName} numberOfLines={2}>{s.name}</Text>
                 </Pressable>
-                <View style={styles.pips}>
-                  {([1, 2, 3] as const).map((l) => (
-                    <View key={l} style={[styles.pip, isLevelComplete(progress, s.id, l) && { backgroundColor: colors.gold }]} />
-                  ))}
-                </View>
+                {unlocked && i === currentIdx ? <PlayerCat /> : null}
               </View>
             );
           })}
-          {unlocked && currentIdx >= 0 ? (() => {
-            // Stand on the route just ahead of the node to play next (toward the following node).
-            const t = ts[currentIdx];
-            const ahead = currentIdx < n - 1 ? (t - ts[currentIdx + 1]) * 0.45 : -(0.94 - t) * 0.45;
-            const spot = route.at(t - Math.max(0.02, ahead));
-            return <PlayerCat x={Math.min(width - 46, Math.max(46, spot.x))} y={spot.y} />;
-          })() : null}
           {unlocked
             ? friends.slice(0, 8).map((f) => {
                 // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
@@ -141,7 +164,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                 const x = Math.min(width - 64, Math.max(0, spot.x - 32));
                 return (
                   <View key={f.uid} style={[styles.friend, { left: x, top: spot.y - 22 }]} pointerEvents="none">
-                    <CatAvatar source={catAnimations.idle} colorId={f.cat.colorId} hatId={f.cat.hatId} size={50} />
+                    <CatAvatar source={FRIEND_CATS[hash(f.uid + "pose") % FRIEND_CATS.length]} colorId={f.cat.colorId} hatId={f.cat.hatId} size={50} />
                     <Text style={styles.friendName} numberOfLines={1}>{f.displayName}</Text>
                   </View>
                 );
@@ -151,12 +174,13 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 
         {!unlocked ? (
           <Pressable style={StyleSheet.absoluteFill} onPress={onLockPress} accessibilityRole="button" accessibilityLabel={`${topic.name} is locked. Tap to find the key.`}>
-            <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.6)" }]} />
-            {[0.05, 0.3, 0.55, 0.8].map((top, i) => (
-              <Image key={i} source={uiAssets.overlays.cloud} resizeMode="contain" style={{ position: "absolute", width: width * 0.8, height: width * 0.4, top: `${top * 100}%`, left: i % 2 ? width * 0.3 : -width * 0.1, opacity: 0.9 }} />
-            ))}
+            <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(235,246,255,0.55)" }]} />
+            {CLOUDS.map(([l, t, w], i) => <DriftingCloud key={i} left={l * width} top={`${t * 100}%`} width={w * width} delay={i * 300} />)}
             <View style={styles.lockWrap}>
-              <Image source={uiAssets.overlays.lock} style={{ width: 96, height: 96 }} />
+              <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+                <Image source={catPoses.scared} style={{ width: 84, height: 78, marginRight: -10 }} resizeMode="contain" />
+                <Image source={uiAssets.overlays.lock} style={{ width: 96, height: 96 }} />
+              </View>
               <View style={styles.keyBadge}><Text style={styles.keyText}>Tap to find the key</Text></View>
             </View>
           </Pressable>
@@ -168,9 +192,11 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 
 const styles = StyleSheet.create({
   dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
-  nodeWrap: { position: "absolute", width: NODE, alignItems: "center" },
-  pips: { flexDirection: "row", gap: 4, marginTop: -2 },
-  pip: { width: 12, height: 12, borderRadius: 6, backgroundColor: "#fff", borderWidth: 2, borderColor: colors.border },
+  nodeWrap: { position: "absolute", width: LABEL_W, alignItems: "center" },
+  stars: { flexDirection: "row", gap: 2, marginTop: -6, backgroundColor: "rgba(255,255,255,0.85)", borderRadius: 10, paddingHorizontal: 4, paddingVertical: 1, borderWidth: 2, borderColor: colors.border },
+  star: { width: 16, height: 16 },
+  starEmpty: { tintColor: "#c3c8d6" },
+  nodeName: { marginTop: 3, fontSize: 11, lineHeight: 13, fontWeight: "900", color: colors.ink, textAlign: "center", backgroundColor: "rgba(255,255,255,0.88)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden", maxWidth: LABEL_W },
   friend: { position: "absolute", width: 64, alignItems: "center" },
   friendName: { fontSize: 11, fontWeight: "900", color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 4, borderRadius: 6, overflow: "hidden", maxWidth: 70 },
   lockWrap: { position: "absolute", bottom: 40, left: 0, right: 0, alignItems: "center" },

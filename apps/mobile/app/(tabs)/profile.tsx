@@ -128,7 +128,7 @@ export default function ProfileTab() {
       <TopBar />
       <ScrollView contentContainerStyle={{ padding: space.l, gap: space.l }} keyboardShouldPersistTaps="handled">
         <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
-          <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={96} />
+          <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={96} style={{ marginTop: hatId ? 30 : 0 }} />
           <View style={{ flex: 1 }}>
             <H1 style={{ fontSize: 24 }}>{profile.fullName || "Student"}</H1>
             <Body style={{ color: colors.inkSoft }}>{profile.catName ? `with ${profile.catName}` : ""}</Body>

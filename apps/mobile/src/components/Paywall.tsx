@@ -1,7 +1,8 @@
 // RevenueCat paywall STUB. Real offerings are loaded via loadPaywall(); falls back to the spec price label.
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { Body, Button, CenterModal, H2 } from "./ui";
+import { catPoses } from "../theme/cats";
 import { loadPaywall, purchaseSubscription, restorePurchases, type PaywallInfo } from "../services/purchases";
 import { usePlayer } from "../store/player";
 import { colors } from "../theme/colors";
@@ -30,6 +31,7 @@ export function Paywall({ visible, onClose }: { visible: boolean; onClose: () =>
 
   return (
     <CenterModal visible={visible} onClose={onClose}>
+      <Image source={catPoses.banana} style={{ width: 110, height: 100, alignSelf: "center" }} resizeMode="contain" />
       <H2 style={{ textAlign: "center" }}>Unlimited Cats</H2>
       <Text style={{ fontSize: 34, fontWeight: "900", color: colors.primary, textAlign: "center", marginVertical: 8 }}>{info.priceLabel}</Text>
       <Body style={{ textAlign: "center" }}>Unlimited hearts and unlimited energy. No ads needed. Cancel any time in your store account settings.</Body>

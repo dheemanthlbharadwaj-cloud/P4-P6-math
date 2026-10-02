@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { OnboardingFrame } from "../../src/components/OnboardingFrame";
+import { catPoses } from "../../src/theme/cats";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
 import { daysToPsle, useProfile } from "../../src/store/profile";
 import { useProgress } from "../../src/store/progress";
@@ -15,7 +16,7 @@ export default function PsleStep() {
   const valid = isValidIso(date);
   const days = valid ? daysToPsle(date) : null;
   return (
-    <OnboardingFrame step={5} title="" onBack={() => router.back()} nextLabel="Let's go!" nextDisabled={!valid}
+    <OnboardingFrame cat={catPoses.chasing} step={5} title="" onBack={() => router.back()} nextLabel="Let's go!" nextDisabled={!valid}
       onNext={() => {
         const p = useProfile.getState();
         p.set({ psleDate: date, onboarded: true });
