@@ -55,7 +55,7 @@ def main():
         f.write(REGISTRY_TS)
     try:
         shutil.rmtree(EXPORT, ignore_errors=True)
-        run(f"npx expo export --platform web --output-dir {EXPORT}", APP)
+        run(f"EXPO_PUBLIC_DEV_TOOLS=1 npx expo export --platform web --output-dir {EXPORT}", APP)  # test build: Dev Tools on
     finally:
         os.remove(WEB_REGISTRY)
 

@@ -26,7 +26,7 @@ export function ResourceModal({
       else usePlayer.getState().addEnergy(ENERGY_PER_AD);
       onRewarded();
     } else {
-      setMsg("No ad available right now. Try again in a moment.");
+      setMsg(r.reason === "dismissed" ? "Watch the whole ad to get the reward." : "No ad available right now. Try again in a moment.");
     }
   };
 

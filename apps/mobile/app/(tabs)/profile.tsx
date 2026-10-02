@@ -64,7 +64,7 @@ export default function ProfileTab() {
     setAdBusy(true);
     const r = await showRewardedAd();
     setAdBusy(false);
-    if (!r.rewarded) return flash("No ad available right now. Try again soon.");
+    if (!r.rewarded) return flash(r.reason === "dismissed" ? "Watch the whole ad to get the reward." : "No ad available right now. Try again soon.");
     if (kind === "hearts") usePlayer.getState().addHearts(HEARTS_PER_AD); else usePlayer.getState().addEnergy(ENERGY_PER_AD);
     flash(kind === "hearts" ? `+${HEARTS_PER_AD} hearts!` : `+${ENERGY_PER_AD} energy!`);
   };

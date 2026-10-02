@@ -20,6 +20,7 @@ import { resetAllStores } from "../src/store/reset";
 import { useHydrated } from "../src/hooks/useHydrated";
 import { colors } from "../src/theme/colors";
 import { lockPortrait } from "../src/hooks/useQuestionOrientation";
+import { DevToolsButton } from "../src/dev/DevToolsPanel";
 
 export default function RootLayout() {
   const hydrated = useHydrated();
@@ -116,6 +117,7 @@ export default function RootLayout() {
         <Stack.Screen name="level/[grade]/[nodeId]/[level]" options={{ gestureEnabled: false }} />
         <Stack.Screen name="minigame/[mode]" options={{ gestureEnabled: false }} />
       </Stack>
+      <DevToolsButton />
     </>
   );
 }
