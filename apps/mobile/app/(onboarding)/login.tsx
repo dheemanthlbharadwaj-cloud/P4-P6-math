@@ -4,8 +4,8 @@ import { ActivityIndicator, Platform, ScrollView, Text, TextInput, View } from "
 import * as Google from "expo-auth-session/providers/google";
 import * as WebBrowser from "expo-web-browser";
 import { Body, Button, H1, Screen } from "../../src/components/ui";
-import { CatAvatar } from "../../src/components/CatAvatar";
-import { catPoses } from "../../src/theme/cats";
+import { Image } from "expo-image";
+import { catAnimations } from "../../src/theme/cats";
 import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInEmail, signInGoogleIdToken, signUpEmail } from "../../src/services/auth";
 import { isFirebaseConfigured } from "../../src/services/config";
 import { useProfile } from "../../src/store/profile";
@@ -17,6 +17,7 @@ const input = { minHeight: 52, borderWidth: 3, borderColor: colors.border, borde
 
 export default function Login() {
   const [mode, setMode] = useState<"login" | "signup">("signup");
+  const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
@@ -49,13 +50,40 @@ export default function Login() {
     void run(() => (mode === "signup" ? signUpEmail(email, password) : signInEmail(email, password)));
   };
 
+  const devGuest = !isFirebaseConfigured ? (
+    <View style={{ marginTop: space.xl }}>
+      <Body style={{ color: colors.inkSoft, fontSize: 14 }}>Developer mode: Firebase keys are not set, so sign-in is unavailable. You can still explore the app offline.</Body>
+      <Button title="Continue as guest (dev only)" variant="gold" small onPress={() => useProfile.getState().set({ uid: "guest" })} style={{ marginTop: 8 }} />
+    </View>
+  ) : null;
+
+  if (!showForm) {
+    return (
+      <Screen edges={["top", "bottom"]}>
+        <ScrollView contentContainerStyle={{ padding: space.l, flexGrow: 1, justifyContent: "center" }}>
+          <View style={{ alignItems: "center" }}>
+            <Image source={catAnimations.thinking} style={{ width: 230, height: 230 }} contentFit="contain" accessibilityLabel="A cat working on a laptop" />
+            <Text style={{ fontSize: 44, lineHeight: 50, fontWeight: "900", color: colors.ink, textAlign: "center", marginTop: 4 }} accessibilityRole="header">
+              {"Catapult\nMath\nAthletes"}
+            </Text>
+            <Body style={{ textAlign: "center", color: colors.inkSoft, marginTop: 8 }}>PSLE maths practice with your cat buddy.</Body>
+          </View>
+          <View style={{ gap: 12, marginTop: space.xl }}>
+            <Button title="Log In" variant="ghost" onPress={() => { setMode("login"); setShowForm(true); }} />
+            <Button title="Sign Up" onPress={() => { setMode("signup"); setShowForm(true); }} />
+          </View>
+          {devGuest}
+        </ScrollView>
+      </Screen>
+    );
+  }
+
   return (
     <Screen edges={["top", "bottom"]}>
       <ScrollView contentContainerStyle={{ padding: space.l }} keyboardShouldPersistTaps="handled">
         <View style={{ alignItems: "center", marginBottom: space.l }}>
-          <CatAvatar source={catPoses.cute} size={150} />
-          <H1 style={{ textAlign: "center", marginTop: 8 }}>P6 Math Cats</H1>
-          <Body style={{ textAlign: "center", color: colors.inkSoft }}>Practise PSLE maths with your cat buddy.</Body>
+          <Image source={catAnimations.thinking} style={{ width: 130, height: 130 }} contentFit="contain" />
+          <H1 style={{ textAlign: "center", marginTop: 4 }}>{mode === "signup" ? "Create your account" : "Welcome back!"}</H1>
         </View>
 
         <TextInput style={input} value={email} onChangeText={setEmail} placeholder="Email" placeholderTextColor={colors.muted} autoCapitalize="none" keyboardType="email-address" autoComplete="email" accessibilityLabel="Email" />
@@ -76,12 +104,8 @@ export default function Login() {
         ) : null}
         {busy ? <ActivityIndicator style={{ marginTop: 16 }} color={colors.primary} /> : null}
 
-        {!isFirebaseConfigured ? (
-          <View style={{ marginTop: space.xl }}>
-            <Body style={{ color: colors.inkSoft, fontSize: 14 }}>Developer mode: Firebase keys are not set, so sign-in is unavailable. You can still explore the app offline.</Body>
-            <Button title="Continue as guest (dev only)" variant="gold" small onPress={() => useProfile.getState().set({ uid: "guest" })} style={{ marginTop: 8 }} />
-          </View>
-        ) : null}
+        <Button title="Back" variant="ghost" small onPress={() => setShowForm(false)} style={{ marginTop: space.l }} />
+        {devGuest}
       </ScrollView>
     </Screen>
   );

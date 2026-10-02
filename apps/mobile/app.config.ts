@@ -10,8 +10,8 @@ const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.p6math.app");
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "P6 Math Cats",
-  slug: "p6-math-cats",
+  name: "Catapult Math Athletes",
+  slug: "catapult-math-athletes",
   scheme: "p6math",
   version: "0.1.0",
   orientation: "default",

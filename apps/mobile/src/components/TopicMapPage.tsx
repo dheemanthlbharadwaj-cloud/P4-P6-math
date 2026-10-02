@@ -1,10 +1,11 @@
 // One topic = one map page. Subtopic nodes wind up a path; friends' mini cats stand next to nodes.
-import React, { useMemo, useRef } from "react";
-import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useMemo, useRef } from "react";
+import { Animated, Easing, Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import type { GradeProgress, PublicProfile, TopicMap } from "@p6/shared";
 import { CatAvatar } from "./CatAvatar";
 import { mapThemeFor, uiAssets } from "../theme/assets";
-import { catPoses } from "../theme/cats";
+import { catAnimations, catPoses } from "../theme/cats";
+import { useCosmetics } from "../store/cosmetics";
 import { isLevelComplete } from "../logic/unlock";
 import { colors } from "../theme/colors";
 
@@ -19,6 +20,27 @@ export interface TopicMapPageProps {
   friends: PublicProfile[];
   onNodePress: (subtopicId: string) => void;
   onLockPress: () => void;
+}
+
+/** The student's own cat, in its colour and hat, bobbing gently on the water. */
+function PlayerCat({ x, y }: { x: number; y: number }) {
+  const colorId = useCosmetics((c) => c.colorId);
+  const hatId = useCosmetics((c) => c.hatId);
+  const bob = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    const loop = Animated.loop(Animated.sequence([
+      Animated.timing(bob, { toValue: -6, duration: 700, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
+      Animated.timing(bob, { toValue: 0, duration: 700, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
+    ]));
+    loop.start();
+    return () => loop.stop();
+  }, [bob]);
+  const size = 88;
+  return (
+    <Animated.View pointerEvents="none" style={{ position: "absolute", left: x - size / 2, top: y - size * 0.92, transform: [{ translateY: bob }] }}>
+      <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={size} label="You are here" />
+    </Animated.View>
+  );
 }
 
 /** Even spots along the route (t = 0 top … 1 bottom), first subtopic at the bottom. */
@@ -102,6 +124,13 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
               </View>
             );
           })}
+          {unlocked && currentIdx >= 0 ? (() => {
+            // Stand on the route just ahead of the node to play next (toward the following node).
+            const t = ts[currentIdx];
+            const ahead = currentIdx < n - 1 ? (t - ts[currentIdx + 1]) * 0.45 : -(0.94 - t) * 0.45;
+            const spot = route.at(t - Math.max(0.02, ahead));
+            return <PlayerCat x={Math.min(width - 46, Math.max(46, spot.x))} y={spot.y} />;
+          })() : null}
           {unlocked
             ? friends.slice(0, 8).map((f) => {
                 // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
@@ -112,7 +141,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                 const x = Math.min(width - 64, Math.max(0, spot.x - 32));
                 return (
                   <View key={f.uid} style={[styles.friend, { left: x, top: spot.y - 22 }]} pointerEvents="none">
-                    <CatAvatar source={catPoses.curious} colorId={f.cat.colorId} hatId={f.cat.hatId} size={44} />
+                    <CatAvatar source={catAnimations.idle} colorId={f.cat.colorId} hatId={f.cat.hatId} size={50} />
                     <Text style={styles.friendName} numberOfLines={1}>{f.displayName}</Text>
                   </View>
                 );

@@ -9,6 +9,7 @@ import { Button } from "./ui";
 import { CalculatorModal } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
 import { getFigure } from "../content";
+import { uiAssets } from "../theme/assets";
 import { colors, font, MIN_TOUCH, radius, space } from "../theme/colors";
 
 export interface Reveal {
@@ -53,11 +54,14 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
       <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: space.l, paddingBottom: space.xl }} keyboardShouldPersistTaps="handled">
         <View style={styles.tools}>
           {q.calculatorAllowed ? (
-            <Pressable style={[styles.toolBtn, { backgroundColor: colors.good }]} onPress={() => setCalc(true)} accessibilityRole="button" accessibilityLabel="Open calculator">
-              <Text style={styles.toolText}>Calculator</Text>
+            <Pressable onPress={() => setCalc(true)} accessibilityRole="button" accessibilityLabel="Open calculator"
+              style={({ pressed }) => [styles.toolBtn, styles.toolRow, { backgroundColor: "#dfe8ff" }, pressed && { transform: [{ scale: 0.96 }] }]}>
+              <Image source={uiAssets.icons.calculator} style={styles.toolIcon} />
+              <Text style={[styles.toolText, { color: colors.ink }]}>Calculator</Text>
             </Pressable>
           ) : (
-            <View style={[styles.toolBtn, { backgroundColor: "#e3e6f0", borderColor: colors.muted }]} accessibilityRole="text" accessibilityLabel="No calculator allowed for this question">
+            <View style={[styles.toolBtn, styles.toolRow, { backgroundColor: "#eef0f5", borderColor: colors.muted }]} accessibilityRole="text" accessibilityLabel="No calculator allowed for this question">
+              <Image source={uiAssets.icons.noCalculator} style={[styles.toolIcon, { opacity: 0.85 }]} />
               <Text style={[styles.toolText, { color: colors.inkSoft }]}>No calculator</Text>
             </View>
           )}
@@ -162,6 +166,8 @@ const styles = StyleSheet.create({
   tools: { flexDirection: "row", gap: 10, marginBottom: space.m },
   toolBtn: { minHeight: 44, paddingHorizontal: 14, borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, justifyContent: "center" },
   toolText: { color: "#fff", fontWeight: "900", fontSize: font.small },
+  toolRow: { flexDirection: "row", alignItems: "center", gap: 6, paddingLeft: 8 },
+  toolIcon: { width: 28, height: 28 },
   figWrap: { marginTop: space.m, backgroundColor: "#fff", borderRadius: radius.m, borderWidth: 2, borderColor: colors.border, padding: 6 },
   fig: { width: "100%", height: 200 },
   option: { flexDirection: "row", alignItems: "center", minHeight: MIN_TOUCH + 8, backgroundColor: colors.card, borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, padding: 10, marginBottom: 10, gap: 12 },

@@ -46,6 +46,8 @@ export const uiAssets = {
     energy: require("../../assets/ui/icon-energy.png") as ImageSourcePropType,
     star: require("../../assets/ui/icon-star.png") as ImageSourcePropType,
     timer: require("../../assets/ui/icon-timer.png") as ImageSourcePropType,
+    calculator: require("../../assets/ui/icon-calculator.png") as ImageSourcePropType,
+    noCalculator: require("../../assets/ui/icon-no-calculator.png") as ImageSourcePropType,
   },
   overlays: {
     lock: require("../../assets/ui/lock.png") as ImageSourcePropType,

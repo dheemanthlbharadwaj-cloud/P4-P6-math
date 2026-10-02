@@ -1,4 +1,4 @@
-# P4–P6 Math Game
+# Catapult Math Athletes
 
 Cat-themed Singapore PSLE math game for iOS and Android. P6 ships first; P4 and P5 are added later as data.
 

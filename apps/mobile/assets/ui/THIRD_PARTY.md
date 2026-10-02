@@ -4,6 +4,7 @@
 |---|---|---|
 | `icon-heart.png`, `icon-energy.png`, `icon-star.png`, `icon-timer.png`, `lock.png`, `cloud.png`, `hat-cap.png`, `hat-crown.png`, `hat-grad.png`, `hat-wizard.png` | [Microsoft Fluent Emoji](https://github.com/microsoft/fluentui-emoji), Flat style, rendered from SVG (wizard hat = the hat from the "Mage" emoji plus the Star emoji) | MIT (below) |
 | `map-bg-*.webp`, `node-*.png`, `level-*.png` | GraphicRiver "Game Level Map for Water Games" (purchased by the product owner) | GraphicRiver licence |
+| `icon-calculator.png`, `icon-no-calculator.png` (red slash added) | [Streamline](https://github.com/webalys-hq/streamline-vectors) "Plump Color" calculator-1 icon, rendered from SVG | CC BY 4.0, attribution: "Calculator icon by Streamline (streamlinehq.com), CC BY 4.0" (include in the app's credits/licences screen) |
 | `tab-*.png` | Supplied by the product owner | — |
 
 ## Fluent Emoji — MIT License

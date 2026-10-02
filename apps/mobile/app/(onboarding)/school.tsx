@@ -9,7 +9,7 @@ export default function SchoolStep() {
   const router = useRouter();
   const [school, setSchool] = useState(useProfile.getState().school);
   return (
-    <OnboardingFrame step={3} title="Which school are you in?" nextDisabled={school.trim().length < 2} onBack={() => router.back()}
+    <OnboardingFrame step={2} title="Which school are you from?" nextDisabled={school.trim().length < 2} onBack={() => router.back()}
       onNext={() => { useProfile.getState().set({ school: school.trim() }); router.push("/(onboarding)/topics"); }}>
       <TextInput
         style={{ minHeight: 56, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 20, backgroundColor: "#fff", color: colors.ink }}

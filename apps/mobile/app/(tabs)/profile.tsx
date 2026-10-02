@@ -65,7 +65,7 @@ export default function ProfileTab() {
   };
 
   const referralLink = `${extra.referralBaseUrl ?? "https://p6math.app/r"}?code=${profile.friendCode}`;
-  const share = () => Share.share({ message: `Join me on P6 Math Cats! Use my code ${profile.friendCode}: ${referralLink}` }).catch(() => undefined);
+  const share = () => Share.share({ message: `Join me on Catapult Math Athletes! Use my code ${profile.friendCode}: ${referralLink}` }).catch(() => undefined);
 
   const addFriend = async () => {
     try {

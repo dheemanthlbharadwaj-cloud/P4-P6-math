@@ -10,20 +10,24 @@ import { colors } from "../../src/theme/colors";
 export default function PsleStep() {
   const router = useRouter();
   const [date, setDate] = useState(useProfile.getState().psleDate);
+  const fullName = useProfile((s) => s.fullName);
+  const first = fullName.trim().split(/\s+/)[0] || "champ";
   const valid = isValidIso(date);
   const days = valid ? daysToPsle(date) : null;
   return (
-    <OnboardingFrame step={6} title="Days to PSLE" subtitle="We guessed the first PSLE paper date. Change it if your school told you otherwise." onBack={() => router.back()} nextLabel="Let's go!" nextDisabled={!valid}
+    <OnboardingFrame step={5} title="" onBack={() => router.back()} nextLabel="Let's go!" nextDisabled={!valid}
       onNext={() => {
         const p = useProfile.getState();
         p.set({ psleDate: date, onboarded: true });
         useProgress.getState().ensureGrade(p.grade, p.topicsLearnt);
         router.replace("/(tabs)/map");
       }}>
-      <View style={{ alignItems: "center", marginBottom: 20 }}>
-        <Text style={{ fontSize: 72, fontWeight: "900", color: colors.primary }}>{days ?? "?"}</Text>
-        <Text style={{ fontSize: 20, fontWeight: "800", color: colors.ink }}>days to go</Text>
+      <View style={{ alignItems: "center", marginTop: 10, marginBottom: 26 }}>
+        <Text style={{ fontSize: 96, lineHeight: 104, fontWeight: "900", color: colors.primary, fontVariant: ["tabular-nums"] }} accessibilityLabel={`${days ?? "unknown"} days to PSLE`}>{days ?? "?"}</Text>
+        <Text style={{ fontSize: 30, fontWeight: "900", color: colors.ink }}>Days to PSLE!</Text>
+        <Text style={{ fontSize: 19, fontWeight: "700", color: colors.inkSoft, marginTop: 10, textAlign: "center" }}>Let's make every day count, {first}!</Text>
       </View>
+      <Text style={{ fontSize: 14, fontWeight: "800", color: colors.inkSoft, marginBottom: 6 }}>First PSLE paper (change it if your school told you a different date)</Text>
       <DateField value={date} onChange={setDate} />
     </OnboardingFrame>
   );

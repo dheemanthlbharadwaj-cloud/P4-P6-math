@@ -71,12 +71,12 @@ export default function StoreTab() {
         <Card style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "flex-end" }}>
           <View style={{ alignItems: "center" }}>
             <Text style={{ fontWeight: "900", color: colors.inkSoft, marginBottom: 4 }}>Now</Text>
-            <CatAvatar source={catPoses.curious} colorId={colorId} hatId={hatId} size={130} label="Current look" />
+            <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={130} label="Current look" />
           </View>
           <Text style={{ fontSize: 28, fontWeight: "900", color: colors.inkSoft, marginBottom: 50 }}>›</Text>
           <View style={{ alignItems: "center" }}>
             <Text style={{ fontWeight: "900", color: colors.primary, marginBottom: 4 }}>{selected ? "Preview" : "Pick an item"}</Text>
-            <CatAvatar source={catPoses.curious} colorId={preview.colorId} hatId={preview.hatId} size={130} label="Preview look" />
+            <CatAvatar source={catPoses.cute} colorId={preview.colorId} hatId={preview.hatId} size={130} label="Preview look" />
           </View>
         </Card>
 

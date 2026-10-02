@@ -112,7 +112,7 @@ def main():
                       "packMB": round(total / 1e6, 1), "entry": entry}))
 
 
-PAGE = """<title>P6 Math Cats</title>
+PAGE = """<title>Catapult Math Athletes</title>
 <style>
   :root { --bg: #fff7e6; --ink: #2b2d42; --soft: #5b5e78; --accent: #2a9d8f; --track: #e3e1f0; color-scheme: light; }
   html, body { height: 100%; }
@@ -129,7 +129,7 @@ PAGE = """<title>P6 Math Cats</title>
 </style>
 <div id="root"></div>
 <div id="boot" role="status" aria-live="polite">
-  <h1>P6 Math Cats</h1>
+  <h1>Catapult Math Athletes</h1>
   <p id="bootmsg">Loading the question bank and figures…</p>
   <div id="bar"><i id="barfill"></i></div>
 </div>
