@@ -10,8 +10,11 @@ import { refreshFriends } from "../services/bootstrap";
 import { firebaseFirestore } from "../services/firebase";
 import { isFirebaseConfigured } from "../services/config";
 import { colors } from "../theme/colors";
+import { SAMPLE_FRIEND_REQUEST, SAMPLE_REQUEST_PROFILE, SHOW_SAMPLES } from "../dev/samples";
+import { useFriends } from "../store/friends";
 
 interface Incoming { id: string; name: string }
+let sampleAnswered = false; // the sample request was declined this session
 
 export function FriendRequests({ onMessage }: { onMessage: (m: string) => void }) {
   const [items, setItems] = useState<Incoming[]>([]);
@@ -19,7 +22,12 @@ export function FriendRequests({ onMessage }: { onMessage: (m: string) => void }
 
   const load = useCallback(async () => {
     const uid = isFirebaseConfigured ? currentUser()?.uid : null;
-    if (!uid) return;
+    if (!uid) {
+      // Offline / no backend yet: one sample request to try Accept and Decline.
+      const answered = useFriends.getState().friends.some((f) => f.uid === SAMPLE_REQUEST_PROFILE.uid) || sampleAnswered;
+      if (SHOW_SAMPLES && !answered) setItems([SAMPLE_FRIEND_REQUEST]);
+      return;
+    }
     try {
       const db = firebaseFirestore();
       const snap = await getDocs(query(collection(db, "friendRequests"), where("to", "==", uid), where("status", "==", "pending")));
@@ -33,6 +41,14 @@ export function FriendRequests({ onMessage }: { onMessage: (m: string) => void }
   useEffect(() => { void load(); }, [load]);
 
   const respond = async (id: string, accept: boolean) => {
+    if (id === SAMPLE_FRIEND_REQUEST.id) {
+      // Sample request: handled on this device only.
+      if (accept) useFriends.getState().set([...useFriends.getState().friends, SAMPLE_REQUEST_PROFILE]);
+      else sampleAnswered = true;
+      setItems((xs) => xs.filter((x) => x.id !== id));
+      onMessage(accept ? "You are friends now! (sample)" : "Request declined. (sample)");
+      return;
+    }
     setBusy(id);
     try {
       await api.respondFriendRequest({ requestId: id, accept });

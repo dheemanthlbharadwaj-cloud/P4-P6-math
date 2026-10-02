@@ -121,7 +121,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   }
 
   return (
-    <View style={pageHeight ? { width, height: pageHeight } : { width, flex: 1 }}>
+    <View style={[pageHeight ? { width, height: pageHeight } : { width, flex: 1 }, { overflow: "hidden" }]}>
       <View style={{ flex: 1, backgroundColor: "#5fd3e0" }}>
         <ScrollView ref={ref} contentContainerStyle={{ height }} onContentSizeChange={() => ref.current?.scrollToEnd({ animated: false })} showsVerticalScrollIndicator={false}>
           <Image source={theme.bg} style={{ position: "absolute", top: 0, left: 0, width, height }} resizeMode="cover" accessibilityIgnoresInvertColors />

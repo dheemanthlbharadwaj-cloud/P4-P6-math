@@ -3,7 +3,7 @@ import { Alert, Linking, ScrollView, Share, Text, TextInput, View } from "react-
 import * as Clipboard from "expo-clipboard";
 import { useRouter } from "expo-router";
 import { ENERGY_PER_AD, HEARTS_PER_AD, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL } from "@p6/shared";
-import { Body, Button, Card, H1, H2, Screen } from "../../src/components/ui";
+import { Body, Button, Card, CenterModal, H1, H2, Screen } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
 import { ParentalGate } from "../../src/components/ParentalGate";
@@ -19,6 +19,7 @@ import { extra } from "../../src/services/config";
 import { catPoses } from "../../src/theme/cats";
 import { daysToPsle, useProfile } from "../../src/store/profile";
 import { useCosmetics } from "../../src/store/cosmetics";
+import { useFriends } from "../../src/store/friends";
 import { usePlayer } from "../../src/store/player";
 import { resetAllStores } from "../../src/store/reset";
 import { colors, radius, space } from "../../src/theme/colors";
@@ -100,26 +101,28 @@ export default function ProfileTab() {
     else { try { await signOut(); } catch { /* ignore */ } }
   };
 
-  const confirmDelete = () =>
-    Alert.alert("Delete account?", "This permanently deletes your account, stars, purchases and progress. It cannot be undone.", [
-      { text: "Cancel", style: "cancel" },
-      {
-        text: "Delete everything", style: "destructive",
-        onPress: async () => {
-          try {
-            stopCloudSync(); // no more pushes for an account that is about to disappear
-            if (profile.uid !== "guest") await api.deleteAccount();
-          } catch (e) {
-            startCloudSync();
-            Alert.alert("Could not delete", e instanceof ApiError && e.transient ? "You need an internet connection to delete your account." : "Please try again later.");
-            return;
-          }
-          try { await signOut(); } catch { /* auth user already removed server-side */ }
-          resetAllStores();
-          router.replace("/(onboarding)/login");
-        },
-      },
-    ]);
+  // Delete: type DELETE to confirm (no system dialog, so it works everywhere including the web preview).
+  const friendList = useFriends((f) => f.friends);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [deleteText, setDeleteText] = useState("");
+  const [deleteMsg, setDeleteMsg] = useState<string | null>(null);
+  const [deleting, setDeleting] = useState(false);
+  const deleteAccount = async () => {
+    setDeleting(true); setDeleteMsg(null);
+    try {
+      stopCloudSync(); // no more pushes for an account that is about to disappear
+      if (profile.uid && profile.uid !== "guest") await api.deleteAccount();
+    } catch (e) {
+      startCloudSync();
+      setDeleting(false);
+      setDeleteMsg(e instanceof ApiError && e.transient ? "You need an internet connection to delete your account." : "Could not delete the account. Please try again later.");
+      return;
+    }
+    try { await signOut(); } catch { /* auth user already removed server-side, or a guest */ }
+    resetAllStores();
+    setDeleting(false); setDeleteOpen(false); setDeleteText("");
+    router.replace("/(onboarding)/login");
+  };
 
   const openUrl = (url: string) => gated(() => { void Linking.openURL(url); });
 
@@ -160,6 +163,25 @@ export default function ProfileTab() {
         <FriendRequests onMessage={flash} />
 
         <Card>
+          <H2>My friends</H2>
+          {friendList.length ? (
+            <View style={{ gap: 10, marginTop: 8 }}>
+              {friendList.map((f) => (
+                <View key={f.uid} style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+                  <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={44} style={{ marginTop: f.cat.hatId ? 14 : 0 }} />
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontWeight: "900", color: colors.ink, fontSize: 16 }}>{f.displayName}</Text>
+                    <Text style={{ color: colors.inkSoft }}>{f.school ?? ""}{f.school ? " · " : ""}cat: {f.cat.name}</Text>
+                  </View>
+                </View>
+              ))}
+            </View>
+          ) : (
+            <Body style={{ color: colors.inkSoft, marginTop: 6 }}>No friends yet. Share your friend code to add some.</Body>
+          )}
+        </Card>
+
+        <Card>
           <H2>Invite friends, get {REFERRAL_STARS} stars</H2>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Share your link. When a friend joins with it you earn {REFERRAL_STARS} stars.</Body>
           <Button title="Share my invite link" variant="gold" onPress={share} disabled={!profile.friendCode} />
@@ -188,11 +210,25 @@ export default function ProfileTab() {
             <Button title="Privacy policy" variant="ghost" small onPress={() => openUrl(PRIVACY_URL)} />
             <Button title="Terms of use" variant="ghost" small onPress={() => openUrl(TERMS_URL)} />
             <Button title="Sign out" variant="ghost" onPress={logout} />
-            <Button title="Delete account and data" variant="bad" onPress={() => gated(confirmDelete)} />
+            <Button title="Delete account and data" variant="bad" onPress={() => { setDeleteText(""); setDeleteMsg(null); setDeleteOpen(true); }} />
           </View>
         </Card>
       </ScrollView>
 
+      <CenterModal visible={deleteOpen} onClose={() => !deleting && setDeleteOpen(false)}>
+        <H2 style={{ textAlign: "center" }}>Delete account?</H2>
+        <Body style={{ textAlign: "center", color: colors.inkSoft, marginTop: 6 }}>
+          This permanently deletes your account, stars, purchases and progress on this device. Type DELETE to confirm.
+        </Body>
+        <TextInput
+          value={deleteText} onChangeText={setDeleteText} placeholder="DELETE" placeholderTextColor={colors.muted}
+          autoCapitalize="characters" autoCorrect={false} accessibilityLabel="Type DELETE to confirm"
+          style={{ minHeight: 52, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 20, fontWeight: "900", textAlign: "center", backgroundColor: "#fff", color: colors.ink, marginTop: 14 }}
+        />
+        {deleteMsg ? <Text style={{ color: colors.bad, fontWeight: "800", marginTop: 8, textAlign: "center" }}>{deleteMsg}</Text> : null}
+        <Button title={deleting ? "Deleting..." : "Delete everything"} variant="bad" disabled={deleting || deleteText.trim().toUpperCase() !== "DELETE"} onPress={() => void deleteAccount()} style={{ marginTop: 14 }} />
+        <Button title="Cancel" variant="ghost" disabled={deleting} onPress={() => setDeleteOpen(false)} style={{ marginTop: 10 }} />
+      </CenterModal>
       <ParentalGate visible={gateOpen} onCancel={() => setGateOpen(false)} onPass={() => { setGateOpen(false); afterGate.current(); }} />
       <Paywall visible={paywall} onClose={() => setPaywall(false)} />
     </Screen>

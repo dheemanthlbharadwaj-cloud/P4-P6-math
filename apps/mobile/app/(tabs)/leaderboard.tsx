@@ -1,4 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { SHOW_SAMPLES, sampleLeaderboard } from "../../src/dev/samples";
+import { useProfile } from "../../src/store/profile";
+import { useCosmetics } from "../../src/store/cosmetics";
+import { useProgress } from "../../src/store/progress";
+import { useFriends } from "../../src/store/friends";
 import { catPoses } from "../../src/theme/cats";
 import { ActivityIndicator, Image, RefreshControl, ScrollView, Text, View } from "react-native";
 import type { GetLeaderboardResponse, LeaderboardEntry, LeaderboardScope } from "@p6/shared";
@@ -29,11 +34,25 @@ export default function LeaderboardTab() {
   const [data, setData] = useState<GetLeaderboardResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sample, setSample] = useState(false);
 
   const load = useCallback(async () => {
-    setLoading(true); setError(null);
+    setLoading(true); setError(null); setSample(false);
     try { setData(await api.getLeaderboard({ scope })); }
-    catch { setData(null); setError("Can't load the leaderboard. Check your internet connection."); }
+    catch {
+      if (SHOW_SAMPLES) {
+        // Backend not reachable yet: show the student with the sample friends so the screen can be tried.
+        const prof = useProfile.getState();
+        const look = useCosmetics.getState();
+        setData(sampleLeaderboard(scope, {
+          uid: prof.uid ?? "me", displayName: prof.fullName || "You", cat: { colorId: look.colorId, hatId: look.hatId },
+          stars: prof.monthlyStars, questionsDone: Object.values(useProgress.getState().grades.P6?.levels ?? {}).filter((l) => l.completed).length * 5,
+        }, useFriends.getState().friends));
+        setSample(true);
+      } else {
+        setData(null); setError("Can't load the leaderboard. Check your internet connection.");
+      }
+    }
     finally { setLoading(false); }
   }, [scope]);
   useEffect(() => { void load(); }, [load]);
@@ -51,6 +70,11 @@ export default function LeaderboardTab() {
           <Chip label="Monthly (global)" selected={scope === "monthly"} onPress={() => setScope("monthly")} />
         </View>
 
+        {sample ? (
+          <View style={{ backgroundColor: colors.highlight, borderWidth: 2, borderColor: colors.border, borderRadius: 12, padding: 10 }}>
+            <Text style={{ fontWeight: "800", color: colors.ink }}>Sample leaderboard: these players are examples until the game is online.</Text>
+          </View>
+        ) : null}
         {loading && !data ? <ActivityIndicator color={colors.primary} style={{ marginTop: 24 }} /> : null}
         {error ? (
           <View style={{ alignItems: "center", gap: 8, marginVertical: 12 }}>
