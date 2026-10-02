@@ -8,7 +8,7 @@ Defaults are already in code (`packages/shared/src/gameRules.ts`) so building is
 | 2 | Max energy, cost per level, recovery rate, energy per ad? | 10 energy, 1 per level, +1 every 20 min, +3 per ad |
 | 3 | When is a level "complete": all 5 correct, or all 5 attempted? | Student must get all 5 right; wrong ones come back at the end of the level |
 | 4 | Does Skip cost anything, and does a skipped question count as wrong? | Skip is free, the question goes to the end of the queue, and it is not bookmarked |
-| 5 | Timed LV1 mini game: total time or per question? Does it give stars? | 60 s per question, no stars (practice) |
+| 5 | Timed LV1 mini game: total time or per question? Does it give stars? | Answered by the owner: 5 minutes total with 5 hearts ("5-Minute Challenge"); no stars (practice) |
 | 6 | Store prices and catalogue of hats/colours | 4 hats, 5 colours, placeholder prices |
 | 7 | "Desktop pet": the companion cat on the question screen, or a home-screen widget? | In-app companion cat that reacts to answers |
 | 8 | Do Mini Games / Classroom use subtopic pools or the whole grade? | Student picks a topic, or all topics |

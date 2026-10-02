@@ -19,7 +19,9 @@ export const SUBSCRIPTION_PRICE_LABEL = "$15/month"; // from mindmap; real price
 export const SUBSCRIPTION_ENTITLEMENT = "unlimited";
 
 export const LEVEL_PASS_MIN_CORRECT = 5; // ASSUMPTION: level completes when all 5 are answered correctly (retry wrong ones)
-export const TIMED_GAME_SECONDS_PER_QUESTION = 60; // ASSUMPTION for the timed LV1 mini game
+// Mini game "5-Minute Challenge": answer as many LV1 questions as you can in 5 minutes, with 5 hearts.
+export const CHALLENGE_SECONDS = 300;
+export const CHALLENGE_HEARTS = 5;
 
 export const TIMEZONE = "Asia/Singapore";
 

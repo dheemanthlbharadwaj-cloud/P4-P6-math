@@ -71,7 +71,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
         <View style={[styles.tools, { flex: 1, flexWrap: "wrap", alignItems: "flex-start", alignContent: "flex-start" }]}>
           {q.calculatorAllowed ? (
             <Pressable onPress={() => setCalc(true)} accessibilityRole="button" accessibilityLabel="Open calculator"
-              style={({ pressed }) => [styles.toolBtn, styles.toolRow, { backgroundColor: "#dfe8ff" }, pressed && { transform: [{ scale: 0.96 }] }]}>
+              style={({ pressed }) => [styles.toolBtn, styles.toolRow, { backgroundColor: "#d9f2f8" }, pressed && { transform: [{ scale: 0.96 }] }]}>
               <Image source={uiAssets.icons.calculator} style={styles.toolIcon} />
               <Text style={[styles.toolText, { color: colors.ink }]}>Calculator</Text>
             </Pressable>
@@ -190,7 +190,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
 }
 
 // Candy colours for the option number badges (1–4), like game answer buttons.
-const OPTION_COLORS = ["#4361ee", "#f3722c", "#2a9d8f", "#b5179e"];
+const OPTION_COLORS = ["#12aecf", "#ff8f1f", "#3fae49", "#ef5b9c"];
 
 const styles = StyleSheet.create({
   rotateHint: { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", gap: 8, minHeight: 32, marginBottom: space.s, paddingHorizontal: 10, borderRadius: radius.s, backgroundColor: colors.highlight },
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
   figWrap: { marginTop: space.m, backgroundColor: "#fff", borderRadius: radius.m, borderWidth: 2, borderColor: colors.border, padding: 6 },
   fig: { width: "100%", height: 200 },
   option: { flexDirection: "row", alignItems: "center", minHeight: MIN_TOUCH + 8, backgroundColor: colors.card, borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, padding: 10, marginBottom: 10, gap: 12 },
-  optionPicked: { borderColor: colors.primary, backgroundColor: "#eaf0ff" },
+  optionPicked: { borderColor: colors.primary, backgroundColor: "#e2f6fb" },
   optionRight: { borderColor: colors.good, backgroundColor: colors.goodBg },
   optionWrong: { borderColor: colors.bad, backgroundColor: colors.badBg },
   optKey: { width: 38, height: 38, borderRadius: 12, borderWidth: 2, borderColor: colors.border, borderBottomWidth: 4, alignItems: "center", justifyContent: "center" },

@@ -17,8 +17,9 @@ export function CatCompanion({ mood, size = 96, message, floating = false }: { m
     return (
       <View style={{ width: size, height: slotH, alignItems: "flex-end", justifyContent: "flex-end" }} pointerEvents="none">
         {message ? (
-          <View style={[styles.bubble, { position: "absolute", right: size - 8, top: size * 0.3, marginRight: 0, marginBottom: 0, maxWidth: 150 }]}>
-            <Text style={styles.bubbleText} numberOfLines={2}>{message}</Text>
+          // Fixed width so the text wraps inside it instead of shrinking to the slot (it was cut to "Yes! Gre…").
+          <View style={[styles.bubble, { position: "absolute", right: w - 6, top: slotH * 0.15, width: 138, marginRight: 0, marginBottom: 0, maxWidth: undefined }]}>
+            <Text style={styles.bubbleText}>{message}</Text>
           </View>
         ) : null}
         <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />

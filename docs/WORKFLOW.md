@@ -47,8 +47,8 @@ board says nothing; each one is a constant in `packages/shared/src/gameRules.ts`
 ## 5. Bottom toolbar (5 buttons, art supplied by the product owner)
 1. **Game / Map icon** → back to the game map.
 2. **Book icon → Classroom / Mini Games**
-   - Mini Game A: **All LV1 questions, timed.**
-   - Mini Game B: **Previously Wrong questions, untimed.** Getting one right lets the student un-flag it.
+   - Mini Game A: **5-Minute Challenge**: as many LV1 questions as possible in 5 minutes, with 5 hearts (round-only).
+   - Mini Game B: **Unlimited Mistakes**: only previously-wrong questions, no timer, no hearts. Getting one right un-flags it (plus "test all wrong ever").
      A second button tests **all wrong questions ever done**.
 3. **Cat icon → Cat Store**
    - Visible: star balance, the cat in its outfit, and the store.

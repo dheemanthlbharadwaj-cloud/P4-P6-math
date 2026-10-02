@@ -93,7 +93,7 @@ export default function StoreTab() {
             return (
               <Pressable key={it.id} onPress={() => { setSelected(it); setMsg(null); }} accessibilityRole="button" accessibilityState={{ selected: on }}
                 accessibilityLabel={`${it.name}, ${own ? (eq ? "equipped" : "owned") : `${it.price} stars`}`}
-                style={{ width: "30%", flexGrow: 1, minWidth: 96, minHeight: 130, borderRadius: radius.m, borderWidth: 3, borderColor: on ? colors.primary : colors.border, backgroundColor: on ? "#eaf0ff" : colors.card, alignItems: "center", justifyContent: "center", padding: 8 }}>
+                style={{ width: "30%", flexGrow: 1, minWidth: 96, minHeight: 130, borderRadius: radius.m, borderWidth: 3, borderColor: on ? colors.primary : colors.border, backgroundColor: on ? "#e2f6fb" : colors.card, alignItems: "center", justifyContent: "center", padding: 8 }}>
                 {/* Each item shown on the student's own cat: colours on the bare cat, hats on the cat in its current colour. */}
                 {it.kind === "color" ? (
                   <CatAvatar source={catPoses.cute} colorId={it.id} size={64} />

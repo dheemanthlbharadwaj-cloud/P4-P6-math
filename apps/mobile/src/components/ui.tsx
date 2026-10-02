@@ -6,7 +6,7 @@ import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 type Variant = "primary" | "good" | "bad" | "ghost" | "gold";
 const bg: Record<Variant, string> = { primary: colors.primary, good: colors.good, bad: colors.bad, ghost: colors.card, gold: colors.accent };
 // Darker lip under each candy button (its "depth").
-const lip: Record<Variant, string> = { primary: "#1f2f8a", good: "#16645b", bad: "#9b1b26", ghost: colors.border, gold: "#b07a00" };
+const lip: Record<Variant, string> = { primary: "#08718c", good: "#2a7a31", bad: "#a8381a", ghost: colors.border, gold: "#c07f00" };
 
 export function Button({
   title, onPress, variant = "primary", disabled, small, style, textStyle, testID,
@@ -109,8 +109,8 @@ const styles = StyleSheet.create({
   btnTextShadow: { textShadowColor: "rgba(0,0,0,0.28)", textShadowOffset: { width: 0, height: 1.5 }, textShadowRadius: 0 },
   gloss: { position: "absolute", top: 3, left: 8, right: 8, height: "42%", borderRadius: 10, backgroundColor: "rgba(255,255,255,0.24)" },
   card: { backgroundColor: colors.card, borderRadius: radius.l, padding: space.l, borderWidth: 3, borderColor: colors.border },
-  track: { height: 18, borderRadius: 9, backgroundColor: "#e3e6f0", borderWidth: 2, borderColor: colors.border, overflow: "hidden" },
-  fill: { height: "100%", backgroundColor: "#3ccf6e" },
+  track: { height: 18, borderRadius: 9, backgroundColor: "#f1e6dc", borderWidth: 2, borderColor: colors.border, overflow: "hidden" },
+  fill: { height: "100%", backgroundColor: colors.good },
   chip: { minHeight: 44, paddingHorizontal: space.l, borderRadius: 22, justifyContent: "center", backgroundColor: colors.card, borderWidth: 2, borderColor: colors.border, marginRight: space.s, marginBottom: space.s },
   chipText: { fontSize: font.small + 1, fontFamily: fonts.displayMedium, color: colors.ink },
   scrim: { flex: 1, backgroundColor: "rgba(20,20,40,0.55)" },

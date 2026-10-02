@@ -1,4 +1,4 @@
-// Simple multiplication challenge shown before purchases / subscriptions / external links.
+// Grown-ups-only check, used before deleting the account (subscriptions only show a "tell a grown-up" notice).
 import React, { useMemo, useState } from "react";
 import { Text, TextInput, View } from "react-native";
 import { Body, Button, CenterModal, H2 } from "./ui";

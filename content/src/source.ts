@@ -172,8 +172,18 @@ export function normalizeDocs(docs: RawDoc[], opts: { subtopicField?: string | n
 
 // ---------- conversion ----------
 /** Drop the paper's own numbering ("6. What is…", "Q12) Find…"); "6.5 kg" is untouched (no space after the dot). */
-export function stripQuestionNumber(text: string): string {
-  return text.replace(/^\s*(?:Q(?:uestion)?\s*)?\d{1,2}\s*[.)]\s+/, "");
+export function stripQuestionNumber(text: string, id?: string): string {
+  const out = text.replace(/^\s*(?:Q(?:uestion)?\s*)?\d{1,2}\s*[.)]\s+/, "");
+  // OCR'd stems often start with the bare question number ("8 The figure…"). Only strip it when it matches the
+  // question's own number (…_Q08), so a stem that really starts with a number ("8 boys…") is left alone.
+  const qno = id ? /_Q0*(\d{1,2})$/.exec(id)?.[1] : undefined;
+  if (qno && out === text) return text.replace(new RegExp(`^\\s*${qno}\\s+(?=[A-Z(])`), "");
+  return out;
+}
+
+/** OCR reads a squared unit at the end of an MCQ option as "?" ("38.5 cm?"); an option never ends in a question mark. */
+export function fixOptionUnits(text: string): string {
+  return text.replace(/\b(cm|m|km|mm)\?\s*$/, "$1²");
 }
 
 const PAPERS: Paper[] = ["Paper 1 Booklet A", "Paper 1 Booklet B", "Paper 2"];
@@ -221,7 +231,7 @@ export function convertQuestion(n: NormDoc, topicCanonical: string, ctx: Convert
     type,
     paper,
     calculatorAllowed: typeof d.calculator_allowed === "boolean" ? d.calculator_allowed : paper === "Paper 2",
-    stem: tokenize(stripQuestionNumber(String(d.question ?? "")), ctx.stats),
+    stem: tokenize(stripQuestionNumber(String(d.question ?? ""), n.id), ctx.stats),
     autoMarkable: true,
   };
   if (ctx.hasFigure) q.figure = n.id;
@@ -230,7 +240,7 @@ export function convertQuestion(n: NormDoc, topicCanonical: string, ctx: Convert
     q.options = [];
     for (const k of OPT_KEYS) {
       const t = d.options?.[k];
-      if (t != null && String(t).trim() !== "") q.options.push({ key: k, text: tokenize(String(t), ctx.stats) });
+      if (t != null && String(t).trim() !== "") q.options.push({ key: k, text: tokenize(fixOptionUnits(String(t)), ctx.stats) });
     }
     const key = optionKey(d.answer_key);
     if (!key || !q.options.some((o) => o.key === key)) reasons.push("mcq: missing/invalid answer_key");

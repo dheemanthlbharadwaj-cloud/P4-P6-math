@@ -114,7 +114,7 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
 - State: zustand + persisted storage (MMKV) for hearts/energy/progress/wrong list/offline queue.
 - Content access only through `src/content/` (loads `assets/content/<grade>/*` via the generated `assets/content/index.ts`
   `contentFor(grade)`); screens never import JSON directly. `LevelResult.contentVersion` = `QuestionBundle.version`.
-- Classroom: timed LV1 game, previously-wrong review, and "Practice (show answer)" (`app/practice/[topicId]`): browse a
+- Classroom: 5-Minute Challenge, Unlimited Mistakes (previously-wrong questions), and "Practice (show answer)" (`app/practice/[topicId]`): browse a
   topic's pool (the not-auto-markable questions first), reveal the answer, self-mark; no hearts/stars/bookmarks.
 - Asset registry `src/theme/assets.ts`: every map/toolbar/button image the owner will supply is referenced only here.
 - Companion cat (`CatCompanion`) uses `assets/cats/animations/*.webp`: idle = groom-idle, correct = cute-eyes pose,
@@ -126,4 +126,4 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
   personalized ads. Google Play Families policy: only Families-certified ad SDKs. Apple: no ATT prompt (no tracking).
 - Leaderboards show display names only. No free-text chat. Friends only by friend code / referral link.
 - In-app account deletion (required by both stores).
-- Parental gate before purchases/subscription and outbound links.
+- Grown-ups check (parental gate) only before deleting the account; subscribing shows a "tell a grown-up" notice.

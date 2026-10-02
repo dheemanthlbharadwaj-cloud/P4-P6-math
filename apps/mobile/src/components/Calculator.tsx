@@ -22,7 +22,7 @@ const KEY_COLORS: Record<Kind, { face: string; edge: string; text: string }> = {
   op: { face: "#ffc94d", edge: "#e09b00", text: colors.ink },
   eq: { face: "#3ccf91", edge: "#1f9466", text: "#ffffff" },
   clear: { face: "#ff8a80", edge: "#d6544a", text: "#ffffff" },
-  fn: { face: "#cfe3ff", edge: "#8fb2e6", text: colors.ink },
+  fn: { face: "#c6ecf5", edge: "#7fd0e3", text: colors.ink },
 };
 
 export function CalculatorModal({ visible, onClose }: { visible: boolean; onClose: () => void }) {
@@ -95,7 +95,7 @@ export function CalculatorModal({ visible, onClose }: { visible: boolean; onClos
 const styles = StyleSheet.create({
   backdrop: { flex: 1, backgroundColor: "rgba(20,22,40,0.45)" },
   sheet: {
-    backgroundColor: "#5b6ef5", borderTopLeftRadius: 28, borderTopRightRadius: 28, borderWidth: 3, borderBottomWidth: 0,
+    backgroundColor: "#12aecf", borderTopLeftRadius: 28, borderTopRightRadius: 28, borderWidth: 3, borderBottomWidth: 0,
     borderColor: colors.border, paddingHorizontal: 16, paddingTop: 14,
   },
   peekCat: { position: "absolute", top: -58, right: 26, width: 78, height: 72 },

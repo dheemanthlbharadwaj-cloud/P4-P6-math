@@ -65,6 +65,11 @@ describe("stripQuestionNumber", () => {
   it("removes the paper's question number", async () => {
     const { stripQuestionNumber } = await import("../src/source");
     expect(stripQuestionNumber("6. What is the reading?")).toBe("What is the reading?");
+    expect(stripQuestionNumber("8 The figure is made up of", "2021_Henry_Park_P1A_Q08")).toBe("The figure is made up of");
+    expect(stripQuestionNumber("8 boys share 3 cakes", "2021_X_P1A_Q05")).toBe("8 boys share 3 cakes");
+    const { fixOptionUnits } = await import("../src/source");
+    expect(fixOptionUnits("38.5 cm?")).toBe("38.5 cm²");
+    expect(fixOptionUnits("40 min")).toBe("40 min");
     expect(stripQuestionNumber("Q12) Find x.")).toBe("Find x.");
     expect(stripQuestionNumber("44. By rounding")).toBe("By rounding");
   });

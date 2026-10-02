@@ -105,19 +105,6 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   const pos = ts.map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
   const currentIdx = subs.findIndex((s) => !([1, 2, 3] as const).every((l) => isLevelComplete(progress, s.id, l)));
 
-  // Trail dots follow the water route between consecutive nodes, skipping stretches hidden behind objects.
-  const dots: { x: number; y: number; k: string }[] = [];
-  for (let i = 0; i < n - 1; i++) {
-    const a = ts[i], b = ts[i + 1];
-    const steps = Math.max(2, Math.round((Math.abs(b - a) * route.length) / 26));
-    for (let k = 1; k < steps; k++) {
-      const p = route.at(a + ((b - a) * k) / steps);
-      if (p.open && Math.hypot(p.x - pos[i].x, p.y - pos[i].y - NODE / 2) > NODE * 0.7 && Math.hypot(p.x - pos[i + 1].x, p.y - pos[i + 1].y - NODE / 2) > NODE * 0.7) {
-        dots.push({ x: p.x, y: p.y - NODE / 2, k: `${i}-${k}` });
-      }
-    }
-  }
-
   // Maps are walked bottom → top, so open at the bottom (the first subtopic). On web the first scroll can land before
   // layout, so also retry once after the page has its measured height.
   const toStart = () => ref.current?.scrollToEnd({ animated: false });
@@ -128,12 +115,9 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 
   return (
     <View style={[pageHeight ? { width, height: pageHeight } : { width, flex: 1 }, { overflow: "hidden" }]}>
-      <View style={{ flex: 1, backgroundColor: "#6cdde7" }}>
+      <View style={{ flex: 1, backgroundColor: theme.ground }}>
         <ScrollView ref={ref} contentContainerStyle={{ height: height + 40 }} onLayout={toStart} onContentSizeChange={toStart} showsVerticalScrollIndicator={false}>
           <Image source={theme.bg} style={{ position: "absolute", top: 0, left: 0, width, height }} resizeMode="cover" accessibilityIgnoresInvertColors />
-          {dots.map((d) => (
-            <View key={d.k} style={[styles.dot, { left: d.x - 5, top: d.y + NODE / 2 - 5 }]} />
-          ))}
           {subs.map((s, i) => {
             const done = ([1, 2, 3] as const).filter((l) => isLevelComplete(progress, s.id, l));
             const gold = done.length === 3;
@@ -204,7 +188,6 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 }
 
 const styles = StyleSheet.create({
-  dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
   nodeWrap: { position: "absolute", width: LABEL_W, alignItems: "center" },
   stars: { flexDirection: "row", gap: 2, marginTop: -6, backgroundColor: "rgba(255,255,255,0.85)", borderRadius: 10, paddingHorizontal: 4, paddingVertical: 1, borderWidth: 2, borderColor: colors.border },
   star: { width: 16, height: 16 },

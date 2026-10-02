@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { TextInput } from "react-native";
 import { useRouter } from "expo-router";
 import { OnboardingFrame } from "../../src/components/OnboardingFrame";
 import { catPoses } from "../../src/theme/cats";
 import { useProfile } from "../../src/store/profile";
-import { colors, radius } from "../../src/theme/colors";
+import { SchoolPicker } from "../../src/components/SchoolPicker";
 
 export default function SchoolStep() {
   const router = useRouter();
@@ -12,10 +11,7 @@ export default function SchoolStep() {
   return (
     <OnboardingFrame cat={catPoses.laptop} step={2} title="Which school are you from?" nextDisabled={school.trim().length < 2} onBack={() => router.back()}
       onNext={() => { useProfile.getState().set({ school: school.trim() }); router.push("/(onboarding)/topics"); }}>
-      <TextInput
-        style={{ minHeight: 56, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 20, backgroundColor: "#fff", color: colors.ink }}
-        value={school} onChangeText={setSchool} placeholder="School name" placeholderTextColor={colors.muted} autoCapitalize="words" accessibilityLabel="School" maxLength={80}
-      />
+      <SchoolPicker value={school} onChange={setSchool} />
     </OnboardingFrame>
   );
 }

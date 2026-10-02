@@ -6,6 +6,7 @@ import { Body, Button, Card, CenterModal, H1, H2, Screen } from "../../src/compo
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
 import { ParentalGate } from "../../src/components/ParentalGate";
+import { SchoolPicker } from "../../src/components/SchoolPicker";
 import { Paywall } from "../../src/components/Paywall";
 import { FriendRequests } from "../../src/components/FriendRequests";
 import { TopBar } from "../../src/components/TopBar";
@@ -43,6 +44,7 @@ export default function ProfileTab() {
   const [msg, setMsg] = useState<string | null>(null);
   const [adBusy, setAdBusy] = useState(false);
   const [paywall, setPaywall] = useState(false);
+  const [parentNote, setParentNote] = useState(false); // "tell a grown-up" notice before the subscription screen
   const [gateOpen, setGateOpen] = useState(false);
   const afterGate = useRef<() => void>(() => undefined);
 
@@ -132,7 +134,7 @@ export default function ProfileTab() {
     router.replace("/(onboarding)/login");
   };
 
-  const openUrl = (url: string) => gated(() => { void openLink(url).then((ok) => { if (!ok) flash(`Couldn't open the link. Visit ${url}`); }); });
+  const openUrl = (url: string) => { void openLink(url).then((ok) => { if (!ok) flash(`Couldn't open the link. Visit ${url}`); }); };
 
   return (
     <Screen>
@@ -151,7 +153,7 @@ export default function ProfileTab() {
         <Card>
           <H2>My details</H2>
           <TextInput style={[field, { marginTop: 8 }]} value={name} onChangeText={setName} placeholder="Full name" placeholderTextColor={colors.muted} accessibilityLabel="Full name" />
-          <TextInput style={field} value={school} onChangeText={setSchool} placeholder="School" placeholderTextColor={colors.muted} accessibilityLabel="School" />
+          <SchoolPicker value={school} onChange={setSchool} />
           <Text style={{ fontWeight: "800", color: colors.inkSoft, marginBottom: 4 }}>PSLE date</Text>
           <DateField value={psle} onChange={setPsle} />
           <Button title="Save changes" variant="good" onPress={save} style={{ marginTop: 12 }} />
@@ -210,7 +212,7 @@ export default function ProfileTab() {
         <Card>
           <H2>Unlimited hearts and energy</H2>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>{subscribed ? "You are subscribed. Thank you!" : `Subscribe for ${SUBSCRIPTION_PRICE_LABEL}.`}</Body>
-          <Button title={subscribed ? "Manage subscription" : "Subscribe"} variant="gold" onPress={() => gated(() => setPaywall(true))} />
+          <Button title={subscribed ? "Manage subscription" : "Subscribe"} variant="gold" onPress={() => setParentNote(true)} />
         </Card>
 
         <Card>
@@ -219,7 +221,7 @@ export default function ProfileTab() {
             <Button title="Privacy policy" variant="ghost" small onPress={() => openUrl(PRIVACY_URL)} />
             <Button title="Terms of use" variant="ghost" small onPress={() => openUrl(TERMS_URL)} />
             <Button title="Sign out" variant="ghost" onPress={logout} />
-            <Button title="Delete account and data" variant="bad" onPress={() => { setDeleteText(""); setDeleteMsg(null); setDeleteOpen(true); }} />
+            <Button title="Delete account and data" variant="bad" onPress={() => gated(() => { setDeleteText(""); setDeleteMsg(null); setDeleteOpen(true); })} />
           </View>
         </Card>
       </ScrollView>
@@ -241,6 +243,14 @@ export default function ProfileTab() {
       {toast.node}
       <ParentalGate visible={gateOpen} onCancel={() => setGateOpen(false)} onPass={() => { setGateOpen(false); afterGate.current(); }} />
       <Paywall visible={paywall} onClose={() => setPaywall(false)} />
+      <CenterModal visible={parentNote} onClose={() => setParentNote(false)}>
+        <H2 style={{ textAlign: "center" }}>Tell a grown-up first</H2>
+        <Body style={{ textAlign: "center", marginVertical: 10 }}>
+          A subscription costs real money every month. Please let your parent or guardian know before you continue.
+        </Body>
+        <Button title="OK, I've told them" variant="gold" onPress={() => { setParentNote(false); setPaywall(true); }} />
+        <Button title="Not now" variant="ghost" onPress={() => setParentNote(false)} style={{ marginTop: 10 }} />
+      </CenterModal>
     </Screen>
   );
 }

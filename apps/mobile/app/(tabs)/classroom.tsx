@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { catPoses } from "../../src/theme/cats";
 import { Image, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
-import { TIMED_GAME_SECONDS_PER_QUESTION } from "@p6/shared";
+import { CHALLENGE_HEARTS, CHALLENGE_SECONDS } from "@p6/shared";
 import { Body, Button, Card, Chip, H1, H2, Screen } from "../../src/components/ui";
 import { getAllLv1, getPool, getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
@@ -28,31 +28,44 @@ export default function ClassroomTab() {
   const startPractice = () =>
     router.push({ pathname: "/practice/[topicId]", params: { topicId: practiceId as string, grade, ...(selfMarkOnly ? { selfMarkOnly: "1" } : {}) } });
 
-  const go = (mode: "timed" | "wrong" | "all-wrong") =>
-    router.push({ pathname: "/minigame/[mode]", params: { mode, grade, ...(topicId && mode === "timed" ? { topicId } : {}) } });
+  const go = (mode: "challenge" | "mistakes" | "all-wrong") =>
+    router.push({ pathname: "/minigame/[mode]", params: { mode, grade, ...(topicId && mode === "challenge" ? { topicId } : {}) } });
 
   return (
     <Screen>
       <ScrollView contentContainerStyle={{ padding: space.l, gap: space.l }}>
         <H1>Classroom</H1>
-        <Body style={{ color: colors.inkSoft, marginTop: -8 }}>Mini games. No hearts or energy needed.</Body>
+        <Body style={{ color: colors.inkSoft, marginTop: -8 }}>Mini games and practice. No map hearts or energy needed.</Body>
 
+        <H2>Mini games</H2>
         <Card>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
             <Image source={catPoses.chasing} style={{ width: 64, height: 60 }} resizeMode="contain" />
-            <H2 style={{ flex: 1 }}>Beat the clock</H2>
+            <H2 style={{ flex: 1 }}>5-Minute Challenge</H2>
           </View>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>
-            LV1 questions, {TIMED_GAME_SECONDS_PER_QUESTION} seconds each. Practice only, no stars.
+            Solve as many LV1 questions as you can in {CHALLENGE_SECONDS / 60} minutes. You have {CHALLENGE_HEARTS} hearts: each mistake costs one.
           </Body>
           <View style={{ flexDirection: "row", flexWrap: "wrap", marginTop: 4 }}>
             <Chip label="All topics" selected={!topicId} onPress={() => setTopicId(undefined)} />
             {topics.map((t) => <Chip key={t.id} label={t.name} selected={topicId === t.id} onPress={() => setTopicId(t.id)} />)}
           </View>
           <Text style={{ color: colors.inkSoft, fontWeight: "700", marginBottom: 8 }}>{lv1Count} questions available</Text>
-          <Button title="Start timed game" variant="gold" onPress={() => go("timed")} disabled={lv1Count === 0} />
+          <Button title="Start the challenge" variant="gold" onPress={() => go("challenge")} disabled={lv1Count === 0} />
         </Card>
 
+        <Card>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <Image source={catPoses.confused} style={{ width: 64, height: 60 }} resizeMode="contain" />
+            <H2 style={{ flex: 1 }}>Unlimited Mistakes</H2>
+          </View>
+          <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Only questions you got wrong before. No timer, no hearts. Get one right to take its flag off.</Body>
+          <Text style={{ fontFamily: fonts.display, fontSize: 18, color: flagged ? colors.bad : colors.good, marginBottom: 8 }}>{flagged} to fix</Text>
+          <Button title="Play Unlimited Mistakes" onPress={() => go("mistakes")} disabled={flagged === 0} />
+          <Button title={`Test all wrong ever (${ever})`} variant="ghost" onPress={() => go("all-wrong")} disabled={ever === 0} style={{ marginTop: 10 }} />
+        </Card>
+
+        <H2 style={{ marginTop: 4 }}>Practice</H2>
         <Card>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
             <Image source={catPoses.cup} style={{ width: 64, height: 60 }} resizeMode="contain" />
@@ -72,16 +85,6 @@ export default function ClassroomTab() {
           <Button title="Start practice" onPress={startPractice} disabled={practiceCount === 0} />
         </Card>
 
-        <Card>
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-            <Image source={catPoses.confused} style={{ width: 64, height: 60 }} resizeMode="contain" />
-            <H2 style={{ flex: 1 }}>Previously wrong</H2>
-          </View>
-          <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Untimed. Get one right to take its flag off.</Body>
-          <Text style={{ fontFamily: fonts.display, fontSize: 18, color: flagged ? colors.bad : colors.good, marginBottom: 8 }}>{flagged} flagged</Text>
-          <Button title="Practise flagged questions" onPress={() => go("wrong")} disabled={flagged === 0} />
-          <Button title={`Test all wrong ever (${ever})`} variant="ghost" onPress={() => go("all-wrong")} disabled={ever === 0} style={{ marginTop: 10 }} />
-        </Card>
       </ScrollView>
     </Screen>
   );
