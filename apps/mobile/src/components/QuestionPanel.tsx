@@ -11,6 +11,7 @@ import { FigureViewer } from "./FigureViewer";
 import { Scratchpad } from "./Scratchpad";
 import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
+import { BUBBLE_BAND } from "./CatCompanion";
 import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 
 export interface Reveal {
@@ -68,7 +69,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
           </Pressable>
         ) : null}
         <View style={styles.toolsRow}>
-        <View style={[styles.tools, { flex: 1, flexWrap: "wrap", alignItems: "flex-start", alignContent: "flex-start" }]}>
+        <View style={[styles.tools, { flex: 1, flexWrap: "wrap", alignItems: "flex-start", alignContent: "flex-start" }, companion && !landscape ? { paddingTop: BUBBLE_BAND } : null]}>
           {q.calculatorAllowed ? (
             <Pressable onPress={() => setCalc(true)} accessibilityRole="button" accessibilityLabel="Open calculator"
               style={({ pressed }) => [styles.toolBtn, styles.toolRow, { backgroundColor: "#d9f2f8" }, pressed && { transform: [{ scale: 0.96 }] }]}>

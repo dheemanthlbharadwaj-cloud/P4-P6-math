@@ -5,7 +5,6 @@ import type { LevelNo } from "@p6/shared";
 import { Screen } from "../../src/components/ui";
 import { TopBar } from "../../src/components/TopBar";
 import { TopicMapPage } from "../../src/components/TopicMapPage";
-import { LevelSheet } from "../../src/components/LevelSheet";
 import { KeyModal } from "../../src/components/KeyModal";
 import { ResourceModal } from "../../src/components/ResourceModal";
 import { getLevelQuestions, getSubtopic, getTopics } from "../../src/content";
@@ -28,10 +27,14 @@ export default function MapTab() {
   // Pages must be exactly as tall as the list viewport; a horizontal list does not stretch its items, and an
   // unstretched page grows to its map image so the map can no longer scroll and the bottom is hidden.
   const [pageHeight, setPageHeight] = useState(0);
-  const [sheetSub, setSheetSub] = useState<string | null>(null);
   const [keyTopic, setKeyTopic] = useState<string | null>(null);
   const [gate, setGate] = useState<null | "energy" | "hearts">(null);
   const [notice, setNotice] = useState<string | null>(null);
+  useEffect(() => {
+    if (!notice) return;
+    const t = setTimeout(() => setNotice(null), 2500);
+    return () => clearTimeout(t);
+  }, [notice]);
 
   // Open on the first unlocked topic.
   const initial = useRef(false);
@@ -50,17 +53,18 @@ export default function MapTab() {
 
   const onEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => setIndex(Math.round(e.nativeEvent.contentOffset.x / width));
 
-  const found = sheetSub ? getSubtopic(grade, sheetSub) : undefined;
   const topic = topics[index];
 
-  const start = (level: LevelNo) => {
+  // A level button opens that level straight away (no level picker).
+  const start = (subtopicId: string, level: LevelNo, locked: boolean) => {
+    if (locked) { setNotice(`Finish Level ${level - 1} of this subtopic first.`); return; }
+    const found = getSubtopic(grade, subtopicId);
     if (!found) return;
     if (getLevelQuestions(grade, found.subtopic.id, level).length === 0) { setNotice("This level has no questions yet."); return; }
     const p = usePlayer.getState();
     const m = computeMeters(p, Date.now());
     if (!m.subscribed && m.hearts <= 0) { setGate("hearts"); return; }
     if (!p.spendEnergy()) { setGate("energy"); return; }
-    setSheetSub(null);
     router.push({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: found.subtopic.id, level: String(level) } });
   };
 
@@ -101,13 +105,12 @@ export default function MapTab() {
             unlocked={isTopicUnlocked(progress, item.id)}
             progress={progress}
             friends={friends}
-            onNodePress={setSheetSub}
+            onNodePress={start}
             onLockPress={() => setKeyTopic(item.id)}
           />
         )}
       />
 
-      <LevelSheet subtopic={found?.subtopic ?? null} progress={progress} onClose={() => setSheetSub(null)} onStart={start} />
       <KeyModal grade={grade} topic={topics.find((t) => t.id === keyTopic) ?? null} visible={!!keyTopic} onClose={() => setKeyTopic(null)} />
       <ResourceModal kind="energy" visible={gate === "energy"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />
       <ResourceModal kind="hearts" visible={gate === "hearts"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />

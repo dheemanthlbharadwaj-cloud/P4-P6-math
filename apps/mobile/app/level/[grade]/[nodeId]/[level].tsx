@@ -85,6 +85,7 @@ export default function LevelScreen() {
 
   const doSkip = () => { setSession((s) => skip(s)); setMood("thinking"); };
 
+  const [startedAt] = useState(() => Date.now()); // the cat's board is a 5-minute clock from here
   const giveUp = () => { setGate(false); save(false, session); setPhase("gaveup"); };
 
   const [needEnergy, setNeedEnergy] = useState(false);
@@ -152,7 +153,7 @@ export default function LevelScreen() {
       </View>
       {question ? (
         <View style={{ flex: 1 }}>
-          <QuestionPanel key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} />} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
+          <QuestionPanel key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} timerStartedAt={startedAt} />} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
           {reveal ? (
             <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
               <Text style={{ fontSize: 20, fontFamily: fonts.display, color: reveal.correct ? colors.good : colors.bad, marginBottom: 8 }}>

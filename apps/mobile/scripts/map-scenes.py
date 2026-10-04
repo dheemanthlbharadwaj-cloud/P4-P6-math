@@ -34,6 +34,7 @@ ISLAND_ROWS = {1: (13680, 15920), 2: (12496, 14896), 3: (11712, 13664), 4: (1008
                6: (7968, 10128), 7: (6864, 9280), 8: (5104, 8016), 9: (4336, 6960), 10: (2656, 5152),
                11: (1392, 4528), 12: (128, 2992)}
 MIN_ASPECT = 1.8
+GAP = 215  # map pixels per button along the river (~60pt on a 390pt-wide phone)
 CW = 1400  # crop width in map pixels (the full map is 2048 wide)
 ISLAND_SIDE = {o: ("left" if o % 2 else "right") for o in range(1, 13)}
 OUT_W = 1080
@@ -142,33 +143,37 @@ def main(pack, curriculum):
     ]
     for o in range(1, 13):
         y0, y1 = ISLAND_ROWS[o]
-        n = counts.get(o, 5)
+        n = 3 * counts.get(o, 5)  # one button per level of every subtopic (LV1 row at the bottom, LV3 at the top)
         # Crop CW wide on the island's side (islands alternate left/right), so each map shows its own theme and only
         # glimpses of the neighbours; the river between the islands stays in view.
         c0 = 0 if ISLAND_SIDE[o] == "left" else W - CW
-        h = max(int(CW * MIN_ASPECT), (y1 - y0) + 240, (n + 1) * 520)  # room for n buttons a min gap apart
-        top = max(0, min(H - h, (y0 + y1) // 2 - h // 2))
+        # Buttons must clear the scenery (a 48pt button needs ~50pt of open water). If a crop is too tight, make it taller.
+        for grow in (1.0, 1.15, 1.3, 1.45, 1.6):
+            h = int(max(int(CW * MIN_ASPECT), (y1 - y0) + 240, (n + 1) * GAP) * grow)  # room for n buttons a min gap apart
+            top = max(0, min(H - h, (y0 + y1) // 2 - h // 2))
+            free = ~obs[top:top + h:D, c0:c0 + CW:D]
+            open_clr = distance_transform_edt(free) * D
+            free[:, :1] = free[:, -1:] = False  # screen edges are walls for the route
+            clr = distance_transform_edt(free) * D
+            P = route(clr)
+            idx = np.linspace(0, len(P) - 1, 90).astype(int)
+            coarse = P[idx]
+            k = np.linspace(0, len(coarse) - 1, 1500)
+            Pd = np.c_[np.interp(k, np.arange(len(coarse)), coarse[:, 0]), np.interp(k, np.arange(len(coarse)), coarse[:, 1])]
+            L = np.r_[0, np.cumsum(np.hypot(*np.diff(Pd, axis=0).T))]
+            cell = lambda x, y, a: a[min(a.shape[0] - 1, int(y / D)), min(a.shape[1] - 1, int(x / D))]
+            cs = np.array([cell(x, y, clr) for x, y in Pd])
+            cs = np.where((L > 0.04 * L[-1]) & (L < 0.96 * L[-1]), cs, 0)
+            d = 0.8 * 0.92 * L[-1] / n  # spread the buttons along the whole river
+            lo, hi = 0.0, 400.0
+            for _ in range(30):
+                mid = (lo + hi) / 2
+                lo, hi = (mid, hi) if greedy(L, cs, mid, d, n) else (lo, mid)
+            nodes = [round(float(L[i] / L[-1]), 4) for i in greedy(L, cs, lo, d, n)]
+            if 2 * lo / CW * 390 >= 50:
+                break
         crop = full_img.crop((c0, top, c0 + CW, top + h)).resize((OUT_W, round(h * OUT_W / CW)), Image.LANCZOS)
         crop.save(os.path.join(HERE, "..", "assets", "ui", f"map-bg-{o}.webp"), quality=82, method=6)
-        free = ~obs[top:top + h:D, c0:c0 + CW:D]
-        open_clr = distance_transform_edt(free) * D
-        free[:, :1] = free[:, -1:] = False  # screen edges are walls for the route
-        clr = distance_transform_edt(free) * D
-        P = route(clr)
-        idx = np.linspace(0, len(P) - 1, 90).astype(int)
-        coarse = P[idx]
-        k = np.linspace(0, len(coarse) - 1, 1500)
-        Pd = np.c_[np.interp(k, np.arange(len(coarse)), coarse[:, 0]), np.interp(k, np.arange(len(coarse)), coarse[:, 1])]
-        L = np.r_[0, np.cumsum(np.hypot(*np.diff(Pd, axis=0).T))]
-        cell = lambda x, y, a: a[min(a.shape[0] - 1, int(y / D)), min(a.shape[1] - 1, int(x / D))]
-        cs = np.array([cell(x, y, clr) for x, y in Pd])
-        cs = np.where((L > 0.04 * L[-1]) & (L < 0.96 * L[-1]), cs, 0)
-        d = max(480.0, 0.55 * L[-1] / n)
-        lo, hi = 0.0, 400.0
-        for _ in range(30):
-            mid = (lo + hi) / 2
-            lo, hi = (mid, hi) if greedy(L, cs, mid, d, n) else (lo, mid)
-        nodes = [round(float(L[i] / L[-1]), 4) for i in greedy(L, cs, lo, d, n)]
         print(f"map {o}: aspect {h / CW:.3f}, {n} nodes, narrowest spot fits a {round(2 * lo / CW * 390)}pt button")
         pts = [f"[{round(x / CW, 4)}, {round(y / h, 4)}, {1 if cell(x, y, open_clr) >= 40 else 0}]" for x, y in coarse]
         lines += [f"  {{ // map {o}", f"    path: [{', '.join(pts)}],", f"    nodes: [{', '.join(map(str, nodes))}],", "  },"]

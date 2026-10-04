@@ -19,14 +19,13 @@ export default function ClassroomTab() {
   const lv1Count = useMemo(() => getAllLv1(grade, topicId).length, [grade, topicId]);
 
   const [practiceTopic, setPracticeTopic] = useState<string | undefined>(undefined);
-  const [selfMarkOnly, setSelfMarkOnly] = useState(false);
   const practiceId = practiceTopic ?? topics[0]?.id;
   const practiceCount = useMemo(
-    () => (practiceId ? getPool(grade, { topicId: practiceId }).filter((q) => !selfMarkOnly || !q.autoMarkable).length : 0),
-    [grade, practiceId, selfMarkOnly],
+    () => (practiceId ? getPool(grade, { topicId: practiceId }).length : 0),
+    [grade, practiceId],
   );
   const startPractice = () =>
-    router.push({ pathname: "/practice/[topicId]", params: { topicId: practiceId as string, grade, ...(selfMarkOnly ? { selfMarkOnly: "1" } : {}) } });
+    router.push({ pathname: "/practice/[topicId]", params: { topicId: practiceId as string, grade } });
 
   const go = (mode: "challenge" | "mistakes" | "all-wrong") =>
     router.push({ pathname: "/minigame/[mode]", params: { mode, grade, ...(topicId && mode === "challenge" ? { topicId } : {}) } });
@@ -76,10 +75,6 @@ export default function ClassroomTab() {
           </Body>
           <View style={{ flexDirection: "row", flexWrap: "wrap", marginTop: 4 }}>
             {topics.map((t) => <Chip key={t.id} label={t.name} selected={practiceId === t.id} onPress={() => setPracticeTopic(t.id)} />)}
-          </View>
-          <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-            <Chip label="All pool questions" selected={!selfMarkOnly} onPress={() => setSelfMarkOnly(false)} />
-            <Chip label="Self-marking only" selected={selfMarkOnly} onPress={() => setSelfMarkOnly(true)} />
           </View>
           <Text style={{ color: colors.inkSoft, fontWeight: "700", marginBottom: 8 }}>{practiceCount} questions</Text>
           <Button title="Start practice" onPress={startPractice} disabled={practiceCount === 0} />

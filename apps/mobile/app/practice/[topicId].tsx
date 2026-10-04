@@ -17,15 +17,11 @@ const SHOWN: { correct: boolean; perPart: boolean[]; showAnswer: true } = { corr
 export default function Practice() {
   const router = useRouter();
   useQuestionOrientation();
-  const { topicId, grade: g, selfMarkOnly } = useLocalSearchParams<{ topicId: string; grade: string; selfMarkOnly?: string }>();
+  const { topicId, grade: g } = useLocalSearchParams<{ topicId: string; grade: string }>();
   const grade = g as Grade;
   const topic = getTopic(grade, topicId);
-  // Questions that need a human to mark them come first, then the rest of the pool.
-  const questions = useMemo(() => {
-    const pool = getPool(grade, { topicId });
-    const manual = pool.filter((q) => !q.autoMarkable);
-    return selfMarkOnly === "1" ? manual : [...manual, ...pool.filter((q) => q.autoMarkable)];
-  }, [grade, topicId, selfMarkOnly]);
+  // The topic's whole practice pool, in order; every question shows its answer on demand.
+  const questions = useMemo(() => getPool(grade, { topicId }), [grade, topicId]);
 
   const [i, setI] = useState(0);
   const [revealed, setRevealed] = useState(false);

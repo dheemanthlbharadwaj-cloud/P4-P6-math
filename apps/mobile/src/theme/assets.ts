@@ -10,21 +10,23 @@ export const uiAssets = {
   // built by scripts/map-scenes.py.
   // aspect = height / width of the image; island = which side the island sits, so friends stand on the open-water side.
   maps: [
-    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 1.8, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 1.886, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 2.229, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 2.88, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 1.996, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 2.457, island: "left", ground: "#6cdde7" },
     { bg: require("../../assets/ui/map-bg-4.webp"), aspect: 2.034, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 2.6, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 2.229, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 2.6, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 3.714, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 2.229, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 2.6, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 2.6, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 2.218, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 2.918, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 2.457, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 2.918, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 5.59, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 2.457, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 2.918, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 4.669, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 3.547, island: "right", ground: "#6cdde7" },
   ] as Omit<MapTheme, "route">[], // cycled by topic order
   node: {
-    default: require("../../assets/ui/node-default.png") as ImageSourcePropType,
+    default: require("../../assets/ui/node-default.png") as ImageSourcePropType, // LV1 (blue)
+    l2: require("../../assets/ui/node-l2.png") as ImageSourcePropType, // LV2 (green)
+    l3: require("../../assets/ui/node-l3.png") as ImageSourcePropType, // LV3 (lemon yellow, not the star's gold)
     current: require("../../assets/ui/node-current.png") as ImageSourcePropType,
     gold: require("../../assets/ui/node-gold.png") as ImageSourcePropType, // all 3 levels complete
     locked: require("../../assets/ui/node-locked.png") as ImageSourcePropType,

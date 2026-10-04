@@ -1,16 +1,19 @@
-// One topic = one map page. Subtopic nodes wind up a path; friends' mini cats stand next to nodes.
+// One topic = one map page. One numbered button per level of every subtopic winds up the river: all Level 1 buttons
+// at the bottom (blue), then Level 2 (green), then Level 3 at the top (lemon yellow). A finished level shows a star.
+// The subtopic name sits beside each button; friends' mini cats stand next to buttons.
 import React, { useEffect, useMemo, useRef } from "react";
 import { Animated, Easing, Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import type { GradeProgress, PublicProfile, TopicMap } from "@p6/shared";
+import type { GradeProgress, LevelNo, PublicProfile, TopicMap } from "@p6/shared";
 import { CatAvatar } from "./CatAvatar";
 import { mapThemeFor, uiAssets } from "../theme/assets";
 import { catPoses } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
-import { isLevelComplete } from "../logic/unlock";
+import { isLevelComplete, isLevelUnlocked } from "../logic/unlock";
 import { colors, fonts } from "../theme/colors";
 
-const NODE = 56; // fits the narrowest measured water spot on every map (see scripts/map-scenes.py)
-const LABEL_W = 132; // node column width: button, stars and the subtopic name underneath
+const NODE = 48; // fits the narrowest measured water spot on every map (see scripts/map-scenes.py)
+const LABEL_MAX = 150; // widest subtopic name label beside a button
+const LEVELS: LevelNo[] = [1, 2, 3];
 // Clouds covering a locked map: [left, top] as fractions of the page, and width as a fraction of page width.
 const CLOUDS: [number, number, number][] = [
   [-0.18, 0.0, 0.75], [0.42, 0.04, 0.7], [0.1, 0.16, 0.62], [-0.2, 0.3, 0.7], [0.48, 0.28, 0.72], [0.12, 0.44, 0.68],
@@ -24,7 +27,8 @@ export interface TopicMapPageProps {
   unlocked: boolean;
   progress: GradeProgress | undefined;
   friends: PublicProfile[];
-  onNodePress: (subtopicId: string) => void;
+  /** A level button was tapped (`locked` = its previous level isn't finished yet). */
+  onNodePress: (subtopicId: string, level: LevelNo, locked: boolean) => void;
   onLockPress: () => void;
 }
 
@@ -43,7 +47,7 @@ function PlayerCat() {
   }, [bob]);
   const size = 78;
   return (
-    <Animated.View pointerEvents="none" style={{ position: "absolute", left: (LABEL_W - size) / 2, top: -size * 0.66, transform: [{ translateY: bob }] }}>
+    <Animated.View pointerEvents="none" style={{ position: "absolute", left: (NODE - size) / 2, top: -size * 0.72, transform: [{ translateY: bob }] }}>
       <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={size} label="You are here" />
     </Animated.View>
   );
@@ -95,7 +99,9 @@ const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >
 export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
   const ref = useRef<ScrollView>(null);
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
-  const n = subs.length;
+  // Bottom → top: every subtopic's Level 1, then every Level 2, then every Level 3.
+  const nodes = useMemo(() => LEVELS.flatMap((level) => subs.map((s) => ({ s, level }))), [subs]);
+  const n = nodes.length;
   const theme = mapThemeFor(topic.order);
   const height = width * theme.aspect;
   // Nodes sit on spots measured from the art: open water, clear of buildings and objects. Other node counts
@@ -103,7 +109,11 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   const route = useMemo(() => buildRoute(theme.route.path, width, height), [theme, width, height]);
   const ts = theme.route.nodes.length === n ? theme.route.nodes : evenSpots(n);
   const pos = ts.map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
-  const currentIdx = subs.findIndex((s) => !([1, 2, 3] as const).every((l) => isLevelComplete(progress, s.id, l)));
+  const state = nodes.map(({ s, level }) => ({
+    done: isLevelComplete(progress, s.id, level),
+    open: isLevelUnlocked(progress, s.id, level),
+  }));
+  const currentIdx = state.findIndex((x) => x.open && !x.done);
 
   // Trail dots follow the water route between consecutive nodes, skipping stretches hidden behind objects.
   const dots: { x: number; y: number; k: string }[] = [];
@@ -134,32 +144,38 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
           {dots.map((d) => (
             <View key={d.k} style={[styles.dot, { left: d.x - 5, top: d.y + NODE / 2 - 5 }]} />
           ))}
-          {subs.map((s, i) => {
-            const done = ([1, 2, 3] as const).filter((l) => isLevelComplete(progress, s.id, l));
-            const gold = done.length === 3;
-            const src = !unlocked ? uiAssets.node.locked : gold ? uiAssets.node.gold : i === currentIdx ? uiAssets.node.current : uiAssets.node.default;
+          {nodes.map(({ s, level }, i) => {
+            const { done, open } = state[i];
+            const src = !unlocked || (!open && !done) ? uiAssets.node.locked : done ? uiAssets.node.gold : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
+            // Name beside the button, on whichever side has more room.
+            const right = pos[i].x < width / 2;
+            const room = right ? width - (pos[i].x + NODE / 2) - 10 : pos[i].x - NODE / 2 - 10;
+            const labelW = Math.max(90, Math.min(LABEL_MAX, room));
             return (
-              <View key={s.id} style={[styles.nodeWrap, { left: Math.min(width - LABEL_W, Math.max(0, pos[i].x - LABEL_W / 2)), top: pos[i].y }]}>
+              <View key={`${s.id}#${level}`} style={[styles.nodeWrap, { left: pos[i].x - NODE / 2, top: pos[i].y }]}>
                 <Pressable
-                  onPress={() => onNodePress(s.id)}
+                  onPress={() => onNodePress(s.id, level, !open)}
                   disabled={!unlocked}
                   accessibilityRole="button"
-                  accessibilityLabel={`${s.name}. ${done.length} of 3 levels complete`}
-                  hitSlop={8}
-                  style={{ alignItems: "center" }}
+                  accessibilityLabel={`${i + 1}. ${s.name}, level ${level}${done ? ", complete" : open ? "" : ", locked"}`}
+                  hitSlop={6}
+                  style={({ pressed }) => ({ width: NODE, height: NODE, alignItems: "center", justifyContent: "center", transform: [{ scale: pressed ? 0.92 : 1 }] })}
                 >
-                  <Image source={src} style={{ width: NODE, height: NODE }} />
-                  <View style={styles.stars}>
-                    {([1, 2, 3] as const).map((l) => (
-                      <Image key={l} source={uiAssets.icons.star} style={[styles.star, !isLevelComplete(progress, s.id, l) && styles.starEmpty]} />
-                    ))}
-                  </View>
-                  <Text style={styles.nodeName} numberOfLines={2}>{s.name}</Text>
+                  <Image source={src} style={{ position: "absolute", width: NODE, height: NODE }} />
+                  <Text style={[styles.num, done && styles.numOnStar]}>{i + 1}</Text>
                 </Pressable>
-                {unlocked && i === currentIdx ? <PlayerCat /> : null}
+                {/* Explicit-width box beside the button (an absolute child of a 48pt view would otherwise wrap to 48pt);
+                    the white pill hugs the text on the button's side. */}
+                <View pointerEvents="none" style={[styles.labelBox, { width: labelW, top: NODE / 2 - 15 }, right ? { left: NODE + 4, alignItems: "flex-start" } : { right: NODE + 4, alignItems: "flex-end" }]}>
+                  <Text style={[styles.nodeName, !right && { textAlign: "right" }]} numberOfLines={2}>{s.name}</Text>
+                </View>
               </View>
             );
           })}
+          {/* The student's cat on its current button, drawn after every label so no name covers it. */}
+          {unlocked && currentIdx >= 0 ? (
+            <View pointerEvents="none" style={[styles.nodeWrap, { left: pos[currentIdx].x - NODE / 2, top: pos[currentIdx].y }]}><PlayerCat /></View>
+          ) : null}
           {unlocked
             ? (() => {
                 const perNode = new Map<number, number>();
@@ -168,14 +184,15 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                   const i = hash(f.uid) % Math.max(1, n);
                   const k = perNode.get(i) ?? 0;
                   perNode.set(i, k + 1);
-                  // Stand beside the button on the open-water side (away from the island); a second friend takes the other side.
-                  const openRight = theme.island === "left";
-                  const right = k % 2 === 0 ? openRight : !openRight;
+                  // Stand beside the button on the side opposite its name label; a second friend takes the other side.
+                  const labelRight = pos[i].x < width / 2;
+                  const right = k % 2 === 0 ? !labelRight : labelRight;
                   const fits = right ? pos[i].x + NODE / 2 + 64 <= width : pos[i].x - NODE / 2 - 64 >= 0;
-                  const side = fits ? right : !right;
-                  const x = side ? pos[i].x + NODE / 2 : pos[i].x - NODE / 2 - 64;
+                  // No room on that side (button near the screen edge): stand just above the button instead.
+                  const x = !fits ? pos[i].x - 32 : right ? pos[i].x + NODE / 2 : pos[i].x - NODE / 2 - 64;
+                  const y = !fits ? pos[i].y - 58 : pos[i].y - 4 + Math.floor(k / 2) * 30;
                   return (
-                    <View key={f.uid} style={[styles.friend, { left: Math.min(width - 64, Math.max(0, x)), top: pos[i].y - 4 + Math.floor(k / 2) * 30 }]} pointerEvents="none">
+                    <View key={f.uid} style={[styles.friend, { left: Math.min(width - 64, Math.max(0, x)), top: y }]} pointerEvents="none">
                       <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={46} />
                       <Text style={styles.friendName} numberOfLines={1}>{f.displayName.replace(/\s*\(sample\)$/, "")}</Text>
                     </View>
@@ -204,12 +221,12 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 }
 
 const styles = StyleSheet.create({
-  nodeWrap: { position: "absolute", width: LABEL_W, alignItems: "center" },
+  nodeWrap: { position: "absolute", width: NODE, height: NODE },
+  num: { fontFamily: fonts.display, fontSize: 18, color: "#fff", marginTop: -4, textShadowColor: "rgba(51,38,42,0.85)", textShadowOffset: { width: 0, height: 1.5 }, textShadowRadius: 2 },
+  numOnStar: { fontSize: 15, marginTop: 4 },
   dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
-  stars: { flexDirection: "row", gap: 2, marginTop: -6, backgroundColor: "rgba(255,255,255,0.85)", borderRadius: 10, paddingHorizontal: 4, paddingVertical: 1, borderWidth: 2, borderColor: colors.border },
-  star: { width: 16, height: 16 },
-  starEmpty: { tintColor: "#c3c8d6" },
-  nodeName: { marginTop: 3, fontSize: 11, lineHeight: 13, fontFamily: fonts.display, color: colors.ink, textAlign: "center", backgroundColor: "rgba(255,255,255,0.88)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden", maxWidth: LABEL_W },
+  labelBox: { position: "absolute" },
+  nodeName: { fontSize: 11, lineHeight: 13, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden" },
   friend: { position: "absolute", width: 64, alignItems: "center" },
   friendName: { fontSize: 11, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 4, borderRadius: 6, overflow: "hidden", maxWidth: 70 },
   lockWrap: { position: "absolute", bottom: 40, left: 0, right: 0, alignItems: "center" },

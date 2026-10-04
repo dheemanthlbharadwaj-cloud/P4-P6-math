@@ -3,26 +3,30 @@ import { StyleSheet, Text, View } from "react-native";
 import { catAspect, catMoodImage, type CatMood } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
 import { CatAvatar } from "./CatAvatar";
+import { CatTimer } from "./CatTimer";
 import { colors, radius } from "../theme/colors";
 
 /** The in-app "desktop pet": reacts to answers using the artist's animations (colour from the store). */
-export function CatCompanion({ mood, size = 96, message, floating = false }: { mood: CatMood; size?: number; message?: string; floating?: boolean }) {
+export function CatCompanion({ mood, size = 96, message, floating = false, timerStartedAt }: { mood: CatMood; size?: number; message?: string; floating?: boolean; timerStartedAt?: number }) {
   const colorId = useCosmetics((s) => s.colorId);
   if (floating) {
     // Speech bubble floats to the left of the cat (does not widen the layout slot, which is exactly `size` wide).
     // Every mood's art is fitted into the same slot (size wide, 0.72·size tall), anchored bottom-right.
-    const src = catMoodImage(mood);
+    // With a timer, the cat stays at its board for the whole session (the board is a 5-minute clock); answers are
+    // acknowledged in the speech bubble instead of a different pose.
+    const src = timerStartedAt ? catMoodImage("thinking") : catMoodImage(mood);
     const slotH = size * 0.72;
     const w = Math.min(size, slotH * catAspect(src));
     return (
       <View style={{ width: size, height: slotH, alignItems: "flex-end", justifyContent: "flex-end" }} pointerEvents="none">
         {message ? (
           // Fixed width so the text wraps inside it instead of shrinking to the slot (it was cut to "Yes! Gre…").
-          <View style={[styles.bubble, { position: "absolute", right: w - 6, top: slotH * 0.15, width: 138, marginRight: 0, marginBottom: 0, maxWidth: undefined }]}>
+          // Sits at the top; QuestionPanel keeps its tool buttons below this band so they never overlap.
+          <View style={[styles.bubble, { position: "absolute", right: w - 6, top: 0, width: BUBBLE_W, marginRight: 0, marginBottom: 0, maxWidth: undefined }]}>
             <Text style={styles.bubbleText}>{message}</Text>
           </View>
         ) : null}
-        <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />
+        {timerStartedAt ? <CatTimer startedAt={timerStartedAt} width={w} colorId={colorId} /> : <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />}
       </View>
     );
   }
@@ -37,6 +41,10 @@ export function CatCompanion({ mood, size = 96, message, floating = false }: { m
     </View>
   );
 }
+
+const BUBBLE_W = 138;
+/** Height QuestionPanel keeps free above its tool buttons for the speech bubble. */
+export const BUBBLE_BAND = 44;
 
 const styles = StyleSheet.create({
   row: { flexDirection: "row", alignItems: "flex-end", justifyContent: "flex-end" },
