@@ -6,7 +6,7 @@ import { useRouter } from "expo-router";
 import { MAX_ENERGY, MAX_HEARTS, STORE_ITEMS, type Grade } from "@p6/shared";
 import { Sheet } from "../components/ui";
 import { getAllLv1, getTopics } from "../content";
-import { usePlayer, HEART_PERIOD_MS, ENERGY_PERIOD_MS, computeMeters } from "../store/player";
+import { usePlayer, computeMeters } from "../store/player";
 import { useProgress } from "../store/progress";
 import { useProfile } from "../store/profile";
 import { useCosmetics } from "../store/cosmetics";
@@ -69,11 +69,15 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
   const topics = getTopics(grade);
   const done = (msg: string) => setNote(msg);
 
-  const setMeter = (kind: "hearts" | "energy", value: number, nextInMs?: number) => {
-    const period = kind === "hearts" ? HEART_PERIOD_MS : ENERGY_PERIOD_MS;
-    // updatedAt chosen so the next unit arrives in `nextInMs` (default: a full period from now)
-    usePlayer.setState({ [kind]: { value, updatedAt: Date.now() - period + (nextInMs ?? period) } } as never);
-    done(`${kind === "hearts" ? "Hearts" : "Energy"} set to ${value}${nextInMs ? `, next one in ${nextInMs / 1000}s` : ""}`);
+  const setMeter = (kind: "hearts" | "energy", value: number) => {
+    usePlayer.setState({ [kind]: { value, updatedAt: Date.now() } } as never);
+    done(`${kind === "hearts" ? "Hearts" : "Energy"} set to ${value}`);
+  };
+  // Pretend the last change was yesterday, so the midnight refill happens now.
+  const simulateMidnight = () => {
+    const y = Date.now() - 86_400_000;
+    usePlayer.setState((s) => ({ hearts: { ...s.hearts, updatedAt: y }, energy: { ...s.energy, updatedAt: y } }));
+    done("Midnight passed: hearts and energy refilled");
   };
   const ensure = () => useProgress.getState().ensureGrade(grade, useProfile.getState().topicsLearnt);
   const unlockAll = () => { ensure(); for (const t of topics) useProgress.getState().unlockTopic(grade, t.id); done("All maps unlocked"); };
@@ -133,11 +137,10 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
         <Section title="Hearts & energy">
           <Btn label="Out of hearts" onPress={() => setMeter("hearts", 0)} />
           <Btn label="1 heart" onPress={() => setMeter("hearts", 1)} />
-          <Btn label="Heart back in 10s" onPress={() => setMeter("hearts", Math.max(0, Math.min(MAX_HEARTS - 1, m.hearts)), 10_000)} />
           <Btn label="Full hearts" onPress={() => setMeter("hearts", MAX_HEARTS)} />
           <Btn label="Out of energy" onPress={() => setMeter("energy", 0)} />
-          <Btn label="Energy back in 10s" onPress={() => setMeter("energy", Math.max(0, Math.min(MAX_ENERGY - 1, m.energy)), 10_000)} />
           <Btn label="Full energy" onPress={() => setMeter("energy", MAX_ENERGY)} />
+          <Btn label="Simulate midnight" onPress={simulateMidnight} />
         </Section>
         <Section title="Next ad (watch-an-ad buttons)">
           {(["rewarded", "load-failed", "dismissed"] as AdOutcome[]).map((o) => (

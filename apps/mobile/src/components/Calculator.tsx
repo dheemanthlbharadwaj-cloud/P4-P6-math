@@ -17,12 +17,12 @@ const KEYS: { k: string; kind: Kind; label?: string }[][] = [
   [{ k: "0", kind: "num" }, { k: ".", kind: "num" }, { k: "⌫", kind: "fn", label: "Delete" }, { k: "=", kind: "eq", label: "Equals" }],
 ];
 
-const KEY_COLORS: Record<Kind, { face: string; edge: string; text: string }> = {
-  num: { face: "#ffffff", edge: "#c9cde0", text: colors.ink },
-  op: { face: "#ffc94d", edge: "#e09b00", text: colors.ink },
-  eq: { face: "#3ccf91", edge: "#1f9466", text: "#ffffff" },
-  clear: { face: "#ff8a80", edge: "#d6544a", text: "#ffffff" },
-  fn: { face: "#c6ecf5", edge: "#7fd0e3", text: colors.ink },
+const KEY_COLORS: Record<Kind, { face: string; text: string }> = {
+  num: { face: "#ffffff", text: colors.ink },
+  op: { face: "#ffc94d", text: colors.ink },
+  eq: { face: "#3ccf91", text: "#ffffff" },
+  clear: { face: "#ff8a80", text: "#ffffff" },
+  fn: { face: "#c6ecf5", text: colors.ink },
 };
 
 export function CalculatorModal({ visible, onClose }: { visible: boolean; onClose: () => void }) {
@@ -79,7 +79,7 @@ export function CalculatorModal({ visible, onClose }: { visible: boolean; onClos
                 const c = KEY_COLORS[kind];
                 return (
                   <Pressable key={k} onPress={() => press(k)} accessibilityRole="button" accessibilityLabel={label ?? k}
-                    style={({ pressed }) => [styles.key, { backgroundColor: c.face, borderBottomColor: c.edge }, pressed && styles.keyDown]}>
+                    style={({ pressed }) => [styles.key, { backgroundColor: c.face }, pressed && styles.keyDown]}>
                     <Text style={[styles.keyText, { color: c.text }]}>{k}</Text>
                   </Pressable>
                 );

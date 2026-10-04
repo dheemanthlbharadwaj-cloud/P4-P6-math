@@ -5,13 +5,11 @@ import type { LevelNo, StoreItem } from "./types";
 export const QUESTIONS_PER_LEVEL = 5; // "5-5-5"
 export const STARS_PER_LEVEL: Record<LevelNo, number> = { 1: 1, 2: 2, 3: 3 };
 
-export const MAX_HEARTS = 5; // ASSUMPTION
-export const HEART_RECOVERY_MINUTES = 30; // ASSUMPTION: +1 heart every 30 min
+export const MAX_HEARTS = 10; // daily allowance, refilled at midnight
 export const HEARTS_PER_AD = 3; // from mindmap: Watch Ad → +3 hearts
 
-export const MAX_ENERGY = 10; // ASSUMPTION
+export const MAX_ENERGY = 10; // daily allowance, refilled at midnight
 export const ENERGY_PER_LEVEL = 1; // ASSUMPTION: starting a level costs 1 energy
-export const ENERGY_RECOVERY_MINUTES = 20; // ASSUMPTION
 export const ENERGY_PER_AD = 3; // ASSUMPTION
 
 export const REFERRAL_STARS = 5; // from mindmap

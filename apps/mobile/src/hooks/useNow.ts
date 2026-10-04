@@ -10,7 +10,7 @@ export function useNow(intervalMs = 1000): number {
   return now;
 }
 
-/** Live hearts/energy with regen applied (ticks every second). */
+/** Live hearts/energy (re-checked every second so the midnight refill shows up). */
 export function useMeters(): MetersView {
   const hearts = usePlayer((s) => s.hearts);
   const energy = usePlayer((s) => s.energy);

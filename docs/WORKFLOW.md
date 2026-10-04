@@ -15,7 +15,7 @@ board says nothing; each one is a constant in `packages/shared/src/gameRules.ts`
 → goes to the Game Level Map.
 
 ## 2. Game Level Map (home)
-- **Top bar:** hearts, energy, timer until the next heart/energy recovers, and the current topic name.
+- **Top bar:** hearts and energy (10 each per day, refilled at midnight, +3 per ad), and the current topic name.
 - **One map per topic.** Swipe left/right to change topic (each topic is its own map).
 - **Nodes on the map = subtopics.** Tapping a node button shows the subtopic name.
 - **Map features:** friends shown on the map (mini cat avatars with their full name).

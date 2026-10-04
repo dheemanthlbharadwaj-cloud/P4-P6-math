@@ -4,8 +4,8 @@ Defaults are already in code (`packages/shared/src/gameRules.ts`) so building is
 
 | # | Question | Current default |
 |---|---|---|
-| 1 | Max hearts, and how fast does a heart recover? | 5 hearts, +1 every 30 min |
-| 2 | Max energy, cost per level, recovery rate, energy per ad? | 10 energy, 1 per level, +1 every 20 min, +3 per ad |
+| 1 | Max hearts, and how fast does a heart recover? | Answered by the owner: 10 per day, refilled at midnight; ads add more |
+| 2 | Max energy, cost per level, recovery rate, energy per ad? | Answered by the owner: 10 per day, refilled at midnight; 1 per level; +3 per ad |
 | 3 | When is a level "complete": all 5 correct, or all 5 attempted? | Student must get all 5 right; wrong ones come back at the end of the level |
 | 4 | Does Skip cost anything, and does a skipped question count as wrong? | Skip is free, the question goes to the end of the queue, and it is not bookmarked |
 | 5 | Timed LV1 mini game: total time or per question? Does it give stars? | Answered by the owner: 5 minutes total with 5 hearts ("5-Minute Challenge"); no stars (practice) |

@@ -5,8 +5,6 @@ import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 
 type Variant = "primary" | "good" | "bad" | "ghost" | "gold";
 const bg: Record<Variant, string> = { primary: colors.primary, good: colors.good, bad: colors.bad, ghost: colors.card, gold: colors.accent };
-// Darker lip under each candy button (its "depth").
-const lip: Record<Variant, string> = { primary: "#08718c", good: "#2a7a31", bad: "#a8381a", ghost: colors.border, gold: "#c07f00" };
 
 export function Button({
   title, onPress, variant = "primary", disabled, small, style, textStyle, testID,
@@ -23,7 +21,7 @@ export function Button({
       disabled={disabled}
       onPress={onPress}
       style={({ pressed }) => [
-        styles.btn, small && styles.btnSmall, { backgroundColor: bg[variant], borderBottomColor: lip[variant] },
+        styles.btn, small && styles.btnSmall, { backgroundColor: bg[variant] },
         disabled && { opacity: 0.45 }, pressed && { transform: [{ translateY: 3 }], borderBottomWidth: 3 }, style,
       ]}
     >

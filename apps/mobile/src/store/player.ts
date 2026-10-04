@@ -1,13 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import {
-  ENERGY_PER_LEVEL, ENERGY_RECOVERY_MINUTES, HEARTS_PER_AD, HEART_RECOVERY_MINUTES, MAX_ENERGY, MAX_HEARTS, ENERGY_PER_AD,
+  ENERGY_PER_LEVEL, HEARTS_PER_AD, MAX_ENERGY, MAX_HEARTS, ENERGY_PER_AD,
 } from "@p6/shared";
-import { grant, newMeter, regen, spend, type Meter } from "../logic/regen";
+import { current, grant, newMeter, spend, type Meter } from "../logic/daily";
 import { persistStorage, STORE_PREFIX } from "./storage";
 
-export const HEART_PERIOD_MS = HEART_RECOVERY_MINUTES * 60_000;
-export const ENERGY_PERIOD_MS = ENERGY_RECOVERY_MINUTES * 60_000;
 
 interface PlayerState {
   hearts: Meter;
@@ -31,20 +29,20 @@ export const usePlayer = create<PlayerState>()(
       ...fresh(),
       spendHeart: (now = Date.now()) => {
         if (get().subscribed) return true;
-        const m = spend(get().hearts, 1, now, MAX_HEARTS, HEART_PERIOD_MS);
+        const m = spend(get().hearts, 1, now, MAX_HEARTS);
         if (!m) return false;
         set({ hearts: m });
         return true;
       },
       spendEnergy: (now = Date.now()) => {
         if (get().subscribed) return true;
-        const m = spend(get().energy, ENERGY_PER_LEVEL, now, MAX_ENERGY, ENERGY_PERIOD_MS);
+        const m = spend(get().energy, ENERGY_PER_LEVEL, now, MAX_ENERGY);
         if (!m) return false;
         set({ energy: m });
         return true;
       },
-      addHearts: (n = HEARTS_PER_AD, now = Date.now()) => set({ hearts: grant(get().hearts, n, now, MAX_HEARTS, HEART_PERIOD_MS) }),
-      addEnergy: (n = ENERGY_PER_AD, now = Date.now()) => set({ energy: grant(get().energy, n, now, MAX_ENERGY, ENERGY_PERIOD_MS) }),
+      addHearts: (n = HEARTS_PER_AD, now = Date.now()) => set({ hearts: grant(get().hearts, n, now, MAX_HEARTS) }),
+      addEnergy: (n = ENERGY_PER_AD, now = Date.now()) => set({ energy: grant(get().energy, n, now, MAX_ENERGY) }),
       setSubscribed: (subscribed) => set({ subscribed }),
       reset: () => set(fresh()),
     }),
@@ -55,23 +53,10 @@ export const usePlayer = create<PlayerState>()(
 export interface MetersView {
   hearts: number;
   energy: number;
-  heartNextMs: number | null;
-  energyNextMs: number | null;
-  /** The soonest recovery countdown (what the top bar shows). */
-  nextMs: number | null;
   subscribed: boolean;
 }
 
+/** Hearts and energy as of `now` (refilled if midnight has passed). */
 export function computeMeters(s: Pick<PlayerState, "hearts" | "energy" | "subscribed">, now: number): MetersView {
-  const h = regen(s.hearts, now, MAX_HEARTS, HEART_PERIOD_MS);
-  const e = regen(s.energy, now, MAX_ENERGY, ENERGY_PERIOD_MS);
-  const nexts = [h.nextInMs, e.nextInMs].filter((x): x is number => x != null);
-  return {
-    hearts: h.meter.value,
-    energy: e.meter.value,
-    heartNextMs: h.nextInMs,
-    energyNextMs: e.nextInMs,
-    nextMs: s.subscribed || nexts.length === 0 ? null : Math.min(...nexts),
-    subscribed: s.subscribed,
-  };
+  return { hearts: current(s.hearts, now, MAX_HEARTS).value, energy: current(s.energy, now, MAX_ENERGY).value, subscribed: s.subscribed };
 }

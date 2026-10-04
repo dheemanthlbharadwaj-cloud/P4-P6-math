@@ -37,7 +37,7 @@ export function ResourceModal({
         <Image source={kind === "hearts" ? uiAssets.icons.heart : uiAssets.icons.energy} style={{ width: 44, height: 44, marginTop: -10 }} />
         <H2 style={{ marginTop: 8 }}>{kind === "hearts" ? "Out of hearts!" : "Out of energy!"}</H2>
         <Body style={{ textAlign: "center", marginVertical: 8 }}>
-          Watch a short ad to get +{amount} {kind}, or {kind === "hearts" ? "give up this level" : "come back later"}. Recovery takes time.
+          Watch a short ad to get +{amount} {kind}, or {kind === "hearts" ? "give up this level" : "come back later"}. They refill at midnight.
         </Body>
         {msg ? <Text style={{ color: colors.bad, fontWeight: "700", marginBottom: 6 }}>{msg}</Text> : null}
       </View>
