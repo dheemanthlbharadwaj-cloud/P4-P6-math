@@ -12,7 +12,7 @@ import { useLeaveConfirm } from "../../../../src/components/LeaveConfirm";
 import { Stat } from "../../../../src/components/TopBar";
 import { getContentVersion, getLevelQuestions, getSubtopic } from "../../../../src/content";
 import { answer, correctCount, currentId, isDone, progressFraction, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
-import { nextLevel } from "../../../../src/logic/unlock";
+import { nextMapLevel } from "../../../../src/logic/unlock";
 import { computeMeters, usePlayer } from "../../../../src/store/player";
 import { useProgress } from "../../../../src/store/progress";
 import { useWrong } from "../../../../src/store/wrong";
@@ -96,11 +96,13 @@ export default function LevelScreen() {
   });
   const goMap = () => { if (router.canGoBack()) router.back(); else router.replace("/(tabs)/map"); };
 
+  // The next button up the map (same rule as the map: Level N+1 only once every Level N on the map is done).
+  const mapProgress = useProgress((s) => s.grades[grade]);
+  const nextNode = info ? nextMapLevel(mapProgress, [...info.topic.subtopics].sort((a, b) => a.order - b.order).map((s) => s.id), subtopicId, level) : null;
   const startNext = () => {
-    const nl = nextLevel(level);
-    if (!nl) return;
+    if (!nextNode) return;
     if (!usePlayer.getState().spendEnergy()) { setNeedEnergy(true); return; }
-    router.replace({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: subtopicId, level: String(nl) } });
+    router.replace({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: nextNode.subtopicId, level: String(nextNode.level) } });
   };
 
   if (!questions.length) {
@@ -131,8 +133,8 @@ export default function LevelScreen() {
           )}
         </View>
         <View style={{ padding: space.l, gap: 10 }}>
-          {won && nextLevel(level) ? <Button title={`Next: Level ${nextLevel(level)}`} variant="good" onPress={startNext} /> : null}
-          <Button title="Back to map" variant={won && nextLevel(level) ? "ghost" : "primary"} onPress={goMap} />
+          {won && nextNode ? <Button title="Next level" variant="good" onPress={startNext} /> : null}
+          <Button title="Back to map" variant={won && nextNode ? "ghost" : "primary"} onPress={goMap} />
         </View>
         <ResourceModal kind="energy" visible={needEnergy} onRewarded={() => { setNeedEnergy(false); startNext(); }} onGiveUp={() => setNeedEnergy(false)} giveUpLabel="Not now" />
       </Screen>

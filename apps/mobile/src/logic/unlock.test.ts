@@ -1,21 +1,32 @@
 import { describe, expect, it } from "vitest";
-import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, isTopicUnlocked, mergeGradeProgress, unlockTopic } from "./unlock";
+import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, nextMapLevel, isTopicUnlocked, mergeGradeProgress, unlockTopic } from "./unlock";
 import { mergeWrong, wrongDocsToPush } from "./wrongSync";
 import { answer, isDone, skip, startSession, toAnswers, correctCount } from "./levelSession";
 
 describe("level unlock", () => {
-  it("unlocks sequentially and completion is sticky", () => {
+  it("opens a level only when the previous level of every subtopic on the map is done; completion is sticky", () => {
+    const map = ["s1", "s2"];
     let p = emptyGradeProgress("P6", ["fractions"]);
-    expect(isLevelUnlocked(p, "s1", 1)).toBe(true);
-    expect(isLevelUnlocked(p, "s1", 2)).toBe(false);
+    expect(isLevelUnlocked(p, map, 1)).toBe(true);
+    expect(isLevelUnlocked(p, map, 2)).toBe(false);
     p = applyLevelResult(p, "s1", 1, 3, false, 1);
-    expect(isLevelUnlocked(p, "s1", 2)).toBe(false);
+    expect(isLevelUnlocked(p, map, 2)).toBe(false);
     p = applyLevelResult(p, "s1", 1, 5, true, 2);
-    expect(isLevelUnlocked(p, "s1", 2)).toBe(true);
-    expect(isLevelUnlocked(p, "s1", 3)).toBe(false);
-    p = applyLevelResult(p, "s1", 1, 1, false, 3);
+    expect(isLevelUnlocked(p, map, 2)).toBe(false); // s2 Level 1 still open
+    p = applyLevelResult(p, "s2", 1, 5, true, 3);
+    expect(isLevelUnlocked(p, map, 2)).toBe(true);
+    expect(isLevelUnlocked(p, map, 3)).toBe(false);
+    p = applyLevelResult(p, "s1", 1, 1, false, 4);
     expect(p.levels["s1#1"]).toMatchObject({ completed: true, bestCorrect: 5, completedAt: 2 });
-    expect(isLevelUnlocked(p, "s2", 2)).toBe(false);
+  });
+  it("next map level walks the map order and stops at a locked level", () => {
+    const map = ["s1", "s2"];
+    let p = emptyGradeProgress("P6");
+    expect(nextMapLevel(p, map, "s1", 1)).toEqual({ subtopicId: "s2", level: 1 });
+    p = applyLevelResult(p, "s1", 1, 5, true, 1);
+    expect(nextMapLevel(p, map, "s2", 1)).toBeNull(); // s1 done, s2 not: Level 2 still locked
+    p = applyLevelResult(p, "s2", 1, 5, true, 2);
+    expect(nextMapLevel(p, map, "s2", 1)).toEqual({ subtopicId: "s1", level: 2 });
   });
   it("unlocks topics idempotently", () => {
     let p = emptyGradeProgress("P6");

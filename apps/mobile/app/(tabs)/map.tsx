@@ -57,7 +57,7 @@ export default function MapTab() {
 
   // A level button opens that level straight away (no level picker).
   const start = (subtopicId: string, level: LevelNo, locked: boolean) => {
-    if (locked) { setNotice(`Finish Level ${level - 1} of this subtopic first.`); return; }
+    if (locked) { setNotice(`Finish every Level ${level - 1} on this map first.`); return; }
     const found = getSubtopic(grade, subtopicId);
     if (!found) return;
     if (getLevelQuestions(grade, found.subtopic.id, level).length === 0) { setNotice("This level has no questions yet."); return; }

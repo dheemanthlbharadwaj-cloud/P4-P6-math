@@ -100,6 +100,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   const ref = useRef<ScrollView>(null);
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
   // Bottom → top: every subtopic's Level 1, then every Level 2, then every Level 3.
+  const subIds = useMemo(() => subs.map((s) => s.id), [subs]);
   const nodes = useMemo(() => LEVELS.flatMap((level) => subs.map((s) => ({ s, level }))), [subs]);
   const n = nodes.length;
   const theme = mapThemeFor(topic.order);
@@ -111,7 +112,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   const pos = ts.map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
   const state = nodes.map(({ s, level }) => ({
     done: isLevelComplete(progress, s.id, level),
-    open: isLevelUnlocked(progress, s.id, level),
+    open: isLevelUnlocked(progress, subIds, level),
   }));
   const currentIdx = state.findIndex((x) => x.open && !x.done);
 

@@ -10,10 +10,13 @@ export function isLevelComplete(p: GradeProgress | undefined, subtopicId: string
   return !!p?.levels[levelKey(subtopicId, level)]?.completed;
 }
 
-/** Level 1 is always open; level N+1 opens when level N is completed (gold). */
-export function isLevelUnlocked(p: GradeProgress | undefined, subtopicId: string, level: LevelNo): boolean {
+/**
+ * Level 1 is always open. On a map, Level N+1 of every subtopic opens only once Level N of ALL the map's subtopics is
+ * completed (the map is one row of Level 1 buttons, then Level 2, then Level 3).
+ */
+export function isLevelUnlocked(p: GradeProgress | undefined, topicSubtopicIds: string[], level: LevelNo): boolean {
   if (level === 1) return true;
-  return isLevelComplete(p, subtopicId, (level - 1) as LevelNo);
+  return topicSubtopicIds.every((id) => isLevelComplete(p, id, (level - 1) as LevelNo));
 }
 
 export function isTopicUnlocked(p: GradeProgress | undefined, topicId: string): boolean {
@@ -62,4 +65,20 @@ export function mergeGradeProgress(a: GradeProgress, b: GradeProgress | undefine
     };
   }
   return { grade: a.grade, unlockedTopics: [...new Set([...a.unlockedTopics, ...(b.unlockedTopics ?? [])])], levels };
+}
+
+/**
+ * The next button up the map after (subtopicId, level), in map order (every Level 1, then every Level 2, then every
+ * Level 3), skipping finished levels. Null when nothing is left or the next one is still locked.
+ */
+export function nextMapLevel(
+  p: GradeProgress | undefined, topicSubtopicIds: string[], subtopicId: string, level: LevelNo,
+): { subtopicId: string; level: LevelNo } | null {
+  const order = ([1, 2, 3] as LevelNo[]).flatMap((l) => topicSubtopicIds.map((id) => ({ subtopicId: id, level: l })));
+  const at = order.findIndex((n) => n.subtopicId === subtopicId && n.level === level);
+  for (const n of order.slice(at + 1)) {
+    if (isLevelComplete(p, n.subtopicId, n.level)) continue;
+    return isLevelUnlocked(p, topicSubtopicIds, n.level) ? n : null;
+  }
+  return null;
 }
