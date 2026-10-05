@@ -9,6 +9,7 @@ import { mapThemeFor, uiAssets } from "../theme/assets";
 import { catPoses } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
 import { isLevelComplete, isLevelUnlocked } from "../logic/unlock";
+import { CAT, nodeRect, pickRect, placeCat, type Rect } from "../logic/mapLayout";
 import { colors, fonts } from "../theme/colors";
 
 const NODE = 48; // fits the narrowest measured water spot on every map (see scripts/map-scenes.py)
@@ -32,7 +33,7 @@ export interface TopicMapPageProps {
   onLockPress: () => void;
 }
 
-/** The student's own cat, in its colour and hat, bobbing gently on the water. */
+/** The student's own cat, in its colour and hat, bobbing gently on the water beside its button. */
 function PlayerCat() {
   const colorId = useCosmetics((c) => c.colorId);
   const hatId = useCosmetics((c) => c.hatId);
@@ -45,10 +46,9 @@ function PlayerCat() {
     loop.start();
     return () => loop.stop();
   }, [bob]);
-  const size = 78;
   return (
-    <Animated.View pointerEvents="none" style={{ position: "absolute", left: (NODE - size) / 2, top: -size * 0.72, transform: [{ translateY: bob }] }}>
-      <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={size} label="You are here" />
+    <Animated.View pointerEvents="none" style={{ transform: [{ translateY: bob }] }}>
+      <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={CAT.size} label="You are here" />
     </Animated.View>
   );
 }
@@ -94,20 +94,6 @@ function buildRoute(path: [number, number, 0 | 1][], width: number, height: numb
   return { at, length };
 }
 
-interface Rect { x: number; y: number; w: number; h: number }
-const overlap = (a: Rect, b: Rect) =>
-  Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) * Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
-/** First candidate that overlaps nothing; otherwise the one with the least overlap. */
-function pickRect(cands: Rect[], taken: Rect[]): Rect {
-  let best = cands[0], bestArea = Infinity;
-  for (const c of cands) {
-    const area = taken.reduce((t, r) => t + overlap(c, r), 0);
-    if (area === 0) return c;
-    if (area < bestArea) { best = c; bestArea = area; }
-  }
-  return best;
-}
-
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
@@ -150,9 +136,10 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   // Name labels: try right, left, above, below each button; take the first spot that stays on screen and overlaps no
   // other label or button (else the least-overlapping one). Friends' cats are placed the same way afterwards.
   const placed = useMemo(() => {
-    const rects: Rect[] = pos.map((p) => ({ x: p.x - NODE / 2 - 2, y: p.y - 2, w: NODE + 4, h: NODE + 4 }));
-    // The student's cat stands on the current button (see PlayerCat): keep names out from under it.
-    if (unlocked && currentIdx >= 0) { const p = pos[currentIdx]; rects.push({ x: p.x - 39, y: p.y - 58, w: 78, h: 74 }); }
+    const rects: Rect[] = pos.map((p) => nodeRect(p, NODE));
+    // The student's cat stands beside its button, never over any button; names keep out from under it.
+    const cat = unlocked && currentIdx >= 0 ? placeCat(pos, currentIdx, NODE, width) : null;
+    if (cat) rects.push(cat.covers);
     const labels = nodes.map(({ s }, i) => {
       const est = s.name.length * 6.2 + 14;
       const w = Math.min(LABEL_MAX, est), h = est > LABEL_MAX ? 32 : 19;
@@ -167,7 +154,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
       rects.push(best);
       return best;
     });
-    return { labels, rects };
+    return { labels, rects, cat };
   }, [pos.map((p) => `${p.x},${p.y}`).join(";"), nodes, width, unlocked, currentIdx]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Maps are walked bottom → top, so open at the bottom (the first subtopic). On web the first scroll can land before
@@ -210,9 +197,9 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
               </View>
             );
           })}
-          {/* The student's cat on its current button, drawn after every label so no name covers it. */}
-          {unlocked && currentIdx >= 0 ? (
-            <View pointerEvents="none" style={[styles.nodeWrap, { left: pos[currentIdx].x - NODE / 2, top: pos[currentIdx].y }]}><PlayerCat /></View>
+          {/* The student's cat beside its current button, drawn after every label so no name covers it. */}
+          {placed.cat ? (
+            <View pointerEvents="none" style={{ position: "absolute", left: placed.cat.x, top: placed.cat.y }}><PlayerCat /></View>
           ) : null}
           {unlocked
             ? (() => {
