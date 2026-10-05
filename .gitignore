@@ -16,3 +16,6 @@ dist-web/
 dist-dev/
 apps/mobile/dist-web-raw/
 apps/mobile/dist-preview/
+
+# map art pack, unpacked from design/source-assets/map-pack/pack.zip by map-scenes.py
+design/source-assets/map-pack/unzipped/

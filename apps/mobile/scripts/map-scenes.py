@@ -4,7 +4,12 @@ Writes assets/ui/map-bg-N.webp (N = 1..12) and src/theme/mapPaths.ts. The art is
 "Game Level Map for Water Games": every theme is a flooded island on a river), so no recolouring or extra paths.
 
     pip install pillow numpy scipy
+    python scripts/map-scenes.py            # uses the pack committed at design/source-assets/map-pack/pack.zip
     python scripts/map-scenes.py /path/to/unzipped-pack assets/content/P6/curriculum.json
+    python scripts/map-spots.py assets/content/P6/curriculum.json   # then: even button spots
+
+With no arguments, the PNGs the script needs are unpacked once from pack.zip into map-pack/unzipped/ (git-ignored;
+the 111 MB PSDs are skipped), and the located-obstacles cache (.obstacles.npy) is kept there too.
 
 How it works:
 1. Every island/object layer in the pack (assets/png/separated/*.png, 00_beginning, 13_end) is located in the full
@@ -19,6 +24,7 @@ import json
 import math
 import os
 import sys
+import zipfile
 
 import numpy as np
 from PIL import Image
@@ -27,6 +33,8 @@ from scipy.ndimage import distance_transform_edt
 Image.MAX_IMAGE_PIXELS = None
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "src", "theme", "mapPaths.ts")
+PACK_DIR = os.path.join(HERE, "..", "..", "..", "design", "source-assets", "map-pack")
+CURRICULUM = os.path.join(HERE, "..", "assets", "content", "P6", "curriculum.json")
 
 # Rows of each chapter's island in the full map (from the combined section PNGs). The crop is centred on them.
 ISLAND_ROWS = {1: (13680, 15920), 2: (12496, 14896), 3: (11712, 13664), 4: (10080, 12688), 5: (9200, 11520),
@@ -218,5 +226,14 @@ def main(pack, curriculum):
     print("wrote", OUT)
 
 
+def default_pack():
+    """Unpack the committed pack's PNGs once (skipping PSDs) and return the folder."""
+    out = os.path.join(PACK_DIR, "unzipped")
+    if not os.path.exists(os.path.join(out, "Game-Level-Map-for-Water-Games.png")):
+        with zipfile.ZipFile(os.path.join(PACK_DIR, "pack.zip")) as z:
+            z.extractall(out, [m for m in z.namelist() if m.lower().endswith(".png")])
+    return out
+
+
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1] if len(sys.argv) > 1 else default_pack(), sys.argv[2] if len(sys.argv) > 2 else CURRICULUM)

@@ -60,9 +60,12 @@ apps/mobile/       Expo app
   assets/content/P6/ GENERATED bundle: questions.json, curriculum.json, figures/*.webp + index.ts (only content/ writes here)
   scripts/web-preview.py   build dist-preview/ (packed figures, Dev Tools on)
   scripts/deploy-hosting.ts  deploy a folder to Firebase Hosting site via REST
-  scripts/map-scenes.py    crop artist map per chapter, place buttons (spots) avoiding scenery; caches <pack>/.obstacles.npy
+  scripts/map-scenes.py    cut each chapter's map (map-bg-N.webp) + river route from the artist's pack; caches <pack>/.obstacles.npy
+  scripts/map-spots.py     even button spots per map from map-bg-N.webp (run after map-scenes.py)
 docs/              WORKFLOW.md (spec), ARCHITECTURE.md (contract), OPEN_QUESTIONS.md
-design/source-assets/  originals not shipped
+design/source-assets/  originals not shipped; map-pack/pack.zip = the artist's map pack ("Game Level Map for Water Games":
+                   full river map PNG/PSD, per-island PNGs, separated object layers). map-scenes.py unpacks its PNGs to
+                   map-pack/unzipped/ (git-ignored) on first run.
 .claude/agents/    backend-builder, frontend-builder, integrator agent definitions
 ```
 
@@ -126,7 +129,7 @@ cd ../../content && npx tsx ../apps/mobile/scripts/deploy-hosting.ts ../apps/mob
 # serve locally instead: cd apps/mobile/dist-preview && python3 -m http.server 8080
 
 # map scenes (after new map art or chapter changes)
-cd apps/mobile && python3 scripts/map-scenes.py   # rewrites src/theme/mapPaths.ts spots; consts CW=1400 ROW=225 GROUP_GAP=2 JIT=0.45 BTN=86
+cd apps/mobile && python3 scripts/map-scenes.py   # no args = committed pack; rewrites map-bg-N.webp + mapPaths.ts (~4 min first run)
 cd apps/mobile && python3 scripts/map-spots.py assets/content/P6/curriculum.json   # then: even button spots (~2 min)
 ```
 
