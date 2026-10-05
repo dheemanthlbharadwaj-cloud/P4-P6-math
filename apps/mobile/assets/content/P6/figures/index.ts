@@ -574,7 +574,6 @@ export const figures: Record<string, number> = {
   "2023_ACSP_P1_Q25": require("./2023_ACSP_P1_Q25.webp"),
   "2023_ACSP_P1_Q27": require("./2023_ACSP_P1_Q27.webp"),
   "2023_ACSP_P1_Q28": require("./2023_ACSP_P1_Q28.webp"),
-  "2023_ACSP_P1_Q29": require("./2023_ACSP_P1_Q29.webp"),
   "2023_ACSP_P2_Q10": require("./2023_ACSP_P2_Q10.webp"),
   "2023_ACSP_P2_Q13": require("./2023_ACSP_P2_Q13.webp"),
   "2023_ACSP_P2_Q14": require("./2023_ACSP_P2_Q14.webp"),
