@@ -94,6 +94,20 @@ function buildRoute(path: [number, number, 0 | 1][], width: number, height: numb
   return { at, length };
 }
 
+interface Rect { x: number; y: number; w: number; h: number }
+const overlap = (a: Rect, b: Rect) =>
+  Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) * Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
+/** First candidate that overlaps nothing; otherwise the one with the least overlap. */
+function pickRect(cands: Rect[], taken: Rect[]): Rect {
+  let best = cands[0], bestArea = Infinity;
+  for (const c of cands) {
+    const area = taken.reduce((t, r) => t + overlap(c, r), 0);
+    if (area === 0) return c;
+    if (area < bestArea) { best = c; bestArea = area; }
+  }
+  return best;
+}
+
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
@@ -108,26 +122,51 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   // Nodes sit on spots measured from the art: open water, clear of buildings and objects. Other node counts
   // (P4/P5 later) fall back to even spacing along the same water route.
   const route = useMemo(() => buildRoute(theme.route.path, width, height), [theme, width, height]);
-  const ts = theme.route.nodes.length === n ? theme.route.nodes : evenSpots(n);
-  const pos = ts.map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
+  // Measured spots (even rows, wider gaps between the level groups); other node counts fall back to the route.
+  const spots = theme.route.spots;
+  const pos = spots && spots.length === n
+    ? spots.map(([x, y]) => ({ x: x * width, y: y * height - NODE / 2 }))
+    : evenSpots(n).map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
   const state = nodes.map(({ s, level }) => ({
     done: isLevelComplete(progress, s.id, level),
     open: isLevelUnlocked(progress, subIds, level),
   }));
   const currentIdx = state.findIndex((x) => x.open && !x.done);
 
-  // Trail dots follow the water route between consecutive nodes, skipping stretches hidden behind objects.
+  // Trail dots between consecutive buttons.
   const dots: { x: number; y: number; k: string }[] = [];
   for (let i = 0; i < n - 1; i++) {
-    const a = ts[i], b = ts[i + 1];
-    const steps = Math.max(2, Math.round((Math.abs(b - a) * route.length) / 26));
+    const p = pos[i], q = pos[i + 1];
+    const d = Math.hypot(q.x - p.x, q.y - p.y);
+    const steps = Math.max(2, Math.round(d / 22));
     for (let k = 1; k < steps; k++) {
-      const p = route.at(a + ((b - a) * k) / steps);
-      if (p.open && Math.hypot(p.x - pos[i].x, p.y - pos[i].y - NODE / 2) > NODE * 0.7 && Math.hypot(p.x - pos[i + 1].x, p.y - pos[i + 1].y - NODE / 2) > NODE * 0.7) {
-        dots.push({ x: p.x, y: p.y - NODE / 2, k: `${i}-${k}` });
-      }
+      const x = p.x + ((q.x - p.x) * k) / steps, y = p.y + ((q.y - p.y) * k) / steps;
+      if (Math.hypot(x - p.x, y - p.y) > NODE * 0.7 && Math.hypot(x - q.x, y - q.y) > NODE * 0.7) dots.push({ x, y, k: `${i}-${k}` });
     }
   }
+
+  // Name labels: try right, left, above, below each button; take the first spot that stays on screen and overlaps no
+  // other label or button (else the least-overlapping one). Friends' cats are placed the same way afterwards.
+  const placed = useMemo(() => {
+    const rects: Rect[] = pos.map((p) => ({ x: p.x - NODE / 2 - 2, y: p.y - 2, w: NODE + 4, h: NODE + 4 }));
+    // The student's cat stands on the current button (see PlayerCat): keep names out from under it.
+    if (unlocked && currentIdx >= 0) { const p = pos[currentIdx]; rects.push({ x: p.x - 39, y: p.y - 58, w: 78, h: 74 }); }
+    const labels = nodes.map(({ s }, i) => {
+      const est = s.name.length * 6.2 + 14;
+      const w = Math.min(LABEL_MAX, est), h = est > LABEL_MAX ? 32 : 19;
+      const p = pos[i], cy = p.y + NODE / 2;
+      const cands: Rect[] = [
+        { x: p.x + NODE / 2 + 4, y: cy - h / 2, w, h },
+        { x: p.x - NODE / 2 - 4 - w, y: cy - h / 2, w, h },
+        { x: p.x - w / 2, y: p.y - h - 2, w, h },
+        { x: p.x - w / 2, y: p.y + NODE + 2, w, h },
+      ].map((r) => ({ ...r, x: Math.min(width - r.w - 2, Math.max(2, r.x)) }));
+      const best = pickRect(cands, rects);
+      rects.push(best);
+      return best;
+    });
+    return { labels, rects };
+  }, [pos.map((p) => `${p.x},${p.y}`).join(";"), nodes, width, unlocked, currentIdx]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Maps are walked bottom → top, so open at the bottom (the first subtopic). On web the first scroll can land before
   // layout, so also retry once after the page has its measured height.
@@ -147,11 +186,9 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
           ))}
           {nodes.map(({ s, level }, i) => {
             const { done, open } = state[i];
-            const src = !unlocked || (!open && !done) ? uiAssets.node.locked : done ? uiAssets.node.gold : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
-            // Name beside the button, on whichever side has more room.
-            const right = pos[i].x < width / 2;
-            const room = right ? width - (pos[i].x + NODE / 2) - 10 : pos[i].x - NODE / 2 - 10;
-            const labelW = Math.max(90, Math.min(LABEL_MAX, room));
+            // Unfinished levels always show their level colour (blue / green / yellow); a finished level is a star.
+            const src = done ? uiAssets.icons.star : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
+            const lr = placed.labels[i];
             return (
               <View key={`${s.id}#${level}`} style={[styles.nodeWrap, { left: pos[i].x - NODE / 2, top: pos[i].y }]}>
                 <Pressable
@@ -162,13 +199,12 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                   hitSlop={6}
                   style={({ pressed }) => ({ width: NODE, height: NODE, alignItems: "center", justifyContent: "center", transform: [{ scale: pressed ? 0.92 : 1 }] })}
                 >
-                  <Image source={src} style={{ position: "absolute", width: NODE, height: NODE }} />
+                  <Image source={src} style={{ position: "absolute", width: done ? NODE + 6 : NODE, height: done ? NODE + 6 : NODE }} />
                   <Text style={[styles.num, done && styles.numOnStar]}>{i + 1}</Text>
+                  {!done && (!open || !unlocked) ? <Text style={styles.lockBadge}>🔒</Text> : null}
                 </Pressable>
-                {/* Explicit-width box beside the button (an absolute child of a 48pt view would otherwise wrap to 48pt);
-                    the white pill hugs the text on the button's side. */}
-                <View pointerEvents="none" style={[styles.labelBox, { width: labelW, top: NODE / 2 - 15 }, right ? { left: NODE + 4, alignItems: "flex-start" } : { right: NODE + 4, alignItems: "flex-end" }]}>
-                  <Text style={[styles.nodeName, !right && { textAlign: "right" }]} numberOfLines={2}>{s.name}</Text>
+                <View pointerEvents="none" style={[styles.labelBox, { left: lr.x - (pos[i].x - NODE / 2), top: lr.y - pos[i].y, width: lr.w }]}>
+                  <Text style={styles.nodeName} numberOfLines={2}>{s.name}</Text>
                 </View>
               </View>
             );
@@ -180,18 +216,25 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
           {unlocked
             ? (() => {
                 const perNode = new Map<number, number>();
+                const taken = [...placed.rects];
                 return friends.slice(0, 8).map((f) => {
                   // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
                   const i = hash(f.uid) % Math.max(1, n);
                   const k = perNode.get(i) ?? 0;
                   perNode.set(i, k + 1);
-                  // Stand beside the button on the side opposite its name label; a second friend takes the other side.
-                  const labelRight = pos[i].x < width / 2;
-                  const right = k % 2 === 0 ? !labelRight : labelRight;
-                  const fits = right ? pos[i].x + NODE / 2 + 64 <= width : pos[i].x - NODE / 2 - 64 >= 0;
-                  // No room on that side (button near the screen edge): stand just above the button instead.
-                  const x = !fits ? pos[i].x - 32 : right ? pos[i].x + NODE / 2 : pos[i].x - NODE / 2 - 64;
-                  const y = !fits ? pos[i].y - 58 : pos[i].y - 4 + Math.floor(k / 2) * 30;
+                  // Next to the button wherever no name or other button is in the way.
+                  const p = pos[i];
+                  const cands: Rect[] = [
+                    { x: p.x + NODE / 2 + 2, y: p.y - 6, w: 64, h: 66 },
+                    { x: p.x - NODE / 2 - 66, y: p.y - 6, w: 64, h: 66 },
+                    { x: p.x - 32, y: p.y - 68, w: 64, h: 66 },
+                    { x: p.x + NODE / 2 + 2, y: p.y - 66, w: 64, h: 66 },
+                    { x: p.x - NODE / 2 - 66, y: p.y - 66, w: 64, h: 66 },
+                  ].map((r) => ({ ...r, x: Math.min(width - r.w, Math.max(0, r.x)) }));
+                  const r = pickRect(cands, taken);
+                  taken.push(r);
+                  void k;
+                  const x = r.x, y = r.y;
                   return (
                     <View key={f.uid} style={[styles.friend, { left: Math.min(width - 64, Math.max(0, x)), top: y }]} pointerEvents="none">
                       <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={46} />
@@ -226,8 +269,9 @@ const styles = StyleSheet.create({
   num: { fontFamily: fonts.display, fontSize: 18, color: "#fff", marginTop: -4, textShadowColor: "rgba(51,38,42,0.85)", textShadowOffset: { width: 0, height: 1.5 }, textShadowRadius: 2 },
   numOnStar: { fontSize: 15, marginTop: 4 },
   dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
-  labelBox: { position: "absolute" },
-  nodeName: { fontSize: 11, lineHeight: 13, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden" },
+  labelBox: { position: "absolute", alignItems: "center" },
+  lockBadge: { position: "absolute", right: -6, bottom: -4, fontSize: 14 },
+  nodeName: { textAlign: "center", fontSize: 11, lineHeight: 13, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden" },
   friend: { position: "absolute", width: 64, alignItems: "center" },
   friendName: { fontSize: 11, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 4, borderRadius: 6, overflow: "hidden", maxWidth: 70 },
   lockWrap: { position: "absolute", bottom: 40, left: 0, right: 0, alignItems: "center" },

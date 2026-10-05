@@ -10,18 +10,18 @@ export const uiAssets = {
   // built by scripts/map-scenes.py.
   // aspect = height / width of the image; island = which side the island sits, so friends stand on the open-water side.
   maps: [
-    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 2.88, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 1.996, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 2.457, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-4.webp"), aspect: 2.034, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 2.918, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 2.457, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 2.918, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 5.59, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 2.457, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 2.918, island: "right", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 4.669, island: "left", ground: "#6cdde7" },
-    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 3.547, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-1.webp"), aspect: 2.218, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-2.webp"), aspect: 2.411, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-3.webp"), aspect: 2.893, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-4.webp"), aspect: 2.411, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-5.webp"), aspect: 3.375, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-6.webp"), aspect: 2.893, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-7.webp"), aspect: 3.375, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-8.webp"), aspect: 4.821, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-9.webp"), aspect: 2.893, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-10.webp"), aspect: 4.387, island: "right", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-11.webp"), aspect: 4.387, island: "left", ground: "#6cdde7" },
+    { bg: require("../../assets/ui/map-bg-12.webp"), aspect: 2.549, island: "right", ground: "#6cdde7" },
   ] as Omit<MapTheme, "route">[], // cycled by topic order
   node: {
     default: require("../../assets/ui/node-default.png") as ImageSourcePropType, // LV1 (blue)
