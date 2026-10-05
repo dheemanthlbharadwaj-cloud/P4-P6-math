@@ -12,9 +12,10 @@ export function CatCompanion({ mood, size = 96, message, floating = false, timer
   if (floating) {
     // Speech bubble floats to the left of the cat (does not widen the layout slot, which is exactly `size` wide).
     // Every mood's art is fitted into the same slot (size wide, 0.72·size tall), anchored bottom-right.
-    // With a timer, the cat stays at its board for the whole session (the board is a 5-minute clock); answers are
-    // acknowledged in the speech bubble instead of a different pose.
-    const src = timerStartedAt ? catMoodImage("thinking") : catMoodImage(mood);
+    // While thinking, the cat works at its board (the board fills as a 5-minute clock when a timer is given);
+    // after an answer it reacts with its mood animation (happy / confused / sad), as before.
+    const atBoard = !!timerStartedAt && mood === "thinking";
+    const src = catMoodImage(mood);
     const slotH = size * 0.72;
     const w = Math.min(size, slotH * catAspect(src));
     return (
@@ -26,7 +27,7 @@ export function CatCompanion({ mood, size = 96, message, floating = false, timer
             <Text style={styles.bubbleText}>{message}</Text>
           </View>
         ) : null}
-        {timerStartedAt ? <CatTimer startedAt={timerStartedAt} width={w} colorId={colorId} /> : <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />}
+        {atBoard ? <CatTimer startedAt={timerStartedAt!} width={w} colorId={colorId} /> : <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />}
       </View>
     );
   }

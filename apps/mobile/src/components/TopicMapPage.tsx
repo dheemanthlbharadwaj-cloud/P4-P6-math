@@ -131,7 +131,9 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
     done: isLevelComplete(progress, s.id, level),
     open: isLevelUnlocked(progress, subIds, level),
   }));
-  const currentIdx = state.findIndex((x) => x.open && !x.done);
+  // The student's cat stands on the furthest level they have completed (the first button before any is done).
+  const lastDone = state.reduce((acc, x, i) => (x.done ? i : acc), -1);
+  const currentIdx = n ? Math.max(0, lastDone) : -1;
 
   // Trail dots between consecutive buttons.
   const dots: { x: number; y: number; k: string }[] = [];
@@ -186,8 +188,8 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
           ))}
           {nodes.map(({ s, level }, i) => {
             const { done, open } = state[i];
-            // Unfinished levels always show their level colour (blue / green / yellow); a finished level is a star.
-            const src = done ? uiAssets.icons.star : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
+            // Unfinished levels always show their level colour (blue / green / yellow); a finished level is the gold button.
+            const src = done ? uiAssets.node.gold : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
             const lr = placed.labels[i];
             return (
               <View key={`${s.id}#${level}`} style={[styles.nodeWrap, { left: pos[i].x - NODE / 2, top: pos[i].y }]}>
@@ -199,9 +201,8 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                   hitSlop={6}
                   style={({ pressed }) => ({ width: NODE, height: NODE, alignItems: "center", justifyContent: "center", transform: [{ scale: pressed ? 0.92 : 1 }] })}
                 >
-                  <Image source={src} style={{ position: "absolute", width: done ? NODE + 6 : NODE, height: done ? NODE + 6 : NODE }} />
-                  <Text style={[styles.num, done && styles.numOnStar]}>{i + 1}</Text>
-                  {!done && (!open || !unlocked) ? <Text style={styles.lockBadge}>🔒</Text> : null}
+                  <Image source={src} style={{ position: "absolute", width: NODE, height: NODE }} />
+                  <Text style={styles.num}>{i + 1}</Text>
                 </Pressable>
                 <View pointerEvents="none" style={[styles.labelBox, { left: lr.x - (pos[i].x - NODE / 2), top: lr.y - pos[i].y, width: lr.w }]}>
                   <Text style={styles.nodeName} numberOfLines={2}>{s.name}</Text>
@@ -267,10 +268,8 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 const styles = StyleSheet.create({
   nodeWrap: { position: "absolute", width: NODE, height: NODE },
   num: { fontFamily: fonts.display, fontSize: 18, color: "#fff", marginTop: -4, textShadowColor: "rgba(51,38,42,0.85)", textShadowOffset: { width: 0, height: 1.5 }, textShadowRadius: 2 },
-  numOnStar: { fontSize: 15, marginTop: 4 },
   dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
   labelBox: { position: "absolute", alignItems: "center" },
-  lockBadge: { position: "absolute", right: -6, bottom: -4, fontSize: 14 },
   nodeName: { textAlign: "center", fontSize: 11, lineHeight: 13, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 8, overflow: "hidden" },
   friend: { position: "absolute", width: 64, alignItems: "center" },
   friendName: { fontSize: 11, fontFamily: fonts.display, color: colors.ink, backgroundColor: "rgba(255,255,255,0.9)", paddingHorizontal: 4, borderRadius: 6, overflow: "hidden", maxWidth: 70 },
