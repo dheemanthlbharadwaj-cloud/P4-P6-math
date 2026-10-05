@@ -1,0 +1,61 @@
+{
+ "2023_St Nicholas_P2_Q6": {
+  "why": "$14 → $11 (paper), cap price added",
+  "old": {
+   "question": "The table shows the prices of 5 items: Cap, Towel ＄0.90, Haversack ＄8.90, Water bottle ＄17.50, Sleeping bag ＄16.50. Of the 5 items, Glynis bought 3 of them and Levivia bought the remaining 2 items. The items each of them bought were different. Glynis spent ＄14 more than Levivia."
+  }
+ },
+ "2021_NANCHIAU_P1_Q29": {
+  "why": "children → fans, statements as on the paper",
+  "old": {
+   "question": "The table shows information about the number of households and the number of children in them. State whether each statement is true, false, or cannot be determined from the table.",
+   "question_parts": [
+    {
+     "part": "a",
+     "text": "72 households have exactly 2 children."
+    },
+    {
+     "part": "b",
+     "text": "9 households have at least 1 child."
+    },
+    {
+     "part": "c",
+     "text": "The numbers of households with 2 children and 3 children are equal."
+    }
+   ]
+  }
+ },
+ "2021_REDSWASTIKA_P2_Q10": {
+  "why": "placeholder text → the paper's question",
+  "old": {
+   "question": "The graph shows the distribution of the items described in the question.",
+   "question_parts": [
+    {
+     "part": "a",
+     "text": "Find the ratio shown by the graph."
+    },
+    {
+     "part": "b",
+     "text": "What percentage is represented?"
+    },
+    {
+     "part": "c",
+     "text": "Find the required number."
+    }
+   ]
+  }
+ },
+ "2021_RAFFLES_P1_Q27": {
+  "why": "text → the paper's Q27",
+  "old": {
+   "question": "The figure is made up of two squares. Square A has a perimeter of 24 cm."
+  }
+ },
+ "2021_St_Nicholas_P1A_Q14": {
+  "why": "duplicate of Q11 → excluded",
+  "old": {
+   "excluded": false,
+   "excluded_reason": null
+  }
+ }
+}
