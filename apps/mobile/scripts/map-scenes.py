@@ -1,30 +1,29 @@
-"""Cut one map per chapter straight from the artist's full river map, and measure where the buttons go.
+"""Make one map per chapter: the artist's river with that chapter's own themed island, and measure the route.
 
-Writes assets/ui/map-bg-N.webp (N = 1..12) and src/theme/mapPaths.ts. The art is used exactly as drawn (the pack is
-"Game Level Map for Water Games": every theme is a flooded island on a river), so no recolouring or extra paths.
+Writes assets/ui/map-bg-N.webp (N = 1..12), src/theme/mapPaths.ts (route; first-guess spots) and the map aspect
+ratios in src/theme/assets.ts. The art is used exactly as drawn (the pack is "Game Level Map for Water Games": every
+theme is a flooded island on a river): chapter N shows island N (1 yacht marina, 2 flooded city, 3 suburbia,
+4 military base, 5 ice, 6 mountains, 7 volcano, 8 city at night, 9 garbage dump, 10 theme park, 11 industrial
+platform, 12 space base) on the river, and no other island, so every map has its own theme.
 
     pip install pillow numpy scipy
-    python scripts/map-scenes.py            # uses the pack committed at design/source-assets/map-pack/pack.zip
-    python scripts/map-scenes.py /path/to/unzipped-pack assets/content/P6/curriculum.json
+    python scripts/map-scenes.py                                    # uses design/source-assets/map-pack/layers/
     python scripts/map-spots.py assets/content/P6/curriculum.json   # then: even button spots
 
-With no arguments, the PNGs the script needs are unpacked once from pack.zip into map-pack/unzipped/ (git-ignored;
-the 111 MB PSDs are skipped), and the located-obstacles cache (.obstacles.npy) is kept there too.
+The layers (river.png, island-N.png, layers.json) are rendered once from the pack's PSD by scripts/map-layers.py.
 
 How it works:
-1. Every island/object layer in the pack (assets/png/separated/*.png, 00_beginning, 13_end) is located in the full
-   map (Game-Level-Map-for-Water-Games.png) by template matching; their alpha masks together = obstacles.
-2. Per chapter, a portrait crop centred on that chapter's island (tall enough for its buttons) is saved as
-   map-bg-N.webp; a distance transform gives clearance to the nearest obstacle;
-   dynamic programming finds a smooth bottom→top route that maximises clearance.
-3. Node spots: first guesses only; run scripts/map-spots.py afterwards, which re-places the buttons evenly spaced.
+1. Per chapter, a portrait window centred on the island and tall enough for its buttons, is cut
+   from river + island N; island N's outline is the only obstacle.
+2. A distance transform gives clearance to the island; dynamic programming finds a smooth bottom→top route through
+   the water that maximises clearance.
+3. Node spots: first guesses only; scripts/map-spots.py re-places the buttons evenly spaced.
 """
-import glob
 import json
 import math
 import os
+import re
 import sys
-import zipfile
 
 import numpy as np
 from PIL import Image
@@ -34,50 +33,20 @@ Image.MAX_IMAGE_PIXELS = None
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "src", "theme", "mapPaths.ts")
 PACK_DIR = os.path.join(HERE, "..", "..", "..", "design", "source-assets", "map-pack")
+LAYERS = os.path.join(PACK_DIR, "layers")
+ASSETS_TS = os.path.join(HERE, "..", "src", "theme", "assets.ts")
 CURRICULUM = os.path.join(HERE, "..", "assets", "content", "P6", "curriculum.json")
 
-# Rows of each chapter's island in the full map (from the combined section PNGs). The crop is centred on them.
-ISLAND_ROWS = {1: (13680, 15920), 2: (12496, 14896), 3: (11712, 13664), 4: (10080, 12688), 5: (9200, 11520),
-               6: (7968, 10128), 7: (6864, 9280), 8: (5104, 8016), 9: (4336, 6960), 10: (2656, 5152),
-               11: (1392, 4528), 12: (128, 2992)}
 MIN_ASPECT = 1.8
-ROW = 225  # map pixels between button rows (~63pt on a 390pt-wide phone)
+ROW = 270  # map pixels between button rows (~63pt on a 390pt-wide phone at CW = 1680)
 GROUP_GAP = 2  # rows between level groups
 JIT = 0.45  # a button may move this many rows up/down from its even row to stay in open water
-BTN = 86  # button radius in map pixels (48pt button ≈ 172px wide at 1400px = 390pt)
-CW = 1400  # crop width in map pixels (the full map is 2048 wide)
+BTN = 103  # button radius in map pixels (48pt button ≈ 207px wide at 1680px = 390pt)
+CW = 1680  # crop width in map pixels (the full map is 2048 wide); fits the widest island (1660)
 ISLAND_SIDE = {o: ("left" if o % 2 else "right") for o in range(1, 13)}
 OUT_W = 1080
 D = 8  # analysis downsample
 DEBUG = os.environ.get("DEBUG") == "1"
-
-
-def locate(full_small, full, layer, s=16):
-    a = np.asarray(layer.resize((max(1, layer.width // s), max(1, layer.height // s))), dtype=np.float32)
-    m, rgb = a[..., 3] > 200, a[..., :3]
-    h, w = m.shape
-    best = (1e18, 0, 0)
-    for y in range(full_small.shape[0] - h + 1):
-        for x in range(full_small.shape[1] - w + 1):
-            d = ((full_small[y:y + h, x:x + w] - rgb) ** 2).sum(2)[m].mean()
-            if d < best[0]:
-                best = (d, y * s, x * s)
-    A = np.asarray(layer, dtype=np.float32)
-    ys, xs = np.nonzero(A[..., 3] > 200)
-    pick = np.random.default_rng(0).choice(len(ys), min(4000, len(ys)), replace=False)
-    ys, xs, col = ys[pick], xs[pick], A[ys[pick], xs[pick], :3]
-    _, cy, cx = best
-    best = (1e18, cy, cx)
-    for dy in range(-s, s + 1):
-        for dx in range(-s, s + 1):
-            Y, X = ys + cy + dy, xs + cx + dx
-            ok = (Y >= 0) & (Y < full.shape[0]) & (X >= 0) & (X < full.shape[1])
-            if ok.mean() < 0.95:
-                continue
-            d = ((full[Y[ok], X[ok]] - col[ok]) ** 2).sum(1).mean()
-            if d < best[0]:
-                best = (d, cy + dy, cx + dx)
-    return best[1], best[2]
 
 
 def route(clr, cap=300.0, lam=6.0, k=6):
@@ -119,28 +88,11 @@ def greedy(L, cs, c, d, n):
     return None
 
 
-def main(pack, curriculum):
-    full_img = Image.open(os.path.join(pack, "Game-Level-Map-for-Water-Games.png")).convert("RGB")
-    full = np.asarray(full_img, dtype=np.float32)
-    small = np.asarray(full_img.resize((full_img.width // 16, full_img.height // 16)), dtype=np.float32)
-    H, W = full.shape[:2]
-    layers = [os.path.join(pack, "assets/png/00_beginning.png"), os.path.join(pack, "assets/png/13_end.png")]
-    layers += [f for f in sorted(glob.glob(os.path.join(pack, "assets/png/separated/*.png"))) if "stream" not in f]
-    cache = os.path.join(pack, ".obstacles.npy")  # locating the layers takes minutes; reuse the result
-    if os.path.exists(cache):
-        obs = np.load(cache)
-        layers = []
-    else:
-        obs = np.zeros((H, W), bool)
-    for f in layers:
-        im = Image.open(f).convert("RGBA")
-        y, x = locate(small, full, im)
-        a = np.asarray(im)[..., 3] > 40
-        y0, x0, y1, x1 = max(0, y), max(0, x), min(H, y + im.height), min(W, x + im.width)
-        obs[y0:y1, x0:x1] |= a[y0 - y:y1 - y, x0 - x:x1 - x]
-        print("located", os.path.basename(f), y, x)
-    if layers:
-        np.save(cache, obs)
+def main(curriculum):
+    river = Image.open(os.path.join(LAYERS, "river.png")).convert("RGB")
+    W, H = river.size
+    where = json.load(open(os.path.join(LAYERS, "layers.json")))
+    aspects = {}
 
     counts = {t["order"]: len(t["subtopics"]) for t in json.load(open(curriculum))["topics"]}
     lines = [
@@ -154,7 +106,22 @@ def main(pack, curriculum):
         "export const mapPaths: MapPath[] = [",
     ]
     for o in range(1, 13):
-        y0, y1 = ISLAND_ROWS[o]
+        island = Image.open(os.path.join(LAYERS, f"island-{o}.png")).convert("RGBA")
+        scene = river.convert("RGBA")
+        sheet = Image.new("RGBA", (W, H))
+        sheet.paste(island, tuple(where[str(o)]))
+        scene.alpha_composite(sheet)
+        # Only this chapter's island is in the way. Its PSD group also holds its wave lines, which are already on the
+        # river, so pixels that look the same as the river underneath are water, not island.
+        lay = np.asarray(sheet).astype(np.int16)
+        diff = np.abs(np.asarray(scene.convert("RGB")).astype(np.int16) - np.asarray(river).astype(np.int16)).sum(axis=2)
+        obs = (lay[..., 3] > 40) & (diff > 24)
+        del lay, diff
+        rows = np.nonzero(obs.any(axis=1))[0]
+        y0, y1 = int(rows[0]), int(rows[-1])
+        cols = np.nonzero(obs.any(axis=0))[0]
+        cx0 = int(min(W - CW, max(0, (cols[0] + cols[-1]) // 2 - CW // 2)))
+        print(f"map {o}: island x {cols[0]}..{cols[-1]} (width {cols[-1] - cols[0]}), rows {y0}..{y1}")
         n = 3 * counts.get(o, 5)  # one button per level of every subtopic (LV1 row at the bottom, LV3 at the top)
         # Crop CW wide on the island's side (islands alternate left/right), so each map shows its own theme and only
         # glimpses of the neighbours; the river between the islands stays in view.
@@ -163,8 +130,8 @@ def main(pack, curriculum):
         per = n // 3
         slots = [i + (i // per) * (GROUP_GAP - 1) for i in range(n)]  # bottom first
         result = None
-        for grow in (1.0, 1.15, 1.3, 1.5, 1.75):
-            for c0 in sorted({0 if ISLAND_SIDE[o] == "left" else W - CW, (W - CW) // 2, W - CW if ISLAND_SIDE[o] == "left" else 0}):
+        for grow in (1.0,):  # one island on open water always leaves room
+            for c0 in (cx0,):  # always centred on the island, so its theme fills the map
                 h = int(max(CW * MIN_ASPECT, (y1 - y0) + 240, (slots[-1] + 2) * ROW) * grow)
                 top = max(0, min(H - h, (y0 + y1) // 2 - h // 2))
                 free = ~obs[top:top + h:D, c0:c0 + CW:D]
@@ -215,8 +182,9 @@ def main(pack, curriculum):
         idx = np.linspace(0, len(P) - 1, 90).astype(int)
         coarse = P[idx]
         nodes = []
-        crop = full_img.crop((c0, top, c0 + CW, top + h)).resize((OUT_W, round(h * OUT_W / CW)), Image.LANCZOS)
+        crop = scene.convert("RGB").crop((c0, top, c0 + CW, top + h)).resize((OUT_W, round(h * OUT_W / CW)), Image.LANCZOS)
         crop.save(os.path.join(HERE, "..", "assets", "ui", f"map-bg-{o}.webp"), quality=82, method=6)
+        aspects[o] = round(h / CW, 3)
         print(f"map {o}: aspect {h / CW:.3f}, {n} nodes, narrowest spot fits a {round(2 * lo / CW * 390)}pt button")
         pts = [f"[{round(x / CW, 4)}, {round(y / h, 4)}, 1]" for x, y in coarse]
         sp = [f"[{round(x / CW, 4)}, {round(y / h, 4)}]" for x, y in spots]
@@ -224,16 +192,13 @@ def main(pack, curriculum):
     lines.append("];")
     open(OUT, "w").write("\n".join(lines) + "\n")
     print("wrote", OUT)
-
-
-def default_pack():
-    """Unpack the committed pack's PNGs once (skipping PSDs) and return the folder."""
-    out = os.path.join(PACK_DIR, "unzipped")
-    if not os.path.exists(os.path.join(out, "Game-Level-Map-for-Water-Games.png")):
-        with zipfile.ZipFile(os.path.join(PACK_DIR, "pack.zip")) as z:
-            z.extractall(out, [m for m in z.namelist() if m.lower().endswith(".png")])
-    return out
+    ts = open(ASSETS_TS).read()
+    for o, a in aspects.items():
+        ts, k = re.subn(rf'(map-bg-{o}\.webp"\), aspect: )[\d.]+', rf"\g<1>{a}", ts)
+        assert k == 1, f"aspect for map {o} not found in assets.ts"
+    open(ASSETS_TS, "w").write(ts)
+    print("wrote", ASSETS_TS)
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else default_pack(), sys.argv[2] if len(sys.argv) > 2 else CURRICULUM)
+    main(sys.argv[1] if len(sys.argv) > 1 else CURRICULUM)

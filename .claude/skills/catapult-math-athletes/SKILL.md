@@ -30,9 +30,10 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
 |---|---|
 | Unlock | LV2 of any subtopic on a map unlocks only when **all LV1s on that map** are done; LV3 likewise needs all LV2s. `src/logic/unlock.ts` (`isLevelUnlocked`, `nextMapLevel`). |
 | Level buttons | Colour by level: LV1 blue (`node.default`), LV2 green (`node.l2`), LV3 yellow (`node.l3`, not the star yellow). Completed = the original **gold** node (`uiAssets.node.gold`). Number text `{i+1}`. **No lock badge.** |
+| Map theme | Map N shows only island N of the pack on the river (yacht marina, flooded city, suburbia, military base, ice, mountains, volcano, city at night, garbage dump, theme park, industrial platform, space base). |
 | Map layout | Even spacing; gaps only between level groups; subtopic labels never overlap buttons/cat (`pickRect` in `TopicMapPage.tsx`). Spots come from `theme/mapPaths.ts` (`spots`): `map-scenes.py` cuts the maps, then `apps/mobile/scripts/map-spots.py` places buttons exactly evenly (level-group jump = 2 steps) in open water. |
 | Cat on map | At the **furthest completed level** (`lastDone`), else first; stands **beside** that button and never covers any button (`placeCat` in `src/logic/mapLayout.ts`, tested). |
-| Cat in questions | Mood images change for correct ("great job") / wrong; the 5-min board clock (`CatTimer`) shows only while mood is `thinking` (`CatCompanion.tsx`). |
+| Cat in questions | Mood images change for correct ("great job") / wrong; the 5-min board clock (`CatTimer`) shows only while mood is `thinking` (`CatCompanion.tsx`) and **restarts for every question** in a level (the 5-Minute Challenge mini-game keeps one clock for the whole challenge). |
 | Hearts & energy | 10 each per day, refilled at local midnight (`src/logic/daily.ts`), +3 per rewarded ad, no recovery timer. Constants in `packages/shared/src/gameRules.ts`. |
 | Paywall | Heart + energy icons, title "Unlimited hearts and energy", no cat. |
 | Buttons | Full black border all round (no coloured lip). |
@@ -60,12 +61,13 @@ apps/mobile/       Expo app
   assets/content/P6/ GENERATED bundle: questions.json, curriculum.json, figures/*.webp + index.ts (only content/ writes here)
   scripts/web-preview.py   build dist-preview/ (packed figures, Dev Tools on)
   scripts/deploy-hosting.ts  deploy a folder to Firebase Hosting site via REST
-  scripts/map-scenes.py    cut each chapter's map (map-bg-N.webp) + river route from the artist's pack; caches <pack>/.obstacles.npy
+  scripts/map-layers.py    one-off: render river + 12 themed islands from the pack PSD into map-pack/layers/ (committed)
+  scripts/map-scenes.py    map-bg-N.webp = river + ONLY chapter N's island (1 yacht marina … 12 space base), + route, aspects
   scripts/map-spots.py     even button spots per map from map-bg-N.webp (run after map-scenes.py)
 docs/              WORKFLOW.md (spec), ARCHITECTURE.md (contract), OPEN_QUESTIONS.md
 design/source-assets/  originals not shipped; map-pack/pack.zip = the artist's map pack ("Game Level Map for Water Games":
-                   full river map PNG/PSD, per-island PNGs, separated object layers). map-scenes.py unpacks its PNGs to
-                   map-pack/unzipped/ (git-ignored) on first run.
+                   full river map PNG/PSD, per-island PNGs, separated object layers); map-pack/layers/ = river.png,
+                   island-N.png, layers.json rendered from its PSD (what map-scenes.py uses).
 .claude/agents/    backend-builder, frontend-builder, integrator agent definitions
 ```
 
@@ -129,7 +131,7 @@ cd ../../content && npx tsx ../apps/mobile/scripts/deploy-hosting.ts ../apps/mob
 # serve locally instead: cd apps/mobile/dist-preview && python3 -m http.server 8080
 
 # map scenes (after new map art or chapter changes)
-cd apps/mobile && python3 scripts/map-scenes.py   # no args = committed pack; rewrites map-bg-N.webp + mapPaths.ts (~4 min first run)
+cd apps/mobile && python3 scripts/map-scenes.py   # from map-pack/layers; rewrites map-bg-N.webp, mapPaths.ts, aspects in assets.ts (~20 s)
 cd apps/mobile && python3 scripts/map-spots.py assets/content/P6/curriculum.json   # then: even button spots (~2 min)
 ```
 

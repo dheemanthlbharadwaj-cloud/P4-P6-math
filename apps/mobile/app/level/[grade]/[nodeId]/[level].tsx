@@ -39,6 +39,7 @@ export default function LevelScreen() {
   const info = getSubtopic(grade, subtopicId);
   const [session, setSession] = useState<SessionState>(() => startSession(ids));
   const [reveal, setReveal] = useState<Reveal | null>(null);
+  const [startedAt, setStartedAt] = useState(() => Date.now()); // the cat's board: a 5-minute clock, restarted for every question
   const [gate, setGate] = useState(false);
   const [phase, setPhase] = useState<"playing" | "complete" | "gaveup">("playing");
   const [mood, setMood] = useState<CatMood>("thinking");
@@ -80,12 +81,11 @@ export default function LevelScreen() {
     setSession(s);
     setReveal(null);
     setMood("thinking");
+    setStartedAt(Date.now());
     if (isDone(s)) { save(true, s); setPhase("complete"); }
   };
 
-  const doSkip = () => { setSession((s) => skip(s)); setMood("thinking"); };
-
-  const [startedAt] = useState(() => Date.now()); // the cat's board is a 5-minute clock from here
+  const doSkip = () => { setSession((s) => skip(s)); setMood("thinking"); setStartedAt(Date.now()); };
   const giveUp = () => { setGate(false); save(false, session); setPhase("gaveup"); };
 
   const [needEnergy, setNeedEnergy] = useState(false);

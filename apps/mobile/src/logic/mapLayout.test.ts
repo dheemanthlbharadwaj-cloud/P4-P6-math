@@ -1,9 +1,11 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { mapPaths } from "../theme/mapPaths";
 import { nodeRect, overlap, placeCat } from "./mapLayout";
 
-// Height / width of each map image (uiAssets.maps in theme/assets.ts, which needs the bundler to load).
-const ASPECT = [2.218, 2.411, 2.893, 2.411, 3.375, 2.893, 3.375, 4.821, 2.893, 4.387, 4.387, 2.549];
+// Height / width of each map image, read from uiAssets.maps in theme/assets.ts (which needs the bundler to import;
+// tests run from apps/mobile).
+const ASPECT = [...readFileSync("src/theme/assets.ts", "utf8").matchAll(/map-bg-\d+\.webp"\), aspect: ([\d.]+)/g)].map((m) => Number(m[1]));
 const NODE = 48; // TopicMapPage button size
 const WIDTHS = [320, 360, 390, 430, 768];
 
