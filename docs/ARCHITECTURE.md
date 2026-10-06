@@ -85,17 +85,26 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
   No client can write stars, inventory, entitlements, leaderboards, medals, friendships or public profiles.
 - **Cloud Functions (TS, region asia-southeast1, timezone Asia/Singapore):**
   - `bootstrapProfile` (callable): creates `users`, `publicProfiles`, `wallets`, `friendCodes` once. Always returns
-    `{profile, created} + AccountState` (stars, monthly stars, owned items, equipped look, subscribed). `{restoreOnly: true}`
+    `{profile, created} + AccountState` (stars, monthly stars, lifetime stars, claimed quests, owned items, equipped look,
+    subscribed). `{restoreOnly: true}`
     returns `profile: null` instead of creating (used right after sign-in on a new device).
   - `submitLevelResult` (callable): idempotent per `attemptId`; checks `contentVersion` against `config/content` (when set);
-    awards `STARS_PER_LEVEL` for completed levels into wallet, ledger and the daily + monthly entries. A replay of an
-    attempt returns the current balances with `duplicate: true`.
+    stars per `packages/shared/src/stars.ts`: a level that never gave a star → +1 per answer with `firstTryCorrect`
+    (finished or not); a level already starred (`users/{uid}/starredLevels`) → +1 when completed. Into wallet
+    (`starBalance`, `totalStars`), ledger and the daily + monthly entries; marks the questions in `users/{uid}/attempted`.
+    A replay of an attempt returns the current balances with `duplicate: true`.
+  - `submitMinigameResult` (callable): idempotent per round; +1 star per question answered right that was never
+    attempted before (`users/{uid}/attempted`), so Unlimited Mistakes rounds earn none.
+  - `claimQuest {questId}` (callable): wallet `totalStars` ≥ the quest's goal → reward into the inventory, once
+    (`claimedQuests`).
   - `purchaseItem` (callable): atomic star deduction + inventory grant → `{starBalance, ownedItems}`.
   - `redeemReferral` (callable, `{friendCode}`): the caller is the referred user; the referrer gets +5 stars once per referred
     account and both become friends.
   - `sendFriendRequest {friendCode}` / `respondFriendRequest {requestId, accept}`.
-  - `getLeaderboard {scope: "daily" | "monthly"}` → `{scope, periodKey, selfUid, friendUids, friends: PublicProfile[], entries}`;
-    entries carry `rank, rankDelta, medal`. Daily = me + friends, ranked by monthly stars; monthly = global top 100 (+ me).
+  - `getLeaderboard {scope: "friends" | "school" | "global"}` → `{scope, periodKey, selfUid, friendUids, friends: PublicProfile[], entries}`;
+    entries carry `rank, rankDelta, medal, school`. All ranked by this month's stars: friends = me + friends; school =
+    everyone whose public profile has my school (up to 200); global = top 100 (+ me). The app's race track uses the
+    friends board.
   - Scheduled: `dailySnapshot` 00:00 SGT (rank arrows); `monthlyClose` 00:00 SGT on the 1st (see OPEN_QUESTIONS #14).
   - `revenuecatWebhook` (HTTPS) → `entitlements/{uid}`.
   - `deleteAccount` (callable): deletes Auth user + every document that belongs to them (incl. leaderboard entries/snapshots,

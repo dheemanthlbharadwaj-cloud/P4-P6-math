@@ -134,7 +134,9 @@ export interface LevelResult {
   contentVersion: string;
   subtopicId: string;
   level: LevelNo;
-  answers: { questionId: string; correct: boolean; skipped: boolean }[];
+  /** One entry per question: `correct` = answered right by the end, `firstTryCorrect` = the first answer to it in this
+   *  attempt was right (stars: see stars.ts). Attempts that end early are sent too (first-time stars still count). */
+  answers: { questionId: string; correct: boolean; skipped: boolean; firstTryCorrect: boolean }[];
   completed: boolean;
   finishedAt: number;
 }
@@ -158,6 +160,7 @@ export interface StoreItem {
 export interface LeaderboardEntry {
   uid: string;
   displayName: string;
+  school?: string;
   cat: CatLook;
   stars: number; // monthly stars (ranking key)
   questionsDone: number;

@@ -16,6 +16,8 @@ export async function loadAccountState(uid: string, profile: Pick<UserProfile, "
   return {
     starBalance: (wallet.data()?.starBalance as number | undefined) ?? 0,
     monthlyStars: (month.data()?.stars as number | undefined) ?? 0,
+    totalStars: (wallet.data()?.totalStars as number | undefined) ?? 0,
+    claimedQuests: (wallet.data()?.claimedQuests as string[] | undefined) ?? [],
     ownedItems: inventory.includes("color-black") ? inventory : ["color-black", ...inventory],
     equipped: profile ? { colorId: profile.cat.colorId, hatId: profile.cat.hatId ?? null } : DEFAULT_LOOK,
     subscribed: isSubscribed(ent.data(), now),

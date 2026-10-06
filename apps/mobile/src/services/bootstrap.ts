@@ -6,11 +6,13 @@ import { useCosmetics } from "../store/cosmetics";
 import { usePlayer } from "../store/player";
 import { useFriends } from "../store/friends";
 import { useProgress } from "../store/progress";
+import { useStars } from "../store/stars";
 
 /** Server-owned state always wins: stars, inventory, entitlement. */
 function applyAccount(a: AccountState, friendCode: string) {
   useProfile.getState().set({ friendCode, starBalance: a.starBalance, monthlyStars: a.monthlyStars });
   useCosmetics.getState().grantOwned(a.ownedItems);
+  useStars.getState().setServer({ totalStars: a.totalStars, claimedQuests: a.claimedQuests });
   usePlayer.getState().setSubscribed(a.subscribed); // RevenueCat (initPurchases) runs after and may override
 }
 
@@ -72,10 +74,10 @@ export async function bootstrapServerProfile(): Promise<boolean> {
   }
 }
 
-/** Refresh the friends cache used by the map (daily leaderboard = friends). Hides gracefully on failure. */
+/** Refresh the friends cache used by the map and the race track (friends leaderboard). Hides gracefully on failure. */
 export async function refreshFriends(): Promise<void> {
   try {
-    const res = await api.getLeaderboard({ scope: "daily" });
+    const res = await api.getLeaderboard({ scope: "friends" });
     useFriends.getState().set(res.friends.filter((f) => f.uid !== res.selfUid));
   } catch {
     /* offline: keep whatever we had */

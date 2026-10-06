@@ -18,6 +18,9 @@ const FRAMES: Record<string, number> = {
   "color-grey": require("../../assets/cats/timer/cat-timer-color-grey.png"),
   "color-white": require("../../assets/cats/timer/cat-timer-color-white.png"),
   "color-calico": require("../../assets/cats/timer/cat-timer-color-calico.png"),
+  "color-rose": require("../../assets/cats/timer/cat-timer-color-rose.png"),
+  "color-ocean": require("../../assets/cats/timer/cat-timer-color-ocean.png"),
+  "color-galaxy": require("../../assets/cats/timer/cat-timer-color-galaxy.png"),
 };
 
 export function CatTimer({ startedAt, width, colorId = "color-black", total = TIMER_MS }: { startedAt: number; width: number; colorId?: string; total?: number }) {

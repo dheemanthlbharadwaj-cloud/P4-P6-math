@@ -70,6 +70,17 @@ service cloud.firestore {
       match /attempts/{attemptId} {
         allow read, write: if false;
       }
+      // Star bookkeeping, written only by the callables (stars.ts rules): levels that gave a star, questions ever
+      // attempted, mini-game rounds.
+      match /starredLevels/{levelId} {
+        allow read, write: if false;
+      }
+      match /attempted/{questionId} {
+        allow read, write: if false;
+      }
+      match /minigames/{attemptId} {
+        allow read, write: if false;
+      }
     }
 
     // wallet (star balance + inventory): server only writes

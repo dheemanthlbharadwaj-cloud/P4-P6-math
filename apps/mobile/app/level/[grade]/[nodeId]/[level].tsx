@@ -1,9 +1,9 @@
 // Level / question screen: 5 questions, progress bar, cat companion, hearts, skip, calculator, picture viewer.
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Image, Pressable, Text, useWindowDimensions, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Crypto from "expo-crypto";
-import { markQuestion, STARS_PER_LEVEL, MAX_HEARTS, type Grade, type LevelNo, type LevelResult } from "@p6/shared";
+import { markQuestion, MAX_HEARTS, starsForLevelAnswer, starsForLevelCompletion, type Grade, type LevelNo, type LevelResult } from "@p6/shared";
 import { Body, Button, H1, H2, ProgressBar, Screen } from "../../../../src/components/ui";
 import { QuestionPanel, type Reveal } from "../../../../src/components/QuestionPanel";
 import { CatCompanion } from "../../../../src/components/CatCompanion";
@@ -11,12 +11,13 @@ import { ResourceModal } from "../../../../src/components/ResourceModal";
 import { useLeaveConfirm } from "../../../../src/components/LeaveConfirm";
 import { Stat } from "../../../../src/components/TopBar";
 import { getContentVersion, getLevelQuestions, getSubtopic } from "../../../../src/content";
-import { answer, correctCount, currentId, isDone, progressFraction, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
+import { answer, correctCount, currentId, isDone, isFirstTry, progressFraction, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
 import { nextMapLevel } from "../../../../src/logic/unlock";
 import { computeMeters, usePlayer } from "../../../../src/store/player";
 import { useProgress } from "../../../../src/store/progress";
 import { useWrong } from "../../../../src/store/wrong";
 import { useOfflineQueue } from "../../../../src/store/queue";
+import { useStars } from "../../../../src/store/stars";
 import { useMeters } from "../../../../src/hooks/useNow";
 import { flushOfflineQueue } from "../../../../src/services/sync";
 import { uiAssets } from "../../../../src/theme/assets";
@@ -45,6 +46,19 @@ export default function LevelScreen() {
   const [mood, setMood] = useState<CatMood>("thinking");
   const saved = useRef(false);
   const meters = useMeters();
+  // Stars (stars.ts): a level that never gave a star pays +1 per question right on the first try; a re-attempt pays
+  // +1 on completion. Decided once per attempt, so earning the first star mid-attempt doesn't change the rules.
+  const [starredBefore] = useState(() => useStars.getState().isLevelStarred(grade, subtopicId, level));
+  const [earned, setEarned] = useState(0);
+  const [gain, setGain] = useState(0); // stars from the answer on screen
+  const sessionRef = useRef(session);
+  sessionRef.current = session;
+  const earnStars = (n: number) => {
+    if (n <= 0) return;
+    useStars.getState().award(n);
+    useStars.getState().markLevelStarred(grade, subtopicId, level);
+    setEarned((e) => e + n);
+  };
 
   const curId = currentId(session);
   const question = questions.find((q) => q.id === curId);
@@ -53,20 +67,27 @@ export default function LevelScreen() {
     if (saved.current) return;
     saved.current = true;
     useProgress.getState().recordLevel(grade, subtopicId, level, correctCount(s), completed);
-    if (completed) {
+    // Every attempt with an answer goes to the server (first-time stars count even when the level isn't finished).
+    if (completed || Object.keys(s.firstTry).length) {
       const result: LevelResult = {
         attemptId: Crypto.randomUUID(), grade, contentVersion: getContentVersion(grade), subtopicId, level,
-        answers: toAnswers(s, ids), completed: true, finishedAt: Date.now(),
+        answers: toAnswers(s, ids), completed, finishedAt: Date.now(),
       };
       useOfflineQueue.getState().enqueue(result);
       void flushOfflineQueue(); // no-op/queued when offline
     }
   };
+  // Leaving mid-level still reports the answers given (their stars were already credited).
+  useEffect(() => () => { if (!saved.current && Object.keys(sessionRef.current.firstTry).length) save(false, sessionRef.current); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const submit = (responses: string[]) => {
     if (!question) return;
     const r = markQuestion(question, responses);
     setReveal({ correct: r.correct, perPart: r.perPart });
+    const st = starsForLevelAnswer(r.correct, isFirstTry(session, question.id), starredBefore);
+    useStars.getState().markAttempted(grade, question.id);
+    earnStars(st);
+    setGain(st);
     if (r.correct) { setMood("correct"); return; }
     useWrong.getState().add(grade, question.id);
     usePlayer.getState().spendHeart();
@@ -80,9 +101,10 @@ export default function LevelScreen() {
     const s = answer(session, reveal.correct);
     setSession(s);
     setReveal(null);
+    setGain(0);
     setMood("thinking");
     setStartedAt(Date.now());
-    if (isDone(s)) { save(true, s); setPhase("complete"); }
+    if (isDone(s)) { earnStars(starsForLevelCompletion(true, starredBefore)); save(true, s); setPhase("complete"); }
   };
 
   const doSkip = () => { setSession((s) => skip(s)); setMood("thinking"); setStartedAt(Date.now()); };
@@ -92,7 +114,7 @@ export default function LevelScreen() {
   const leaveConfirm = useLeaveConfirm({
     enabled: phase === "playing",
     title: "Leave this level?",
-    body: "Your progress in this attempt will be lost, and the energy you already spent is not refunded.",
+    body: "Your progress in this attempt will be lost, and the energy you already spent is not refunded. Stars you already earned stay.",
   });
   const goMap = () => { if (router.canGoBack()) router.back(); else router.replace("/(tabs)/map"); };
 
@@ -113,7 +135,7 @@ export default function LevelScreen() {
 
   if (phase !== "playing") {
     const won = phase === "complete";
-    const stars = STARS_PER_LEVEL[level];
+    const stars = earned;
     return (
       <Screen edges={["top", "bottom"]}>
         <View style={{ flex: 1, padding: space.l, alignItems: "center", justifyContent: "center" }}>
@@ -122,14 +144,17 @@ export default function LevelScreen() {
           <Body style={{ color: colors.inkSoft, textAlign: "center", marginTop: 4 }}>{info?.subtopic.name} · Level {level}</Body>
           {won ? (
             <>
-              <View style={{ flexDirection: "row", marginVertical: 16, gap: 8 }} accessibilityLabel={`${stars} stars earned`}>
-                {Array.from({ length: stars }, (_, i) => <Image key={i} source={uiAssets.icons.star} style={{ width: 56, height: 56 }} />)}
+              <View style={{ flexDirection: "row", marginTop: 16, gap: 8 }} accessibilityLabel={`${stars} stars earned`}>
+                {Array.from({ length: stars }, (_, i) => <Image key={i} source={uiAssets.icons.star} style={{ width: 48, height: 48 }} />)}
               </View>
+              <Text style={{ fontFamily: fonts.display, fontSize: 18, color: colors.ink, marginTop: 6, marginBottom: 12, textAlign: "center" }}>
+                {stars === 1 ? "1 star earned" : `${stars} stars earned`}{starredBefore ? " for finishing this level again" : ""}
+              </Text>
               <Image source={uiAssets.level.gold} style={{ width: 96, height: 96 }} />
               <Text style={{ fontWeight: "800", color: colors.inkSoft, marginTop: 6 }}>Your level button is now gold!</Text>
             </>
           ) : (
-            <Body style={{ textAlign: "center", marginVertical: 16 }}>You ran out of hearts. Rest up, then try again.</Body>
+            <Body style={{ textAlign: "center", marginVertical: 16 }}>You ran out of hearts. Rest up, then try again.{stars ? ` You still keep the ${stars === 1 ? "star" : `${stars} stars`} you earned.` : ""}</Body>
           )}
         </View>
         <View style={{ padding: space.l, gap: 10 }}>
@@ -141,7 +166,7 @@ export default function LevelScreen() {
     );
   }
 
-  const message = reveal ? (reveal.correct ? "Yes! Great job!" : "Oops, not quite!") : undefined;
+  const message = reveal ? (reveal.correct ? (gain ? "Yes! Great job! +1 star" : "Yes! Great job!") : "Oops, not quite!") : undefined;
 
   return (
     <Screen edges={["top", "bottom"]}>

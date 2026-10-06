@@ -35,6 +35,9 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
 | Cat on map | At the **furthest completed level** (`lastDone`), else first; stands **beside** that button and never covers any button (`placeCat` in `src/logic/mapLayout.ts`, tested). |
 | Cat in questions | Mood images change for correct ("great job") / wrong; the 5-min board clock (`CatTimer`) shows only while mood is `thinking` (`CatCompanion.tsx`) and **restarts for every question** in a level (the 5-Minute Challenge mini-game keeps one clock for the whole challenge). |
 | Hearts & energy | 10 each per day, refilled at local midnight (`src/logic/daily.ts`), +3 per rewarded ad, no recovery timer. Constants in `packages/shared/src/gameRules.ts`. |
+| Stars | `packages/shared/src/stars.ts` (app + backend use the same rules). Map level never starred: +1 per question right on the FIRST try in that attempt (skips aren't tries; credited as answered, kept if the level isn't finished). Level already starred (re-attempt): +1 when completed. Mini games: +1 per question right that was never attempted before (levels or mini games), so Unlimited Mistakes gives none. Practice: none. App ledger `src/store/stars.ts` (balance, this month, lifetime); server: submitLevelResult (`firstTryCorrect` per answer), submitMinigameResult, users/{uid}/starredLevels + attempted. |
+| Leaderboard | Title "Catapult Math Athletes"; race track (`RaceTrack.tsx`, `logic/raceTrack.ts`): only you + friends, x ∝ this month's stars, right = most, ~5 cats per screen, scrolls, ties in stacked lanes. Tabs Friends / School / Global (ranking = this month's stars). Below: Quests. |
+| Quests | Lifetime stars 25/50/75/100/150/200 unlock quest-only looks (Rose, Golden Cap, Ocean, Royal Crown, Galaxy, Star Wizard; `QUESTS` in stars.ts). Claim → inventory (claimQuest callable); shown in the store as "Quest · N★", never sold. Skins: `scripts/cat-colors.py` (from the grey coat); hats: `scripts/quest-hats.py` (recolours). |
 | Paywall | Heart + energy icons, title "Unlimited hearts and energy", no cat. |
 | Buttons | Full black border all round (no coloured lip). |
 | Question figures | Figure only; only text allowed is labels inside the figure. Parts separated by question text are cropped separately and stacked; text that can't be cropped out is whited out. Never under/over-crop. |
@@ -56,7 +59,10 @@ apps/mobile/       Expo app
   src/components/    TopicMapPage, CatCompanion, CatTimer, CatAvatar, QuestionPanel, Paywall, Calculator, ui.tsx, FigureViewer, RichText…
   src/logic/         unlock, daily, timer, calculator, psle, strokes, levelSession (vitest tests alongside)
   src/store/         player (hearts/energy), progress, profile, cosmetics, friends, queue, wrong…
-  src/dev/           DevToolsPanel (on in dev builds and when EXPO_PUBLIC_DEV_TOOLS=1): simulate midnight, set meters, unlock…
+  src/dev/           DevToolsPanel (on in dev builds and when EXPO_PUBLIC_DEV_TOOLS=1): simulate midnight, set meters, unlock,
+                     stars/quests (lifetime → 24/49/…, lock/unlock quests), star rules (forget starred levels / attempted
+                     questions), leaderboard (0/2/8 friends, set/clear school)…; samples.ts = sample friends, school
+                     mates and global players (shown while the backend isn't live; your own stars are real)
   src/theme/         assets.ts (uiAssets), cats.ts (catMoodImage), mapPaths.ts (generated), colors.ts
   assets/content/P6/ GENERATED bundle: questions.json, curriculum.json, figures/*.webp + index.ts (only content/ writes here)
   scripts/web-preview.py   build dist-preview/ (packed figures, Dev Tools on)

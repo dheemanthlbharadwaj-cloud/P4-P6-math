@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
-import { STORE_ITEMS, type StoreItem } from "@p6/shared";
+import { QUEST_ITEMS, QUESTS, STORE_ITEMS, type StoreItem } from "@p6/shared";
 import { Body, Button, Card, Chip, H1, Screen } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { Stat } from "../../src/components/TopBar";
@@ -10,23 +10,26 @@ import { catPoses } from "../../src/theme/cats";
 import { uiAssets } from "../../src/theme/assets";
 import { useCosmetics } from "../../src/store/cosmetics";
 import { useProfile } from "../../src/store/profile";
-import { pendingStarEstimate, useOfflineQueue } from "../../src/store/queue";
+import { SHOW_SAMPLES } from "../../src/dev/samples";
+
+// Quest rewards appear next to the store items but are never sold: they unlock in Leaderboard → Quests.
+type ShopItem = StoreItem & { questStars?: number };
+const QUEST_SHOP: ShopItem[] = QUEST_ITEMS.map((i) => ({ ...i, price: 0, questStars: QUESTS.find((q) => q.rewardId === i.id)?.stars }));
 import { colors, fonts, radius, space } from "../../src/theme/colors";
 
 export default function StoreTab() {
   const [kind, setKind] = useState<"color" | "hat">("color");
-  const [selected, setSelected] = useState<StoreItem | null>(null);
+  const [selected, setSelected] = useState<ShopItem | null>(null);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
   const { owned, colorId, hatId } = useCosmetics();
   const stars = useProfile((s) => s.starBalance);
-  const pending = useOfflineQueue((s) => pendingStarEstimate(s.items));
 
   const preview = {
     colorId: selected?.kind === "color" ? selected.id : colorId,
     hatId: selected?.kind === "hat" ? selected.id : hatId,
   };
-  const isOwned = !!selected && (owned.includes(selected.id) || selected.price === 0);
+  const isOwned = !!selected && (owned.includes(selected.id) || (selected.price === 0 && !selected.questStars));
   const isEquipped = !!selected && (selected.id === colorId || selected.id === hatId);
 
   // Equipping is a direct write of users/{uid}.cat; the Firestore rules refuse items the wallet does not own.
@@ -44,6 +47,14 @@ export default function StoreTab() {
       setMsg(`Bought ${selected.name}!`);
     } catch (e) {
       const code = (e as { code?: string }).code ?? "";
+      if (SHOW_SAMPLES && /not-signed-in|unavailable|network|deadline|internal|unknown/.test(code) && stars >= selected.price) {
+        // Sample mode (backend not live yet): apply the purchase on this device so the store can be tried.
+        useProfile.getState().set({ starBalance: stars - selected.price });
+        useCosmetics.getState().grantOwned([selected.id]);
+        useCosmetics.getState().equip(selected.id, selected.kind);
+        setMsg(`Bought ${selected.name}!`);
+        return;
+      }
       setMsg(/not-signed-in|unavailable|network|deadline/.test(code) ? "Connect to the internet to shop." : code.includes("failed-precondition") ? "Not enough stars yet." : "Could not complete the purchase.");
     } finally { setBusy(false); }
   };
@@ -55,17 +66,14 @@ export default function StoreTab() {
     setMsg(`${selected.name} equipped.`);
   };
 
-  const items = STORE_ITEMS.filter((i) => i.kind === kind);
+  const items: ShopItem[] = [...STORE_ITEMS, ...QUEST_SHOP].filter((i) => i.kind === kind);
 
   return (
     <Screen>
       <ScrollView contentContainerStyle={{ padding: space.l, gap: space.m }}>
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
           <H1>Cat Store</H1>
-          <View>
-            <Stat icon={uiAssets.icons.star as number} text={String(stars)} tint={colors.highlight} />
-            {pending > 0 ? <Text style={{ fontSize: 11, color: colors.inkSoft, textAlign: "right" }}>+{pending} syncing</Text> : null}
-          </View>
+          <Stat icon={uiAssets.icons.star as number} text={String(stars)} tint={colors.highlight} />
         </View>
 
         <Card style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "flex-end" }}>
@@ -87,12 +95,12 @@ export default function StoreTab() {
 
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
           {items.map((it) => {
-            const own = owned.includes(it.id) || it.price === 0;
+            const own = owned.includes(it.id) || (it.price === 0 && !it.questStars);
             const eq = it.id === colorId || it.id === hatId;
             const on = selected?.id === it.id;
             return (
               <Pressable key={it.id} onPress={() => { setSelected(it); setMsg(null); }} accessibilityRole="button" accessibilityState={{ selected: on }}
-                accessibilityLabel={`${it.name}, ${own ? (eq ? "equipped" : "owned") : `${it.price} stars`}`}
+                accessibilityLabel={`${it.name}, ${own ? (eq ? "equipped" : "owned") : it.questStars ? `quest reward at ${it.questStars} stars` : `${it.price} stars`}`}
                 style={{ width: "30%", flexGrow: 1, minWidth: 96, minHeight: 130, borderRadius: radius.m, borderWidth: 3, borderColor: on ? colors.primary : colors.border, backgroundColor: on ? "#e2f6fb" : colors.card, alignItems: "center", justifyContent: "center", padding: 8 }}>
                 {/* Each item shown on the student's own cat: colours on the bare cat, hats on the cat in its current colour. */}
                 {it.kind === "color" ? (
@@ -101,7 +109,7 @@ export default function StoreTab() {
                   <CatAvatar source={catPoses.cute} colorId={colorId} hatId={it.id} size={64} />
                 )}
                 <Text style={{ fontFamily: fonts.display, color: colors.ink, marginTop: 6, textAlign: "center" }} numberOfLines={1}>{it.name}</Text>
-                <Text style={{ fontWeight: "800", color: eq ? colors.good : own ? colors.inkSoft : colors.primaryDark }}>{eq ? "Equipped" : own ? "Owned" : `${it.price} stars`}</Text>
+                <Text style={{ fontWeight: "800", color: eq ? colors.good : own ? colors.inkSoft : colors.primaryDark }}>{eq ? "Equipped" : own ? "Owned" : it.questStars ? `Quest · ${it.questStars}★` : `${it.price} stars`}</Text>
               </Pressable>
             );
           })}
@@ -111,10 +119,12 @@ export default function StoreTab() {
           <View style={{ gap: 10 }}>
             {isOwned ? (
               <Button title={isEquipped ? "Equipped" : "Equip"} variant="good" onPress={equip} disabled={isEquipped} />
+            ) : selected.questStars ? (
+              <Body style={{ color: colors.inkSoft, textAlign: "center" }}>Quest reward: earn {selected.questStars} stars in total, then claim it in Leaderboard → Quests.</Body>
             ) : (
               <Button title={`Buy for ${selected.price} stars`} variant="gold" onPress={buy} disabled={busy || stars < selected.price} />
             )}
-            {!isOwned && stars < selected.price ? <Body style={{ color: colors.inkSoft }}>You need {selected.price - stars} more stars. Finish levels to earn them!</Body> : null}
+            {!isOwned && !selected.questStars && stars < selected.price ? <Body style={{ color: colors.inkSoft }}>You need {selected.price - stars} more stars. Finish levels to earn them!</Body> : null}
           </View>
         ) : null}
         {kind === "hat" && hatId ? <Button title="Take hat off" variant="ghost" small onPress={() => { useCosmetics.getState().unequipHat(); syncLook(); }} /> : null}

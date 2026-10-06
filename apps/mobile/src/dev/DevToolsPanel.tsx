@@ -1,9 +1,10 @@
 // DEV TOOLS panel (testing only, see devTools.ts): a floating 🛠 button that opens shortcuts to unlock content and
-// simulate situations (out of hearts/energy, ads failing, PSLE tomorrow, wrong questions to review, …).
+// simulate situations (out of hearts/energy, ads failing, PSLE tomorrow, wrong questions to review, stars, quests,
+// leaderboard friends and school, …).
 import React, { useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
-import { MAX_ENERGY, MAX_HEARTS, STORE_ITEMS, type Grade } from "@p6/shared";
+import { MAX_ENERGY, MAX_HEARTS, QUEST_ITEMS, QUESTS, STORE_ITEMS, type Grade } from "@p6/shared";
 import { Sheet } from "../components/ui";
 import { getAllLv1, getTopics } from "../content";
 import { usePlayer, computeMeters } from "../store/player";
@@ -11,6 +12,9 @@ import { useProgress } from "../store/progress";
 import { useProfile } from "../store/profile";
 import { useCosmetics } from "../store/cosmetics";
 import { useWrong } from "../store/wrong";
+import { useStars } from "../store/stars";
+import { useFriends } from "../store/friends";
+import { SAMPLE_FRIENDS, SAMPLE_REQUEST_PROFILE } from "./samples";
 import { resetAllStores } from "../store/reset";
 import { useNow } from "../hooks/useNow";
 import { colors, fonts, radius } from "../theme/colors";
@@ -59,6 +63,11 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
   const grade = useProfile((s) => s.grade) as Grade;
   const onboarded = useProfile((s) => s.onboarded);
   const stars = useProfile((s) => s.starBalance);
+  const monthStars = useProfile((s) => s.monthlyStars);
+  const school = useProfile((s) => s.school);
+  const lifetime = useStars((s) => s.totalStars);
+  const claimed = useStars((s) => s.claimedQuests.length);
+  const friendCount = useFriends((s) => s.friends.length);
   const psle = useProfile((s) => s.psleDate);
   const player = usePlayer();
   const m = computeMeters(player, now);
@@ -106,6 +115,24 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
     done(`${n} random questions flagged as previously wrong`);
   };
   const go = (path: string) => { onClose(); router.push(path as never); };
+  const award = (n: number) => { useStars.getState().award(n); done(`+${n} stars (balance, this month and lifetime)`); };
+  const setLifetime = (n: number) => { useStars.getState().set({ totalStars: n }); done(`Lifetime stars set to ${n}`); };
+  const questIds = QUEST_ITEMS.map((i) => i.id);
+  const lockQuests = () => {
+    useStars.getState().set({ claimedQuests: [] });
+    const c = useCosmetics.getState();
+    useCosmetics.setState({ owned: c.owned.filter((id) => !questIds.includes(id)), colorId: questIds.includes(c.colorId) ? "color-black" : c.colorId, hatId: c.hatId && questIds.includes(c.hatId) ? null : c.hatId });
+    done("Quests locked again (rewards taken off)");
+  };
+  const unlockQuests = () => {
+    useStars.getState().set({ claimedQuests: QUESTS.map((q) => q.id), totalStars: Math.max(useStars.getState().totalStars, QUESTS[QUESTS.length - 1].stars) });
+    useCosmetics.getState().grantOwned(questIds);
+    done("All quest rewards unlocked");
+  };
+  const setFriends = (n: "none" | "two" | "all") => {
+    useFriends.getState().set(n === "none" ? [] : n === "two" ? SAMPLE_FRIENDS.slice(0, 2) : [...SAMPLE_FRIENDS, SAMPLE_REQUEST_PROFILE]);
+    done(n === "none" ? "No friends" : n === "two" ? "2 sample friends" : "All sample friends (8)");
+  };
   const firstSub = [...(topics[0]?.subtopics ?? [])].sort((a, b) => a.order - b.order)[0];
 
   return (
@@ -115,7 +142,7 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
         <Btn label="Close" onPress={onClose} />
       </View>
       <Text style={{ color: colors.inkSoft, fontSize: 13, marginBottom: 8 }}>
-        Hearts {m.hearts}/{MAX_HEARTS} · Energy {m.energy}/{MAX_ENERGY} · Stars {stars} · Maps open {unlocked}/{topics.length} · Flagged {flagged} · PSLE {psle}
+        Hearts {m.hearts}/{MAX_HEARTS} · Energy {m.energy}/{MAX_ENERGY} · Stars {stars} (month {monthStars}, lifetime {lifetime}) · Quests {claimed}/{QUESTS.length} · Friends {friendCount} · School {school || "none"} · Maps open {unlocked}/{topics.length} · Flagged {flagged} · PSLE {psle}
         {m.subscribed ? " · SUBSCRIBED" : ""}
       </Text>
       {note ? <Text style={{ backgroundColor: colors.goodBg, borderRadius: radius.s, padding: 8, marginBottom: 8, color: colors.ink, fontWeight: "700" }}>✓ {note}</Text> : null}
@@ -127,6 +154,39 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
           <Btn label="Own all shop items" onPress={() => { useCosmetics.getState().grantOwned(STORE_ITEMS.map((i) => i.id)); done("All colours and hats owned"); }} />
           <Btn label="Stars → 500" onPress={() => { useProfile.getState().set({ starBalance: 500 }); done("Star balance 500"); }} />
           <Btn label="Stars → 0" onPress={() => { useProfile.getState().set({ starBalance: 0 }); done("Star balance 0"); }} />
+        </Section>
+        <Section title="Stars & quests">
+          <Btn label="+1 star" onPress={() => award(1)} />
+          <Btn label="+10 stars" onPress={() => award(10)} />
+          <Btn label="+25 stars" onPress={() => award(25)} />
+          {QUESTS.slice(0, 4).map((q) => <Btn key={q.id} label={`Lifetime → ${q.stars - 1}`} onPress={() => setLifetime(q.stars - 1)} />)}
+          <Btn label="Lifetime → 0" onPress={() => setLifetime(0)} />
+          <Btn label="This month → 0" onPress={() => { useProfile.getState().set({ monthlyStars: 0 }); done("This month's stars: 0 (last on the track)"); }} />
+          <Btn label="This month → 90 (top)" onPress={() => { useProfile.getState().set({ monthlyStars: 90 }); done("This month's stars: 90 (ahead of every friend)"); }} />
+          <Btn label="Unlock all quests" onPress={unlockQuests} />
+          <Btn label="Lock quests again" tone="danger" onPress={lockQuests} />
+        </Section>
+        <Section title="Star rules">
+          <Btn label="Forget starred levels" onPress={() => { useStars.getState().set({ starredLevels: {} }); done("Levels give 1 star per first-try answer again"); }} />
+          <Btn label="Star every level (re-attempt mode)" onPress={() => {
+            const all: Record<string, true> = {};
+            for (const t of topics) for (const s of t.subtopics) for (const l of [1, 2, 3]) all[`${grade}:${s.id}#${l}`] = true;
+            useStars.getState().set({ starredLevels: all }); done("Every level counts as already starred: 1 star per finished level");
+          }} />
+          <Btn label="Forget attempted questions" onPress={() => { useStars.getState().set({ attempted: {} }); done("Mini games give stars for every question again"); }} />
+          <Btn label="Mark all LV1 attempted" onPress={() => {
+            const all: Record<string, true> = { ...useStars.getState().attempted };
+            for (const q of getAllLv1(grade)) all[`${grade}:${q.id}`] = true;
+            useStars.getState().set({ attempted: all }); done("Every LV1 question attempted: the 5-Minute Challenge gives no new stars");
+          }} />
+        </Section>
+        <Section title="Leaderboard">
+          <Btn label="Friends: none" onPress={() => setFriends("none")} />
+          <Btn label="Friends: 2" onPress={() => setFriends("two")} />
+          <Btn label="Friends: all 8" onPress={() => setFriends("all")} />
+          <Btn label="School: Nanyang Primary" onPress={() => { useProfile.getState().set({ school: "Nanyang Primary School" }); done("School set (Aisyah and Priya are friends there)"); }} />
+          <Btn label="School: clear" onPress={() => { useProfile.getState().set({ school: "" }); done("No school: the School tab asks to add one"); }} />
+          <Btn label="Open Leaderboard" onPress={() => go("/(tabs)/leaderboard")} />
         </Section>
         <Section title="Progress">
           <Btn label="Half of map 1 done" onPress={() => complete("half-first")} />
@@ -162,6 +222,7 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
           {firstSub ? <Btn label="Map 1 · first level" onPress={() => go(`/level/${grade}/${firstSub.id}/1`)} /> : null}
           <Btn label="Map" onPress={() => go("/(tabs)/map")} />
           <Btn label="Cat Shop" onPress={() => go("/(tabs)/store")} />
+          <Btn label="Leaderboard" onPress={() => go("/(tabs)/leaderboard")} />
           <Btn label="Profile" onPress={() => go("/(tabs)/profile")} />
         </Section>
         <Section title="Account">

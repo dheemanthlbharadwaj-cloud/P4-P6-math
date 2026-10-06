@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { STARS_PER_LEVEL, type LevelResult } from "@p6/shared";
+import type { LevelResult } from "@p6/shared";
 import { persistStorage, STORE_PREFIX } from "./storage";
 
 interface QueueState {
@@ -21,7 +21,3 @@ export const useOfflineQueue = create<QueueState>()(
     { name: `${STORE_PREFIX}queue`, storage: persistStorage },
   ),
 );
-
-/** Upper-bound estimate of stars not yet confirmed by the server (display only). */
-export const pendingStarEstimate = (items: LevelResult[]) =>
-  items.reduce((n, r) => n + (r.completed ? STARS_PER_LEVEL[r.level] : 0), 0);

@@ -2,7 +2,7 @@ import { HttpsError, onCall } from "firebase-functions/v2/https";
 import type {
   GetLeaderboardResponse, PublicProfile, RespondFriendRequestResponse, SendFriendRequestResponse,
 } from "./shared/index.js";
-import { col, dailyBoard, db, entriesRef, FieldValue, monthlyBoard, requireUid, snapshotEntriesRef, throwFail } from "./admin.js";
+import { col, db, entriesRef, FieldValue, monthlyBoard, requireUid, snapshotEntriesRef, throwFail } from "./admin.js";
 import { sgtDate, sgtMonth } from "./logic/dates.js";
 import { buildEntries, type Medal, type Row } from "./logic/ranking.js";
 import { isFriendCode, normalizeFriendCode, pairId, validateFriendRequest } from "./logic/rules.js";
@@ -77,34 +77,40 @@ async function sideData(uids: string[], now: number) {
 }
 
 /**
- * scope "daily": me + friends (rank by monthly stars, today's questionsDone, arrows vs the 00:00 SGT snapshot).
- * scope "monthly": global top 100 (+ me when outside it). Both also return selfUid / friendUids / friends so the app
- * can highlight friends and draw them on the map.
+ * Ranking = stars earned this SGT month (arrows vs the 00:00 SGT snapshot).
+ * scope "friends": me + friends. scope "school": everyone whose profile has my school (up to 200).
+ * scope "global": top 100 (+ me when outside it). All return selfUid / friendUids / friends so the app can highlight
+ * friends and draw them on the map and the race track.
  */
+export const MAX_SCHOOL = 200;
 export const getLeaderboard = onCall(async (req): Promise<GetLeaderboardResponse> => {
   const uid = requireUid(req);
   const scope = (req.data as { scope?: unknown } | undefined)?.scope;
-  if (scope !== "daily" && scope !== "monthly") throw new HttpsError("invalid-argument", 'scope must be "daily" or "monthly"');
+  if (scope !== "friends" && scope !== "school" && scope !== "global") throw new HttpsError("invalid-argument", 'scope must be "friends", "school" or "global"');
   const now = Date.now();
   const month = monthlyBoard(sgtMonth(now));
-  const today = sgtDate(now);
 
   const fs = await db.collection(col.friendships).where("members", "array-contains", uid).limit(MAX_FRIENDS).get();
   const friendUids = fs.docs.map((d) => (d.data().members as string[]).find((m) => m !== uid)!).filter(Boolean);
   const respond = (entries: GetLeaderboardResponse["entries"], profiles: Map<string, PublicProfile>): GetLeaderboardResponse => ({
-    scope, periodKey: scope === "daily" ? today : sgtMonth(now), selfUid: uid, friendUids,
+    scope, periodKey: sgtMonth(now), selfUid: uid, friendUids,
     friends: friendUids.map((u) => profiles.get(u)).filter((p): p is PublicProfile => !!p),
     entries,
   });
+  const monthlyRows = async (uids: string[]): Promise<Row[]> => {
+    const m = await getAll<{ stars: number; questionsDone: number }>(uids.map((u) => entriesRef(month).doc(u)), (d) => ({ stars: d.data()!.stars ?? 0, questionsDone: d.data()!.questionsDone ?? 0 }));
+    return uids.map((u) => ({ uid: u, stars: m.get(u)?.stars ?? 0, questionsDone: m.get(u)?.questionsDone ?? 0 }));
+  };
 
-  if (scope === "daily") {
-    const uids = [uid, ...friendUids];
-    const [monthly, day, side] = await Promise.all([
-      getAll<{ stars: number }>(uids.map((u) => entriesRef(month).doc(u)), (d) => ({ stars: d.data()!.stars ?? 0 })),
-      getAll<{ questionsDone: number }>(uids.map((u) => entriesRef(dailyBoard(today)).doc(u)), (d) => ({ questionsDone: d.data()!.questionsDone ?? 0 })),
-      sideData(uids, now),
-    ]);
-    const rows: Row[] = uids.map((u) => ({ uid: u, stars: monthly.get(u)?.stars ?? 0, questionsDone: day.get(u)?.questionsDone ?? 0 }));
+  if (scope === "friends" || scope === "school") {
+    let uids = [uid, ...friendUids];
+    if (scope === "school") {
+      const me = await db.collection(col.publicProfiles).doc(uid).get();
+      const school = (me.data()?.school as string | undefined)?.trim();
+      const mates = school ? await db.collection(col.publicProfiles).where("school", "==", school).limit(MAX_SCHOOL).get() : null;
+      uids = [...new Set([uid, ...(mates?.docs.map((d) => d.id) ?? [])])];
+    }
+    const [rows, side] = await Promise.all([monthlyRows(uids), sideData([...new Set([...uids, ...friendUids])], now)]);
     return respond(buildEntries(rows, side), side.profiles);
   }
 

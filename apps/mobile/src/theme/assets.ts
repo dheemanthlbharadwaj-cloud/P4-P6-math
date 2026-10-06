@@ -61,6 +61,10 @@ export const uiAssets = {
     "hat-crown": require("../../assets/ui/hat-crown.png") as ImageSourcePropType,
     "hat-wizard": require("../../assets/ui/hat-wizard.png") as ImageSourcePropType,
     "hat-grad": require("../../assets/ui/hat-grad.png") as ImageSourcePropType,
+    // Quest rewards (scripts/quest-hats.py: recolours of the hats above).
+    "hat-cap-gold": require("../../assets/ui/hat-cap-gold.png") as ImageSourcePropType,
+    "hat-crown-royal": require("../../assets/ui/hat-crown-royal.png") as ImageSourcePropType,
+    "hat-wizard-star": require("../../assets/ui/hat-wizard-star.png") as ImageSourcePropType,
   } as Record<string, ImageSourcePropType>,
 };
 

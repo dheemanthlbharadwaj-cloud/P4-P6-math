@@ -25,6 +25,10 @@ const HAT_FIT: Record<string, { w: number; aspect: number; dx: number; sit: numb
   "hat-crown": { w: 0.28, aspect: 256 / 209, dx: -0.01, sit: 0.95, tilt: 6 },
   "hat-wizard": { w: 0.56, aspect: 256 / 113, dx: 0.005, sit: 0.9, tilt: -6 },
   "hat-grad": { w: 0.46, aspect: 256 / 173, dx: 0.005, sit: 0.85, tilt: 6 },
+  // Quest rewards: same shapes as their base hats.
+  "hat-cap-gold": { w: 0.4, aspect: 256 / 169, dx: 0.025, sit: 0.9, tilt: 10 },
+  "hat-crown-royal": { w: 0.28, aspect: 256 / 209, dx: -0.01, sit: 0.95, tilt: 6 },
+  "hat-wizard-star": { w: 0.56, aspect: 256 / 113, dx: 0.005, sit: 0.9, tilt: -6 },
 };
 
 interface Props {

@@ -3,10 +3,13 @@
 //   costs one). These hearts belong to the round only, not the player's map hearts.
 // - "mistakes": Unlimited Mistakes. Only questions answered wrong before, no timer, no hearts; a right answer takes
 //   the question's flag off. "all-wrong" is the same game over every question ever answered wrong.
+// Stars (stars.ts): +1 for each question answered right that was never attempted before (levels or mini games), so
+// re-attempts (every Unlimited Mistakes question, a question coming round again in the challenge) give none.
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Pressable, Text, useWindowDimensions, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { CHALLENGE_HEARTS, CHALLENGE_SECONDS, markQuestion, type Grade, type Question } from "@p6/shared";
+import * as Crypto from "expo-crypto";
+import { CHALLENGE_HEARTS, CHALLENGE_SECONDS, markQuestion, starsForMinigameAnswer, type Grade, type MinigameResult, type Question } from "@p6/shared";
 import { Body, Button, H1, ProgressBar, Screen } from "../../src/components/ui";
 import { Stat } from "../../src/components/TopBar";
 import { uiAssets } from "../../src/theme/assets";
@@ -15,6 +18,8 @@ import { CatCompanion } from "../../src/components/CatCompanion";
 import { useLeaveConfirm } from "../../src/components/LeaveConfirm";
 import { getAllLv1, getQuestion } from "../../src/content";
 import { useWrong } from "../../src/store/wrong";
+import { useStars } from "../../src/store/stars";
+import { api } from "../../src/services/api";
 import { useNow } from "../../src/hooks/useNow";
 import type { CatMood } from "../../src/theme/cats";
 import { useQuestionOrientation } from "../../src/hooks/useQuestionOrientation";
@@ -60,10 +65,18 @@ export default function MiniGame() {
   const remaining = Math.max(0, Math.ceil((deadline - now) / 1000));
   const q = over ? undefined : questions.find((x) => x.id === queue[0]);
   const wrongIds = useRef<Set<string>>(new Set());
+  const [stars, setStars] = useState(0);
+  const roundAnswers = useRef<MinigameResult["answers"]>([]);
+  const sent = useRef(false);
 
   const finishQuestion = (correct: boolean, msg: string | null) => {
     if (!q) return;
     setTries((t) => t + 1);
+    const st = useStars.getState();
+    const star = starsForMinigameAnswer(correct, st.wasAttempted(grade, q.id));
+    st.markAttempted(grade, q.id);
+    roundAnswers.current.push({ questionId: q.id, correct });
+    if (star) { st.award(star); setStars((n) => n + star); msg = `${msg ?? ""} +1 star`.trim(); }
     if (correct) {
       setScore((s) => s + 1);
       if (!timed && useWrong.getState().byGrade[grade]?.[q.id]) { useWrong.getState().remove(grade, q.id); msg = "Flag removed. Nice!"; }
@@ -105,6 +118,14 @@ export default function MiniGame() {
     fallback: "/(tabs)/classroom",
   });
 
+  // Round over: report it to the server (best effort; the stars are already credited on this device).
+  useEffect(() => {
+    if (q || sent.current || !roundAnswers.current.length) return;
+    sent.current = true;
+    const result: MinigameResult = { attemptId: Crypto.randomUUID(), grade, mode: timed ? "challenge" : mode === "all-wrong" ? "all-wrong" : "mistakes", answers: roundAnswers.current, finishedAt: Date.now() };
+    api.submitMinigameResult(result).catch(() => undefined);
+  }, [q, grade, mode, timed]);
+
   const title = timed ? "5-Minute Challenge" : mode === "all-wrong" ? "Unlimited Mistakes · all ever" : "Unlimited Mistakes";
 
   if (!q) {
@@ -114,6 +135,11 @@ export default function MiniGame() {
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: space.l }}>
           <CatCompanion mood={timed ? (score >= 10 ? "correct" : "idle") : total && score === total ? "correct" : "idle"} size={150} />
           <H1 style={{ marginTop: 12 }}>{heading}</H1>
+          {total > 0 ? (
+            <Text style={{ fontFamily: fonts.display, fontSize: 18, color: colors.ink, marginTop: 6 }} accessibilityLabel={`${stars} stars earned`}>
+              {stars ? `+${stars} star${stars === 1 ? "" : "s"} earned` : timed ? "No new stars this round" : "No stars: these are questions you tried before"}
+            </Text>
+          ) : null}
           {timed ? (
             <>
               <Text style={{ fontSize: 40, fontFamily: fonts.display, color: colors.primary, marginVertical: 8 }}>{score} solved</Text>

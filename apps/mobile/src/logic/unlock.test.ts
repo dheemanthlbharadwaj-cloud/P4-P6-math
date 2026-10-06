@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, nextMapLevel, isTopicUnlocked, mergeGradeProgress, unlockTopic } from "./unlock";
 import { mergeWrong, wrongDocsToPush } from "./wrongSync";
-import { answer, isDone, skip, startSession, toAnswers, correctCount } from "./levelSession";
+import { answer, isDone, isFirstTry, skip, startSession, toAnswers, correctCount } from "./levelSession";
 
 describe("level unlock", () => {
   it("opens a level only when the previous level of every subtopic on the map is done; completion is sticky", () => {
@@ -46,9 +46,17 @@ describe("level session", () => {
     expect(isDone(s)).toBe(true);
     expect(correctCount(s)).toBe(2);
     expect(toAnswers(s, ["a", "b"])).toEqual([
-      { questionId: "a", correct: true, skipped: false },
-      { questionId: "b", correct: true, skipped: false },
+      { questionId: "a", correct: true, skipped: false, firstTryCorrect: false }, // wrong on the first try: no star
+      { questionId: "b", correct: true, skipped: false, firstTryCorrect: true },
     ]);
+  });
+  it("a skip is not a try: a skipped question answered right counts as right first time", () => {
+    let s = startSession(["a", "b"]);
+    s = skip(s);
+    expect(isFirstTry(s, "a")).toBe(true);
+    s = answer(s, true); // b
+    s = answer(s, true); // a
+    expect(toAnswers(s, ["a", "b"]).map((x) => x.firstTryCorrect)).toEqual([true, true]);
   });
   it("skip moves to the end and is flagged", () => {
     let s = startSession(["a", "b", "c"]);

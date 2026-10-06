@@ -5,10 +5,10 @@
 // Error codes (HttpsError.code, without the "functions/" prefix the client SDK adds):
 //   invalid-argument    malformed request
 //   failed-precondition submitLevelResult: unknown content version / "completed" without 5 correct answers;
-//                       purchaseItem: not enough stars
-//   already-exists      purchaseItem: already owned; redeemReferral: already redeemed;
+//                       purchaseItem: not enough stars; claimQuest: not enough lifetime stars
+//   already-exists      purchaseItem: already owned; claimQuest: already claimed; redeemReferral: already redeemed;
 //                       sendFriendRequest: already friends / request already sent
-//   not-found           purchaseItem: unknown item; redeemReferral / sendFriendRequest: unknown friend code;
+//   not-found           purchaseItem: unknown item; claimQuest: unknown quest; redeemReferral / sendFriendRequest: unknown friend code;
 //                       respondFriendRequest: unknown request
 //   permission-denied   respondFriendRequest: not addressed to the caller
 //
@@ -24,6 +24,8 @@ export const FUNCTIONS_REGION = "asia-southeast1";
 export type CallableName =
   | "bootstrapProfile"
   | "submitLevelResult"
+  | "submitMinigameResult"
+  | "claimQuest"
   | "purchaseItem"
   | "redeemReferral"
   | "sendFriendRequest"
@@ -35,6 +37,8 @@ export type CallableName =
 export interface AccountState {
   starBalance: number;
   monthlyStars: number; // this SGT month
+  totalStars: number; // lifetime stars earned (quests)
+  claimedQuests: string[]; // quest ids
   ownedItems: string[]; // inventory item ids ("color-black" always included)
   equipped: CatLook;
   subscribed: boolean; // RevenueCat "unlimited" entitlement is active right now
@@ -60,6 +64,32 @@ export interface BootstrapProfileResponse extends AccountState {
 }
 
 // ---- submitLevelResult (request/response are LevelResult / LevelResultResponse in types.ts) ----
+
+// ---- submitMinigameResult: one round of a mini game; +1 star per question answered right that the student had
+//      never attempted before (levels or mini games), see stars.ts. Idempotent per attemptId. ----
+export interface MinigameResult {
+  attemptId: string;
+  grade: Grade;
+  mode: "challenge" | "mistakes" | "all-wrong";
+  answers: { questionId: string; correct: boolean }[]; // in the order answered
+  finishedAt: number;
+}
+export interface MinigameResultResponse {
+  starsAwarded: number;
+  starBalance: number;
+  monthlyStars: number;
+  totalStars: number;
+  duplicate: boolean;
+}
+
+// ---- claimQuest: lifetime stars ≥ quest.stars → the reward goes into the inventory ----
+export interface ClaimQuestRequest {
+  questId: string;
+}
+export interface ClaimQuestResponse {
+  ownedItems: string[];
+  claimedQuests: string[];
+}
 
 // ---- purchaseItem ----
 export interface PurchaseItemRequest {
@@ -95,19 +125,21 @@ export interface RespondFriendRequestResponse {
 }
 
 // ---- getLeaderboard ----
-export type LeaderboardScope = "daily" | "monthly";
+/** friends: the caller + friends; school: everyone at the caller's school; global: top 100 (+ the caller). */
+export type LeaderboardScope = "friends" | "school" | "global";
 export interface GetLeaderboardRequest {
   scope: LeaderboardScope;
 }
 export interface GetLeaderboardResponse {
   scope: LeaderboardScope;
-  /** daily → SGT date yyyy-mm-dd; monthly → SGT month yyyy-mm */
+  /** SGT month yyyy-mm (ranking = stars earned this month) */
   periodKey: string;
   selfUid: string;
   friendUids: string[];
   /** public profiles of the caller's friends (map avatars + names); never includes the caller */
   friends: PublicProfile[];
-  /** daily: caller + friends; monthly: global top 100 (+ the caller when outside it). Sorted by rank. */
+  /** friends: caller + friends; school: the caller's school (top 200); global: top 100 (+ the caller when outside
+   *  either list). Sorted by rank. */
   entries: LeaderboardEntry[];
 }
 

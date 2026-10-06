@@ -6,11 +6,13 @@ export interface SessionState {
   correct: Record<string, boolean>;
   everWrong: Record<string, boolean>;
   skipped: Record<string, boolean>;
+  /** The first ANSWER to each question in this attempt (skips are not answers): right or wrong. Stars use it. */
+  firstTry: Record<string, boolean>;
   total: number;
 }
 
 export function startSession(ids: string[]): SessionState {
-  return { queue: [...ids], correct: {}, everWrong: {}, skipped: {}, total: ids.length };
+  return { queue: [...ids], correct: {}, everWrong: {}, skipped: {}, firstTry: {}, total: ids.length };
 }
 
 export const currentId = (s: SessionState): string | undefined => s.queue[0];
@@ -19,12 +21,16 @@ export const correctCount = (s: SessionState) => Object.values(s.correct).filter
 /** Progress 0..1 = questions finally answered right. */
 export const progressFraction = (s: SessionState) => (s.total === 0 ? 1 : correctCount(s) / s.total);
 
+/** True when the current question has not been answered yet in this attempt (its next answer is the first try). */
+export const isFirstTry = (s: SessionState, id: string) => !(id in s.firstTry);
+
 export function answer(s: SessionState, isCorrect: boolean): SessionState {
   const id = s.queue[0];
   if (id === undefined) return s;
   const rest = s.queue.slice(1);
-  if (isCorrect) return { ...s, queue: rest, correct: { ...s.correct, [id]: true } };
-  return { ...s, queue: [...rest, id], everWrong: { ...s.everWrong, [id]: true } };
+  const firstTry = id in s.firstTry ? s.firstTry : { ...s.firstTry, [id]: isCorrect };
+  if (isCorrect) return { ...s, queue: rest, correct: { ...s.correct, [id]: true }, firstTry };
+  return { ...s, queue: [...rest, id], everWrong: { ...s.everWrong, [id]: true }, firstTry };
 }
 
 export function skip(s: SessionState): SessionState {
@@ -39,5 +45,6 @@ export function toAnswers(s: SessionState, allIds: string[]) {
     questionId,
     correct: !!s.correct[questionId],
     skipped: !!s.skipped[questionId] && !s.correct[questionId],
+    firstTryCorrect: s.firstTry[questionId] === true,
   }));
 }

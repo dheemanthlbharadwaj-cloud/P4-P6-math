@@ -33,7 +33,7 @@ export function rankDeltas(current: Row[], prevStars: Map<string, number> | null
   return out;
 }
 
-export interface ProfileLite { displayName: string; cat: CatLook }
+export interface ProfileLite { displayName: string; school?: string; cat: CatLook }
 export type Medal = "gold" | "silver" | "bronze";
 
 export function buildEntries(
@@ -48,6 +48,7 @@ export function buildEntries(
     const e: LeaderboardEntry = {
       uid: r.uid,
       displayName: p?.displayName ?? "Player",
+      ...(p?.school ? { school: p.school } : {}),
       cat: p ? { colorId: p.cat.colorId, hatId: p.cat.hatId ?? null } : { colorId: "color-black", hatId: null },
       stars: r.stars,
       questionsDone: r.questionsDone,

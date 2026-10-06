@@ -1,7 +1,8 @@
 // Typed wrappers for the Firebase callables (region asia-southeast1).
 import { httpsCallable } from "firebase/functions";
 import type {
-  BootstrapProfileRequest, BootstrapProfileResponse, CallableName, DeleteAccountRequest, DeleteAccountResponse, GetLeaderboardRequest,
+  BootstrapProfileRequest, BootstrapProfileResponse, CallableName, ClaimQuestRequest, ClaimQuestResponse, DeleteAccountRequest,
+  DeleteAccountResponse, GetLeaderboardRequest, MinigameResult, MinigameResultResponse,
   GetLeaderboardResponse, LevelResult, LevelResultResponse, PurchaseItemRequest, PurchaseItemResponse, RedeemReferralRequest,
   RedeemReferralResponse, RespondFriendRequestRequest, RespondFriendRequestResponse, RestoreProfileRequest, SendFriendRequestRequest,
   SendFriendRequestResponse,
@@ -34,6 +35,8 @@ async function call<Req, Res>(name: CallableName, data: Req): Promise<Res> {
 export const api = {
   bootstrapProfile: (r: BootstrapProfileRequest | RestoreProfileRequest) => call<typeof r, BootstrapProfileResponse>("bootstrapProfile", r),
   submitLevelResult: (r: LevelResult) => call<LevelResult, LevelResultResponse>("submitLevelResult", r),
+  submitMinigameResult: (r: MinigameResult) => call<MinigameResult, MinigameResultResponse>("submitMinigameResult", r),
+  claimQuest: (r: ClaimQuestRequest) => call<ClaimQuestRequest, ClaimQuestResponse>("claimQuest", r),
   purchaseItem: (r: PurchaseItemRequest) => call<PurchaseItemRequest, PurchaseItemResponse>("purchaseItem", r),
   redeemReferral: (r: RedeemReferralRequest) => call<RedeemReferralRequest, RedeemReferralResponse>("redeemReferral", r),
   sendFriendRequest: (r: SendFriendRequestRequest) => call<SendFriendRequestRequest, SendFriendRequestResponse>("sendFriendRequest", r),

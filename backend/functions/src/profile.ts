@@ -106,7 +106,7 @@ export const deleteAccount = onCall(async (req): Promise<DeleteAccountResponse> 
   const entries = await db.collectionGroup("entries").where("uid", "==", uid).get();
   await Promise.all(entries.docs.map((d) => d.ref.delete()));
 
-  await db.recursiveDelete(userRef); // profile, progress, wrong, ledger, attempts
+  await db.recursiveDelete(userRef); // profile, progress, wrong, ledger, attempts, starredLevels, attempted, minigames
   const singles = [
     db.collection(col.publicProfiles).doc(uid),
     db.collection(col.wallets).doc(uid),

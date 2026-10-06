@@ -4,7 +4,10 @@ import {
   daysInMonth, effectiveResultTime, isLastDayOfMonthSGT, monthEndInstantSGT, nextMonthKey, previousDate, previousMonthKey, sgtDate, sgtMonth, shiftDate,
 } from "../src/logic/dates";
 import { buildEntries, pickMedalWinners, rankDeltas, rankMap, sortRows } from "../src/logic/ranking";
-import { isContentVersionAccepted, isFriendCode, makeFriendCode, normalizeFriendCode, pairId, validateFriendRequest, validateLevelResult, validatePurchase, validateReferral } from "../src/logic/rules";
+import {
+  isContentVersionAccepted, isFriendCode, makeFriendCode, minigameStars, normalizeFriendCode, pairId, validateClaimQuest,
+  validateFriendRequest, validateLevelResult, validateMinigameResult, validatePurchase, validateReferral,
+} from "../src/logic/rules";
 import { authHeaderMatches, isActiveAt, isSubscribed, mapRevenueCatEvent, pickUid } from "../src/logic/revenuecat";
 import { timingSafeEqual } from "node:crypto";
 
@@ -100,30 +103,34 @@ describe("ranking", () => {
 
 const good = (over: object = {}) => ({
   attemptId: "attempt-12345678", grade: "P6", contentVersion: "abc", subtopicId: "p6-fractions-adding-fractions", level: 2, completed: true, finishedAt: 1,
-  answers: [1, 2, 3, 4, 5].map((i) => ({ questionId: `q${i}`, correct: true, skipped: false })), ...over,
+  answers: [1, 2, 3, 4, 5].map((i) => ({ questionId: `q${i}`, correct: true, skipped: false, firstTryCorrect: true })), ...over,
 });
 
 describe("validateLevelResult", () => {
-  it("awards stars per level when completed", () => {
-    for (const [lv, st] of [[1, 1], [2, 2], [3, 3]] as const) {
-      const v = validateLevelResult(good({ level: lv }));
-      expect(v.ok && v.stars).toBe(st);
-    }
+  it("counts questions right on the first try (first-time stars)", () => {
+    const answers = good().answers.map((a, i) => ({ ...a, firstTryCorrect: i !== 1 }));
+    const v = validateLevelResult(good({ answers }));
+    expect(v.ok && v.firstTryCorrect).toBe(4);
   });
-  it("no stars when not completed", () => {
-    const v = validateLevelResult(good({ completed: false, answers: [] }));
-    expect(v.ok && v.stars).toBe(0);
+  it("an unfinished attempt still reports its first-try answers", () => {
+    const v = validateLevelResult(good({ completed: false, answers: [{ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true }] }));
+    expect(v.ok && v.firstTryCorrect).toBe(1);
+    expect(v.ok && v.attemptedIds).toEqual(["q1"]);
+  });
+  it("rejects answers without firstTryCorrect", () => {
+    const v = validateLevelResult(good({ answers: [1, 2, 3, 4, 5].map((i) => ({ questionId: `q${i}`, correct: true, skipped: false })) }));
+    expect(v.ok).toBe(false);
   });
   it("rejects completed with too few correct", () => {
-    const v = validateLevelResult(good({ answers: [{ questionId: "q1", correct: true, skipped: false }] }));
+    const v = validateLevelResult(good({ answers: [{ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true }] }));
     expect(v.ok).toBe(false);
   });
   it("duplicate question ids don't count twice", () => {
-    const v = validateLevelResult(good({ answers: Array.from({ length: 6 }, () => ({ questionId: "q1", correct: true, skipped: false })) }));
+    const v = validateLevelResult(good({ answers: Array.from({ length: 6 }, () => ({ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true })) }));
     expect(v.ok).toBe(false);
   });
   it("counts non-skipped answers as questionsDone", () => {
-    const v = validateLevelResult(good({ answers: [...good().answers, { questionId: "q9", correct: false, skipped: true }, { questionId: "q8", correct: false, skipped: false }] }));
+    const v = validateLevelResult(good({ answers: [...good().answers, { questionId: "q9", correct: false, skipped: true, firstTryCorrect: false }, { questionId: "q8", correct: false, skipped: false, firstTryCorrect: false }] }));
     expect(v.ok && v.questionsDone).toBe(6);
   });
   it.each([
@@ -220,8 +227,36 @@ describe("integration seams", () => {
     expect(e.cat).toEqual({ colorId: "color-ginger", hatId: "hat-cap" });
   });
   it("a skipped-then-corrected question still counts once the student got it right (client sends skipped=false)", () => {
-    const answers = ["q1", "q2", "q3", "q4", "q5"].map((questionId) => ({ questionId, correct: true, skipped: false }));
+    // Skipping is not an answer, so a question skipped and then answered right is still right on the first try.
+    const answers = ["q1", "q2", "q3", "q4", "q5"].map((questionId) => ({ questionId, correct: true, skipped: false, firstTryCorrect: true }));
     const v = validateLevelResult({ attemptId: "abcdefgh-1234", grade: "P6", contentVersion: "v1", subtopicId: "p6-fractions-x1", level: 2, answers, completed: true, finishedAt: 1 });
-    expect(v.ok && v.stars).toBe(2);
+    expect(v.ok && v.firstTryCorrect).toBe(5);
+  });
+});
+
+describe("mini-game stars", () => {
+  const round = (over: object = {}) => ({ attemptId: "round-12345678", grade: "P6", mode: "challenge", finishedAt: 1, answers: [{ questionId: "a", correct: true }], ...over });
+  it("validates a round", () => {
+    expect(validateMinigameResult(round()).ok).toBe(true);
+    expect(validateMinigameResult(round({ mode: "practice" })).ok).toBe(false);
+    expect(validateMinigameResult(round({ answers: [{ questionId: "a" }] })).ok).toBe(false);
+  });
+  it("+1 per new question answered right; re-attempts and repeats give nothing", () => {
+    const answers = [
+      { questionId: "a", correct: true }, { questionId: "b", correct: true }, { questionId: "c", correct: false },
+      { questionId: "c", correct: true }, { questionId: "a", correct: true },
+    ];
+    expect(minigameStars(answers, new Set(["b"]))).toBe(1); // only a (b attempted before, c wrong on its first go)
+  });
+});
+
+describe("claimQuest", () => {
+  it("needs enough lifetime stars, once", () => {
+    expect(validateClaimQuest({ questId: "quest-25", totalStars: 24, claimed: [], inventory: ["color-black"] }).ok).toBe(false);
+    const v = validateClaimQuest({ questId: "quest-25", totalStars: 25, claimed: [], inventory: ["color-black"] });
+    expect(v.ok && v.inventory).toEqual(["color-black", "color-rose"]);
+    expect(v.ok && v.claimed).toEqual(["quest-25"]);
+    expect(validateClaimQuest({ questId: "quest-25", totalStars: 99, claimed: ["quest-25"], inventory: [] }).ok).toBe(false);
+    expect(validateClaimQuest({ questId: "nope", totalStars: 999, claimed: [], inventory: [] }).ok).toBe(false);
   });
 });

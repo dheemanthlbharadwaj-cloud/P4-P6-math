@@ -1,20 +1,29 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import {
-  REFERRAL_STARS, STORE_ITEMS, type LevelResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
+  REFERRAL_STARS, STORE_ITEMS, levelKey, starsForLevelCompletion, type ClaimQuestRequest, type ClaimQuestResponse,
+  type LevelResultResponse, type MinigameResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
   type RedeemReferralRequest, type RedeemReferralResponse,
 } from "./shared/index.js";
 import { col, dailyBoard, db, entriesRef, FieldValue, monthlyBoard, requireUid, throwFail } from "./admin.js";
 import { effectiveResultTime, sgtDate, sgtMonth } from "./logic/dates.js";
 import {
-  isContentVersionAccepted, normalizeFriendCode, pairId, validateLevelResult, validatePurchase, validateReferral,
+  isContentVersionAccepted, minigameStars, normalizeFriendCode, pairId, validateClaimQuest, validateLevelResult,
+  validateMinigameResult, validatePurchase, validateReferral,
 } from "./logic/rules.js";
 
-/** Idempotent per attemptId. Awards stars only for completed levels; bumps daily + monthly leaderboard entries. */
+/** users/{uid}/attempted/{grade}_{questionId}: questions ever attempted (mini-game stars only for new ones). */
+const attemptedRef = (uid: string, grade: string, questionId: string) =>
+  db.collection(col.users).doc(uid).collection("attempted").doc(`${grade}_${questionId}`.replace(/\//g, "_"));
+
+/**
+ * Idempotent per attemptId. Stars (stars.ts): a level that never gave a star → +1 per question right on the first try;
+ * a level that already did → +1 when completed. Bumps daily + monthly leaderboard entries and lifetime stars.
+ */
 export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse> => {
   const uid = requireUid(req);
   const v = validateLevelResult(req.data);
   if (!v.ok) throwFail(v);
-  const { result, stars, questionsDone } = v;
+  const { result, firstTryCorrect, questionsDone, attemptedIds } = v;
 
   const cfg = await db.collection(col.config).doc("content").get();
   const accepted = (cfg.data()?.acceptedVersions as Record<string, string[]> | undefined)?.[result.grade];
@@ -29,9 +38,10 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   const monthRef = entriesRef(monthlyBoard(sgtMonth(when))).doc(uid);
   const dayRef = entriesRef(dailyBoard(sgtDate(when))).doc(uid);
   const ledgerRef = db.collection(col.users).doc(uid).collection("ledger").doc(`level_${result.attemptId}`);
+  const starredRef = db.collection(col.users).doc(uid).collection("starredLevels").doc(`${result.grade}_${levelKey(result.subtopicId, result.level)}`);
 
   return db.runTransaction(async (tx) => {
-    const [attempt, wallet, month] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef)]);
+    const [attempt, wallet, month, starred] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef), tx.get(starredRef)]);
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
     if (attempt.exists) {
@@ -40,8 +50,11 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
       const prev = attempt.data()!.response as LevelResultResponse;
       return { starsAwarded: prev.starsAwarded, starBalance: balance, monthlyStars: (month.data()?.stars as number | undefined) ?? 0, duplicate: true };
     }
+    const stars = starred.exists ? starsForLevelCompletion(result.completed, true) : firstTryCorrect;
     const monthlyStars = ((month.data()?.stars as number | undefined) ?? 0) + stars;
     const response: LevelResultResponse = { starsAwarded: stars, starBalance: balance + stars, monthlyStars, duplicate: false };
+    if (stars > 0 && !starred.exists) tx.set(starredRef, { at: FieldValue.serverTimestamp() });
+    for (const q of attemptedIds) tx.set(attemptedRef(uid, result.grade, q), { at: FieldValue.serverTimestamp() }, { merge: true });
 
     tx.set(attemptRef, {
       attemptId: result.attemptId, grade: result.grade, subtopicId: result.subtopicId, level: result.level,
@@ -59,6 +72,64 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
       });
     }
     return response;
+  });
+});
+
+/** One mini-game round: +1 star per question answered right that was never attempted before. Idempotent per attemptId. */
+export const submitMinigameResult = onCall(async (req): Promise<MinigameResultResponse> => {
+  const uid = requireUid(req);
+  const v = validateMinigameResult(req.data);
+  if (!v.ok) throwFail(v);
+  const { result, questionIds } = v;
+  const when = effectiveResultTime(result.finishedAt, Date.now());
+  const roundRef = db.collection(col.users).doc(uid).collection("minigames").doc(result.attemptId);
+  const walletRef = db.collection(col.wallets).doc(uid);
+  const monthRef = entriesRef(monthlyBoard(sgtMonth(when))).doc(uid);
+  const dayRef = entriesRef(dailyBoard(sgtDate(when))).doc(uid);
+  const refs = questionIds.map((q) => attemptedRef(uid, result.grade, q));
+
+  return db.runTransaction(async (tx) => {
+    const [round, wallet, month, ...seen] = await Promise.all([tx.get(roundRef), tx.get(walletRef), tx.get(monthRef), ...refs.map((r) => tx.get(r))]);
+    const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
+    const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
+    const monthNow = (month.data()?.stars as number | undefined) ?? 0;
+    if (round.exists) return { starsAwarded: round.data()!.stars as number, starBalance: balance, monthlyStars: monthNow, totalStars: total, duplicate: true };
+    const before = new Set(questionIds.filter((_, i) => seen[i].exists));
+    const stars = minigameStars(result.answers, before);
+    tx.set(roundRef, { mode: result.mode, grade: result.grade, stars, answers: result.answers.length, createdAt: FieldValue.serverTimestamp() });
+    for (const r of refs) tx.set(r, { at: FieldValue.serverTimestamp() }, { merge: true });
+    tx.set(walletRef, { starBalance: balance + stars, totalStars: total + stars, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+    const inc = { uid, stars: FieldValue.increment(stars), questionsDone: FieldValue.increment(result.answers.length), updatedAt: FieldValue.serverTimestamp() };
+    tx.set(monthRef, inc, { merge: true });
+    tx.set(dayRef, inc, { merge: true });
+    if (stars > 0) {
+      tx.set(db.collection(col.users).doc(uid).collection("ledger").doc(`minigame_${result.attemptId}`), {
+        type: "minigame", delta: stars, balanceAfter: balance + stars, mode: result.mode, createdAt: FieldValue.serverTimestamp(),
+      });
+    }
+    return { starsAwarded: stars, starBalance: balance + stars, monthlyStars: monthNow + stars, totalStars: total + stars, duplicate: false };
+  });
+});
+
+/** Lifetime stars ≥ the quest's goal → its reward goes into the inventory (once). */
+export const claimQuest = onCall(async (req): Promise<ClaimQuestResponse> => {
+  const uid = requireUid(req);
+  const questId = (req.data as Partial<ClaimQuestRequest> | undefined)?.questId;
+  const walletRef = db.collection(col.wallets).doc(uid);
+  return db.runTransaction(async (tx) => {
+    const w = await tx.get(walletRef);
+    const v = validateClaimQuest({
+      questId,
+      totalStars: (w.data()?.totalStars as number | undefined) ?? 0,
+      claimed: (w.data()?.claimedQuests as string[] | undefined) ?? [],
+      inventory: (w.data()?.inventory as string[] | undefined) ?? ["color-black"],
+    });
+    if (!v.ok) throwFail(v);
+    tx.set(walletRef, { inventory: v.inventory, claimedQuests: v.claimed, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+    tx.set(db.collection(col.users).doc(uid).collection("ledger").doc(`quest_${String(questId)}`), {
+      type: "quest", questId, itemId: v.rewardId, delta: 0, createdAt: FieldValue.serverTimestamp(),
+    });
+    return { ownedItems: v.inventory, claimedQuests: v.claimed };
   });
 });
 

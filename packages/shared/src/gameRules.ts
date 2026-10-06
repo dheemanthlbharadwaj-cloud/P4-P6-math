@@ -1,9 +1,9 @@
 // Game economy constants. Values marked ASSUMPTION are not specified in the mindmap and are
 // listed in docs/OPEN_QUESTIONS.md — change them here only.
-import type { LevelNo, StoreItem } from "./types";
+import type { StoreItem } from "./types";
 
 export const QUESTIONS_PER_LEVEL = 5; // "5-5-5"
-export const STARS_PER_LEVEL: Record<LevelNo, number> = { 1: 1, 2: 2, 3: 3 };
+// Stars: see stars.ts (per question on a first attempt, one per re-attempted level, one per new mini-game question).
 
 export const MAX_HEARTS = 10; // daily allowance, refilled at midnight
 export const HEARTS_PER_AD = 3; // from mindmap: Watch Ad → +3 hearts
