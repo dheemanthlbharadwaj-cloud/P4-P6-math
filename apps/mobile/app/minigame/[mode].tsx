@@ -19,7 +19,8 @@ import { useLeaveConfirm } from "../../src/components/LeaveConfirm";
 import { getAllLv1, getQuestion } from "../../src/content";
 import { useWrong } from "../../src/store/wrong";
 import { useStars } from "../../src/store/stars";
-import { api } from "../../src/services/api";
+import { useOfflineQueue } from "../../src/store/queue";
+import { flushOfflineQueue } from "../../src/services/sync";
 import { useNow } from "../../src/hooks/useNow";
 import type { CatMood } from "../../src/theme/cats";
 import { useQuestionOrientation } from "../../src/hooks/useQuestionOrientation";
@@ -118,13 +119,18 @@ export default function MiniGame() {
     fallback: "/(tabs)/classroom",
   });
 
-  // Round over: report it to the server (best effort; the stars are already credited on this device).
-  useEffect(() => {
-    if (q || sent.current || !roundAnswers.current.length) return;
+  // Report the round to the server once (best effort; the stars are already credited on this device): when it is
+  // over, or when the student leaves early, so stars earned before quitting are not lost on the next sync.
+  const sendRound = useRef(() => {});
+  sendRound.current = () => {
+    if (sent.current || !roundAnswers.current.length) return;
     sent.current = true;
     const result: MinigameResult = { attemptId: Crypto.randomUUID(), grade, mode: timed ? "challenge" : mode === "all-wrong" ? "all-wrong" : "mistakes", answers: roundAnswers.current, finishedAt: Date.now() };
-    api.submitMinigameResult(result).catch(() => undefined);
-  }, [q, grade, mode, timed]);
+    useOfflineQueue.getState().enqueue({ ...result, kind: "minigame" });
+    void flushOfflineQueue();
+  };
+  useEffect(() => { if (!q) sendRound.current(); }, [q]);
+  useEffect(() => () => sendRound.current(), []);
 
   const title = timed ? "5-Minute Challenge" : mode === "all-wrong" ? "Unlimited Mistakes · all ever" : "Unlimited Mistakes";
 

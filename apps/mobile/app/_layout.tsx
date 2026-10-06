@@ -103,7 +103,7 @@ export default function RootLayout() {
     return () => { cancelled = true; unsub(); clearInterval(timer); stopCloudSync(); };
   }, [hydrated, user, onboarded]);
 
-  if (!hydrated || !ready || restoring || !fontsReady) {
+  if (!hydrated || !ready || !fontsReady) {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: colors.bg }}>
         <ActivityIndicator size="large" color={colors.primary} />
@@ -118,6 +118,13 @@ export default function RootLayout() {
         <Stack.Screen name="minigame/[mode]" options={{ gestureEnabled: false }} />
       </Stack>
       <DevToolsButton />
+      {/* Looking the account up after sign-in: cover the screens instead of unmounting the navigator (a remount loses
+          the route and lands on a screen without its params). */}
+      {restoring ? (
+        <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", backgroundColor: colors.bg }}>
+          <ActivityIndicator size="large" color={colors.primary} />
+        </View>
+      ) : null}
     </>
   );
 }

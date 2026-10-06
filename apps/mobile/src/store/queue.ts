@@ -1,11 +1,14 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { LevelResult } from "@p6/shared";
+import type { LevelResult, MinigameResult } from "@p6/shared";
 import { persistStorage, STORE_PREFIX } from "./storage";
 
+/** Results waiting for the server: level results, and mini-game rounds (tagged so the flush knows which call). */
+export type QueuedResult = LevelResult | (MinigameResult & { kind: "minigame" });
+
 interface QueueState {
-  items: LevelResult[];
-  enqueue: (r: LevelResult) => void;
+  items: QueuedResult[];
+  enqueue: (r: QueuedResult) => void;
   remove: (attemptId: string) => void;
   reset: () => void;
 }

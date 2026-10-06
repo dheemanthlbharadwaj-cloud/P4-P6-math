@@ -6,8 +6,9 @@ interface Extra {
   admob: { rewardedAndroid: string; rewardedIos: string };
   auth: { googleWebClientId: string; googleIosClientId: string; googleAndroidClientId: string };
   referralBaseUrl: string;
+  emulators: { host: string } | null;
 }
 
 export const extra = (Constants.expoConfig?.extra ?? {}) as Extra;
 export { FUNCTIONS_REGION } from "@p6/shared"; // asia-southeast1, same constant the backend deploys to
-export const isFirebaseConfigured = !!extra.firebase?.apiKey && extra.firebase.apiKey !== "PLACEHOLDER";
+export const isFirebaseConfigured = (!!extra.firebase?.apiKey && extra.firebase.apiKey !== "PLACEHOLDER") || !!extra.emulators;

@@ -55,7 +55,7 @@ def main():
         f.write(REGISTRY_TS)
     try:
         shutil.rmtree(EXPORT, ignore_errors=True)
-        run(f"EXPO_PUBLIC_DEV_TOOLS=1 npx expo export --platform web --output-dir {EXPORT}", APP)  # test build: Dev Tools on
+        run(f"EXPO_PUBLIC_DEV_TOOLS=1 npx expo export --platform web --clear --output-dir {EXPORT}", APP)  # test build: Dev Tools on; --clear so config (Firebase keys, emulators) changes always apply
     finally:
         os.remove(WEB_REGISTRY)
 

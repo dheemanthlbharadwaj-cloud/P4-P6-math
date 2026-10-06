@@ -3,7 +3,7 @@ import * as AppleAuthentication from "expo-apple-authentication";
 import * as Crypto from "expo-crypto";
 import {
   createUserWithEmailAndPassword, GoogleAuthProvider, OAuthProvider, signInWithCredential, signInWithEmailAndPassword,
-  signOut as fbSignOut, onAuthStateChanged, updateProfile, type User,
+  signOut as fbSignOut, onAuthStateChanged, updateProfile, type AuthProvider, type User, type UserCredential,
 } from "firebase/auth";
 import { firebaseAuth } from "./firebase";
 import { extra } from "./config";
@@ -18,9 +18,24 @@ export const signInEmail = async (email: string, password: string) =>
 export const signInGoogleIdToken = async (idToken: string) =>
   (await signInWithCredential(firebaseAuth(), GoogleAuthProvider.credential(idToken))).user;
 
-export const googleClientIds = () => extra.auth; // TODO(owner): fill EXPO_PUBLIC_GOOGLE_*_CLIENT_ID
+export const googleClientIds = () => extra.auth; // native apps: EXPO_PUBLIC_GOOGLE_*_CLIENT_ID (see backend/README.md)
 
-export const appleAvailable = async () => Platform.OS === "ios" && (await AppleAuthentication.isAvailableAsync());
+/** Web: Firebase's own Google / Apple pop-up (no client ids needed; the providers are enabled in Firebase Auth).
+ *  signInWithPopup only exists in the browser build of firebase/auth (the web bundle), so it is looked up at run time. */
+async function popup(provider: AuthProvider): Promise<User> {
+  const { signInWithPopup } = (await import("firebase/auth")) as unknown as { signInWithPopup: (a: ReturnType<typeof firebaseAuth>, p: AuthProvider) => Promise<UserCredential> };
+  return (await signInWithPopup(firebaseAuth(), provider)).user;
+}
+export const signInGooglePopup = () => popup(new GoogleAuthProvider());
+export async function signInApplePopup(): Promise<User> {
+  const provider = new OAuthProvider("apple.com");
+  provider.addScope("email");
+  provider.addScope("name");
+  return popup(provider);
+}
+
+/** Sign in with Apple: the native sheet on iOS, Firebase's pop-up on web. */
+export const appleAvailable = async () => Platform.OS === "web" || (Platform.OS === "ios" && (await AppleAuthentication.isAvailableAsync()));
 
 export async function signInApple(): Promise<User> {
   const rawNonce = Crypto.randomUUID();
@@ -47,5 +62,9 @@ export function friendlyAuthError(e: unknown): string {
   if (code.includes("weak-password")) return "Password needs at least 6 characters.";
   if (code.includes("invalid-email")) return "That email does not look right.";
   if (code.includes("network")) return "No internet connection.";
+  if (code.includes("popup-closed-by-user") || code.includes("cancelled-popup-request") || code.includes("ERR_REQUEST_CANCELED")) return "Sign-in was cancelled.";
+  if (code.includes("popup-blocked")) return "Your browser blocked the sign-in window. Allow pop-ups and try again.";
+  if (code.includes("operation-not-allowed")) return "This sign-in method isn't switched on yet.";
+  if (code.includes("account-exists-with-different-credential")) return "That email already uses another sign-in method. Use that one.";
   return "Something went wrong. Please try again.";
 }

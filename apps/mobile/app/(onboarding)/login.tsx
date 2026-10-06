@@ -6,7 +6,7 @@ import * as WebBrowser from "expo-web-browser";
 import { Body, Button, H1, Screen } from "../../src/components/ui";
 import { Image } from "expo-image";
 import { catAnimations } from "../../src/theme/cats";
-import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInEmail, signInGoogleIdToken, signUpEmail } from "../../src/services/auth";
+import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInApplePopup, signInEmail, signInGoogleIdToken, signInGooglePopup, signUpEmail } from "../../src/services/auth";
 import { isFirebaseConfigured } from "../../src/services/config";
 import { useProfile } from "../../src/store/profile";
 import { colors, fonts, radius, space } from "../../src/theme/colors";
@@ -27,7 +27,8 @@ export default function Login() {
 
   // TODO(owner): set EXPO_PUBLIC_GOOGLE_*_CLIENT_ID. Without them the Google button explains what is missing.
   const ids = googleClientIds();
-  const googleConfigured = !!(ids.googleWebClientId || ids.googleIosClientId || ids.googleAndroidClientId);
+  const web = Platform.OS === "web";
+  const googleConfigured = web || !!(ids.googleWebClientId || ids.googleIosClientId || ids.googleAndroidClientId);
   const [, response, promptAsync] = Google.useIdTokenAuthRequest({
     clientId: ids.googleWebClientId || "unset",
     iosClientId: ids.googleIosClientId || undefined,
@@ -99,10 +100,12 @@ export default function Login() {
           title="Continue with Google"
           variant="ghost"
           disabled={busy}
-          onPress={() => (googleConfigured ? void promptAsync() : setError("Google sign-in needs OAuth client ids (EXPO_PUBLIC_GOOGLE_*_CLIENT_ID)."))}
+          onPress={() => (!isFirebaseConfigured ? setError("Sign-in is not available yet because Firebase is not configured.")
+            : web ? void run(signInGooglePopup)
+              : googleConfigured ? void promptAsync() : setError("Google sign-in needs OAuth client ids (EXPO_PUBLIC_GOOGLE_*_CLIENT_ID)."))}
         />
-        {apple && Platform.OS === "ios" ? (
-          <Button title="Sign in with Apple" variant="ghost" disabled={busy} onPress={() => void run(signInApple)} style={{ marginTop: 10 }} />
+        {apple ? (
+          <Button title="Sign in with Apple" variant="ghost" disabled={busy} onPress={() => void run(web ? signInApplePopup : signInApple)} style={{ marginTop: 10 }} />
         ) : null}
         {busy ? <ActivityIndicator style={{ marginTop: 16 }} color={colors.primary} /> : null}
 
