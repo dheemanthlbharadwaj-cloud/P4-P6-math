@@ -12,6 +12,7 @@
 // apps/mobile/firebase.web.json (+ databaseId) → service account the backend runs as (catapult-backend: Firestore
 // + Auth admin) → merged security rules + indexes (deploy-rules.mjs; the editor's rules are kept).
 // Google and Apple sign-in are switched on in the Firebase console (see backend/README.md).
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
