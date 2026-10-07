@@ -4,13 +4,13 @@
 //   node backend/scripts/deploy-netlify.mjs [--dry] [--rotate-key]
 //
 // Needs NETLIFY_AUTH_TOKEN (Netlify → User settings → Applications → Personal access tokens) and the setup service
-// account (SETUP_SERVICE_ACCOUNT_B64 or FIREBASE_SERVICE_ACCOUNT_B64, Owner of the student project). The project id
-// comes from FIREBASE_PROJECT_ID or backend/.firebaserc; the site name from NETLIFY_SITE_NAME (default below).
+// account (SETUP_SERVICE_ACCOUNT_B64 or FIREBASE_SERVICE_ACCOUNT_B64, Owner of the project). Project primary-math-sg
+// (FIREBASE_PROJECT_ID overrides), Firestore database "default"; site name NETLIFY_SITE_NAME (default below).
 // Never prints secret values.
 //
 // Steps: Netlify site (create if missing) → site env vars: BACKEND_SERVICE_ACCOUNT_B64 (a key for the
-// catapult-backend service account made by setup-project.mjs; created once, new one with --rotate-key) and
-// REVENUECAT_WEBHOOK_AUTH (random, if missing) → build ../functions + copy to netlify/lib → netlify deploy --prod
+// catapult-backend service account made by setup-project.mjs; created once, new one with --rotate-key),
+// FIRESTORE_DATABASE_ID and REVENUECAT_WEBHOOK_AUTH (random, if missing) → build ../functions + copy to netlify/lib → netlify deploy --prod
 // → apps/mobile/backend.json {url} → smoke test.
 // Each production deploy costs Netlify credits (15 of the free 300/month): deploy when the backend changed.
 import { randomBytes } from "node:crypto";
@@ -26,7 +26,8 @@ const DRY = process.argv.includes("--dry");
 const ROTATE = process.argv.includes("--rotate-key");
 const NETLIFY_CLI = "netlify-cli@27";
 const SITE_NAME = process.env.NETLIFY_SITE_NAME || "catapult-math-athletes-api";
-const PROJECT = process.env.FIREBASE_PROJECT_ID || JSON.parse(fs.readFileSync(path.join(ROOT, "backend/.firebaserc"), "utf8")).projects.default;
+const PROJECT = process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
+const DATABASE = process.env.FIRESTORE_DATABASE_ID || "default"; // the question bank's named database
 const RUNTIME_SA = `catapult-backend@${PROJECT}.iam.gserviceaccount.com`; // created by setup-project.mjs
 const NL_TOKEN = process.env.NETLIFY_AUTH_TOKEN;
 if (!NL_TOKEN) throw new Error("Set NETLIFY_AUTH_TOKEN (Netlify → User settings → Applications → Personal access tokens).");
@@ -84,6 +85,11 @@ if (!have.has("BACKEND_SERVICE_ACCOUNT_B64") || ROTATE) {
     if (old.length) log(`Env: deleted ${old.length} old key(s)`);
   }
 } else log("Env: BACKEND_SERVICE_ACCOUNT_B64 set");
+const dbVar = (Array.isArray(env) ? env : []).find((e) => e.key === "FIRESTORE_DATABASE_ID");
+if (dbVar?.values?.[0]?.value !== DATABASE) {
+  log(`Env: FIRESTORE_DATABASE_ID ← ${DATABASE}`);
+  if (!DRY) await setEnv("FIRESTORE_DATABASE_ID", DATABASE);
+} else log(`Env: FIRESTORE_DATABASE_ID = ${DATABASE}`);
 if (!have.has("REVENUECAT_WEBHOOK_AUTH")) {
   log("Env: REVENUECAT_WEBHOOK_AUTH ← random value (copy it from the Netlify site's environment variables into RevenueCat)");
   if (!DRY) await setEnv("REVENUECAT_WEBHOOK_AUTH", `Bearer ${randomBytes(24).toString("hex")}`);

@@ -32,15 +32,18 @@ export function firebaseAuth(): Auth {
 }
 
 let firestore: Firestore | null = null;
+// primary-math-sg keeps its data in the named database "default" (not "(default)"); the wrong id silently reads an
+// empty database.
+const DATABASE_ID = extra.firestoreDatabaseId || "(default)";
 /** Firestore (owner-only reads/writes of progress, wrong bookmarks, profile; see backend/firestore.rules). */
 export function firebaseFirestore(): Firestore {
   if (!firestore) {
     const a = firebaseApp();
     try {
       // Long-polling auto-detect: WebChannel is unreliable on some React Native networks.
-      firestore = initializeFirestore(a, { experimentalAutoDetectLongPolling: true });
+      firestore = initializeFirestore(a, { experimentalAutoDetectLongPolling: true }, DATABASE_ID);
     } catch {
-      firestore = getFirestore(a); // already initialised (fast refresh)
+      firestore = getFirestore(a, DATABASE_ID); // already initialised (fast refresh)
     }
     if (EMU) connectFirestoreEmulator(firestore, EMU.host, 8080);
   }

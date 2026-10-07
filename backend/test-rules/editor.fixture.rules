@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isMaster() { return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }
+    function vol() { return get(/databases/$(database)/documents/volunteers/$(request.auth.uid)).data; }
+    function isVol() { return signedIn() && exists(/databases/$(database)/documents/volunteers/$(request.auth.uid)) && vol().active == true; }
+    function inScope(k) { return isVol() && k in vol().keys; }
+
+    match /questions/{qid} {
+      allow read: if isMaster() || inScope(resource.data.access_key);
+      allow create, delete: if isMaster();
+      allow update: if isMaster() || (
+        inScope(resource.data.access_key) &&
+        inScope(request.resource.data.access_key) &&
+        request.resource.data.access_key == request.resource.data.chapter + '|' + request.resource.data.difficulty &&
+        request.resource.data.chapter == resource.data.chapter &&
+        request.resource.data.get('selected', false) == resource.data.get('selected', false) &&
+        request.resource.data.get('excluded', false) == resource.data.get('excluded', false) &&
+        request.resource.data.id == resource.data.id &&
+        request.resource.data.last_edited_by == vol().username
+      );
+    }
+    match /meta/{doc} {
+      allow read: if isMaster() || isVol();
+      allow write: if isMaster();
+    }
+    match /volunteers/{uid} {
+      allow read: if isMaster() || (signedIn() && request.auth.uid == uid);
+      allow write: if isMaster();
+    }
+    match /volunteer_secrets/{uid} {
+      allow read, write: if isMaster();
+    }
+    match /admins/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+    // everything else (config, activity, ...) master only
+    match /{other}/{docid} {
+      allow read, write: if isMaster();
+    }
+  }
+}

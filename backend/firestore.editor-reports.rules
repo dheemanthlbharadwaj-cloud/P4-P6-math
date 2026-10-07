@@ -1,0 +1,13 @@
+    // Student reports (question_reports/{questionId}__{uid}, written by the backend's reportQuestion).
+    // Uses the editor's helpers (isMaster, inScope, vol): the master sees every report, a volunteer the reports on
+    // questions in their scope; either may resolve or dismiss one, and may only change the status fields.
+    match /question_reports/{reportId} {
+      allow read: if isMaster() || inScope(resource.data.access_key);
+      allow update: if (isMaster() || inScope(resource.data.access_key))
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'resolved_by', 'resolved_at', 'resolution_note'])
+        && request.resource.data.status in ['open', 'resolved', 'dismissed']
+        && request.resource.data.resolved_by is string
+        && (isMaster() || request.resource.data.resolved_by == vol().username);
+      allow create: if false;
+      allow delete: if isMaster();
+    }

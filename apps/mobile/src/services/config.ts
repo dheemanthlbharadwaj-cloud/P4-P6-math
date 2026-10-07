@@ -8,6 +8,7 @@ interface Extra {
   referralBaseUrl: string;
   emulators: { host: string } | null;
   backendUrl: string;
+  firestoreDatabaseId: string;
 }
 
 export const extra = (Constants.expoConfig?.extra ?? {}) as Extra;

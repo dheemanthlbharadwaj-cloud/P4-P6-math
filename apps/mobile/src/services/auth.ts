@@ -8,8 +8,13 @@ import {
 import { firebaseAuth } from "./firebase";
 import { extra } from "./config";
 
-export const signUpEmail = async (email: string, password: string) =>
-  (await createUserWithEmailAndPassword(firebaseAuth(), email.trim(), password)).user;
+// The question bank editor (same Firebase project) gives its team logins at this domain; students can't use it.
+const EDITOR_LOGIN_DOMAIN = "@users.primary-math-sg.web.app";
+
+export const signUpEmail = async (email: string, password: string) => {
+  if (email.trim().toLowerCase().endsWith(EDITOR_LOGIN_DOMAIN)) throw Object.assign(new Error("reserved"), { code: "auth/invalid-email" });
+  return (await createUserWithEmailAndPassword(firebaseAuth(), email.trim(), password)).user;
+};
 
 export const signInEmail = async (email: string, password: string) =>
   (await signInWithEmailAndPassword(firebaseAuth(), email.trim(), password)).user;

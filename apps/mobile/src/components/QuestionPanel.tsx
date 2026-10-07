@@ -3,12 +3,14 @@
 // markQuestion() from @p6/shared; this component only collects responses and shows feedback.
 import React, { useEffect, useState } from "react";
 import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View, type KeyboardTypeOptions } from "react-native";
-import type { Grade, Question } from "@p6/shared";
+import type { Grade, Question, ReportQuestionRequest } from "@p6/shared";
 import { RichText } from "./RichText";
 import { Button } from "./ui";
 import { CalculatorModal } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
 import { Scratchpad } from "./Scratchpad";
+import { ReportSheet } from "./ReportSheet";
+import { useToast } from "./Toast";
 import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
 import { BUBBLE_BAND } from "./CatCompanion";
@@ -33,6 +35,8 @@ interface Props {
   viewOnly?: boolean;
   /** Companion cat shown beside the tools row in portrait (hidden in landscape to leave room for the scratchpad). */
   companion?: React.ReactNode;
+  /** Shows "Report" (a problem with this question → the question bank editor); the value says where it was seen. */
+  reportContext?: ReportQuestionRequest["context"];
 }
 
 function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
@@ -43,11 +47,13 @@ function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
 
 let hintDismissed = false; // once per app session
 
-export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false, companion }: Props) {
+export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false, companion, reportContext }: Props) {
   const nInputs = q.type === "mcq" ? 1 : Math.max(1, q.parts?.length ?? 1);
   const [responses, setResponses] = useState<string[]>(() => Array(nInputs).fill(""));
   const [calc, setCalc] = useState(false);
   const [figOpen, setFigOpen] = useState(false);
+  const [reportOpen, setReportOpen] = useState(false);
+  const toast = useToast();
   const { width, height } = useWindowDimensions();
   const landscape = width > height;
   const [hintGone, setHintGone] = useState(hintDismissed);
@@ -85,6 +91,11 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
           {fig ? (
             <Pressable style={[styles.toolBtn, { backgroundColor: colors.accent }]} onPress={() => setFigOpen(true)} accessibilityRole="button" accessibilityLabel="View picture full screen">
               <Text style={[styles.toolText, { color: colors.ink }]}>Picture</Text>
+            </Pressable>
+          ) : null}
+          {reportContext ? (
+            <Pressable style={[styles.toolBtn, { backgroundColor: colors.card, borderColor: colors.muted }]} onPress={() => setReportOpen(true)} accessibilityRole="button" accessibilityLabel="Report a problem with this question">
+              <Text style={[styles.toolText, { color: colors.inkSoft }]}>⚑ Report</Text>
             </Pressable>
           ) : null}
         </View>
@@ -177,6 +188,11 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
 
       <CalculatorModal visible={calc} onClose={() => setCalc(false)} />
       {fig ? <FigureViewer source={fig} visible={figOpen} onClose={() => setFigOpen(false)} /> : null}
+      {reportContext ? (
+        <ReportSheet visible={reportOpen} onClose={() => setReportOpen(false)} onDone={toast.show} questionId={q.id} grade={grade} context={reportContext}
+          answerGiven={responses.some((r) => r.trim()) ? responses.map((r) => r.trim()).join(" | ") : undefined} />
+      ) : null}
+      {toast.node}
     </KeyboardAvoidingView>
   );
 

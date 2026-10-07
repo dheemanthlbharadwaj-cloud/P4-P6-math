@@ -4,3 +4,4 @@ export { submitLevelResult, submitMinigameResult, claimQuest, purchaseItem, rede
 export { sendFriendRequest, respondFriendRequest, getLeaderboard } from "./social.js";
 export { dailySnapshot, monthlyClose } from "./scheduled.js";
 export { revenuecatWebhook } from "./revenuecat.js";
+export { reportQuestion } from "./reports.js";

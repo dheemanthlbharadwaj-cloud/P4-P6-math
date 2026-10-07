@@ -4,7 +4,7 @@ import type {
   BootstrapProfileRequest, BootstrapProfileResponse, CallableName, ClaimQuestRequest, ClaimQuestResponse, DeleteAccountRequest,
   DeleteAccountResponse, GetLeaderboardRequest, MinigameResult, MinigameResultResponse,
   GetLeaderboardResponse, LevelResult, LevelResultResponse, PurchaseItemRequest, PurchaseItemResponse, RedeemReferralRequest,
-  RedeemReferralResponse, RefreshPublicProfileResponse, RespondFriendRequestRequest, RespondFriendRequestResponse, RestoreProfileRequest, SendFriendRequestRequest,
+  RedeemReferralResponse, RefreshPublicProfileResponse, ReportQuestionRequest, ReportQuestionResponse, RespondFriendRequestRequest, RespondFriendRequestResponse, RestoreProfileRequest, SendFriendRequestRequest,
   SendFriendRequestResponse,
 } from "@p6/shared";
 import { extra } from "./config";
@@ -51,6 +51,7 @@ export const api = {
   sendFriendRequest: (r: SendFriendRequestRequest) => call<SendFriendRequestRequest, SendFriendRequestResponse>("sendFriendRequest", r),
   respondFriendRequest: (r: RespondFriendRequestRequest) => call<RespondFriendRequestRequest, RespondFriendRequestResponse>("respondFriendRequest", r),
   getLeaderboard: (r: GetLeaderboardRequest) => call<GetLeaderboardRequest, GetLeaderboardResponse>("getLeaderboard", r),
+  reportQuestion: (r: ReportQuestionRequest) => call<ReportQuestionRequest, ReportQuestionResponse>("reportQuestion", r),
   refreshPublicProfile: () => call<Record<string, never>, RefreshPublicProfileResponse>("refreshPublicProfile", {}),
   deleteAccount: () => call<DeleteAccountRequest, DeleteAccountResponse>("deleteAccount", {}),
 };

@@ -1,20 +1,18 @@
 #!/usr/bin/env node
-// One-shot setup of the student-app Firebase project (separate from the editor project). Idempotent: safe to re-run.
+// Prepares the Firebase project the student app shares with the question bank editor (primary-math-sg, free Spark
+// plan) for student accounts. Idempotent: safe to re-run.
 //
-//   FIREBASE_PROJECT_ID=<new project id> node backend/scripts/setup-project.mjs [--dry] [--no-deploy]
+//   node backend/scripts/setup-project.mjs [--dry] [--no-deploy]      (FIREBASE_PROJECT_ID overrides the project)
 //
-// Needs a service account that is Owner of the new project, as base64 JSON in SETUP_SERVICE_ACCOUNT_B64 (falls back
-// to FIREBASE_SERVICE_ACCOUNT_B64). The free Spark plan is enough: the backend code runs on Netlify
-// (deploy-netlify.mjs), Firebase only provides sign-in and Firestore. Never prints secret values.
+// Needs a service account that is Owner of the project, as base64 JSON in SETUP_SERVICE_ACCOUNT_B64 (falls back to
+// FIREBASE_SERVICE_ACCOUNT_B64). Never prints secret values.
 //
-// Steps: enable APIs → add Firebase → Firestore (default) in asia-southeast1 → Auth (email/password on, authorized
-// domains) → web app + its public config into apps/mobile/firebase.web.json → .firebaserc → service account the
-// backend runs as (catapult-backend: Firestore + Auth admin) → deploy Firestore rules/indexes.
-// Google and Apple sign-in are switched on in the Firebase console (see backend/README.md): Google needs the OAuth
-// client the console creates, Apple needs keys from the Apple Developer account.
-import { execFileSync } from "node:child_process";
+// Steps: enable APIs → check Firestore database "default" (the question bank's; student data lives next to it) →
+// Auth (email/password on, authorized domains incl. the app's web domain) → the project's web app config into
+// apps/mobile/firebase.web.json (+ databaseId) → service account the backend runs as (catapult-backend: Firestore
+// + Auth admin) → merged security rules + indexes (deploy-rules.mjs; the editor's rules are kept).
+// Google and Apple sign-in are switched on in the Firebase console (see backend/README.md).
 import fs from "node:fs";
-import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { googleClient, loadServiceAccount } from "./gcp.mjs";
@@ -22,8 +20,8 @@ import { googleClient, loadServiceAccount } from "./gcp.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const DRY = process.argv.includes("--dry");
 const NO_DEPLOY = process.argv.includes("--no-deploy");
-const PROJECT = process.env.FIREBASE_PROJECT_ID;
-const REGION = "asia-southeast1";
+const PROJECT = process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
+const DATABASE = "default"; // the question bank's named database (not "(default)")
 const WEB_APP_NAME = "Catapult Math Athletes (web)";
 const AUTH_DOMAINS = ["localhost", "catapult-math-athletes.web.app", "catapult-math-athletes.firebaseapp.com"];
 const APIS = [
@@ -33,7 +31,6 @@ const APIS = [
 const RUNTIME_SA_ID = "catapult-backend"; // same id in deploy-netlify.mjs
 const RUNTIME_ROLES = ["roles/datastore.user", "roles/firebaseauth.admin"];
 
-if (!PROJECT) throw new Error("Set FIREBASE_PROJECT_ID to the new project's id.");
 const sa = loadServiceAccount();
 const log = (...a) => console.log(...a);
 
@@ -74,20 +71,9 @@ if (fb.status === 404 || fb.status === 403) {
   }
 } else { must(fb, "firebase project"); log("Firebase: already added"); }
 
-// 3) Firestore (default) in asia-southeast1
-const dbGet = await api("GET", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/(default)`);
-if (dbGet.status === 404) {
-  log(`Firestore: creating (default) in ${REGION}`);
-  if (!DRY) {
-    const op = must(await api("POST", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases?databaseId=(default)`, {
-      locationId: REGION, type: "FIRESTORE_NATIVE", concurrencyMode: "PESSIMISTIC", deleteProtectionState: "DELETE_PROTECTION_ENABLED",
-    }), "create Firestore");
-    if (!op.done) await wait(op.name, "https://firestore.googleapis.com/v1");
-  }
-} else {
-  const d = must(dbGet, "Firestore");
-  log(`Firestore: (default) exists in ${d.locationId}${d.locationId !== REGION ? ` (expected ${REGION}; still works)` : ""}`);
-}
+// 3) Firestore: the question bank's database must be there (student collections are added next to its own)
+const dbGet = must(await api("GET", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/${DATABASE}`), `Firestore database "${DATABASE}"`);
+log(`Firestore: database "${DATABASE}" in ${dbGet.locationId}`);
 
 // 4) Auth: email/password on, authorized domains
 const authBase = `https://identitytoolkit.googleapis.com/admin/v2/projects/${PROJECT}/config`;
@@ -108,30 +94,18 @@ const idps = await api("GET", `${authBase.replace("/config", "")}/defaultSupport
 const on = new Set((idps.body.defaultSupportedIdpConfigs ?? []).filter((i) => i.enabled).map((i) => i.name.split("/").pop()));
 log(`Auth: Google ${on.has("google.com") ? "on" : "OFF (enable in console)"}, Apple ${on.has("apple.com") ? "on" : "OFF (enable in console)"}`);
 
-// 5) Web app + public config (the web config is not secret: it identifies the project to the client SDK)
+// 5) Web app config (public: it identifies the project to the client SDK). Reuses the app's own web app if there
+//    is one, else the project's existing one (the editor's); nothing is created.
 const apps = must(await api("GET", `https://firebase.googleapis.com/v1beta1/projects/${PROJECT}/webApps`), "list web apps");
-let app = (apps.apps ?? []).find((a) => a.displayName === WEB_APP_NAME && a.state === "ACTIVE");
-if (!app) {
-  log(`Web app: creating "${WEB_APP_NAME}"`);
-  if (!DRY) {
-    const op = must(await api("POST", `https://firebase.googleapis.com/v1beta1/projects/${PROJECT}/webApps`, { displayName: WEB_APP_NAME }), "create web app");
-    app = await wait(op.name, "https://firebase.googleapis.com/v1beta1");
-  }
-} else log(`Web app: "${WEB_APP_NAME}" exists`);
-if (app && !DRY) {
-  const conf = must(await api("GET", `https://firebase.googleapis.com/v1beta1/projects/${PROJECT}/webApps/${app.appId}/config`), "web app config");
-  const out = { apiKey: conf.apiKey, authDomain: conf.authDomain, projectId: conf.projectId, storageBucket: conf.storageBucket, messagingSenderId: conf.messagingSenderId, appId: conf.appId };
-  fs.writeFileSync(path.join(ROOT, "apps/mobile/firebase.web.json"), JSON.stringify(out, null, 2) + "\n");
-  log("Web app: wrote apps/mobile/firebase.web.json");
-}
-
-// 6) .firebaserc
-const rcPath = path.join(ROOT, "backend/.firebaserc");
-const rc = JSON.parse(fs.readFileSync(rcPath, "utf8"));
-if (rc.projects.default !== PROJECT) {
-  log(`.firebaserc: default ${rc.projects.default} → ${PROJECT}`);
-  if (!DRY) { rc.projects.default = PROJECT; fs.writeFileSync(rcPath, JSON.stringify(rc, null, 2) + "\n"); }
-}
+const active = (apps.apps ?? []).filter((a) => a.state === "ACTIVE");
+const app = active.find((a) => a.displayName === WEB_APP_NAME) ?? active[0];
+if (!app) throw new Error("No web app in the project: add one in Firebase console → Project settings → Your apps.");
+const conf = must(await api("GET", `https://firebase.googleapis.com/v1beta1/projects/${PROJECT}/webApps/${app.appId}/config`), "web app config");
+const out = { apiKey: conf.apiKey, authDomain: conf.authDomain, projectId: conf.projectId, storageBucket: conf.storageBucket, messagingSenderId: conf.messagingSenderId, appId: conf.appId, databaseId: DATABASE };
+const webPath = path.join(ROOT, "apps/mobile/firebase.web.json");
+const same = fs.existsSync(webPath) && fs.readFileSync(webPath, "utf8") === JSON.stringify(out, null, 2) + "\n";
+log(`Web app: "${app.displayName ?? app.appId}" → apps/mobile/firebase.web.json ${same ? "(up to date)" : DRY ? "(would update)" : "(written)"}`);
+if (!same && !DRY) fs.writeFileSync(webPath, JSON.stringify(out, null, 2) + "\n");
 
 // 7) The service account the backend (Netlify) runs as: Firestore read/write + Auth admin (delete account), nothing else.
 const runtimeEmail = `${RUNTIME_SA_ID}@${PROJECT}.iam.gserviceaccount.com`;
@@ -164,16 +138,7 @@ if (!DRY) {
   }
 }
 
-// 8) Deploy Firestore rules + indexes
-if (DRY || NO_DEPLOY) { log(DRY ? "dry run: nothing changed" : "skipping deploy (--no-deploy)"); process.exit(0); }
-const keyFile = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "sa-")), "key.json");
-fs.writeFileSync(keyFile, JSON.stringify(sa), { mode: 0o600 });
-try {
-  log("Deploy: Firestore rules + indexes");
-  execFileSync("npx", ["firebase", "deploy", "--only", "firestore", "--project", PROJECT, "--non-interactive", "--force"], {
-    cwd: path.join(ROOT, "backend"), stdio: "inherit", env: { ...process.env, GOOGLE_APPLICATION_CREDENTIALS: keyFile },
-  });
-} finally {
-  fs.rmSync(path.dirname(keyFile), { recursive: true, force: true });
-}
-log("Done. Next: node backend/scripts/deploy-netlify.mjs");
+// 8) Security rules (merged with the editor's) + indexes
+if (NO_DEPLOY) { log("skipping rules (--no-deploy)"); process.exit(0); }
+execFileSync(process.execPath, [path.join(ROOT, "backend/scripts/deploy-rules.mjs"), ...(DRY ? ["--dry"] : [])], { stdio: "inherit", env: { ...process.env, FIREBASE_PROJECT_ID: PROJECT } });
+log(DRY ? "dry run: nothing changed" : "Done. Next: node backend/scripts/deploy-netlify.mjs");

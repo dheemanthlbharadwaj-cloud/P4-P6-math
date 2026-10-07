@@ -32,6 +32,7 @@ export type CallableName =
   | "respondFriendRequest"
   | "getLeaderboard"
   | "refreshPublicProfile"
+  | "reportQuestion"
   | "deleteAccount";
 
 /** Server-owned account state: everything needed to restore a device (stars, inventory, look, entitlement). */
@@ -148,6 +149,36 @@ export interface GetLeaderboardResponse {
 export type DeleteAccountRequest = Record<string, never>;
 export interface DeleteAccountResponse {
   deleted: true;
+}
+
+// ---- reportQuestion: a student flags a problem with a question. Stored in question_reports/{questionId}__{uid} in
+//      the question bank's database, where the editor shows it on the question (one open report per student per
+//      question; reporting again updates it). At most MAX_REPORTS_PER_DAY per student per Singapore day. ----
+export const REPORT_REASONS = [
+  { id: "wrong-answer", label: "The answer is wrong" },
+  { id: "marked-wrong", label: "My answer was right but marked wrong" },
+  { id: "unclear", label: "The question is unclear or has a typo" },
+  { id: "figure", label: "The picture is missing or wrong" },
+  { id: "other", label: "Something else" },
+] as const;
+export type ReportReason = (typeof REPORT_REASONS)[number]["id"];
+export const MAX_REPORTS_PER_DAY = 20;
+export const MAX_REPORT_NOTE = 500;
+export interface ReportQuestionRequest {
+  questionId: string;
+  grade: Grade;
+  reason: ReportReason;
+  note?: string;
+  /** Where the student saw it. */
+  context: "level" | "minigame" | "practice";
+  /** The student's answer, when they had given one (helps with "marked wrong" reports). */
+  answerGiven?: string;
+  contentVersion?: string;
+}
+export interface ReportQuestionResponse {
+  reportId: string;
+  /** true when this student had reported the question before (the report was updated and reopened). */
+  updated: boolean;
 }
 
 // ---- refreshPublicProfile: copy users/{uid} to publicProfiles/{uid} after the app writes its profile ----

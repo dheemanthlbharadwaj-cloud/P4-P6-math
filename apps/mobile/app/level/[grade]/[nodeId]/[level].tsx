@@ -180,7 +180,7 @@ export default function LevelScreen() {
       </View>
       {question ? (
         <View style={{ flex: 1 }}>
-          <QuestionPanel key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} timerStartedAt={startedAt} />} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
+          <QuestionPanel reportContext="level" key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} timerStartedAt={startedAt} />} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
           {reveal ? (
             <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
               <Text style={{ fontSize: 20, fontFamily: fonts.display, color: reveal.correct ? colors.good : colors.bad, marginBottom: 8 }}>

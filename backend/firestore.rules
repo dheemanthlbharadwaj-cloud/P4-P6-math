@@ -1,7 +1,9 @@
 rules_version = '2';
 
-// Student-app project. Server (Admin SDK) bypasses these rules; everything marked "server only" is written by
-// Cloud Functions. See docs/ARCHITECTURE.md → Backend.
+// Student-app rules. Server (Admin SDK) bypasses these rules; everything marked "server only" is written by the
+// backend (backend/netlify). In primary-math-sg they are merged into the question bank editor's rules by
+// scripts/deploy-rules.mjs (this file's helpers and matches go inside the editor's; config and the catch-all are
+// left to the editor). See docs/ARCHITECTURE.md → Backend.
 service cloud.firestore {
   match /databases/{database}/documents {
 
@@ -81,6 +83,16 @@ service cloud.firestore {
       match /minigames/{attemptId} {
         allow read, write: if false;
       }
+      // reportQuestion daily cap
+      match /reportQuota/{date} {
+        allow read, write: if false;
+      }
+    }
+
+    // Student reports about questions: written by reportQuestion only. In the question bank project the editor
+    // fragment (firestore.editor-reports.rules) lets editors read and resolve them.
+    match /question_reports/{reportId} {
+      allow read, write: if false;
     }
 
     // wallet (star balance + inventory): server only writes

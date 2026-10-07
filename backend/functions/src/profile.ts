@@ -117,8 +117,11 @@ export const deleteAccount = onCall(async (req): Promise<DeleteAccountResponse> 
   // leaderboard entries + snapshots (all subcollections called "entries")
   const entries = await db.collectionGroup("entries").where("uid", "==", uid).get();
   await Promise.all(entries.docs.map((d) => d.ref.delete()));
+  // question reports stay for the editors, without the link to the account
+  const reports = await db.collection(col.questionReports).where("reporter_uid", "==", uid).get();
+  await Promise.all(reports.docs.map((d) => d.ref.update({ reporter_uid: null })));
 
-  await db.recursiveDelete(userRef); // profile, progress, wrong, ledger, attempts, starredLevels, attempted, minigames
+  await db.recursiveDelete(userRef); // profile, progress, wrong, ledger, attempts, starredLevels, attempted, minigames, reportQuota
   const singles = [
     db.collection(col.publicProfiles).doc(uid),
     db.collection(col.wallets).doc(uid),

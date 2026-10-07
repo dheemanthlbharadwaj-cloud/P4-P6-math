@@ -19,7 +19,10 @@ export const REGION = FUNCTIONS_REGION;
 export const SCHEDULE_TZ = TIMEZONE; // Asia/Singapore
 setGlobalOptions({ region: REGION, maxInstances: 20 });
 
-export const db = getFirestore();
+// The student data shares the question bank's Firestore database in primary-math-sg, which is a named database
+// "default" (not "(default)"): FIRESTORE_DATABASE_ID=default on the Netlify site. Emulators/tests use "(default)".
+export const DATABASE_ID = process.env.FIRESTORE_DATABASE_ID || "(default)";
+export const db = DATABASE_ID === "(default)" ? getFirestore() : getFirestore(DATABASE_ID);
 export const auth = getAuth();
 export { FieldValue };
 
@@ -46,6 +49,8 @@ export const col = {
   medals: "medals",
   entitlements: "entitlements",
   config: "config",
+  questions: "questions", // the question bank (editor-owned; read only here)
+  questionReports: "question_reports",
 } as const;
 export const dailyBoard = (date: string) => `daily-${date}`;
 export const monthlyBoard = (ym: string) => `monthly-${ym}`;

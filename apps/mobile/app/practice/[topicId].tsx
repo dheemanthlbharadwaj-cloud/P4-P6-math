@@ -66,7 +66,7 @@ export default function Practice() {
           <ProgressBar value={i / questions.length} />
         </View>
       </View>
-      <QuestionPanel key={q.id} question={q} grade={grade} viewOnly reveal={revealed ? SHOWN : null} onSubmit={() => undefined} />
+      <QuestionPanel reportContext="practice" key={q.id} question={q} grade={grade} viewOnly reveal={revealed ? SHOWN : null} onSubmit={() => undefined} />
       <View style={{ flexDirection: "row", gap: 12, padding: space.l, borderTopWidth: 3, borderTopColor: colors.border, backgroundColor: colors.bg }}>
         {revealed ? (
           <>

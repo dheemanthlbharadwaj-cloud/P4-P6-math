@@ -5,7 +5,7 @@ import {
 } from "../src/logic/dates";
 import { buildEntries, pickMedalWinners, rankDeltas, rankMap, sortRows } from "../src/logic/ranking";
 import {
-  isContentVersionAccepted, isFriendCode, makeFriendCode, minigameStars, normalizeFriendCode, pairId, validateClaimQuest,
+  isContentVersionAccepted, isFriendCode, makeFriendCode, minigameStars, normalizeFriendCode, pairId, validateClaimQuest, validateReport,
   validateFriendRequest, validateLevelResult, validateMinigameResult, validatePurchase, validateReferral,
 } from "../src/logic/rules";
 import { authHeaderMatches, isActiveAt, isSubscribed, mapRevenueCatEvent, pickUid } from "../src/logic/revenuecat";
@@ -258,5 +258,26 @@ describe("claimQuest", () => {
     expect(v.ok && v.claimed).toEqual(["quest-25"]);
     expect(validateClaimQuest({ questId: "quest-25", totalStars: 99, claimed: ["quest-25"], inventory: [] }).ok).toBe(false);
     expect(validateClaimQuest({ questId: "nope", totalStars: 999, claimed: [], inventory: [] }).ok).toBe(false);
+  });
+});
+
+describe("question reports", () => {
+  const ok = { questionId: "2023_ACSP_P1_Q29", grade: "P6", reason: "wrong-answer", context: "level" };
+  it("accepts a valid report and trims text", () => {
+    const v = validateReport({ ...ok, note: "  answer should be 12  ", answerGiven: " 12 " });
+    expect(v.ok).toBe(true);
+    if (v.ok) expect(v.report).toMatchObject({ note: "answer should be 12", answerGiven: "12", contentVersion: null });
+  });
+  it("rejects unknown reasons, contexts, grades and odd ids", () => {
+    expect(validateReport({ ...ok, reason: "spam" }).ok).toBe(false);
+    expect(validateReport({ ...ok, context: "home" }).ok).toBe(false);
+    expect(validateReport({ ...ok, grade: "P9" }).ok).toBe(false);
+    expect(validateReport({ ...ok, questionId: "../users/x" }).ok).toBe(false);
+    expect(validateReport(null).ok).toBe(false);
+  });
+  it("needs a note for 'something else' and caps its length", () => {
+    expect(validateReport({ ...ok, reason: "other" }).ok).toBe(false);
+    const v = validateReport({ ...ok, reason: "other", note: "x".repeat(2000) });
+    expect(v.ok && v.report.note.length).toBe(500);
   });
 });

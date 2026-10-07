@@ -49,5 +49,5 @@ export async function googleClient(sa) {
     }
     throw new Error(`${opName}: timed out`);
   }
-  return { api, must, wait };
+  return { api, must, wait, token: TOKEN };
 }

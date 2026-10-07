@@ -1,6 +1,7 @@
-// Validation for level results, purchases, referrals, friend requests. Pure.
+// Validation for level results, purchases, referrals, friend requests, question reports. Pure.
 import {
-  LEVEL_PASS_MIN_CORRECT, ACTIVE_GRADES, QUESTS, QUEST_ITEMS, type LevelResult, type MinigameResult, type StoreItem,
+  LEVEL_PASS_MIN_CORRECT, ACTIVE_GRADES, MAX_REPORT_NOTE, QUESTS, QUEST_ITEMS, REPORT_REASONS, type LevelResult, type MinigameResult,
+  type ReportQuestionRequest, type ReportReason, type StoreItem,
 } from "../shared/index.js";
 
 export type Fail = { ok: false; code: "invalid-argument" | "failed-precondition" | "already-exists" | "not-found" | "permission-denied"; message: string };
@@ -110,3 +111,23 @@ export function makeFriendCode(randomInt: (max: number) => number, length = 8): 
 }
 export const normalizeFriendCode = (c: unknown) => String(c ?? "").toUpperCase().replace(/[^A-Z0-9]/g, "");
 export const isFriendCode = (c: string) => c.length === 8 && [...c].every((ch) => FRIEND_CODE_ALPHABET.includes(ch));
+
+const QUESTION_ID_RE = /^[A-Za-z0-9_.-]{3,120}$/;
+const REPORT_CONTEXTS = ["level", "minigame", "practice"] as const;
+
+/** Clean a reportQuestion request: known reason/context/grade, short trimmed text. */
+export function validateReport(r: unknown): Fail | Ok<{ report: Required<Omit<ReportQuestionRequest, "note" | "answerGiven" | "contentVersion">> & { note: string; answerGiven: string | null; contentVersion: string | null } }> {
+  const x = r as Partial<ReportQuestionRequest> | null;
+  if (!x || typeof x !== "object") return fail("invalid-argument", "missing body");
+  if (typeof x.questionId !== "string" || !QUESTION_ID_RE.test(x.questionId)) return fail("invalid-argument", "bad questionId");
+  if (!x.grade || !ACTIVE_GRADES.includes(x.grade)) return fail("invalid-argument", "bad grade");
+  if (!REPORT_REASONS.some((rr) => rr.id === x.reason)) return fail("invalid-argument", "bad reason");
+  if (!REPORT_CONTEXTS.includes(x.context as (typeof REPORT_CONTEXTS)[number])) return fail("invalid-argument", "bad context");
+  if (x.note !== undefined && typeof x.note !== "string") return fail("invalid-argument", "bad note");
+  if (x.answerGiven !== undefined && x.answerGiven !== null && typeof x.answerGiven !== "string") return fail("invalid-argument", "bad answerGiven");
+  const note = (x.note ?? "").trim().slice(0, MAX_REPORT_NOTE);
+  if (x.reason === "other" && !note) return fail("invalid-argument", "tell us what is wrong");
+  const answerGiven = typeof x.answerGiven === "string" && x.answerGiven.trim() ? x.answerGiven.trim().slice(0, 200) : null;
+  const contentVersion = typeof x.contentVersion === "string" ? x.contentVersion.slice(0, 40) : null;
+  return { ok: true, report: { questionId: x.questionId, grade: x.grade, reason: x.reason as ReportReason, context: x.context as ReportQuestionRequest["context"], note, answerGiven, contentVersion } };
+}

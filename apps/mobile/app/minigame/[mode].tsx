@@ -186,7 +186,7 @@ export default function MiniGame() {
           </>
         ) : null}
       </View>
-      <QuestionPanel key={q.id} question={q} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={note ?? undefined} timerStartedAt={deadline - CHALLENGE_SECONDS * 1000} />} onSubmit={submit} onSkip={skip} canSkip={queue.length > 1} />
+      <QuestionPanel reportContext="minigame" key={q.id} question={q} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={note ?? undefined} timerStartedAt={deadline - CHALLENGE_SECONDS * 1000} />} onSubmit={submit} onSkip={skip} canSkip={queue.length > 1} />
       {reveal ? (
         <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
           {landscape && note ? <Text style={{ fontFamily: fonts.display, fontSize: 18, color: colors.ink, marginBottom: 6 }}>{note}</Text> : null}

@@ -6,7 +6,7 @@
 | Mobile | **Expo React Native (TypeScript)**, expo-router, EAS Build → iOS App Store + Google Play. Dev builds (not Expo Go) because of ads/IAP native modules. |
 | Questions | **Bundled in the app, fully offline.** Built from the editor's Firestore bank (`primary-math-sg`, database id `"default"`) by the content pipeline. |
 | Map unit | **Subtopic = map node (P6 has 62 subtopics)**, each with 5/5/5. **Editor chapter (`chapter`, `chapter_no`; 12 for P6) = swipeable map.** Chapter 99 "Removed" / `excluded` questions are dropped. |
-| Backend | **New Firebase project** for the student app (separate from the `primary-math-sg` editor project), free Spark plan: Auth + Firestore. The backend handlers (TypeScript, `backend/functions`) run on Netlify's free plan (`backend/netlify`, `POST /api/<name>`); see backend/README.md. |
+| Backend | The editor's Firebase project `primary-math-sg` (free Spark plan): Auth + Firestore database `default`, shared with the question bank (rules merged by `backend/scripts/deploy-rules.mjs`). The backend handlers (TypeScript, `backend/functions`) run on Netlify's free plan (`backend/netlify`, `POST /api/<name>`); see backend/README.md. |
 | Ads | Google AdMob via `react-native-google-mobile-ads`, rewarded ads for +hearts/+energy. Child-directed settings (see Compliance). |
 | Subscription | In-app purchase via RevenueCat (`react-native-purchases`). Apple/Google require store billing for digital subscriptions. Entitlement `unlimited`. |
 | Grades | P6 only now. **Every content path, type and screen is keyed by `grade` (`"P4" \| "P5" \| "P6"`)** so P4/P5 drop in as data. |
@@ -107,6 +107,8 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
     friends board.
   - Scheduled: `dailySnapshot` 00:00 SGT (rank arrows); `monthlyClose` 00:00 SGT on the 1st (see OPEN_QUESTIONS #14).
   - `revenuecatWebhook` (HTTPS) → `entitlements/{uid}`.
+  - `reportQuestion` (callable): a student reports a problem with a question → `question_reports/{questionId}__{uid}`
+    (reason, note, answer given, the question's `access_key`); max 20 a day. The editor shows and resolves them.
   - `deleteAccount` (callable): deletes Auth user + every document that belongs to them (incl. leaderboard entries/snapshots,
     friendships, requests, referrals, wallet, medals, entitlement, friend code).
 - **Restore on a new device / reinstall:** after sign-in the app calls `bootstrapProfile({restoreOnly: true})`. If a profile
