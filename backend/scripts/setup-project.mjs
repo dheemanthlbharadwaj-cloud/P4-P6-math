@@ -4,20 +4,20 @@
 //   FIREBASE_PROJECT_ID=<new project id> node backend/scripts/setup-project.mjs [--dry] [--no-deploy]
 //
 // Needs a service account that is Owner of the new project, as base64 JSON in SETUP_SERVICE_ACCOUNT_B64 (falls back
-// to FIREBASE_SERVICE_ACCOUNT_B64). The project must exist and be on the Blaze plan (Cloud Functions need billing).
-// Never prints secret values.
+// to FIREBASE_SERVICE_ACCOUNT_B64). The free Spark plan is enough: the backend code runs on Netlify
+// (deploy-netlify.mjs), Firebase only provides sign-in and Firestore. Never prints secret values.
 //
 // Steps: enable APIs → add Firebase → Firestore (default) in asia-southeast1 → Auth (email/password on, authorized
-// domains) → web app + its public config into apps/mobile/firebase.web.json → .firebaserc → REVENUECAT_WEBHOOK_AUTH
-// secret (random, if missing) → deploy Firestore rules/indexes + Cloud Functions.
+// domains) → web app + its public config into apps/mobile/firebase.web.json → .firebaserc → service account the
+// backend runs as (catapult-backend: Firestore + Auth admin) → deploy Firestore rules/indexes.
 // Google and Apple sign-in are switched on in the Firebase console (see backend/README.md): Google needs the OAuth
 // client the console creates, Apple needs keys from the Apple Developer account.
-import { createSign, randomBytes } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { googleClient, loadServiceAccount } from "./gcp.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const DRY = process.argv.includes("--dry");
@@ -28,57 +28,18 @@ const WEB_APP_NAME = "Catapult Math Athletes (web)";
 const AUTH_DOMAINS = ["localhost", "catapult-math-athletes.web.app", "catapult-math-athletes.firebaseapp.com"];
 const APIS = [
   "firebase.googleapis.com", "firestore.googleapis.com", "identitytoolkit.googleapis.com", "securetoken.googleapis.com",
-  "cloudfunctions.googleapis.com", "cloudbuild.googleapis.com", "artifactregistry.googleapis.com", "run.googleapis.com",
-  "eventarc.googleapis.com", "pubsub.googleapis.com", "cloudscheduler.googleapis.com", "secretmanager.googleapis.com",
-  "firebaserules.googleapis.com", "firebasehosting.googleapis.com", "cloudbilling.googleapis.com", "logging.googleapis.com",
+  "firebaserules.googleapis.com", "iam.googleapis.com", "cloudresourcemanager.googleapis.com",
 ];
+const RUNTIME_SA_ID = "catapult-backend"; // same id in deploy-netlify.mjs
+const RUNTIME_ROLES = ["roles/datastore.user", "roles/firebaseauth.admin"];
 
 if (!PROJECT) throw new Error("Set FIREBASE_PROJECT_ID to the new project's id.");
-const saB64 = process.env.SETUP_SERVICE_ACCOUNT_B64 || process.env.FIREBASE_SERVICE_ACCOUNT_B64;
-if (!saB64) throw new Error("Set SETUP_SERVICE_ACCOUNT_B64 (or FIREBASE_SERVICE_ACCOUNT_B64).");
-const sa = JSON.parse(Buffer.from(saB64, "base64").toString("utf8"));
+const sa = loadServiceAccount();
 const log = (...a) => console.log(...a);
 
-async function accessToken() {
-  const now = Math.floor(Date.now() / 1000);
-  const b64u = (o) => Buffer.from(JSON.stringify(o)).toString("base64url");
-  const unsigned = `${b64u({ alg: "RS256", typ: "JWT" })}.${b64u({
-    iss: sa.client_email, scope: "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/firebase",
-    aud: "https://oauth2.googleapis.com/token", iat: now, exp: now + 3600,
-  })}`;
-  const sig = createSign("RSA-SHA256").update(unsigned).sign(sa.private_key, "base64url");
-  const res = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer", assertion: `${unsigned}.${sig}` }),
-  });
-  if (!res.ok) throw new Error(`token: HTTP ${res.status}`);
-  return (await res.json()).access_token;
-}
-const TOKEN = await accessToken();
+const { api, must, wait } = await googleClient(sa);
 
-/** JSON request; returns { status, body }. Error bodies are reduced to their message (never echoed wholesale). */
-async function api(method, url, body, extraHeaders = {}) {
-  const res = await fetch(url, {
-    method, headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": "application/json", ...extraHeaders },
-    body: body === undefined ? undefined : JSON.stringify(body),
-  });
-  const text = await res.text();
-  let json = {}; try { json = text ? JSON.parse(text) : {}; } catch { json = {}; }
-  return { status: res.status, body: json, error: json?.error?.message };
-}
-const must = (r, what) => { if (r.status >= 300) throw new Error(`${what}: HTTP ${r.status} ${r.error ?? ""}`); return r.body; };
-
-/** Long-running operation → wait until done. */
-async function wait(opName, base) {
-  for (let i = 0; i < 90; i++) {
-    const r = must(await api("GET", `${base}/${opName}`), `operation ${opName}`);
-    if (r.done) { if (r.error) throw new Error(`${opName}: ${r.error.message}`); return r.response; }
-    await new Promise((s) => setTimeout(s, 4000));
-  }
-  throw new Error(`${opName}: timed out`);
-}
-
-// 0) Access + billing
+// 0) Access
 const proj = await api("GET", `https://cloudresourcemanager.googleapis.com/v1/projects/${PROJECT}`);
 if (proj.status === 403 || proj.status === 404) {
   throw new Error(`Can't see project ${PROJECT}. Create it, then add ${sa.client_email} as Owner (IAM & Admin → Grant access).`);
@@ -86,7 +47,7 @@ if (proj.status === 403 || proj.status === 404) {
 must(proj, "project");
 log(`project ${PROJECT} (#${proj.body.projectNumber}) as ${sa.client_email}`);
 
-// 1) APIs (billing check needs cloudbilling, so it comes after)
+// 1) APIs
 const enabled = new Set();
 {
   let page = "";
@@ -102,12 +63,6 @@ if (missing.length && !DRY) {
   const op = must(await api("POST", `https://serviceusage.googleapis.com/v1/projects/${PROJECT}/services:batchEnable`, { serviceIds: missing }), "enable APIs");
   if (!op.done) await wait(op.name, "https://serviceusage.googleapis.com/v1");
 }
-
-const billing = await api("GET", `https://cloudbilling.googleapis.com/v1/projects/${PROJECT}/billingInfo`);
-if (billing.status < 300 && !billing.body.billingEnabled) {
-  throw new Error("Billing is off. Upgrade the project to the Blaze plan in the Firebase console, then re-run.");
-}
-log(`billing: ${billing.status < 300 ? "on (Blaze)" : `unknown (HTTP ${billing.status}); continuing`}`);
 
 // 2) Firebase
 const fb = await api("GET", `https://firebase.googleapis.com/v1beta1/projects/${PROJECT}`);
@@ -131,16 +86,15 @@ if (dbGet.status === 404) {
   }
 } else {
   const d = must(dbGet, "Firestore");
-  log(`Firestore: (default) exists in ${d.locationId}${d.locationId !== REGION ? ` (expected ${REGION}; functions still work, just farther away)` : ""}`);
+  log(`Firestore: (default) exists in ${d.locationId}${d.locationId !== REGION ? ` (expected ${REGION}; still works)` : ""}`);
 }
 
 // 4) Auth: email/password on, authorized domains
 const authBase = `https://identitytoolkit.googleapis.com/admin/v2/projects/${PROJECT}/config`;
 let cfg = await api("GET", authBase);
 if (cfg.status === 404 || (cfg.status === 400 && /CONFIGURATION_NOT_FOUND/.test(cfg.error ?? ""))) {
-  log("Auth: initialising");
-  if (!DRY) must(await api("POST", `https://identitytoolkit.googleapis.com/v2/projects/${PROJECT}/identityPlatform:initializeAuth`, {}), "initialise Auth");
-  cfg = DRY ? { status: 200, body: {} } : await api("GET", authBase);
+  // Firebase Auth (not the paid Identity Platform upgrade) is switched on once from the console.
+  throw new Error("Auth isn't set up yet: Firebase console → Build → Authentication → Get started, then re-run.");
 }
 const c = must(cfg, "Auth config");
 const domains = [...new Set([...(c.authorizedDomains ?? []), `${PROJECT}.firebaseapp.com`, `${PROJECT}.web.app`, ...AUTH_DOMAINS])];
@@ -179,30 +133,47 @@ if (rc.projects.default !== PROJECT) {
   if (!DRY) { rc.projects.default = PROJECT; fs.writeFileSync(rcPath, JSON.stringify(rc, null, 2) + "\n"); }
 }
 
-// 7) RevenueCat webhook secret (random if missing; copy it into RevenueCat from Secret Manager in the console)
-const SECRET = "REVENUECAT_WEBHOOK_AUTH";
-const secretBase = `https://secretmanager.googleapis.com/v1/projects/${PROJECT}/secrets`;
-const sec = await api("GET", `${secretBase}/${SECRET}`);
-if (DRY && sec.status === 403) {
-  log(`Secret ${SECRET}: can't check yet (Secret Manager API not enabled); would create if missing`);
-} else if (sec.status === 404) {
-  log(`Secret ${SECRET}: creating with a random value`);
+// 7) The service account the backend (Netlify) runs as: Firestore read/write + Auth admin (delete account), nothing else.
+const runtimeEmail = `${RUNTIME_SA_ID}@${PROJECT}.iam.gserviceaccount.com`;
+const saGet = await api("GET", `https://iam.googleapis.com/v1/projects/${PROJECT}/serviceAccounts/${runtimeEmail}`);
+if (saGet.status === 404 || (DRY && saGet.status === 403)) {
+  log(`Backend service account: creating ${runtimeEmail}`);
   if (!DRY) {
-    must(await api("POST", `${secretBase}?secretId=${SECRET}`, { replication: { automatic: {} } }), "create secret");
-    must(await api("POST", `${secretBase}/${SECRET}:addVersion`, { payload: { data: Buffer.from(`Bearer ${randomBytes(24).toString("hex")}`).toString("base64") } }), "add secret version");
+    must(await api("POST", `https://iam.googleapis.com/v1/projects/${PROJECT}/serviceAccounts`, {
+      accountId: RUNTIME_SA_ID, serviceAccount: { displayName: "Catapult Math Athletes backend (Netlify)" },
+    }), "create service account");
   }
-} else { must(sec, "secret"); log(`Secret ${SECRET}: exists`); }
+} else { must(saGet, "service account"); log(`Backend service account: ${runtimeEmail} exists`); }
+if (!DRY) {
+  const crm = `https://cloudresourcemanager.googleapis.com/v1/projects/${PROJECT}`;
+  for (let attempt = 0; ; attempt++) {
+    const policy = must(await api("POST", `${crm}:getIamPolicy`, { options: { requestedPolicyVersion: 3 } }), "get IAM policy");
+    const member = `serviceAccount:${runtimeEmail}`;
+    let changed = false;
+    for (const role of RUNTIME_ROLES) {
+      let b = (policy.bindings ??= []).find((x) => x.role === role && !x.condition);
+      if (!b) { b = { role, members: [] }; policy.bindings.push(b); }
+      if (!b.members.includes(member)) { b.members.push(member); changed = true; }
+    }
+    if (!changed) { log(`Backend service account: roles ${RUNTIME_ROLES.join(", ")} in place`); break; }
+    const r = await api("POST", `${crm}:setIamPolicy`, { policy });
+    if (r.status < 300) { log(`Backend service account: granted ${RUNTIME_ROLES.join(", ")}`); break; }
+    // A just-created account can take a few seconds to be visible to IAM; a concurrent edit gives 409.
+    if (attempt >= 5) must(r, "set IAM policy");
+    await new Promise((s2) => setTimeout(s2, 5000));
+  }
+}
 
-// 8) Deploy rules, indexes, functions
+// 8) Deploy Firestore rules + indexes
 if (DRY || NO_DEPLOY) { log(DRY ? "dry run: nothing changed" : "skipping deploy (--no-deploy)"); process.exit(0); }
 const keyFile = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "sa-")), "key.json");
 fs.writeFileSync(keyFile, JSON.stringify(sa), { mode: 0o600 });
 try {
-  log("Deploy: firestore rules + indexes + functions (takes a few minutes)");
-  execFileSync("npx", ["firebase", "deploy", "--only", "firestore,functions", "--project", PROJECT, "--non-interactive", "--force"], {
+  log("Deploy: Firestore rules + indexes");
+  execFileSync("npx", ["firebase", "deploy", "--only", "firestore", "--project", PROJECT, "--non-interactive", "--force"], {
     cwd: path.join(ROOT, "backend"), stdio: "inherit", env: { ...process.env, GOOGLE_APPLICATION_CREDENTIALS: keyFile },
   });
 } finally {
   fs.rmSync(path.dirname(keyFile), { recursive: true, force: true });
 }
-log("Done.");
+log("Done. Next: node backend/scripts/deploy-netlify.mjs");

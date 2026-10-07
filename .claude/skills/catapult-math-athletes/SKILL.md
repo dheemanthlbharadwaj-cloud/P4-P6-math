@@ -53,7 +53,7 @@ content/           @p6/content  editor Firestore → raw snapshot → app bundle
   recrops/P6/        verified re-cropped figure PNGs named <questionId>.png (input for apply-recrops)
   reports/           audit + undo manifests for every editor write
   raw/               (git-ignored) snapshot + downloaded figures + figures/.sources.json URL manifest
-backend/           Firebase project for the student app (placeholder id p6-math-game, asia-southeast1); functions/ is standalone
+backend/           student-app Firebase project (Spark: Auth + Firestore, asia-southeast1); functions/ = backend code, run on Netlify via netlify/ (see backend/README.md)
 apps/mobile/       Expo app
   app/               routes: (onboarding)/, (tabs)/map|classroom|leaderboard|store|profile, level/[grade], practice/[topicId], minigame/[mode]
   src/components/    TopicMapPage, CatCompanion, CatTimer, CatAvatar, QuestionPanel, Paywall, Calculator, ui.tsx, FigureViewer, RichText…
@@ -87,7 +87,7 @@ Never commit keys. `.gitignore` already covers `.env*`, `service-account*.json`,
 | App runtime config | `EXPO_PUBLIC_FIREBASE_*`, `EXPO_PUBLIC_REVENUECAT_*_KEY`, `EXPO_PUBLIC_ADMOB_*` (app ids + rewarded unit ids), `EXPO_PUBLIC_GOOGLE_*_CLIENT_ID`, `EXPO_PUBLIC_BUNDLE_ID` | real builds | Placeholders (Google test ad ids, `PLACEHOLDER`) keep builds working; see `app.config.ts`. |
 | Dev tools in a build | `EXPO_PUBLIC_DEV_TOOLS=1` | test web build / internal APKs | `web-preview.py` sets it. |
 | EAS / stores | `eas login` (Expo account), Apple/Google accounts | store builds | Profiles in `apps/mobile/eas.json` (development / preview / production). |
-| Backend | `firebase login`, `.firebaserc`; secret `REVENUECAT_WEBHOOK_AUTH` via `firebase functions:secrets:set` | backend deploy | Project not yet created (placeholder `p6-math-game`). |
+| Backend | `SETUP_SERVICE_ACCOUNT_B64`/`FIREBASE_SERVICE_ACCOUNT_B64` (Owner of the student project), `NETLIFY_AUTH_TOKEN` | `backend/scripts/setup-project.mjs`, `backend/scripts/deploy-netlify.mjs` | Firebase stays on Spark (no billing); the API runs on Netlify's free plan. Steps in backend/README.md. |
 
 ### Claude Code on the web (cloud container)
 - Add secrets in the environment settings: session title bar → cloud environment menu → **Edit** → environment

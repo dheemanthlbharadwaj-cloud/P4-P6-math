@@ -1,5 +1,5 @@
 import "./admin.js";
-export { bootstrapProfile, syncPublicProfile, deleteAccount } from "./profile.js";
+export { bootstrapProfile, syncPublicProfile, refreshPublicProfile, deleteAccount } from "./profile.js";
 export { submitLevelResult, submitMinigameResult, claimQuest, purchaseItem, redeemReferral } from "./game.js";
 export { sendFriendRequest, respondFriendRequest, getLeaderboard } from "./social.js";
 export { dailySnapshot, monthlyClose } from "./scheduled.js";

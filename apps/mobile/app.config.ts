@@ -8,11 +8,14 @@ const ADMOB_ANDROID_APP_ID = env("EXPO_PUBLIC_ADMOB_ANDROID_APP_ID", "ca-app-pub
 const ADMOB_IOS_APP_ID = env("EXPO_PUBLIC_ADMOB_IOS_APP_ID", "ca-app-pub-3940256099942544~1458002511");
 const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.p6math.app");
 
-// Committed web config of the student Firebase project (written by backend/scripts/setup-project.ts).
+// Committed web config of the student Firebase project (written by backend/scripts/setup-project.mjs).
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const WEB: Partial<Record<"apiKey" | "authDomain" | "projectId" | "storageBucket" | "messagingSenderId" | "appId", string>> = (() => {
   try { return require("./firebase.web.json"); } catch { return {}; }
 })();
+// Backend API base URL (the Netlify site), written by backend/scripts/deploy-netlify.mjs.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const BACKEND: { url?: string } = (() => { try { return require("./backend.json"); } catch { return {}; } })();
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
@@ -55,7 +58,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ],
   experiments: { typedRoutes: false },
   extra: {
-    // The student app's Firebase web config (not secret): firebase.web.json, written by backend/scripts/setup-project.ts
+    // The student app's Firebase web config (not secret): firebase.web.json, written by backend/scripts/setup-project.mjs
     // once the project exists; EXPO_PUBLIC_FIREBASE_* env vars override it.
     firebase: {
       apiKey: env("EXPO_PUBLIC_FIREBASE_API_KEY", WEB.apiKey ?? "PLACEHOLDER"),
@@ -67,6 +70,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     },
     // Local Firebase emulators (testing): EXPO_PUBLIC_USE_EMULATORS=1, host EXPO_PUBLIC_EMULATOR_HOST (default 127.0.0.1).
     emulators: env("EXPO_PUBLIC_USE_EMULATORS", "") === "1" ? { host: env("EXPO_PUBLIC_EMULATOR_HOST", "127.0.0.1") } : null,
+    // Backend API (POST <url>/api/<name>); with the emulators, the local dev server (backend/netlify/dev-server.mjs).
+    backendUrl: env("EXPO_PUBLIC_BACKEND_URL", env("EXPO_PUBLIC_USE_EMULATORS", "") === "1" ? `http://${env("EXPO_PUBLIC_EMULATOR_HOST", "127.0.0.1")}:8888` : BACKEND.url ?? ""),
     revenueCat: {
       ios: env("EXPO_PUBLIC_REVENUECAT_IOS_KEY", ""),
       android: env("EXPO_PUBLIC_REVENUECAT_ANDROID_KEY", ""),

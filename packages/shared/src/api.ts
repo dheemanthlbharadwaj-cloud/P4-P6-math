@@ -31,6 +31,7 @@ export type CallableName =
   | "sendFriendRequest"
   | "respondFriendRequest"
   | "getLeaderboard"
+  | "refreshPublicProfile"
   | "deleteAccount";
 
 /** Server-owned account state: everything needed to restore a device (stars, inventory, look, entitlement). */
@@ -147,4 +148,9 @@ export interface GetLeaderboardResponse {
 export type DeleteAccountRequest = Record<string, never>;
 export interface DeleteAccountResponse {
   deleted: true;
+}
+
+// ---- refreshPublicProfile: copy users/{uid} to publicProfiles/{uid} after the app writes its profile ----
+export interface RefreshPublicProfileResponse {
+  ok: boolean;
 }

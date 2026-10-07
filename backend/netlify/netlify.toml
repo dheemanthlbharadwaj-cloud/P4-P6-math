@@ -1,0 +1,9 @@
+# Backend API for Catapult Math Athletes (deployed by ../scripts/deploy-netlify.mjs; see ../README.md).
+[build]
+  publish = "public"
+
+[functions]
+  directory = "functions"
+  # The handlers come from lib/ (CommonJS) and the bundler doesn't trace their requires, so ship the dependencies
+  # (only firebase-admin, firebase-functions and their own dependencies are installed here) as they are.
+  included_files = ["node_modules/**"]

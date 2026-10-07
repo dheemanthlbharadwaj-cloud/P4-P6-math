@@ -2,7 +2,7 @@ import { randomInt } from "node:crypto";
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import { onDocumentWritten } from "firebase-functions/v2/firestore";
 import {
-  ACTIVE_GRADES, type BootstrapProfileRequest, type BootstrapProfileResponse, type DeleteAccountResponse, type Grade, type UserProfile,
+  ACTIVE_GRADES, type BootstrapProfileRequest, type BootstrapProfileResponse, type DeleteAccountResponse, type Grade, type RefreshPublicProfileResponse, type UserProfile,
 } from "./shared/index.js";
 import { loadAccountState } from "./account.js";
 import { auth, col, db, FieldValue, REGION, requireUid } from "./admin.js";
@@ -77,13 +77,25 @@ export const bootstrapProfile = onCall(async (req): Promise<BootstrapProfileResp
   throw new HttpsError("internal", "could not allocate a friend code");
 });
 
-/** Keeps publicProfiles/{uid} in sync when the owner edits their profile / equips items. */
+/** Copies the owner's profile (name, school, equipped look) to publicProfiles/{uid}, which friends and leaderboards read. */
+async function copyPublicProfile(uid: string, p: UserProfile) {
+  await db.collection(col.publicProfiles).doc(uid).set(publicProfileOf(uid, p));
+}
+
+/** Keeps publicProfiles/{uid} in sync when the owner edits their profile / equips items (Cloud Functions only). */
 export const syncPublicProfile = onDocumentWritten({ document: "users/{uid}", region: REGION }, async (event) => {
   const after = event.data?.after;
-  const uid = event.params.uid;
   if (!after?.exists) return;
-  const p = after.data() as UserProfile;
-  await db.collection(col.publicProfiles).doc(uid).set(publicProfileOf(uid, p));
+  await copyPublicProfile(event.params.uid, after.data() as UserProfile);
+});
+
+/** The same, on request: the app calls it after writing users/{uid} (hosts without Firestore triggers). */
+export const refreshPublicProfile = onCall(async (req): Promise<RefreshPublicProfileResponse> => {
+  const uid = requireUid(req);
+  const snap = await db.collection(col.users).doc(uid).get();
+  if (!snap.exists) return { ok: false };
+  await copyPublicProfile(uid, snap.data() as UserProfile);
+  return { ok: true };
 });
 
 /** Deletes the Auth user and every document that belongs to them. */

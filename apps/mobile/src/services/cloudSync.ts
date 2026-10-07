@@ -7,6 +7,7 @@
 import { collection, doc, getDoc, getDocs, runTransaction, updateDoc, writeBatch } from "firebase/firestore";
 import type { Grade, GradeProgress } from "@p6/shared";
 import { firebaseFirestore } from "./firebase";
+import { api } from "./api";
 import { currentUser } from "./auth";
 import { isFirebaseConfigured } from "./config";
 import { emptyGradeProgress, mergeGradeProgress } from "../logic/unlock";
@@ -32,8 +33,10 @@ export async function pushProfile(): Promise<void> {
     await updateDoc(ref, { ...base, cat: { name: (p.catName || "Mochi").slice(0, 20), colorId: look.colorId, hatId: look.hatId } });
   } catch (e) {
     if ((e as { code?: string })?.code !== "permission-denied") return;
-    try { await updateDoc(ref, base); } catch { /* not signed in yet / profile missing: next sync */ }
+    try { await updateDoc(ref, base); } catch { return; /* not signed in yet / profile missing: next sync */ }
   }
+  // Friends and leaderboards read the public copy; the backend refreshes it from users/{uid}.
+  await api.refreshPublicProfile().catch(() => undefined);
 }
 
 async function pushProgress(grade: Grade): Promise<void> {

@@ -1,0 +1,14 @@
+{
+  "name": "p6-math-game-netlify",
+  "private": true,
+  "version": "0.1.0",
+  "description": "The backend on Netlify: the compiled handlers from ../functions (copied to lib/) behind one HTTP endpoint.",
+  "scripts": {
+    "build": "npm --prefix ../functions run build && node scripts/copy-lib.mjs",
+    "dev": "npm run build && node dev-server.mjs"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0",
+    "firebase-functions": "^6.3.0"
+  }
+}

@@ -6,7 +6,7 @@
 | Mobile | **Expo React Native (TypeScript)**, expo-router, EAS Build → iOS App Store + Google Play. Dev builds (not Expo Go) because of ads/IAP native modules. |
 | Questions | **Bundled in the app, fully offline.** Built from the editor's Firestore bank (`primary-math-sg`, database id `"default"`) by the content pipeline. |
 | Map unit | **Subtopic = map node (P6 has 62 subtopics)**, each with 5/5/5. **Editor chapter (`chapter`, `chapter_no`; 12 for P6) = swipeable map.** Chapter 99 "Removed" / `excluded` questions are dropped. |
-| Backend | **New Firebase project** for the student app (separate from the `primary-math-sg` editor project). Auth, Firestore, Cloud Functions (TypeScript). |
+| Backend | **New Firebase project** for the student app (separate from the `primary-math-sg` editor project), free Spark plan: Auth + Firestore. The backend handlers (TypeScript, `backend/functions`) run on Netlify's free plan (`backend/netlify`, `POST /api/<name>`); see backend/README.md. |
 | Ads | Google AdMob via `react-native-google-mobile-ads`, rewarded ads for +hearts/+energy. Child-directed settings (see Compliance). |
 | Subscription | In-app purchase via RevenueCat (`react-native-purchases`). Apple/Google require store billing for digital subscriptions. Entitlement `unlimited`. |
 | Grades | P6 only now. **Every content path, type and screen is keyed by `grade` (`"P4" \| "P5" \| "P6"`)** so P4/P5 drop in as data. |
@@ -83,7 +83,7 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
   | `medals/{uid}` | `monthlyClose` | previous month's top 3: `{medal, month, stars}`; signed-in users may read |
   | `config/content` | operator | optional `{acceptedVersions: {P6: [...]}}`; absent = every content version accepted |
   No client can write stars, inventory, entitlements, leaderboards, medals, friendships or public profiles.
-- **Cloud Functions (TS, region asia-southeast1, timezone Asia/Singapore):**
+- **Backend handlers (TS, written as Cloud Functions, served from Netlify; timezone Asia/Singapore):**
   - `bootstrapProfile` (callable): creates `users`, `publicProfiles`, `wallets`, `friendCodes` once. Always returns
     `{profile, created} + AccountState` (stars, monthly stars, lifetime stars, claimed quests, owned items, equipped look,
     subscribed). `{restoreOnly: true}`

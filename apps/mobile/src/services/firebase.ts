@@ -1,22 +1,20 @@
 // Firebase JS SDK (v12) with RN persistence: keeps native setup light (no google-services files).
 import { getApp, getApps, initializeApp, type FirebaseApp } from "firebase/app";
 import { connectAuthEmulator, getReactNativePersistence, initializeAuth, getAuth, type Auth } from "firebase/auth";
-import { connectFunctionsEmulator, getFunctions, type Functions } from "firebase/functions";
 import { connectFirestoreEmulator, getFirestore, initializeFirestore, type Firestore } from "firebase/firestore";
 import { Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { extra, FUNCTIONS_REGION } from "./config";
+import { extra } from "./config";
 
 let app: FirebaseApp | null = null;
 let auth: Auth | null = null;
-let functions: Functions | null = null;
 
 export function firebaseApp(): FirebaseApp {
   if (!app) app = getApps().length ? getApp() : initializeApp(extra.firebase);
   return app;
 }
 
-// Local emulators (EXPO_PUBLIC_USE_EMULATORS=1): auth 9099, functions 5001, firestore 8080 (backend/firebase.json).
+// Local emulators (EXPO_PUBLIC_USE_EMULATORS=1): auth 9099, firestore 8080 (backend/firebase.json).
 const EMU = extra.emulators;
 
 export function firebaseAuth(): Auth {
@@ -31,14 +29,6 @@ export function firebaseAuth(): Auth {
     if (EMU) connectAuthEmulator(auth, `http://${EMU.host}:9099`, { disableWarnings: true });
   }
   return auth;
-}
-
-export function firebaseFunctions(): Functions {
-  if (!functions) {
-    functions = getFunctions(firebaseApp(), FUNCTIONS_REGION);
-    if (EMU) connectFunctionsEmulator(functions, EMU.host, 5001);
-  }
-  return functions;
 }
 
 let firestore: Firestore | null = null;
