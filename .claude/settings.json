@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node backend/scripts/setup-project.mjs:*)",
+      "Bash(node backend/scripts/deploy-rules.mjs:*)",
+      "Bash(node backend/scripts/deploy-netlify.mjs:*)",
+      "Bash(node backend/scripts/editor-reports.mjs:*)"
+    ]
+  }
+}
