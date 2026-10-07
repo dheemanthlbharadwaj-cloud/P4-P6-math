@@ -64,7 +64,7 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
 - **Firestore data model** (rules: `backend/firestore.rules`; Admin SDK writes bypass them). "Owner" = the signed-in uid.
   | Path | Written by | Notes |
   |---|---|---|
-  | `users/{uid}` | created by `bootstrapProfile`; owner may update `fullName, school, topicsLearnt, psleDate, cat` | `cat {name,colorId,hatId}`: rules reject an item that is not in `wallets/{uid}.inventory` (`color-black` always allowed, `hatId: null` allowed). This is how equipping works (no callable). |
+  | `users/{uid}` | created by `bootstrapProfile`; edited through `updateProfile` (`fullName, school, topicsLearnt, psleDate, cat`) | `cat {name,colorId,hatId}`: the server skips an item that is not owned (free items or `wallets/{uid}.inventory`). No client access: all student collections are server only. |
   | `users/{uid}/progress/{grade}` | owner (shape pinned by rules) | `{grade, unlockedTopics[], levels{"<subtopicId>#<level>": {completed,bestCorrect,completedAt?}}, updatedAt}`, merged by max on the device (`mergeGradeProgress`) |
   | `users/{uid}/wrong/{questionId}` | owner (shape pinned) | `{grade, active, flaggedAt, updatedAt}`; `active=false` keeps the "all wrong ever" history |
   | `users/{uid}/ledger/{entryId}` | server only | star ledger (`level_<attemptId>`, `referral_<referredUid>`, purchases); owner may read |

@@ -1,0 +1,5 @@
+{
+  "release": "projects/primary-math-sg/releases/cloud.firestore/default",
+  "rulesetName": "projects/primary-math-sg/rulesets/6a60255a-0bac-46af-8cb7-801614b4e773",
+  "undo": "node backend/scripts/deploy-rules.mjs --restore projects/primary-math-sg/rulesets/6a60255a-0bac-46af-8cb7-801614b4e773"
+}

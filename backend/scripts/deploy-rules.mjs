@@ -70,7 +70,10 @@ for (const i of idx.indexes) {
   log(`index ${i.collectionGroup} (${i.fields.map((f) => f.fieldPath).join(", ")}): creating`);
   if (!DRY) must(await api("POST", `${FS}/collectionGroups/${i.collectionGroup}/indexes`, { queryScope: i.queryScope, fields: i.fields }), "create index");
 }
-for (const o of idx.fieldOverrides ?? []) {
+// Enterprise-edition databases (primary-math-sg "default" is one) run queries without single-field indexes and don't
+// allow changing their configuration, so field overrides only apply to Standard edition.
+const edition = must(await api("GET", FS), "database").databaseEdition ?? "STANDARD";
+for (const o of edition === "ENTERPRISE" ? [] : idx.fieldOverrides ?? []) {
   const url = `${FS}/collectionGroups/${o.collectionGroup}/fields/${o.fieldPath}`;
   const cur = must(await api("GET", url), "field config");
   const want = o.indexes.map((x) => ({ queryScope: x.queryScope, fields: [{ fieldPath: o.fieldPath, ...(x.order ? { order: x.order } : { arrayConfig: x.arrayConfig }) }] }));
