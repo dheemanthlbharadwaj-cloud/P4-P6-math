@@ -6,4 +6,6 @@
   directory = "functions"
   # The handlers come from lib/ (CommonJS) and the bundler doesn't trace their requires, so ship the dependencies
   # (only firebase-admin, firebase-functions and their own dependencies are installed here) as they are.
-  included_files = ["node_modules/**"]
+  # Paths are relative to the site root, which the CLI takes to be the repo root (npm workspaces), hence both forms;
+  # "node_modules/**" would match only the directory, "**/*" matches the files.
+  included_files = ["backend/netlify/node_modules/**/*", "node_modules/**/*"]
