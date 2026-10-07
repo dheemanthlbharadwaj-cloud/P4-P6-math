@@ -1,7 +1,8 @@
-// Validation for level results, purchases, referrals, friend requests, question reports. Pure.
+// Validation for level results, purchases, referrals, friend requests, question reports, profile/progress sync. Pure.
 import {
   LEVEL_PASS_MIN_CORRECT, ACTIVE_GRADES, MAX_REPORT_NOTE, QUESTS, QUEST_ITEMS, REPORT_REASONS, type LevelResult, type MinigameResult,
-  type ReportQuestionRequest, type ReportReason, type StoreItem,
+  type ReportQuestionRequest, type ReportReason, type StoreItem, MAX_SYNC_WRONG, STORE_ITEMS, type GradeProgress,
+  type LevelProgress, type UpdateProfileRequest, type UserProfile, type WrongBookmark,
 } from "../shared/index.js";
 
 export type Fail = { ok: false; code: "invalid-argument" | "failed-precondition" | "already-exists" | "not-found" | "permission-denied"; message: string };
@@ -112,7 +113,7 @@ export function makeFriendCode(randomInt: (max: number) => number, length = 8): 
 export const normalizeFriendCode = (c: unknown) => String(c ?? "").toUpperCase().replace(/[^A-Z0-9]/g, "");
 export const isFriendCode = (c: string) => c.length === 8 && [...c].every((ch) => FRIEND_CODE_ALPHABET.includes(ch));
 
-const QUESTION_ID_RE = /^[A-Za-z0-9_.-]{3,120}$/;
+const QUESTION_ID_RE = /^[A-Za-z0-9_. -]{3,120}$/; // question bank ids (some contain spaces); never "/"
 const REPORT_CONTEXTS = ["level", "minigame", "practice"] as const;
 
 /** Clean a reportQuestion request: known reason/context/grade, short trimmed text. */
@@ -130,4 +131,67 @@ export function validateReport(r: unknown): Fail | Ok<{ report: Required<Omit<Re
   const answerGiven = typeof x.answerGiven === "string" && x.answerGiven.trim() ? x.answerGiven.trim().slice(0, 200) : null;
   const contentVersion = typeof x.contentVersion === "string" ? x.contentVersion.slice(0, 40) : null;
   return { ok: true, report: { questionId: x.questionId, grade: x.grade, reason: x.reason as ReportReason, context: x.context as ReportQuestionRequest["context"], note, answerGiven, contentVersion } };
+}
+
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const isStr = (v: unknown, min: number, max: number): v is string => typeof v === "string" && v.trim().length >= min && v.trim().length <= max;
+
+/** Items every account owns (price 0), plus the inventory. */
+export function ownsItem(inventory: string[], id: string): boolean {
+  return STORE_ITEMS.some((i) => i.id === id && i.price === 0) || inventory.includes(id);
+}
+
+/** updateProfile: same limits the client rules used to enforce. `cat` is null when the look can't be applied. */
+export function validateProfileUpdate(r: unknown, inventory: string[]): Fail | Ok<{ fields: Pick<UserProfile, "fullName" | "school" | "topicsLearnt" | "psleDate">; cat: UserProfile["cat"] | null }> {
+  const x = r as Partial<UpdateProfileRequest> | null;
+  if (!x || typeof x !== "object") return fail("invalid-argument", "missing body");
+  if (!isStr(x.fullName, 1, 60)) return fail("invalid-argument", "name must be 1-60 characters");
+  if (x.school !== undefined && !isStr(x.school, 0, 80)) return fail("invalid-argument", "school too long");
+  if (!Array.isArray(x.topicsLearnt) || x.topicsLearnt.length > 20 || !x.topicsLearnt.every((t) => isStr(t, 1, 60))) return fail("invalid-argument", "bad topicsLearnt");
+  const psleDate = typeof x.psleDate === "string" ? x.psleDate : "";
+  if (psleDate && !DATE_RE.test(psleDate)) return fail("invalid-argument", "psleDate must be yyyy-mm-dd");
+  const c = x.cat as Partial<UserProfile["cat"]> | undefined;
+  const catOk = !!c && isStr(c.name, 1, 20) && typeof c.colorId === "string" && ownsItem(inventory, c.colorId)
+    && (c.hatId === null || c.hatId === undefined || (typeof c.hatId === "string" && ownsItem(inventory, c.hatId)));
+  return {
+    ok: true,
+    fields: { fullName: x.fullName.trim(), school: (x.school ?? "").trim(), topicsLearnt: x.topicsLearnt.map((t) => t.trim()), psleDate },
+    cat: catOk ? { name: c!.name!.trim(), colorId: c!.colorId!, hatId: c!.hatId ?? null } : null,
+  };
+}
+
+/** syncProgress: shape-checked progress (levels ≤600, scores 0..5) and bookmarks (≤MAX_SYNC_WRONG, plain ids). */
+export function validateSyncProgress(r: unknown): Fail | Ok<{ grade: GradeProgress["grade"]; progress: GradeProgress | null; wrong: WrongBookmark[]; pull: boolean }> {
+  const x = r as { grade?: unknown; progress?: { unlockedTopics?: unknown; levels?: unknown }; wrong?: unknown; pull?: unknown } | null;
+  if (!x || typeof x !== "object") return fail("invalid-argument", "missing body");
+  if (!ACTIVE_GRADES.includes(x.grade as GradeProgress["grade"])) return fail("invalid-argument", "bad grade");
+  const grade = x.grade as GradeProgress["grade"];
+  let progress: GradeProgress | null = null;
+  if (x.progress !== undefined && x.progress !== null) {
+    const { unlockedTopics, levels } = x.progress;
+    if (!Array.isArray(unlockedTopics) || unlockedTopics.length > 30 || !unlockedTopics.every((t) => isStr(t, 1, 120))) return fail("invalid-argument", "bad unlockedTopics");
+    if (!levels || typeof levels !== "object" || Array.isArray(levels)) return fail("invalid-argument", "bad levels");
+    const entries = Object.entries(levels as Record<string, unknown>);
+    if (entries.length > 600) return fail("invalid-argument", "too many levels");
+    const clean: Record<string, LevelProgress> = {};
+    for (const [key, v] of entries) {
+      const l = v as Partial<LevelProgress> | null;
+      if (!/^[a-z0-9-]{3,140}#[1-3]$/.test(key) || !l || typeof l !== "object") return fail("invalid-argument", "bad level");
+      const best = Number(l.bestCorrect ?? 0);
+      clean[key] = {
+        completed: l.completed === true,
+        bestCorrect: Number.isFinite(best) ? Math.max(0, Math.min(5, Math.floor(best))) : 0,
+        ...(typeof l.completedAt === "number" && Number.isFinite(l.completedAt) ? { completedAt: l.completedAt } : {}),
+      };
+    }
+    progress = { grade, unlockedTopics: [...new Set(unlockedTopics as string[])], levels: clean };
+  }
+  const wrongIn = x.wrong === undefined ? [] : x.wrong;
+  if (!Array.isArray(wrongIn) || wrongIn.length > MAX_SYNC_WRONG) return fail("invalid-argument", "bad wrong list");
+  const wrong: WrongBookmark[] = [];
+  for (const w of wrongIn as Partial<WrongBookmark>[]) {
+    if (!w || typeof w.id !== "string" || !QUESTION_ID_RE.test(w.id) || typeof w.active !== "boolean") return fail("invalid-argument", "bad bookmark");
+    wrong.push({ id: w.id, active: w.active, flaggedAt: typeof w.flaggedAt === "number" && Number.isFinite(w.flaggedAt) ? w.flaggedAt : 0 });
+  }
+  return { ok: true, grade, progress, wrong, pull: x.pull === true };
 }

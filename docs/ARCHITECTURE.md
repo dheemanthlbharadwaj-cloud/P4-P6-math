@@ -107,6 +107,8 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
     friends board.
   - Scheduled: `dailySnapshot` 00:00 SGT (rank arrows); `monthlyClose` 00:00 SGT on the 1st (see OPEN_QUESTIONS #14).
   - `revenuecatWebhook` (HTTPS) → `entitlements/{uid}`.
+  - `updateProfile`, `syncProgress`, `listFriendRequests` (callables): the app has no direct Firestore access; profile,
+    map progress (merged by max), "previously wrong" bookmarks and incoming friend requests go through these.
   - `reportQuestion` (callable): a student reports a problem with a question → `question_reports/{questionId}__{uid}`
     (reason, note, answer given, the question's `access_key`); max 20 a day. The editor shows and resolves them.
   - `deleteAccount` (callable): deletes Auth user + every document that belongs to them (incl. leaderboard entries/snapshots,

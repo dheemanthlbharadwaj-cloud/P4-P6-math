@@ -5,3 +5,4 @@ export { sendFriendRequest, respondFriendRequest, getLeaderboard } from "./socia
 export { dailySnapshot, monthlyClose } from "./scheduled.js";
 export { revenuecatWebhook } from "./revenuecat.js";
 export { reportQuestion } from "./reports.js";
+export { updateProfile, syncProgress, listFriendRequests } from "./sync.js";

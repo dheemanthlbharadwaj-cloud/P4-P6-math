@@ -5,7 +5,7 @@ import {
 } from "../src/logic/dates";
 import { buildEntries, pickMedalWinners, rankDeltas, rankMap, sortRows } from "../src/logic/ranking";
 import {
-  isContentVersionAccepted, isFriendCode, makeFriendCode, minigameStars, normalizeFriendCode, pairId, validateClaimQuest, validateReport,
+  isContentVersionAccepted, isFriendCode, makeFriendCode, minigameStars, normalizeFriendCode, pairId, validateClaimQuest, validateReport, validateProfileUpdate, validateSyncProgress,
   validateFriendRequest, validateLevelResult, validateMinigameResult, validatePurchase, validateReferral,
 } from "../src/logic/rules";
 import { authHeaderMatches, isActiveAt, isSubscribed, mapRevenueCatEvent, pickUid } from "../src/logic/revenuecat";
@@ -279,5 +279,35 @@ describe("question reports", () => {
     expect(validateReport({ ...ok, reason: "other" }).ok).toBe(false);
     const v = validateReport({ ...ok, reason: "other", note: "x".repeat(2000) });
     expect(v.ok && v.report.note.length).toBe(500);
+  });
+});
+
+describe("profile + progress sync (no client Firestore access)", () => {
+  const prof = { fullName: " Aisha ", school: "Ai Tong", topicsLearnt: ["fractions"], psleDate: "2026-09-25", cat: { name: "Mochi", colorId: "color-black", hatId: null } };
+  it("saves owned looks, skips unowned ones", () => {
+    const ok = validateProfileUpdate(prof, []);
+    expect(ok.ok && ok.cat?.colorId).toBe("color-black");
+    expect(ok.ok && ok.fields.fullName).toBe("Aisha");
+    const unowned = validateProfileUpdate({ ...prof, cat: { name: "Mochi", colorId: "color-ginger", hatId: null } }, ["color-black"]);
+    expect(unowned.ok && unowned.cat).toBe(null);
+    const owned = validateProfileUpdate({ ...prof, cat: { name: "Mochi", colorId: "color-ginger", hatId: null } }, ["color-ginger"]);
+    expect(owned.ok && owned.cat?.colorId).toBe("color-ginger");
+  });
+  it("rejects bad profile fields", () => {
+    expect(validateProfileUpdate({ ...prof, fullName: "" }, []).ok).toBe(false);
+    expect(validateProfileUpdate({ ...prof, psleDate: "25/9/2026" }, []).ok).toBe(false);
+    expect(validateProfileUpdate({ ...prof, topicsLearnt: Array(21).fill("x") }, []).ok).toBe(false);
+  });
+  it("cleans progress and bookmarks", () => {
+    const v = validateSyncProgress({ grade: "P6", progress: { unlockedTopics: ["fractions", "fractions"], levels: { "p6-fractions-a#1": { completed: true, bestCorrect: 9, junk: 1 } } }, wrong: [{ id: "2023_St Nicholas_P1_Q16", active: true, flaggedAt: 5 }] });
+    expect(v.ok).toBe(true);
+    if (v.ok) {
+      expect(v.progress?.unlockedTopics).toEqual(["fractions"]);
+      expect(v.progress?.levels["p6-fractions-a#1"]).toEqual({ completed: true, bestCorrect: 5 });
+      expect(v.wrong[0].id).toBe("2023_St Nicholas_P1_Q16");
+    }
+    expect(validateSyncProgress({ grade: "P6", wrong: [{ id: "a/b", active: true }] }).ok).toBe(false);
+    expect(validateSyncProgress({ grade: "P6", progress: { unlockedTopics: [], levels: { "../x": {} } } }).ok).toBe(false);
+    expect(validateSyncProgress({ grade: "P9" }).ok).toBe(false);
   });
 });

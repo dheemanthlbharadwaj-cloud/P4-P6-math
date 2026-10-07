@@ -1,153 +1,16 @@
 rules_version = '2';
 
-// Student-app rules. Server (Admin SDK) bypasses these rules; everything marked "server only" is written by the
-// backend (backend/netlify). In primary-math-sg they are merged into the question bank editor's rules by
-// scripts/deploy-rules.mjs (this file's helpers and matches go inside the editor's; config and the catch-all are
-// left to the editor). See docs/ARCHITECTURE.md → Backend.
+// Student-app data: SERVER ONLY. The app has no direct Firestore access; every read and write goes through the
+// backend (backend/netlify → the handlers in functions/, Admin SDK, which bypasses rules). So the student app does
+// not depend on these rules or on the question bank editor's rules in the shared database (primary-math-sg
+// "default"), and nothing here needs to be merged into the editor's rules except the editor's own report access
+// (firestore.editor-reports.rules, merged by scripts/deploy-rules.mjs).
+//
+// Student collections: users/{uid} (+ progress, wrong, ledger, attempts, starredLevels, attempted, minigames,
+// reportQuota), wallets, publicProfiles, friendCodes, referrals, friendships, friendRequests, leaderboards,
+// leaderboardSnapshots, leaderboardMeta, medals, entitlements, question_reports.
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    function signedIn() { return request.auth != null; }
-    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
-
-    // Items every account owns for free (price 0 in STORE_ITEMS). Keep in sync with packages/shared gameRules.
-    function freeItem(id) { return id == 'color-black'; }
-    function owns(uid, id) {
-      return freeItem(id) ||
-        (exists(/databases/$(database)/documents/wallets/$(uid)) &&
-         id in get(/databases/$(database)/documents/wallets/$(uid)).data.inventory);
-    }
-
-    function catOk(uid, cat) {
-      return cat.keys().hasOnly(['name', 'colorId', 'hatId']) &&
-             cat.name is string && cat.name.size() >= 1 && cat.name.size() <= 20 &&
-             cat.colorId is string && owns(uid, cat.colorId) &&
-             (cat.hatId == null || (cat.hatId is string && owns(uid, cat.hatId)));
-    }
-
-    // ---- users/{uid}: created ONLY by the bootstrapProfile callable; owner can edit profile fields ----
-    match /users/{uid} {
-      allow read: if isOwner(uid);
-      allow create, delete: if false;
-      allow update: if isOwner(uid)
-        && request.resource.data.diff(resource.data).affectedKeys()
-             .hasOnly(['fullName', 'school', 'topicsLearnt', 'psleDate', 'cat'])
-        && request.resource.data.fullName is string
-        && request.resource.data.fullName.size() >= 1 && request.resource.data.fullName.size() <= 60
-        && request.resource.data.school is string && request.resource.data.school.size() <= 80
-        && request.resource.data.topicsLearnt is list && request.resource.data.topicsLearnt.size() <= 20
-        && catOk(uid, request.resource.data.cat);
-
-      // progress (synced from device, merged by max) and wrong-question bookmarks
-      // No economy data here (stars/inventory live in server-only wallets/{uid}), so the owner may write, but the
-      // shape is pinned so the collection cannot be abused as free storage.
-      match /progress/{grade} {
-        allow read: if isOwner(uid);
-        allow create, update: if isOwner(uid)
-          && grade in ['P4', 'P5', 'P6']
-          && request.resource.data.keys().hasOnly(['grade', 'unlockedTopics', 'levels', 'updatedAt'])
-          && request.resource.data.grade == grade
-          && request.resource.data.unlockedTopics is list && request.resource.data.unlockedTopics.size() <= 30
-          && request.resource.data.levels is map && request.resource.data.levels.size() <= 600
-          && request.resource.data.updatedAt is number;
-        allow delete: if false; // removed by deleteAccount only
-      }
-      match /wrong/{questionId} {
-        allow read: if isOwner(uid);
-        allow create, update: if isOwner(uid)
-          && questionId.size() <= 120
-          && request.resource.data.keys().hasOnly(['grade', 'active', 'flaggedAt', 'updatedAt'])
-          && request.resource.data.grade in ['P4', 'P5', 'P6']
-          && request.resource.data.active is bool
-          && request.resource.data.flaggedAt is number
-          && request.resource.data.updatedAt is number;
-        allow delete: if false;
-      }
-      // star ledger: owner may read, only the server writes
-      match /ledger/{entryId} {
-        allow read: if isOwner(uid);
-        allow write: if false;
-      }
-      // idempotency records for submitLevelResult
-      match /attempts/{attemptId} {
-        allow read, write: if false;
-      }
-      // Star bookkeeping, written only by the callables (stars.ts rules): levels that gave a star, questions ever
-      // attempted, mini-game rounds.
-      match /starredLevels/{levelId} {
-        allow read, write: if false;
-      }
-      match /attempted/{questionId} {
-        allow read, write: if false;
-      }
-      match /minigames/{attemptId} {
-        allow read, write: if false;
-      }
-      // reportQuestion daily cap
-      match /reportQuota/{date} {
-        allow read, write: if false;
-      }
-    }
-
-    // Student reports about questions: written by reportQuestion only. In the question bank project the editor
-    // fragment (firestore.editor-reports.rules) lets editors read and resolve them.
-    match /question_reports/{reportId} {
-      allow read, write: if false;
-    }
-
-    // wallet (star balance + inventory): server only writes
-    match /wallets/{uid} {
-      allow read: if isOwner(uid);
-      allow write: if false;
-    }
-
-    // visible to any signed-in user (leaderboards, friends on the map); written by functions only
-    match /publicProfiles/{uid} {
-      allow read: if signedIn();
-      allow write: if false;
-    }
-
-    match /friendCodes/{code} {
-      allow read, write: if false; // lookups go through callables
-    }
-    match /referrals/{uid} {
-      allow read, write: if false;
-    }
-
-    match /friendships/{pairId} {
-      allow read: if signedIn() && request.auth.uid in resource.data.members;
-      allow write: if false;
-    }
-    match /friendRequests/{id} {
-      allow read: if signedIn() && (request.auth.uid == resource.data.from || request.auth.uid == resource.data.to);
-      allow write: if false;
-    }
-
-    // leaderboards, snapshots, medals: readable via callable only (server computes ranks); medals readable when signed in
-    match /leaderboards/{boardId}/entries/{uid} {
-      allow read, write: if false;
-    }
-    match /leaderboardSnapshots/{date}/entries/{uid} {
-      allow read, write: if false;
-    }
-    match /leaderboardMeta/{id} {
-      allow read, write: if false;
-    }
-    match /medals/{uid} {
-      allow read: if signedIn();
-      allow write: if false;
-    }
-
-    // RevenueCat webhook output; owner may read their own entitlement
-    match /entitlements/{uid} {
-      allow read: if isOwner(uid);
-      allow write: if false;
-    }
-
-    match /config/{doc} {
-      allow read, write: if false;
-    }
-
     match /{document=**} {
       allow read, write: if false;
     }

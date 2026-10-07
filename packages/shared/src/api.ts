@@ -17,7 +17,7 @@
 // (users/{uid}.cat|fullName|school|topicsLearnt|psleDate, users/{uid}/progress/{grade}, users/{uid}/wrong/{id}).
 // The rules refuse an equipped item that is not in wallets/{uid}.inventory ("color-black" is always owned), and
 // the syncPublicProfile trigger mirrors users/{uid} into publicProfiles/{uid}.
-import type { CatLook, Grade, LeaderboardEntry, PublicProfile, UserProfile } from "./types";
+import type { CatLook, Grade, GradeProgress, LeaderboardEntry, PublicProfile, UserProfile } from "./types";
 
 export const FUNCTIONS_REGION = "asia-southeast1";
 
@@ -33,6 +33,9 @@ export type CallableName =
   | "getLeaderboard"
   | "refreshPublicProfile"
   | "reportQuestion"
+  | "updateProfile"
+  | "syncProgress"
+  | "listFriendRequests"
   | "deleteAccount";
 
 /** Server-owned account state: everything needed to restore a device (stars, inventory, look, entitlement). */
@@ -179,6 +182,48 @@ export interface ReportQuestionResponse {
   reportId: string;
   /** true when this student had reported the question before (the report was updated and reopened). */
   updated: boolean;
+}
+
+// ---- Device data goes through the backend only (no client access to Firestore), so the student app never depends
+//      on the security rules of the database it shares with the question bank editor. ----
+
+// updateProfile: the editable profile fields + equipped cat look (items must be owned: free or in the inventory;
+// an unowned look is skipped and the rest saved). Also refreshes publicProfiles/{uid}.
+export interface UpdateProfileRequest {
+  fullName: string;
+  school: string;
+  topicsLearnt: string[];
+  psleDate: string; // "" or yyyy-mm-dd
+  cat: UserProfile["cat"];
+}
+export interface UpdateProfileResponse {
+  /** false when the look was not saved (an item the account does not own). */
+  catApplied: boolean;
+}
+
+// syncProgress: merge this device's map progress into the server copy (by max: sticky completion, best score, union
+// of topics) and/or store changed "previously wrong" bookmarks; returns the merged progress (and with `pull`, every
+// bookmark for the grade).
+export const MAX_SYNC_WRONG = 400;
+export interface WrongBookmark {
+  id: string; // question id
+  active: boolean; // currently flagged (false = answered right later, kept for "all wrong ever")
+  flaggedAt: number;
+}
+export interface SyncProgressRequest {
+  grade: Grade;
+  progress?: Pick<GradeProgress, "unlockedTopics" | "levels">;
+  wrong?: WrongBookmark[]; // at most MAX_SYNC_WRONG per call
+  pull?: boolean;
+}
+export interface SyncProgressResponse {
+  progress: GradeProgress | null;
+  wrong?: WrongBookmark[]; // only with pull
+}
+
+// listFriendRequests: pending requests addressed to the caller.
+export interface ListFriendRequestsResponse {
+  requests: { id: string; fromUid: string; displayName: string }[];
 }
 
 // ---- refreshPublicProfile: copy users/{uid} to publicProfiles/{uid} after the app writes its profile ----

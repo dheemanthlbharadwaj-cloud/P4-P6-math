@@ -54,12 +54,13 @@ export function mergeRules(live, student, reportsFragment) {
   body = dropMatch(body, "/config/{doc}"); // editor-owned collection (its catch-all: master only)
   body = dropMatch(body, "/{document=**}"); // deny-all adds nothing (rules only grant)
   // signedIn() exists on both sides: keep the editor's, but only if it means the same
-  if (fnDef(student, "signedIn") !== fnDef(editor, "signedIn")) throw new Error("signedIn() differs between editor and student rules");
+  if (fnDef(student, "signedIn") && fnDef(student, "signedIn") !== fnDef(editor, "signedIn")) throw new Error("signedIn() differs between editor and student rules");
   body = body.replace(/^[ \t]*function signedIn\(\)[^\n]*\n/m, "");
   const clash = functionNames(body).filter((n) => functionNames(editor).includes(n));
   if (clash.length) throw new Error(`function name clash with the editor rules: ${clash.join(", ")}`);
   const d = documentsBody(editor);
-  const section = `${BEGIN}\n${body.replace(/^\n+|\s+$/g, "")}\n\n${reportsFragment.replace(/\s+$/, "")}\n${END}\n`;
+  const studentPart = body.replace(/^\s+|\s+$/g, "");
+  const section = `${BEGIN}\n${studentPart ? `    ${studentPart}\n\n` : ""}${reportsFragment.replace(/\s+$/, "")}\n${END}\n`;
   const before = editor.slice(0, d.end).replace(/[ \t]*$/, "");
   return `${before}${section}  ${editor.slice(d.end)}`;
 }

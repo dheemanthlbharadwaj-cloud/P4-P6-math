@@ -3,7 +3,7 @@
 //
 //   node backend/scripts/deploy-netlify.mjs [--dry] [--rotate-key]
 //
-// Needs NETLIFY_AUTH_TOKEN (Netlify → User settings → Applications → Personal access tokens) and the setup service
+// Needs NETLIFY_AUTH_TOKEN or NETLIFY_SECRET (Netlify → User settings → Applications → Personal access tokens) and the setup service
 // account (SETUP_SERVICE_ACCOUNT_B64 or FIREBASE_SERVICE_ACCOUNT_B64, Owner of the project). Project primary-math-sg
 // (FIREBASE_PROJECT_ID overrides), Firestore database "default"; site name NETLIFY_SITE_NAME (default below).
 // Never prints secret values.
@@ -29,8 +29,8 @@ const SITE_NAME = process.env.NETLIFY_SITE_NAME || "catapult-math-athletes-api";
 const PROJECT = process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
 const DATABASE = process.env.FIRESTORE_DATABASE_ID || "default"; // the question bank's named database
 const RUNTIME_SA = `catapult-backend@${PROJECT}.iam.gserviceaccount.com`; // created by setup-project.mjs
-const NL_TOKEN = process.env.NETLIFY_AUTH_TOKEN;
-if (!NL_TOKEN) throw new Error("Set NETLIFY_AUTH_TOKEN (Netlify → User settings → Applications → Personal access tokens).");
+const NL_TOKEN = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_SECRET;
+if (!NL_TOKEN) throw new Error("Set NETLIFY_AUTH_TOKEN or NETLIFY_SECRET (Netlify → User settings → Applications → Personal access tokens).");
 const log = (...a) => console.log(...a);
 
 /** Netlify REST; returns { status, body } (error bodies reduced to their message). */

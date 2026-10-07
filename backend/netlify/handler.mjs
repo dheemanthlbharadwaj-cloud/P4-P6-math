@@ -14,7 +14,7 @@ import dates from "./lib/logic/dates.js";
 
 const CALLABLES = new Set([
   "bootstrapProfile", "submitLevelResult", "submitMinigameResult", "claimQuest", "purchaseItem", "redeemReferral",
-  "sendFriendRequest", "respondFriendRequest", "getLeaderboard", "refreshPublicProfile", "reportQuestion", "deleteAccount",
+  "sendFriendRequest", "respondFriendRequest", "getLeaderboard", "refreshPublicProfile", "reportQuestion", "updateProfile", "syncProgress", "listFriendRequests", "deleteAccount",
 ]);
 // Callable error code → HTTP status (same table as Firebase callables).
 const STATUS = {

@@ -1,13 +1,11 @@
 // Incoming friend requests (friendRequests where to == me, status pending) with Accept / Decline.
-// Reads go straight to Firestore (rules allow the addressee to read); answering goes through respondFriendRequest.
+// Listed and answered through the backend (listFriendRequests / respondFriendRequest).
 import React, { useCallback, useEffect, useState } from "react";
 import { Text, View } from "react-native";
-import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 import { Body, Button, Card, H2 } from "./ui";
 import { api, ApiError } from "../services/api";
 import { currentUser } from "../services/auth";
 import { refreshFriends } from "../services/bootstrap";
-import { firebaseFirestore } from "../services/firebase";
 import { isFirebaseConfigured } from "../services/config";
 import { colors, fonts } from "../theme/colors";
 import { SAMPLE_FRIEND_REQUEST, SAMPLE_REQUEST_PROFILE, SHOW_SAMPLES } from "../dev/samples";
@@ -29,12 +27,8 @@ export function FriendRequests({ onMessage }: { onMessage: (m: string) => void }
       return;
     }
     try {
-      const db = firebaseFirestore();
-      const snap = await getDocs(query(collection(db, "friendRequests"), where("to", "==", uid), where("status", "==", "pending")));
-      const out = await Promise.all(snap.docs.map(async (d) => {
-        const from = await getDoc(doc(db, "publicProfiles", String(d.data().from)));
-        return { id: d.id, name: String(from.data()?.displayName ?? "A player") };
-      }));
+      const { requests } = await api.listFriendRequests();
+      const out = requests.map((r) => ({ id: r.id, name: r.displayName }));
       setItems(out);
     } catch { /* offline: keep what we have */ }
   }, []);

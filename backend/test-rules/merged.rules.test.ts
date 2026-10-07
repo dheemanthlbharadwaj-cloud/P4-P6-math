@@ -54,9 +54,9 @@ describe("students stay out of editor data", () => {
       await assertFails(getDoc(doc(as("alice"), p)));
     }
   });
-  it("still use their own data", async () => {
-    await assertSucceeds(getDoc(doc(as("alice"), "wallets/alice")));
-    await assertSucceeds(updateDoc(doc(as("alice"), "users/alice"), { school: "Rosyth" }));
+  it("and have no client access to student data either (the app goes through the backend)", async () => {
+    await assertFails(getDoc(doc(as("alice"), "wallets/alice")));
+    await assertFails(updateDoc(doc(as("alice"), "users/alice"), { school: "Rosyth" }));
     await assertFails(setDoc(doc(as("alice"), "question_reports/x__alice"), report()));
   });
 });

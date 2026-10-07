@@ -9,7 +9,7 @@ const ADMOB_IOS_APP_ID = env("EXPO_PUBLIC_ADMOB_IOS_APP_ID", "ca-app-pub-3940256
 const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.p6math.app");
 
 // Committed public web config of the Firebase project (primary-math-sg, shared with the question bank editor;
-// written by backend/scripts/setup-project.mjs). databaseId = the Firestore database the app uses.
+// written by backend/scripts/setup-project.mjs). The app itself never opens Firestore (all data via the backend).
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const WEB: Partial<Record<"apiKey" | "authDomain" | "projectId" | "storageBucket" | "messagingSenderId" | "appId" | "databaseId", string>> = (() => {
   try { return require("./firebase.web.json"); } catch { return {}; }
@@ -71,8 +71,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     },
     // Local Firebase emulators (testing): EXPO_PUBLIC_USE_EMULATORS=1, host EXPO_PUBLIC_EMULATOR_HOST (default 127.0.0.1).
     emulators: env("EXPO_PUBLIC_USE_EMULATORS", "") === "1" ? { host: env("EXPO_PUBLIC_EMULATOR_HOST", "127.0.0.1") } : null,
-    // Firestore database: the question bank's named database "default" in primary-math-sg; "(default)" on the emulators.
-    firestoreDatabaseId: env("EXPO_PUBLIC_FIRESTORE_DATABASE_ID", env("EXPO_PUBLIC_USE_EMULATORS", "") === "1" ? "(default)" : WEB.databaseId ?? "(default)"),
     // Backend API (POST <url>/api/<name>); with the emulators, the local dev server (backend/netlify/dev-server.mjs).
     backendUrl: env("EXPO_PUBLIC_BACKEND_URL", env("EXPO_PUBLIC_USE_EMULATORS", "") === "1" ? `http://${env("EXPO_PUBLIC_EMULATOR_HOST", "127.0.0.1")}:8888` : BACKEND.url ?? ""),
     revenueCat: {

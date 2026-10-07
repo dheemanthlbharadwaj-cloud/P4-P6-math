@@ -7,13 +7,17 @@ Firebase provides sign-in (email/password, Google, Apple; the editor's team logi
 The backend code in `functions/` runs on **Netlify** (free plan, no card) instead of Cloud Functions:
 `netlify/handler.mjs` calls the same compiled handlers behind `POST https://<site>.netlify.app/api/<name>` (Firebase
 ID token as bearer), a scheduled function runs the 00:00 Singapore-time jobs (daily snapshot, monthly close on the
-1st), and `/revenuecat` takes the RevenueCat webhook. The Firestore trigger `syncPublicProfile` is replaced by the
-`refreshPublicProfile` call the app makes after writing its profile.
+1st), and `/revenuecat` takes the RevenueCat webhook. Profile edits go through `updateProfile`, which also refreshes the public copy (no Firestore trigger needed).
 
-**Security rules** are one ruleset per database, so the student rules (`firestore.rules`) and the editor's report
-rules (`firestore.editor-reports.rules`) are merged into the editor's live rules by `scripts/deploy-rules.mjs`
-(the editor's own rules stay byte-for-byte; the student part sits between BEGIN/END markers). If the editor's rules
-are ever deployed from the editor's own copy, re-run `deploy-rules.mjs` or students lose access to their data.
+**The app never talks to Firestore directly.** Every read and write (profile, progress, bookmarks, friend requests,
+stars, reports, …) goes through the backend, which uses the Admin SDK and is not subject to security rules. So the
+student app does not depend on the editor's rules: if the editor's rules are rewritten or redeployed, students are not
+affected. `firestore.rules` (student data) is simply "server only". The one thing merged into the editor's live
+rules (by `scripts/deploy-rules.mjs`, between BEGIN/END markers, editor rules kept byte-for-byte) is
+`firestore.editor-reports.rules`, which lets editors read and resolve student reports; if the editor's rules are
+ever deployed without it, only volunteers lose the reports view (the master keeps it through the editor's own
+catch-all rule) until `deploy-rules.mjs` is re-run. Reports are kept even if the editor renames or removes a
+question (`question_found: false`, visible to the master).
 
 **Question reports**: students tap "⚑ Report" on any question (level, mini game, practice) → `reportQuestion` →
 `question_reports/{questionId}__{uid}` (reason, note, their answer, the question's `access_key`). The editor shows
@@ -45,7 +49,7 @@ overrides). Each takes `--dry` to show what it would do; all are idempotent.
    `catapult-backend` service account the backend runs as (Firestore user + Auth admin), then runs step 2.
 2. `node backend/scripts/deploy-rules.mjs` — merges the student rules into the editor's live rules and creates the
    leaderboard indexes in `default`. The previous rules are saved in `backend/reports/` with the undo command
-   (`--restore <ruleset>`).
+   (`--restore <ruleset>`). It only adds the editor's report access (see above).
 3. `node backend/scripts/editor-reports.mjs` — adds student reports to the editor (publishes a clone of the live
    editor with `index.html` and a bumped `app.vN.js`; the previous Hosting version is recorded in `backend/reports/`,
    undo with `--restore <version>`).

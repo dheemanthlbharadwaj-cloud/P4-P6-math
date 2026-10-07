@@ -15,9 +15,10 @@ export const reportQuestion = onCall(async (req): Promise<ReportQuestionResponse
   const v = validateReport(req.data);
   if (!v.ok) throwFail(v);
   const r = v.report;
+  // The editor owns the question bank: if it renamed or removed the question, the report is still kept (the master
+  // sees reports without an access_key; volunteers see the ones in their scope).
   const question = await db.collection(col.questions).doc(r.questionId).get();
-  if (!question.exists) throw new HttpsError("not-found", "unknown question");
-  const q = question.data() as { access_key?: string; chapter?: string; difficulty?: string };
+  const q = (question.data() ?? {}) as { access_key?: string; chapter?: string; difficulty?: string };
   const reportRef = db.collection(col.questionReports).doc(`${r.questionId}__${uid}`);
   const quotaRef = db.collection(col.users).doc(uid).collection("reportQuota").doc(sgtDate(Date.now()));
 
@@ -28,7 +29,8 @@ export const reportQuestion = onCall(async (req): Promise<ReportQuestionResponse
     tx.set(quotaRef, { count: used + 1, updatedAt: FieldValue.serverTimestamp() });
     tx.set(reportRef, {
       question_id: r.questionId,
-      access_key: q.access_key ?? `${q.chapter ?? ""}|${q.difficulty ?? ""}`,
+      access_key: q.access_key ?? (q.chapter && q.difficulty ? `${q.chapter}|${q.difficulty}` : null),
+      question_found: question.exists,
       chapter: q.chapter ?? null,
       difficulty: q.difficulty ?? null,
       grade: r.grade,
