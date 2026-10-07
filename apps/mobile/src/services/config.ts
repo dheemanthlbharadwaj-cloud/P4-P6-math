@@ -10,5 +10,7 @@ interface Extra {
   backendUrl: string;
 }
 
-export const extra = (Constants.expoConfig?.extra ?? {}) as Extra;
+const raw = (Constants.expoConfig?.extra ?? {}) as Extra;
+// The web export serialises `emulators: null` as {}: only a host means emulators are on.
+export const extra: Extra = { ...raw, emulators: raw.emulators?.host ? raw.emulators : null };
 export const isFirebaseConfigured = (!!extra.firebase?.apiKey && extra.firebase.apiKey !== "PLACEHOLDER") || !!extra.emulators;
