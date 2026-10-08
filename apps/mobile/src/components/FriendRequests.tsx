@@ -48,7 +48,7 @@ export function FriendRequests({ onMessage }: { onMessage: (m: string) => void }
       await api.respondFriendRequest({ requestId: id, accept });
       onMessage(accept ? "You are friends now!" : "Request declined.");
       await load();
-      if (accept) void refreshFriends();
+      if (accept) void refreshFriends(true);
     } catch (e) {
       onMessage(e instanceof ApiError && e.transient ? "Connect to the internet to answer." : "Could not answer that request.");
     } finally { setBusy(null); }

@@ -102,7 +102,9 @@ const active = (apps.apps ?? []).filter((a) => a.state === "ACTIVE");
 const app = active.find((a) => a.displayName === WEB_APP_NAME) ?? active[0];
 if (!app) throw new Error("No web app in the project: add one in Firebase console → Project settings → Your apps.");
 const conf = must(await api("GET", `https://firebase.googleapis.com/v1beta1/projects/${PROJECT}/webApps/${app.appId}/config`), "web app config");
-const out = { apiKey: conf.apiKey, authDomain: conf.authDomain, projectId: conf.projectId, storageBucket: conf.storageBucket, messagingSenderId: conf.messagingSenderId, appId: conf.appId, databaseId: DATABASE };
+// The Google provider's OAuth client (public; created when Google sign-in is switched on): the native apps' web client id.
+const googleWebClientId = (idps.body.defaultSupportedIdpConfigs ?? []).find((i) => i.enabled && i.name.endsWith("/google.com"))?.clientId;
+const out = { apiKey: conf.apiKey, authDomain: conf.authDomain, projectId: conf.projectId, storageBucket: conf.storageBucket, messagingSenderId: conf.messagingSenderId, appId: conf.appId, databaseId: DATABASE, ...(googleWebClientId ? { googleWebClientId } : {}) };
 const webPath = path.join(ROOT, "apps/mobile/firebase.web.json");
 const same = fs.existsSync(webPath) && fs.readFileSync(webPath, "utf8") === JSON.stringify(out, null, 2) + "\n";
 log(`Web app: "${app.displayName ?? app.appId}" → apps/mobile/firebase.web.json ${same ? "(up to date)" : DRY ? "(would update)" : "(written)"}`);

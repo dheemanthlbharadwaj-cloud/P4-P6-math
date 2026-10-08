@@ -74,12 +74,29 @@ export async function bootstrapServerProfile(): Promise<boolean> {
   }
 }
 
+// Each getLeaderboard costs Firestore reads (free quota shared with the editor): at most one call in flight, and the
+// periodic/background refreshes at most every FRIENDS_TTL_MS. A friend change passes force.
+const FRIENDS_TTL_MS = 10 * 60_000;
+let friendsAt = 0;
+let friendsUid: string | null = null; // whose friends friendsAt refers to (another sign-in refreshes at once)
+let friendsInFlight: Promise<void> | null = null;
+
 /** Refresh the friends cache used by the map and the race track (friends leaderboard). Hides gracefully on failure. */
-export async function refreshFriends(): Promise<void> {
-  try {
-    const res = await api.getLeaderboard({ scope: "friends" });
-    useFriends.getState().set(res.friends.filter((f) => f.uid !== res.selfUid));
-  } catch {
-    /* offline: keep whatever we had */
-  }
+export function refreshFriends(force = false): Promise<void> {
+  if (friendsInFlight) return friendsInFlight;
+  const uid = useProfile.getState().uid;
+  if (!force && uid === friendsUid && Date.now() - friendsAt < FRIENDS_TTL_MS) return Promise.resolve();
+  friendsInFlight = (async () => {
+    try {
+      const res = await api.getLeaderboard({ scope: "friends" });
+      useFriends.getState().set(res.friends.filter((f) => f.uid !== res.selfUid));
+      friendsAt = Date.now();
+      friendsUid = uid;
+    } catch {
+      /* offline: keep whatever we had */
+    } finally {
+      friendsInFlight = null;
+    }
+  })();
+  return friendsInFlight;
 }

@@ -81,7 +81,7 @@ export default function ProfileTab() {
       const r = await api.sendFriendRequest({ friendCode: friendCode.trim().toUpperCase() });
       flash(r.status === "accepted" ? "You're friends now!" : "Friend request sent!");
       setFriendCode("");
-      if (r.status === "accepted") void refreshFriends();
+      if (r.status === "accepted") void refreshFriends(true);
     } catch (e) {
       const code = e instanceof ApiError ? e.code : "";
       flash(e instanceof ApiError && e.transient ? "Connect to the internet to add friends."
@@ -95,7 +95,7 @@ export default function ProfileTab() {
       const r = await api.redeemReferral({ friendCode: redeem.trim().toUpperCase() });
       flash(`Code accepted. Your friend earned ${r.starsAwarded} stars, and you are friends now!`);
       setRedeem("");
-      void refreshFriends();
+      void refreshFriends(true);
     } catch (e) {
       const code = e instanceof ApiError ? e.code : "";
       flash(e instanceof ApiError && e.transient ? "Connect to the internet to redeem."

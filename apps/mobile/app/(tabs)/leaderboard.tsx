@@ -73,7 +73,11 @@ export default function LeaderboardTab() {
     if (!board.data) setError("Can't load the leaderboard. Check your internet connection.");
     setLoading(false);
   }, [scope, monthlyStars, school, look, friendCount]); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => { void load(); }, [load]);
+  // Debounced: right after sign-in, stars / look / school / friends arrive one by one and would each reload the board.
+  useEffect(() => {
+    const t = setTimeout(() => void load(), 400);
+    return () => clearTimeout(t);
+  }, [load]);
 
   const entries = [...(data?.entries ?? [])].sort((a, b) => a.rank - b.rank);
   const friends = new Set(data?.friendUids ?? []);

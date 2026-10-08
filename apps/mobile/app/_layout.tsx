@@ -98,7 +98,13 @@ export default function RootLayout() {
     };
     // RevenueCat last: when configured it is the live source of truth for the entitlement (server value otherwise).
     void bootstrapServerProfile().then(run).then(() => initPurchases(user.uid));
-    const unsub = NetInfo.addEventListener((s) => { if (s.isConnected) void run(); });
+    // Only when the connection comes back (the listener also fires on subscribe and on every network detail change).
+    let online = true;
+    const unsub = NetInfo.addEventListener((s) => {
+      const now = !!s.isConnected;
+      if (now && !online) void run();
+      online = now;
+    });
     const timer = setInterval(run, 60_000);
     return () => { cancelled = true; unsub(); clearInterval(timer); stopCloudSync(); };
   }, [hydrated, user, onboarded]);

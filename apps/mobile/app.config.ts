@@ -11,7 +11,7 @@ const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.p6math.app");
 // Committed public web config of the Firebase project (primary-math-sg, shared with the question bank editor;
 // written by backend/scripts/setup-project.mjs). The app itself never opens Firestore (all data via the backend).
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const WEB: Partial<Record<"apiKey" | "authDomain" | "projectId" | "storageBucket" | "messagingSenderId" | "appId" | "databaseId", string>> = (() => {
+const WEB: Partial<Record<"apiKey" | "authDomain" | "projectId" | "storageBucket" | "messagingSenderId" | "appId" | "databaseId" | "googleWebClientId", string>> = (() => {
   try { return require("./firebase.web.json"); } catch { return {}; }
 })();
 // Backend API base URL (the Netlify site), written by backend/scripts/deploy-netlify.mjs.
@@ -83,7 +83,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     },
     auth: {
       // TODO(owner): OAuth client ids from the Firebase/Google Cloud console.
-      googleWebClientId: env("EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID", ""),
+      googleWebClientId: env("EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID", WEB.googleWebClientId ?? ""),
       googleIosClientId: env("EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID", ""),
       googleAndroidClientId: env("EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID", ""),
     },

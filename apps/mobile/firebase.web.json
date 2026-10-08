@@ -5,5 +5,6 @@
   "storageBucket": "primary-math-sg.firebasestorage.app",
   "messagingSenderId": "762269301954",
   "appId": "1:762269301954:web:757262321e18ff2d990f5b",
-  "databaseId": "default"
+  "databaseId": "default",
+  "googleWebClientId": "762269301954-vt974ugda65dr64lg233t7oc95ku2kas.apps.googleusercontent.com"
 }
