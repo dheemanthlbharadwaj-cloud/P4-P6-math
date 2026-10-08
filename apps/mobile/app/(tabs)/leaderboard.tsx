@@ -2,13 +2,14 @@
 // Global, then Quests (lifetime stars unlock special cat looks).
 import React, { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, Image, RefreshControl, ScrollView, Text, View } from "react-native";
-import { useRouter } from "expo-router";
+import { useIsFocused, useRouter } from "expo-router";
 import type { GetLeaderboardResponse, LeaderboardEntry, LeaderboardScope } from "@p6/shared";
 import { SHOW_SAMPLES, sampleLeaderboard } from "../../src/dev/samples";
 import { useProfile } from "../../src/store/profile";
 import { useCosmetics } from "../../src/store/cosmetics";
 import { useProgress } from "../../src/store/progress";
 import { useFriends } from "../../src/store/friends";
+import { useOfflineQueue } from "../../src/store/queue";
 import { catPoses } from "../../src/theme/cats";
 import { uiAssets } from "../../src/theme/assets";
 import { Body, Button, Chip, H1, H2, Screen } from "../../src/components/ui";
@@ -58,8 +59,13 @@ export default function LeaderboardTab() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sample, setSample] = useState(false);
-  // Reload when the student's stars, look, school or friends change (e.g. after a level or from Dev Tools).
-  const monthlyStars = useProfile((s) => s.monthlyStars);
+  // Reload when the server has new stars (a queued level / mini-game result was accepted: the queue shrinks), or the
+  // look, school or friends change. The local star count goes up while a level is still running, before the server
+  // knows, so it only drives the sample board (backend not live). Only while the tab is on screen.
+  const focused = useIsFocused();
+  const pending = useOfflineQueue((s) => s.items.length);
+  const localStars = useProfile((s) => s.monthlyStars);
+  const monthlyStars = sample ? localStars : 0;
   const school = useProfile((s) => s.school);
   const look = useCosmetics((s) => `${s.colorId}|${s.hatId}`);
   const friendCount = useFriends((s) => s.friends.length);
@@ -72,12 +78,13 @@ export default function LeaderboardTab() {
     setSample(board.sample);
     if (!board.data) setError("Can't load the leaderboard. Check your internet connection.");
     setLoading(false);
-  }, [scope, monthlyStars, school, look, friendCount]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [scope, monthlyStars, school, look, friendCount, pending]); // eslint-disable-line react-hooks/exhaustive-deps
   // Debounced: right after sign-in, stars / look / school / friends arrive one by one and would each reload the board.
   useEffect(() => {
+    if (!focused) return;
     const t = setTimeout(() => void load(), 400);
     return () => clearTimeout(t);
-  }, [load]);
+  }, [load, focused]);
 
   const entries = [...(data?.entries ?? [])].sort((a, b) => a.rank - b.rank);
   const friends = new Set(data?.friendUids ?? []);

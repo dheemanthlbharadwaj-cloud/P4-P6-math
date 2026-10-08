@@ -24,13 +24,21 @@ export const progressFraction = (s: SessionState) => (s.total === 0 ? 1 : correc
 /** True when the current question has not been answered yet in this attempt (its next answer is the first try). */
 export const isFirstTry = (s: SessionState, id: string) => !(id in s.firstTry);
 
+/** Record the answer to the current question without leaving it. Called the moment the answer is given, so a student
+ *  who closes the level before pressing Continue still has it in the result (its star was already credited). */
+export function recordAnswer(s: SessionState, isCorrect: boolean): SessionState {
+  const id = s.queue[0];
+  if (id === undefined || id in s.firstTry) return s;
+  return { ...s, firstTry: { ...s.firstTry, [id]: isCorrect }, everWrong: isCorrect ? s.everWrong : { ...s.everWrong, [id]: true } };
+}
+
 export function answer(s: SessionState, isCorrect: boolean): SessionState {
   const id = s.queue[0];
   if (id === undefined) return s;
-  const rest = s.queue.slice(1);
-  const firstTry = id in s.firstTry ? s.firstTry : { ...s.firstTry, [id]: isCorrect };
-  if (isCorrect) return { ...s, queue: rest, correct: { ...s.correct, [id]: true }, firstTry };
-  return { ...s, queue: [...rest, id], everWrong: { ...s.everWrong, [id]: true }, firstTry };
+  const t = recordAnswer(s, isCorrect);
+  const rest = t.queue.slice(1);
+  if (isCorrect) return { ...t, queue: rest, correct: { ...t.correct, [id]: true } };
+  return { ...t, queue: [...rest, id], everWrong: { ...t.everWrong, [id]: true } };
 }
 
 export function skip(s: SessionState): SessionState {

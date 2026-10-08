@@ -84,8 +84,12 @@ def main():
     def flush():
         nonlocal buf, n
         if buf.tell():
-            name = f"figpack-{n}.webp"  # WebP images joined end to end (a type static hosts serve)
-            open(os.path.join(OUT, name), "wb").write(buf.getvalue())
+            # WebP images joined end to end (a type static hosts serve). Content-hashed names: the host caches
+            # .webp/.json for a year, so a new build must never reuse an old name (a cached pack + new offsets =
+            # broken pictures, a cached index = questions without pictures).
+            data = buf.getvalue()
+            name = f"figpack-{n}-{hashlib.sha1(data).hexdigest()[:10]}.webp"
+            open(os.path.join(OUT, name), "wb").write(data)
             packs.append({"file": name, "bytes": buf.tell()})
             buf, n = io.BytesIO(), n + 1
 
@@ -101,11 +105,13 @@ def main():
         index[os.path.basename(f)[:-5]] = [n, buf.tell(), len(data), im.width, im.height]
         buf.write(data)
     flush()
-    json.dump({"packs": packs, "figs": index}, open(os.path.join(OUT, "figpack-index.json"), "w"), separators=(",", ":"))
+    ix = json.dumps({"packs": packs, "figs": index}, separators=(",", ":"))
+    ix_name = f"figpack-index-{hashlib.sha1(ix.encode()).hexdigest()[:10]}.json"
+    open(os.path.join(OUT, ix_name), "w").write(ix)
 
     total = sum(p["bytes"] for p in packs)
     stamp = hashlib.sha1(open(os.path.join(OUT, entry), "rb").read()).hexdigest()[:8]
-    page = PAGE.replace("__ENTRY__", entry).replace("__STAMP__", stamp)
+    page = PAGE.replace("__ENTRY__", entry).replace("__STAMP__", stamp).replace("__FIGINDEX__", ix_name)
     open(os.path.join(OUT, "index.html"), "w").write(page)
     files = [os.path.relpath(p, OUT) for p in glob.glob(os.path.join(OUT, "**", "*"), recursive=True) if os.path.isfile(p)]
     print(json.dumps({"out": OUT, "files": len(files), "figures": len(index), "packs": len(packs),
@@ -149,7 +155,7 @@ PAGE = """<meta name="viewport" content="width=device-width, initial-scale=1, vi
     s.onerror = function () { msg.textContent = "The app could not load. Reload the page to try again."; };
     document.body.appendChild(s);
   }
-  fetch(globalThis.__P6BASE__ + "figpack-index.json").then(function (r) { return r.json(); }).then(function (ix) {
+  fetch(globalThis.__P6BASE__ + "__FIGINDEX__").then(function (r) { return r.json(); }).then(function (ix) {
     var total = ix.packs.reduce(function (a, p) { return a + p.bytes; }, 0), done = 0, blobs = [];
     return Promise.all(ix.packs.map(function (p, i) {
       return fetch(globalThis.__P6BASE__ + p.file).then(function (r) { return r.arrayBuffer(); }).then(function (buf) {

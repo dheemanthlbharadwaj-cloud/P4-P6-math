@@ -1,6 +1,6 @@
 // Level / question screen: 5 questions, progress bar, cat companion, hearts, skip, calculator, picture viewer.
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Image, Pressable, Text, useWindowDimensions, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Crypto from "expo-crypto";
 import { markQuestion, MAX_HEARTS, starsForLevelAnswer, starsForLevelCompletion, type Grade, type LevelNo, type LevelResult } from "@p6/shared";
@@ -11,7 +11,7 @@ import { ResourceModal } from "../../../../src/components/ResourceModal";
 import { useLeaveConfirm } from "../../../../src/components/LeaveConfirm";
 import { Stat } from "../../../../src/components/TopBar";
 import { getContentVersion, getLevelQuestions, getSubtopic } from "../../../../src/content";
-import { answer, correctCount, currentId, isDone, isFirstTry, progressFraction, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
+import { answer, recordAnswer, correctCount, currentId, isDone, isFirstTry, progressFraction, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
 import { nextMapLevel } from "../../../../src/logic/unlock";
 import { computeMeters, usePlayer } from "../../../../src/store/player";
 import { useProgress } from "../../../../src/store/progress";
@@ -24,11 +24,12 @@ import { uiAssets } from "../../../../src/theme/assets";
 import type { CatMood } from "../../../../src/theme/cats";
 import { useQuestionOrientation } from "../../../../src/hooks/useQuestionOrientation";
 import { colors, fonts, space } from "../../../../src/theme/colors";
+import { useFrameDimensions } from "../../../../src/theme/frame";
 
 export default function LevelScreen() {
   const router = useRouter();
   useQuestionOrientation();
-  const dim = useWindowDimensions();
+  const dim = useFrameDimensions();
   const landscape = dim.width > dim.height;
   const params = useLocalSearchParams<{ grade: string; nodeId: string; level: string }>();
   const grade = params.grade as Grade;
@@ -85,6 +86,8 @@ export default function LevelScreen() {
     const r = markQuestion(question, responses);
     setReveal({ correct: r.correct, perPart: r.perPart });
     const st = starsForLevelAnswer(r.correct, isFirstTry(session, question.id), starredBefore);
+    // Into the session now, not on Continue: leaving straight after answering must still send the answer (and its star).
+    setSession((s) => recordAnswer(s, r.correct));
     useStars.getState().markAttempted(grade, question.id);
     earnStars(st);
     setGain(st);

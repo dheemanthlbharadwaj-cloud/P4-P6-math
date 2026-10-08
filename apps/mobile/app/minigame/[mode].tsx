@@ -6,7 +6,7 @@
 // Stars (stars.ts): +1 for each question answered right that was never attempted before (levels or mini games), so
 // re-attempts (every Unlimited Mistakes question, a question coming round again in the challenge) give none.
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Pressable, Text, useWindowDimensions, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Crypto from "expo-crypto";
 import { CHALLENGE_HEARTS, CHALLENGE_SECONDS, markQuestion, starsForMinigameAnswer, type Grade, type MinigameResult, type Question } from "@p6/shared";
@@ -25,6 +25,7 @@ import { useNow } from "../../src/hooks/useNow";
 import type { CatMood } from "../../src/theme/cats";
 import { useQuestionOrientation } from "../../src/hooks/useQuestionOrientation";
 import { colors, fonts, space } from "../../src/theme/colors";
+import { useFrameDimensions } from "../../src/theme/frame";
 
 function shuffle<T>(a: T[]): T[] {
   const r = [...a];
@@ -38,7 +39,7 @@ function shuffle<T>(a: T[]): T[] {
 export default function MiniGame() {
   const router = useRouter();
   useQuestionOrientation();
-  const dim = useWindowDimensions();
+  const dim = useFrameDimensions();
   const landscape = dim.width > dim.height;
   const { mode, grade: g, topicId } = useLocalSearchParams<{ mode: string; grade: string; topicId?: string }>();
   const grade = g as Grade;

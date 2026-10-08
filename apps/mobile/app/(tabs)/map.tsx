@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { FlatList, Pressable, Text, useWindowDimensions, View, type NativeScrollEvent, type NativeSyntheticEvent } from "react-native";
+import { FlatList, Pressable, Text, View, type NativeScrollEvent, type NativeSyntheticEvent } from "react-native";
 import { useRouter } from "expo-router";
 import type { LevelNo } from "@p6/shared";
 import { Screen } from "../../src/components/ui";
@@ -14,10 +14,11 @@ import { useFriends } from "../../src/store/friends";
 import { usePlayer, computeMeters } from "../../src/store/player";
 import { isTopicUnlocked } from "../../src/logic/unlock";
 import { colors, fonts } from "../../src/theme/colors";
+import { useFrameDimensions } from "../../src/theme/frame";
 
 export default function MapTab() {
   const router = useRouter();
-  const { width } = useWindowDimensions();
+  const { width } = useFrameDimensions();
   const grade = useProfile((s) => s.grade);
   const topics = useMemo(() => getTopics(grade), [grade]);
   const progress = useProgress((s) => s.grades[grade]);

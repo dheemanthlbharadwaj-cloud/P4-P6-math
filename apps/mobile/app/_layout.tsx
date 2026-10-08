@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
+import { AppFrame } from "../src/theme/frame";
 import { StatusBar } from "expo-status-bar";
 import NetInfo from "@react-native-community/netinfo";
 import { useFonts } from "expo-font";
@@ -116,8 +117,10 @@ export default function RootLayout() {
       </View>
     );
   }
+  // Question screens use the wide frame on big browser windows (question + working space side by side).
+  const wide = ["level", "minigame", "practice"].includes(segments[0] as string);
   return (
-    <>
+    <AppFrame wide={wide}>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg } }}>
         <Stack.Screen name="level/[grade]/[nodeId]/[level]" options={{ gestureEnabled: false }} />
@@ -131,6 +134,6 @@ export default function RootLayout() {
           <ActivityIndicator size="large" color={colors.primary} />
         </View>
       ) : null}
-    </>
+    </AppFrame>
   );
 }

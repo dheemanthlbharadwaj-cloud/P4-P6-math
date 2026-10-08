@@ -2,7 +2,7 @@
 // calculator button / "No calculator" badge, Submit and optional Skip. Marking is done by the parent via
 // markQuestion() from @p6/shared; this component only collects responses and shows feedback.
 import React, { useEffect, useState } from "react";
-import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View, type KeyboardTypeOptions } from "react-native";
+import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View, type KeyboardTypeOptions } from "react-native";
 import type { Grade, Question, ReportQuestionRequest } from "@p6/shared";
 import { RichText } from "./RichText";
 import { Button } from "./ui";
@@ -15,6 +15,7 @@ import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
 import { BUBBLE_BAND } from "./CatCompanion";
 import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
+import { useFrameDimensions } from "../theme/frame";
 
 export interface Reveal {
   correct: boolean;
@@ -54,7 +55,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const [figOpen, setFigOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
   const toast = useToast();
-  const { width, height } = useWindowDimensions();
+  const { width, height } = useFrameDimensions();
   const landscape = width > height;
   const [hintGone, setHintGone] = useState(hintDismissed);
   const showHint = !landscape && !hintGone && (Platform.OS !== "web" || width >= 600);
