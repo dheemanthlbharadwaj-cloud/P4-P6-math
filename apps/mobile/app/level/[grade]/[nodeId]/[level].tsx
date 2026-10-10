@@ -1,6 +1,6 @@
 // Level / question screen: 5 questions, progress bar, cat companion, hearts, skip, calculator, picture viewer.
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Image, Pressable, Text, View } from "react-native";
+import { Image, Pressable, Text, View, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Crypto from "expo-crypto";
 import { markQuestion, MAX_HEARTS, starsForLevelAnswer, starsForLevelCompletion, type Grade, type LevelNo, type LevelResult } from "@p6/shared";
@@ -24,12 +24,11 @@ import { uiAssets } from "../../../../src/theme/assets";
 import type { CatMood } from "../../../../src/theme/cats";
 import { useQuestionOrientation } from "../../../../src/hooks/useQuestionOrientation";
 import { colors, fonts, space } from "../../../../src/theme/colors";
-import { useFrameDimensions } from "../../../../src/theme/frame";
 
 export default function LevelScreen() {
   const router = useRouter();
   useQuestionOrientation();
-  const dim = useFrameDimensions();
+  const dim = useWindowDimensions();
   const landscape = dim.width > dim.height;
   const params = useLocalSearchParams<{ grade: string; nodeId: string; level: string }>();
   const grade = params.grade as Grade;

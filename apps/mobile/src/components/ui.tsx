@@ -115,3 +115,17 @@ const styles = StyleSheet.create({
   sheet: { backgroundColor: colors.bg, borderTopLeftRadius: 28, borderTopRightRadius: 28, padding: space.l, borderWidth: 3, borderColor: colors.border, maxHeight: "85%" },
   dialog: { backgroundColor: colors.bg, borderRadius: radius.l, padding: space.l, borderWidth: 3, borderColor: colors.border, maxHeight: "90%", width: "100%", maxWidth: 520, alignSelf: "center" },
 });
+
+/** Cards in `columns` side-by-side columns on tablets and desktops (children dealt out left to right, each column
+ *  stacking its own, so cards of different heights leave no gaps); a single column on phones. */
+export function Columns({ columns, gap = space.l, children }: { columns: number; gap?: number; children: React.ReactNode }) {
+  const items = React.Children.toArray(children).filter(Boolean);
+  if (columns <= 1) return <View style={{ gap }}>{items}</View>;
+  const cols: React.ReactNode[][] = Array.from({ length: columns }, () => []);
+  items.forEach((c, i) => cols[i % columns].push(c));
+  return (
+    <View style={{ flexDirection: "row", alignItems: "flex-start", gap }}>
+      {cols.map((col, i) => <View key={i} style={{ flex: 1, minWidth: 0, gap }}>{col}</View>)}
+    </View>
+  );
+}

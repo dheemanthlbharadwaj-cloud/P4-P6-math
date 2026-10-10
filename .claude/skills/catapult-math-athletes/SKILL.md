@@ -40,6 +40,7 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
 | Quests | Lifetime stars 25/50/75/100/150/200 unlock quest-only looks (Rose, Golden Cap, Ocean, Royal Crown, Galaxy, Star Wizard; `QUESTS` in stars.ts). Claim → inventory (claimQuest callable); shown in the store as "Quest · N★", never sold. Skins: `scripts/cat-colors.py` (from the grey coat); hats: `scripts/quest-hats.py` (recolours). |
 | Paywall | Heart + energy icons, title "Unlimited hearts and energy", no cat. |
 | Buttons | Full black border all round (no coloured lip). |
+| Screen sizes | Fill the whole window; layout by size class (`src/logic/screenClass.ts`, `useLayout()` in `theme/layout.ts`): phone (bottom tabs, one column, unchanged), tablet ≥700×500 (left icon rail, 2 card columns), desktop ≥1100×560 (left side menu with names, 3 card columns). Map: several topic maps side by side, each ≥380 wide, one title per map. Two panes side by side (Leaderboard ranking │ quests, Shop preview │ items, sign-in/onboarding cat │ form) only when the area is ≥900 wide. Questions: side by side in landscape, question over working space on portrait tablets; bigger picture/text on big screens. Never a centred phone column. |
 | Question figures | Figure only; only text allowed is labels inside the figure. Parts separated by question text are cropped separately and stacked; text that can't be cropped out is whited out. Never under/over-crop. |
 
 ## 2. Repo map

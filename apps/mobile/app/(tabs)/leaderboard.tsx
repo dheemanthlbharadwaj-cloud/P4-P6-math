@@ -18,6 +18,7 @@ import { RaceTrack } from "../../src/components/RaceTrack";
 import { QuestsCard } from "../../src/components/QuestsCard";
 import { api } from "../../src/services/api";
 import { colors, fonts, space } from "../../src/theme/colors";
+import { useLayout } from "../../src/theme/layout";
 
 const medalColor = { gold: colors.gold, silver: colors.silver, bronze: colors.bronze } as const;
 const topColor = [colors.gold, colors.silver, colors.bronze];
@@ -53,6 +54,7 @@ async function loadBoard(scope: LeaderboardScope): Promise<{ data: GetLeaderboar
 
 export default function LeaderboardTab() {
   const router = useRouter();
+  const { wide, split } = useLayout();
   const [scope, setScope] = useState<LeaderboardScope>("friends");
   const [data, setData] = useState<GetLeaderboardResponse | null>(null);
   const [track, setTrack] = useState<GetLeaderboardResponse | null>(null);
@@ -93,7 +95,7 @@ export default function LeaderboardTab() {
 
   return (
     <Screen>
-      <ScrollView contentContainerStyle={{ padding: space.l, gap: space.m }} refreshControl={<RefreshControl refreshing={loading} onRefresh={load} />}>
+      <ScrollView contentContainerStyle={{ padding: wide ? space.xl : space.l, gap: space.m }} refreshControl={<RefreshControl refreshing={loading} onRefresh={load} />}>
         <H1 style={{ textAlign: "center" }}>Catapult Math Athletes</H1>
         {racers.length ? (
           <View style={{ gap: 6 }}>
@@ -104,6 +106,9 @@ export default function LeaderboardTab() {
           </View>
         ) : null}
 
+        {/* Wide screens: the ranking on the left, quests beside it. */}
+        <View style={split ? { flexDirection: "row", alignItems: "flex-start", gap: space.xl } : { gap: space.m }}>
+        <View style={{ gap: space.m, ...(split ? { flex: 3, minWidth: 0 } : null) }}>
         <View style={{ flexDirection: "row" }} accessibilityRole="tablist">
           {SCOPES.map((s) => <Chip key={s.id} label={s.label} selected={scope === s.id} onPress={() => setScope(s.id)} />)}
         </View>
@@ -169,13 +174,17 @@ export default function LeaderboardTab() {
         <Text style={{ color: colors.inkSoft, fontSize: 12 }}>
           Ranking = stars earned this month. Resets at midnight at the end of the last day of the month (00:00 on the 1st, Singapore time). Medals show last month's top 3.
         </Text>
+        </View>
 
+        <View style={{ gap: space.m, ...(split ? { flex: 2, minWidth: 0 } : null) }}>
         <QuestsCard />
         <View style={{ gap: 4 }}>
           <H2>How to earn stars</H2>
           <Body style={{ color: colors.inkSoft }}>• Map levels: 1 star for every question you get right on your first try.</Body>
           <Body style={{ color: colors.inkSoft }}>• Playing a level again after earning its stars: 1 star when you finish it.</Body>
           <Body style={{ color: colors.inkSoft }}>• Mini games: 1 star for every new question you get right (none for questions you tried before).</Body>
+        </View>
+        </View>
         </View>
       </ScrollView>
     </Screen>

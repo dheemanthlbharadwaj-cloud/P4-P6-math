@@ -118,7 +118,9 @@ def main():
                       "packMB": round(total / 1e6, 1), "entry": entry}))
 
 
-PAGE = """<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+PAGE = """<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Catapult Math Athletes</title>
 <style>
   :root { --bg: #fff7e6; --ink: #2b2d42; --soft: #5b5e78; --accent: #2a9d8f; --track: #e3e1f0; color-scheme: light; }

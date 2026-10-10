@@ -2,7 +2,7 @@
 // calculator button / "No calculator" badge, Submit and optional Skip. Marking is done by the parent via
 // markQuestion() from @p6/shared; this component only collects responses and shows feedback.
 import React, { useEffect, useState } from "react";
-import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View, type KeyboardTypeOptions } from "react-native";
+import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View, type KeyboardTypeOptions, useWindowDimensions } from "react-native";
 import type { Grade, Question, ReportQuestionRequest } from "@p6/shared";
 import { RichText } from "./RichText";
 import { Button } from "./ui";
@@ -15,7 +15,7 @@ import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
 import { BUBBLE_BAND } from "./CatCompanion";
 import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
-import { useFrameDimensions } from "../theme/frame";
+import { useLayout } from "../theme/layout";
 
 export interface Reveal {
   correct: boolean;
@@ -55,10 +55,17 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const [figOpen, setFigOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
   const toast = useToast();
-  const { width, height } = useFrameDimensions();
+  const { width, height } = useWindowDimensions();
   const landscape = width > height;
+  const { kind } = useLayout();
+  // Portrait tablet: question on top, working space underneath (room for both, no need to turn the device).
+  const stacked = !landscape && kind !== "phone";
+  // Bigger screens: bigger question text and picture.
+  const textSize = kind === "desktop" ? font.body + 2 : font.body;
+  // (Stacked, the question shares the height with the working space: a smaller picture keeps the options in view.)
+  const figHeight = kind === "phone" ? 200 : Math.round(stacked ? Math.min(260, Math.max(200, height * 0.2)) : Math.min(420, Math.max(220, height * 0.32)));
   const [hintGone, setHintGone] = useState(hintDismissed);
-  const showHint = !landscape && !hintGone && (Platform.OS !== "web" || width >= 600);
+  const showHint = !landscape && !stacked && !hintGone && (Platform.OS !== "web" || width >= 600);
   useEffect(() => setResponses(Array(nInputs).fill("")), [q.id, nInputs]);
 
   const fig = getFigure(grade, q.figure);
@@ -103,11 +110,11 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
         {companion && !landscape ? <View style={{ marginLeft: 6, marginTop: -4 }}>{companion}</View> : null}
         </View>
 
-        <RichText tokens={q.stem} size={font.body + 2} />
+        <RichText tokens={q.stem} size={textSize + 2} />
 
         {fig ? (
           <Pressable onPress={() => setFigOpen(true)} accessibilityLabel="Tap to enlarge picture" style={styles.figWrap}>
-            <Image source={fig} style={styles.fig} resizeMode="contain" />
+            <Image source={fig} style={[styles.fig, { height: figHeight }]} resizeMode="contain" />
           </Pressable>
         ) : null}
 
@@ -130,7 +137,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                     <Text style={styles.optKeyText}>{o.key}</Text>
                   </View>
                   <View style={{ flex: 1 }}>
-                    <RichText tokens={o.text} size={font.body} />
+                    <RichText tokens={o.text} size={textSize} />
                   </View>
                 </Pressable>
               );
@@ -197,6 +204,14 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
     </KeyboardAvoidingView>
   );
 
+  if (stacked) {
+    return (
+      <View style={{ flex: 1 }}>
+        <View style={{ flex: 66 }}>{left}</View>
+        <View style={{ flex: 34, padding: space.m, paddingTop: 0 }}><Scratchpad /></View>
+      </View>
+    );
+  }
   if (!landscape) return left;
   // Landscape: question on the left (~45%), working space on the right (~55%).
   return (

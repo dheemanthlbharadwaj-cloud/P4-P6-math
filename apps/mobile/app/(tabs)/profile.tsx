@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { ScrollView, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
 import { ENERGY_PER_AD, HEARTS_PER_AD, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL } from "@p6/shared";
-import { Body, Button, Card, CenterModal, H1, H2, Screen } from "../../src/components/ui";
+import { Body, Button, Card, CenterModal, H1, H2, Screen, Columns } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
 import { ParentalGate } from "../../src/components/ParentalGate";
@@ -25,6 +25,7 @@ import { useFriends } from "../../src/store/friends";
 import { usePlayer } from "../../src/store/player";
 import { resetAllStores } from "../../src/store/reset";
 import { colors, fonts, radius, space } from "../../src/theme/colors";
+import { useLayout } from "../../src/theme/layout";
 
 const PRIVACY_URL = "https://p6math.app/privacy"; // TODO(owner): real URLs
 const TERMS_URL = "https://p6math.app/terms";
@@ -32,6 +33,7 @@ const TERMS_URL = "https://p6math.app/terms";
 const field = { minHeight: 52, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 18, backgroundColor: "#fff", color: colors.ink, marginBottom: 10 } as const;
 
 export default function ProfileTab() {
+  const { wide, columns } = useLayout();
   const router = useRouter();
   const profile = useProfile();
   const { colorId, hatId } = useCosmetics();
@@ -139,7 +141,7 @@ export default function ProfileTab() {
   return (
     <Screen>
       <TopBar />
-      <ScrollView contentContainerStyle={{ padding: space.l, gap: space.l }} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={{ padding: wide ? space.xl : space.l, gap: space.l }} keyboardShouldPersistTaps="handled">
         <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
           <CatAvatar source={catPoses.cute} colorId={colorId} hatId={hatId} size={96} style={{ marginTop: hatId ? 6 : 0 }} />
           <View style={{ flex: 1 }}>
@@ -150,6 +152,7 @@ export default function ProfileTab() {
         </View>
         {msg ? <Text style={{ fontFamily: fonts.display, color: colors.ink, backgroundColor: colors.highlight, padding: 10, borderRadius: 12 }} onPress={() => setMsg(null)}>{msg}</Text> : null}
 
+        <Columns columns={columns}>
         <Card>
           <H2>My details</H2>
           <TextInput style={[field, { marginTop: 8 }]} value={name} onChangeText={setName} placeholder="Full name" placeholderTextColor={colors.muted} accessibilityLabel="Full name" />
@@ -224,6 +227,7 @@ export default function ProfileTab() {
             <Button title="Delete account and data" variant="bad" onPress={() => gated(() => { setDeleteText(""); setDeleteMsg(null); setDeleteOpen(true); })} />
           </View>
         </Card>
+        </Columns>
       </ScrollView>
 
       <CenterModal visible={deleteOpen} onClose={() => !deleting && setDeleteOpen(false)}>

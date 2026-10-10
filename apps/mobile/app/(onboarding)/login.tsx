@@ -10,6 +10,8 @@ import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signIn
 import { isFirebaseConfigured } from "../../src/services/config";
 import { useProfile } from "../../src/store/profile";
 import { colors, fonts, radius, space } from "../../src/theme/colors";
+import { useLayout } from "../../src/theme/layout";
+import { HeroSplit, formColumn } from "../../src/components/HeroSplit";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -17,6 +19,7 @@ const input = { minHeight: 52, borderWidth: 3, borderColor: colors.border, borde
 
 export default function Login() {
   const [mode, setMode] = useState<"login" | "signup">("signup");
+  const { wide, splitScreen } = useLayout();
   const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -60,32 +63,55 @@ export default function Login() {
     </View>
   ) : null;
 
+  // Wide screens: the cat and the name on the left half, the buttons or the form on the right.
+  const hero = (big: boolean) => (
+    <View style={{ alignItems: "center" }}>
+      <Image source={catAnimations.thinking} style={{ width: big ? 320 : 230, height: big ? 320 : 230 }} contentFit="contain" accessibilityLabel="A cat working on a laptop" />
+      <Text style={{ fontSize: big ? 56 : 44, lineHeight: big ? 62 : 50, fontFamily: fonts.display, color: colors.ink, textAlign: "center", marginTop: 4 }} accessibilityRole="header">
+        {"Catapult\nMath\nAthletes"}
+      </Text>
+      <Body style={{ textAlign: "center", color: colors.inkSoft, marginTop: 8, fontSize: big ? 20 : undefined }}>PSLE maths practice with your cat buddy.</Body>
+    </View>
+  );
+  const choice = (
+    <View style={{ gap: 12, marginTop: space.xl }}>
+      <Button title="Log In" variant="ghost" onPress={() => { setMode("login"); setShowForm(true); }} />
+      <Button title="Sign Up" onPress={() => { setMode("signup"); setShowForm(true); }} />
+    </View>
+  );
+
+  if (!showForm && splitScreen) {
+    return (
+      <Screen edges={["top", "bottom"]}>
+        <HeroSplit hero={hero(true)}>
+          <ScrollView contentContainerStyle={{ padding: space.xl, flexGrow: 1, justifyContent: "center" }}>
+            <View style={formColumn}>
+              <H1 style={{ textAlign: "center" }}>Welcome!</H1>
+              {choice}
+              {devGuest}
+            </View>
+          </ScrollView>
+        </HeroSplit>
+      </Screen>
+    );
+  }
+
   if (!showForm) {
     return (
       <Screen edges={["top", "bottom"]}>
-        <ScrollView contentContainerStyle={{ padding: space.l, flexGrow: 1, justifyContent: "center" }}>
-          <View style={{ alignItems: "center" }}>
-            <Image source={catAnimations.thinking} style={{ width: 230, height: 230 }} contentFit="contain" accessibilityLabel="A cat working on a laptop" />
-            <Text style={{ fontSize: 44, lineHeight: 50, fontFamily: fonts.display, color: colors.ink, textAlign: "center", marginTop: 4 }} accessibilityRole="header">
-              {"Catapult\nMath\nAthletes"}
-            </Text>
-            <Body style={{ textAlign: "center", color: colors.inkSoft, marginTop: 8 }}>PSLE maths practice with your cat buddy.</Body>
-          </View>
-          <View style={{ gap: 12, marginTop: space.xl }}>
-            <Button title="Log In" variant="ghost" onPress={() => { setMode("login"); setShowForm(true); }} />
-            <Button title="Sign Up" onPress={() => { setMode("signup"); setShowForm(true); }} />
-          </View>
+        <ScrollView contentContainerStyle={[{ padding: space.l, flexGrow: 1, justifyContent: "center" }, wide && formColumn]}>
+          {hero(wide)}
+          {choice}
           {devGuest}
         </ScrollView>
       </Screen>
     );
   }
 
-  return (
-    <Screen edges={["top", "bottom"]}>
-      <ScrollView contentContainerStyle={{ padding: space.l }} keyboardShouldPersistTaps="handled">
+  const form = (
+    <>
         <View style={{ alignItems: "center", marginBottom: space.l }}>
-          <Image source={catAnimations.thinking} style={{ width: 130, height: 130 }} contentFit="contain" />
+          {splitScreen ? null : <Image source={catAnimations.thinking} style={{ width: 130, height: 130 }} contentFit="contain" />}
           <H1 style={{ textAlign: "center", marginTop: 4 }}>{mode === "signup" ? "Create your account" : "Welcome back!"}</H1>
         </View>
 
@@ -111,6 +137,24 @@ export default function Login() {
 
         <Button title="Back" variant="ghost" small onPress={() => setShowForm(false)} style={{ marginTop: space.l }} />
         {devGuest}
+    </>
+  );
+
+  if (splitScreen) {
+    return (
+      <Screen edges={["top", "bottom"]}>
+        <HeroSplit hero={hero(true)}>
+          <ScrollView contentContainerStyle={{ padding: space.xl, flexGrow: 1, justifyContent: "center" }} keyboardShouldPersistTaps="handled">
+            <View style={formColumn}>{form}</View>
+          </ScrollView>
+        </HeroSplit>
+      </Screen>
+    );
+  }
+  return (
+    <Screen edges={["top", "bottom"]}>
+      <ScrollView contentContainerStyle={[{ padding: space.l }, wide && formColumn]} keyboardShouldPersistTaps="handled">
+        {form}
       </ScrollView>
     </Screen>
   );

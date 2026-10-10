@@ -16,8 +16,17 @@ import { SHOW_SAMPLES } from "../../src/dev/samples";
 type ShopItem = StoreItem & { questStars?: number };
 const QUEST_SHOP: ShopItem[] = QUEST_ITEMS.map((i) => ({ ...i, price: 0, questStars: QUESTS.find((q) => q.rewardId === i.id)?.stars }));
 import { colors, fonts, radius, space } from "../../src/theme/colors";
+import { useLayout } from "../../src/theme/layout";
+
+const TILE_GAP = 10;
+const TILE_MIN = 150;
 
 export default function StoreTab() {
+  const { wide, split } = useLayout();
+  // Wide screens: as many tiles per row as fit at about TILE_MIN wide, sized to fill the row exactly.
+  const [gridWidth, setGridWidth] = useState(0);
+  const perRow = Math.max(1, Math.floor((gridWidth + TILE_GAP) / (TILE_MIN + TILE_GAP)));
+  const tileWidth = gridWidth ? (gridWidth - TILE_GAP * (perRow - 1)) / perRow : 0;
   const [kind, setKind] = useState<"color" | "hat">("color");
   const [selected, setSelected] = useState<ShopItem | null>(null);
   const [busy, setBusy] = useState(false);
@@ -68,14 +77,37 @@ export default function StoreTab() {
 
   const items: ShopItem[] = [...STORE_ITEMS, ...QUEST_SHOP].filter((i) => i.kind === kind);
 
+  // Buy / equip for the picked item, and messages: under the items on phones, under the preview on wide screens.
+  const actions = (
+    <View style={{ gap: space.m }}>
+      {selected ? (
+        <View style={{ gap: 10 }}>
+          {isOwned ? (
+            <Button title={isEquipped ? "Equipped" : "Equip"} variant="good" onPress={equip} disabled={isEquipped} />
+          ) : selected.questStars ? (
+            <Body style={{ color: colors.inkSoft, textAlign: "center" }}>Quest reward: earn {selected.questStars} stars in total, then claim it in Leaderboard → Quests.</Body>
+          ) : (
+            <Button title={`Buy for ${selected.price} stars`} variant="gold" onPress={buy} disabled={busy || stars < selected.price} />
+          )}
+          {!isOwned && !selected.questStars && stars < selected.price ? <Body style={{ color: colors.inkSoft }}>You need {selected.price - stars} more stars. Finish levels to earn them!</Body> : null}
+        </View>
+      ) : null}
+      {kind === "hat" && hatId ? <Button title="Take hat off" variant="ghost" small onPress={() => { useCosmetics.getState().unequipHat(); syncLook(); }} /> : null}
+      {msg ? <Text style={{ fontWeight: "800", color: colors.ink, textAlign: "center" }}>{msg}</Text> : null}
+    </View>
+  );
+
   return (
     <Screen>
-      <ScrollView contentContainerStyle={{ padding: space.l, gap: space.m }}>
+      <ScrollView contentContainerStyle={{ padding: wide ? space.xl : space.l, gap: space.m }}>
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
           <H1>Cat Store</H1>
           <Stat icon={uiAssets.icons.star as number} text={String(stars)} tint={colors.highlight} />
         </View>
 
+        {/* Wide screens: the preview and the buy button on the left, the items on the right. */}
+        <View style={split ? { flexDirection: "row", alignItems: "flex-start", gap: space.xl } : { gap: space.m }}>
+        <View style={{ gap: space.m, ...(split ? { flex: 2, minWidth: 0 } : null) }}>
         <Card style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "flex-end" }}>
           <View style={{ alignItems: "center" }}>
             <Text style={{ fontFamily: fonts.display, color: colors.inkSoft, marginBottom: 44 }}>Now</Text>
@@ -87,13 +119,16 @@ export default function StoreTab() {
             <CatAvatar source={catPoses.cute} colorId={preview.colorId} hatId={preview.hatId} size={130} label="Preview look" />
           </View>
         </Card>
+        {split ? actions : null}
+        </View>
 
+        <View style={{ gap: space.m, ...(split ? { flex: 3, minWidth: 0 } : null) }}>
         <View style={{ flexDirection: "row" }}>
           <Chip label="Colours" selected={kind === "color"} onPress={() => { setKind("color"); setSelected(null); setMsg(null); }} />
           <Chip label="Hats" selected={kind === "hat"} onPress={() => { setKind("hat"); setSelected(null); setMsg(null); }} />
         </View>
 
-        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
+        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: TILE_GAP }} onLayout={(e) => setGridWidth(e.nativeEvent.layout.width)}>
           {items.map((it) => {
             const own = owned.includes(it.id) || (it.price === 0 && !it.questStars);
             const eq = it.id === colorId || it.id === hatId;
@@ -101,7 +136,7 @@ export default function StoreTab() {
             return (
               <Pressable key={it.id} onPress={() => { setSelected(it); setMsg(null); }} accessibilityRole="button" accessibilityState={{ selected: on }}
                 accessibilityLabel={`${it.name}, ${own ? (eq ? "equipped" : "owned") : it.questStars ? `quest reward at ${it.questStars} stars` : `${it.price} stars`}`}
-                style={{ width: "30%", flexGrow: 1, minWidth: 96, minHeight: 130, borderRadius: radius.m, borderWidth: 3, borderColor: on ? colors.primary : colors.border, backgroundColor: on ? "#e2f6fb" : colors.card, alignItems: "center", justifyContent: "center", padding: 8 }}>
+                style={{ ...(wide && tileWidth ? { width: tileWidth } : { width: "30%", flexGrow: 1, minWidth: 96 }), minHeight: 130, borderRadius: radius.m, borderWidth: 3, borderColor: on ? colors.primary : colors.border, backgroundColor: on ? "#e2f6fb" : colors.card, alignItems: "center", justifyContent: "center", padding: 8 }}>
                 {/* Each item shown on the student's own cat: colours on the bare cat, hats on the cat in its current colour. */}
                 {it.kind === "color" ? (
                   <CatAvatar source={catPoses.cute} colorId={it.id} size={64} />
@@ -115,20 +150,9 @@ export default function StoreTab() {
           })}
         </View>
 
-        {selected ? (
-          <View style={{ gap: 10 }}>
-            {isOwned ? (
-              <Button title={isEquipped ? "Equipped" : "Equip"} variant="good" onPress={equip} disabled={isEquipped} />
-            ) : selected.questStars ? (
-              <Body style={{ color: colors.inkSoft, textAlign: "center" }}>Quest reward: earn {selected.questStars} stars in total, then claim it in Leaderboard → Quests.</Body>
-            ) : (
-              <Button title={`Buy for ${selected.price} stars`} variant="gold" onPress={buy} disabled={busy || stars < selected.price} />
-            )}
-            {!isOwned && !selected.questStars && stars < selected.price ? <Body style={{ color: colors.inkSoft }}>You need {selected.price - stars} more stars. Finish levels to earn them!</Body> : null}
-          </View>
-        ) : null}
-        {kind === "hat" && hatId ? <Button title="Take hat off" variant="ghost" small onPress={() => { useCosmetics.getState().unequipHat(); syncLook(); }} /> : null}
-        {msg ? <Text style={{ fontWeight: "800", color: colors.ink, textAlign: "center" }}>{msg}</Text> : null}
+        {split ? null : actions}
+        </View>
+        </View>
       </ScrollView>
     </Screen>
   );

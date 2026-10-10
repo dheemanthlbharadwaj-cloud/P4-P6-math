@@ -3,6 +3,8 @@ import { Image, KeyboardAvoidingView, Platform, ScrollView, Text, View } from "r
 import { Button, H1, Screen } from "./ui";
 import { catHead } from "../theme/cats";
 import { colors, space } from "../theme/colors";
+import { useLayout } from "../theme/layout";
+import { HeroSplit, formColumn } from "./HeroSplit";
 
 /** Progress as a row of cat heads: done and current are solid, the current one is bigger, the rest are faint. */
 function CatHeads({ step, total }: { step: number; total: number }) {
@@ -24,19 +26,46 @@ export function OnboardingFrame({
   step: number; total?: number; title: string; subtitle?: string; children: React.ReactNode; cat?: number;
   onNext: () => void; nextLabel?: string; nextDisabled?: boolean; onBack?: () => void;
 }) {
+  const { wide, splitScreen } = useLayout();
+  if (splitScreen) {
+    return (
+      <Screen edges={["top", "bottom"]}>
+        <HeroSplit
+          hero={
+            <View style={{ alignItems: "center", gap: space.l, maxWidth: 520 }}>
+              <CatHeads step={step} total={total} />
+              {cat ? <Image source={cat} style={{ width: 260, height: 240 }} resizeMode="contain" /> : null}
+              {title ? <H1 style={{ fontSize: 36, lineHeight: 44, textAlign: "center" }}>{title}</H1> : null}
+              {subtitle ? <Text style={{ fontSize: 19, color: colors.inkSoft, textAlign: "center" }}>{subtitle}</Text> : null}
+            </View>
+          }
+        >
+          <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined}>
+            <ScrollView contentContainerStyle={{ padding: space.xl, flexGrow: 1, justifyContent: "center" }} keyboardShouldPersistTaps="handled">
+              <View style={formColumn}>{children}</View>
+            </ScrollView>
+            <View style={[formColumn, { flexDirection: "row", gap: 12, padding: space.xl }]}>
+              {onBack ? <Button title="Back" variant="ghost" onPress={onBack} style={{ flex: 1 }} /> : null}
+              <Button title={nextLabel} onPress={onNext} disabled={nextDisabled} style={{ flex: 2 }} />
+            </View>
+          </KeyboardAvoidingView>
+        </HeroSplit>
+      </Screen>
+    );
+  }
   return (
     <Screen edges={["top", "bottom"]}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined}>
-        <View style={{ paddingHorizontal: space.l, paddingTop: space.s }}>
+        <View style={{ paddingHorizontal: space.l, paddingTop: wide ? space.xl : space.s }}>
           <CatHeads step={step} total={total} />
         </View>
-        <ScrollView contentContainerStyle={{ padding: space.l, flexGrow: 1 }} keyboardShouldPersistTaps="handled">
+        <ScrollView contentContainerStyle={[{ padding: space.l, flexGrow: 1 }, wide && formColumn]} keyboardShouldPersistTaps="handled">
           {cat ? <Image source={cat} style={{ width: 120, height: 110, alignSelf: "center", marginBottom: 6 }} resizeMode="contain" /> : null}
           {title ? <H1>{title}</H1> : null}
           {subtitle ? <Text style={{ fontSize: 17, color: colors.inkSoft, marginTop: 6, marginBottom: space.l }}>{subtitle}</Text> : <View style={{ height: space.l }} />}
           {children}
         </ScrollView>
-        <View style={{ flexDirection: "row", gap: 12, padding: space.l }}>
+        <View style={[{ flexDirection: "row", gap: 12, padding: space.l }, wide && formColumn]}>
           {onBack ? <Button title="Back" variant="ghost" onPress={onBack} style={{ flex: 1 }} /> : null}
           <Button title={nextLabel} onPress={onNext} disabled={nextDisabled} style={{ flex: 2 }} />
         </View>

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { FlatList, Pressable, Text, View, type NativeScrollEvent, type NativeSyntheticEvent } from "react-native";
+import { FlatList, Pressable, Text, View, type NativeScrollEvent, type NativeSyntheticEvent, useWindowDimensions } from "react-native";
 import { useRouter } from "expo-router";
 import type { LevelNo } from "@p6/shared";
 import { Screen } from "../../src/components/ui";
@@ -14,11 +14,22 @@ import { useFriends } from "../../src/store/friends";
 import { usePlayer, computeMeters } from "../../src/store/player";
 import { isTopicUnlocked } from "../../src/logic/unlock";
 import { colors, fonts } from "../../src/theme/colors";
-import { useFrameDimensions } from "../../src/theme/frame";
+import { useLayout } from "../../src/theme/layout";
+
+/** Narrowest map page on big screens (the maps are drawn for phone widths). */
+const MAP_MIN_WIDTH = 380;
+const DIVIDER = 3;
 
 export default function MapTab() {
   const router = useRouter();
-  const { width } = useFrameDimensions();
+  const { width: windowWidth } = useWindowDimensions();
+  const { wide } = useLayout();
+  // The list's own width (the window minus the side navigation on big screens), measured.
+  const [listWidth, setListWidth] = useState(0);
+  const areaWidth = listWidth || windowWidth;
+  // Big screens show several maps side by side, each at a phone-like width, so no map is blown up.
+  const perView = wide ? Math.max(1, Math.min(4, Math.floor(areaWidth / MAP_MIN_WIDTH))) : 1;
+  const width = areaWidth / perView;
   const grade = useProfile((s) => s.grade);
   const topics = useMemo(() => getTopics(grade), [grade]);
   const progress = useProgress((s) => s.grades[grade]);
@@ -46,15 +57,17 @@ export default function MapTab() {
     if (i > 0) { setIndex(i); setTimeout(() => listRef.current?.scrollToIndex({ index: i, animated: false }), 0); }
   }, [progress, topics]);
 
+  const lastStart = Math.max(0, topics.length - perView);
   const go = useCallback((i: number) => {
-    const clamped = Math.max(0, Math.min(topics.length - 1, i));
+    const clamped = Math.max(0, Math.min(lastStart, i));
     setIndex(clamped);
     listRef.current?.scrollToIndex({ index: clamped, animated: true });
-  }, [topics.length]);
+  }, [lastStart]);
 
   const onEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => setIndex(Math.round(e.nativeEvent.contentOffset.x / width));
 
   const topic = topics[index];
+  const shown = topics.slice(index, index + perView);
 
   // A level button opens that level straight away (no level picker).
   const start = (subtopicId: string, level: LevelNo, locked: boolean) => {
@@ -77,10 +90,24 @@ export default function MapTab() {
           <Text style={{ fontSize: 30, fontFamily: fonts.display, color: colors.ink }}>‹</Text>
         </Pressable>
         <View style={{ flex: 1, alignItems: "center" }}>
-          <Text style={{ fontSize: 20, lineHeight: 24, fontFamily: fonts.display, color: colors.ink, textAlign: "center" }} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.8} accessibilityRole="header">{topic?.name ?? ""}</Text>
-          <Text style={{ fontSize: 12, color: colors.inkSoft, fontWeight: "700" }}>{index + 1} / {topics.length} · swipe for more topics</Text>
+          {perView === 1 ? (
+            <>
+              <Text style={{ fontSize: 20, lineHeight: 24, fontFamily: fonts.display, color: colors.ink, textAlign: "center" }} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.8} accessibilityRole="header">{topic?.name ?? ""}</Text>
+              <Text style={{ fontSize: 12, color: colors.inkSoft, fontWeight: "700" }}>{index + 1} / {topics.length} · swipe for more topics</Text>
+            </>
+          ) : (
+            // Several maps on screen: one title per map, aligned over it; the arrows step one topic at a time.
+            <View style={{ flexDirection: "row", alignSelf: "stretch" }}>
+              {shown.map((t, k) => (
+                <View key={t.id} style={{ flex: 1, alignItems: "center", paddingHorizontal: 6 }}>
+                  <Text style={{ fontSize: 20, lineHeight: 24, fontFamily: fonts.display, color: colors.ink, textAlign: "center" }} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} accessibilityRole="header">{t.name}</Text>
+                  <Text style={{ fontSize: 12, color: colors.inkSoft, fontWeight: "700" }}>{index + k + 1} / {topics.length}</Text>
+                </View>
+              ))}
+            </View>
+          )}
         </View>
-        <Pressable onPress={() => go(index + 1)} disabled={index >= topics.length - 1} accessibilityLabel="Next topic" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center", opacity: index >= topics.length - 1 ? 0.3 : 1 }}>
+        <Pressable onPress={() => go(index + 1)} disabled={index >= lastStart} accessibilityLabel="Next topic" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center", opacity: index >= lastStart ? 0.3 : 1 }}>
           <Text style={{ fontSize: 30, fontFamily: fonts.display, color: colors.ink }}>›</Text>
         </Pressable>
       </View>
@@ -88,27 +115,33 @@ export default function MapTab() {
       <FlatList
         ref={listRef}
         style={{ flex: 1 }}
-        onLayout={(e) => setPageHeight(e.nativeEvent.layout.height)}
+        onLayout={(e) => { setPageHeight(e.nativeEvent.layout.height); setListWidth(e.nativeEvent.layout.width); }}
         data={topics}
         keyExtractor={(t) => t.id}
         horizontal
-        pagingEnabled
+        pagingEnabled={perView === 1}
+        snapToInterval={perView === 1 ? undefined : width}
+        decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
         getItemLayout={(_, i) => ({ length: width, offset: width * i, index: i })}
         onMomentumScrollEnd={onEnd}
-        windowSize={3}
-        initialNumToRender={1}
+        windowSize={perView === 1 ? 3 : 2}
+        initialNumToRender={perView}
+        extraData={width}
         renderItem={({ item }) => (
-          <TopicMapPage
-            topic={item}
-            width={width}
-            height={pageHeight}
-            unlocked={isTopicUnlocked(progress, item.id)}
-            progress={progress}
-            friends={friends}
-            onNodePress={start}
-            onLockPress={() => setKeyTopic(item.id)}
-          />
+          // Side by side, a line between the maps keeps neighbouring topics apart.
+          <View style={{ width, borderRightWidth: perView > 1 ? DIVIDER : 0, borderColor: colors.border }}>
+            <TopicMapPage
+              topic={item}
+              width={width - (perView > 1 ? DIVIDER : 0)}
+              height={pageHeight}
+              unlocked={isTopicUnlocked(progress, item.id)}
+              progress={progress}
+              friends={friends}
+              onNodePress={start}
+              onLockPress={() => setKeyTopic(item.id)}
+            />
+          </View>
         )}
       />
 
