@@ -3,10 +3,12 @@ import { persist } from "zustand/middleware";
 import type { Grade, GradeProgress, LevelNo } from "@p6/shared";
 import { applyLevelResult, emptyGradeProgress, mergeGradeProgress, unlockTopic } from "../logic/unlock";
 import { persistStorage, STORE_PREFIX } from "./storage";
+import { getTopics } from "../content";
 
 interface ProgressState {
   grades: Partial<Record<Grade, GradeProgress>>;
-  /** Create the grade's progress on first use; `initialTopics` = topics marked learnt in onboarding. */
+  /** Create the grade's progress on first use; `initialTopics` = topics marked learnt in onboarding (none → the first
+   *  topic opens). */
   ensureGrade: (grade: Grade, initialTopics?: string[]) => void;
   unlockTopic: (grade: Grade, topicId: string) => void;
   /** Questions answered right in an attempt (or confirmed by the server) join the level's stars. */
@@ -21,14 +23,18 @@ export const useProgress = create<ProgressState>()(
     (set, get) => ({
       grades: {},
       ensureGrade: (grade, initialTopics = []) => {
+        // No topic marked learnt: the first topic's map starts open, so there is always somewhere to play.
+        const first = getTopics(grade)[0]?.id;
+        const topics = initialTopics.length || !first ? initialTopics : [first];
         const g = get().grades[grade];
         if (g) {
-          // merge any newly-marked-learnt topics
-          const missing = initialTopics.filter((t) => !g.unlockedTopics.includes(t));
+          // merge any newly-marked-learnt topics (and open the first map if none is open yet)
+          const missing = topics.filter((t) => !g.unlockedTopics.includes(t));
+          if (!g.unlockedTopics.length && first && !missing.includes(first) && !g.unlockedTopics.includes(first)) missing.push(first);
           if (missing.length) set({ grades: { ...get().grades, [grade]: { ...g, unlockedTopics: [...g.unlockedTopics, ...missing] } } });
           return;
         }
-        set({ grades: { ...get().grades, [grade]: emptyGradeProgress(grade, initialTopics) } });
+        set({ grades: { ...get().grades, [grade]: emptyGradeProgress(grade, topics) } });
       },
       unlockTopic: (grade, topicId) => {
         const g = get().grades[grade] ?? emptyGradeProgress(grade);

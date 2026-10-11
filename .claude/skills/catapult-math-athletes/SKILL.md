@@ -28,7 +28,7 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
 ### Current agreed behaviour (do not regress)
 | Area | Rule |
 |---|---|
-| Unlock | LV2 of any subtopic on a map unlocks only when **all LV1s on that map** are complete (5 stars); LV3 likewise needs all LV2s. `src/logic/unlock.ts` (`isLevelUnlocked`, `nextMapLevel`). |
+| Unlock | Maps open for the topics marked learnt at sign-up; **none marked → topic 1's map opens** (`ensureGrade` in `src/store/progress.ts`). LV2 of any subtopic on a map unlocks only when **all LV1s on that map** are complete (5 stars); LV3 likewise needs all LV2s. `src/logic/unlock.ts` (`isLevelUnlocked`, `nextMapLevel`). |
 | Level buttons | Colour by level: LV1 blue (`node.default`), LV2 green (`node.l2`), LV3 yellow (`node.l3`, not the star yellow). Under each button a row of **5 small stars** (`LevelStars`, one per question answered right). With all 5 the button becomes the original raised **gold star** (`uiAssets.node.gold`, from the map pack). Never a flat star icon. Number text `{i+1}`. **No lock badge.** |
 | Map theme | Map N shows only island N of the pack on the river (yacht marina, flooded city, suburbia, military base, ice, mountains, volcano, city at night, garbage dump, theme park, industrial platform, space base). |
 | Map layout | Even spacing; gaps only between level groups; subtopic labels never overlap buttons/cat (`pickRect` in `TopicMapPage.tsx`). Spots come from `theme/mapPaths.ts` (`spots`): `map-scenes.py` cuts the maps, then `apps/mobile/scripts/map-spots.py` places buttons exactly evenly (level-group jump = 2 steps) in open water. |
