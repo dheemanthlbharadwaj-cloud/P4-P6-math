@@ -62,12 +62,12 @@ overrides). Each takes `--dry` to show what it would do; all are idempotent.
 5. **Google sign-in**: Firebase console (primary-math-sg) → Authentication → Sign-in method → Add new provider →
    Google → Enable, pick a support email → Save. That creates the web OAuth client; web sign-in works from then on.
    For the native apps, in Google Cloud console → APIs & Services → Credentials create an **iOS** OAuth client
-   (bundle id `sg.p6math.app`) and an **Android** one (package `sg.p6math.app` + the signing key's SHA-1 from EAS),
+   (bundle id `sg.catapultmathathletes.app`) and an **Android** one (package `sg.catapultmathathletes.app` + the signing key's SHA-1 from EAS),
    then set `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID` (the "Web client (auto created by Google Service)" id),
    `EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID` and `EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID` as EAS environment variables.
 6. **Apple sign-in** (needs the Apple Developer Program membership, which the App Store needs anyway):
    Firebase console → Authentication → Sign-in method → Apple → Enable.
-   - iOS app: nothing else in Firebase; enable "Sign in with Apple" on the App ID `sg.p6math.app` (EAS does this).
+   - iOS app: nothing else in Firebase; enable "Sign in with Apple" on the App ID `sg.catapultmathathletes.app` (EAS does this).
    - Web: Apple Developer → Identifiers → **Services ID** (e.g. `sg.p6math.web`), enable Sign in with Apple, domain
      `primary-math-sg.firebaseapp.com`, return URL `https://primary-math-sg.firebaseapp.com/__/auth/handler`. Then
      Keys → a key with Sign in with Apple. Enter the Services ID, Team ID, Key ID and the private key in the

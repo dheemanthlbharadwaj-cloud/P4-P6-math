@@ -6,7 +6,7 @@ const env = (k: string, fallback: string) => process.env[k] || fallback;
 // Google's published test app ids: safe placeholders until the real AdMob apps exist (open question #13).
 const ADMOB_ANDROID_APP_ID = env("EXPO_PUBLIC_ADMOB_ANDROID_APP_ID", "ca-app-pub-3940256099942544~3347511713");
 const ADMOB_IOS_APP_ID = env("EXPO_PUBLIC_ADMOB_IOS_APP_ID", "ca-app-pub-3940256099942544~1458002511");
-const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.p6math.app");
+const BUNDLE_ID = env("EXPO_PUBLIC_BUNDLE_ID", "sg.catapultmathathletes.app");
 
 // Committed public web config of the Firebase project (primary-math-sg, shared with the question bank editor;
 // written by backend/scripts/setup-project.mjs). The app itself never opens Firestore (all data via the backend).
@@ -26,8 +26,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   version: "0.1.0",
   orientation: "default",
   userInterfaceStyle: "light",
-  // TODO(owner): supply icon.png (1024x1024) and splash.png in assets/ui, then uncomment.
-  // icon: "./assets/ui/app-icon.png",
+  // Placeholder icon from the cat art (assets/ui/app-icon.png, adaptive-icon.png): replace the files to change it.
+  icon: "./assets/ui/app-icon.png",
   ios: {
     bundleIdentifier: BUNDLE_ID,
     supportsTablet: true,
@@ -36,9 +36,16 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   android: {
     package: BUNDLE_ID,
+    adaptiveIcon: { foregroundImage: "./assets/ui/adaptive-icon.png", backgroundColor: "#12aecf" },
+    // Children's app (Google Play Families policy): only internet + vibration; nothing the app doesn't use.
+    blockedPermissions: [
+      "android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.SYSTEM_ALERT_WINDOW", "android.permission.RECORD_AUDIO", "android.permission.CAMERA",
+    ],
   },
   plugins: [
     "expo-router",
+    ["expo-splash-screen", { image: "./assets/ui/adaptive-icon.png", imageWidth: 220, backgroundColor: "#fff7ea" }],
     "expo-apple-authentication",
     [
       "expo-build-properties",
