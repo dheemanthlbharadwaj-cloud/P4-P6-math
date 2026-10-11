@@ -130,6 +130,12 @@ PAGE = """<!doctype html>
   #boot { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
           gap: 14px; padding-inline: 24px; background: var(--bg); font: 600 16px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; }
   #boot[hidden] { display: none; }
+  #update { position: fixed; left: 12px; right: 12px; top: 12px; z-index: 99999; display: flex; align-items: center; gap: 12px;
+            max-width: 520px; margin: 0 auto; padding: 12px 14px; border: 3px solid var(--ink); border-radius: 16px;
+            background: #fff0c2; font: 700 16px/1.3 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); }
+  #update[hidden] { display: none; }
+  #update span { flex: 1; }
+  #update button { font: inherit; padding: 8px 14px; border: 3px solid var(--ink); border-radius: 12px; background: #12aecf; color: #fff; cursor: pointer; }
   #boot h1 { font-size: 26px; margin: 0; }
   #boot p { margin: 0; color: var(--soft); font-weight: 500; max-width: 32ch; }
   #bar { width: min(280px, 80vw); height: 14px; border: 3px solid var(--ink); border-radius: 10px; overflow: hidden; background: var(--track); }
@@ -137,6 +143,7 @@ PAGE = """<!doctype html>
   @media (prefers-reduced-motion: reduce) { #bar > i { transition: none; } }
 </style>
 <div id="root"></div>
+<div id="update" role="status" hidden><span>A new version of the app is ready.</span><button type="button" onclick="location.reload()">Update</button></div>
 <div id="boot" role="status" aria-live="polite">
   <h1>Catapult Math Athletes</h1>
   <p id="bootmsg">Loading the question bank and figures…</p>
@@ -144,6 +151,18 @@ PAGE = """<!doctype html>
 </div>
 <script>
 (function () {
+  // A tab left open keeps running the version it loaded. When it comes back to the front (and every 10 minutes),
+  // look at the published page: if it starts a different app bundle, offer a reload (never forced: a level may be open).
+  var ENTRY = "__ENTRY__";
+  function checkForUpdate() {
+    if (document.hidden) return;
+    fetch(location.origin + "/?update-check=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
+      var m = html.match(/js\/entry-[a-f0-9]+\.js/);
+      if (m && m[0] !== ENTRY) document.getElementById("update").hidden = false;
+    }).catch(function () {});
+  }
+  document.addEventListener("visibilitychange", checkForUpdate);
+  setInterval(checkForUpdate, 10 * 60 * 1000);
   // Asset URLs in the bundle are relative to this page's folder.
   var base = location.href.split("#")[0].split("?")[0];
   globalThis.__P6BASE__ = base.slice(0, base.lastIndexOf("/") + 1);
