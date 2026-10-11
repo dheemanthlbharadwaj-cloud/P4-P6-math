@@ -174,7 +174,7 @@ export default function LevelScreen() {
           </Text>
           {justCompleted ? (
             <>
-              <Image source={uiAssets.node.star} style={{ width: 88, height: 88, marginTop: 14 }} />
+              <Image source={uiAssets.node.gold} style={{ width: 88, height: 88, marginTop: 14 }} />
               <Text style={{ fontWeight: "800", color: colors.inkSoft, marginTop: 6 }}>Your level button is now a star!</Text>
             </>
           ) : !complete ? (
