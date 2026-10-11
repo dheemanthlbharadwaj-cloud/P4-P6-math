@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { mapPaths } from "../theme/mapPaths";
-import { nodeRect, overlap, placeCat } from "./mapLayout";
+import { buttonRects, overlap, placeCat } from "./mapLayout";
 
 // Height / width of each map image, read from uiAssets.maps in theme/assets.ts (which needs the bundler to import;
 // tests run from apps/mobile).
@@ -20,14 +20,14 @@ describe("map buttons", () => {
     });
   });
 
-  it("the student's cat never covers a button, wherever it stands", () => {
+  it("the student's cat never covers a button or its stars, wherever it stands", () => {
     mapPaths.forEach((m, i) => {
       for (const width of WIDTHS) {
         const height = width * ASPECT[i];
         const pos = m.spots!.map(([x, y]) => ({ x: x * width, y: y * height - NODE / 2 }));
         pos.forEach((_, idx) => {
           const { covers } = placeCat(pos, idx, NODE, width);
-          const hit = pos.findIndex((p) => overlap(covers, nodeRect(p, NODE)) > 0);
+          const hit = pos.findIndex((p) => buttonRects(p, NODE, width).some((r) => overlap(covers, r) > 0));
           expect(hit, `map ${i + 1} at ${width}pt, cat on button ${idx + 1}`).toBe(-1);
           expect(covers.x).toBeGreaterThanOrEqual(0);
           expect(covers.x + covers.w).toBeLessThanOrEqual(width);

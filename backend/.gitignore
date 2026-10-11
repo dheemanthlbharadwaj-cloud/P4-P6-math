@@ -5,3 +5,4 @@ functions/src/shared/
 .firebase/
 firebase-debug.log
 .secret.local
+functions/src/content/

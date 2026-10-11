@@ -103,36 +103,36 @@ describe("ranking", () => {
 
 const good = (over: object = {}) => ({
   attemptId: "attempt-12345678", grade: "P6", contentVersion: "abc", subtopicId: "p6-fractions-adding-fractions", level: 2, completed: true, finishedAt: 1,
-  answers: [1, 2, 3, 4, 5].map((i) => ({ questionId: `q${i}`, correct: true, skipped: false, firstTryCorrect: true })), ...over,
+  answers: [1, 2, 3, 4, 5].map((i) => ({ questionId: `q${i}`, responses: ["1"] })), ...over,
 });
 
 describe("validateLevelResult", () => {
-  it("counts questions right on the first try (first-time stars)", () => {
-    const answers = good().answers.map((a, i) => ({ ...a, firstTryCorrect: i !== 1 }));
-    const v = validateLevelResult(good({ answers }));
-    expect(v.ok && v.firstTryCorrect).toBe(4);
+  it("passes the answers through for server-side marking", () => {
+    const v = validateLevelResult(good());
+    expect(v.ok && v.answers.map((a) => a.questionId)).toEqual(["q1", "q2", "q3", "q4", "q5"]);
   });
-  it("an unfinished attempt still reports its first-try answers", () => {
-    const v = validateLevelResult(good({ completed: false, answers: [{ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true }] }));
-    expect(v.ok && v.firstTryCorrect).toBe(1);
-    expect(v.ok && v.attemptedIds).toEqual(["q1"]);
+  it("an unfinished attempt is fine (stars for the questions answered right)", () => {
+    const v = validateLevelResult(good({ completed: false, answers: [{ questionId: "q1", responses: ["2"] }] }));
+    expect(v.ok && v.answers).toEqual([{ questionId: "q1", responses: ["2"] }]);
   });
-  it("rejects answers without firstTryCorrect", () => {
-    const v = validateLevelResult(good({ answers: [1, 2, 3, 4, 5].map((i) => ({ questionId: `q${i}`, correct: true, skipped: false })) }));
-    expect(v.ok).toBe(false);
+  it("ignores client claims: only questionId + responses are kept", () => {
+    const v = validateLevelResult(good({ answers: [{ questionId: "q1", responses: ["2"], correct: true, firstTryCorrect: true }] }));
+    expect(v.ok && v.answers).toEqual([{ questionId: "q1", responses: ["2"] }]);
   });
-  it("rejects completed with too few correct", () => {
-    const v = validateLevelResult(good({ answers: [{ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true }] }));
-    expect(v.ok).toBe(false);
+  it("rejects answers without responses (old app versions)", () => {
+    expect(validateLevelResult(good({ answers: [{ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true }] })).ok).toBe(false);
   });
-  it("duplicate question ids don't count twice", () => {
-    const v = validateLevelResult(good({ answers: Array.from({ length: 6 }, () => ({ questionId: "q1", correct: true, skipped: false, firstTryCorrect: true })) }));
-    expect(v.ok).toBe(false);
+  it("a question counts once", () => {
+    const v = validateLevelResult(good({ answers: [{ questionId: "q1", responses: ["1"] }, { questionId: "q1", responses: ["2"] }] }));
+    expect(v.ok && v.answers).toEqual([{ questionId: "q1", responses: ["1"] }]);
   });
-  it("counts non-skipped answers as questionsDone", () => {
-    const v = validateLevelResult(good({ answers: [...good().answers, { questionId: "q9", correct: false, skipped: true, firstTryCorrect: false }, { questionId: "q8", correct: false, skipped: false, firstTryCorrect: false }] }));
-    expect(v.ok && v.questionsDone).toBe(6);
-  });
+  it.each([
+    ["too many answers", { answers: Array.from({ length: 11 }, (_, i) => ({ questionId: `q${i}`, responses: ["1"] })) }],
+    ["empty responses", { answers: [{ questionId: "q1", responses: [] }] }],
+    ["too many responses", { answers: [{ questionId: "q1", responses: Array(11).fill("1") }] }],
+    ["huge response", { answers: [{ questionId: "q1", responses: ["x".repeat(201)] }] }],
+    ["non-string response", { answers: [{ questionId: "q1", responses: [1] }] }],
+  ])("rejects %s", (_n, over) => expect(validateLevelResult(good(over)).ok).toBe(false));
   it.each([
     ["attemptId", { attemptId: "x" }], ["grade", { grade: "P3" }], ["level", { level: 4 }], ["subtopic", { subtopicId: "../etc" }],
     ["answers", { answers: "no" }], ["completed", { completed: "yes" }],
@@ -226,16 +226,10 @@ describe("integration seams", () => {
     const [e] = buildEntries([{ uid: "a", stars: 1, questionsDone: 1 }], { prevStars: null, profiles: profiles as never, medals: new Map() });
     expect(e.cat).toEqual({ colorId: "color-ginger", hatId: "hat-cap" });
   });
-  it("a skipped-then-corrected question still counts once the student got it right (client sends skipped=false)", () => {
-    // Skipping is not an answer, so a question skipped and then answered right is still right on the first try.
-    const answers = ["q1", "q2", "q3", "q4", "q5"].map((questionId) => ({ questionId, correct: true, skipped: false, firstTryCorrect: true }));
-    const v = validateLevelResult({ attemptId: "abcdefgh-1234", grade: "P6", contentVersion: "v1", subtopicId: "p6-fractions-x1", level: 2, answers, completed: true, finishedAt: 1 });
-    expect(v.ok && v.firstTryCorrect).toBe(5);
-  });
 });
 
 describe("mini-game stars", () => {
-  const round = (over: object = {}) => ({ attemptId: "round-12345678", grade: "P6", mode: "challenge", finishedAt: 1, answers: [{ questionId: "a", correct: true }], ...over });
+  const round = (over: object = {}) => ({ attemptId: "round-12345678", grade: "P6", mode: "challenge", finishedAt: 1, answers: [{ questionId: "a", responses: ["1"] }], ...over });
   it("validates a round", () => {
     expect(validateMinigameResult(round()).ok).toBe(true);
     expect(validateMinigameResult(round({ mode: "practice" })).ok).toBe(false);

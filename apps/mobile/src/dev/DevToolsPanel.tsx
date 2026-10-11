@@ -6,7 +6,7 @@ import { Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { MAX_ENERGY, MAX_HEARTS, QUEST_ITEMS, QUESTS, STORE_ITEMS, type Grade } from "@p6/shared";
 import { Sheet } from "../components/ui";
-import { getAllLv1, getTopics } from "../content";
+import { getAllLv1, getLevelQuestions, getTopics } from "../content";
 import { usePlayer, computeMeters } from "../store/player";
 import { useProgress } from "../store/progress";
 import { useProfile } from "../store/profile";
@@ -103,10 +103,13 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
     for (const t of list) {
       const subs = [...t.subtopics].sort((a, b) => a.order - b.order);
       const take = which === "half-first" ? subs.slice(0, Math.ceil(subs.length / 2)) : subs;
-      for (const s of take) for (const l of [1, 2, 3] as const) useProgress.getState().recordLevel(grade, s.id, l, 5, true);
+      for (const s of take) for (const l of [1, 2, 3] as const) {
+        const ids = getLevelQuestions(grade, s.id, l).map((q) => q.id);
+        useProgress.getState().recordLevel(grade, s.id, l, ids, ids);
+      }
       if (which === "all") useProgress.getState().unlockTopic(grade, t.id);
     }
-    done(which === "all" ? "Every level on every map completed" : which === "first-map" ? "First map completed (gold buttons)" : "Half of the first map completed");
+    done(which === "all" ? "Every level on every map completed" : which === "first-map" ? "First map completed (star buttons)" : "Half of the first map completed");
   };
   const resetProgress = () => { useProgress.getState().reset(); ensure(); done("Progress cleared"); };
   const flagWrong = (n: number) => {
@@ -167,12 +170,7 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
           <Btn label="Lock quests again" tone="danger" onPress={lockQuests} />
         </Section>
         <Section title="Star rules">
-          <Btn label="Forget starred levels" onPress={() => { useStars.getState().set({ starredLevels: {} }); done("Levels give 1 star per first-try answer again"); }} />
-          <Btn label="Star every level (re-attempt mode)" onPress={() => {
-            const all: Record<string, true> = {};
-            for (const t of topics) for (const s of t.subtopics) for (const l of [1, 2, 3]) all[`${grade}:${s.id}#${l}`] = true;
-            useStars.getState().set({ starredLevels: all }); done("Every level counts as already starred: 1 star per finished level");
-          }} />
+          <Btn label="Forget replay bonuses" onPress={() => { useStars.getState().set({ levelBonus: {} }); done("Complete levels pay their replay bonus star again (on this device)"); }} />
           <Btn label="Forget attempted questions" onPress={() => { useStars.getState().set({ attempted: {} }); done("Mini games give stars for every question again"); }} />
           <Btn label="Mark all LV1 attempted" onPress={() => {
             const all: Record<string, true> = { ...useStars.getState().attempted };

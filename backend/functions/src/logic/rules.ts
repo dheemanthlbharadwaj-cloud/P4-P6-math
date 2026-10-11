@@ -1,8 +1,9 @@
 // Validation for level results, purchases, referrals, friend requests, question reports, profile/progress sync. Pure.
 import {
-  LEVEL_PASS_MIN_CORRECT, ACTIVE_GRADES, MAX_REPORT_NOTE, QUESTS, QUEST_ITEMS, REPORT_REASONS, type LevelResult, type MinigameResult,
+  ACTIVE_GRADES, MAX_REPORT_NOTE, QUESTS, QUEST_ITEMS, REPORT_REASONS, type LevelAnswer, type LevelResult, type MinigameResult,
   type ReportQuestionRequest, type ReportReason, type StoreItem, MAX_SYNC_WRONG, STORE_ITEMS, type GradeProgress,
   type LevelProgress, type UpdateProfileRequest, type UserProfile, type WrongBookmark,
+  nameProblem, nameProblemMessage, tidyName,
 } from "../shared/index.js";
 
 export type Fail = { ok: false; code: "invalid-argument" | "failed-precondition" | "already-exists" | "not-found" | "permission-denied"; message: string };
@@ -11,11 +12,18 @@ const fail = (code: Fail["code"], message: string): Fail => ({ ok: false, code, 
 
 const SUBTOPIC_RE = /^p[4-6]-[a-z0-9-]{3,120}$/;
 const ATTEMPT_RE = /^[A-Za-z0-9_-]{8,64}$/;
-export const MAX_ANSWERS_PER_ATTEMPT = 40;
+export const MAX_ANSWERS_PER_ATTEMPT = 10; // a level has 5 questions, each answered at most once per attempt
+const MAX_RESPONSES = 10; // MCQ: 1; open questions: one per part
+const MAX_RESPONSE_LENGTH = 200;
 
-/** `firstTryCorrect` = questions right on the first try in this attempt (first-time stars); the transaction decides
- *  the stars with starsForLevelAttempt rules once it knows whether the level gave a star before. */
-export function validateLevelResult(r: unknown): Fail | Ok<{ result: LevelResult; firstTryCorrect: number; questionsDone: number; attemptedIds: string[] }> {
+/** A list of what the student entered: strings, bounded in count and length. */
+function validResponses(r: unknown): r is string[] {
+  return Array.isArray(r) && r.length >= 1 && r.length <= MAX_RESPONSES && r.every((x) => typeof x === "string" && x.length <= MAX_RESPONSE_LENGTH);
+}
+
+/** Shape check only: the answers are marked by the server against its own answer key (logic/marking.ts). Each question
+ *  counts once (the first entry wins). */
+export function validateLevelResult(r: unknown): Fail | Ok<{ result: LevelResult; answers: LevelAnswer[] }> {
   const x = r as Partial<LevelResult> | null;
   if (!x || typeof x !== "object") return fail("invalid-argument", "missing body");
   if (typeof x.attemptId !== "string" || !ATTEMPT_RE.test(x.attemptId)) return fail("invalid-argument", "bad attemptId");
@@ -26,17 +34,15 @@ export function validateLevelResult(r: unknown): Fail | Ok<{ result: LevelResult
   if (typeof x.completed !== "boolean") return fail("invalid-argument", "bad completed");
   if (typeof x.finishedAt !== "number") return fail("invalid-argument", "bad finishedAt");
   if (!Array.isArray(x.answers) || x.answers.length > MAX_ANSWERS_PER_ATTEMPT) return fail("invalid-argument", "bad answers");
+  const answers: LevelAnswer[] = [];
+  const seen = new Set<string>();
   for (const a of x.answers) {
-    if (!a || typeof a.questionId !== "string" || a.questionId.length > 120 || typeof a.correct !== "boolean" || typeof a.skipped !== "boolean" || typeof a.firstTryCorrect !== "boolean") {
-      return fail("invalid-argument", "bad answer entry");
-    }
+    if (!a || typeof a.questionId !== "string" || a.questionId.length > 120 || !validResponses(a.responses)) return fail("invalid-argument", "bad answer entry");
+    if (seen.has(a.questionId)) continue;
+    seen.add(a.questionId);
+    answers.push({ questionId: a.questionId, responses: a.responses });
   }
-  const correctIds = new Set(x.answers.filter((a) => a.correct && !a.skipped).map((a) => a.questionId));
-  if (x.completed && correctIds.size < LEVEL_PASS_MIN_CORRECT) return fail("failed-precondition", "completed but fewer correct answers than required");
-  const questionsDone = x.answers.filter((a) => !a.skipped).length;
-  const firstTryCorrect = new Set(x.answers.filter((a) => a.firstTryCorrect && !a.skipped).map((a) => a.questionId)).size;
-  const attemptedIds = [...new Set(x.answers.filter((a) => !a.skipped || a.correct).map((a) => a.questionId))];
-  return { ok: true, result: x as LevelResult, firstTryCorrect, questionsDone, attemptedIds };
+  return { ok: true, result: x as LevelResult, answers };
 }
 
 export const MAX_MINIGAME_ANSWERS = 120;
@@ -51,7 +57,7 @@ export function validateMinigameResult(r: unknown): Fail | Ok<{ result: Minigame
   if (typeof x.finishedAt !== "number") return fail("invalid-argument", "bad finishedAt");
   if (!Array.isArray(x.answers) || x.answers.length > MAX_MINIGAME_ANSWERS) return fail("invalid-argument", "bad answers");
   for (const a of x.answers) {
-    if (!a || typeof a.questionId !== "string" || a.questionId.length > 120 || typeof a.correct !== "boolean") return fail("invalid-argument", "bad answer entry");
+    if (!a || typeof a.questionId !== "string" || a.questionId.length > 120 || !validResponses(a.responses)) return fail("invalid-argument", "bad answer entry");
   }
   return { ok: true, result: x as MinigameResult, questionIds: [...new Set(x.answers.map((a) => a.questionId))] };
 }
@@ -145,17 +151,19 @@ export function ownsItem(inventory: string[], id: string): boolean {
 export function validateProfileUpdate(r: unknown, inventory: string[]): Fail | Ok<{ fields: Pick<UserProfile, "fullName" | "school" | "topicsLearnt" | "psleDate">; cat: UserProfile["cat"] | null }> {
   const x = r as Partial<UpdateProfileRequest> | null;
   if (!x || typeof x !== "object") return fail("invalid-argument", "missing body");
-  if (!isStr(x.fullName, 1, 60)) return fail("invalid-argument", "name must be 1-60 characters");
+  if (typeof x.fullName !== "string") return fail("invalid-argument", "name must be 1-60 characters");
+  const nameBad = nameProblem(x.fullName, 60);
+  if (nameBad) return fail("invalid-argument", nameProblemMessage(nameBad));
   if (x.school !== undefined && !isStr(x.school, 0, 80)) return fail("invalid-argument", "school too long");
   if (!Array.isArray(x.topicsLearnt) || x.topicsLearnt.length > 20 || !x.topicsLearnt.every((t) => isStr(t, 1, 60))) return fail("invalid-argument", "bad topicsLearnt");
   const psleDate = typeof x.psleDate === "string" ? x.psleDate : "";
   if (psleDate && !DATE_RE.test(psleDate)) return fail("invalid-argument", "psleDate must be yyyy-mm-dd");
   const c = x.cat as Partial<UserProfile["cat"]> | undefined;
-  const catOk = !!c && isStr(c.name, 1, 20) && typeof c.colorId === "string" && ownsItem(inventory, c.colorId)
+  const catOk = !!c && isStr(c.name, 1, 20) && !nameProblem(c.name, 20) && typeof c.colorId === "string" && ownsItem(inventory, c.colorId)
     && (c.hatId === null || c.hatId === undefined || (typeof c.hatId === "string" && ownsItem(inventory, c.hatId)));
   return {
     ok: true,
-    fields: { fullName: x.fullName.trim(), school: (x.school ?? "").trim(), topicsLearnt: x.topicsLearnt.map((t) => t.trim()), psleDate },
+    fields: { fullName: tidyName(x.fullName), school: (x.school ?? "").trim(), topicsLearnt: x.topicsLearnt.map((t) => t.trim()), psleDate },
     cat: catOk ? { name: c!.name!.trim(), colorId: c!.colorId!, hatId: c!.hatId ?? null } : null,
   };
 }
@@ -178,10 +186,13 @@ export function validateSyncProgress(r: unknown): Fail | Ok<{ grade: GradeProgre
       const l = v as Partial<LevelProgress> | null;
       if (!/^[a-z0-9-]{3,140}#[1-3]$/.test(key) || !l || typeof l !== "object") return fail("invalid-argument", "bad level");
       const best = Number(l.bestCorrect ?? 0);
+      const ids = l.correctIds === undefined ? [] : l.correctIds;
+      if (!Array.isArray(ids) || ids.length > 10 || !ids.every((id) => typeof id === "string" && QUESTION_ID_RE.test(id))) return fail("invalid-argument", "bad correctIds");
       clean[key] = {
         completed: l.completed === true,
         bestCorrect: Number.isFinite(best) ? Math.max(0, Math.min(5, Math.floor(best))) : 0,
         ...(typeof l.completedAt === "number" && Number.isFinite(l.completedAt) ? { completedAt: l.completedAt } : {}),
+        ...(ids.length ? { correctIds: [...new Set(ids as string[])] } : {}),
       };
     }
     progress = { grade, unlockedTopics: [...new Set(unlockedTopics as string[])], levels: clean };

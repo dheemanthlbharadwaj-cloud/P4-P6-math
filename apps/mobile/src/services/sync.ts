@@ -1,5 +1,7 @@
 import { useOfflineQueue } from "../store/queue";
 import { useProfile } from "../store/profile";
+import { useProgress } from "../store/progress";
+import { getLevelQuestions } from "../content";
 import { api, ApiError } from "./api";
 
 let flushing = false;
@@ -17,7 +19,13 @@ export async function flushOfflineQueue(): Promise<number> {
           const { kind: _kind, ...round } = item;
           res = await api.submitMinigameResult(round);
         } else {
-          res = await api.submitLevelResult(item);
+          const lr = await api.submitLevelResult(item);
+          res = lr;
+          // The server's record of the level's stars (it marked the answers itself) joins this device's map.
+          if (lr.levelCorrectIds?.length) {
+            const levelIds = getLevelQuestions(item.grade, item.subtopicId, item.level).map((q) => q.id);
+            useProgress.getState().recordLevel(item.grade, item.subtopicId, item.level, lr.levelCorrectIds, levelIds);
+          }
         }
         useProfile.getState().set({ starBalance: res.starBalance, monthlyStars: res.monthlyStars });
         useOfflineQueue.getState().remove(item.attemptId);

@@ -43,6 +43,19 @@ async function main() {
     config: {
       rewrites: [{ glob: "**", path: "/index.html" }],
       headers: [
+        // Security headers on everything: no framing (clickjacking), no MIME sniffing, no referrer details to other
+        // sites, no camera/mic/location, HTTPS only. (No Cross-Origin-Opener-Policy: Google sign-in uses a popup.)
+        {
+          glob: "**",
+          headers: {
+            "Content-Security-Policy": "frame-ancestors 'none'; object-src 'none'; base-uri 'self'",
+            "X-Frame-Options": "DENY",
+            "X-Content-Type-Options": "nosniff",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          },
+        },
         { glob: "**/*.@(js|webp|png|ttf|json)", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
         { glob: "/", headers: { "Cache-Control": "no-cache" } },
         { glob: "**/*.html", headers: { "Cache-Control": "no-cache" } },

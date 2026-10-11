@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image as RNImage, Text, TextInput, View } from "react-native";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
-import { MAX_ENERGY, MAX_HEARTS } from "@p6/shared";
+import { MAX_ENERGY, MAX_HEARTS, nameProblem, nameProblemMessage, tidyName } from "@p6/shared";
 import { OnboardingFrame } from "../../src/components/OnboardingFrame";
 import { Stat } from "../../src/components/TopBar";
 import { uiAssets } from "../../src/theme/assets";
@@ -29,9 +29,10 @@ function Bubble({ icon, text, side }: { icon: number; text: string; side: "left"
 export default function CatStep() {
   const router = useRouter();
   const [name, setName] = useState(useProfile.getState().catName);
+  const problem = name.trim() ? nameProblem(name, 20) : null; // friends see the cat's name
   return (
-    <OnboardingFrame step={4} title="Meet your cat!" onBack={() => router.back()} nextDisabled={name.trim().length < 1}
-      onNext={() => { useProfile.getState().set({ catName: name.trim() }); router.push("/(onboarding)/psle"); }}>
+    <OnboardingFrame step={4} title="Meet your cat!" onBack={() => router.back()} nextDisabled={name.trim().length < 1 || !!problem}
+      onNext={() => { useProfile.getState().set({ catName: tidyName(name) }); router.push("/(onboarding)/psle"); }}>
       <View style={{ flexDirection: "row", gap: 10, justifyContent: "center", marginBottom: 14 }}>
         <Stat icon={uiAssets.icons.energy as number} text={`${MAX_ENERGY} energy`} />
         <Stat icon={uiAssets.icons.heart as number} text={`${MAX_HEARTS} hearts`} />
@@ -49,6 +50,7 @@ export default function CatStep() {
         style={{ minHeight: 56, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 20, backgroundColor: "#fff", color: colors.ink, textAlign: "center", fontWeight: "800" }}
         value={name} onChangeText={setName} placeholder="Name your cat" placeholderTextColor={colors.muted} maxLength={20} accessibilityLabel="Cat name"
       />
+      {problem ? <Text style={{ color: colors.bad, fontWeight: "800", marginTop: 8, textAlign: "center" }}>{nameProblemMessage(problem)}</Text> : null}
       <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 14 }}>
         <RNImage source={uiAssets.icons.star} style={{ width: 24, height: 24 }} />
         <Text style={{ fontSize: 16, fontWeight: "800", color: colors.inkSoft }}>Earn stars to buy hats and colours for your cat</Text>

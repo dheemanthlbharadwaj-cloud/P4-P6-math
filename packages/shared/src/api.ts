@@ -76,7 +76,7 @@ export interface MinigameResult {
   attemptId: string;
   grade: Grade;
   mode: "challenge" | "mistakes" | "all-wrong";
-  answers: { questionId: string; correct: boolean }[]; // in the order answered
+  answers: { questionId: string; responses: string[] }[]; // in the order answered; the server marks them
   finishedAt: number;
 }
 export interface MinigameResultResponse {

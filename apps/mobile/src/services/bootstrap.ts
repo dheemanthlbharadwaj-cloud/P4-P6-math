@@ -79,17 +79,20 @@ export async function bootstrapServerProfile(): Promise<boolean> {
 const FRIENDS_TTL_MS = 10 * 60_000;
 let friendsAt = 0;
 let friendsUid: string | null = null; // whose friends friendsAt refers to (another sign-in refreshes at once)
+let friendsLoaded: unknown = null; // the list this refresh stored: replaced by anything else (a store reset) → refresh
 let friendsInFlight: Promise<void> | null = null;
 
 /** Refresh the friends cache used by the map and the race track (friends leaderboard). Hides gracefully on failure. */
 export function refreshFriends(force = false): Promise<void> {
   if (friendsInFlight) return friendsInFlight;
   const uid = useProfile.getState().uid;
-  if (!force && uid === friendsUid && Date.now() - friendsAt < FRIENDS_TTL_MS) return Promise.resolve();
+  const fresh = uid === friendsUid && useFriends.getState().friends === friendsLoaded && Date.now() - friendsAt < FRIENDS_TTL_MS;
+  if (!force && fresh) return Promise.resolve();
   friendsInFlight = (async () => {
     try {
       const res = await api.getLeaderboard({ scope: "friends" });
       useFriends.getState().set(res.friends.filter((f) => f.uid !== res.selfUid));
+      friendsLoaded = useFriends.getState().friends;
       friendsAt = Date.now();
       friendsUid = uid;
     } catch {

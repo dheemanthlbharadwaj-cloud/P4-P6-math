@@ -1,6 +1,6 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import {
-  REFERRAL_STARS, STORE_ITEMS, levelKey, starsForLevelCompletion, type ClaimQuestRequest, type ClaimQuestResponse,
+  REFERRAL_STARS, STORE_ITEMS, levelAttemptStars, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
   type LevelResultResponse, type MinigameResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
   type RedeemReferralRequest, type RedeemReferralResponse,
 } from "./shared/index.js";
@@ -10,26 +10,43 @@ import {
   isContentVersionAccepted, minigameStars, normalizeFriendCode, pairId, validateClaimQuest, validateLevelResult,
   validateMinigameResult, validatePurchase, validateReferral,
 } from "./logic/rules.js";
+import { isCorrect } from "./logic/marking.js";
+import { CONTENT } from "./content/index.js";
 
 /** users/{uid}/attempted/{grade}_{questionId}: questions ever attempted (mini-game stars only for new ones). */
 const attemptedRef = (uid: string, grade: string, questionId: string) =>
   db.collection(col.users).doc(uid).collection("attempted").doc(`${grade}_${questionId}`.replace(/\//g, "_"));
 
+/** users/{uid}/levelStars/{grade}_{subtopicId}#{level}: the level's questions answered right so far (its stars) and
+ *  whether the replay bonus was paid. */
+const levelStarsRef = (uid: string, grade: string, key: string) =>
+  db.collection(col.users).doc(uid).collection("levelStars").doc(`${grade}_${key}`);
+
 /**
- * Idempotent per attemptId. Stars (stars.ts): a level that never gave a star → +1 per question right on the first try;
- * a level that already did → +1 when completed. Bumps daily + monthly leaderboard entries and lifetime stars.
+ * Idempotent per attemptId. The server marks every answer against its own key; stars follow stars.ts: +1 per question
+ * of the level answered right for the first time, plus a one-off bonus for replaying a complete level with all right.
+ * Bumps daily + monthly leaderboard entries and lifetime stars.
  */
 export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse> => {
   const uid = requireUid(req);
   const v = validateLevelResult(req.data);
   if (!v.ok) throwFail(v);
-  const { result, firstTryCorrect, questionsDone, attemptedIds } = v;
+  const { result, answers } = v;
 
   const cfg = await db.collection(col.config).doc("content").get();
   const accepted = (cfg.data()?.acceptedVersions as Record<string, string[]> | undefined)?.[result.grade];
   if (!isContentVersionAccepted(accepted, result.contentVersion)) {
     throw new HttpsError("failed-precondition", "Unknown content version. Update the app.");
   }
+  const content = CONTENT[result.grade];
+  const key = levelKey(result.subtopicId, result.level);
+  const levelIds = content?.levels[key] ?? [];
+  if (!levelIds.length) throw new HttpsError("failed-precondition", "Unknown level. Update the app.");
+  // Only the level's own questions count; each is marked here, whatever the app thought.
+  const inLevel = answers.filter((a) => levelIds.includes(a.questionId));
+  const correctNow = inLevel.filter((a) => isCorrect(content, a.questionId, a.responses)).map((a) => a.questionId);
+  const questionsDone = inLevel.length;
+  const attemptedIds = inLevel.map((a) => a.questionId);
 
   const now = Date.now();
   const when = effectiveResultTime(result.finishedAt, now);
@@ -38,27 +55,35 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   const monthRef = entriesRef(monthlyBoard(sgtMonth(when))).doc(uid);
   const dayRef = entriesRef(dailyBoard(sgtDate(when))).doc(uid);
   const ledgerRef = db.collection(col.users).doc(uid).collection("ledger").doc(`level_${result.attemptId}`);
-  const starredRef = db.collection(col.users).doc(uid).collection("starredLevels").doc(`${result.grade}_${levelKey(result.subtopicId, result.level)}`);
+  const starsRef = levelStarsRef(uid, result.grade, key);
 
   return db.runTransaction(async (tx) => {
-    const [attempt, wallet, month, starred] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef), tx.get(starredRef)]);
+    const [attempt, wallet, month, levelDoc] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef), tx.get(starsRef)]);
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
+    const correctBefore = ((levelDoc.data()?.correct as string[] | undefined) ?? []).filter((id) => levelIds.includes(id));
+    const bonusClaimed = levelDoc.data()?.bonus === true;
     if (attempt.exists) {
-      // Replay of an already-counted attempt: report the CURRENT balances, not the (stale) ones stored with the
-      // attempt, so a client that applies the response never overwrites a newer balance (e.g. after a purchase).
+      // Replay of an already-counted attempt: report the CURRENT balances and level state, not the (stale) ones stored
+      // with the attempt, so a client that applies the response never overwrites newer values.
       const prev = attempt.data()!.response as LevelResultResponse;
-      return { starsAwarded: prev.starsAwarded, starBalance: balance, monthlyStars: (month.data()?.stars as number | undefined) ?? 0, duplicate: true };
+      return {
+        starsAwarded: prev.starsAwarded, starBalance: balance, monthlyStars: (month.data()?.stars as number | undefined) ?? 0, duplicate: true,
+        levelCorrectIds: correctBefore, levelComplete: levelIds.every((id) => correctBefore.includes(id)),
+      };
     }
-    const stars = starred.exists ? starsForLevelCompletion(result.completed, true) : firstTryCorrect;
+    const r = levelAttemptStars(levelIds, correctBefore, correctNow, bonusClaimed);
+    const stars = r.stars;
     const monthlyStars = ((month.data()?.stars as number | undefined) ?? 0) + stars;
-    const response: LevelResultResponse = { starsAwarded: stars, starBalance: balance + stars, monthlyStars, duplicate: false };
-    if (stars > 0 && !starred.exists) tx.set(starredRef, { at: FieldValue.serverTimestamp() });
+    const response: LevelResultResponse = {
+      starsAwarded: stars, starBalance: balance + stars, monthlyStars, duplicate: false, levelCorrectIds: r.correctIds, levelComplete: r.complete,
+    };
+    if (r.newIds.length || r.bonus) tx.set(starsRef, { correct: r.correctIds, bonus: bonusClaimed || r.bonus, updatedAt: FieldValue.serverTimestamp() });
     for (const q of attemptedIds) tx.set(attemptedRef(uid, result.grade, q), { at: FieldValue.serverTimestamp() }, { merge: true });
 
     tx.set(attemptRef, {
       attemptId: result.attemptId, grade: result.grade, subtopicId: result.subtopicId, level: result.level,
-      contentVersion: result.contentVersion, completed: result.completed, stars, questionsDone, response,
+      contentVersion: result.contentVersion, completed: result.completed, stars, questionsDone, correct: correctNow, bonus: r.bonus, response,
       createdAt: FieldValue.serverTimestamp(),
     });
     tx.set(walletRef, { starBalance: balance + stars, totalStars: total + stars, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
@@ -67,7 +92,7 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
     tx.set(dayRef, inc, { merge: true });
     if (stars > 0) {
       tx.set(ledgerRef, {
-        type: "level", delta: stars, balanceAfter: balance + stars, attemptId: result.attemptId,
+        type: "level", delta: stars, balanceAfter: balance + stars, attemptId: result.attemptId, bonus: r.bonus,
         grade: result.grade, subtopicId: result.subtopicId, level: result.level, createdAt: FieldValue.serverTimestamp(),
       });
     }
@@ -75,7 +100,7 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   });
 });
 
-/** One mini-game round: +1 star per question answered right that was never attempted before. Idempotent per attemptId. */
+/** One mini-game round: +1 star per question answered right (marked here) that was never attempted before. Idempotent per attemptId. */
 export const submitMinigameResult = onCall(async (req): Promise<MinigameResultResponse> => {
   const uid = requireUid(req);
   const v = validateMinigameResult(req.data);
@@ -95,7 +120,9 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
     const monthNow = (month.data()?.stars as number | undefined) ?? 0;
     if (round.exists) return { starsAwarded: round.data()!.stars as number, starBalance: balance, monthlyStars: monthNow, totalStars: total, duplicate: true };
     const before = new Set(questionIds.filter((_, i) => seen[i].exists));
-    const stars = minigameStars(result.answers, before);
+    const content = CONTENT[result.grade];
+    const marked = result.answers.map((a) => ({ questionId: a.questionId, correct: isCorrect(content, a.questionId, a.responses) }));
+    const stars = minigameStars(marked, before);
     tx.set(roundRef, { mode: result.mode, grade: result.grade, stars, answers: result.answers.length, createdAt: FieldValue.serverTimestamp() });
     for (const r of refs) tx.set(r, { at: FieldValue.serverTimestamp() }, { merge: true });
     tx.set(walletRef, { starBalance: balance + stars, totalStars: total + stars, updatedAt: FieldValue.serverTimestamp() }, { merge: true });

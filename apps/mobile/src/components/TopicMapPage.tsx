@@ -1,5 +1,6 @@
 // One topic = one map page. One numbered button per level of every subtopic winds up the river: all Level 1 buttons
-// at the bottom (blue), then Level 2 (green), then Level 3 at the top (lemon yellow). A finished level shows a star.
+// at the bottom (blue), then Level 2 (green), then Level 3 at the top (lemon yellow). Under each button, 5 small stars
+// (one per question answered right); with all 5 the button itself becomes a star.
 // The subtopic name sits beside each button; friends' mini cats stand next to buttons.
 import React, { useEffect, useMemo, useRef } from "react";
 import { Animated, Easing, Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -8,8 +9,9 @@ import { CatAvatar } from "./CatAvatar";
 import { mapThemeFor, uiAssets } from "../theme/assets";
 import { catPoses } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
-import { isLevelComplete, isLevelUnlocked } from "../logic/unlock";
-import { CAT, nodeRect, pickRect, placeCat, type Rect } from "../logic/mapLayout";
+import { isLevelComplete, isLevelUnlocked, levelStarCount } from "../logic/unlock";
+import { buttonRects, CAT, pickRect, placeCat, STAR_ROW, starRowRect, type Rect } from "../logic/mapLayout";
+import { LevelStars } from "./LevelStars";
 import { colors, fonts } from "../theme/colors";
 
 const NODE = 48; // fits the narrowest measured water spot on every map (see scripts/map-scenes.py)
@@ -116,6 +118,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   const state = nodes.map(({ s, level }) => ({
     done: isLevelComplete(progress, s.id, level),
     open: isLevelUnlocked(progress, subIds, level),
+    stars: levelStarCount(progress, s.id, level),
   }));
   // The student's cat stands on the furthest level they have completed (the first button before any is done).
   const lastDone = state.reduce((acc, x, i) => (x.done ? i : acc), -1);
@@ -136,7 +139,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   // Name labels: try right, left, above, below each button; take the first spot that stays on screen and overlaps no
   // other label or button (else the least-overlapping one). Friends' cats are placed the same way afterwards.
   const placed = useMemo(() => {
-    const rects: Rect[] = pos.map((p) => nodeRect(p, NODE));
+    const rects: Rect[] = pos.flatMap((p) => buttonRects(p, NODE, width));
     // The student's cat stands beside its button, never over any button; names keep out from under it.
     const cat = unlocked && currentIdx >= 0 ? placeCat(pos, currentIdx, NODE, width) : null;
     if (cat) rects.push(cat.covers);
@@ -148,7 +151,7 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
         { x: p.x + NODE / 2 + 4, y: cy - h / 2, w, h },
         { x: p.x - NODE / 2 - 4 - w, y: cy - h / 2, w, h },
         { x: p.x - w / 2, y: p.y - h - 2, w, h },
-        { x: p.x - w / 2, y: p.y + NODE + 2, w, h },
+        { x: p.x - w / 2, y: p.y + NODE + STAR_ROW + 2, w, h },
       ].map((r) => ({ ...r, x: Math.min(width - r.w - 2, Math.max(2, r.x)) }));
       const best = pickRect(cands, rects);
       rects.push(best);
@@ -174,9 +177,9 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
             <View key={d.k} style={[styles.dot, { left: d.x - 5, top: d.y + NODE / 2 - 5 }]} />
           ))}
           {nodes.map(({ s, level }, i) => {
-            const { done, open } = state[i];
-            // Unfinished levels always show their level colour (blue / green / yellow); a finished level is the gold button.
-            const src = done ? uiAssets.node.gold : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
+            const { done, open, stars } = state[i];
+            // Unfinished levels show their level colour (blue / green / yellow); a complete level (5 stars) is a star.
+            const src = done ? uiAssets.node.star : level === 1 ? uiAssets.node.default : level === 2 ? uiAssets.node.l2 : uiAssets.node.l3;
             const lr = placed.labels[i];
             return (
               <View key={`${s.id}#${level}`} style={[styles.nodeWrap, { left: pos[i].x - NODE / 2, top: pos[i].y }]}>
@@ -184,13 +187,14 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                   onPress={() => onNodePress(s.id, level, !open)}
                   disabled={!unlocked}
                   accessibilityRole="button"
-                  accessibilityLabel={`${i + 1}. ${s.name}, level ${level}${done ? ", complete" : open ? "" : ", locked"}`}
+                  accessibilityLabel={`${i + 1}. ${s.name}, level ${level}, ${stars} of 5 stars${done ? ", complete" : open ? "" : ", locked"}`}
                   hitSlop={6}
                   style={({ pressed }) => ({ width: NODE, height: NODE, alignItems: "center", justifyContent: "center", transform: [{ scale: pressed ? 0.92 : 1 }] })}
                 >
-                  <Image source={src} style={{ position: "absolute", width: NODE, height: NODE }} />
-                  <Text style={styles.num}>{i + 1}</Text>
+                  <Image source={src} style={done ? { position: "absolute", width: NODE + 6, height: NODE + 6 } : { position: "absolute", width: NODE, height: NODE }} />
+                  <Text style={[styles.num, done && styles.numOnStar]}>{i + 1}</Text>
                 </Pressable>
+                <LevelStars filled={stars} size={13} style={[styles.starRow, { left: starRowRect(pos[i], NODE, width).x - (pos[i].x - NODE / 2) }]} />
                 <View pointerEvents="none" style={[styles.labelBox, { left: lr.x - (pos[i].x - NODE / 2), top: lr.y - pos[i].y, width: lr.w }]}>
                   <Text style={styles.nodeName} numberOfLines={2}>{s.name}</Text>
                 </View>
@@ -254,6 +258,8 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
 
 const styles = StyleSheet.create({
   nodeWrap: { position: "absolute", width: NODE, height: NODE },
+  starRow: { position: "absolute", top: NODE, width: 72, justifyContent: "center", height: STAR_ROW - 2 },
+  numOnStar: { marginTop: 2, fontSize: 16 },
   num: { fontFamily: fonts.display, fontSize: 18, color: "#fff", marginTop: -4, textShadowColor: "rgba(51,38,42,0.85)", textShadowOffset: { width: 0, height: 1.5 }, textShadowRadius: 2 },
   dot: { position: "absolute", width: 10, height: 10, borderRadius: 5, backgroundColor: "rgba(255,255,255,0.9)", borderWidth: 2, borderColor: "rgba(61,43,43,0.6)" },
   labelBox: { position: "absolute", alignItems: "center" },

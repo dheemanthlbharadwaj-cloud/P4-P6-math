@@ -3,6 +3,7 @@ import { HttpsError, onCall } from "firebase-functions/v2/https";
 import { onDocumentWritten } from "firebase-functions/v2/firestore";
 import {
   ACTIVE_GRADES, type BootstrapProfileRequest, type BootstrapProfileResponse, type DeleteAccountResponse, type Grade, type RefreshPublicProfileResponse, type UserProfile,
+  nameProblem, nameProblemMessage, tidyName,
 } from "./shared/index.js";
 import { loadAccountState } from "./account.js";
 import { auth, col, db, FieldValue, REGION, requireUid } from "./admin.js";
@@ -43,14 +44,19 @@ export const bootstrapProfile = onCall(async (req): Promise<BootstrapProfileResp
   const topics = Array.isArray(d.topicsLearnt) ? d.topicsLearnt.map((t) => String(t).slice(0, 60)).slice(0, 20) : [];
   const psleDate = str(d.psleDate ?? "", 10);
   if (psleDate && !/^\d{4}-\d{2}-\d{2}$/.test(psleDate)) throw new HttpsError("invalid-argument", "psleDate must be yyyy-mm-dd");
+  // Names are public (leaderboards, friends): same check as the app's name step.
+  for (const [value, max] of [[d.fullName, 60], [d.catName ?? "Mochi", 20]] as const) {
+    const problem = nameProblem(String(value ?? ""), max);
+    if (problem) throw new HttpsError("invalid-argument", nameProblemMessage(problem));
+  }
   const base = {
     uid,
-    fullName: str(d.fullName, 60, 1),
+    fullName: tidyName(str(d.fullName, 60, 1)),
     school: str(d.school ?? "", 80),
     grade,
     topicsLearnt: topics,
     psleDate,
-    cat: { name: str(d.catName ?? "Mochi", 20, 1), colorId: "color-black", hatId: null as string | null },
+    cat: { name: tidyName(str(d.catName ?? "Mochi", 20, 1)), colorId: "color-black", hatId: null as string | null },
   };
 
   for (let attempt = 0; attempt < 8; attempt++) {

@@ -29,23 +29,37 @@ export function nextLevel(level: LevelNo): LevelNo | null {
   return level === 3 ? null : ((level + 1) as LevelNo);
 }
 
-/** Merge a finished attempt into progress (immutably). Completion is sticky; bestCorrect is a max. */
+/**
+ * Merge an attempt into progress (immutably): the questions answered right join the level's stars (`correctIds`, a
+ * union over attempts); the level is complete once every one of `levelIds` has its star. Completion is sticky.
+ */
 export function applyLevelResult(
   p: GradeProgress,
   subtopicId: string,
   level: LevelNo,
-  correct: number,
-  completed: boolean,
+  correctIds: readonly string[],
+  levelIds: readonly string[],
   now: number,
 ): GradeProgress {
   const key = levelKey(subtopicId, level);
   const prev: LevelProgress | undefined = p.levels[key];
+  const ids = levelIds.filter((id) => (prev?.correctIds ?? []).includes(id) || correctIds.includes(id));
+  const completed = !!prev?.completed || (levelIds.length > 0 && ids.length === levelIds.length);
+  const completedAt = prev?.completedAt ?? (completed ? now : undefined);
   const next: LevelProgress = {
-    completed: !!prev?.completed || completed,
-    bestCorrect: Math.max(prev?.bestCorrect ?? 0, correct),
-    completedAt: prev?.completedAt ?? (completed ? now : undefined),
+    completed,
+    bestCorrect: Math.max(prev?.bestCorrect ?? 0, ids.length),
+    ...(completedAt !== undefined ? { completedAt } : {}),
+    ...(ids.length ? { correctIds: ids } : {}),
   };
   return { ...p, levels: { ...p.levels, [key]: next } };
+}
+
+/** Stars beside a level button (0..5): its questions answered right so far; a complete level shows them all. */
+export function levelStarCount(p: GradeProgress | undefined, subtopicId: string, level: LevelNo, total = 5): number {
+  const l = p?.levels[levelKey(subtopicId, level)];
+  if (!l) return 0;
+  return l.completed ? total : Math.min(total, l.correctIds?.length ?? 0);
 }
 
 export function unlockTopic(p: GradeProgress, topicId: string): GradeProgress {

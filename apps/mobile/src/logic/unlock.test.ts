@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, nextMapLevel, isTopicUnlocked, mergeGradeProgress, unlockTopic } from "./unlock";
+import { applyLevelResult, emptyGradeProgress, isLevelUnlocked, levelStarCount, nextMapLevel, isTopicUnlocked, mergeGradeProgress, unlockTopic } from "./unlock";
+
+const L = ["a", "b", "c", "d", "e"];
 import { mergeWrong, wrongDocsToPush } from "./wrongSync";
-import { answer, isDone, isFirstTry, skip, startSession, toAnswers, correctCount } from "./levelSession";
 
 describe("level unlock", () => {
   it("opens a level only when the previous level of every subtopic on the map is done; completion is sticky", () => {
@@ -9,23 +10,26 @@ describe("level unlock", () => {
     let p = emptyGradeProgress("P6", ["fractions"]);
     expect(isLevelUnlocked(p, map, 1)).toBe(true);
     expect(isLevelUnlocked(p, map, 2)).toBe(false);
-    p = applyLevelResult(p, "s1", 1, 3, false, 1);
+    p = applyLevelResult(p, "s1", 1, ["a", "c", "e"], L, 1); // 3 of 5 stars
     expect(isLevelUnlocked(p, map, 2)).toBe(false);
-    p = applyLevelResult(p, "s1", 1, 5, true, 2);
+    expect(levelStarCount(p, "s1", 1)).toBe(3);
+    p = applyLevelResult(p, "s1", 1, ["b", "d"], L, 2); // the other 2: complete
+    expect(p.levels["s1#1"]).toMatchObject({ completed: true, bestCorrect: 5, completedAt: 2, correctIds: L });
     expect(isLevelUnlocked(p, map, 2)).toBe(false); // s2 Level 1 still open
-    p = applyLevelResult(p, "s2", 1, 5, true, 3);
+    p = applyLevelResult(p, "s2", 1, L, L, 3);
     expect(isLevelUnlocked(p, map, 2)).toBe(true);
     expect(isLevelUnlocked(p, map, 3)).toBe(false);
-    p = applyLevelResult(p, "s1", 1, 1, false, 4);
+    p = applyLevelResult(p, "s1", 1, ["a"], L, 4); // a replay never undoes anything
     expect(p.levels["s1#1"]).toMatchObject({ completed: true, bestCorrect: 5, completedAt: 2 });
+    expect(levelStarCount(p, "s1", 1)).toBe(5);
   });
   it("next map level walks the map order and stops at a locked level", () => {
     const map = ["s1", "s2"];
     let p = emptyGradeProgress("P6");
     expect(nextMapLevel(p, map, "s1", 1)).toEqual({ subtopicId: "s2", level: 1 });
-    p = applyLevelResult(p, "s1", 1, 5, true, 1);
+    p = applyLevelResult(p, "s1", 1, L, L, 1);
     expect(nextMapLevel(p, map, "s2", 1)).toBeNull(); // s1 done, s2 not: Level 2 still locked
-    p = applyLevelResult(p, "s2", 1, 5, true, 2);
+    p = applyLevelResult(p, "s2", 1, L, L, 2);
     expect(nextMapLevel(p, map, "s2", 1)).toEqual({ subtopicId: "s1", level: 2 });
   });
   it("unlocks topics idempotently", () => {
@@ -36,55 +40,14 @@ describe("level unlock", () => {
   });
 });
 
-describe("level session", () => {
-  it("wrong answers return to the end; completes when all right", () => {
-    let s = startSession(["a", "b"]);
-    s = answer(s, false);
-    expect(s.queue).toEqual(["b", "a"]);
-    s = answer(s, true);
-    s = answer(s, true);
-    expect(isDone(s)).toBe(true);
-    expect(correctCount(s)).toBe(2);
-    expect(toAnswers(s, ["a", "b"])).toEqual([
-      { questionId: "a", correct: true, skipped: false, firstTryCorrect: false }, // wrong on the first try: no star
-      { questionId: "b", correct: true, skipped: false, firstTryCorrect: true },
-    ]);
-  });
-  it("a skip is not a try: a skipped question answered right counts as right first time", () => {
-    let s = startSession(["a", "b"]);
-    s = skip(s);
-    expect(isFirstTry(s, "a")).toBe(true);
-    s = answer(s, true); // b
-    s = answer(s, true); // a
-    expect(toAnswers(s, ["a", "b"]).map((x) => x.firstTryCorrect)).toEqual([true, true]);
-  });
-  it("skip moves to the end and is flagged", () => {
-    let s = startSession(["a", "b", "c"]);
-    s = skip(s);
-    expect(s.queue).toEqual(["b", "c", "a"]);
-    expect(s.skipped.a).toBe(true);
-    expect(skip(startSession(["z"])).queue).toEqual(["z"]);
-  });
-});
-
-describe("level session answers for the server", () => {
-  it("a skipped-then-answered question is sent as done, not skipped (server only counts non-skipped correct)", () => {
-    let s = startSession(["a", "b"]);
-    s = skip(s);
-    s = answer(s, true); // b
-    s = answer(s, true); // a
-    expect(toAnswers(s, ["a", "b"]).every((x) => x.correct && !x.skipped)).toBe(true);
-  });
-});
-
 describe("progress merge (restore / multi-device)", () => {
   it("merges by max and never drops completion or topics", () => {
-    const a = applyLevelResult(emptyGradeProgress("P6", ["ratio"]), "s1", 1, 5, true, 10);
-    const b = applyLevelResult(applyLevelResult(emptyGradeProgress("P6", ["fractions"]), "s1", 1, 2, false, 20), "s2", 1, 3, false, 20);
+    const a = applyLevelResult(emptyGradeProgress("P6", ["ratio"]), "s1", 1, L, L, 10);
+    const b = applyLevelResult(applyLevelResult(emptyGradeProgress("P6", ["fractions"]), "s1", 1, ["a", "b"], L, 20), "s2", 1, ["a", "b", "c"], L, 20);
     const m = mergeGradeProgress(a, b);
     expect(m.unlockedTopics.sort()).toEqual(["fractions", "ratio"]);
-    expect(m.levels["s1#1"]).toEqual({ completed: true, bestCorrect: 5, completedAt: 10 });
-    expect(m.levels["s2#1"]).toEqual({ completed: false, bestCorrect: 3 });
+    expect(m.levels["s1#1"]).toEqual({ completed: true, bestCorrect: 5, completedAt: 10, correctIds: L });
+    expect(m.levels["s2#1"]).toEqual({ completed: false, bestCorrect: 3, correctIds: ["a", "b", "c"] });
     expect("completedAt" in m.levels["s2#1"]).toBe(false); // Firestore cannot store undefined
     expect(mergeGradeProgress(a, undefined)).toBe(a);
   });

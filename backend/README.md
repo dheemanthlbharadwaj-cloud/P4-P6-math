@@ -83,6 +83,24 @@ Limits to keep in mind (free tiers): Firestore 50k reads / 20k writes a day, sha
 each, requests and compute cost credits; when they run out the site pauses until next month, nothing is billed);
 Netlify scheduled functions stop after 30 seconds, plenty for the nightly jobs at school scale.
 
+## Security (shared test link)
+
+Anyone with the link can sign up; nothing a student does on their own device can change stars, the leaderboard or
+another account:
+- **The server marks every answer.** Level and mini-game results carry what the student entered; the backend checks it
+  against its own answer key (generated from the app's question bundle at build time, `functions/scripts/copy-shared.mjs`
+  → `functions/src/content`, `logic/marking.ts`). Only a level's own questions count, each star is paid once
+  (`users/{uid}/levelStars`), the replay bonus once per level. Dev Tools and a modified app only change their own device.
+- **No direct database access.** The security rules deny students everything; all data goes through the backend.
+- **Limits.** Netlify's edge allows 300 API calls a minute per IP (`netlify/functions/api.mjs`); per account each
+  function has its own per-minute limit (`functions/src/logic/rateLimit.ts`); requests over 64 KB are refused; answers
+  are bounded in count and length. This protects the free Firestore quota shared with the editor.
+- **Only the app's websites** may call the API from a browser (`ALLOWED_ORIGINS` adds more); native apps send no origin.
+- **Public names** (full name on leaderboards, cat name for friends) refuse links, phone numbers and rude words
+  (`packages/shared/src/names.ts`, checked in the app and on the server). Question reports: 20 per student per day.
+- **Website headers**: no framing, no MIME sniffing, strict referrer, no camera/mic/location, HTTPS only
+  (`apps/mobile/scripts/deploy-hosting.ts`).
+
 ## Local end-to-end (emulators)
 
 ```

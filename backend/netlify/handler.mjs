@@ -11,6 +11,7 @@ import fns from "./lib/index.js";
 import admin from "./lib/admin.js";
 import rc from "./lib/logic/revenuecat.js";
 import dates from "./lib/logic/dates.js";
+import rateLimit from "./lib/logic/rateLimit.js";
 
 const CALLABLES = new Set([
   "bootstrapProfile", "submitLevelResult", "submitMinigameResult", "claimQuest", "purchaseItem", "redeemReferral",
@@ -22,23 +23,42 @@ const STATUS = {
   "not-found": 404, "already-exists": 409, aborted: 409, "resource-exhausted": 429, cancelled: 499, unimplemented: 501,
   unavailable: 503, "deadline-exceeded": 504, internal: 500, unknown: 500,
 };
-const CORS = {
-  "Access-Control-Allow-Origin": "*", // auth is the bearer token, never cookies
+// Browsers may call the API only from the app's own pages (the native apps send no Origin). Extra origins:
+// ALLOWED_ORIGINS (comma-separated) in the site's environment variables.
+const ALLOWED_ORIGINS = new Set([
+  "https://catapult-math-athletes.web.app", "https://catapult-math-athletes.firebaseapp.com",
+  ...(process.env.ALLOWED_ORIGINS ?? "").split(",").map((o) => o.trim()).filter(Boolean),
+]);
+const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/; // local test builds
+const originAllowed = (origin) => !origin || ALLOWED_ORIGINS.has(origin) || LOCAL_ORIGIN.test(origin);
+const corsFor = (origin) => ({
+  ...(origin && originAllowed(origin) ? { "Access-Control-Allow-Origin": origin, Vary: "Origin" } : {}), // auth is the bearer token, never cookies
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Allow-Headers": "Authorization, Content-Type",
   "Access-Control-Max-Age": "86400",
-};
-const json = (status, body) => new Response(JSON.stringify(body), { status, headers: { ...CORS, "Content-Type": "application/json" } });
-const fail = (code, message) => json(STATUS[code] ?? 500, { error: { status: code, message } });
+});
+const MAX_BODY_BYTES = 64 * 1024; // the largest real request (a sync with 200 bookmarks) is a few KB
+const limiter = new rateLimit.RateLimiter();
 
 export async function handleApi(request) {
-  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
+  const origin = request.headers.get("origin");
+  const headers = { ...corsFor(origin), "Content-Type": "application/json", "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff" };
+  const json = (status, body) => new Response(JSON.stringify(body), { status, headers });
+  const fail = (code, message) => json(STATUS[code] ?? 500, { error: { status: code, message } });
+
+  if (!originAllowed(origin)) return fail("permission-denied", "Not allowed from this site");
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsFor(origin) });
   if (request.method !== "POST") return fail("invalid-argument", "POST only");
   const name = new URL(request.url).pathname.split("/").filter(Boolean).pop();
   if (!CALLABLES.has(name)) return fail("not-found", "Unknown function");
 
+  if (Number(request.headers.get("content-length") ?? 0) > MAX_BODY_BYTES) return fail("invalid-argument", "Request too large");
   let data;
-  try { data = (await request.json())?.data ?? {}; } catch { return fail("invalid-argument", "Body must be JSON {data}"); }
+  try {
+    const text = await request.text();
+    if (text.length > MAX_BODY_BYTES) return fail("invalid-argument", "Request too large");
+    data = JSON.parse(text)?.data ?? {};
+  } catch { return fail("invalid-argument", "Body must be JSON {data}"); }
   let auth;
   const token = (request.headers.get("authorization") ?? "").match(/^Bearer (.+)$/)?.[1];
   if (token) {
@@ -47,6 +67,9 @@ export async function handleApi(request) {
       auth = { uid: decoded.uid, token: decoded, rawToken: token };
     } catch { return fail("unauthenticated", "Sign in again."); }
   }
+  // Per-account limits (per IP for calls without an account; the edge also limits per IP, see functions/api.mjs).
+  const who = auth ? auth.uid : `ip:${request.headers.get("x-nf-client-connection-ip") ?? "unknown"}`;
+  if (!limiter.allow(who, name)) return fail("resource-exhausted", "Too many requests. Wait a minute and try again.");
   try {
     const result = await fns[name].run({ data, auth, rawRequest: request, acceptsStreaming: false });
     return json(200, { result: result ?? null });

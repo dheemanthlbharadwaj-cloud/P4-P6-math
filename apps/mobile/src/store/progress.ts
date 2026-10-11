@@ -9,7 +9,8 @@ interface ProgressState {
   /** Create the grade's progress on first use; `initialTopics` = topics marked learnt in onboarding. */
   ensureGrade: (grade: Grade, initialTopics?: string[]) => void;
   unlockTopic: (grade: Grade, topicId: string) => void;
-  recordLevel: (grade: Grade, subtopicId: string, level: LevelNo, correct: number, completed: boolean) => void;
+  /** Questions answered right in an attempt (or confirmed by the server) join the level's stars. */
+  recordLevel: (grade: Grade, subtopicId: string, level: LevelNo, correctIds: readonly string[], levelIds: readonly string[]) => void;
   /** Merge a copy from the server (restore / other device) by max. */
   mergeRemote: (grade: Grade, remote: GradeProgress) => void;
   reset: () => void;
@@ -33,9 +34,9 @@ export const useProgress = create<ProgressState>()(
         const g = get().grades[grade] ?? emptyGradeProgress(grade);
         set({ grades: { ...get().grades, [grade]: unlockTopic(g, topicId) } });
       },
-      recordLevel: (grade, subtopicId, level, correct, completed) => {
+      recordLevel: (grade, subtopicId, level, correctIds, levelIds) => {
         const g = get().grades[grade] ?? emptyGradeProgress(grade);
-        set({ grades: { ...get().grades, [grade]: applyLevelResult(g, subtopicId, level, correct, completed, Date.now()) } });
+        set({ grades: { ...get().grades, [grade]: applyLevelResult(g, subtopicId, level, correctIds, levelIds, Date.now()) } });
       },
       mergeRemote: (grade, remote) => {
         const g = get().grades[grade] ?? emptyGradeProgress(grade);

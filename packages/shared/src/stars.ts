@@ -1,45 +1,56 @@
 // How stars are earned (used by the app and the backend, so both always agree).
 //
-// Levels (the regular map format):
-//   - A level that has never given you a star: +1 for every question you answer correctly on your FIRST try in that
-//     attempt (a wrong answer first means no star for that question, even when you get it right later).
-//   - A level that has already given you a star (a re-attempt): +1 for the whole level when you complete it.
+// Levels (the regular map format): a level has 5 questions and 5 stars, one per question.
+//   - +1 the first time a question of the level is answered right. Each question gets one try per attempt: a wrong
+//     answer costs a heart and moves on. The next attempt at the level shows only the questions still without a star.
+//   - When all 5 have their star, the level button turns into a star (the level is complete).
+//   - A complete level can be replayed (all 5 questions). The first replay with all 5 right pays one bonus star, once
+//     per level. The bonus is not one of the 5 stars beside the button.
 // Mini games:
 //   - +1 for each question answered correctly that you have never attempted before (anywhere: levels or mini games).
 //     Re-attempted questions give nothing, so Unlimited Mistakes (only questions you got wrong before) gives no stars.
 // Practice (classroom self-marking) gives no stars.
 import type { LevelNo } from "./types";
 
-/** Key for "has this level ever given a star". */
+/** Key of a level within a grade. */
 export const levelKey = (subtopicId: string, level: LevelNo) => `${subtopicId}#${level}`;
 
-/**
- * Stars for one answer inside a level attempt.
- * @param firstTryInAttempt this is the first answer to this question in the current attempt
- * @param levelStarredBefore the level gave a star in an earlier attempt (re-attempt rules apply)
- */
-export function starsForLevelAnswer(correct: boolean, firstTryInAttempt: boolean, levelStarredBefore: boolean): number {
-  return !levelStarredBefore && correct && firstTryInAttempt ? 1 : 0;
+export interface LevelAttemptStars {
+  /** Stars this attempt pays (new question stars + the bonus). */
+  stars: number;
+  /** Questions that got their star in this attempt. */
+  newIds: string[];
+  /** The level's questions with a star after this attempt, in level order. */
+  correctIds: string[];
+  /** Every question of the level has its star. */
+  complete: boolean;
+  /** This attempt paid the one-off replay bonus. */
+  bonus: boolean;
 }
 
-/** Stars when a level attempt is completed (on top of per-answer stars). */
-export function starsForLevelCompletion(completed: boolean, levelStarredBefore: boolean): number {
-  return levelStarredBefore && completed ? 1 : 0;
+/**
+ * Stars for one level attempt.
+ * @param levelIds the level's questions
+ * @param correctBefore questions of the level that already had their star
+ * @param correctNow questions answered right in this attempt (ids outside the level are ignored)
+ * @param bonusClaimed the level's replay bonus was already paid
+ */
+export function levelAttemptStars(levelIds: readonly string[], correctBefore: readonly string[], correctNow: readonly string[], bonusClaimed: boolean): LevelAttemptStars {
+  const level = new Set(levelIds);
+  const before = new Set(correctBefore.filter((id) => level.has(id)));
+  const now = new Set(correctNow.filter((id) => level.has(id)));
+  const all = (set: Set<string>) => levelIds.length > 0 && levelIds.every((id) => set.has(id));
+  const newIds = levelIds.filter((id) => now.has(id) && !before.has(id));
+  const bonus = all(before) && !bonusClaimed && all(now);
+  const correctIds = levelIds.filter((id) => before.has(id) || now.has(id));
+  return { stars: newIds.length + (bonus ? 1 : 0), newIds, correctIds, complete: all(new Set(correctIds)), bonus };
 }
 
-/**
- * Total stars for a whole level attempt, from the answers in the order they were given.
- * `answers` lists every answer (a question answered wrong and later right appears twice).
- */
-export function starsForLevelAttempt(answers: { questionId: string; correct: boolean }[], completed: boolean, levelStarredBefore: boolean): number {
-  if (levelStarredBefore) return starsForLevelCompletion(completed, true);
-  const seen = new Set<string>();
-  let n = 0;
-  for (const a of answers) {
-    n += starsForLevelAnswer(a.correct, !seen.has(a.questionId), false);
-    seen.add(a.questionId);
-  }
-  return n;
+/** The questions an attempt shows: the ones still without a star, or all of them once the level is complete. */
+export function levelQuestionsToPlay(levelIds: readonly string[], correctBefore: readonly string[]): string[] {
+  const done = new Set(correctBefore);
+  const left = levelIds.filter((id) => !done.has(id));
+  return left.length ? left : [...levelIds];
 }
 
 /** Stars for one mini-game answer. */

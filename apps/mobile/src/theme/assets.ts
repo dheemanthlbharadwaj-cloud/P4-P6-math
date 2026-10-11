@@ -28,7 +28,8 @@ export const uiAssets = {
     l2: require("../../assets/ui/node-l2.png") as ImageSourcePropType, // LV2 (green)
     l3: require("../../assets/ui/node-l3.png") as ImageSourcePropType, // LV3 (lemon yellow, not the star's gold)
     current: require("../../assets/ui/node-current.png") as ImageSourcePropType,
-    gold: require("../../assets/ui/node-gold.png") as ImageSourcePropType, // all 3 levels complete
+    gold: require("../../assets/ui/node-gold.png") as ImageSourcePropType, // (no longer used on the map)
+    star: require("../../assets/ui/icon-star.png") as ImageSourcePropType, // a complete level (all 5 stars): the button becomes a star
     locked: require("../../assets/ui/node-locked.png") as ImageSourcePropType,
   },
   level: {

@@ -1,24 +1,31 @@
 import { describe, expect, it } from "vitest";
-import { QUESTS, QUEST_ITEMS, questState, starsForLevelAnswer, starsForLevelAttempt, starsForLevelCompletion, starsForMinigameAnswer } from "../src/stars";
+import { levelAttemptStars, levelQuestionsToPlay, QUESTS, QUEST_ITEMS, questState, starsForMinigameAnswer } from "../src/stars";
 
 describe("level stars", () => {
-  it("first time: one star per question right on the first try", () => {
-    const answers = [
-      { questionId: "a", correct: true }, { questionId: "b", correct: false }, { questionId: "c", correct: true },
-      { questionId: "d", correct: true }, { questionId: "e", correct: true }, { questionId: "b", correct: true },
-    ];
-    expect(starsForLevelAttempt(answers, true, false)).toBe(4); // b was wrong first
+  const level = ["a", "b", "c", "d", "e"];
+  it("one star per question answered right; wrong ones wait for the next attempt", () => {
+    const r = levelAttemptStars(level, [], ["a", "c", "e"], false); // 3 of 5 right
+    expect(r).toMatchObject({ stars: 3, newIds: ["a", "c", "e"], correctIds: ["a", "c", "e"], complete: false, bonus: false });
+    expect(levelQuestionsToPlay(level, r.correctIds)).toEqual(["b", "d"]); // next time: only the 2 wrong ones
   });
-  it("first time: stars count even if the level is not finished", () => {
-    expect(starsForLevelAttempt([{ questionId: "a", correct: true }, { questionId: "b", correct: false }], false, false)).toBe(1);
+  it("answering the rest completes the level (star button)", () => {
+    const r = levelAttemptStars(level, ["a", "c", "e"], ["b", "d"], false);
+    expect(r).toMatchObject({ stars: 2, correctIds: level, complete: true, bonus: false });
+    expect(levelQuestionsToPlay(level, r.correctIds)).toEqual(level); // complete: a replay shows all 5
   });
-  it("re-attempt: one star for completing the level, none per question", () => {
-    const all = ["a", "b", "c", "d", "e"].map((questionId) => ({ questionId, correct: true }));
-    expect(starsForLevelAttempt(all, true, true)).toBe(1);
-    expect(starsForLevelAttempt(all.slice(0, 3), false, true)).toBe(0);
-    expect(starsForLevelAnswer(true, true, true)).toBe(0);
-    expect(starsForLevelCompletion(true, true)).toBe(1);
-    expect(starsForLevelCompletion(true, false)).toBe(0);
+  it("a question that already has its star never pays again", () => {
+    expect(levelAttemptStars(level, ["a"], ["a", "b"], false).stars).toBe(1);
+  });
+  it("a complete level pays one bonus star for a replay with all 5 right, once", () => {
+    expect(levelAttemptStars(level, level, level, false)).toMatchObject({ stars: 1, bonus: true, complete: true });
+    expect(levelAttemptStars(level, level, level, true)).toMatchObject({ stars: 0, bonus: false });
+    expect(levelAttemptStars(level, level, ["a", "b", "c", "d"], false)).toMatchObject({ stars: 0, bonus: false });
+  });
+  it("finishing the level is not a bonus (only a replay of a complete level is)", () => {
+    expect(levelAttemptStars(level, [], level, false)).toMatchObject({ stars: 5, bonus: false, complete: true });
+  });
+  it("ignores questions that are not in the level", () => {
+    expect(levelAttemptStars(level, ["zz"], ["zz", "a"], false)).toMatchObject({ stars: 1, correctIds: ["a"] });
   });
 });
 
@@ -40,5 +47,26 @@ describe("quests", () => {
   });
   it("every reward is a quest item", () => {
     for (const q of QUESTS) expect(QUEST_ITEMS.some((i) => i.id === q.rewardId)).toBe(true);
+  });
+});
+
+import { nameProblem, tidyName } from "../src/names";
+describe("player names", () => {
+  it("accepts real names in any alphabet, with name marks", () => {
+    for (const n of ["Dheemanth", "Tan Wei Ling", "Nur Aisyah binti Ahmad", "O'Brien", "Jean-Luc", "陈小明", "Mochi 2", "Siti (Ana)"]) expect(nameProblem(n, 60), n).toBeNull();
+  });
+  it("tidies spaces", () => expect(tidyName("  Tan   Wei  ")).toBe("Tan Wei"));
+  it("rejects links, contact details, symbols and rude words", () => {
+    expect(nameProblem("visit www.spam.com", 60)).toBe("link");
+    expect(nameProblem("me@mail.sg", 60)).toBe("link");
+    expect(nameProblem("call 9123 4567", 60)).toBe("contact");
+    expect(nameProblem("<script>", 60)).toBe("characters");
+    expect(nameProblem("you stupid", 60)).toBe("rude");
+    expect(nameProblem("F U C K E R", 60)).toBe("rude");
+    expect(nameProblem("", 60)).toBe("empty");
+    expect(nameProblem("x".repeat(21), 20)).toBe("too-long");
+  });
+  it("doesn't flag names that merely contain a short blocked word", () => {
+    for (const n of ["Dickson", "Cocker", "Diana", "Butterfly", "Sussex", "Babila"]) expect(nameProblem(n, 60), n).toBeNull();
   });
 });

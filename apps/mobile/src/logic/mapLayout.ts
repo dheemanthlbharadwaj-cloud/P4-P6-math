@@ -20,6 +20,17 @@ export function pickRect(cands: Rect[], taken: Rect[]): Rect {
 /** The area a button covers (a little margin so nothing touches it). */
 export const nodeRect = (p: { x: number; y: number }, node: number): Rect => ({ x: p.x - node / 2 - 2, y: p.y - 2, w: node + 4, h: node + 4 });
 
+/** The row of 5 stars under every level button: height incl. its gap, and width. */
+export const STAR_ROW = 15;
+export const STAR_ROW_W = 72;
+/** Where a button's star row sits (centred under it, kept inside the page). */
+export function starRowRect(p: { x: number; y: number }, node: number, width: number): Rect {
+  const x = Math.min(width - STAR_ROW_W - 2, Math.max(2, p.x - STAR_ROW_W / 2));
+  return { x, y: p.y + node, w: STAR_ROW_W, h: STAR_ROW };
+}
+/** Everything a level button occupies (button + star row): names, friends and the cat keep out of these. */
+export const buttonRects = (p: { x: number; y: number }, node: number, width: number): Rect[] => [nodeRect(p, node), starRowRect(p, node, width)];
+
 // The student's cat (CatAvatar, 78pt wide, 72pt tall): the drawn cat fills x 16–68 of that box, and a hat can rise
 // ~14pt above it.
 export const CAT = { size: 78, h: 72, inX: 16, inW: 52, hat: 14 };
@@ -30,7 +41,7 @@ export const CAT = { size: 78, h: 72, inX: 16, inW: 52, hat: 14 };
  */
 export function placeCat(pos: { x: number; y: number }[], idx: number, node: number, width: number): { x: number; y: number; covers: Rect } {
   const p = pos[idx];
-  const buttons = pos.map((q) => nodeRect(q, node));
+  const buttons = pos.flatMap((q) => buttonRects(q, node, width));
   const visible = (bx: number, by: number): Rect => ({ x: bx + CAT.inX, y: by - CAT.hat, w: CAT.inW, h: CAT.h + CAT.hat });
   const right = p.x + node / 2 + 2 - CAT.inX, left = p.x - node / 2 - 2 - CAT.inX - CAT.inW;
   const boxes: [number, number][] = [];

@@ -10,23 +10,26 @@ import { persistStorage, STORE_PREFIX } from "./storage";
 interface StarsState {
   totalStars: number; // lifetime stars earned (quests)
   claimedQuests: string[];
-  starredLevels: Record<string, true>; // `${grade}:${subtopicId}#${level}` → the level has given a star
+  starredLevels: Record<string, true>; // (old rules, unused) the level has given a star
+  levelBonus: Record<string, true>; // `${grade}:${subtopicId}#${level}` → the complete level's replay bonus star was paid
   attempted: Record<string, true>; // `${grade}:${questionId}` → attempted at least once (levels or mini games)
   /** Credit stars: spendable balance, this month's stars (leaderboard) and lifetime stars (quests). */
   award: (n: number) => void;
   isLevelStarred: (grade: Grade, subtopicId: string, level: LevelNo) => boolean;
   markLevelStarred: (grade: Grade, subtopicId: string, level: LevelNo) => void;
+  bonusClaimed: (grade: Grade, subtopicId: string, level: LevelNo) => boolean;
+  markBonus: (grade: Grade, subtopicId: string, level: LevelNo) => void;
   wasAttempted: (grade: Grade, questionId: string) => boolean;
   markAttempted: (grade: Grade, questionId: string) => void;
   /** Claim a quest whose goal is reached: its reward joins the cat's wardrobe. Returns the reward id. */
   claimQuest: (questId: string) => string | null;
   /** Server-confirmed values (bootstrap / restore). */
   setServer: (s: { totalStars: number; claimedQuests: string[] }) => void;
-  set: (p: Partial<Pick<StarsState, "totalStars" | "claimedQuests" | "starredLevels" | "attempted">>) => void;
+  set: (p: Partial<Pick<StarsState, "totalStars" | "claimedQuests" | "starredLevels" | "levelBonus" | "attempted">>) => void;
   reset: () => void;
 }
 
-const initial = () => ({ totalStars: 0, claimedQuests: [] as string[], starredLevels: {} as Record<string, true>, attempted: {} as Record<string, true> });
+const initial = () => ({ totalStars: 0, claimedQuests: [] as string[], starredLevels: {} as Record<string, true>, levelBonus: {} as Record<string, true>, attempted: {} as Record<string, true> });
 const lk = (grade: Grade, subtopicId: string, level: LevelNo) => `${grade}:${levelKey(subtopicId, level)}`;
 
 export const useStars = create<StarsState>()(
@@ -41,6 +44,8 @@ export const useStars = create<StarsState>()(
       },
       isLevelStarred: (grade, subtopicId, level) => !!get().starredLevels[lk(grade, subtopicId, level)],
       markLevelStarred: (grade, subtopicId, level) => set({ starredLevels: { ...get().starredLevels, [lk(grade, subtopicId, level)]: true } }),
+      bonusClaimed: (grade, subtopicId, level) => !!get().levelBonus?.[lk(grade, subtopicId, level)],
+      markBonus: (grade, subtopicId, level) => set({ levelBonus: { ...get().levelBonus, [lk(grade, subtopicId, level)]: true } }),
       wasAttempted: (grade, questionId) => !!get().attempted[`${grade}:${questionId}`],
       markAttempted: (grade, questionId) => set({ attempted: { ...get().attempted, [`${grade}:${questionId}`]: true } }),
       claimQuest: (questId) => {

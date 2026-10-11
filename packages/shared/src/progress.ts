@@ -1,7 +1,8 @@
 // Map progress merge, shared by the app (device ↔ server) and the backend (syncProgress). Pure.
 import type { GradeProgress, LevelProgress } from "./types";
 
-/** Merge two copies of a grade's progress by max (used when syncing devices): union of topics, sticky completion. */
+/** Merge two copies of a grade's progress by max (used when syncing devices): union of topics and of the questions
+ *  with a star, sticky completion. */
 export function mergeGradeProgress(a: GradeProgress, b: GradeProgress | undefined): GradeProgress {
   if (!b) return a;
   const levels: Record<string, LevelProgress> = {};
@@ -9,10 +10,12 @@ export function mergeGradeProgress(a: GradeProgress, b: GradeProgress | undefine
     const x = a.levels[key];
     const y = b.levels?.[key];
     const at = [x?.completedAt, y?.completedAt].filter((t): t is number => typeof t === "number");
+    const correctIds = [...new Set([...(x?.correctIds ?? []), ...(y?.correctIds ?? [])])];
     levels[key] = {
       completed: !!x?.completed || !!y?.completed,
-      bestCorrect: Math.max(x?.bestCorrect ?? 0, y?.bestCorrect ?? 0),
+      bestCorrect: Math.max(x?.bestCorrect ?? 0, y?.bestCorrect ?? 0, correctIds.length),
       ...(at.length ? { completedAt: Math.min(...at) } : {}), // never `undefined`: Firestore rejects it
+      ...(correctIds.length ? { correctIds } : {}),
     };
   }
   return { grade: a.grade, unlockedTopics: [...new Set([...a.unlockedTopics, ...(b.unlockedTopics ?? [])])], levels };

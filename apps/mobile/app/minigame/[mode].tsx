@@ -70,13 +70,13 @@ export default function MiniGame() {
   const roundAnswers = useRef<MinigameResult["answers"]>([]);
   const sent = useRef(false);
 
-  const finishQuestion = (correct: boolean, msg: string | null) => {
+  const finishQuestion = (correct: boolean, responses: string[], msg: string | null) => {
     if (!q) return;
     setTries((t) => t + 1);
     const st = useStars.getState();
     const star = starsForMinigameAnswer(correct, st.wasAttempted(grade, q.id));
     st.markAttempted(grade, q.id);
-    roundAnswers.current.push({ questionId: q.id, correct });
+    roundAnswers.current.push({ questionId: q.id, responses }); // the server marks it again
     if (star) { st.award(star); setStars((n) => n + star); msg = `${msg ?? ""} +1 star`.trim(); }
     if (correct) {
       setScore((s) => s + 1);
@@ -99,7 +99,7 @@ export default function MiniGame() {
     if (!q) return;
     const r = markQuestion(q, responses);
     setReveal({ correct: r.correct, perPart: r.perPart, showAnswer: true });
-    finishQuestion(r.correct, r.correct ? "Correct!" : "Not quite.");
+    finishQuestion(r.correct, responses, r.correct ? "Correct!" : "Not quite.");
   };
 
   const advance = () => {

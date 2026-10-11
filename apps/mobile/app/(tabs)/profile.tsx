@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { ScrollView, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
-import { ENERGY_PER_AD, HEARTS_PER_AD, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL } from "@p6/shared";
+import { ENERGY_PER_AD, HEARTS_PER_AD, nameProblem, nameProblemMessage, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL, tidyName } from "@p6/shared";
 import { Body, Button, Card, CenterModal, H1, H2, Screen, Columns } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
@@ -56,8 +56,9 @@ export default function ProfileTab() {
 
   const save = () => {
     if (!isValidIso(psle)) return flash("PSLE date must look like 2026-10-01.");
-    if (!name.trim()) return flash("Please enter your name.");
-    profile.set({ fullName: name.trim().slice(0, 60), school: school.trim().slice(0, 80), psleDate: psle });
+    const problem = nameProblem(name, 60);
+    if (problem) return flash(nameProblemMessage(problem));
+    profile.set({ fullName: tidyName(name).slice(0, 60), school: school.trim().slice(0, 80), psleDate: psle });
     void pushProfile(); // users/{uid} (the public profile used by leaderboards follows via the backend trigger)
     flash("Saved!");
   };

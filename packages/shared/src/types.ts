@@ -115,9 +115,11 @@ export interface PublicProfile {
 }
 
 export interface LevelProgress {
-  completed: boolean; // gold button
-  bestCorrect: number; // 0..5
+  completed: boolean; // every question of the level has its star: the button is a star
+  bestCorrect: number; // stars on the level (questions answered right so far, across attempts), 0..5
   completedAt?: number;
+  /** The level's questions answered right so far (one star each). Later attempts show only the others. */
+  correctIds?: string[];
 }
 
 export interface GradeProgress {
@@ -134,11 +136,17 @@ export interface LevelResult {
   contentVersion: string;
   subtopicId: string;
   level: LevelNo;
-  /** One entry per question: `correct` = answered right by the end, `firstTryCorrect` = the first answer to it in this
-   *  attempt was right (stars: see stars.ts). Attempts that end early are sent too (first-time stars still count). */
-  answers: { questionId: string; correct: boolean; skipped: boolean; firstTryCorrect: boolean }[];
-  completed: boolean;
+  /** One entry per question answered in this attempt (each question is answered once: a wrong answer moves on), with
+   *  what the student entered. The server marks the responses itself (stars: see stars.ts). Questions skipped or not
+   *  reached are left out. Attempts that end early are sent too. */
+  answers: LevelAnswer[];
+  completed: boolean; // every question shown in this attempt was answered
   finishedAt: number;
+}
+export interface LevelAnswer {
+  questionId: string;
+  /** The student's input: the option key for MCQs, one string per part otherwise. */
+  responses: string[];
 }
 
 export interface LevelResultResponse {
@@ -146,6 +154,10 @@ export interface LevelResultResponse {
   starBalance: number;
   monthlyStars: number;
   duplicate: boolean;
+  /** The level's questions answered right so far, as the server marked them (the stars beside the button). */
+  levelCorrectIds: string[];
+  /** Every question of the level has its star. */
+  levelComplete: boolean;
 }
 
 // ---------- Store ----------
