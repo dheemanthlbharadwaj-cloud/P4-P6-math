@@ -36,7 +36,9 @@ export type CallableName =
   | "updateProfile"
   | "syncProgress"
   | "listFriendRequests"
-  | "deleteAccount";
+  | "deleteAccount"
+  | "getDailyQuests"
+  | "claimDailyQuest";
 
 /** Server-owned account state: everything needed to restore a device (stars, inventory, look, entitlement). */
 export interface AccountState {
@@ -105,12 +107,18 @@ export interface PurchaseItemResponse {
   ownedItems: string[];
 }
 
-// ---- redeemReferral: the CALLER (referred user) enters the referrer's friend code; the REFERRER gets the stars ----
+// ---- redeemReferral: the CALLER (referred user) enters the referrer's friend code (at sign-up or in Profile), once
+//      per account. The REFERRER gets REFERRAL_STARS, the caller REFERRAL_WELCOME_STARS; they become friends. ----
 export interface RedeemReferralRequest {
   friendCode: string;
 }
 export interface RedeemReferralResponse {
-  starsAwarded: number; // paid to the referrer, not to the caller
+  starsAwarded: number; // paid to the referrer
+  welcomeStars: number; // paid to the caller
+  /** The caller's balances after the welcome stars. */
+  starBalance: number;
+  monthlyStars: number;
+  totalStars: number;
 }
 
 // ---- friends ----
@@ -229,4 +237,30 @@ export interface ListFriendRequestsResponse {
 // ---- refreshPublicProfile: copy users/{uid} to publicProfiles/{uid} after the app writes its profile ----
 export interface RefreshPublicProfileResponse {
   ok: boolean;
+}
+
+// ---- Daily quests (DAILY_QUESTS in gameRules.ts). The server counts progress itself: answers = today's (Singapore
+//      date) leaderboard questionsDone, friends = friendships created today. ----
+export interface DailyQuestState {
+  id: string;
+  progress: number; // capped at target
+  target: number;
+  stars: number;
+  claimed: boolean;
+}
+export type GetDailyQuestsRequest = Record<string, never>;
+export interface GetDailyQuestsResponse {
+  date: string; // yyyy-mm-dd, Singapore time
+  quests: DailyQuestState[];
+}
+export interface ClaimDailyQuestRequest {
+  questId: string;
+}
+/** Stars go to the balance, this month's stars (leaderboard) and lifetime stars, like any other stars. */
+export interface ClaimDailyQuestResponse {
+  starsAwarded: number;
+  starBalance: number;
+  monthlyStars: number;
+  totalStars: number;
+  quests: DailyQuestState[];
 }

@@ -8,7 +8,25 @@ export const QUESTIONS_PER_LEVEL = 5; // "5-5-5"
 export const MAX_HEARTS = 10; // daily allowance, refilled at midnight
 export const HEARTS_PER_AD = 3; // from mindmap: Watch Ad → +3 hearts
 
-export const REFERRAL_STARS = 5; // from mindmap
+export const REFERRAL_STARS = 5; // from mindmap: to the student whose friend code was entered
+export const REFERRAL_WELCOME_STARS = 3; // to the new student who entered a friend's code (sign-up or Profile), once
+
+// Daily quests: reset at midnight Singapore time; a done quest's stars are claimed by tapping, the same day.
+// "answers" = questions answered today in map levels and mini games, right or wrong (practice doesn't count);
+// "friends" = friends added today (accepted request, mutual request or a friend code at sign-up).
+export interface DailyQuest {
+  id: string;
+  kind: "answers" | "friends";
+  target: number;
+  stars: number;
+  title: string;
+}
+export const DAILY_QUESTS: DailyQuest[] = [
+  { id: "answer-5", kind: "answers", target: 5, stars: 1, title: "Answer 5 questions" },
+  { id: "answer-15", kind: "answers", target: 15, stars: 2, title: "Answer 15 questions" },
+  { id: "answer-25", kind: "answers", target: 25, stars: 3, title: "Answer 25 questions" },
+  { id: "add-friend", kind: "friends", target: 1, stars: 2, title: "Add a friend" },
+];
 export const SUBSCRIPTION_PRICE_LABEL = "$15/month"; // from mindmap; real price comes from the store via RevenueCat
 export const SUBSCRIPTION_ENTITLEMENT = "unlimited";
 

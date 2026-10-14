@@ -9,6 +9,10 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
 - **Do exactly what is asked. Never add unrequested changes** (restyling, extra badges, removed behaviours). Past
   mistakes the owner called out: swapping the gold "completed" node for a star, adding lock badges next to levels,
   pinning the cat to the timer board and losing its mood reactions. If something seems worth changing, ask first.
+- **Work as the orchestrator** (owner request 2026-10): for anything you build, split the work and delegate it to
+  subagents (Agent tool) — `haiku` for small/mechanical tasks, `sonnet` when more is needed. Fix the shared contract
+  (types, API shapes) yourself first so agents can work in parallel without editing the same files; then supervise,
+  review their diffs and verify end to end (tests, live checks) yourself before deploying or reporting.
 - Never edit the owner's mindmap. `docs/WORKFLOW.md` is the spec derived from it.
 - Never ask the user to paste tokens/keys/passwords into chat. Credentials go in environment settings (§3).
 - Git: work on the branch you were given (historically `ccr-41770098-9l0q6b`); no PR unless asked. No model names in
