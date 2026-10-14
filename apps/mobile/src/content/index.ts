@@ -2,7 +2,8 @@
 // Every API takes `grade` (only P6 has data today; P4/P5 drop in as new bundles in assets/content/).
 import type { Curriculum, Grade, LevelNo, Question, SubtopicNode, TopicMap } from "@p6/shared";
 import { LEVEL_DIFFICULTY } from "@p6/shared";
-import { contentFor, hasContent } from "../../assets/content";
+import { availableGrades, contentFor, hasContent } from "../../assets/content";
+import type { FigureImage } from "./figpack";
 
 export { hasContent };
 
@@ -90,6 +91,23 @@ export function getUnlockQuestion(grade: Grade, topicId: string, rand: () => num
   return mcqs.length ? mcqs[Math.floor(rand() * mcqs.length)] : undefined;
 }
 
-export function getFigure(grade: Grade, figureKey: string | undefined): number | undefined {
+/**
+ * Sync lookup of a question figure: the image when it is ready (bundled, or already extracted from the figure packs),
+ * else undefined. Screens use useFigure() so they re-render once the first-time extraction (offline, ~tens of ms) is done.
+ */
+export function getFigure(grade: Grade, figureKey: string | undefined): FigureImage | undefined {
   return figureKey ? contentFor(grade).figures[figureKey] : undefined;
+}
+
+/** Extracts the figure from its pack if needed (no network). Resolves undefined for an unknown figure. */
+export async function ensureFigure(grade: Grade, figureKey: string | undefined): Promise<FigureImage | undefined> {
+  if (!figureKey) return undefined;
+  const ready = getFigure(grade, figureKey);
+  if (ready) return ready;
+  return contentFor(grade).figureStore?.ensure(figureKey);
+}
+
+/** Background: extract every figure of every grade so later questions show instantly. Cheap after the first run. */
+export async function prefetchAllFigures(): Promise<void> {
+  for (const g of availableGrades) await contentFor(g).figureStore?.ensureAll();
 }

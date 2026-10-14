@@ -10,7 +10,7 @@ import { CalculatorModal } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
 import { Scratchpad } from "./Scratchpad";
 import { ReportSheet } from "./ReportSheet";
-import { getFigure } from "../content";
+import { useFigure } from "../content/useFigure";
 import { uiAssets } from "../theme/assets";
 import { BUBBLE_BAND } from "./CatCompanion";
 import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
@@ -66,7 +66,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const showHint = !landscape && !stacked && !hintGone && (Platform.OS !== "web" || width >= 600);
   useEffect(() => setResponses(Array(nInputs).fill("")), [q.id, nInputs]);
 
-  const fig = getFigure(grade, q.figure);
+  const fig = useFigure(grade, q.figure);
   const locked = !!reveal || viewOnly;
   const ready = responses.every((r) => r.trim().length > 0);
   const setAt = (i: number, v: string) => setResponses((rs) => rs.map((x, j) => (j === i ? v : x)));

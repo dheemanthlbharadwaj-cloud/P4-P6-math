@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { Image, Modal, Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "./ui";
+import type { FigureImage } from "../content/figpack";
 
-export function FigureViewer({ source, visible, onClose }: { source: number; visible: boolean; onClose: () => void }) {
+export function FigureViewer({ source, visible, onClose }: { source: FigureImage; visible: boolean; onClose: () => void }) {
   const { width, height } = useWindowDimensions();
   const [zoom, setZoom] = useState(1);
   // resolveAssetSource exists on iOS/Android only; on web the bundled asset already carries its size.

@@ -19,3 +19,6 @@ apps/mobile/dist-preview/
 
 # map art pack, unpacked from design/source-assets/map-pack/pack.zip by map-scenes.py
 design/source-assets/map-pack/unzipped/
+
+# question figure packs + registry, built by apps/mobile/scripts/build-figpacks.mjs (postinstall)
+apps/mobile/assets/content/*/figpacks/

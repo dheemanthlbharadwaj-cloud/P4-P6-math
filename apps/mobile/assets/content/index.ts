@@ -2,19 +2,23 @@
 // Per-grade registry: only grades that have a bundle appear here.
 /* eslint-disable @typescript-eslint/no-require-imports */
 import type { Curriculum, Grade, QuestionBundle } from "@p6/shared";
+import type { FigureImage, FigureStore } from "../../src/content/figpack";
 
 export interface GradeContent {
   bundle: QuestionBundle;
   curriculum: Curriculum;
-  /** question id → Metro asset module id (use with <Image source={...}/>) */
-  figures: Record<string, number>;
+  /** question id → image for <Image source={...}/>; defined once the figure has been extracted (see figureStore) */
+  figures: Record<string, FigureImage | undefined>;
+  /** Lazy, offline extraction of figures from the packs (absent on the web preview, whose registry is already complete) */
+  figureStore?: FigureStore;
 }
 
 const registry: Partial<Record<Grade, GradeContent>> = {
   P6: {
     bundle: require("./P6/questions.json") as QuestionBundle,
     curriculum: require("./P6/curriculum.json") as Curriculum,
-    figures: require("./P6/figures").figures as Record<string, number>,
+    figures: require("./P6/figures").figures as GradeContent["figures"],
+    figureStore: (require("./P6/figures") as { figureStore?: FigureStore }).figureStore,
   },
 };
 

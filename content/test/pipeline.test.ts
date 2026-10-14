@@ -119,7 +119,10 @@ describe("mock bundle", () => {
       else for (const p of q.parts!) expect(checkAnswer(p.answer, p.display), `${q.id} ${p.display}`).toBe(true);
       if (q.figure) expect(fs.existsSync(path.join(dir, "P6", "figures", `${sanitizeId(q.figure)}.webp`))).toBe(true);
     }
-    expect(fs.readFileSync(path.join(dir, "P6", "figures", "index.ts"), "utf8")).toContain("require(");
+    const manifest = JSON.parse(fs.readFileSync(path.join(dir, "P6", "figures", "manifest.json"), "utf8")) as Record<string, string>;
+    for (const q of Object.values(bundle.questions)) if (q.figure) expect(manifest[q.figure]).toBe(`${sanitizeId(q.figure)}.webp`);
+    expect(fs.readFileSync(path.join(dir, "P6", "figures", "index.ts"), "utf8")).toContain("figpacks/registry");
+    expect(fs.existsSync(path.join(dir, "P6", "figpacks", "registry.ts"))).toBe(true);
   }, 60000);
 });
 

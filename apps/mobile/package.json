@@ -8,7 +8,9 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "postinstall": "node scripts/build-figpacks.mjs",
+    "figpacks": "node scripts/build-figpacks.mjs --force"
   },
   "dependencies": {
     "@expo-google-fonts/fredoka": "^0.4.1",
@@ -18,11 +20,13 @@
     "@react-native-community/netinfo": "12.0.1",
     "expo": "~57.0.27",
     "expo-apple-authentication": "~57.0.2",
+    "expo-asset": "~57.0.18",
     "expo-auth-session": "~57.0.14",
     "expo-build-properties": "~57.0.22",
     "expo-clipboard": "~57.0.2",
     "expo-constants": "~57.0.21",
     "expo-crypto": "~57.0.3",
+    "expo-file-system": "~57.0.7",
     "expo-font": "~57.0.4",
     "expo-haptics": "~57.0.3",
     "expo-image": "~57.0.5",

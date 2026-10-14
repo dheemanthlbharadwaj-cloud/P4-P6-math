@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, View } from "react-native";
+import { ActivityIndicator, InteractionManager, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import NetInfo from "@react-native-community/netinfo";
@@ -19,6 +19,7 @@ import { useProgress } from "../src/store/progress";
 import { resetAllStores } from "../src/store/reset";
 import { useHydrated } from "../src/hooks/useHydrated";
 import { colors } from "../src/theme/colors";
+import { prefetchAllFigures } from "../src/content";
 import { lockPortrait } from "../src/hooks/useQuestionOrientation";
 import { DevToolsButton } from "../src/dev/DevToolsPanel";
 
@@ -42,6 +43,11 @@ export default function RootLayout() {
 
   // Portrait everywhere; question screens unlock themselves (useQuestionOrientation).
   useEffect(() => { void lockPortrait(); }, []);
+  // Unpack the question figures in the background once the first screen is up (offline, one-time per build).
+  useEffect(() => {
+    const task = InteractionManager.runAfterInteractions(() => { void prefetchAllFigures().catch(() => {}); });
+    return () => task.cancel();
+  }, []);
 
   // A different account on this device starts clean; same account keeps local progress.
   useEffect(() => {
