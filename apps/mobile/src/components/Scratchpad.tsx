@@ -1,14 +1,19 @@
 // Working space: white paper with a faint grid, finger / stylus drawing with SVG paths, pens, eraser, undo, clear.
-import React, { useCallback, useMemo, useRef, useState } from "react";
-import { PanResponder, Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from "react-native";
+import React, { forwardRef, memo, useCallback, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { PanResponder, Platform, Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from "react-native";
 import Svg, { Line, Path } from "react-native-svg";
-import { eraseAt, strokePath, type Pt, type Stroke } from "../logic/strokes";
+import { eraseAt, pushPoint, strokePath, type Pt, type Stroke } from "../logic/strokes";
 import { colors, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 
 const INKS = [{ name: "Dark ink", c: colors.ink }, { name: "Blue", c: colors.primary }, { name: "Red", c: colors.bad }];
 const WIDTHS = [{ name: "Thin", w: 2.5 }, { name: "Thick", w: 6 }];
 const ERASER_R = 14;
 const GRID = 28;
+const GRID_COLOR = "#e3e8f2";
+const IS_WEB = Platform.OS === "web";
+// Palm rejection: while a stylus (pen pointer) is in use, finger touches don't draw. Module-level so it survives remounts.
+let penAt = 0; // last Pencil/stylus activity: touches within PALM_MS of it are a resting palm, not drawing
+const PALM_MS = 5000;
 
 type Tool = "pen" | "eraser";
 
@@ -21,63 +26,190 @@ function Tip({ label, active, onPress, children, disabled }: { label: string; ac
   );
 }
 
+// --- Layers: grid and committed strokes are memoized; only the live stroke changes while drawing. ---
+
+const Grid = memo(function Grid({ w, h }: { w: number; h: number }) {
+  const cols = Math.ceil(w / GRID), rows = Math.ceil(h / GRID);
+  return (
+    <>
+      {Array.from({ length: cols }, (_, i) => <Line key={`v${i}`} x1={i * GRID} y1={0} x2={i * GRID} y2={h} stroke={GRID_COLOR} strokeWidth={1} />)}
+      {Array.from({ length: rows }, (_, i) => <Line key={`h${i}`} x1={0} y1={i * GRID} x2={w} y2={i * GRID} stroke={GRID_COLOR} strokeWidth={1} />)}
+    </>
+  );
+});
+
+const Committed = memo(function Committed({ strokes }: { strokes: Stroke[] }) {
+  return <>{strokes.map((s) => <Path key={s.id} d={strokePath(s.points)} stroke={s.color} strokeWidth={s.width} strokeLinecap="round" strokeLinejoin="round" fill="none" />)}</>;
+});
+
+// Native live stroke: owns its own state so the rest of the pad does not re-render per point.
+interface LiveHandle { start: (s: Stroke) => void; add: (p: Pt) => void; end: () => void }
+const LiveLayer = forwardRef<LiveHandle>(function LiveLayer(_, ref) {
+  const stroke = useRef<Stroke | null>(null);
+  const [, bump] = useState(0);
+  useImperativeHandle(ref, () => ({
+    start: (s) => { stroke.current = s; bump((n) => n + 1); },
+    add: (p) => { if (stroke.current && pushPoint(stroke.current.points, p)) bump((n) => n + 1); },
+    end: () => { stroke.current = null; bump((n) => n + 1); },
+  }), []);
+  const s = stroke.current;
+  return s ? <Path d={strokePath(s.points)} stroke={s.color} strokeWidth={s.width} strokeLinecap="round" strokeLinejoin="round" fill="none" /> : null;
+});
+
+// Web committed strokes: plain SVG paths (memoized on the strokes array).
+const h = React.createElement;
+const WebCommitted = memo(function WebCommitted({ strokes }: { strokes: Stroke[] }) {
+  return h(React.Fragment, null, strokes.map((s) => h("path", { key: s.id, d: strokePath(s.points), stroke: s.color, strokeWidth: s.width, strokeLinecap: "round", strokeLinejoin: "round", fill: "none" })));
+});
+
 export function Scratchpad() {
   const [strokes, setStrokes] = useState<Stroke[]>([]);
-  const [live, setLive] = useState<Stroke | null>(null);
+  const [drawing, setDrawing] = useState(false);
   const [color, setColor] = useState(INKS[0].c);
   const [width, setWidth] = useState(WIDTHS[0].w);
   const [tool, setTool] = useState<Tool>("pen");
   const [size, setSize] = useState({ w: 0, h: 0 });
 
-  // Refs so the PanResponder (created once) always sees current settings.
+  // Refs so the gesture handlers (created once) always see current settings.
   const cfg = useRef({ color, width, tool });
   cfg.current = { color, width, tool };
   const strokesRef = useRef<Stroke[]>([]);
-  const liveRef = useRef<Stroke | null>(null);
   const nextId = useRef(1);
-  const commit = (s: Stroke[]) => { strokesRef.current = s; setStrokes(s); };
+  const commit = (s: Stroke[]) => { if (s === strokesRef.current) return; strokesRef.current = s; setStrokes(s); };
+  const newStroke = (p: Pt): Stroke => ({ id: nextId.current++, color: cfg.current.color, width: cfg.current.width, points: [p] });
 
-  const pt = (e: { nativeEvent: { locationX: number; locationY: number } }): Pt => ({ x: e.nativeEvent.locationX, y: e.nativeEvent.locationY });
-
+  // ---- Native: PanResponder; only LiveLayer re-renders per point. ----
+  const liveRef = useRef<LiveHandle>(null);
+  const nativeLive = useRef<Stroke | null>(null);
+  const nativeFinish = () => {
+    const l = nativeLive.current;
+    nativeLive.current = null;
+    liveRef.current?.end();
+    setDrawing(false);
+    if (l) commit([...strokesRef.current, l]);
+  };
   const responder = useMemo(() => PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onMoveShouldSetPanResponder: () => true,
     onStartShouldSetPanResponderCapture: () => true,
     onPanResponderTerminationRequest: () => false, // keep the gesture so the page never scrolls while drawing
     onPanResponderGrant: (e) => {
-      const p = pt(e);
+      const p = { x: e.nativeEvent.locationX, y: e.nativeEvent.locationY };
+      setDrawing(true);
       if (cfg.current.tool === "eraser") { commit(eraseAt(strokesRef.current, p, ERASER_R)); return; }
-      liveRef.current = { id: nextId.current++, color: cfg.current.color, width: cfg.current.width, points: [p] };
-      setLive(liveRef.current);
+      nativeLive.current = newStroke(p);
+      liveRef.current?.start(nativeLive.current);
     },
     onPanResponderMove: (e) => {
-      const p = pt(e);
+      const p = { x: e.nativeEvent.locationX, y: e.nativeEvent.locationY };
       if (cfg.current.tool === "eraser") { commit(eraseAt(strokesRef.current, p, ERASER_R)); return; }
-      const l = liveRef.current;
-      if (!l) return;
-      const last = l.points[l.points.length - 1];
-      if (Math.hypot(p.x - last.x, p.y - last.y) < 1.5) return;
-      liveRef.current = { ...l, points: [...l.points, p] };
-      setLive(liveRef.current);
+      liveRef.current?.add(p);
     },
-    onPanResponderRelease: () => finish(),
-    onPanResponderTerminate: () => finish(),
+    onPanResponderRelease: () => nativeFinish(),
+    onPanResponderTerminate: () => nativeFinish(),
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }), []);
 
-  function finish() {
-    const l = liveRef.current;
-    liveRef.current = null;
-    setLive(null);
-    if (l) commit([...strokesRef.current, l]);
-  }
+  // ---- Web: Pointer Events on the paper node; the live path's `d` is set directly (no React render per point). ----
+  const paperRef = useRef<View>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const liveEl = useRef<SVGPathElement>(null);
+  useEffect(() => {
+    if (!IS_WEB) return;
+    const paper = paperRef.current as unknown as HTMLElement | null;
+    const svg = svgRef.current;
+    const path = liveEl.current;
+    if (!paper || !svg || !path) return;
+    let active: number | null = null; // pointerId of the stroke in progress
+    let activeType = "";
+    let live: Stroke | null = null;
+    let raf = 0;
+    const draw = () => { raf = 0; if (live) path.setAttribute("d", strokePath(live.points)); };
+    const clearLive = () => { if (raf) cancelAnimationFrame(raf); raf = 0; path.setAttribute("d", ""); };
+    const at = (e: PointerEvent): Pt => { const r = svg.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+    const erase = (p: Pt) => commit(eraseAt(strokesRef.current, p, ERASER_R));
+    const samples = (e: PointerEvent): PointerEvent[] => {
+      const c = typeof e.getCoalescedEvents === "function" ? e.getCoalescedEvents() : [];
+      return c.length ? c : [e];
+    };
+    const end = (e: PointerEvent, cancelled: boolean) => {
+      if (e.pointerId !== active) return;
+      try { paper.releasePointerCapture(e.pointerId); } catch { /* not captured */ }
+      active = null;
+      setDrawing(false);
+      if (live) {
+        const l = live;
+        live = null;
+        commit([...strokesRef.current, l]); // live path is cleared in the layout effect below, after React paints the stroke
+      }
+      void cancelled;
+    };
+    const down = (e: PointerEvent) => {
+      if (e.pointerType === "pen") penAt = Date.now();
+      if (e.pointerType === "touch" && Date.now() - penAt < PALM_MS) return; // palm rejection
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      if (active !== null) {
+        // A pen takes over from a touch stroke (palm landed first); otherwise ignore extra pointers.
+        if (!(e.pointerType === "pen" && activeType === "touch")) return;
+        live = null; clearLive();
+      }
+      e.preventDefault();
+      active = e.pointerId; activeType = e.pointerType;
+      try { paper.setPointerCapture(e.pointerId); } catch { /* capture is best-effort */ }
+      const p = at(e);
+      setDrawing(true);
+      if (cfg.current.tool === "eraser") { erase(p); return; }
+      live = newStroke(p);
+      path.setAttribute("stroke", live.color);
+      path.setAttribute("stroke-width", String(live.width));
+      draw();
+    };
+    const move = (e: PointerEvent) => {
+      if (e.pointerType === "pen") penAt = Date.now();
+      if (e.pointerId !== active) return;
+      e.preventDefault();
+      for (const c of samples(e)) {
+        const p = at(c);
+        if (cfg.current.tool === "eraser") erase(p);
+        else if (live && pushPoint(live.points, p) && !raf) raf = requestAnimationFrame(draw);
+      }
+    };
+    const up = (e: PointerEvent) => end(e, false);
+    const cancel = (e: PointerEvent) => end(e, true);
+    const hover = (e: PointerEvent) => { if (e.pointerType === "pen") penAt = Date.now(); };
+    const stop = (e: Event) => e.preventDefault();
+    paper.addEventListener("pointerdown", down);
+    paper.addEventListener("pointermove", move);
+    paper.addEventListener("pointerup", up);
+    paper.addEventListener("pointercancel", cancel);
+    paper.addEventListener("pointerover", hover);
+    // Keep iPad Safari (Scribble, magnifier, text selection, scrolling) from stealing the stroke.
+    paper.addEventListener("touchstart", stop, { passive: false });
+    paper.addEventListener("touchmove", stop, { passive: false });
+    paper.addEventListener("selectstart", stop);
+    paper.addEventListener("contextmenu", stop);
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      paper.removeEventListener("pointerdown", down);
+      paper.removeEventListener("pointermove", move);
+      paper.removeEventListener("pointerup", up);
+      paper.removeEventListener("pointercancel", cancel);
+      paper.removeEventListener("pointerover", hover);
+      paper.removeEventListener("touchstart", stop);
+      paper.removeEventListener("touchmove", stop);
+      paper.removeEventListener("selectstart", stop);
+      paper.removeEventListener("contextmenu", stop);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // After a stroke is committed (or undo/clear/erase), drop the imperative live path.
+  useLayoutEffect(() => { if (IS_WEB && liveEl.current) liveEl.current.setAttribute("d", ""); }, [strokes]);
 
   const undo = useCallback(() => commit(strokesRef.current.slice(0, -1)), []);
   const clear = useCallback(() => commit([]), []);
   const onLayout = (e: LayoutChangeEvent) => setSize({ w: e.nativeEvent.layout.width, h: e.nativeEvent.layout.height });
 
-  const cols = Math.ceil(size.w / GRID), rows = Math.ceil(size.h / GRID);
-  const all = live ? [...strokes, live] : strokes;
+  const webStyle = { position: "absolute", left: 0, top: 0, width: "100%", height: "100%", touchAction: "none", userSelect: "none", WebkitUserSelect: "none", WebkitTouchCallout: "none", pointerEvents: "none" } as React.CSSProperties;
 
   return (
     <View style={styles.wrap} accessibilityLabel="Working space">
@@ -96,14 +228,26 @@ export function Scratchpad() {
         <Tip label="Undo last stroke" onPress={undo} disabled={strokes.length === 0}><Text style={styles.toolText}>Undo</Text></Tip>
         <Tip label="Clear everything" onPress={clear} disabled={strokes.length === 0}><Text style={styles.toolText}>Clear</Text></Tip>
       </View>
-      <View style={styles.paper} onLayout={onLayout} {...responder.panHandlers}>
-        <Svg width="100%" height="100%" pointerEvents="none">
-          {Array.from({ length: cols }, (_, i) => <Line key={`v${i}`} x1={i * GRID} y1={0} x2={i * GRID} y2={size.h} stroke="#e3e8f2" strokeWidth={1} />)}
-          {Array.from({ length: rows }, (_, i) => <Line key={`h${i}`} x1={0} y1={i * GRID} x2={size.w} y2={i * GRID} stroke="#e3e8f2" strokeWidth={1} />)}
-          {all.map((s) => <Path key={s.id} d={strokePath(s.points)} stroke={s.color} strokeWidth={s.width} strokeLinecap="round" strokeLinejoin="round" fill="none" />)}
-        </Svg>
-        {all.length === 0 ? <Text style={styles.empty} pointerEvents="none">Write or draw here</Text> : null}
-      </View>
+      {IS_WEB ? (
+        <View ref={paperRef} style={styles.paper} onLayout={onLayout}>
+          {h("svg", { ref: svgRef, style: webStyle, width: "100%", height: "100%" },
+            h("defs", null, h("pattern", { id: "pad-grid", width: GRID, height: GRID, patternUnits: "userSpaceOnUse" },
+              h("path", { d: `M0 0V${GRID}M0 0H${GRID}`, stroke: GRID_COLOR, strokeWidth: 1, fill: "none" }))),
+            h("rect", { width: "100%", height: "100%", fill: "url(#pad-grid)" }),
+            h(WebCommitted, { strokes }),
+            h("path", { ref: liveEl, fill: "none", strokeLinecap: "round", strokeLinejoin: "round", style: { pointerEvents: "none" } }))}
+          {strokes.length === 0 && !drawing ? <Text style={styles.empty} pointerEvents="none">Write or draw here</Text> : null}
+        </View>
+      ) : (
+        <View style={styles.paper} onLayout={onLayout} {...responder.panHandlers}>
+          <Svg width="100%" height="100%" pointerEvents="none">
+            <Grid w={size.w} h={size.h} />
+            <Committed strokes={strokes} />
+            <LiveLayer ref={liveRef} />
+          </Svg>
+          {strokes.length === 0 && !drawing ? <Text style={styles.empty} pointerEvents="none">Write or draw here</Text> : null}
+        </View>
+      )}
     </View>
   );
 }
@@ -115,6 +259,6 @@ const styles = StyleSheet.create({
   toolOn: { backgroundColor: colors.highlight, borderColor: colors.primary },
   toolText: { fontFamily: fonts.display, fontSize: 14, color: colors.ink },
   swatch: { width: 22, height: 22, borderRadius: 11, borderWidth: 2, borderColor: colors.border },
-  paper: { flex: 1, backgroundColor: "#fff", borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, overflow: "hidden", ...({ touchAction: "none", userSelect: "none", cursor: "crosshair" } as object) },
+  paper: { flex: 1, backgroundColor: "#fff", borderRadius: radius.m, borderWidth: 3, borderColor: colors.border, overflow: "hidden", ...({ touchAction: "none", userSelect: "none", WebkitUserSelect: "none", WebkitTouchCallout: "none", cursor: "crosshair" } as object) },
   empty: { position: "absolute", top: "45%", alignSelf: "center", color: colors.muted, fontWeight: "800", fontSize: 18 },
 });

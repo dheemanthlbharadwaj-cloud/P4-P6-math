@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { eraseAt, strokePath, strokeTouched, type Stroke } from "./strokes";
+import { eraseAt, pushPoint, strokePath, strokeTouched, type Stroke } from "./strokes";
 
 const line: Stroke = { id: 1, color: "#000", width: 4, points: [{ x: 0, y: 0 }, { x: 100, y: 0 }] };
 const dot: Stroke = { id: 2, color: "#000", width: 4, points: [{ x: 50, y: 50 }] };
@@ -20,5 +20,13 @@ describe("strokes", () => {
     expect(strokePath([])).toBe("");
     expect(strokePath(dot.points)).toMatch(/^M50 50 L/);
     expect(strokePath([{ x: 0, y: 0 }, { x: 10, y: 10 }, { x: 20, y: 0 }])).toContain("Q");
+  });
+  it("drops points closer than the minimum distance", () => {
+    const pts = [{ x: 0, y: 0 }];
+    expect(pushPoint(pts, { x: 0.3, y: 0 })).toBe(false);
+    expect(pushPoint(pts, { x: 0.6, y: 0 })).toBe(true);
+    expect(pushPoint(pts, { x: 0.7, y: 0 })).toBe(false);
+    expect(pts).toHaveLength(2);
+    expect(pushPoint([], { x: 5, y: 5 })).toBe(true);
   });
 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { catAspect, catMoodImage, type CatMood } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
@@ -6,15 +6,21 @@ import { CatAvatar } from "./CatAvatar";
 import { CatTimer } from "./CatTimer";
 import { colors, radius } from "../theme/colors";
 
-/** The in-app "desktop pet": reacts to answers using the artist's animations (colour from the store). */
-export function CatCompanion({ mood, size = 96, message, floating = false, timerStartedAt }: { mood: CatMood; size?: number; message?: string; floating?: boolean; timerStartedAt?: number }) {
+/**
+ * The in-app "desktop pet": reacts to answers using the artist's animations (colour from the store).
+ * Rule: whenever mood is "thinking" (the student is solving) the cat sits at its board, and the board is the 5-minute
+ * clock (CatTimer), in both the floating and the inline layout. The clock starts at `timerStartedAt`, or at this
+ * component's mount time when no start is given. `timerTotal` sets the clock length (default 5 minutes).
+ */
+export function CatCompanion({ mood, size = 96, message, floating = false, timerStartedAt, timerTotal }: { mood: CatMood; size?: number; message?: string; floating?: boolean; timerStartedAt?: number; timerTotal?: number }) {
   const colorId = useCosmetics((s) => s.colorId);
+  const [mountedAt] = useState(() => Date.now());
+  const atBoard = mood === "thinking";
+  const boardStart = timerStartedAt ?? mountedAt;
   if (floating) {
     // Speech bubble floats to the left of the cat (does not widen the layout slot, which is exactly `size` wide).
     // Every mood's art is fitted into the same slot (size wide, 0.72·size tall), anchored bottom-right.
-    // While thinking, the cat works at its board (the board fills as a 5-minute clock when a timer is given);
-    // after an answer it reacts with its mood animation (happy / confused / sad), as before.
-    const atBoard = !!timerStartedAt && mood === "thinking";
+    // After an answer the cat reacts with its mood animation (happy / confused / sad), as before.
     const src = catMoodImage(mood);
     const slotH = size * 0.72;
     const w = Math.min(size, slotH * catAspect(src));
@@ -27,7 +33,7 @@ export function CatCompanion({ mood, size = 96, message, floating = false, timer
             <Text style={styles.bubbleText}>{message}</Text>
           </View>
         ) : null}
-        {atBoard ? <CatTimer startedAt={timerStartedAt!} width={w} colorId={colorId} /> : <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />}
+        {atBoard ? <CatTimer startedAt={boardStart} total={timerTotal} width={w} colorId={colorId} /> : <CatAvatar source={src} colorId={colorId} size={w} label={`Cat is ${mood}`} />}
       </View>
     );
   }
@@ -38,7 +44,9 @@ export function CatCompanion({ mood, size = 96, message, floating = false, timer
           <Text style={styles.bubbleText}>{message}</Text>
         </View>
       ) : null}
-      <CatAvatar source={catMoodImage(mood)} colorId={colorId} size={size} label={`Cat is ${mood}`} />
+      {atBoard
+        ? <CatTimer startedAt={boardStart} total={timerTotal} width={size} colorId={colorId} />
+        : <CatAvatar source={catMoodImage(mood)} colorId={colorId} size={size} label={`Cat is ${mood}`} />}
     </View>
   );
 }

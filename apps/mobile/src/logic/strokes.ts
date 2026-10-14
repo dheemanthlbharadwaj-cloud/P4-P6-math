@@ -2,6 +2,17 @@
 export interface Pt { x: number; y: number }
 export interface Stroke { id: number; color: string; width: number; points: Pt[] }
 
+/** Points closer than this (px) to the previous one are dropped. Low enough for 240Hz Pencil samples. */
+export const MIN_POINT_DIST = 0.5;
+
+/** Append `p` to `points` (mutates) unless it is closer than `min` to the last point. Returns true when added. */
+export function pushPoint(points: Pt[], p: Pt, min: number = MIN_POINT_DIST): boolean {
+  const last = points[points.length - 1];
+  if (last && Math.hypot(p.x - last.x, p.y - last.y) < min) return false;
+  points.push(p);
+  return true;
+}
+
 /** Smooth path through the points using quadratic curves between midpoints. */
 export function strokePath(points: Pt[]): string {
   if (points.length === 0) return "";

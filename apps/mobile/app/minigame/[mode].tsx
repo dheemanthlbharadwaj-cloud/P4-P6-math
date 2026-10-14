@@ -58,6 +58,10 @@ export default function MiniGame() {
   const [note, setNote] = useState<string | null>(null);
   const [mood, setMood] = useState<CatMood>("thinking");
   const [deadline] = useState(() => Date.now() + CHALLENGE_SECONDS * 1000);
+  // The cat's board clock. Timed challenge: the round's own 5 minutes (the same clock as the timer above). Untimed:
+  // a fresh 5-minute clock for every question, restarted when the question changes (as in the level screen).
+  const [questionStartedAt, setQuestionStartedAt] = useState(() => Date.now());
+  const boardStart = timed ? deadline - CHALLENGE_SECONDS * 1000 : questionStartedAt;
   const [hearts, setHearts] = useState(CHALLENGE_HEARTS);
   const [tries, setTries] = useState(0); // questions answered (challenge)
   const [over, setOver] = useState<null | "time" | "hearts">(null);
@@ -107,9 +111,11 @@ export default function MiniGame() {
     // Challenge: questions go to the back of the line, so the round never runs dry before the 5 minutes are up.
     setQueue((qs) => (timed ? [...qs.slice(1), qs[0]] : qs.slice(1)));
     setReveal(null); setNote(null); setMood("thinking");
+    setQuestionStartedAt(Date.now());
   };
   const skip = () => {
     setQueue((qs) => (qs.length > 1 ? [...qs.slice(1), qs[0]] : qs));
+    setQuestionStartedAt(Date.now());
   };
 
   const leaveConfirm = useLeaveConfirm({
@@ -186,7 +192,7 @@ export default function MiniGame() {
           </>
         ) : null}
       </View>
-      <QuestionPanel reportContext="minigame" key={q.id} question={q} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={note ?? undefined} timerStartedAt={deadline - CHALLENGE_SECONDS * 1000} />} onSubmit={submit} onSkip={skip} canSkip={queue.length > 1} />
+      <QuestionPanel reportContext="minigame" key={q.id} question={q} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={note ?? undefined} timerStartedAt={boardStart} timerTotal={timed ? CHALLENGE_SECONDS * 1000 : undefined} />} onSubmit={submit} onSkip={skip} canSkip={queue.length > 1} />
       {reveal ? (
         <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
           {landscape && note ? <Text style={{ fontFamily: fonts.display, fontSize: 18, color: colors.ink, marginBottom: 6 }}>{note}</Text> : null}

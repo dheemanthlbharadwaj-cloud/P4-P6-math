@@ -199,7 +199,7 @@ export default function LevelScreen() {
           <Text style={{ fontSize: 26, fontFamily: fonts.display, color: colors.ink }}>✕</Text>
         </Pressable>
         <ProgressBar value={progressFraction(session)} style={{ flex: 1 }} />
-        {landscape ? <CatCompanion mood={mood} size={52} /> : null}
+        {landscape ? <CatCompanion mood={mood} size={88} timerStartedAt={startedAt} /> : null}
         <Stat icon={uiAssets.icons.heart as number} text={meters.subscribed ? "∞" : `${meters.hearts}/${MAX_HEARTS}`} />
       </View>
       {question ? (

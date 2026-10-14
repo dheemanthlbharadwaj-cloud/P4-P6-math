@@ -31,7 +31,8 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
             <H2>Find the key</H2>
             <Body style={{ color: colors.inkSoft }}>Answer this to unlock {topic?.name}.</Body>
           </View>
-          <CatCompanion mood={reveal ? (reveal.correct ? "correct" : "wrong") : "thinking"} size={80} />
+          {/* key={attempt}: a new key question gets a fresh board clock (mount time). */}
+          <CatCompanion key={attempt} mood={reveal ? (reveal.correct ? "correct" : "wrong") : "thinking"} size={80} />
         </View>
         {question ? (
           <QuestionPanel reportContext="key" question={question} grade={grade} reveal={reveal} onSubmit={submit} submitLabel="Unlock" />
