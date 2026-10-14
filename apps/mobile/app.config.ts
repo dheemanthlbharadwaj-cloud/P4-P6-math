@@ -30,6 +30,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   userInterfaceStyle: "light",
   // Placeholder icon from the cat art (assets/ui/app-icon.png, adaptive-icon.png): replace the files to change it.
   icon: "./assets/ui/app-icon.png",
+  owner: "dheems-team", // expo.dev account that owns the EAS project
   // Over-the-air updates (EAS Update): a phone downloads new JS/assets on launch and uses them on the next launch.
   // Updates only reach builds with the same runtimeVersion (= app version): bump `version` when native code changes
   // (new native module, permissions, icon, app.config plugins), then ship a new APK.
