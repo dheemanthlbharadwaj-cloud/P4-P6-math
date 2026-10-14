@@ -25,6 +25,18 @@ them: a ⚑ badge in the list, a "Student reports (open)" filter, and a box on t
 (master sees all, volunteers their scope). The editor part is added by `scripts/editor-reports.mjs`, which patches
 the live editor files and publishes them (re-run it if the editor is redeployed from a copy without it).
 
+**Editor edits reach the apps** (apps stay offline-capable on their bundle): `getQuestionPatches {grade, bundleVersion, since}`
+(auth, 20/min) reads `questions` where `last_edited_at > max(since, the bundle's editor snapshot time)` ordered by it
+(limit 300, automatic single-field index, one read per returned doc, minimum 1) and returns, for ids in the server's
+bundle only, the question rebuilt by the same transform as the content build (`content/src/question.ts`, copied to
+`functions/src/question`), `question: null` when retired (excluded, or un-picked after the build), and `figureUrl` only when
+the editor's `figure_url` differs from the one the bundled image came from. `until` = last `last_edited_at` seen, `more` =
+page was full. Served from the server's bundle even when the app's `bundleVersion` differs (one OTA behind). Marking
+(`submitLevelResult`, `submitMinigameResult`) uses the edited answers and `activeLevelIds` (retired questions are not part
+of a level) from a per-instance cache, refreshed incrementally at most every 10 min; if that fails the bundle's answers are
+used. `copy-shared.mjs` takes the bundle's `builtAt` and `source-info.json` (written by `npm run build`/`source-info` in
+content/: snapshot time, figure sources, picks) into `src/content`.
+
 - `functions/` is **not** an npm workspace member (Firebase deploys it standalone). Pure shared modules
   (`types.ts`, `gameRules.ts`, `api.ts` = the callable contract) are copied from `packages/shared/src` into `functions/src/shared` by
   `functions/scripts/copy-shared.mjs`, which runs automatically before `build`, `typecheck` and `test`

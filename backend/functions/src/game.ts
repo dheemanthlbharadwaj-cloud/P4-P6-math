@@ -1,6 +1,6 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import {
-  REFERRAL_STARS, REFERRAL_WELCOME_STARS, STORE_ITEMS, levelAttemptStars, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
+  REFERRAL_STARS, REFERRAL_WELCOME_STARS, STORE_ITEMS, activeLevelIds, levelAttemptStars, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
   type LevelResultResponse, type MinigameResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
   type RedeemReferralRequest, type RedeemReferralResponse,
 } from "./shared/index.js";
@@ -12,6 +12,7 @@ import {
 } from "./logic/rules.js";
 import { isCorrect } from "./logic/marking.js";
 import { CONTENT } from "./content/index.js";
+import { patchView } from "./patches.js";
 
 /** users/{uid}/attempted/{grade}_{questionId}: questions ever attempted (mini-game stars only for new ones). */
 const attemptedRef = (uid: string, grade: string, questionId: string) =>
@@ -40,11 +41,14 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   }
   const content = CONTENT[result.grade];
   const key = levelKey(result.subtopicId, result.level);
-  const levelIds = content?.levels[key] ?? [];
-  if (!levelIds.length) throw new HttpsError("failed-precondition", "Unknown level. Update the app.");
+  const bundleIds = content?.levels[key] ?? [];
+  if (!bundleIds.length) throw new HttpsError("failed-precondition", "Unknown level. Update the app.");
+  // Editor edits since the bundle was built: edited answers mark, retired questions are not part of the level any more.
+  const edits = await patchView(result.grade);
+  const levelIds = activeLevelIds(bundleIds, edits?.retired ?? []);
   // Only the level's own questions count; each is marked here, whatever the app thought.
   const inLevel = answers.filter((a) => levelIds.includes(a.questionId));
-  const correctNow = inLevel.filter((a) => isCorrect(content, a.questionId, a.responses)).map((a) => a.questionId);
+  const correctNow = inLevel.filter((a) => isCorrect(content, a.questionId, a.responses, edits?.answers)).map((a) => a.questionId);
   const questionsDone = inLevel.length;
   const attemptedIds = inLevel.map((a) => a.questionId);
 
@@ -61,7 +65,9 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
     const [attempt, wallet, month, levelDoc] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef), tx.get(starsRef)]);
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
-    const correctBefore = ((levelDoc.data()?.correct as string[] | undefined) ?? []).filter((id) => levelIds.includes(id));
+    const storedBefore = ((levelDoc.data()?.correct as string[] | undefined) ?? []).filter((id) => bundleIds.includes(id));
+    const correctBefore = storedBefore.filter((id) => levelIds.includes(id));
+    const retiredBefore = storedBefore.filter((id) => !levelIds.includes(id)); // keep their stars on record
     const bonusClaimed = levelDoc.data()?.bonus === true;
     if (attempt.exists) {
       // Replay of an already-counted attempt: report the CURRENT balances and level state, not the (stale) ones stored
@@ -78,7 +84,7 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
     const response: LevelResultResponse = {
       starsAwarded: stars, starBalance: balance + stars, monthlyStars, duplicate: false, levelCorrectIds: r.correctIds, levelComplete: r.complete,
     };
-    if (r.newIds.length || r.bonus) tx.set(starsRef, { correct: r.correctIds, bonus: bonusClaimed || r.bonus, updatedAt: FieldValue.serverTimestamp() });
+    if (r.newIds.length || r.bonus) tx.set(starsRef, { correct: [...r.correctIds, ...retiredBefore], bonus: bonusClaimed || r.bonus, updatedAt: FieldValue.serverTimestamp() });
     for (const q of attemptedIds) tx.set(attemptedRef(uid, result.grade, q), { at: FieldValue.serverTimestamp() }, { merge: true });
 
     tx.set(attemptRef, {
@@ -112,6 +118,7 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
   const monthRef = entriesRef(monthlyBoard(sgtMonth(when))).doc(uid);
   const dayRef = entriesRef(dailyBoard(sgtDate(when))).doc(uid);
   const refs = questionIds.map((q) => attemptedRef(uid, result.grade, q));
+  const edits = await patchView(result.grade); // the editor's edits since the bundle was built (marking uses edited answers)
 
   return db.runTransaction(async (tx) => {
     const [round, wallet, month, ...seen] = await Promise.all([tx.get(roundRef), tx.get(walletRef), tx.get(monthRef), ...refs.map((r) => tx.get(r))]);
@@ -121,7 +128,7 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
     if (round.exists) return { starsAwarded: round.data()!.stars as number, starBalance: balance, monthlyStars: monthNow, totalStars: total, duplicate: true };
     const before = new Set(questionIds.filter((_, i) => seen[i].exists));
     const content = CONTENT[result.grade];
-    const marked = result.answers.map((a) => ({ questionId: a.questionId, correct: isCorrect(content, a.questionId, a.responses) }));
+    const marked = result.answers.map((a) => ({ questionId: a.questionId, correct: isCorrect(content, a.questionId, a.responses, edits?.answers) }));
     const stars = minigameStars(marked, before);
     tx.set(roundRef, { mode: result.mode, grade: result.grade, stars, answers: result.answers.length, createdAt: FieldValue.serverTimestamp() });
     for (const r of refs) tx.set(r, { at: FieldValue.serverTimestamp() }, { merge: true });

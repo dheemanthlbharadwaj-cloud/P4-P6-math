@@ -1,6 +1,10 @@
 import type { Grade } from "@p6/shared";
 import { runAudit } from "./audit";
-import { runBuild } from "./build";
+import { buildSourceInfo, runBuild, writeSourceInfo } from "./build";
+import fs from "node:fs";
+import path from "node:path";
+import { outDirFor } from "./paths";
+import { loadSnapshot } from "./source";
 import { runMock } from "./mock";
 import { CredentialsError, runSync } from "./sync";
 
@@ -39,13 +43,22 @@ async function main() {
       if (r.unknownLatex.length) console.log("Unknown LaTeX commands:", r.unknownLatex.map(([c, n]) => `\\${c}×${n}`).join(" "));
       break;
     }
+    case "source-info": {
+      // Regenerates source-info.json (see build.ts) for the bundle already in apps/mobile/assets/content, without a rebuild.
+      const dir = outDirFor(grade);
+      const ids = Object.keys(JSON.parse(fs.readFileSync(path.join(dir, "questions.json"), "utf8")).questions);
+      const info = buildSourceInfo(grade, loadSnapshot(grade), ids);
+      writeSourceInfo(dir, info);
+      console.log(`source-info ${grade}: snapshotAt ${info.snapshotAt}, ${Object.keys(info.figureSources).length} figure sources, ${info.selected.length} picked → ${dir}`);
+      break;
+    }
     case "mock": {
       const r = await runMock(grade);
       console.log(`Mock ${grade}: ${r.questions} questions, ${r.subtopics} subtopics, ${r.figureCount} figures, version ${r.version}\n→ ${r.dir}`);
       break;
     }
     default:
-      console.error("Usage: cli <sync|audit|build|mock> --grade P6 [--subtopic-field name] [--mode auto|rest|admin] [--skip-figures] [--from-file export.json]");
+      console.error("Usage: cli <sync|audit|build|source-info|mock> --grade P6 [--subtopic-field name] [--mode auto|rest|admin] [--skip-figures] [--from-file export.json]");
       process.exit(2);
   }
 }

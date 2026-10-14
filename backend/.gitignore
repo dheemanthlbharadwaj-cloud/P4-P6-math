@@ -6,3 +6,4 @@ functions/src/shared/
 firebase-debug.log
 .secret.local
 functions/src/content/
+functions/src/question/

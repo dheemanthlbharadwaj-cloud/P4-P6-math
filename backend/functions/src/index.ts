@@ -7,3 +7,4 @@ export { revenuecatWebhook } from "./revenuecat.js";
 export { reportQuestion } from "./reports.js";
 export { updateProfile, syncProgress, listFriendRequests } from "./sync.js";
 export { getDailyQuests, claimDailyQuest } from "./dailyQuests.js";
+export { getQuestionPatches } from "./patches.js";

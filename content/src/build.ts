@@ -85,6 +85,27 @@ export function prepare(docs: RawDoc[], grade: Grade, o: { subtopicField?: strin
   return { norm, subtopicField: det.field, defs, candidates, figures, skipped, nonAutoReasons, missingFigures, stats };
 }
 
+/**
+ * What the backend needs to tell, later, which bundle questions the editor changed (getQuestionPatches):
+ * written next to questions.json as source-info.json. Committed with the bundle (the raw snapshot is git-ignored).
+ *  - snapshotAt: when the editor snapshot was read (edits after this are not in the bundle; builtAt is a bit later)
+ *  - figureSources: question id → the editor figure_url the bundled image was downloaded from (raw/<grade>/figures/.sources.json)
+ *  - selected: ids the editor had `selected: true` at build time (a later un-pick retires the question)
+ */
+export interface SourceInfo { grade: Grade; snapshotAt: string; figureSources: Record<string, string>; selected: string[] }
+export function buildSourceInfo(grade: Grade, snap: { fetchedAt?: string; questions: RawDoc[] }, bundleIds: string[], figDir = rawFiguresDir(grade)): SourceInfo {
+  const ids = new Set(bundleIds);
+  let sources: Record<string, string> = {};
+  try { sources = JSON.parse(fs.readFileSync(path.join(figDir, ".sources.json"), "utf8")); } catch { /* no manifest: no figure sources */ }
+  const figureSources: Record<string, string> = {};
+  for (const id of [...ids].sort()) if (typeof sources[id] === "string" && findFigureFile(grade, id, figDir)) figureSources[id] = sources[id];
+  const selected = snap.questions.filter((d) => ids.has(d.id) && (d.selected === true || d.selected === "true")).map((d) => d.id).sort();
+  return { grade, snapshotAt: snap.fetchedAt ?? "", figureSources, selected };
+}
+export function writeSourceInfo(dir: string, info: SourceInfo) {
+  fs.writeFileSync(path.join(dir, "source-info.json"), JSON.stringify(info, null, 1) + "\n");
+}
+
 export async function runBuild(grade: Grade, opts: { subtopicField?: string; contentRoot?: string; snapshot?: string } = {}) {
   const snap = loadSnapshot(grade, opts.snapshot);
   const prep = prepare(snap.questions, grade, { subtopicField: opts.subtopicField, mapping: loadMapping(grade) });
@@ -97,6 +118,7 @@ export async function runBuild(grade: Grade, opts: { subtopicField?: string; con
     figures: prep.figures,
     contentRoot: opts.contentRoot ?? assetsContentRoot(),
   });
+  writeSourceInfo(res.dir, buildSourceInfo(grade, snap, kept.map((c) => c.q.id)));
   const short = curriculum.topics.flatMap((t) => t.subtopics.filter((s) => s.shortfall));
   return { ...res, questions: kept.length, excludedHasError: prep.candidates.length - kept.length, skipped: prep.skipped.length, subtopics: prep.defs.length, shortfallSubtopics: short.length, unknownLatex: [...prep.stats.unknownCommands.entries()] };
 }
