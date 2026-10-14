@@ -14,7 +14,7 @@ Skip an update for a commit with `[eas skip]` in the commit message.
 | What | Where |
 | --- | --- |
 | Expo project | expo.dev → account **dheems-team** → `catapult-math-athletes` (id `ea8a1c9d-c3dd-4cac-903d-78956443efe9`), GitHub repo linked, base directory `apps/mobile` |
-| Tester download page | https://catapult-math-athletes-download.netlify.app (Netlify site `catapult-math-athletes-download`, public) |
+| Tester download page | https://catapult-math-athletes-download.netlify.app (Netlify site `catapult-math-athletes-download`). **Archived: team-only (Netlify login)** until the owner says to show it; `deploy-apk.mjs --public` opens it. |
 | Signing key | Firestore `app_secrets/android-signing` (master-only by rules): `keystore_p12_b64`, `password`, alias `catapult`. SHA-256 `4D:FB:23:51:…:22:2A`. **Every APK must use it**, or testers have to uninstall to update. |
 | App id | `sg.catapultmathathletes.app` (permanent once on Play) |
 

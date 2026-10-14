@@ -2,7 +2,7 @@
 // Publishes the tester APK with a small download page to its own Netlify site (not Firebase Hosting: the free plan
 // there allows ~360 MB of downloads a day for the whole project, i.e. 2–3 APKs, and would take the web app down).
 //
-//   node apps/mobile/scripts/deploy-apk.mjs [path/to/app.apk]    (default apps/mobile/dist-apk/catapult-math-athletes.apk)
+//   node apps/mobile/scripts/deploy-apk.mjs [path/to/app.apk] [--public | --private]    (default apps/mobile/dist-apk/catapult-math-athletes.apk)
 //
 // Needs NETLIFY_AUTH_TOKEN or NETLIFY_SECRET. Site name NETLIFY_APK_SITE_NAME (default below). Each production deploy
 // costs Netlify credits (shared with the API site): deploy only when there is a new APK. Over-the-air updates
@@ -15,7 +15,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
-const APK = path.resolve(process.argv[2] ?? path.join(ROOT, "apps/mobile/dist-apk/catapult-math-athletes.apk"));
+const APK = path.resolve(process.argv.slice(2).find((a) => !a.startsWith("--")) ?? path.join(ROOT, "apps/mobile/dist-apk/catapult-math-athletes.apk"));
 const SITE_NAME = process.env.NETLIFY_APK_SITE_NAME || "catapult-math-athletes-download";
 const TOKEN = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_SECRET;
 if (!TOKEN) throw new Error("Set NETLIFY_AUTH_TOKEN or NETLIFY_SECRET.");
@@ -29,8 +29,10 @@ const nl = async (method, url, body) => {
 };
 const found = await nl("GET", `/sites?name=${SITE_NAME}&filter=all`);
 const site = found.find((s) => s.name === SITE_NAME) ?? (await nl("POST", "/sites", { name: SITE_NAME }));
-// Testers open the link without a Netlify login (new sites on the team default to team-only access).
-if (site.sso_login) await nl("PATCH", `/sites/${site.id}`, { sso_login: false });
+// Visibility: the site stays team-only (Netlify login) unless --public / --private is passed. Archived (team-only) since
+// 15 Oct 2026 until the owner says to show it.
+if (process.argv.includes("--public") && site.sso_login) await nl("PATCH", `/sites/${site.id}`, { sso_login: false });
+if (process.argv.includes("--private") && !site.sso_login) await nl("PATCH", `/sites/${site.id}`, { sso_login: true });
 
 const config = JSON.parse(execFileSync("npx", ["expo", "config", "--type", "public", "--json"], { cwd: path.join(ROOT, "apps/mobile"), encoding: "utf8" }));
 const bytes = fs.statSync(APK).size;

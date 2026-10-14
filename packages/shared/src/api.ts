@@ -17,12 +17,13 @@
 // (users/{uid}.cat|fullName|school|topicsLearnt|psleDate, users/{uid}/progress/{grade}, users/{uid}/wrong/{id}).
 // The rules refuse an equipped item that is not in wallets/{uid}.inventory ("color-black" is always owned), and
 // the syncPublicProfile trigger mirrors users/{uid} into publicProfiles/{uid}.
-import type { CatLook, Grade, GradeProgress, LeaderboardEntry, PublicProfile, UserProfile } from "./types";
+import type { CatLook, Grade, Question, GradeProgress, LeaderboardEntry, PublicProfile, UserProfile } from "./types";
 
 export const FUNCTIONS_REGION = "asia-southeast1";
 
 export type CallableName =
   | "bootstrapProfile"
+  | "getQuestionPatches"
   | "submitLevelResult"
   | "submitMinigameResult"
   | "claimQuest"
@@ -267,4 +268,37 @@ export interface ClaimDailyQuestResponse {
   monthlyStars: number;
   totalStars: number;
   quests: DailyQuestState[];
+}
+
+// ---- Live question edits from the editor (getQuestionPatches) ----
+// Apps ship an offline bundle (QuestionBundle). Edits made in the question editor after the bundle was built reach
+// apps as patches: changed questions keyed by id, saved on the device (still offline) and laid over the bundle. Only
+// questions that are in the caller's bundle are patched; new questions and level changes come with a new bundle.
+
+export interface GetQuestionPatchesRequest {
+  grade: Grade;
+  /** QuestionBundle.version the app runs */
+  bundleVersion: string;
+  /** `until` of the previous response; "" = everything edited since the bundle was built */
+  since: string;
+}
+
+export interface QuestionPatch {
+  id: string;
+  /** the question as the editor has it now; null = retired (excluded / deselected): never shown, not needed for stars */
+  question: Question | null;
+  /** remote image (editor figure_url) when the figure changed after the bundle was built; the app caches it */
+  figureUrl?: string;
+  /** editor last_edited_at (ISO) */
+  editedAt: string;
+}
+
+export interface GetQuestionPatchesResponse {
+  grade: Grade;
+  bundleVersion: string;
+  /** pass back as `since` next time (the latest editedAt seen, or the request's since) */
+  until: string;
+  patches: QuestionPatch[];
+  /** true when the server's patch list was cut at its limit: call again with `until` */
+  more: boolean;
 }

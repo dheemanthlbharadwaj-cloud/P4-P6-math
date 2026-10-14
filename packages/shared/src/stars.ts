@@ -46,6 +46,17 @@ export function levelAttemptStars(levelIds: readonly string[], correctBefore: re
   return { stars: newIds.length + (bonus ? 1 : 0), newIds, correctIds, complete: all(new Set(correctIds)), bonus };
 }
 
+/**
+ * A level's questions without the ones the editor retired (excluded or deselected after the bundle was built; see
+ * GetQuestionPatchesResponse). Retired questions are never shown and are not needed to complete the level; their star
+ * slot shows as filled. If every question were retired the level keeps its original list (it is never empty).
+ */
+export function activeLevelIds(levelIds: readonly string[], retired: ReadonlySet<string> | readonly string[]): string[] {
+  const r = retired instanceof Set ? retired : new Set(retired as readonly string[]);
+  const left = levelIds.filter((id) => !r.has(id));
+  return left.length ? left : [...levelIds];
+}
+
 /** The questions an attempt shows: the ones still without a star, or all of them once the level is complete. */
 export function levelQuestionsToPlay(levelIds: readonly string[], correctBefore: readonly string[]): string[] {
   const done = new Set(correctBefore);
