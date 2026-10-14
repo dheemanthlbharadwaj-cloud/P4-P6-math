@@ -18,6 +18,8 @@ const WEB: Partial<Record<"apiKey" | "authDomain" | "projectId" | "storageBucket
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const BACKEND: { url?: string } = (() => { try { return require("./backend.json"); } catch { return {}; } })();
 
+const EAS_PROJECT_ID = "ea8a1c9d-c3dd-4cac-903d-78956443efe9"; // expo.dev project catapult-math-athletes
+
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: "Catapult Math Athletes",
@@ -28,6 +30,17 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   userInterfaceStyle: "light",
   // Placeholder icon from the cat art (assets/ui/app-icon.png, adaptive-icon.png): replace the files to change it.
   icon: "./assets/ui/app-icon.png",
+  // Over-the-air updates (EAS Update): a phone downloads new JS/assets on launch and uses them on the next launch.
+  // Updates only reach builds with the same runtimeVersion (= app version): bump `version` when native code changes
+  // (new native module, permissions, icon, app.config plugins), then ship a new APK.
+  runtimeVersion: { policy: "appVersion" },
+  updates: {
+    url: `https://u.expo.dev/${EAS_PROJECT_ID}`,
+    checkAutomatically: "ON_LOAD",
+    fallbackToCacheTimeout: 0,
+    // Local (non-EAS) builds name their channel here; EAS builds set it from eas.json.
+    requestHeaders: { "expo-channel-name": env("EXPO_PUBLIC_APP_ENV", "") === "production" ? "production" : "preview" },
+  },
   ios: {
     bundleIdentifier: BUNDLE_ID,
     supportsTablet: true,
@@ -94,6 +107,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       googleIosClientId: env("EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID", ""),
       googleAndroidClientId: env("EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID", ""),
     },
+    eas: { projectId: EAS_PROJECT_ID },
     referralBaseUrl: env("EXPO_PUBLIC_REFERRAL_BASE_URL", "https://p6math.app/r"),
   },
 });

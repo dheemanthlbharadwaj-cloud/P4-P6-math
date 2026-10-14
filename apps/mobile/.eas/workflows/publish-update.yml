@@ -1,0 +1,21 @@
+# Over-the-air update for tester APKs (channel "preview"): every push to the app's branches that touches the app or
+# the shared package publishes the new JS bundle; phones pick it up on their next launch (same app version only).
+name: Publish tester update
+
+on:
+  push:
+    branches: ['main', 'ccr-41770098-9l0q6b']
+    paths: ['apps/mobile/**', 'packages/shared/**', '!**/*.md']
+
+jobs:
+  publish_preview_update:
+    name: Publish preview update (Android)
+    type: update
+    environment: preview
+    env:
+      EXPO_PUBLIC_APP_ENV: preview
+      EXPO_PUBLIC_DEV_TOOLS: '1'
+    params:
+      branch: preview
+      platform: android
+      message: ${{ github.commit_message || 'Tester update' }}
