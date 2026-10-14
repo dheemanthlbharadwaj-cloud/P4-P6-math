@@ -14,6 +14,7 @@ jobs:
     name: Ensure preview channel
     steps:
       - uses: eas/checkout
+      - uses: eas/install_node_modules # eas-cli reads app.config.ts (plugins need node_modules)
       - run: npx -y eas-cli@latest channel:view preview --non-interactive > /dev/null 2>&1 || npx -y eas-cli@latest channel:create preview --non-interactive
 
   publish_preview_update:
