@@ -8,10 +8,6 @@ export const QUESTIONS_PER_LEVEL = 5; // "5-5-5"
 export const MAX_HEARTS = 10; // daily allowance, refilled at midnight
 export const HEARTS_PER_AD = 3; // from mindmap: Watch Ad → +3 hearts
 
-export const MAX_ENERGY = 10; // daily allowance, refilled at midnight
-export const ENERGY_PER_LEVEL = 1; // ASSUMPTION: starting a level costs 1 energy
-export const ENERGY_PER_AD = 3; // ASSUMPTION
-
 export const REFERRAL_STARS = 5; // from mindmap
 export const SUBSCRIPTION_PRICE_LABEL = "$15/month"; // from mindmap; real price comes from the store via RevenueCat
 export const SUBSCRIPTION_ENTITLEMENT = "unlimited";

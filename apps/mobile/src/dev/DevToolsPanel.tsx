@@ -1,10 +1,10 @@
 // DEV TOOLS panel (testing only, see devTools.ts): a floating 🛠 button that opens shortcuts to unlock content and
-// simulate situations (out of hearts/energy, ads failing, PSLE tomorrow, wrong questions to review, stars, quests,
+// simulate situations (out of hearts, ads failing, PSLE tomorrow, wrong questions to review, stars, quests,
 // leaderboard friends and school, …).
 import React, { useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
-import { MAX_ENERGY, MAX_HEARTS, QUEST_ITEMS, QUESTS, STORE_ITEMS, type Grade } from "@p6/shared";
+import { MAX_HEARTS, QUEST_ITEMS, QUESTS, STORE_ITEMS, type Grade } from "@p6/shared";
 import { Sheet } from "../components/ui";
 import { getAllLv1, getLevelQuestions, getTopics } from "../content";
 import { usePlayer, computeMeters } from "../store/player";
@@ -78,15 +78,15 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
   const topics = getTopics(grade);
   const done = (msg: string) => setNote(msg);
 
-  const setMeter = (kind: "hearts" | "energy", value: number) => {
-    usePlayer.setState({ [kind]: { value, updatedAt: Date.now() } } as never);
-    done(`${kind === "hearts" ? "Hearts" : "Energy"} set to ${value}`);
+  const setHearts = (value: number) => {
+    usePlayer.setState({ hearts: { value, updatedAt: Date.now() } });
+    done(`Hearts set to ${value}`);
   };
   // Pretend the last change was yesterday, so the midnight refill happens now.
   const simulateMidnight = () => {
     const y = Date.now() - 86_400_000;
-    usePlayer.setState((s) => ({ hearts: { ...s.hearts, updatedAt: y }, energy: { ...s.energy, updatedAt: y } }));
-    done("Midnight passed: hearts and energy refilled");
+    usePlayer.setState((s) => ({ hearts: { ...s.hearts, updatedAt: y } }));
+    done("Midnight passed: hearts refilled");
   };
   const ensure = () => useProgress.getState().ensureGrade(grade, useProfile.getState().topicsLearnt);
   const unlockAll = () => { ensure(); for (const t of topics) useProgress.getState().unlockTopic(grade, t.id); done("All maps unlocked"); };
@@ -145,7 +145,7 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
         <Btn label="Close" onPress={onClose} />
       </View>
       <Text style={{ color: colors.inkSoft, fontSize: 13, marginBottom: 8 }}>
-        Hearts {m.hearts}/{MAX_HEARTS} · Energy {m.energy}/{MAX_ENERGY} · Stars {stars} (month {monthStars}, lifetime {lifetime}) · Quests {claimed}/{QUESTS.length} · Friends {friendCount} · School {school || "none"} · Maps open {unlocked}/{topics.length} · Flagged {flagged} · PSLE {psle}
+        Hearts {m.hearts}/{MAX_HEARTS} · Stars {stars} (month {monthStars}, lifetime {lifetime}) · Quests {claimed}/{QUESTS.length} · Friends {friendCount} · School {school || "none"} · Maps open {unlocked}/{topics.length} · Flagged {flagged} · PSLE {psle}
         {m.subscribed ? " · SUBSCRIBED" : ""}
       </Text>
       {note ? <Text style={{ backgroundColor: colors.goodBg, borderRadius: radius.s, padding: 8, marginBottom: 8, color: colors.ink, fontWeight: "700" }}>✓ {note}</Text> : null}
@@ -153,7 +153,7 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
         <Section title="Access">
           <Btn label="Unlock all maps" onPress={unlockAll} />
           <Btn label="Lock maps again" onPress={lockToLearnt} />
-          <Btn label={player.subscribed ? "Subscription: ON" : "Subscription: OFF"} tone={player.subscribed ? "on" : "plain"} onPress={() => { usePlayer.getState().setSubscribed(!player.subscribed); done(player.subscribed ? "Subscription off" : "Subscribed (unlimited hearts & energy)"); }} />
+          <Btn label={player.subscribed ? "Subscription: ON" : "Subscription: OFF"} tone={player.subscribed ? "on" : "plain"} onPress={() => { usePlayer.getState().setSubscribed(!player.subscribed); done(player.subscribed ? "Subscription off" : "Subscribed (unlimited hearts)"); }} />
           <Btn label="Own all shop items" onPress={() => { useCosmetics.getState().grantOwned(STORE_ITEMS.map((i) => i.id)); done("All colours and hats owned"); }} />
           <Btn label="Stars → 500" onPress={() => { useProfile.getState().set({ starBalance: 500 }); done("Star balance 500"); }} />
           <Btn label="Stars → 0" onPress={() => { useProfile.getState().set({ starBalance: 0 }); done("Star balance 0"); }} />
@@ -192,12 +192,10 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
           <Btn label="Everything done" onPress={() => complete("all")} />
           <Btn label="Clear progress" tone="danger" onPress={resetProgress} />
         </Section>
-        <Section title="Hearts & energy">
-          <Btn label="Out of hearts" onPress={() => setMeter("hearts", 0)} />
-          <Btn label="1 heart" onPress={() => setMeter("hearts", 1)} />
-          <Btn label="Full hearts" onPress={() => setMeter("hearts", MAX_HEARTS)} />
-          <Btn label="Out of energy" onPress={() => setMeter("energy", 0)} />
-          <Btn label="Full energy" onPress={() => setMeter("energy", MAX_ENERGY)} />
+        <Section title="Hearts">
+          <Btn label="Out of hearts" onPress={() => setHearts(0)} />
+          <Btn label="1 heart" onPress={() => setHearts(1)} />
+          <Btn label="Full hearts" onPress={() => setHearts(MAX_HEARTS)} />
           <Btn label="Simulate midnight" onPress={simulateMidnight} />
         </Section>
         <Section title="Next ad (watch-an-ad buttons)">

@@ -10,7 +10,6 @@ import { CalculatorModal } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
 import { Scratchpad } from "./Scratchpad";
 import { ReportSheet } from "./ReportSheet";
-import { useToast } from "./Toast";
 import { getFigure } from "../content";
 import { uiAssets } from "../theme/assets";
 import { BUBBLE_BAND } from "./CatCompanion";
@@ -54,7 +53,6 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const [calc, setCalc] = useState(false);
   const [figOpen, setFigOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
-  const toast = useToast();
   const { width, height } = useWindowDimensions();
   const landscape = width > height;
   const { kind } = useLayout();
@@ -197,10 +195,9 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
       <CalculatorModal visible={calc} onClose={() => setCalc(false)} />
       {fig ? <FigureViewer source={fig} visible={figOpen} onClose={() => setFigOpen(false)} /> : null}
       {reportContext ? (
-        <ReportSheet visible={reportOpen} onClose={() => setReportOpen(false)} onDone={toast.show} questionId={q.id} grade={grade} context={reportContext}
+        <ReportSheet visible={reportOpen} onClose={() => setReportOpen(false)} questionId={q.id} grade={grade} context={reportContext}
           answerGiven={responses.some((r) => r.trim()) ? responses.map((r) => r.trim()).join(" | ") : undefined} />
       ) : null}
-      {toast.node}
     </KeyboardAvoidingView>
   );
 

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { ScrollView, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
-import { ENERGY_PER_AD, HEARTS_PER_AD, nameProblem, nameProblemMessage, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL, tidyName } from "@p6/shared";
+import { HEARTS_PER_AD, nameProblem, nameProblemMessage, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL, tidyName } from "@p6/shared";
 import { Body, Button, Card, CenterModal, H1, H2, Screen, Columns } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
@@ -63,13 +63,13 @@ export default function ProfileTab() {
     flash("Saved!");
   };
 
-  const watch = async (kind: "hearts" | "energy") => {
+  const watch = async () => {
     setAdBusy(true);
     const r = await showRewardedAd();
     setAdBusy(false);
     if (!r.rewarded) return flash(r.reason === "dismissed" ? "Watch the whole ad to get the reward." : "No ad available right now. Try again soon.");
-    if (kind === "hearts") usePlayer.getState().addHearts(HEARTS_PER_AD); else usePlayer.getState().addEnergy(ENERGY_PER_AD);
-    flash(kind === "hearts" ? `+${HEARTS_PER_AD} hearts!` : `+${ENERGY_PER_AD} energy!`);
+    usePlayer.getState().addHearts(HEARTS_PER_AD);
+    flash(`+${HEARTS_PER_AD} hearts!`);
   };
 
   const referralLink = `${extra.referralBaseUrl ?? "https://p6math.app/r"}?code=${profile.friendCode}`;
@@ -208,13 +208,12 @@ export default function ProfileTab() {
           <H2>Free boosts</H2>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Watch a short ad (suitable for children) for a boost.</Body>
           <View style={{ flexDirection: "row", gap: 10 }}>
-            <Button title={`+${HEARTS_PER_AD} Hearts`} onPress={() => watch("hearts")} disabled={adBusy || subscribed} style={{ flex: 1 }} />
-            <Button title={`+${ENERGY_PER_AD} Energy`} onPress={() => watch("energy")} disabled={adBusy || subscribed} style={{ flex: 1 }} />
+            <Button title={`+${HEARTS_PER_AD} Hearts`} onPress={watch} disabled={adBusy || subscribed} style={{ flex: 1 }} />
           </View>
         </Card>
 
         <Card>
-          <H2>Unlimited hearts and energy</H2>
+          <H2>Unlimited hearts</H2>
           <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>{subscribed ? "You are subscribed. Thank you!" : `Subscribe for ${SUBSCRIPTION_PRICE_LABEL}.`}</Body>
           <Button title={subscribed ? "Manage subscription" : "Subscribe"} variant="gold" onPress={() => setParentNote(true)} />
         </Card>

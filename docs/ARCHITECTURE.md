@@ -7,7 +7,7 @@
 | Questions | **Bundled in the app, fully offline.** Built from the editor's Firestore bank (`primary-math-sg`, database id `"default"`) by the content pipeline. |
 | Map unit | **Subtopic = map node (P6 has 62 subtopics)**, each with 5/5/5. **Editor chapter (`chapter`, `chapter_no`; 12 for P6) = swipeable map.** Chapter 99 "Removed" / `excluded` questions are dropped. |
 | Backend | The editor's Firebase project `primary-math-sg` (free Spark plan): Auth + Firestore database `default`, shared with the question bank (rules merged by `backend/scripts/deploy-rules.mjs`). The backend handlers (TypeScript, `backend/functions`) run on Netlify's free plan (`backend/netlify`, `POST /api/<name>`); see backend/README.md. |
-| Ads | Google AdMob via `react-native-google-mobile-ads`, rewarded ads for +hearts/+energy. Child-directed settings (see Compliance). |
+| Ads | Google AdMob via `react-native-google-mobile-ads`, rewarded ads for +hearts. Child-directed settings (see Compliance). |
 | Subscription | In-app purchase via RevenueCat (`react-native-purchases`). Apple/Google require store billing for digital subscriptions. Entitlement `unlimited`. |
 | Grades | P6 only now. **Every content path, type and screen is keyed by `grade` (`"P4" \| "P5" \| "P6"`)** so P4/P5 drop in as data. |
 
@@ -117,14 +117,14 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
   exists it rebuilds profile, look, stars, inventory and entitlement from the response, then reads
   `users/{uid}/progress/{grade}` + `users/{uid}/wrong/*` and merges them by max/union (`services/cloudSync.ts`); onboarding is
   skipped. While playing, progress and bookmarks are pushed (debounced) and re-pushed at every launch.
-- Hearts/energy live on the device (offline play); the server is the source of truth only for stars, purchases,
+- Hearts live on the device (offline play); the server is the source of truth only for stars, purchases,
   entitlements and leaderboards. Offline level results are queued (with a fixed `attemptId`) and replayed through
   `submitLevelResult`.
 
 ## Mobile app (apps/mobile)
 - expo-router routes: `(onboarding)/*`, `(tabs)/map`, `(tabs)/classroom`, `(tabs)/store`, `(tabs)/leaderboard`,
   `(tabs)/profile`, `level/[grade]/[nodeId]/[level]`, `minigame/*`.
-- State: zustand + persisted storage (MMKV) for hearts/energy/progress/wrong list/offline queue.
+- State: zustand + persisted storage (MMKV) for hearts/progress/wrong list/offline queue.
 - Content access only through `src/content/` (loads `assets/content/<grade>/*` via the generated `assets/content/index.ts`
   `contentFor(grade)`); screens never import JSON directly. `LevelResult.contentVersion` = `QuestionBundle.version`.
 - Classroom: 5-Minute Challenge, Unlimited Mistakes (previously-wrong questions), and "Practice (show answer)" (`app/practice/[topicId]`): browse a

@@ -113,7 +113,6 @@ draw("tab-trophy.png", 128, 128, icon([inPoly([[0.25, 0.12], [0.75, 0.12], [0.68
 draw("tab-person.png", 128, 128, icon([inCircle(0.5, 0.32, 0.18), minus(inCircle(0.5, 0.95, 0.38), inRect(0, 0.95, 1, 1))]));
 // ---- status icons ----
 draw("icon-heart.png", 96, 96, [{ shape: inHeart, color: "#e63946" }, { shape: inCircle(0.35, 0.3, 0.07), color: "#ffffff", alpha: 0.5 }]);
-draw("icon-energy.png", 96, 96, [{ shape: inPoly([[0.58, 0.04], [0.2, 0.55], [0.46, 0.55], [0.38, 0.96], [0.8, 0.4], [0.54, 0.4]]), color: "#fcbf49" }]);
 draw("icon-star.png", 96, 96, [{ shape: star(0.5, 0.54, 0.46, 0.2), color: "#ffb703" }]);
 draw("icon-timer.png", 96, 96, [{ shape: ring([0.5, 0.5], 0.42, 0.34), color: DARK }, { shape: inRect(0.47, 0.22, 0.53, 0.52), color: DARK }, { shape: inRect(0.47, 0.47, 0.7, 0.53), color: DARK }]);
 // ---- lock + cloud overlays ----

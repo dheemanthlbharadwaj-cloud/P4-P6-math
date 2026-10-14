@@ -36,7 +36,7 @@ export default function ClassroomTab() {
     <Screen>
       <ScrollView contentContainerStyle={{ padding: wide ? space.xl : space.l, gap: space.l }}>
         <H1>Classroom</H1>
-        <Body style={{ color: colors.inkSoft, marginTop: -8 }}>Mini games and practice. No map hearts or energy needed.</Body>
+        <Body style={{ color: colors.inkSoft, marginTop: -8 }}>Mini games and practice. No map hearts needed.</Body>
 
         <Columns columns={columns}>
         <View style={{ gap: space.l }}>

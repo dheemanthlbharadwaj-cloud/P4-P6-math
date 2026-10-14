@@ -15,7 +15,7 @@ board says nothing; each one is a constant in `packages/shared/src/gameRules.ts`
 → goes to the Game Level Map.
 
 ## 2. Game Level Map (home)
-- **Top bar:** hearts and energy (10 each per day, refilled at midnight, +3 per ad), and the current topic name.
+- **Top bar:** hearts (10 per day, refilled at midnight, +3 per ad), and the current topic name.
 - **One map per topic.** Swipe left/right to change topic (each topic is its own map).
 - **Nodes on the map = subtopics.** Tapping a node button shows the subtopic name.
 - **Map features:** friends shown on the map (mini cat avatars with their full name).
@@ -28,7 +28,6 @@ board says nothing; each one is a constant in `packages/shared/src/gameRules.ts`
 ## 3. Inside a subtopic node: Levels
 - Select Level: **Level 1 → Level 2 → Level 3** (sequential, each unlocks the next).
 - Each level = **5 questions** ("5-5-5"): Level 1 = 5 LV1 questions (MCQ), Level 2 = 5 LV2, Level 3 = 5 LV3.
-- Starting a level costs **energy** (− Energy).
 
 ## 4. Question flow
 - Question types: **MCQ** → select an answer; **Open-ended** → write the answer in the answer box.
@@ -67,8 +66,8 @@ board says nothing; each one is a constant in `packages/shared/src/gameRules.ts`
    - Ranking = **monthly stars**. Rankings reset on the **last day of every month at midnight**.
 5. **Person icon → Profile + Ads**
    - Edit name, school and other details. **Delete account and data.**
-   - Ads: +Heart / +Energy (rewarded).
-   - **Subscribe: $15/month for unlimited hearts and energy.**
+   - Ads: +Heart (rewarded).
+   - **Subscribe: $15/month for unlimited hearts.**
    - **Refer friends to get 5 stars.**
 
 ## 6. Question allocation rule ("5-5-5")

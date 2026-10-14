@@ -34,7 +34,7 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
           <CatCompanion mood={reveal ? (reveal.correct ? "correct" : "wrong") : "thinking"} size={80} />
         </View>
         {question ? (
-          <QuestionPanel question={question} grade={grade} reveal={reveal} onSubmit={submit} submitLabel="Unlock" />
+          <QuestionPanel reportContext="key" question={question} grade={grade} reveal={reveal} onSubmit={submit} submitLabel="Unlock" />
         ) : (
           <View style={{ flex: 1, padding: space.l }}><Body>No key question is available for this topic yet.</Body></View>
         )}

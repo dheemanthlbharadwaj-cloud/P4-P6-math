@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image as RNImage, Text, TextInput, View } from "react-native";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
-import { MAX_ENERGY, MAX_HEARTS, nameProblem, nameProblemMessage, tidyName } from "@p6/shared";
+import { MAX_HEARTS, nameProblem, nameProblemMessage, tidyName } from "@p6/shared";
 import { OnboardingFrame } from "../../src/components/OnboardingFrame";
 import { Stat } from "../../src/components/TopBar";
 import { uiAssets } from "../../src/theme/assets";
@@ -34,12 +34,10 @@ export default function CatStep() {
     <OnboardingFrame step={4} title="Meet your cat!" onBack={() => router.back()} nextDisabled={name.trim().length < 1 || !!problem}
       onNext={() => { useProfile.getState().set({ catName: tidyName(name) }); router.push("/(onboarding)/psle"); }}>
       <View style={{ flexDirection: "row", gap: 10, justifyContent: "center", marginBottom: 14 }}>
-        <Stat icon={uiAssets.icons.energy as number} text={`${MAX_ENERGY} energy`} />
         <Stat icon={uiAssets.icons.heart as number} text={`${MAX_HEARTS} hearts`} />
       </View>
 
       <View style={{ flexDirection: "row", justifyContent: "space-between", gap: 8 }}>
-        <Bubble side="left" icon={uiAssets.icons.energy as number} text="Each level uses 1 energy" />
         <Bubble side="right" icon={uiAssets.icons.heart as number} text="A wrong answer costs a heart" />
       </View>
       <View style={{ alignItems: "center", marginTop: 4 }}>

@@ -40,7 +40,7 @@ export default function MapTab() {
   // unstretched page grows to its map image so the map can no longer scroll and the bottom is hidden.
   const [pageHeight, setPageHeight] = useState(0);
   const [keyTopic, setKeyTopic] = useState<string | null>(null);
-  const [gate, setGate] = useState<null | "energy" | "hearts">(null);
+  const [gate, setGate] = useState<null | "hearts">(null);
   const [notice, setNotice] = useState<string | null>(null);
   useEffect(() => {
     if (!notice) return;
@@ -78,7 +78,6 @@ export default function MapTab() {
     const p = usePlayer.getState();
     const m = computeMeters(p, Date.now());
     if (!m.subscribed && m.hearts <= 0) { setGate("hearts"); return; }
-    if (!p.spendEnergy()) { setGate("energy"); return; }
     router.push({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: found.subtopic.id, level: String(level) } });
   };
 
@@ -146,8 +145,7 @@ export default function MapTab() {
       />
 
       <KeyModal grade={grade} topic={topics.find((t) => t.id === keyTopic) ?? null} visible={!!keyTopic} onClose={() => setKeyTopic(null)} />
-      <ResourceModal kind="energy" visible={gate === "energy"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />
-      <ResourceModal kind="hearts" visible={gate === "hearts"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />
+      <ResourceModal visible={gate === "hearts"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />
       {notice ? (
         <Pressable onPress={() => setNotice(null)} style={{ position: "absolute", bottom: 16, alignSelf: "center", backgroundColor: colors.ink, padding: 12, borderRadius: 12 }}>
           <Text style={{ color: "#fff", fontWeight: "800" }}>{notice}</Text>

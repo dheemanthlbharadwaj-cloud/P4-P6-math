@@ -120,7 +120,7 @@ export const normalizeFriendCode = (c: unknown) => String(c ?? "").toUpperCase()
 export const isFriendCode = (c: string) => c.length === 8 && [...c].every((ch) => FRIEND_CODE_ALPHABET.includes(ch));
 
 const QUESTION_ID_RE = /^[A-Za-z0-9_. -]{3,120}$/; // question bank ids (some contain spaces); never "/"
-const REPORT_CONTEXTS = ["level", "minigame", "practice"] as const;
+const REPORT_CONTEXTS = ["level", "minigame", "practice", "key"] as const;
 
 /** Clean a reportQuestion request: known reason/context/grade, short trimmed text. */
 export function validateReport(r: unknown): Fail | Ok<{ report: Required<Omit<ReportQuestionRequest, "note" | "answerGiven" | "contentVersion">> & { note: string; answerGiven: string | null; contentVersion: string | null } }> {

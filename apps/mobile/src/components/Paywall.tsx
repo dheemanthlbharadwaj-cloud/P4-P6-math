@@ -19,7 +19,7 @@ export function Paywall({ visible, onClose }: { visible: boolean; onClose: () =>
     setBusy(true);
     const r = await purchaseSubscription();
     setBusy(false);
-    if (r === "ok") { setMsg("You're subscribed. Enjoy unlimited hearts and energy!"); }
+    if (r === "ok") { setMsg("You're subscribed. Enjoy unlimited hearts!"); }
     else if (r === "unavailable") setMsg("Purchases aren't available in this build yet (RevenueCat keys not set).");
   };
   const restore = async () => {
@@ -33,11 +33,10 @@ export function Paywall({ visible, onClose }: { visible: boolean; onClose: () =>
     <CenterModal visible={visible} onClose={onClose}>
       <View style={{ flexDirection: "row", justifyContent: "center", gap: 14, marginBottom: 6 }}>
         <Image source={uiAssets.icons.heart} style={{ width: 52, height: 52 }} accessibilityIgnoresInvertColors />
-        <Image source={uiAssets.icons.energy} style={{ width: 52, height: 52 }} accessibilityIgnoresInvertColors />
       </View>
-      <H2 style={{ textAlign: "center" }}>Unlimited hearts and energy</H2>
+      <H2 style={{ textAlign: "center" }}>Unlimited hearts</H2>
       <Text style={{ fontSize: 34, fontFamily: fonts.display, color: colors.primary, textAlign: "center", marginVertical: 8 }}>{info.priceLabel}</Text>
-      <Body style={{ textAlign: "center" }}>Play as much as you like every day: no daily limit on hearts or energy, and no ads needed. Cancel any time in your store account settings.</Body>
+      <Body style={{ textAlign: "center" }}>Play as much as you like every day: no daily limit on hearts, and no ads needed. Cancel any time in your store account settings.</Body>
       <Body style={{ textAlign: "center", fontSize: 13, color: colors.inkSoft, marginTop: 8 }}>
         Payment is charged to your App Store / Google Play account and renews monthly until cancelled.
       </Body>

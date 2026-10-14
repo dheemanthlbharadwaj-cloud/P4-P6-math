@@ -1,0 +1,6 @@
+{
+ "2026_ACS_Junior_P1A_Q08": {
+  "question": "What is the value of 49 + (27 − 6 + 3) × 2?",
+  "verification_notes": "CORRECTED: none (kept option 3/99 as answer_key per source answer-key page), reason: source-page arithmetic defect found — literal computation of 49+(27-6+3)x2 = 49+(24x2) = 49+48 = 97, which does not match any printed option (63, 72, 99, 148); the school's own official answer key (answerkey page 35, 2026) also lists option 3 (99) as correct, indicating this is an error baked into the original exam paper/answer key (likely the setters intended (27-6+4) or a similar variant), not a transcription error by this bundle. Stem and options text verbatim-verified against source page 6. Kept the officially graded answer (3) since that is what determines scoring, but flagging for review."
+ }
+}

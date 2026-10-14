@@ -1,4 +1,4 @@
-// Hearts and energy are a daily allowance: full (MAX) at the start of every day, refilled at local midnight.
+// Hearts are a daily allowance: full (MAX) at the start of every day, refilled at local midnight.
 // Spending lowers it; ads add some back (up to MAX). Pure functions: `now` is always injected.
 export interface Meter {
   value: number; // value on the day of `updatedAt`

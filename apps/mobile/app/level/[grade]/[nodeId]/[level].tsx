@@ -131,11 +131,10 @@ export default function LevelScreen() {
   const doSkip = () => { setSession((s) => skip(s)); setMood("thinking"); setStartedAt(Date.now()); };
   const giveUp = () => { setGate(false); save(false, session); setPhase("gaveup"); };
 
-  const [needEnergy, setNeedEnergy] = useState(false);
   const leaveConfirm = useLeaveConfirm({
     enabled: phase === "playing",
     title: "Leave this level?",
-    body: "Questions you answered right keep their stars; the others will be waiting next time. The energy you already spent is not refunded.",
+    body: "Questions you answered right keep their stars; the others will be waiting next time.",
   });
   const goMap = () => { if (router.canGoBack()) router.back(); else router.replace("/(tabs)/map"); };
 
@@ -144,7 +143,6 @@ export default function LevelScreen() {
   const nextNode = info ? nextMapLevel(mapProgress, [...info.topic.subtopics].sort((a, b) => a.order - b.order).map((s) => s.id), subtopicId, level) : null;
   const startNext = () => {
     if (!nextNode) return;
-    if (!usePlayer.getState().spendEnergy()) { setNeedEnergy(true); return; }
     router.replace({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: nextNode.subtopicId, level: String(nextNode.level) } });
   };
 
@@ -188,7 +186,6 @@ export default function LevelScreen() {
           {complete && nextNode ? <Button title="Next level" variant="good" onPress={startNext} /> : null}
           <Button title="Back to map" variant={complete && nextNode ? "ghost" : "primary"} onPress={goMap} />
         </View>
-        <ResourceModal kind="energy" visible={needEnergy} onRewarded={() => { setNeedEnergy(false); startNext(); }} onGiveUp={() => setNeedEnergy(false)} giveUpLabel="Not now" />
       </Screen>
     );
   }
@@ -220,7 +217,7 @@ export default function LevelScreen() {
       ) : null}
 
       {leaveConfirm.modal}
-      <ResourceModal kind="hearts" visible={gate} onRewarded={() => { setGate(false); setMood("wrong"); }} onGiveUp={giveUp} />
+      <ResourceModal visible={gate} onRewarded={() => { setGate(false); setMood("wrong"); }} onGiveUp={giveUp} />
     </Screen>
   );
 }

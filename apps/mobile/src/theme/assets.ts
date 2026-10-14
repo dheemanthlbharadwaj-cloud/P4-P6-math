@@ -46,7 +46,6 @@ export const uiAssets = {
   },
   icons: {
     heart: require("../../assets/ui/icon-heart.png") as ImageSourcePropType,
-    energy: require("../../assets/ui/icon-energy.png") as ImageSourcePropType,
     star: require("../../assets/ui/icon-star.png") as ImageSourcePropType,
     timer: require("../../assets/ui/icon-timer.png") as ImageSourcePropType,
     calculator: require("../../assets/ui/icon-calculator.png") as ImageSourcePropType,

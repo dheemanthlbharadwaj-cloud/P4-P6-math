@@ -15,7 +15,7 @@ sizes in the components that render them (`NodeButton`, `LevelButton`, `TabIcon`
 | `level-1.png`, `level-2.png`, `level-3.png` | Level selector buttons | 192x192 |
 | `level-gold.png` | Completed level (gold button) | 192x192 |
 | `tab-map.png`, `tab-book.png`, `tab-cat.png`, `tab-trophy.png`, `tab-person.png` | Bottom toolbar, in this order | 128x128, single-colour dark art (shown at 50% opacity when inactive) |
-| `icon-heart.png`, `icon-energy.png`, `icon-star.png`, `icon-timer.png` | Top bar / store status icons | 96x96 |
+| `icon-heart.png`, `icon-star.png`, `icon-timer.png` | Top bar / store status icons | 96x96 |
 | `lock.png` | Lock on faded (locked) topics | 192x192 |
 | `cloud.png` | Cloud overlay on locked topics (tiled across the lower map) | 512x256 |
 | `hat-cap.png`, `hat-crown.png`, `hat-wizard.png`, `hat-grad.png` | Hats (id = `hat-*` in the store catalogue); drawn on top of the cat's head | 256x256, hat centred horizontally, brim near the bottom edge |

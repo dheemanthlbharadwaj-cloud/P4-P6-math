@@ -262,6 +262,9 @@ describe("question reports", () => {
     expect(v.ok).toBe(true);
     if (v.ok) expect(v.report).toMatchObject({ note: "answer should be 12", answerGiven: "12", contentVersion: null });
   });
+  it("accepts every question context", () => {
+    for (const context of ["level", "minigame", "practice", "key"]) expect(validateReport({ ...ok, context }).ok).toBe(true);
+  });
   it("rejects unknown reasons, contexts, grades and odd ids", () => {
     expect(validateReport({ ...ok, reason: "spam" }).ok).toBe(false);
     expect(validateReport({ ...ok, context: "home" }).ok).toBe(false);

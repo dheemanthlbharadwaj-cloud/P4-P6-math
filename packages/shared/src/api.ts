@@ -173,7 +173,7 @@ export interface ReportQuestionRequest {
   reason: ReportReason;
   note?: string;
   /** Where the student saw it. */
-  context: "level" | "minigame" | "practice";
+  context: "level" | "minigame" | "practice" | "key";
   /** The student's answer, when they had given one (helps with "marked wrong" reports). */
   answerGiven?: string;
   contentVersion?: string;

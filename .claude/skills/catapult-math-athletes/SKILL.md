@@ -1,6 +1,6 @@
 ---
 name: catapult-math-athletes
-description: Everything needed to work on Catapult Math Athletes (cat-themed Singapore P6/PSLE math game, Expo React Native, offline question bundle from the primary-math-sg editor Firestore). Use for ANY task in this repo — app UI, map, cat, hearts/energy, content sync/build, question figures, editor (Firestore/Cloudinary) writes, web test build deploy, store builds — and to learn how to get credentials/access in each environment.
+description: Everything needed to work on Catapult Math Athletes (cat-themed Singapore P6/PSLE math game, Expo React Native, offline question bundle from the primary-math-sg editor Firestore). Use for ANY task in this repo — app UI, map, cat, hearts, content sync/build, question figures, editor (Firestore/Cloudinary) writes, web test build deploy, store builds — and to learn how to get credentials/access in each environment.
 ---
 
 # Catapult Math Athletes — working guide
@@ -34,11 +34,11 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
 | Map layout | Even spacing; gaps only between level groups; subtopic labels never overlap buttons/cat (`pickRect` in `TopicMapPage.tsx`). Spots come from `theme/mapPaths.ts` (`spots`): `map-scenes.py` cuts the maps, then `apps/mobile/scripts/map-spots.py` places buttons exactly evenly (level-group jump = 2 steps) in open water. |
 | Cat on map | At the **furthest completed level** (`lastDone`), else first; stands **beside** that button and never covers any button (`placeCat` in `src/logic/mapLayout.ts`, tested). |
 | Cat in questions | Mood images change for correct ("great job") / wrong; the 5-min board clock (`CatTimer`) shows only while mood is `thinking` (`CatCompanion.tsx`) and **restarts for every question** in a level (the 5-Minute Challenge mini-game keeps one clock for the whole challenge). |
-| Hearts & energy | 10 each per day, refilled at local midnight (`src/logic/daily.ts`), +3 per rewarded ad, no recovery timer. Constants in `packages/shared/src/gameRules.ts`. |
+| Hearts | 10 per day, refilled at local midnight (`src/logic/daily.ts`), +3 per rewarded ad, no recovery timer. Constants in `packages/shared/src/gameRules.ts`. |
 | Stars | `packages/shared/src/stars.ts` (app + backend use the same rules). Level = 5 questions, 5 stars. Each question gets **one try per attempt**: right → its star (+1, once ever); wrong → −1 heart and it moves on (doesn't come back in that attempt). The next attempt shows **only the questions without a star** (`levelQuestionsToPlay`). All 5 → complete (star button). A complete level replays all 5; the first replay with all 5 right pays **one bonus star per level** (not shown by the button). Mini games: +1 per question right that was never attempted before. Practice: none. **The server marks every answer itself** (answer key generated from the bundle by `backend/functions/scripts/copy-shared.mjs`; `logic/marking.ts`); clients send responses, never "correct". Server records: users/{uid}/levelStars/{grade}_{level} {correct, bonus}, attempted. App: progress `correctIds` per level (merged with the server's `levelCorrectIds`), ledger `src/store/stars.ts`. |
 | Leaderboard | Title "Catapult Math Athletes"; race track (`RaceTrack.tsx`, `logic/raceTrack.ts`): only you + friends, x ∝ this month's stars, right = most, ~5 cats per screen, scrolls, ties in stacked lanes. Tabs Friends / School / Global (ranking = this month's stars). Below: Quests. |
 | Quests | Lifetime stars 25/50/75/100/150/200 unlock quest-only looks (Rose, Golden Cap, Ocean, Royal Crown, Galaxy, Star Wizard; `QUESTS` in stars.ts). Claim → inventory (claimQuest callable); shown in the store as "Quest · N★", never sold. Skins: `scripts/cat-colors.py` (from the grey coat); hats: `scripts/quest-hats.py` (recolours). |
-| Paywall | Heart + energy icons, title "Unlimited hearts and energy", no cat. |
+| Paywall | Heart icon, title "Unlimited hearts", no cat. |
 | Buttons | Full black border all round (no coloured lip). |
 | Screen sizes | Fill the whole window; layout by size class (`src/logic/screenClass.ts`, `useLayout()` in `theme/layout.ts`): phone (bottom tabs, one column, unchanged), tablet ≥700×500 (left icon rail, 2 card columns), desktop ≥1100×560 (left side menu with names, 3 card columns). Map: several topic maps side by side, each ≥380 wide, one title per map. Two panes side by side (Leaderboard ranking │ quests, Shop preview │ items, sign-in/onboarding cat │ form) only when the area is ≥900 wide. Questions: side by side in landscape, question over working space on portrait tablets; bigger picture/text on big screens. Never a centred phone column. |
 | Question figures | Figure only; only text allowed is labels inside the figure. Parts separated by question text are cropped separately and stacked; text that can't be cropped out is whited out. Never under/over-crop. |
@@ -59,7 +59,7 @@ apps/mobile/       Expo app
   app/               routes: (onboarding)/, (tabs)/map|classroom|leaderboard|store|profile, level/[grade], practice/[topicId], minigame/[mode]
   src/components/    TopicMapPage, CatCompanion, CatTimer, CatAvatar, QuestionPanel, Paywall, Calculator, ui.tsx, FigureViewer, RichText…
   src/logic/         unlock, daily, timer, calculator, psle, strokes, levelSession (vitest tests alongside)
-  src/store/         player (hearts/energy), progress, profile, cosmetics, friends, queue, wrong…
+  src/store/         player (hearts), progress, profile, cosmetics, friends, queue, wrong…
   src/dev/           DevToolsPanel (on in dev builds and when EXPO_PUBLIC_DEV_TOOLS=1): simulate midnight, set meters, unlock,
                      stars/quests (lifetime → 24/49/…, lock/unlock quests), star rules (forget starred levels / attempted
                      questions), leaderboard (0/2/8 friends, set/clear school)…; samples.ts = sample friends, school
@@ -180,7 +180,7 @@ not in the repo — recreate from the description above if needed.
 
 ## 7. Testing the app in a browser
 - `web-preview.py` → `dist-preview/`; serve with `python3 -m http.server PORT`; drive with Playwright
-  (Chromium path above). Use the Dev Tools panel to unlock levels, set hearts/energy, simulate midnight.
+  (Chromium path above). Use the Dev Tools panel to unlock levels, set hearts, simulate midnight.
 - Check: map colours/gold nodes/no lock badges, cat position, label overlap, level flow, cat moods, paywall,
   question figures.
 

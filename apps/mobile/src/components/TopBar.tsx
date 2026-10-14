@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import { MAX_ENERGY, MAX_HEARTS } from "@p6/shared";
+import { MAX_HEARTS } from "@p6/shared";
 import { uiAssets } from "../theme/assets";
 import { colors, fonts, radius } from "../theme/colors";
 import { useMeters } from "../hooks/useNow";
@@ -14,14 +14,13 @@ export function Stat({ icon, text, tint }: { icon: number | { uri: string }; tex
   );
 }
 
-/** Hearts and energy (a daily allowance, refilled at midnight). `topic` shows the current map's topic name (map screen). */
+/** Hearts (a daily allowance, refilled at midnight). `topic` shows the current map's topic name (map screen). */
 export function TopBar({ topic }: { topic?: string }) {
   const m = useMeters();
   return (
     <View style={styles.wrap}>
       <View style={styles.row}>
         <Stat icon={uiAssets.icons.heart as number} text={m.subscribed ? "∞" : `${m.hearts}/${MAX_HEARTS}`} />
-        <Stat icon={uiAssets.icons.energy as number} text={m.subscribed ? "∞" : `${m.energy}/${MAX_ENERGY}`} />
       </View>
       {topic ? (
         <Text style={styles.topic} numberOfLines={1} accessibilityRole="header">

@@ -1,5 +1,5 @@
 // Classroom "Practice (show answer)": browse a topic's pool questions (including the ones that cannot be auto-marked),
-// reveal the answer, then self-mark. No hearts, energy, stars or wrong-bookmarks: pure practice.
+// reveal the answer, then self-mark. No hearts, stars or wrong-bookmarks: pure practice.
 import React, { useMemo, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";

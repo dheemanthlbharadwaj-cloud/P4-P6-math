@@ -10,11 +10,10 @@ export function useNow(intervalMs = 1000): number {
   return now;
 }
 
-/** Live hearts/energy (re-checked every second so the midnight refill shows up). */
+/** Live hearts (re-checked every second so the midnight refill shows up). */
 export function useMeters(): MetersView {
   const hearts = usePlayer((s) => s.hearts);
-  const energy = usePlayer((s) => s.energy);
   const subscribed = usePlayer((s) => s.subscribed);
   const now = useNow(1000);
-  return computeMeters({ hearts, energy, subscribed }, now);
+  return computeMeters({ hearts, subscribed }, now);
 }

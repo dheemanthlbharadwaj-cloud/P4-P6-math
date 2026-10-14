@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 import { MAX_REPORT_NOTE, REPORT_REASONS, type Grade, type ReportQuestionRequest, type ReportReason } from "@p6/shared";
-import { Button, H2, Sheet } from "./ui";
+import { Body, Button, CenterModal, H2, Sheet } from "./ui";
 import { api, ApiError } from "../services/api";
 import { getContentVersion } from "../content";
 import { colors, fonts, radius, space } from "../theme/colors";
@@ -11,8 +11,6 @@ import { colors, fonts, radius, space } from "../theme/colors";
 interface Props {
   visible: boolean;
   onClose: () => void;
-  /** Called with a short message once the report is sent (or could not be). */
-  onDone: (message: string) => void;
   questionId: string;
   grade: Grade;
   context: ReportQuestionRequest["context"];
@@ -20,11 +18,12 @@ interface Props {
   answerGiven?: string;
 }
 
-export function ReportSheet({ visible, onClose, onDone, questionId, grade, context, answerGiven }: Props) {
+export function ReportSheet({ visible, onClose, questionId, grade, context, answerGiven }: Props) {
   const [reason, setReason] = useState<ReportReason | null>(null);
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [thanks, setThanks] = useState(false);
   useEffect(() => { if (visible) { setReason(null); setNote(""); setError(null); } }, [visible, questionId]);
 
   const needsNote = reason === "other" && !note.trim();
@@ -32,9 +31,9 @@ export function ReportSheet({ visible, onClose, onDone, questionId, grade, conte
     if (!reason) return;
     setBusy(true); setError(null);
     try {
-      const res = await api.reportQuestion({ questionId, grade, reason, note: note.trim() || undefined, context, answerGiven: answerGiven || undefined, contentVersion: getContentVersion(grade) });
+      await api.reportQuestion({ questionId, grade, reason, note: note.trim() || undefined, context, answerGiven: answerGiven || undefined, contentVersion: getContentVersion(grade) });
       onClose();
-      onDone(res.updated ? "Thanks! We updated your report." : "Thanks! Our team will check this question.");
+      setThanks(true);
     } catch (e) {
       const code = e instanceof ApiError ? e.code : "";
       setError(code === "not-signed-in" ? "Sign in to report a question."
@@ -47,6 +46,12 @@ export function ReportSheet({ visible, onClose, onDone, questionId, grade, conte
   };
 
   return (
+    <>
+    <CenterModal visible={thanks} onClose={() => setThanks(false)}>
+      <H2>Thanks for telling us!</H2>
+      <Body style={{ marginTop: 4, marginBottom: space.m }}>We'll look into this question within 3–5 days.</Body>
+      <Button title="OK" onPress={() => setThanks(false)} />
+    </CenterModal>
     <Sheet visible={visible} onClose={busy ? undefined : onClose}>
       <H2>Report a problem</H2>
       <Text style={{ color: colors.inkSoft, fontWeight: "700", marginTop: 4, marginBottom: space.m }}>What is wrong with this question?</Text>
@@ -68,5 +73,6 @@ export function ReportSheet({ visible, onClose, onDone, questionId, grade, conte
       <Button title={busy ? "Sending…" : "Send report"} onPress={() => void send()} disabled={!reason || needsNote || busy} style={{ marginTop: space.m }} />
       <Button title="Cancel" variant="ghost" onPress={onClose} disabled={busy} style={{ marginTop: 10 }} />
     </Sheet>
+    </>
   );
 }
