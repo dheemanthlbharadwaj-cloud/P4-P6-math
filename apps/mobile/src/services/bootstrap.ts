@@ -1,5 +1,7 @@
 import type { AccountState, BootstrapProfileResponse, UserProfile } from "@p6/shared";
-import { api } from "./api";
+import { api, ApiError } from "./api";
+import { applyBalances } from "./balances";
+import { useReferral } from "../store/referral";
 import { pullAndMerge, pushProfile, startCloudSync } from "./cloudSync";
 import { useProfile } from "../store/profile";
 import { useCosmetics } from "../store/cosmetics";
@@ -68,9 +70,26 @@ export async function bootstrapServerProfile(): Promise<boolean> {
     if (!res.created && !p.serverSynced) adoptServerProfile(profile, res);
     await finishSync(res, profile);
     if (res.created || p.serverSynced) void pushProfile();
+    await redeemPendingReferral(res.created); // also retries a code left by an offline launch
     return true;
   } catch {
     return false;
+  }
+}
+
+/** Redeem the friend code typed at sign-up, once. Network trouble keeps it for the next launch; any answer clears it. */
+async function redeemPendingReferral(created: boolean) {
+  const code = useReferral.getState().pendingCode;
+  if (!code) return;
+  try {
+    const r = await api.redeemReferral({ friendCode: code });
+    applyBalances(r);
+    useReferral.getState().set({ pendingCode: "", notice: { kind: "welcome", stars: r.welcomeStars } });
+    void refreshFriends(true);
+  } catch (e) {
+    if (e instanceof ApiError && e.transient) return; // retried on the next launch
+    if (!created && e instanceof ApiError && e.code === "already-exists") { useReferral.getState().set({ pendingCode: "" }); return; }
+    useReferral.getState().set({ pendingCode: "", notice: { kind: "failed" } });
   }
 }
 
@@ -91,7 +110,7 @@ export function refreshFriends(force = false): Promise<void> {
   friendsInFlight = (async () => {
     try {
       const res = await api.getLeaderboard({ scope: "friends" });
-      useFriends.getState().set(res.friends.filter((f) => f.uid !== res.selfUid));
+      useFriends.getState().set(res.friends.filter((f) => f.uid !== res.selfUid), res.friendSpots ?? {});
       friendsLoaded = useFriends.getState().friends;
       friendsAt = Date.now();
       friendsUid = uid;

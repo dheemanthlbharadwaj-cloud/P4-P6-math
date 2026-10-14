@@ -2,13 +2,15 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { FlatList, Pressable, Text, View, type NativeScrollEvent, type NativeSyntheticEvent, useWindowDimensions } from "react-native";
 import { useRouter } from "expo-router";
 import type { LevelNo } from "@p6/shared";
-import { Screen } from "../../src/components/ui";
+import { Body, Button, CenterModal, H2, Screen } from "../../src/components/ui";
 import { TopBar } from "../../src/components/TopBar";
 import { TopicMapPage } from "../../src/components/TopicMapPage";
 import { KeyModal } from "../../src/components/KeyModal";
 import { ResourceModal } from "../../src/components/ResourceModal";
 import { getLevelQuestions, getSubtopic, getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
+import { useReferral } from "../../src/store/referral";
+import { REFERRAL_WELCOME_STARS } from "@p6/shared";
 import { useProgress } from "../../src/store/progress";
 import { useFriends } from "../../src/store/friends";
 import { usePlayer, computeMeters } from "../../src/store/player";
@@ -34,6 +36,8 @@ export default function MapTab() {
   const topics = useMemo(() => getTopics(grade), [grade]);
   const progress = useProgress((s) => s.grades[grade]);
   const friends = useFriends((s) => s.friends);
+  const friendSpots = useFriends((s) => s.spots);
+  const referralNotice = useReferral((s) => s.notice);
   const listRef = useRef<FlatList>(null);
   const [index, setIndex] = useState(0);
   // Pages must be exactly as tall as the list viewport; a horizontal list does not stretch its items, and an
@@ -137,6 +141,7 @@ export default function MapTab() {
               unlocked={isTopicUnlocked(progress, item.id)}
               progress={progress}
               friends={friends}
+              friendSpots={friendSpots}
               onNodePress={start}
               onLockPress={() => setKeyTopic(item.id)}
             />
@@ -146,6 +151,15 @@ export default function MapTab() {
 
       <KeyModal grade={grade} topic={topics.find((t) => t.id === keyTopic) ?? null} visible={!!keyTopic} onClose={() => setKeyTopic(null)} />
       <ResourceModal visible={gate === "hearts"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />
+      <CenterModal visible={!!referralNotice} onClose={() => useReferral.getState().set({ notice: null })}>
+        <H2 style={{ textAlign: "center" }}>{referralNotice?.kind === "welcome" ? "Welcome!" : "Friend code"}</H2>
+        <Body style={{ textAlign: "center", marginVertical: 10 }}>
+          {referralNotice?.kind === "welcome"
+            ? `Welcome! You and your friend both got stars: +${referralNotice.stars || REFERRAL_WELCOME_STARS} for you.`
+            : "That friend code didn't work. You can enter it later in Profile."}
+        </Body>
+        <Button title="OK" variant="gold" onPress={() => useReferral.getState().set({ notice: null })} />
+      </CenterModal>
       {notice ? (
         <Pressable onPress={() => setNotice(null)} style={{ position: "absolute", bottom: 16, alignSelf: "center", backgroundColor: colors.ink, padding: 12, borderRadius: 12 }}>
           <Text style={{ color: "#fff", fontWeight: "800" }}>{notice}</Text>

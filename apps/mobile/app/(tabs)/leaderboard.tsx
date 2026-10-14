@@ -4,10 +4,8 @@ import React, { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, Image, RefreshControl, ScrollView, Text, View } from "react-native";
 import { useIsFocused, useRouter } from "expo-router";
 import type { GetLeaderboardResponse, LeaderboardEntry, LeaderboardScope } from "@p6/shared";
-import { SHOW_SAMPLES, sampleLeaderboard } from "../../src/dev/samples";
 import { useProfile } from "../../src/store/profile";
 import { useCosmetics } from "../../src/store/cosmetics";
-import { useProgress } from "../../src/store/progress";
 import { useFriends } from "../../src/store/friends";
 import { useOfflineQueue } from "../../src/store/queue";
 import { catPoses } from "../../src/theme/cats";
@@ -16,6 +14,7 @@ import { Body, Button, Chip, H1, H2, Screen } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { RaceTrack } from "../../src/components/RaceTrack";
 import { QuestsCard } from "../../src/components/QuestsCard";
+import { DailyQuestsCard } from "../../src/components/DailyQuestsCard";
 import { api } from "../../src/services/api";
 import { colors, fonts, space } from "../../src/theme/colors";
 import { useLayout } from "../../src/theme/layout";
@@ -23,7 +22,7 @@ import { useLayout } from "../../src/theme/layout";
 const medalColor = { gold: colors.gold, silver: colors.silver, bronze: colors.bronze } as const;
 const topColor = [colors.gold, colors.silver, colors.bronze];
 const SCOPES: { id: LeaderboardScope; label: string }[] = [{ id: "friends", label: "Friends" }, { id: "school", label: "School" }, { id: "global", label: "Global" }];
-const firstName = (n: string) => n.replace(/\s*\(sample\)$/, "").split(" ")[0];
+const firstName = (n: string) => n.split(" ")[0];
 
 function Medal({ medal }: { medal?: LeaderboardEntry["medal"] }) {
   if (!medal) return null;
@@ -34,21 +33,12 @@ function Medal({ medal }: { medal?: LeaderboardEntry["medal"] }) {
   );
 }
 
-/** The real leaderboard, or (backend not live yet) the sample players with the student's own stars. */
-async function loadBoard(scope: LeaderboardScope): Promise<{ data: GetLeaderboardResponse | null; sample: boolean }> {
+/** The leaderboard from the backend, or null when it cannot be loaded. */
+async function loadBoard(scope: LeaderboardScope): Promise<GetLeaderboardResponse | null> {
   try {
-    return { data: await api.getLeaderboard({ scope }), sample: false };
+    return await api.getLeaderboard({ scope });
   } catch {
-    if (!SHOW_SAMPLES) return { data: null, sample: false };
-    const prof = useProfile.getState();
-    const look = useCosmetics.getState();
-    return {
-      sample: true,
-      data: sampleLeaderboard(scope, {
-        uid: prof.uid ?? "me", displayName: prof.fullName || "You", school: prof.school, cat: { colorId: look.colorId, hatId: look.hatId },
-        stars: prof.monthlyStars, questionsDone: Object.values(useProgress.getState().grades.P6?.levels ?? {}).filter((l) => l.completed).length * 5,
-      }, useFriends.getState().friends),
-    };
+    return null;
   }
 }
 
@@ -60,14 +50,10 @@ export default function LeaderboardTab() {
   const [track, setTrack] = useState<GetLeaderboardResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [sample, setSample] = useState(false);
   // Reload when the server has new stars (a queued level / mini-game result was accepted: the queue shrinks), or the
-  // look, school or friends change. The local star count goes up while a level is still running, before the server
-  // knows, so it only drives the sample board (backend not live). Only while the tab is on screen.
+  // look, school or friends change. Only while the tab is on screen.
   const focused = useIsFocused();
   const pending = useOfflineQueue((s) => s.items.length);
-  const localStars = useProfile((s) => s.monthlyStars);
-  const monthlyStars = sample ? localStars : 0;
   const school = useProfile((s) => s.school);
   const look = useCosmetics((s) => `${s.colorId}|${s.hatId}`);
   const friendCount = useFriends((s) => s.friends.length);
@@ -75,12 +61,11 @@ export default function LeaderboardTab() {
   const load = useCallback(async () => {
     setLoading(true); setError(null);
     const [board, friends] = await Promise.all([loadBoard(scope), scope === "friends" ? null : loadBoard("friends")]);
-    setData(board.data);
-    setTrack((friends ?? board).data);
-    setSample(board.sample);
-    if (!board.data) setError("Can't load the leaderboard. Check your internet connection.");
+    setData(board);
+    setTrack(scope === "friends" ? board : friends);
+    if (!board) setError("Can't load the leaderboard. Check your internet connection.");
     setLoading(false);
-  }, [scope, monthlyStars, school, look, friendCount, pending]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [scope, school, look, friendCount, pending]); // eslint-disable-line react-hooks/exhaustive-deps
   // Debounced: right after sign-in, stars / look / school / friends arrive one by one and would each reload the board.
   useEffect(() => {
     if (!focused) return;
@@ -113,11 +98,6 @@ export default function LeaderboardTab() {
           {SCOPES.map((s) => <Chip key={s.id} label={s.label} selected={scope === s.id} onPress={() => setScope(s.id)} />)}
         </View>
 
-        {sample ? (
-          <View style={{ backgroundColor: colors.highlight, borderWidth: 2, borderColor: colors.border, borderRadius: 12, padding: 10 }}>
-            <Text style={{ fontWeight: "800", color: colors.ink }}>Sample leaderboard: these players are examples until the game is online. Your stars are real.</Text>
-          </View>
-        ) : null}
         {loading && !data ? <ActivityIndicator color={colors.primary} style={{ marginTop: 24 }} /> : null}
         {error ? (
           <View style={{ alignItems: "center", gap: 8, marginVertical: 12 }}>
@@ -177,6 +157,7 @@ export default function LeaderboardTab() {
         </View>
 
         <View style={{ gap: space.m, ...(split ? { flex: 2, minWidth: 0 } : null) }}>
+        <DailyQuestsCard focused={focused} pending={pending} />
         <QuestsCard />
         <View style={{ gap: 4 }}>
           <H2>How to earn stars</H2>

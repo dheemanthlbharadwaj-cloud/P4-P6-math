@@ -30,6 +30,8 @@ export interface TopicMapPageProps {
   unlocked: boolean;
   progress: GradeProgress | undefined;
   friends: PublicProfile[];
+  /** friend uid → topic id → levelKey of the furthest level that friend completed on that map */
+  friendSpots: Record<string, Record<string, string>>;
   /** A level button was tapped (`locked` = its previous level isn't finished yet). */
   onNodePress: (subtopicId: string, level: LevelNo, locked: boolean) => void;
   onLockPress: () => void;
@@ -96,9 +98,7 @@ function buildRoute(path: [number, number, 0 | 1][], width: number, height: numb
   return { at, length };
 }
 
-const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
-
-export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, onNodePress, onLockPress }: TopicMapPageProps) {
+export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, friendSpots, onNodePress, onLockPress }: TopicMapPageProps) {
   const ref = useRef<ScrollView>(null);
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
   // Bottom → top: every subtopic's Level 1, then every Level 2, then every Level 3.
@@ -207,13 +207,12 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
           ) : null}
           {unlocked
             ? (() => {
-                const perNode = new Map<number, number>();
                 const taken = [...placed.rects];
-                return friends.slice(0, 8).map((f) => {
-                  // TODO(backend): friends' real map position is not in the API yet; pin them to a stable node by uid hash.
-                  const i = hash(f.uid) % Math.max(1, n);
-                  const k = perNode.get(i) ?? 0;
-                  perNode.set(i, k + 1);
+                const keyIndex = new Map<string, number>(nodes.map(({ s, level }, i) => [`${s.id}#${level}`, i]));
+                return friends.slice(0, 8).flatMap((f) => {
+                  // A friend stands on the furthest level they completed on this map; no spot here, not drawn.
+                  const i = keyIndex.get(friendSpots[f.uid]?.[topic.id] ?? "");
+                  if (i === undefined) return [];
                   // Next to the button wherever no name or other button is in the way.
                   const p = pos[i];
                   const cands: Rect[] = [
@@ -225,14 +224,13 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
                   ].map((r) => ({ ...r, x: Math.min(width - r.w, Math.max(0, r.x)) }));
                   const r = pickRect(cands, taken);
                   taken.push(r);
-                  void k;
                   const x = r.x, y = r.y;
-                  return (
+                  return [(
                     <View key={f.uid} style={[styles.friend, { left: Math.min(width - 64, Math.max(0, x)), top: y }]} pointerEvents="none">
                       <CatAvatar source={catPoses.cute} colorId={f.cat.colorId} hatId={f.cat.hatId} size={46} />
-                      <Text style={styles.friendName} numberOfLines={1}>{f.displayName.replace(/\s*\(sample\)$/, "")}</Text>
+                      <Text style={styles.friendName} numberOfLines={1}>{f.displayName}</Text>
                     </View>
-                  );
+                  )];
                 });
               })()
             : null}

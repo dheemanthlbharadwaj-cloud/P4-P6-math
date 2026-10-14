@@ -10,7 +10,6 @@ import { catPoses } from "../../src/theme/cats";
 import { uiAssets } from "../../src/theme/assets";
 import { useCosmetics } from "../../src/store/cosmetics";
 import { useProfile } from "../../src/store/profile";
-import { SHOW_SAMPLES } from "../../src/dev/samples";
 
 // Quest rewards appear next to the store items but are never sold: they unlock in Leaderboard → Quests.
 type ShopItem = StoreItem & { questStars?: number };
@@ -56,14 +55,6 @@ export default function StoreTab() {
       setMsg(`Bought ${selected.name}!`);
     } catch (e) {
       const code = (e as { code?: string }).code ?? "";
-      if (SHOW_SAMPLES && /not-signed-in|unavailable|network|deadline|internal|unknown/.test(code) && stars >= selected.price) {
-        // Sample mode (backend not live yet): apply the purchase on this device so the store can be tried.
-        useProfile.getState().set({ starBalance: stars - selected.price });
-        useCosmetics.getState().grantOwned([selected.id]);
-        useCosmetics.getState().equip(selected.id, selected.kind);
-        setMsg(`Bought ${selected.name}!`);
-        return;
-      }
       setMsg(/not-signed-in|unavailable|network|deadline/.test(code) ? "Connect to the internet to shop." : code.includes("failed-precondition") ? "Not enough stars yet." : "Could not complete the purchase.");
     } finally { setBusy(false); }
   };

@@ -4,6 +4,8 @@ import type {
 } from "./shared/index.js";
 import { col, db, entriesRef, FieldValue, monthlyBoard, requireUid, snapshotEntriesRef, throwFail } from "./admin.js";
 import { sgtDate, sgtMonth } from "./logic/dates.js";
+import { CONTENT } from "./content/index.js";
+import { computeFriendSpots } from "./logic/friendSpots.js";
 import { buildEntries, type Medal, type Row } from "./logic/ranking.js";
 import { isFriendCode, normalizeFriendCode, pairId, validateFriendRequest } from "./logic/rules.js";
 
@@ -92,10 +94,26 @@ export const getLeaderboard = onCall(async (req): Promise<GetLeaderboardResponse
 
   const fs = await db.collection(col.friendships).where("members", "array-contains", uid).limit(MAX_FRIENDS).get();
   const friendUids = fs.docs.map((d) => (d.data().members as string[]).find((m) => m !== uid)!).filter(Boolean);
-  const respond = (entries: GetLeaderboardResponse["entries"], profiles: Map<string, PublicProfile>): GetLeaderboardResponse => ({
+  // Where each friend stands on each map (friends scope only): one progress doc read per friend, capped by MAX_FRIENDS.
+  const spotsFor = async (profiles: Map<string, PublicProfile>): Promise<Record<string, Record<string, string>>> => {
+    if (!friendUids.length) return {};
+    const gradeOf = (u: string) => profiles.get(u)?.grade ?? profiles.get(uid)?.grade ?? "P6";
+    const snaps = await db.getAll(...friendUids.map((u) => db.collection(col.users).doc(u).collection("progress").doc(gradeOf(u))));
+    const out: Record<string, Record<string, string>> = {};
+    snaps.forEach((s, i) => {
+      const u = friendUids[i];
+      const topics = CONTENT[gradeOf(u)]?.topics;
+      const levels = s.exists ? (s.data()?.levels as Record<string, { completed?: boolean }> | undefined) : undefined;
+      if (!topics || !levels) return;
+      const spots = computeFriendSpots(topics, levels);
+      if (Object.keys(spots).length) out[u] = spots;
+    });
+    return out;
+  };
+  const respond = async (entries: GetLeaderboardResponse["entries"], profiles: Map<string, PublicProfile>): Promise<GetLeaderboardResponse> => ({
     scope, periodKey: sgtMonth(now), selfUid: uid, friendUids,
     friends: friendUids.map((u) => profiles.get(u)).filter((p): p is PublicProfile => !!p),
-    entries,
+    entries, ...(scope === "friends" ? { friendSpots: await spotsFor(profiles) } : {}), // only the map (friends scope) needs spots
   });
   const monthlyRows = async (uids: string[]): Promise<Row[]> => {
     const m = await getAll<{ stars: number; questionsDone: number }>(uids.map((u) => entriesRef(month).doc(u)), (d) => ({ stars: d.data()!.stars ?? 0, questionsDone: d.data()!.questionsDone ?? 0 }));

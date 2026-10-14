@@ -151,6 +151,10 @@ export interface GetLeaderboardResponse {
   friendUids: string[];
   /** public profiles of the caller's friends (map avatars + names); never includes the caller */
   friends: PublicProfile[];
+  /** Where each friend stands on the maps: friend uid → topicId → the level key (`${subtopicId}#${level}`, see
+   *  levelKey) of the furthest level they have completed on that map, in map order (every Level 1, then every Level 2,
+   *  then every Level 3). Maps a friend hasn't completed a level on are left out (their cat isn't shown there). */
+  friendSpots?: Record<string, Record<string, string>>;
   /** friends: caller + friends; school: the caller's school (top 200); global: top 100 (+ the caller when outside
    *  either list). Sorted by rank. */
   entries: LeaderboardEntry[];

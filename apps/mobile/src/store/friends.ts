@@ -1,13 +1,17 @@
 import { create } from "zustand";
 import type { PublicProfile } from "@p6/shared";
-import { SAMPLE_FRIENDS, SHOW_SAMPLES } from "../dev/samples";
 
-// In-memory cache of friends' public profiles (map avatars). Starts with the sample friends while SHOW_SAMPLES is on;
-// the real list from the backend replaces it.
+// In-memory cache of friends' public profiles (map avatars) and where each stands on each map (`spots`: friend uid →
+// topic id → levelKey of the furthest level they completed there). Replaced by every refresh from the backend.
 interface FriendsState {
   friends: PublicProfile[];
-  set: (f: PublicProfile[]) => void;
+  spots: Record<string, Record<string, string>>;
+  set: (f: PublicProfile[], spots?: Record<string, Record<string, string>>) => void;
   reset: () => void;
 }
-const initialFriends = (): PublicProfile[] => (SHOW_SAMPLES ? [...SAMPLE_FRIENDS] : []);
-export const useFriends = create<FriendsState>((set) => ({ friends: initialFriends(), set: (friends) => set({ friends }), reset: () => set({ friends: initialFriends() }) }));
+export const useFriends = create<FriendsState>((set) => ({
+  friends: [],
+  spots: {},
+  set: (friends, spots = {}) => set({ friends, spots }),
+  reset: () => set({ friends: [], spots: {} }),
+}));

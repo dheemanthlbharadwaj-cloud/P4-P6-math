@@ -1,6 +1,6 @@
 // DEV TOOLS panel (testing only, see devTools.ts): a floating 🛠 button that opens shortcuts to unlock content and
 // simulate situations (out of hearts, ads failing, PSLE tomorrow, wrong questions to review, stars, quests,
-// leaderboard friends and school, …).
+// leaderboard school, …).
 import React, { useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
@@ -14,7 +14,6 @@ import { useCosmetics } from "../store/cosmetics";
 import { useWrong } from "../store/wrong";
 import { useStars } from "../store/stars";
 import { useFriends } from "../store/friends";
-import { SAMPLE_FRIENDS, SAMPLE_REQUEST_PROFILE } from "./samples";
 import { resetAllStores } from "../store/reset";
 import { useNow } from "../hooks/useNow";
 import { colors, fonts, radius } from "../theme/colors";
@@ -132,10 +131,6 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
     useCosmetics.getState().grantOwned(questIds);
     done("All quest rewards unlocked");
   };
-  const setFriends = (n: "none" | "two" | "all") => {
-    useFriends.getState().set(n === "none" ? [] : n === "two" ? SAMPLE_FRIENDS.slice(0, 2) : [...SAMPLE_FRIENDS, SAMPLE_REQUEST_PROFILE]);
-    done(n === "none" ? "No friends" : n === "two" ? "2 sample friends" : "All sample friends (8)");
-  };
   const firstSub = [...(topics[0]?.subtopics ?? [])].sort((a, b) => a.order - b.order)[0];
 
   return (
@@ -179,10 +174,7 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
           }} />
         </Section>
         <Section title="Leaderboard">
-          <Btn label="Friends: none" onPress={() => setFriends("none")} />
-          <Btn label="Friends: 2" onPress={() => setFriends("two")} />
-          <Btn label="Friends: all 8" onPress={() => setFriends("all")} />
-          <Btn label="School: Nanyang Primary" onPress={() => { useProfile.getState().set({ school: "Nanyang Primary School" }); done("School set (Aisyah and Priya are friends there)"); }} />
+          <Btn label="School: Nanyang Primary" onPress={() => { useProfile.getState().set({ school: "Nanyang Primary School" }); done("School set to Nanyang Primary School"); }} />
           <Btn label="School: clear" onPress={() => { useProfile.getState().set({ school: "" }); done("No school: the School tab asks to add one"); }} />
           <Btn label="Open Leaderboard" onPress={() => go("/(tabs)/leaderboard")} />
         </Section>

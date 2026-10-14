@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { ScrollView, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
-import { HEARTS_PER_AD, nameProblem, nameProblemMessage, REFERRAL_STARS, SUBSCRIPTION_PRICE_LABEL, tidyName } from "@p6/shared";
+import { HEARTS_PER_AD, nameProblem, nameProblemMessage, REFERRAL_STARS, REFERRAL_WELCOME_STARS, SUBSCRIPTION_PRICE_LABEL, tidyName } from "@p6/shared";
 import { Body, Button, Card, CenterModal, H1, H2, Screen, Columns } from "../../src/components/ui";
 import { CatAvatar } from "../../src/components/CatAvatar";
 import { DateField, isValidIso } from "../../src/components/DateStepper";
@@ -23,6 +23,8 @@ import { daysToPsle, useProfile } from "../../src/store/profile";
 import { useCosmetics } from "../../src/store/cosmetics";
 import { useFriends } from "../../src/store/friends";
 import { usePlayer } from "../../src/store/player";
+import { applyBalances } from "../../src/services/balances";
+import { normalizeFriendCode } from "../../src/logic/friendCode";
 import { resetAllStores } from "../../src/store/reset";
 import { colors, fonts, radius, space } from "../../src/theme/colors";
 import { useLayout } from "../../src/theme/layout";
@@ -95,8 +97,9 @@ export default function ProfileTab() {
 
   const redeemCode = async () => {
     try {
-      const r = await api.redeemReferral({ friendCode: redeem.trim().toUpperCase() });
-      flash(`Code accepted. Your friend earned ${r.starsAwarded} stars, and you are friends now!`);
+      const r = await api.redeemReferral({ friendCode: normalizeFriendCode(redeem) });
+      applyBalances(r);
+      flash(`Code accepted! +${r.welcomeStars} stars for you, and your friend got ${r.starsAwarded}. You are friends now!`);
       setRedeem("");
       void refreshFriends(true);
     } catch (e) {
@@ -196,12 +199,12 @@ export default function ProfileTab() {
         </Card>
 
         <Card>
-          <H2>Invite friends, get {REFERRAL_STARS} stars</H2>
-          <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Share your link. When a friend joins with it you earn {REFERRAL_STARS} stars.</Body>
+          <H2>Invite friends, you both get stars</H2>
+          <Body style={{ color: colors.inkSoft, marginVertical: 6 }}>Share your link or code. When a friend joins with it, you get {REFERRAL_STARS} stars and your friend gets {REFERRAL_WELCOME_STARS} stars.</Body>
           <Button title="Share my invite link" variant="gold" onPress={share} disabled={!profile.friendCode} />
           {!profile.friendCode ? <Body style={{ color: colors.inkSoft, marginTop: 6, fontSize: 14 }}>Your friend code appears once you are signed in with an account.</Body> : null}
           <TextInput style={[field, { marginTop: 12 }]} value={redeem} onChangeText={setRedeem} autoCapitalize="characters" autoCorrect={false} placeholder="Got a friend's invite code?" placeholderTextColor={colors.muted} accessibilityLabel="Invite code" />
-          <Button title="Redeem code" variant="ghost" onPress={redeemCode} disabled={redeem.trim().length < 4} />
+          <Button title="Redeem code" variant="ghost" onPress={redeemCode} disabled={normalizeFriendCode(redeem).length < 4} />
         </Card>
 
         <Card>

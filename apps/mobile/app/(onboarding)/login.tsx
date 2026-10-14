@@ -9,6 +9,8 @@ import { catAnimations } from "../../src/theme/cats";
 import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInApplePopup, signInEmail, signInGoogleIdToken, signInGooglePopup, signUpEmail } from "../../src/services/auth";
 import { isFirebaseConfigured } from "../../src/services/config";
 import { useProfile } from "../../src/store/profile";
+import { useReferral } from "../../src/store/referral";
+import { normalizeFriendCode } from "../../src/logic/friendCode";
 import { colors, fonts, radius, space } from "../../src/theme/colors";
 import { useLayout } from "../../src/theme/layout";
 import { HeroSplit, formColumn } from "../../src/components/HeroSplit";
@@ -23,6 +25,7 @@ export default function Login() {
   const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [friendCode, setFriendCode] = useState(() => useReferral.getState().pendingCode);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [apple, setApple] = useState(false);
@@ -46,6 +49,8 @@ export default function Login() {
 
   async function run(fn: () => Promise<unknown>) {
     setBusy(true); setError(null);
+    // Sign-up only: keep the friend's code until the new account exists (redeemed in bootstrapServerProfile).
+    useReferral.getState().set({ pendingCode: mode === "signup" ? normalizeFriendCode(friendCode) : "" });
     try { await fn(); } catch (e) { setError(friendlyAuthError(e)); } finally { setBusy(false); }
   }
 
@@ -117,6 +122,12 @@ export default function Login() {
 
         <TextInput style={input} value={email} onChangeText={setEmail} placeholder="Email" placeholderTextColor={colors.muted} autoCapitalize="none" keyboardType="email-address" autoComplete="email" accessibilityLabel="Email" />
         <TextInput style={input} value={password} onChangeText={setPassword} placeholder="Password (6+ characters)" placeholderTextColor={colors.muted} secureTextEntry autoCapitalize="none" accessibilityLabel="Password" />
+        {mode === "signup" ? (
+          <>
+            <TextInput style={[input, { marginBottom: 4 }]} value={friendCode} onChangeText={(t) => setFriendCode(t.toUpperCase())} placeholder="Friend's code (optional)" placeholderTextColor={colors.muted} autoCapitalize="characters" autoCorrect={false} accessibilityLabel="Friend's code (optional)" />
+            <Text style={{ color: colors.inkSoft, fontSize: 13, fontWeight: "700", marginBottom: 12 }}>Who invited you? You both get stars.</Text>
+          </>
+        ) : null}
         {error ? <Text style={{ color: colors.bad, fontWeight: "800", marginBottom: 10 }}>{error}</Text> : null}
         <Button title={mode === "signup" ? "Create account" : "Log in"} onPress={submit} disabled={busy} />
         <Button title={mode === "signup" ? "I already have an account" : "I'm new here"} variant="ghost" onPress={() => setMode(mode === "signup" ? "login" : "signup")} style={{ marginTop: 10 }} />
