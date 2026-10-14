@@ -8,6 +8,7 @@ import { RichText } from "./RichText";
 import { Button } from "./ui";
 import { CalculatorModal } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
+import { FigureImg } from "./FigureImg";
 import { Scratchpad } from "./Scratchpad";
 import { ReportSheet } from "./ReportSheet";
 import { useFigure } from "../content/useFigure";
@@ -66,7 +67,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const showHint = !landscape && !stacked && !hintGone && (Platform.OS !== "web" || width >= 600);
   useEffect(() => setResponses(Array(nInputs).fill("")), [q.id, nInputs]);
 
-  const fig = useFigure(grade, q.figure);
+  const fig = useFigure(grade, q.figure, q.id);
   const locked = !!reveal || viewOnly;
   const ready = responses.every((r) => r.trim().length > 0);
   const setAt = (i: number, v: string) => setResponses((rs) => rs.map((x, j) => (j === i ? v : x)));
@@ -112,7 +113,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
 
         {fig ? (
           <Pressable onPress={() => setFigOpen(true)} accessibilityLabel="Tap to enlarge picture" style={styles.figWrap}>
-            <Image source={fig} style={[styles.fig, { height: figHeight }]} resizeMode="contain" />
+            <FigureImg fig={fig} style={[styles.fig, { height: figHeight }]} />
           </Pressable>
         ) : null}
 

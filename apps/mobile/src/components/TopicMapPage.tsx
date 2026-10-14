@@ -4,12 +4,14 @@
 // The subtopic name sits beside each button; friends' mini cats stand next to buttons.
 import React, { useEffect, useMemo, useRef } from "react";
 import { Animated, Easing, Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import type { GradeProgress, LevelNo, PublicProfile, TopicMap } from "@p6/shared";
+import type { Grade, GradeProgress, LevelNo, PublicProfile, TopicMap } from "@p6/shared";
 import { CatAvatar } from "./CatAvatar";
 import { mapThemeFor, uiAssets } from "../theme/assets";
 import { catPoses } from "../theme/cats";
 import { useCosmetics } from "../store/cosmetics";
 import { isLevelComplete, isLevelUnlocked, levelStarCount } from "../logic/unlock";
+import { getLevelIds } from "../content";
+import { useQuestionPatches } from "../store/questionPatches";
 import { buttonRects, CAT, pickRect, placeCat, STAR_ROW, starRowRect, type Rect } from "../logic/mapLayout";
 import { LevelStars } from "./LevelStars";
 import { colors, fonts } from "../theme/colors";
@@ -27,6 +29,7 @@ export interface TopicMapPageProps {
   topic: TopicMap;
   width: number;
   height: number; // viewport height of the page (0 until measured)
+  grade: Grade;
   unlocked: boolean;
   progress: GradeProgress | undefined;
   friends: PublicProfile[];
@@ -98,7 +101,7 @@ function buildRoute(path: [number, number, 0 | 1][], width: number, height: numb
   return { at, length };
 }
 
-export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progress, friends, friendSpots, onNodePress, onLockPress }: TopicMapPageProps) {
+export function TopicMapPage({ topic, width, height: pageHeight, grade, unlocked, progress, friends, friendSpots, onNodePress, onLockPress }: TopicMapPageProps) {
   const ref = useRef<ScrollView>(null);
   const subs = useMemo(() => [...topic.subtopics].sort((a, b) => a.order - b.order), [topic]);
   // Bottom → top: every subtopic's Level 1, then every Level 2, then every Level 3.
@@ -115,11 +118,18 @@ export function TopicMapPage({ topic, width, height: pageHeight, unlocked, progr
   const pos = spots && spots.length === n
     ? spots.map(([x, y]) => ({ x: x * width, y: y * height - NODE / 2 }))
     : evenSpots(n).map((t) => { const p = route.at(t); return { x: p.x, y: p.y - NODE / 2 }; });
-  const state = nodes.map(({ s, level }) => ({
-    done: isLevelComplete(progress, s.id, level),
-    open: isLevelUnlocked(progress, subIds, level),
-    stars: levelStarCount(progress, s.id, level),
-  }));
+  // Live question edits: a retired question is no longer needed for a level (its star slot shows filled). Subscribing
+  // re-renders the page when a patch arrives.
+  useQuestionPatches((st) => st.grades);
+  const idsOf = (subtopicId: string, level: LevelNo) => getLevelIds(grade, subtopicId, level).ids;
+  const state = nodes.map(({ s, level }) => {
+    const cur = getLevelIds(grade, s.id, level);
+    return {
+      done: isLevelComplete(progress, s.id, level, idsOf),
+      open: isLevelUnlocked(progress, subIds, level, idsOf),
+      stars: levelStarCount(progress, s.id, level, 5, { ids: cur.ids, slots: cur.total }),
+    };
+  });
   // The student's cat stands on the furthest level they have completed (the first button before any is done).
   const lastDone = state.reduce((acc, x, i) => (x.done ? i : acc), -1);
   const currentIdx = n ? Math.max(0, lastDone) : -1;

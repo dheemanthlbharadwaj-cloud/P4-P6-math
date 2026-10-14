@@ -1,9 +1,11 @@
 // Content access layer. Screens NEVER import the generated JSON/registry directly: use these helpers.
 // Every API takes `grade` (only P6 has data today; P4/P5 drop in as new bundles in assets/content/).
-import type { Curriculum, Grade, LevelNo, Question, SubtopicNode, TopicMap } from "@p6/shared";
-import { LEVEL_DIFFICULTY } from "@p6/shared";
+import type { Curriculum, Grade, LevelNo, Question, QuestionPatch, SubtopicNode, TopicMap } from "@p6/shared";
 import { availableGrades, contentFor, hasContent } from "../../assets/content";
 import type { FigureImage } from "./figpack";
+import { allLv1From, levelIdsFrom, levelQuestionsFrom, poolFrom, questionFrom, unlockQuestionFrom, type PatchMap, type PoolFilter, type Source } from "./overlay";
+import { retiredIds } from "../logic/patches";
+import { useQuestionPatches } from "../store/questionPatches";
 
 export { hasContent };
 
@@ -31,64 +33,67 @@ export function getSubtopic(grade: Grade, subtopicId: string): { topic: TopicMap
   return undefined;
 }
 
+const NO_PATCHES: PatchMap = {};
+
+/** The live edits for the running bundle (a stored copy of another bundle version is ignored: the bundle has those edits). */
+export function getPatches(grade: Grade): PatchMap {
+  const g = useQuestionPatches.getState().grades[grade];
+  return g && g.bundleVersion === getContentVersion(grade) ? g.byId : NO_PATCHES;
+}
+
+function source(grade: Grade): Source {
+  const c = contentFor(grade);
+  return { questions: c.bundle.questions, topics: c.curriculum.topics, patches: getPatches(grade) };
+}
+
+/** The question as the editor has it now (patched), undefined when unknown or retired. */
 export function getQuestion(grade: Grade, id: string): Question | undefined {
-  return contentFor(grade).bundle.questions[id];
+  return questionFrom(source(grade), id);
 }
 
-function resolve(grade: Grade, ids: string[]): Question[] {
-  const out: Question[] = [];
-  for (const id of ids) {
-    const q = getQuestion(grade, id);
-    if (q) out.push(q);
-  }
-  return out;
+/** Questions the editor retired since the bundle was built (never shown, not needed to complete a level). */
+let retiredFor: { patches: PatchMap; set: Set<string> } | null = null;
+export function getRetiredIds(grade: Grade): Set<string> {
+  const patches = getPatches(grade);
+  if (retiredFor?.patches !== patches) retiredFor = { patches, set: retiredIds(patches) };
+  return retiredFor.set;
 }
 
-/** The 5 main-path questions for a level (may be fewer when the audit reported a shortfall). */
-export function getLevelQuestions(grade: Grade, subtopicId: string, level: LevelNo): Question[] {
+/**
+ * The ids a level plays and completes with: the bundle's list minus retired questions (activeLevelIds, as on the
+ * server), and `total` = the slots it had (the 5-star row keeps that many stars; a retired slot shows filled).
+ */
+export function getLevelIds(grade: Grade, subtopicId: string, level: LevelNo): { ids: string[]; total: number } {
   const found = getSubtopic(grade, subtopicId);
-  return found ? resolve(grade, found.subtopic.main[level]) : [];
+  return found ? levelIdsFrom(source(grade), found.subtopic.main[level]) : { ids: [], total: 0 };
 }
 
-export interface PoolFilter {
-  topicId?: string;
-  subtopicId?: string;
-  level?: LevelNo;
-  autoMarkableOnly?: boolean;
+/** The main-path questions for a level, patched, without retired ones (may be fewer than 5). */
+export function getLevelQuestions(grade: Grade, subtopicId: string, level: LevelNo): Question[] {
+  return levelQuestionsFrom(source(grade), getSubtopic(grade, subtopicId)?.subtopic, level);
 }
 
-/** Classroom / mini-game pool (everything not on the main path). */
+export type { PoolFilter };
+
+/** Classroom / mini-game pool (everything not on the main path), patched, without retired ones. */
 export function getPool(grade: Grade, filter: PoolFilter = {}): Question[] {
-  const ids: string[] = [];
-  for (const topic of getCurriculum(grade).topics) {
-    if (filter.topicId && topic.id !== filter.topicId) continue;
-    for (const s of topic.subtopics) {
-      if (filter.subtopicId && s.id !== filter.subtopicId) continue;
-      ids.push(...s.pool);
-    }
-  }
-  let qs = resolve(grade, ids);
-  if (filter.level) qs = qs.filter((q) => q.difficulty === LEVEL_DIFFICULTY[filter.level!]);
-  if (filter.autoMarkableOnly) qs = qs.filter((q) => q.autoMarkable);
-  return qs;
+  return poolFrom(source(grade), filter);
 }
 
 /** Timed mini game: every LV1 question (main path + pool), optionally for one topic. */
 export function getAllLv1(grade: Grade, topicId?: string): Question[] {
-  const ids: string[] = [];
-  for (const topic of getCurriculum(grade).topics) {
-    if (topicId && topic.id !== topicId) continue;
-    for (const s of topic.subtopics) ids.push(...s.main[1], ...s.pool);
-  }
-  return resolve(grade, [...new Set(ids)]).filter((q) => q.difficulty === "LV1" && q.autoMarkable);
+  return allLv1From(source(grade), topicId);
 }
 
 /** One random basic MCQ for the "Find the key" modal. */
 export function getUnlockQuestion(grade: Grade, topicId: string, rand: () => number = Math.random): Question | undefined {
-  const topic = getTopic(grade, topicId);
-  if (!topic) return undefined;
-  const mcqs = resolve(grade, topic.unlockPool).filter((q) => q.type === "mcq" && q.autoMarkable);
-  return mcqs.length ? mcqs[Math.floor(rand() * mcqs.length)] : undefined;
+  return unlockQuestionFrom(source(grade), getTopic(grade, topicId), rand);
+}
+
+/** The remote image of a question whose figure changed after the bundle was built (cached on the device). */
+export function getPatchFigureUrl(grade: Grade, questionId: string): string | undefined {
+  const p: QuestionPatch | undefined = getPatches(grade)[questionId];
+  return p?.question ? p.figureUrl : undefined;
 }
 
 /**

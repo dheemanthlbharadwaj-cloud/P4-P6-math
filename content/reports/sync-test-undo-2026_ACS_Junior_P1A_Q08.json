@@ -1,0 +1,8 @@
+{
+  "id": "2026_ACS_Junior_P1A_Q08",
+  "restore": {
+    "last_edited_at": "2026-10-14T02:07:29.621Z",
+    "last_edited_by": "app-stem-fix"
+  },
+  "note": "sync test: only last_edited_at/by changed; restore with touch-q.mjs --restore"
+}

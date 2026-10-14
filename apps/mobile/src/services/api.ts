@@ -6,7 +6,7 @@ import type {
   GetLeaderboardResponse, LevelResult, LevelResultResponse, PurchaseItemRequest, PurchaseItemResponse, RedeemReferralRequest,
   RedeemReferralResponse, RefreshPublicProfileResponse, ReportQuestionRequest, ReportQuestionResponse, RespondFriendRequestRequest,
   ListFriendRequestsResponse, SyncProgressRequest, SyncProgressResponse, UpdateProfileRequest, UpdateProfileResponse, RespondFriendRequestResponse, RestoreProfileRequest, SendFriendRequestRequest,
-  SendFriendRequestResponse, GetDailyQuestsRequest, GetDailyQuestsResponse, ClaimDailyQuestRequest, ClaimDailyQuestResponse,
+  SendFriendRequestResponse, GetDailyQuestsRequest, GetDailyQuestsResponse, GetQuestionPatchesRequest, GetQuestionPatchesResponse, ClaimDailyQuestRequest, ClaimDailyQuestResponse,
 } from "@p6/shared";
 import { extra } from "./config";
 import { currentUser } from "./auth";
@@ -59,5 +59,6 @@ export const api = {
   refreshPublicProfile: () => call<Record<string, never>, RefreshPublicProfileResponse>("refreshPublicProfile", {}),
   getDailyQuests: () => call<GetDailyQuestsRequest, GetDailyQuestsResponse>("getDailyQuests", {}),
   claimDailyQuest: (r: ClaimDailyQuestRequest) => call<ClaimDailyQuestRequest, ClaimDailyQuestResponse>("claimDailyQuest", r),
+  getQuestionPatches: (r: GetQuestionPatchesRequest) => call<GetQuestionPatchesRequest, GetQuestionPatchesResponse>("getQuestionPatches", r),
   deleteAccount: () => call<DeleteAccountRequest, DeleteAccountResponse>("deleteAccount", {}),
 };

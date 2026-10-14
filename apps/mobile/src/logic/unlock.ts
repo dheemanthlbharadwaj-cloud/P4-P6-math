@@ -8,17 +8,28 @@ export function emptyGradeProgress(grade: Grade, unlockedTopics: string[] = []):
   return { grade, unlockedTopics, levels: {} };
 }
 
-export function isLevelComplete(p: GradeProgress | undefined, subtopicId: string, level: LevelNo): boolean {
-  return !!p?.levels[levelKey(subtopicId, level)]?.completed;
+/** A level's current question ids (retired ones removed, see activeLevelIds); undefined = use the stored flags only. */
+export type LevelIdsOf = (subtopicId: string, level: LevelNo) => readonly string[] | undefined;
+
+/**
+ * Complete = marked complete, or every one of the level's current questions has its star (a question retired after
+ * the student got 4 of 5 completes the level).
+ */
+export function isLevelComplete(p: GradeProgress | undefined, subtopicId: string, level: LevelNo, idsOf?: LevelIdsOf): boolean {
+  const l = p?.levels[levelKey(subtopicId, level)];
+  if (!l) return false;
+  if (l.completed) return true;
+  const ids = idsOf?.(subtopicId, level);
+  return !!ids && ids.length > 0 && ids.every((id) => l.correctIds?.includes(id));
 }
 
 /**
  * Level 1 is always open. On a map, Level N+1 of every subtopic opens only once Level N of ALL the map's subtopics is
  * completed (the map is one row of Level 1 buttons, then Level 2, then Level 3).
  */
-export function isLevelUnlocked(p: GradeProgress | undefined, topicSubtopicIds: string[], level: LevelNo): boolean {
+export function isLevelUnlocked(p: GradeProgress | undefined, topicSubtopicIds: string[], level: LevelNo, idsOf?: LevelIdsOf): boolean {
   if (level === 1) return true;
-  return topicSubtopicIds.every((id) => isLevelComplete(p, id, (level - 1) as LevelNo));
+  return topicSubtopicIds.every((id) => isLevelComplete(p, id, (level - 1) as LevelNo, idsOf));
 }
 
 export function isTopicUnlocked(p: GradeProgress | undefined, topicId: string): boolean {
@@ -55,11 +66,19 @@ export function applyLevelResult(
   return { ...p, levels: { ...p.levels, [key]: next } };
 }
 
-/** Stars beside a level button (0..5): its questions answered right so far; a complete level shows them all. */
-export function levelStarCount(p: GradeProgress | undefined, subtopicId: string, level: LevelNo, total = 5): number {
+/**
+ * Stars beside a level button (0..total): its questions answered right so far; a complete level shows them all.
+ * With `cur` (the level's current questions `ids` out of `slots` in the bundle) a retired slot shows as a filled star
+ * and only answers to current questions count.
+ */
+export function levelStarCount(
+  p: GradeProgress | undefined, subtopicId: string, level: LevelNo, total = 5, cur?: { ids: readonly string[]; slots: number },
+): number {
   const l = p?.levels[levelKey(subtopicId, level)];
-  if (!l) return 0;
-  return l.completed ? total : Math.min(total, l.correctIds?.length ?? 0);
+  const retired = cur ? Math.max(0, cur.slots - cur.ids.length) : 0;
+  if (l?.completed) return total;
+  const own = cur ? cur.ids.filter((id) => l?.correctIds?.includes(id)).length : (l?.correctIds?.length ?? 0);
+  return Math.min(total, own + retired);
 }
 
 export function unlockTopic(p: GradeProgress, topicId: string): GradeProgress {
@@ -72,13 +91,13 @@ export function unlockTopic(p: GradeProgress, topicId: string): GradeProgress {
  * Level 3), skipping finished levels. Null when nothing is left or the next one is still locked.
  */
 export function nextMapLevel(
-  p: GradeProgress | undefined, topicSubtopicIds: string[], subtopicId: string, level: LevelNo,
+  p: GradeProgress | undefined, topicSubtopicIds: string[], subtopicId: string, level: LevelNo, idsOf?: LevelIdsOf,
 ): { subtopicId: string; level: LevelNo } | null {
   const order = ([1, 2, 3] as LevelNo[]).flatMap((l) => topicSubtopicIds.map((id) => ({ subtopicId: id, level: l })));
   const at = order.findIndex((n) => n.subtopicId === subtopicId && n.level === level);
   for (const n of order.slice(at + 1)) {
-    if (isLevelComplete(p, n.subtopicId, n.level)) continue;
-    return isLevelUnlocked(p, topicSubtopicIds, n.level) ? n : null;
+    if (isLevelComplete(p, n.subtopicId, n.level, idsOf)) continue;
+    return isLevelUnlocked(p, topicSubtopicIds, n.level, idsOf) ? n : null;
   }
   return null;
 }

@@ -4,9 +4,10 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { CHALLENGE_HEARTS, CHALLENGE_SECONDS } from "@p6/shared";
 import { Body, Button, Card, Chip, Columns, H1, H2, Screen } from "../../src/components/ui";
-import { getAllLv1, getPool, getTopics } from "../../src/content";
+import { getAllLv1, getPool, getRetiredIds, getTopics } from "../../src/content";
 import { useProfile } from "../../src/store/profile";
 import { useWrong } from "../../src/store/wrong";
+import { useQuestionPatches } from "../../src/store/questionPatches";
 import { colors, fonts, space } from "../../src/theme/colors";
 import { useLayout } from "../../src/theme/layout";
 
@@ -16,15 +17,19 @@ export default function ClassroomTab() {
   const grade = useProfile((s) => s.grade);
   const topics = useMemo(() => getTopics(grade), [grade]);
   const [topicId, setTopicId] = useState<string | undefined>(undefined);
-  const flagged = useWrong((s) => Object.keys(s.byGrade[grade] ?? {}).length);
-  const ever = useWrong((s) => (s.history[grade] ?? []).length);
-  const lv1Count = useMemo(() => getAllLv1(grade, topicId).length, [grade, topicId]);
+  // (questions the editor retired are not counted: they are never shown)
+  const flaggedIds = useWrong((s) => s.byGrade[grade]);
+  const everIds = useWrong((s) => s.history[grade]);
+  const patched = useQuestionPatches((s) => s.grades[grade]);
+  const flagged = useMemo(() => Object.keys(flaggedIds ?? {}).filter((id) => !getRetiredIds(grade).has(id)).length, [flaggedIds, grade, patched]);
+  const ever = useMemo(() => (everIds ?? []).filter((id) => !getRetiredIds(grade).has(id)).length, [everIds, grade, patched]);
+  const lv1Count = useMemo(() => getAllLv1(grade, topicId).length, [grade, topicId, patched]);
 
   const [practiceTopic, setPracticeTopic] = useState<string | undefined>(undefined);
   const practiceId = practiceTopic ?? topics[0]?.id;
   const practiceCount = useMemo(
     () => (practiceId ? getPool(grade, { topicId: practiceId }).length : 0),
-    [grade, practiceId],
+    [grade, practiceId, patched],
   );
   const startPractice = () =>
     router.push({ pathname: "/practice/[topicId]", params: { topicId: practiceId as string, grade } });

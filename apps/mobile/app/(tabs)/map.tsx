@@ -138,6 +138,7 @@ export default function MapTab() {
               topic={item}
               width={width - (perView > 1 ? DIVIDER : 0)}
               height={pageHeight}
+              grade={grade}
               unlocked={isTopicUnlocked(progress, item.id)}
               progress={progress}
               friends={friends}

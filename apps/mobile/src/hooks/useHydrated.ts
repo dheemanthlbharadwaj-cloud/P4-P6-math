@@ -5,8 +5,9 @@ import { useWrong } from "../store/wrong";
 import { useOfflineQueue } from "../store/queue";
 import { useProfile } from "../store/profile";
 import { useCosmetics } from "../store/cosmetics";
+import { useQuestionPatches } from "../store/questionPatches";
 
-const stores = [usePlayer, useProgress, useWrong, useOfflineQueue, useProfile, useCosmetics];
+const stores = [usePlayer, useProgress, useWrong, useOfflineQueue, useProfile, useCosmetics, useQuestionPatches];
 
 /** True once every persisted store has been rehydrated from AsyncStorage. */
 export function useHydrated(): boolean {

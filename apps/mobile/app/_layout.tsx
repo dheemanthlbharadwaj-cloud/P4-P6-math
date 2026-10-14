@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, InteractionManager, View } from "react-native";
+import { ActivityIndicator, AppState, InteractionManager, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import NetInfo from "@react-native-community/netinfo";
@@ -13,6 +13,7 @@ import { initPurchases } from "../src/services/purchases";
 import { flushOfflineQueue } from "../src/services/sync";
 import { bootstrapServerProfile, refreshFriends, restoreAccount } from "../src/services/bootstrap";
 import { stopCloudSync } from "../src/services/cloudSync";
+import { refreshQuestionPatches } from "../src/services/patches";
 import { useAuth } from "../src/store/auth";
 import { useProfile } from "../src/store/profile";
 import { useProgress } from "../src/store/progress";
@@ -101,6 +102,7 @@ export default function RootLayout() {
       if (cancelled) return;
       await flushOfflineQueue();
       await refreshFriends();
+      void refreshQuestionPatches(); // live question edits; own 10-minute limit, retried at once while it keeps failing
     };
     // RevenueCat last: when configured it is the live source of truth for the entitlement (server value otherwise).
     void bootstrapServerProfile().then(run).then(() => initPurchases(user.uid));
@@ -111,8 +113,10 @@ export default function RootLayout() {
       if (now && !online) void run();
       online = now;
     });
+    // Back in the foreground: pick up question edits made meanwhile (only if the last refresh is 10+ minutes old).
+    const appState = AppState.addEventListener("change", (st) => { if (st === "active") void refreshQuestionPatches(); });
     const timer = setInterval(run, 60_000);
-    return () => { cancelled = true; unsub(); clearInterval(timer); stopCloudSync(); };
+    return () => { cancelled = true; unsub(); appState.remove(); clearInterval(timer); stopCloudSync(); };
   }, [hydrated, user, onboarded]);
 
   if (!hydrated || !ready || !fontsReady) {

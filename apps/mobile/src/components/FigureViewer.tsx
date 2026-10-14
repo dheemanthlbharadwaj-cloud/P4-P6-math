@@ -4,15 +4,21 @@ import React, { useState } from "react";
 import { Image, Modal, Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "./ui";
-import type { FigureImage } from "../content/figpack";
+import { FigureImg } from "./FigureImg";
+import { isRemoteFigure, type ShownFigure } from "../content/useFigure";
 
-export function FigureViewer({ source, visible, onClose }: { source: FigureImage; visible: boolean; onClose: () => void }) {
+export function FigureViewer({ source, visible, onClose }: { source: ShownFigure; visible: boolean; onClose: () => void }) {
   const { width, height } = useWindowDimensions();
   const [zoom, setZoom] = useState(1);
   // resolveAssetSource exists on iOS/Android only; on web the bundled asset already carries its size.
-  const resolved: { width?: number; height?: number } | null =
-    typeof Image.resolveAssetSource === "function" ? Image.resolveAssetSource(source) : typeof source === "object" ? (source as object) : null;
-  const ratio = resolved?.width && resolved?.height ? resolved.width / resolved.height : 1;
+  // A remote figure may come without a size: it is measured when it loads (square until then).
+  const bundled = isRemoteFigure(source) ? source.fallback : source;
+  const resolved: { width?: number; height?: number } | null = isRemoteFigure(source)
+    ? source
+    : bundled === undefined ? null
+    : typeof Image.resolveAssetSource === "function" ? Image.resolveAssetSource(bundled) : typeof bundled === "object" ? (bundled as object) : null;
+  const [loadedRatio, setLoadedRatio] = useState(0);
+  const ratio = resolved?.width && resolved?.height ? resolved.width / resolved.height : loadedRatio || 1;
   const baseW = Math.min(width, height * ratio);
   const w = baseW * zoom;
   return (
@@ -26,7 +32,7 @@ export function FigureViewer({ source, visible, onClose }: { source: FigureImage
           horizontal={false}
         >
           <ScrollView horizontal contentContainerStyle={{ minWidth: width, alignItems: "center", justifyContent: "center" }} nestedScrollEnabled>
-            <Image source={source} style={{ width: w, height: w / ratio, backgroundColor: "#fff" }} resizeMode="contain" accessibilityLabel="Question figure" />
+            <FigureImg fig={source} style={{ width: w, height: w / ratio, backgroundColor: "#fff" }} onRatio={setLoadedRatio} label="Question figure" />
           </ScrollView>
         </ScrollView>
         <View style={styles.bar}>

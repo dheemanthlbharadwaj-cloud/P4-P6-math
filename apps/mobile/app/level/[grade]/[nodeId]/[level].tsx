@@ -12,9 +12,9 @@ import { CatCompanion } from "../../../../src/components/CatCompanion";
 import { ResourceModal } from "../../../../src/components/ResourceModal";
 import { useLeaveConfirm } from "../../../../src/components/LeaveConfirm";
 import { Stat } from "../../../../src/components/TopBar";
-import { getContentVersion, getLevelQuestions, getSubtopic } from "../../../../src/content";
+import { getContentVersion, getLevelIds, getLevelQuestions, getSubtopic } from "../../../../src/content";
 import { advance, correctIds, currentId, isDone, progressFraction, recordAnswer, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
-import { nextMapLevel } from "../../../../src/logic/unlock";
+import { isLevelComplete, levelStarCount, nextMapLevel } from "../../../../src/logic/unlock";
 import { computeMeters, usePlayer } from "../../../../src/store/player";
 import { useProgress } from "../../../../src/store/progress";
 import { useWrong } from "../../../../src/store/wrong";
@@ -37,14 +37,18 @@ export default function LevelScreen() {
   const subtopicId = params.nodeId as string;
   const level = Number(params.level) as LevelNo;
 
+  // Decided when the level opens (live question edits that arrive mid-level apply next time): the patched questions,
+  // without the ones the editor retired. A retired question is not needed for the level's stars.
   const levelQuestions = useMemo(() => getLevelQuestions(grade, subtopicId, level), [grade, subtopicId, level]);
   const levelIds = useMemo(() => levelQuestions.map((q) => q.id), [levelQuestions]);
+  const slots = useMemo(() => getLevelIds(grade, subtopicId, level).total, [grade, subtopicId, level]);
   const info = getSubtopic(grade, subtopicId);
   // Decided once when the level opens: the questions that already have their star, and whether the level is complete
   // (then this is a replay of all 5, which can pay the one-off bonus star).
   const [before] = useState(() => {
     const l = useProgress.getState().grades[grade]?.levels[levelKey(subtopicId, level)];
-    return { correct: l?.completed ? levelIds : (l?.correctIds ?? []).filter((id) => levelIds.includes(id)), complete: !!l?.completed };
+    const correct = l?.completed ? levelIds : (l?.correctIds ?? []).filter((id) => levelIds.includes(id));
+    return { correct, complete: !!l?.completed || (levelIds.length > 0 && levelIds.every((id) => correct.includes(id))) };
   });
   const [playIds] = useState(() => levelQuestionsToPlay(levelIds, before.correct));
   const questions = useMemo(() => playIds.map((id) => levelQuestions.find((q) => q.id === id)!).filter(Boolean), [playIds, levelQuestions]);
@@ -140,7 +144,7 @@ export default function LevelScreen() {
 
   // The next button up the map (same rule as the map: Level N+1 only once every Level N on the map is done).
   const mapProgress = useProgress((s) => s.grades[grade]);
-  const nextNode = info ? nextMapLevel(mapProgress, [...info.topic.subtopics].sort((a, b) => a.order - b.order).map((s) => s.id), subtopicId, level) : null;
+  const nextNode = info ? nextMapLevel(mapProgress, [...info.topic.subtopics].sort((a, b) => a.order - b.order).map((s) => s.id), subtopicId, level, (sid, lv) => getLevelIds(grade, sid, lv).ids) : null;
   const startNext = () => {
     if (!nextNode) return;
     router.replace({ pathname: "/level/[grade]/[nodeId]/[level]", params: { grade, nodeId: nextNode.subtopicId, level: String(nextNode.level) } });
@@ -154,10 +158,11 @@ export default function LevelScreen() {
 
   if (phase !== "playing") {
     // Stars beside the level button now (what this device knows; the server confirms them when it gets the result).
-    const after = useProgress.getState().grades[grade]?.levels[levelKey(subtopicId, level)];
-    const starsNow = after?.completed ? levelIds.length : (after?.correctIds?.length ?? 0);
-    const complete = !!after?.completed;
-    const missing = levelIds.length - starsNow;
+    const afterGrade = useProgress.getState().grades[grade];
+    const total = Math.max(slots, levelIds.length);
+    const starsNow = levelStarCount(afterGrade, subtopicId, level, total, { ids: levelIds, slots });
+    const complete = isLevelComplete(afterGrade, subtopicId, level, () => levelIds);
+    const missing = total - starsNow;
     const justCompleted = complete && !before.complete;
     const title = justCompleted ? "Level complete!" : complete ? (bonus ? "Bonus star!" : "Great practice!") : phase === "gaveup" ? "Good try!" : "Nice work!";
     return (
@@ -166,7 +171,7 @@ export default function LevelScreen() {
           <CatCompanion mood={complete || earned ? "correct" : "sad"} size={160} />
           <H1 style={{ marginTop: 12, textAlign: "center" }}>{title}</H1>
           <Body style={{ color: colors.inkSoft, textAlign: "center", marginTop: 4 }}>{info?.subtopic.name} · Level {level}</Body>
-          <LevelStars filled={starsNow} total={levelIds.length} size={40} style={{ marginTop: 16 }} />
+          <LevelStars filled={starsNow} total={total} size={40} style={{ marginTop: 16 }} />
           <Text style={{ fontFamily: fonts.display, fontSize: 18, color: colors.ink, marginTop: 8, textAlign: "center" }}>
             {earned ? `+${earned} ${earned === 1 ? "star" : "stars"}${bonus ? " (bonus for getting all 5 right again)" : ""}` : "No new stars this time"}
           </Text>
