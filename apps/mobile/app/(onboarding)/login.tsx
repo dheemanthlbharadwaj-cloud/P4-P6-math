@@ -34,7 +34,8 @@ export default function Login() {
   // TODO(owner): set EXPO_PUBLIC_GOOGLE_*_CLIENT_ID. Without them the Google button explains what is missing.
   const ids = googleClientIds();
   const web = Platform.OS === "web";
-  const googleConfigured = web || !!(ids.googleWebClientId || ids.googleIosClientId || ids.googleAndroidClientId);
+  // Phones need their own platform client id (the web client is refused by Google from an app).
+  const googleConfigured = web || !!(Platform.OS === "android" ? ids.googleAndroidClientId : ids.googleIosClientId);
   const [, response, promptAsync] = Google.useIdTokenAuthRequest({
     clientId: ids.googleWebClientId || "unset",
     iosClientId: ids.googleIosClientId || undefined,
@@ -139,7 +140,7 @@ export default function Login() {
           disabled={busy}
           onPress={() => (!isFirebaseConfigured ? setError("Sign-in is not available yet because Firebase is not configured.")
             : web ? void run(signInGooglePopup)
-              : googleConfigured ? void promptAsync() : setError("Google sign-in needs OAuth client ids (EXPO_PUBLIC_GOOGLE_*_CLIENT_ID)."))}
+              : googleConfigured ? void promptAsync() : setError("Google sign-in is coming soon in the app. Please use email for now."))}
         />
         {apple ? (
           <Button title="Sign in with Apple" variant="ghost" disabled={busy} onPress={() => void run(web ? signInApplePopup : signInApple)} style={{ marginTop: 10 }} />
