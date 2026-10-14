@@ -60,3 +60,9 @@ export function effectiveResultTime(finishedAt: number, now: number): number {
   if (sgtMonth(finishedAt) !== sgtMonth(now)) return now;
   return finishedAt;
 }
+
+/** UTC ms of 00:00 SGT on the SGT calendar day containing `ms` (= 16:00 UTC the previous day). */
+export function startOfSgtDay(ms: number): number {
+  const { y, m, d } = sgtParts(ms);
+  return Date.UTC(y, m - 1, d) - SGT_OFFSET_MS;
+}

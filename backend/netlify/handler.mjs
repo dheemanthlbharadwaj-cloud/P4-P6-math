@@ -15,7 +15,7 @@ import rateLimit from "./lib/logic/rateLimit.js";
 
 const CALLABLES = new Set([
   "bootstrapProfile", "submitLevelResult", "submitMinigameResult", "claimQuest", "purchaseItem", "redeemReferral",
-  "sendFriendRequest", "respondFriendRequest", "getLeaderboard", "refreshPublicProfile", "reportQuestion", "updateProfile", "syncProgress", "listFriendRequests", "deleteAccount",
+  "sendFriendRequest", "respondFriendRequest", "getLeaderboard", "refreshPublicProfile", "reportQuestion", "updateProfile", "syncProgress", "listFriendRequests", "deleteAccount", "getDailyQuests", "claimDailyQuest",
 ]);
 // Callable error code → HTTP status (same table as Firebase callables).
 const STATUS = {

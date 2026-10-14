@@ -1,6 +1,6 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import {
-  REFERRAL_STARS, STORE_ITEMS, levelAttemptStars, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
+  REFERRAL_STARS, REFERRAL_WELCOME_STARS, STORE_ITEMS, levelAttemptStars, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
   type LevelResultResponse, type MinigameResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
   type RedeemReferralRequest, type RedeemReferralResponse,
 } from "./shared/index.js";
@@ -192,16 +192,35 @@ export const redeemReferral = onCall(async (req): Promise<RedeemReferralResponse
     const redeemed = (await tx.get(refRef)).exists;
     const v = validateReferral({ callerUid: uid, referrerUid, alreadyRedeemed: redeemed });
     if (!v.ok) throwFail(v);
+    const now = Date.now();
     const walletRef = db.collection(col.wallets).doc(referrerUid!);
-    const w = await tx.get(walletRef);
+    const myWalletRef = db.collection(col.wallets).doc(uid);
+    const monthRef = entriesRef(monthlyBoard(sgtMonth(now))).doc(uid);
+    const dayRef = entriesRef(dailyBoard(sgtDate(now))).doc(uid);
+    const friendshipRef = db.collection(col.friendships).doc(pairId(uid, referrerUid!));
+    const [w, mine, month, fs] = await Promise.all([tx.get(walletRef), tx.get(myWalletRef), tx.get(monthRef), tx.get(friendshipRef)]);
     const bal = (w.data()?.starBalance as number | undefined) ?? 0;
-    tx.set(refRef, { referrerUid, referredUid: uid, stars: REFERRAL_STARS, createdAt: FieldValue.serverTimestamp() });
+    const myBal = (mine.data()?.starBalance as number | undefined) ?? 0;
+    const myTotal = (mine.data()?.totalStars as number | undefined) ?? 0;
+    const monthlyStars = ((month.data()?.stars as number | undefined) ?? 0) + REFERRAL_WELCOME_STARS;
+    tx.set(refRef, { referrerUid, referredUid: uid, stars: REFERRAL_STARS, welcomeStars: REFERRAL_WELCOME_STARS, createdAt: FieldValue.serverTimestamp() });
     tx.set(walletRef, { starBalance: bal + REFERRAL_STARS, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
     tx.set(db.collection(col.users).doc(referrerUid!).collection("ledger").doc(`referral_${uid}`), {
       type: "referral", delta: REFERRAL_STARS, balanceAfter: bal + REFERRAL_STARS, referredUid: uid, createdAt: FieldValue.serverTimestamp(),
     });
-    // referral link also makes them friends
-    tx.set(db.collection(col.friendships).doc(pairId(uid, referrerUid!)), { members: [uid, referrerUid!].sort(), createdAt: FieldValue.serverTimestamp() }, { merge: true });
-    return { starsAwarded: REFERRAL_STARS };
+    // welcome stars for the caller
+    tx.set(myWalletRef, { starBalance: myBal + REFERRAL_WELCOME_STARS, totalStars: myTotal + REFERRAL_WELCOME_STARS, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+    const inc = { uid, stars: FieldValue.increment(REFERRAL_WELCOME_STARS), updatedAt: FieldValue.serverTimestamp() };
+    tx.set(monthRef, inc, { merge: true });
+    tx.set(dayRef, inc, { merge: true });
+    tx.set(db.collection(col.users).doc(uid).collection("ledger").doc("referral_welcome"), {
+      type: "referral-welcome", delta: REFERRAL_WELCOME_STARS, balanceAfter: myBal + REFERRAL_WELCOME_STARS, referrerUid, createdAt: FieldValue.serverTimestamp(),
+    });
+    // referral link also makes them friends (keep an existing friendship's createdAt)
+    if (!fs.exists) tx.set(friendshipRef, { members: [uid, referrerUid!].sort(), createdAt: FieldValue.serverTimestamp() });
+    return {
+      starsAwarded: REFERRAL_STARS, welcomeStars: REFERRAL_WELCOME_STARS,
+      starBalance: myBal + REFERRAL_WELCOME_STARS, monthlyStars, totalStars: myTotal + REFERRAL_WELCOME_STARS,
+    };
   });
 });

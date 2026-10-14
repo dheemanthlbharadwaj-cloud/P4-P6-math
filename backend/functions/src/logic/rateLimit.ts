@@ -6,7 +6,7 @@
 export const PER_MINUTE: Record<string, number> = {
   bootstrapProfile: 10, submitLevelResult: 30, submitMinigameResult: 10, claimQuest: 10, purchaseItem: 10,
   redeemReferral: 5, sendFriendRequest: 10, respondFriendRequest: 20, getLeaderboard: 30, refreshPublicProfile: 10,
-  reportQuestion: 10, updateProfile: 10, syncProgress: 20, listFriendRequests: 20, deleteAccount: 3,
+  reportQuestion: 10, updateProfile: 10, syncProgress: 20, listFriendRequests: 20, deleteAccount: 3, getDailyQuests: 20, claimDailyQuest: 10,
 };
 export const DEFAULT_PER_MINUTE = 20;
 /** Every function together, per account. */
