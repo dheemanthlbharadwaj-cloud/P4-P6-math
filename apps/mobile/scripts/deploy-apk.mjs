@@ -13,6 +13,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { assertNetlifyBudget } from "../../../backend/scripts/netlify-budget.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 const APK = path.resolve(process.argv.slice(2).find((a) => !a.startsWith("--")) ?? path.join(ROOT, "apps/mobile/dist-apk/catapult-math-athletes.apk"));
@@ -73,6 +74,7 @@ small{color:var(--soft);word-break:break-all}
 <p><small>SHA-256 ${sha256}</small></p>
 </main></body></html>
 `);
+await assertNetlifyBudget("APK page");
 console.log(`Deploying ${file} (${(bytes / 1e6).toFixed(1)} MB) to ${SITE_NAME}`);
 execFileSync("npx", ["-y", "netlify-cli@27", "deploy", "--prod", "--no-build", "--dir", out, "--site", site.id, "--message", `apk ${config.version}`], { cwd: out, stdio: "inherit", env: { ...process.env, NETLIFY_AUTH_TOKEN: TOKEN } }); // cwd outside the repo: no monorepo project prompt
 fs.rmSync(out, { recursive: true, force: true });

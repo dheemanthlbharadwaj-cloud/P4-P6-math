@@ -19,6 +19,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { googleClient, loadServiceAccount } from "./gcp.mjs";
+import { assertNetlifyBudget } from "./netlify-budget.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const NETLIFY_DIR = path.join(ROOT, "backend/netlify");
@@ -96,7 +97,8 @@ if (!have.has("REVENUECAT_WEBHOOK_AUTH")) {
 } else log("Env: REVENUECAT_WEBHOOK_AUTH set");
 if (DRY) { log("dry run: nothing changed"); process.exit(0); }
 
-// 3) Build + deploy
+// 3) Build + deploy (free plan: 15 of the 300 monthly credits per production deploy; refuses near the limit)
+await assertNetlifyBudget("backend");
 const run = (cmd, args, cwd) => execFileSync(cmd, args, { cwd, stdio: "inherit", env: { ...process.env, NETLIFY_AUTH_TOKEN: NL_TOKEN } });
 run("npm", ["--prefix", path.join(ROOT, "backend/functions"), "install", "--no-audit", "--no-fund"], ROOT);
 run("npm", ["install", "--no-audit", "--no-fund"], NETLIFY_DIR);
