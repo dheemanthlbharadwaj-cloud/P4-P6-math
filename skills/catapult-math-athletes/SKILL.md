@@ -1,28 +1,46 @@
 ---
 name: catapult-math-athletes
-description: Everything needed to work on Catapult Math Athletes (cat-themed Singapore P6/PSLE math game, Expo React Native, offline question bundle from the primary-math-sg editor Firestore). Use for ANY task in this repo — app UI, map, cat, hearts, content sync/build, question figures, editor (Firestore/Cloudinary) writes, web test build deploy, store builds — and to learn how to get credentials/access in each environment.
+description: Everything needed to work on Catapult Math Athletes (cat-themed Singapore P6/PSLE math game; one Expo React Native codebase for web, Android and iOS; offline question bundle from the primary-math-sg editor Firestore with live edits; Netlify backend; Firebase Hosting web app; EAS over-the-air updates). Use for ANY task in this repo (app UI, map, cat, stars, content sync/build, question figures, editor writes, deploys, Android builds) and to learn how to get set up and get credentials in any environment or AI agent.
 ---
 
 # Catapult Math Athletes — working guide
+
+**Start here, any agent or human:** run `npm run setup` (= `bash scripts/setup.sh`) in the repo root. It installs
+everything, checks which credentials are present (never prints them), and `npm run doctor` reports what this
+environment can do and the live status of every service. Flags: `--verify` (tests + typecheck), `--browser`
+(Playwright Chromium), `--android` (Android SDK + release signing key), `--quick` (session-start hook).
+`AGENTS.md` at the repo root is the short version of this guide.
 
 ## 0. Ground rules from the product owner (read first)
 - **Do exactly what is asked. Never add unrequested changes** (restyling, extra badges, removed behaviours). Past
   mistakes the owner called out: swapping the gold "completed" node for a star, adding lock badges next to levels,
   pinning the cat to the timer board and losing its mood reactions. If something seems worth changing, ask first.
-- **Work as the orchestrator** (owner request 2026-10): for anything you build, split the work and delegate it to
-  subagents (Agent tool) — `haiku` for small/mechanical tasks, `sonnet` when more is needed. Fix the shared contract
-  (types, API shapes) yourself first so agents can work in parallel without editing the same files; then supervise,
-  review their diffs and verify end to end (tests, live checks) yourself before deploying or reporting.
+- **Work as the orchestrator** (owner request 2026-10): if your agent can run sub-agents, split the work and delegate
+  it (a small/fast model for mechanical tasks, a stronger one when more is needed; Claude Code: Agent tool with
+  `haiku` / `sonnet`, definitions in `.claude/agents/`). Fix the shared contract (types, API shapes) yourself first so
+  sub-agents can work in parallel without editing the same files; then supervise, review their diffs and verify end
+  to end (tests, live checks) yourself before deploying or reporting. Without sub-agents, do the same steps yourself.
 - Never edit the owner's mindmap. `docs/WORKFLOW.md` is the spec derived from it.
 - Never ask the user to paste tokens/keys/passwords into chat. Credentials go in environment settings (§3).
-- Git: work on the branch you were given (historically `ccr-41770098-9l0q6b`); no PR unless asked. No model names in
-  commits/PRs/code. Commit trailer used in this repo: `Co-Authored-By: Claude <noreply@anthropic.com>` style line.
+- Git: work on the branch you were given (historically `ccr-41770098-9l0q6b`; `main` is the default); no PR unless
+  asked. No model names in commits/PRs/code. Add your agent's co-author trailer if it has one.
 - Any bulk write to the editor bank must have a `--dry` run first and an undo manifest in `content/reports/`.
 - **Netlify free plan: 300 credits/month, 15 per production deploy (that is what uses them up).** Deploy the backend only when backend code changed, batch changes into one deploy, and never redeploy the APK page without a new APK. `node backend/scripts/netlify-budget.mjs` shows the period's usage; both deploy scripts refuse when fewer than 45 credits would be left (`--force` overrides). The web app is on Firebase Hosting and costs no Netlify credits.
 - **Expo free plan: 60 CI minutes/month** (each OTA update run ≈ 15 min; sandboxes count too). Use `[eas skip]` on commits that don't need to reach phones. **Web deploys run on GitHub Actions** (`.github/workflows/deploy-web.yml`, keyless Google auth); no need to deploy the web app by hand after pushing app changes.
 - Before claiming done: run tests, look at the result in a browser (web build), and report honestly.
 
 ## 1. What the product is
+
+### Live services (what exists, where)
+| Service | Where | Deployed by |
+|---|---|---|
+| Web app (test build, 🛠 Dev Tools) | https://catapult-math-athletes.web.app (Firebase Hosting site in `primary-math-sg`) | **automatic**: GitHub Actions `.github/workflows/deploy-web.yml` on push (keyless auth); by hand: `web-preview.py` + `deploy-hosting.ts` |
+| Backend API | https://catapult-math-athletes-api.netlify.app/api/<callable> (Netlify free plan) | `node backend/scripts/deploy-netlify.mjs` (15 Netlify credits each; guarded) |
+| Database / auth | Firebase project `primary-math-sg`, Firestore database `default` (shared with the editor) | rules: `backend/scripts/deploy-rules.mjs` |
+| Question editor (source of truth) | https://primary-math-sg.web.app (separate codebase; student reports patched in by `backend/scripts/editor-reports.mjs`) | — |
+| Phone updates (OTA) | Expo project dheems-team/catapult-math-athletes (id `ea8a1c9d-c3dd-4cac-903d-78956443efe9`), channel `preview` | **automatic**: EAS workflow `apps/mobile/.eas/workflows/publish-update.yml` on push (60 Expo CI min/month) |
+| Android APK | https://catapult-math-athletes-download.netlify.app (team-only until the owner opens it) | built locally (`npm run setup -- --android`, docs/ANDROID.md), `node apps/mobile/scripts/deploy-apk.mjs [--public]` |
+| Figures / PDFs | Cloudinary cloud `n9gn4u6k` | content scripts |
 - Name: **Catapult Math Athletes**. iOS + Android (Expo SDK 57, RN 0.86, expo-router, zustand persisted to
   AsyncStorage with key prefix `p6.`), fully offline question bank, AdMob rewarded ads, RevenueCat subscription.
 - Grade P6 now (P4/P5 later as data; every path/type is keyed by `grade`).
@@ -77,7 +95,7 @@ apps/mobile/       Expo app
                      questions), leaderboard (set/clear school)…. There are no sample players: friends, school and
                      global boards show only real users from the backend
   src/theme/         assets.ts (uiAssets), cats.ts (catMoodImage), mapPaths.ts (generated), colors.ts
-  assets/content/P6/ GENERATED bundle: questions.json, curriculum.json, figures/*.webp + index.ts (only content/ writes here)
+  assets/content/P6/ GENERATED bundle: questions.json, curriculum.json, source-info.json, figures/*.webp + manifest.json (only content/ writes here); figpacks/ = packs built on npm install (gitignored)
   scripts/web-preview.py   build dist-preview/ (packed figures, Dev Tools on)
   scripts/deploy-hosting.ts  deploy a folder to Firebase Hosting site via REST
   scripts/map-layers.py    one-off: render river + 12 themed islands from the pack PSD into map-pack/layers/ (committed)
@@ -104,9 +122,11 @@ Never commit keys. `.gitignore` already covers `.env*`, `service-account*.json`,
 | Android APK + updates | `docs/ANDROID.md` | testers | Expo project dheems-team/catapult-math-athletes (id ea8a1c9d-…, GitHub linked, base dir apps/mobile). Push touching apps/mobile or packages/shared → `.eas/workflows/publish-update.yml` publishes an OTA update to channel `preview` (`[eas skip]` to skip). Native change → bump `version`, build APK locally, `node apps/mobile/scripts/deploy-apk.mjs` → https://catapult-math-athletes-download.netlify.app. Figures ship as packs (`build-figpacks.mjs`, postinstall): EAS updates allow max 1000 assets. |
 | Backend | `FIREBASE_SERVICE_ACCOUNT_B64` (Owner on primary-math-sg), `NETLIFY_AUTH_TOKEN` | `backend/scripts/setup-project.mjs`, `deploy-rules.mjs` (merges student rules into the editor's), `editor-reports.mjs` (student reports in the editor), `deploy-netlify.mjs` | Same project as the editor, Spark (no billing); API on Netlify's free plan. Steps in backend/README.md. |
 
-### Claude Code on the web (cloud container)
-- Add secrets in the environment settings: session title bar → cloud environment menu → **Edit** → environment
-  variables (`FIREBASE_SERVICE_ACCOUNT_B64`, `CLOUDINARY_SECRET`, …). **Only sessions started after the change see
+### Cloud agent containers (Claude Code on the web, Codex cloud, other hosted agents)
+- `npm run setup` works there too; `npm run doctor` shows what is missing. Cloud setup scripts can call
+  `bash scripts/setup.sh` (Claude Code: `.claude/settings.json` runs `--quick` on session start).
+- Add secrets in the environment settings (Claude Code: session title bar → cloud environment menu → **Edit** →
+  environment variables; Codex / others: their environment's secret settings) (`FIREBASE_SERVICE_ACCOUNT_B64`, `CLOUDINARY_SECRET`, …). **Only sessions started after the change see
   them** — an already-running session must spawn a new session (same environment) or the user starts one.
 - Check presence without printing values: `env | cut -d= -f1 | grep -x CLOUDINARY_SECRET`.
 - Outbound HTTPS goes through `HTTPS_PROXY` (CA: `NODE_EXTRA_CA_CERTS`). Node code must use `makeDispatcher()`
@@ -117,7 +137,7 @@ Never commit keys. `.gitignore` already covers `.env*`, `service-account*.json`,
   the env var inside the script.
 - Chromium for Playwright: `/opt/pw-browsers/chromium` (never `playwright install`); playwright module may be at
   `/opt/node-tools/node_modules/playwright`.
-- No `gh` CLI; use GitHub MCP tools. Push: `git push -u origin <branch>` with retries on network errors.
+- GitHub access depends on the agent (Claude Code cloud: no `gh`, use GitHub MCP tools). Push: `git push -u origin <branch>` with retries on network errors.
 - Disk is a fixed allowance; delete `dist-web-raw/`, `dist-preview/`, caches if "no space left".
 
 ### Local machine (Mac/Linux)
@@ -129,14 +149,15 @@ Never commit keys. `.gitignore` already covers `.env*`, `service-account*.json`,
 - Phone builds need a dev client (ads/IAP native modules): `cd apps/mobile && npx expo run:ios|run:android` or
   `eas build --profile development`.
 
-### Claude desktop / Cowork / other agents
+### Desktop agents (Claude desktop/Cowork, Cursor, Copilot, Gemini CLI, Codex CLI …)
 - Same env var names. If the agent can't hold env secrets, the user runs the one credentialed command locally
   (e.g. `CLOUDINARY_SECRET=… npx tsx scripts/apply-recrops.ts recrops/P6`) — prepare everything else and the exact
   command. The `anthropic-skills:p6-maths-editor` skill covers the editor web app (primary-math-sg) itself.
 
 ## 4. Everyday commands
 ```bash
-npm install                                   # root (workspaces: packages/*, content, apps/*)
+npm run setup                                 # install + checks (bash scripts/setup.sh; --verify --browser --android)
+npm run doctor                                # what works here + live service status
 npm test                                      # all workspaces (vitest) + backend functions
 cd apps/mobile && npm test && npx tsc --noEmit
 cd content && npm test
