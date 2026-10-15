@@ -7,7 +7,9 @@ One codebase (`apps/mobile`) serves the web app, Android and iOS. Phones get cha
 | JS/TS code, screens, question content, figures, images | **Over-the-air update** (automatic): push to `main` or `ccr-41770098-9l0q6b` touching `apps/mobile/**` or `packages/shared/**` → EAS workflow `apps/mobile/.eas/workflows/publish-update.yml` publishes to the `preview` channel → phones download it on launch and use it on the next launch. |
 | Native: a new native module, permissions, icon/splash, `app.config.ts` plugins, Expo SDK upgrade | **New APK**: bump `version` in `app.config.ts` (runtime version = app version, so old APKs stop taking updates meant for the new one), build, publish the APK. |
 
-Skip an update for a commit with `[eas skip]` in the commit message.
+Skip an update for a commit with `[eas skip]` in the commit message. **Expo free plan: 60 CI minutes a month (about 4 update runs); used up until 1 Nov 2026.** Batch app changes and use `[eas skip]` for commits that don't need to reach phones.
+
+**Web app:** `.github/workflows/deploy-web.yml` (GitHub Actions, free for this public repo) rebuilds and publishes https://catapult-math-athletes.web.app on every push touching `apps/mobile/**` or `packages/shared/**`. It authenticates keylessly: GitHub OIDC → workload identity pool `github` / provider `github-actions` in primary-math-sg (condition: repository `dheemanthlbharadwaj-cloud/P4-P6-math`) → `catapult-web-deployer` (Firebase Hosting Admin only). No secrets exist to leak or rotate.
 
 ## Where things are
 

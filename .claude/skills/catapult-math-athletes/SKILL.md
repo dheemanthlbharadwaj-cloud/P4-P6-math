@@ -19,6 +19,7 @@ description: Everything needed to work on Catapult Math Athletes (cat-themed Sin
   commits/PRs/code. Commit trailer used in this repo: `Co-Authored-By: Claude <noreply@anthropic.com>` style line.
 - Any bulk write to the editor bank must have a `--dry` run first and an undo manifest in `content/reports/`.
 - **Netlify free plan: 300 credits/month, 15 per production deploy (that is what uses them up).** Deploy the backend only when backend code changed, batch changes into one deploy, and never redeploy the APK page without a new APK. `node backend/scripts/netlify-budget.mjs` shows the period's usage; both deploy scripts refuse when fewer than 45 credits would be left (`--force` overrides). The web app is on Firebase Hosting and costs no Netlify credits.
+- **Expo free plan: 60 CI minutes/month** (each OTA update run ≈ 15 min; sandboxes count too). Use `[eas skip]` on commits that don't need to reach phones. **Web deploys run on GitHub Actions** (`.github/workflows/deploy-web.yml`, keyless Google auth); no need to deploy the web app by hand after pushing app changes.
 - Before claiming done: run tests, look at the result in a browser (web build), and report honestly.
 
 ## 1. What the product is
