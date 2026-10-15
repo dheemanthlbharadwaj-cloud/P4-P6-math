@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "etag": "BwZdPBkhy7c=",
+  "bindings": [
+    {
+      "role": "roles/datastore.user",
+      "members": [
+        "serviceAccount:catapult-backend@primary-math-sg.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/datastore.viewer",
+      "members": [
+        "serviceAccount:p6-app-reader@primary-math-sg.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/firebase.managementServiceAgent",
+      "members": [
+        "serviceAccount:p6-app-reader@primary-math-sg.iam.gserviceaccount.com",
+        "serviceAccount:service-762269301954@gcp-sa-firebase.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/firebase.sdkAdminServiceAgent",
+      "members": [
+        "serviceAccount:firebase-adminsdk-fbsvc@primary-math-sg.iam.gserviceaccount.com",
+        "serviceAccount:p6-app-reader@primary-math-sg.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/firebaseauth.admin",
+      "members": [
+        "serviceAccount:catapult-backend@primary-math-sg.iam.gserviceaccount.com",
+        "serviceAccount:firebase-adminsdk-fbsvc@primary-math-sg.iam.gserviceaccount.com",
+        "serviceAccount:p6-app-reader@primary-math-sg.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/firebasehosting.admin",
+      "members": [
+        "serviceAccount:p6-app-reader@primary-math-sg.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/firebaserules.system",
+      "members": [
+        "serviceAccount:service-762269301954@firebase-rules.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/firestore.serviceAgent",
+      "members": [
+        "serviceAccount:service-762269301954@gcp-sa-firestore.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/iam.serviceAccountTokenCreator",
+      "members": [
+        "serviceAccount:firebase-adminsdk-fbsvc@primary-math-sg.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/owner",
+      "members": [
+        "serviceAccount:p6-app-reader@primary-math-sg.iam.gserviceaccount.com",
+        "user:dheemanthlbharadwaj@gmail.com"
+      ]
+    }
+  ]
+}

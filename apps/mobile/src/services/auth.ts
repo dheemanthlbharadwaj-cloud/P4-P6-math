@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { firebaseAuth } from "./firebase";
 import { extra } from "./config";
+import { googleNativeIdToken, googleNativeSignOut } from "./googleNative";
 
 // The question bank editor (same Firebase project) gives its team logins at this domain; students can't use it.
 const EDITOR_LOGIN_DOMAIN = "@users.primary-math-sg.web.app";
@@ -22,6 +23,12 @@ export const signInEmail = async (email: string, password: string) =>
 /** Google: the login screen obtains an id token via expo-auth-session (client ids from app.config extra.auth). */
 export const signInGoogleIdToken = async (idToken: string) =>
   (await signInWithCredential(firebaseAuth(), GoogleAuthProvider.credential(idToken))).user;
+
+/** Android: native Google account picker (web client id as audience). Resolves null when the person cancelled. */
+export async function signInGoogleNative(): Promise<User | null> {
+  const token = await googleNativeIdToken(extra.auth.googleWebClientId);
+  return token ? signInGoogleIdToken(token) : null;
+}
 
 export const googleClientIds = () => extra.auth; // native apps: EXPO_PUBLIC_GOOGLE_*_CLIENT_ID (see backend/README.md)
 
@@ -56,7 +63,10 @@ export async function signInApple(): Promise<User> {
 }
 
 export const setDisplayName = (user: User, name: string) => updateProfile(user, { displayName: name });
-export const signOut = () => fbSignOut(firebaseAuth());
+export const signOut = async () => {
+  if (Platform.OS === "android") await googleNativeSignOut();
+  return fbSignOut(firebaseAuth());
+};
 export const watchAuth = (cb: (u: User | null) => void) => onAuthStateChanged(firebaseAuth(), cb);
 export const currentUser = () => firebaseAuth().currentUser;
 
@@ -68,6 +78,8 @@ export function friendlyAuthError(e: unknown): string {
   if (code.includes("invalid-email")) return "That email does not look right.";
   if (code.includes("network")) return "No internet connection.";
   if (code.includes("popup-closed-by-user") || code.includes("cancelled-popup-request") || code.includes("ERR_REQUEST_CANCELED")) return "Sign-in was cancelled.";
+  if (code === "google/in-progress") return "Google sign-in is already open. Please finish it or wait a moment.";
+  if (code === "google/play-services") return "Google Play services are missing or out of date on this phone. Update them, or use email instead.";
   if (code.includes("popup-blocked")) return "Your browser blocked the sign-in window. Allow pop-ups and try again.";
   if (code.includes("operation-not-allowed")) return "This sign-in method isn't switched on yet.";
   if (code.includes("account-exists-with-different-credential")) return "That email already uses another sign-in method. Use that one.";

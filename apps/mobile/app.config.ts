@@ -18,6 +18,11 @@ const WEB: Partial<Record<"apiKey" | "authDomain" | "projectId" | "storageBucket
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const BACKEND: { url?: string } = (() => { try { return require("./backend.json"); } catch { return {}; } })();
 
+// iOS Google sign-in (expo-auth-session) needs an iOS OAuth client; the native library's plugin then needs its reversed
+// id as URL scheme. Without an iOS client the plugin is left out (Android needs no plugin: it autolinks).
+const GOOGLE_IOS_CLIENT_ID = env("EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID", "");
+const GOOGLE_IOS_URL_SCHEME = GOOGLE_IOS_CLIENT_ID ? `com.googleusercontent.apps.${GOOGLE_IOS_CLIENT_ID.replace(/\.apps\.googleusercontent\.com$/, "")}` : "";
+
 const EAS_PROJECT_ID = "ea8a1c9d-c3dd-4cac-903d-78956443efe9"; // expo.dev project catapult-math-athletes
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
@@ -25,7 +30,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   name: "Catapult Math Athletes",
   slug: "catapult-math-athletes",
   scheme: "p6math",
-  version: "0.1.0",
+  version: "0.2.0",
   orientation: "default",
   userInterfaceStyle: "light",
   // Placeholder icon from the cat art (assets/ui/app-icon.png, adaptive-icon.png): replace the files to change it.
@@ -61,6 +66,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     "expo-router",
     ["expo-splash-screen", { image: "./assets/ui/adaptive-icon.png", imageWidth: 220, backgroundColor: "#fff7ea" }],
     "expo-apple-authentication",
+    ...(GOOGLE_IOS_URL_SCHEME ? [["@react-native-google-signin/google-signin", { iosUrlScheme: GOOGLE_IOS_URL_SCHEME }] as [string, object]] : []),
     [
       "expo-build-properties",
       {
@@ -105,8 +111,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     auth: {
       // TODO(owner): OAuth client ids from the Firebase/Google Cloud console.
       googleWebClientId: env("EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID", WEB.googleWebClientId ?? ""),
-      googleIosClientId: env("EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID", ""),
-      googleAndroidClientId: env("EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID", ""),
+      googleIosClientId: GOOGLE_IOS_CLIENT_ID,
+      // Android OAuth client (package + release SHA-1); native sign-in itself uses the web client id.
+      googleAndroidClientId: env("EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID", "762269301954-dcr7c8vg19ravbjq0mnbdcun8sqno3fj.apps.googleusercontent.com"),
     },
     eas: { projectId: EAS_PROJECT_ID },
     referralBaseUrl: env("EXPO_PUBLIC_REFERRAL_BASE_URL", "https://p6math.app/r"),

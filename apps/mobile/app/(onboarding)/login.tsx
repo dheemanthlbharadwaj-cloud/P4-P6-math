@@ -6,7 +6,7 @@ import * as WebBrowser from "expo-web-browser";
 import { Body, Button, H1, Screen } from "../../src/components/ui";
 import { Image } from "expo-image";
 import { catAnimations } from "../../src/theme/cats";
-import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInApplePopup, signInEmail, signInGoogleIdToken, signInGooglePopup, signUpEmail } from "../../src/services/auth";
+import { appleAvailable, friendlyAuthError, googleClientIds, signInApple, signInApplePopup, signInEmail, signInGoogleIdToken, signInGoogleNative, signInGooglePopup, signUpEmail } from "../../src/services/auth";
 import { isFirebaseConfigured } from "../../src/services/config";
 import { useProfile } from "../../src/store/profile";
 import { useReferral } from "../../src/store/referral";
@@ -35,11 +35,12 @@ export default function Login() {
   const ids = googleClientIds();
   const web = Platform.OS === "web";
   // Phones need their own platform client id (the web client is refused by Google from an app).
-  const googleConfigured = web || !!(Platform.OS === "android" ? ids.googleAndroidClientId : ids.googleIosClientId);
+  // Android uses native Google sign-in (web client id as audience; the Android OAuth client is matched by package + SHA-1).
+  const android = Platform.OS === "android";
+  const googleConfigured = web || (android ? !!(ids.googleWebClientId && ids.googleAndroidClientId) : !!ids.googleIosClientId);
   const [, response, promptAsync] = Google.useIdTokenAuthRequest({
     clientId: ids.googleWebClientId || "unset",
     iosClientId: ids.googleIosClientId || undefined,
-    androidClientId: ids.googleAndroidClientId || undefined,
   });
   useEffect(() => {
     if (response?.type === "success") {
@@ -140,6 +141,7 @@ export default function Login() {
           disabled={busy}
           onPress={() => (!isFirebaseConfigured ? setError("Sign-in is not available yet because Firebase is not configured.")
             : web ? void run(signInGooglePopup)
+              : android ? (googleConfigured ? void run(signInGoogleNative) : setError("Google sign-in is not set up in this build. Please use email for now."))
               : googleConfigured ? void promptAsync() : setError("Google sign-in is coming soon in the app. Please use email for now."))}
         />
         {apple ? (
