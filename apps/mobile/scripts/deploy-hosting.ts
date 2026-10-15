@@ -2,7 +2,8 @@
 //
 //   cd content && npx tsx ../apps/mobile/scripts/deploy-hosting.ts <dir> [siteId] [projectId]
 //
-// Credentials: the same service account the content sync uses (FIREBASE_SERVICE_ACCOUNT_B64 / _JSON); it needs the
+// Credentials: GOOGLE_OAUTH_ACCESS_TOKEN (CI: .github/workflows/deploy-web.yml), else the same service account the content
+// sync uses (FIREBASE_SERVICE_ACCOUNT_B64 / _JSON); it needs the
 // "Firebase Hosting Admin" role on the project. Creates the site on first use. Every path falls back to index.html
 // (single-page app).
 import fs from "node:fs";
@@ -18,10 +19,13 @@ const API = "https://firebasehosting.googleapis.com/v1beta1";
 
 async function main() {
   if (!dir || !fs.existsSync(dir)) throw new Error(`usage: deploy-hosting.ts <dir> [siteId] [projectId] (dir not found: ${dir})`);
-  const sa = loadCredentials();
   const dispatcher = makeDispatcher();
-  const jwt = new JWT({ email: sa.client_email, key: sa.private_key, scopes: ["https://www.googleapis.com/auth/cloud-platform"] });
-  const token = (await jwt.authorize()).access_token!;
+  // CI (GitHub Actions, keyless workload identity federation) passes a short-lived token; locally the service account.
+  const token = process.env.GOOGLE_OAUTH_ACCESS_TOKEN || (await (async () => {
+    const sa = loadCredentials();
+    const jwt = new JWT({ email: sa.client_email, key: sa.private_key, scopes: ["https://www.googleapis.com/auth/cloud-platform"] });
+    return (await jwt.authorize()).access_token!;
+  })());
   const call = async (method: string, url: string, body?: unknown) => {
     const r = await ufetch(url, { method, dispatcher, headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body: body === undefined ? undefined : JSON.stringify(body) });
     const text = await r.text();

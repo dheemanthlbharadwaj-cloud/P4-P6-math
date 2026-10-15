@@ -8,18 +8,10 @@ on:
     paths: ['apps/mobile/**', 'packages/shared/**', '!**/*.md']
 
 jobs:
-  # Phones ask for the "preview" channel (local APKs send it as a request header); EAS only creates channels for its own
-  # builds, so make sure it exists and points at the "preview" branch. No-op once it exists.
-  ensure_channel:
-    name: Ensure preview channel
-    steps:
-      - uses: eas/checkout
-      - uses: eas/install_node_modules # eas-cli reads app.config.ts (plugins need node_modules)
-      - run: npx -y eas-cli@latest channel:view preview --non-interactive > /dev/null 2>&1 || npx -y eas-cli@latest channel:create preview --non-interactive
-
+  # The "preview" channel (phones ask for it) was created once on 2026-10-14 and points at the "preview" branch.
+  # Free Expo plan: 60 CI minutes a month, about 4 of these runs. Put [eas skip] in commits that need no update.
   publish_preview_update:
     name: Publish preview update (Android)
-    needs: [ensure_channel]
     type: update
     environment: preview
     env:

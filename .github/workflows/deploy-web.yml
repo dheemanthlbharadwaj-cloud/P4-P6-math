@@ -1,0 +1,49 @@
+# Web app (https://catapult-math-athletes.web.app): every push that changes the app or the shared package rebuilds the
+# web build and publishes it to Firebase Hosting. Keyless: GitHub's OIDC token is exchanged (workload identity
+# federation, pool "github" in primary-math-sg, limited to this repository) for a short-lived token of
+# catapult-web-deployer, whose only role is Firebase Hosting Admin. No secrets are stored anywhere.
+# Runs on GitHub's free minutes (public repo): no Expo CI minutes, no Netlify credits.
+name: Deploy web app
+
+on:
+  push:
+    branches: [main, ccr-41770098-9l0q6b]
+    paths: ['apps/mobile/**', 'packages/shared/**', '!**/*.md']
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-web
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write # for the Google token exchange
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - run: npm ci # postinstall builds the figure packs
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/762269301954/locations/global/workloadIdentityPools/github/providers/github-actions
+          service_account: catapult-web-deployer@primary-math-sg.iam.gserviceaccount.com
+          token_format: access_token
+      - name: Build the web app
+        run: python3 apps/mobile/scripts/web-preview.py
+      - name: Publish to Firebase Hosting
+        working-directory: content
+        env:
+          GOOGLE_OAUTH_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: npx tsx ../apps/mobile/scripts/deploy-hosting.ts ../apps/mobile/dist-preview
