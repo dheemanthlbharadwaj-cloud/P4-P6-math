@@ -15,7 +15,9 @@
     "content:mock": "npm run mock -w @p6/content",
     "content:sync": "npm run sync -w @p6/content --",
     "content:audit": "npm run audit -w @p6/content --",
-    "content:build": "npm run build -w @p6/content --"
+    "content:build": "npm run build -w @p6/content --",
+    "setup": "bash scripts/setup.sh",
+    "doctor": "node scripts/doctor.mjs"
   },
   "overrides": {
     "react": "19.2.3",

@@ -6,5 +6,18 @@
       "Bash(node backend/scripts/deploy-netlify.mjs:*)",
       "Bash(node backend/scripts/editor-reports.mjs:*)"
     ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/scripts/setup.sh\" --quick",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
   }
 }
