@@ -1,0 +1,30 @@
+# Web app (https://catapult-math-athletes.web.app): every push to the app's branches that touches the app or the shared
+# package rebuilds the web preview and publishes it to Firebase Hosting, so the web app stays in step with the
+# over-the-air phone updates (publish-update.yml).
+#
+# Needs a deploy-only key on expo.dev: project → Environment variables → environment "preview" → a FILE secret named
+# GOOGLE_APPLICATION_CREDENTIALS holding a JSON key of catapult-web-deployer@primary-math-sg.iam.gserviceaccount.com
+# (role: Firebase Hosting Admin only). Without it the job only prints a notice and succeeds.
+name: Deploy web app
+
+on:
+  push:
+    branches: ['main', 'ccr-41770098-9l0q6b']
+    paths: ['apps/mobile/**', 'packages/shared/**', '!**/*.md']
+
+jobs:
+  deploy_web:
+    name: Build and deploy the web app
+    environment: preview
+    steps:
+      - uses: eas/checkout
+      - uses: eas/install_node_modules
+      - name: Build and publish
+        run: |
+          if [ -z "$GOOGLE_APPLICATION_CREDENTIALS" ] || [ ! -f "$GOOGLE_APPLICATION_CREDENTIALS" ]; then
+            echo "No deploy key yet (GOOGLE_APPLICATION_CREDENTIALS file secret in the preview environment): skipping the web deploy."
+            exit 0
+          fi
+          python3 -c "import PIL" 2>/dev/null || python3 -m pip install --quiet --user pillow || python3 -m pip install --quiet --break-system-packages pillow
+          python3 scripts/web-preview.py
+          cd ../../content && npx tsx ../apps/mobile/scripts/deploy-hosting.ts ../apps/mobile/dist-preview
