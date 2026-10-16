@@ -94,6 +94,74 @@ function isMoney(spec: AnswerSpec, raw: string): boolean {
   return /^\s*[+-]?\s*[$＄]/.test(raw) || (!!unit && /[$＄]|dollar/i.test(unit));
 }
 
+// ---------- Forgiving text matching ----------
+// Used for kind "text" after the exact comparison fails, so it can only ADD accepted answers. Same code in the app and on
+// the server (copy-shared). Two steps: (1) same words ignoring case, punctuation (, . ; : ! ?), spacing and "&" = "and";
+// (2) "key tokens": every number, fraction, single letter, operator and am/pm of the accepted answer must be in the
+// response, in the same order, and the response may only add filler. Label words may be left out or abbreviated
+// ("Row 96, Column C" accepts "96 C", "R96 C", "row 96 col c" but never "C", "96", "Row 96, Column D" or "Row 95, Column C").
+
+const FILLER = new Set(["and", "the", "is", "are", "was", "it", "its", "my", "answer", "ans"]);
+const OPS = "+-×÷*/=()^<>";
+
+/** Lowercase, unify symbols, "&" → "and", drop , ; ! ? and the dots/colons that are not part of a number or time. */
+function looseNorm(s: string): string {
+  let t = String(s ?? "").normalize("NFKC").toLowerCase();
+  t = t.replace(/[−–—‒‐‑﹣－]/g, "-").replace(/&/g, " and ");
+  t = t.replace(/\b([ap])\s*\.?\s*m\b\.?/g, "$1m"); // p.m. / p m / pm
+  t = t.replace(/²/g, "^2").replace(/³/g, "^3").replace(/\b(mm|cm|km|m)(?:\s*\^\s*)?([23])(?!\d)/g, (m, u, n) => (/\^/.test(m) || m.length === u.length + 1 ? u + (n === "2" ? "sq" : "cu") : m)); // cm^2, cm², cm2 → one unit word
+  t = t.replace(/(\d),(?=\d{3}(?!\d))/g, "$1"); // 1,250
+  t = t.replace(/[,;!?]/g, " ").replace(/\.(?!\d)|(?<!\d)\./g, " ").replace(/:(?!\d)|(?<!\d):/g, " ");
+  return t.replace(/\s+/g, " ").trim();
+}
+
+type Tok = { v: string; data: boolean };
+/** Tokens: numbers (decimals, times) and fractions, runs of letters (a lone letter is data), operators; digits and letters are split ("5y" = 5, y). */
+function tokens(s: string, articles = true): Tok[] {
+  const out: Tok[] = [];
+  const re = new RegExp(`\\d+(?:[./:]\\d+)*|[a-zà-ÿπ]+|[${OPS.replace(/[-^]/g, "\\$&")}]|[%°¢$]`, "g");
+  for (const m of looseNorm(s).matchAll(re)) {
+    const v = m[0];
+    const isNum = /^\d/.test(v), isOp = v.length === 1 && OPS.includes(v);
+    const isWord = /^[a-zà-ÿπ]+$/.test(v);
+    out.push({ v, data: isNum || isOp || (isWord && (v.length === 1 || v === "am" || v === "pm" || v === "π")) });
+  }
+  // "a" before a word is the article, not a variable (accepted "a right angle") - in both answer and response
+  for (let i = 0; articles && i < out.length - 1; i++) if (out[i].v === "a" && /^[a-z]{2,}$/.test(out[i + 1].v)) out[i].data = false;
+  return out;
+}
+
+function looseTextMatch(accepted: string, response: string): boolean {
+  // (1) same words, ignoring case/punctuation/spacing
+  const a = looseNorm(accepted), r = looseNorm(response);
+  if (!a || !r) return false;
+  if (a === r || a.replace(/ /g, "") === r.replace(/ /g, "")) return true;
+  const bare = (x: string) => (/^(?:a|an|the) [a-z]{2,}/.test(x) && !/\d|\b[a-z]\b/.test(x.replace(/^(?:a|an|the) /, "")) ? x.replace(/^(?:a|an|the) /, "") : x);
+  if (bare(a) === bare(r)) return true; // a leading article does not matter in a word answer
+  // (2) key tokens
+  const at = tokens(accepted, /(?:^|\s)a\s+[A-Za-z]{2,}/.test(accepted)); // a capital "A" (a name, a letter) is data, not the article
+  if (!at.some((t) => t.data)) return false; // pure words: only the exact comparison above
+  const words = at.filter((t) => !t.data && /^[a-z]{2,}$/.test(t.v)).map((t) => t.v);
+  let rt = tokens(response);
+  // abbreviations: "col" → column; a lone letter right before a number ("R96") → the label word it starts
+  rt = rt.map((t, i) => {
+    if (t.v === "a" && !t.data) return t;
+    if (/^[a-z]{2,}$/.test(t.v) && !words.includes(t.v)) {
+      const w = words.find((x) => x.startsWith(t.v));
+      return w ? { v: w, data: false } : t;
+    }
+    if (t.v.length === 1 && /[a-z]/.test(t.v) && /^\d/.test(rt[i + 1]?.v ?? "") && words.some((x) => x[0] === t.v)) return { v: words.find((x) => x[0] === t.v)!, data: false };
+    return t;
+  });
+  rt = rt.filter((t) => t.data || !FILLER.has(t.v));
+  let j = 0;
+  for (const t of at) {
+    if (j < rt.length && rt[j].v === t.v) j++;
+    else if (t.data) return false; // a number, letter or operator is missing or different
+  }
+  return j === rt.length; // nothing extra or contradictory left in the response
+}
+
 /** True if `raw` satisfies `spec`. Accepts equivalent forms: 0.5 = 1/2, 1 1/2 = 3/2 = 1.5, "3 : 4" = "3:4". */
 export function checkAnswer(spec: AnswerSpec, raw: string): boolean {
   if (raw == null || String(raw).trim() === "") return false;
@@ -123,7 +191,7 @@ export function checkAnswer(spec: AnswerSpec, raw: string): boolean {
       return spec.accepted.some((a) => {
         const ca = new Set([compact(normalizeInput(a)), compact(a.normalize("NFKC").toLowerCase())]);
         for (const c of cands) if (ca.has(c)) return true;
-        return false;
+        return looseTextMatch(a, String(raw)); // forgiving match, only ever adds accepted answers
       });
     }
   }

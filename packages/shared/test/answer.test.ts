@@ -152,3 +152,65 @@ describe("number answers with unit words (kids type the number, the number and u
     expect(checkAnswer({ kind: "ratio", terms: [3, 4] }, "3 : 4")).toBe(true);
   });
 });
+
+describe("forgiving text answers", () => {
+  const text = (...accepted: string[]): AnswerSpec => ({ kind: "text", accepted });
+  const ok = (spec: AnswerSpec, ...rs: string[]) => rs.forEach((r) => expect(checkAnswer(spec, r), r).toBe(true));
+  const no = (spec: AnswerSpec, ...rs: string[]) => rs.forEach((r) => expect(checkAnswer(spec, r), r).toBe(false));
+  const row = text("Row 96, Column C");
+  it("case, punctuation, spacing and &", () => {
+    ok(text("isosceles triangle"), "Isosceles Triangle", "isosceles  triangle.", "ISOSCELES TRIANGLE!");
+    ok(text("Tom and Jerry"), "tom & jerry", "Tom, and Jerry");
+    ok(text("6:45 p.m."), "6:45pm", "6:45 PM", "6:45 p.m", "6:45 p m");
+    ok(text("0.525"), "0.525");
+    no(text("0.525"), "0 525", "525");
+    no(text("isosceles triangle"), "triangle", "scalene triangle", "isosceles");
+  });
+  it("key tokens: Row 96, Column C", () => {
+    ok(row, "Row 96, Column C", "row 96 column c", "96, C", "96 c", "Row 96 Col C", "R96 C", "r 96 c", "ROW 96, COLUMN C.", "the answer is row 96 column c");
+    no(row, "C", "96", "Row 95, Column C", "Row 96, Column D", "Row 69 Column C", "Column C Row 96", "Row 96", "Column C", "Row 96, Column C, 5", "not row 96 column c", "96 D");
+  });
+  it("lists keep their order and every item", () => {
+    ok(text("15 and 21"), "15, 21", "15 & 21", "15 21", "15 and 21");
+    no(text("15 and 21"), "21 and 15", "15", "21", "15 and 22", "15, 21, 3");
+    ok(text("1, 2, 3, 6"), "1 2 3 6", "1,2,3,6", "1, 2, 3 and 6");
+    no(text("1, 2, 3, 6"), "1, 2, 3", "1, 2, 6", "6, 3, 2, 1");
+    ok(text("9/8, 2/3, 5/9"), "9/8 2/3 5/9", "9/8,2/3,5/9");
+    no(text("9/8, 2/3, 5/9"), "9/8, 5/9, 2/3", "9/8, 2/3");
+  });
+  it("times and durations", () => {
+    ok(text("2 p.m."), "2pm", "2 PM", "2 p.m", "2 p.m.");
+    no(text("2 p.m."), "2", "2 a.m.", "3 p.m.", "pm");
+    ok(text("10 h 45 min"), "10h45min", "10 h 45 min", "10 H 45 MIN", "10 h 45");
+    no(text("10 h 45 min"), "10 h 54 min", "10 45", "45 min", "10 h");
+    ok(text("2 m 84 cm"), "2m84cm", "2 m 84");
+    no(text("2 m 84 cm"), "284 cm", "2 84");
+    ok(text("13.00 to 15.00"), "13.00 to 15.00", "13.00 15.00");
+  });
+  it("algebra", () => {
+    ok(text("5y - 10"), "5y-10", "5 y - 10", "5y - 10", "5Y - 10", "5y−10");
+    no(text("5y - 10"), "5y + 10", "10 - 5y", "5y", "y - 10", "5x - 10", "5y - 11", "50y - 10");
+    ok(text("3a/5"), "3a/5", "3 a / 5");
+    no(text("3a/5"), "5a/3", "3a/6");
+    ok(text("(7y-4) kg"), "(7y-4) kg", "(7y-4)");
+    no(text("2(y+1)"), "2y+1");
+    no(text("(7y-4) kg"), "(7y-4)kg g", "7y+4");
+  });
+  it("units and word answers with data", () => {
+    ok(text("40 white squares; 16 grey squares"), "40 white squares, 16 grey squares", "40 white 16 grey", "40, 16");
+    no(text("40 white squares; 16 grey squares"), "40 grey squares, 16 white squares", "16, 40", "40");
+    ok(text("124 cm² and 1552 cm²"), "124 cm2 and 1552 cm2", "124 cm^2, 1552 cm^2", "124, 1552");
+    ok(text("a right angle"), "right angle", "a right angle");
+    no(text("a right angle"), "an acute angle");
+    no(text("A and B"), "and B", "B");
+  });
+  it("any of several accepted answers", () => {
+    const s = text("3", "3 or 5");
+    ok(s, "3", "3 or 5", "3, 5");
+    no(s, "5");
+  });
+  it("number, fraction and ratio checking is untouched", () => {
+    expect(checkAnswer({ kind: "number", value: 22, unit: "cupcakes" }, "22")).toBe(true);
+    expect(checkAnswer({ kind: "number", value: 22 }, "22 and 3")).toBe(false);
+  });
+});

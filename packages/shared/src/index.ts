@@ -5,3 +5,4 @@ export * from "./api";
 export * from "./stars";
 export * from "./progress";
 export * from "./names";
+export * from "./answerHint";
