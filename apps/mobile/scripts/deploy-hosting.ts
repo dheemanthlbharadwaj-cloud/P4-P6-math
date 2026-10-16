@@ -60,9 +60,14 @@ async function main() {
             "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           },
         },
-        { glob: "**/*.@(js|webp|png|ttf|json)", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
-        { glob: "/", headers: { "Cache-Control": "no-cache" } },
-        { glob: "**/*.html", headers: { "Cache-Control": "no-cache" } },
+        // Every path is index.html through the rewrite (deep links like /level/P6/...), and index.html must never be
+        // cached: a stale copy would point at a bundle the next deploy removed. Later rules win, so the hashed
+        // files below override this. Only those folders/names get the long cache: a missing file falls back to
+        // index.html and must not be remembered for a year.
+        { glob: "**", headers: { "Cache-Control": "no-cache" } },
+        { glob: "/js/**", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+        { glob: "/assets/**", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+        { glob: "/figpack-*", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
       ],
     },
   });

@@ -7,9 +7,15 @@ The normal web export assumes it is served from a site root and ships every ques
 (1,600+). This script makes it work from any folder with few files:
 1. Figures are resized and packed into a handful of binary pack files; the page unpacks them into blob URLs
    before the app starts, and a temporary web-only figures registry (figures/index.web.ts) reads them.
-2. Asset URLs in the bundle become relative to the page's folder.
-3. The router sees "/" as the start path whatever folder the page is served from.
+2. Asset URLs in the bundle start from a base: "/" by default (the site root, as on Firebase Hosting, where every path
+   falls back to index.html, so deep links like /level/P6/... work). `--base .` keeps the old folder-relative build
+   (works from any subfolder; the address bar is then reset to "/" before the app starts).
+3. Two figure pack sets are built: WebP (small) and JPEG (for browsers that cannot decode WebP, e.g. old iPad Safari).
+   A visitor downloads only one set. Packs are fetched with retries; a pack that still fails does not stop the app,
+   its figures are fetched on demand (HTTP Range request, else the whole pack) when a question needs them.
 Phone builds are untouched: index.web.ts exists only while this script runs.
+
+    python scripts/web-preview.py [--base /|.|/sub/] [--figures DIR]  (DIR: a folder with manifest.json + the .webp files)
 """
 import glob
 import hashlib
@@ -30,16 +36,25 @@ WEB_REGISTRY = os.path.join(FIG_DIR, "index.web.ts")
 EXPORT = os.path.join(APP, "dist-web-raw")
 OUT = os.path.join(APP, "dist-preview")
 PACK_LIMIT = 12 * 1024 * 1024  # bytes per pack file
-MAX_W, QUALITY = 760, 70
+MAX_W, QUALITY, JPEG_QUALITY = 760, 70, 82
 
 REGISTRY_TS = """// TEMPORARY web-preview registry written by scripts/web-preview.py (deleted after export).
-// Figures come from packs the preview page unpacks into blob URLs before the app starts.
+// Figures come from packs the preview page downloads before the app starts (globalThis.__P6_FIGS__); a figure whose
+// pack failed is fetched on demand by the page's loader (globalThis.__P6_LOAD__), see PAGE in web-preview.py.
 type Fig = { uri: string; width: number; height: number };
-const loaded = (): Record<string, Fig> => (globalThis as unknown as { __P6_FIGS__?: Record<string, Fig> }).__P6_FIGS__ ?? {};
+type G = { __P6_FIGS__?: Record<string, Fig>; __P6_KNOWN__?: Record<string, unknown>; __P6_LOAD__?: (id: string) => Promise<Fig | undefined> };
+const g = globalThis as unknown as G;
+const loaded = (): Record<string, Fig> => g.__P6_FIGS__ ?? {};
 export const figures = new Proxy({} as Record<string, number>, {
   get: (_t, id) => (typeof id === "string" ? (loaded()[id] as unknown as number) : undefined),
   has: (_t, id) => typeof id === "string" && id in loaded(),
 });
+export const figureStore = {
+  peek: (id: string) => loaded()[id],
+  has: (id: string) => id in loaded() || id in (g.__P6_KNOWN__ ?? {}),
+  ensure: (id: string): Promise<Fig | undefined> => (loaded()[id] ? Promise.resolve(loaded()[id]) : g.__P6_LOAD__ ? g.__P6_LOAD__(id) : Promise.resolve(undefined)),
+  ensureAll: () => Promise.resolve(), // the page already downloaded what it could; the rest is fetched when shown
+};
 """
 
 
@@ -49,15 +64,83 @@ def run(cmd, cwd):
         sys.exit(f"{cmd} failed:\n{r.stdout[-3000:]}\n{r.stderr[-3000:]}")
 
 
+def encode(path, fmt):
+    """Resized figure bytes. JPEG gets a white background (no alpha)."""
+    im = Image.open(path)
+    if im.width > MAX_W:
+        im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
+    b = io.BytesIO()
+    if fmt == "jpg":
+        if im.mode in ("RGBA", "LA", "P"):
+            im = im.convert("RGBA")
+            bg = Image.new("RGB", im.size, (255, 255, 255))
+            bg.paste(im, mask=im.getchannel("A"))
+            im = bg
+        else:
+            im = im.convert("RGB")
+        im.save(b, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+    else:
+        im.save(b, "WEBP", quality=QUALITY, method=4)
+    return b.getvalue(), im.width, im.height
+
+
+def build_set(fmt, files_by_key):
+    """Packs + index for one image format. Returns (index file name, packs, figure count).
+    Figure keys (= question ids, may contain spaces) map to files through manifest.json."""
+    index, packs, buf, n = {}, [], io.BytesIO(), 0
+    cache = {}  # file -> index entry, in case two keys share a file
+
+    def flush():
+        nonlocal buf, n
+        if buf.tell():
+            # Images joined end to end (types a static host serves). Content-hashed names: the host caches
+            # them for a year, so a new build must never reuse an old name (a cached pack + new offsets =
+            # broken pictures, a cached index = questions without pictures).
+            data = buf.getvalue()
+            name = f"figpack-{fmt}{n}-{hashlib.sha1(data).hexdigest()[:10]}.{fmt}"
+            open(os.path.join(OUT, name), "wb").write(data)
+            packs.append({"file": name, "bytes": len(data)})
+            buf, n = io.BytesIO(), n + 1
+
+    for key in sorted(files_by_key):
+        f = files_by_key[key]
+        if f in cache:
+            index[key] = list(cache[f])
+            continue
+        data, w, h = encode(f, fmt)
+        if buf.tell() + len(data) > PACK_LIMIT:
+            flush()
+        index[key] = [n, buf.tell(), len(data), w, h]
+        cache[f] = index[key]
+        buf.write(data)
+    flush()
+    ix = json.dumps({"packs": packs, "figs": index}, separators=(",", ":"))
+    ix_name = f"figpack-index-{fmt}-{hashlib.sha1(ix.encode()).hexdigest()[:10]}.json"
+    open(os.path.join(OUT, ix_name), "w").write(ix)
+    return ix_name, packs, len(index)
+
+
 def main():
-    figs = sorted(glob.glob(os.path.join(FIG_DIR, "*.webp")))
+    base = "/"
+    if "--base" in sys.argv:
+        base = sys.argv[sys.argv.index("--base") + 1]
+    if base != ".":
+        base = "/" + base.strip("/") + "/" if base.strip("/") else "/"
+    fig_dir = os.path.abspath(sys.argv[sys.argv.index("--figures") + 1]) if "--figures" in sys.argv else FIG_DIR
+    manifest = json.load(open(os.path.join(fig_dir, "manifest.json"), encoding="utf8"))
+    files_by_key = {k: os.path.join(fig_dir, v) for k, v in manifest.items()}
+    missing = [k for k, f in files_by_key.items() if not os.path.exists(f)]
+    if missing:
+        sys.exit(f"manifest lists {len(missing)} missing figure files, e.g. {missing[:3]}")
+    os.makedirs(FIG_DIR, exist_ok=True)
     with open(WEB_REGISTRY, "w") as f:
         f.write(REGISTRY_TS)
     try:
         shutil.rmtree(EXPORT, ignore_errors=True)
         run(f"EXPO_PUBLIC_DEV_TOOLS=1 npx expo export --platform web --clear --output-dir {EXPORT}", APP)  # test build: Dev Tools on; --clear so config (Firebase keys, emulators) changes always apply
     finally:
-        os.remove(WEB_REGISTRY)
+        if os.path.exists(WEB_REGISTRY):
+            os.remove(WEB_REGISTRY)
 
     shutil.rmtree(OUT, ignore_errors=True)
     os.makedirs(OUT)
@@ -78,47 +161,24 @@ def main():
             shutil.copy(src, dst)
     entry = os.path.relpath(glob.glob(os.path.join(OUT, "js", "entry-*.js"))[0], OUT)
 
-    # figure packs
-    index, packs, buf, n = {}, [], io.BytesIO(), 0
+    # figure packs, one set per image format
+    webp_ix, webp_packs, n_webp = build_set("webp", files_by_key)
+    jpg_ix, jpg_packs, n_jpg = build_set("jpg", files_by_key)
 
-    def flush():
-        nonlocal buf, n
-        if buf.tell():
-            # WebP images joined end to end (a type static hosts serve). Content-hashed names: the host caches
-            # .webp/.json for a year, so a new build must never reuse an old name (a cached pack + new offsets =
-            # broken pictures, a cached index = questions without pictures).
-            data = buf.getvalue()
-            name = f"figpack-{n}-{hashlib.sha1(data).hexdigest()[:10]}.webp"
-            open(os.path.join(OUT, name), "wb").write(data)
-            packs.append({"file": name, "bytes": buf.tell()})
-            buf, n = io.BytesIO(), n + 1
-
-    for f in figs:
-        im = Image.open(f)
-        if im.width > MAX_W:
-            im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
-        b = io.BytesIO()
-        im.save(b, "WEBP", quality=QUALITY, method=4)
-        data = b.getvalue()
-        if buf.tell() + len(data) > PACK_LIMIT:
-            flush()
-        index[os.path.basename(f)[:-5]] = [n, buf.tell(), len(data), im.width, im.height]
-        buf.write(data)
-    flush()
-    ix = json.dumps({"packs": packs, "figs": index}, separators=(",", ":"))
-    ix_name = f"figpack-index-{hashlib.sha1(ix.encode()).hexdigest()[:10]}.json"
-    open(os.path.join(OUT, ix_name), "w").write(ix)
-
-    total = sum(p["bytes"] for p in packs)
     stamp = hashlib.sha1(open(os.path.join(OUT, entry), "rb").read()).hexdigest()[:8]
-    page = PAGE.replace("__ENTRY__", entry).replace("__STAMP__", stamp).replace("__FIGINDEX__", ix_name)
+    base_js = '(function () { var b = location.href.split("#")[0].split("?")[0]; return b.slice(0, b.lastIndexOf("/") + 1); })()' if base == "." else json.dumps(base)
+    page = (PAGE.replace("__ENTRY__", entry).replace("__STAMP__", stamp).replace("__BASEJS__", base_js)
+            .replace("__RELATIVE__", "true" if base == "." else "false")
+            .replace("__IX_WEBP__", webp_ix).replace("__IX_JPG__", jpg_ix))
     open(os.path.join(OUT, "index.html"), "w").write(page)
     files = [os.path.relpath(p, OUT) for p in glob.glob(os.path.join(OUT, "**", "*"), recursive=True) if os.path.isfile(p)]
-    print(json.dumps({"out": OUT, "files": len(files), "figures": len(index), "packs": len(packs),
-                      "packMB": round(total / 1e6, 1), "entry": entry}))
+    mb = lambda ps: round(sum(p["bytes"] for p in ps) / 1e6, 1)
+    print(json.dumps({"out": OUT, "base": base, "files": len(files), "figures": n_webp,
+                      "webp": {"packs": len(webp_packs), "MB": mb(webp_packs), "index": webp_ix},
+                      "jpg": {"packs": len(jpg_packs), "MB": mb(jpg_packs), "index": jpg_ix}, "entry": entry}))
 
 
-PAGE = """<!doctype html>
+PAGE = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Catapult Math Athletes</title>
@@ -150,7 +210,9 @@ PAGE = """<!doctype html>
   <div id="bar"><i id="barfill"></i></div>
 </div>
 <script>
+if (typeof globalThis === "undefined") window.globalThis = window; // older Safari
 (function () {
+  var G = globalThis;
   // A tab left open keeps running the version it loaded. When it comes back to the front (and every 10 minutes),
   // look at the published page: if it starts a different app bundle, offer a reload (never forced: a level may be open).
   var ENTRY = "__ENTRY__";
@@ -163,37 +225,132 @@ PAGE = """<!doctype html>
   }
   document.addEventListener("visibilitychange", checkForUpdate);
   setInterval(checkForUpdate, 10 * 60 * 1000);
-  // Asset URLs in the bundle are relative to this page's folder.
-  var base = location.href.split("#")[0].split("?")[0];
-  globalThis.__P6BASE__ = base.slice(0, base.lastIndexOf("/") + 1);
+
+  // Where the assets live: "/" on a site root (any URL depth works, so deep links and reloads are fine);
+  // a build made with --base . derives it from the page's folder instead.
+  var RELATIVE = __RELATIVE__;
+  var BASE = __BASEJS__;
+  G.__P6BASE__ = BASE;
   var fill = document.getElementById("barfill"), msg = document.getElementById("bootmsg");
   function startApp() {
-    // The app's router reads the address bar; start it at "/" whatever folder this page lives in.
-    try { history.replaceState(null, "", "/"); } catch (e) {}
+    // Folder-relative builds: the app's router reads the address bar; start it at "/" whatever folder this page lives in.
+    if (RELATIVE) { try { history.replaceState(null, "", "/"); } catch (e) {} }
     var s = document.createElement("script");
-    s.src = globalThis.__P6BASE__ + "__ENTRY__?v=__STAMP__";
+    s.src = BASE + ENTRY + "?v=__STAMP__";
     s.onload = function () { setTimeout(function () { document.getElementById("boot").hidden = true; }, 300); };
     s.onerror = function () { msg.textContent = "The app could not load. Reload the page to try again."; };
     document.body.appendChild(s);
   }
-  fetch(globalThis.__P6BASE__ + "__FIGINDEX__").then(function (r) { return r.json(); }).then(function (ix) {
-    var total = ix.packs.reduce(function (a, p) { return a + p.bytes; }, 0), done = 0, blobs = [];
-    return Promise.all(ix.packs.map(function (p, i) {
-      return fetch(globalThis.__P6BASE__ + p.file).then(function (r) { return r.arrayBuffer(); }).then(function (buf) {
-        blobs[i] = buf; done += p.bytes; fill.style.width = Math.round(done / total * 100) + "%";
-      });
-    })).then(function () {
-      var figs = {};
-      Object.keys(ix.figs).forEach(function (id) {
-        var f = ix.figs[id];
-        var url = URL.createObjectURL(new Blob([new Uint8Array(blobs[f[0]], f[1], f[2])], { type: "image/webp" }));
-        figs[id] = { uri: url, width: f[3], height: f[4] };
-      });
-      globalThis.__P6_FIGS__ = figs;
+
+  // ---- figures -------------------------------------------------------------------------------------------------
+  // Packs (images joined end to end) are fetched here, before the app starts, and sliced into blob URLs.
+  // Which set: WebP, or JPEG when this browser cannot decode WebP (or ?nowebp=1, for testing).
+  // Failure handling: every request is retried 3 times; a pack that still fails is skipped (the app starts with the
+  // figures that did load) and its figures are fetched when a question needs them (__P6_LOAD__).
+  var figs = G.__P6_FIGS__ = {}, known = G.__P6_KNOWN__ = {};
+  var IX = { webp: "__IX_WEBP__", jpg: "__IX_JPG__" }, fmt = "webp", ixP = null, whole = {};
+  var forceJpg = /[?&]nowebp=1(&|$)/.test(location.search);
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function retry(fn, tries) {
+    var n = 0;
+    return (function go() { return fn().catch(function (e) { n++; if (n >= tries) throw e; return sleep(400 * Math.pow(3, n - 1)).then(go); }); })();
+  }
+  function ok(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r; }
+  function supportsWebp() {
+    if (forceJpg) return Promise.resolve(false);
+    return new Promise(function (res) {
+      var i = new Image(), done = false;
+      function fin(v) { if (!done) { done = true; res(v); } }
+      i.onload = function () { fin(i.width === 1 && i.height === 1); };
+      i.onerror = function () { fin(false); };
+      setTimeout(function () { fin(false); }, 4000);
+      i.src = "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAsBMJaQAA3AA/veMAAA=";
     });
-  }).catch(function () {
-    msg.textContent = "Figures could not load, so questions will show without pictures.";
-  }).then(startApp);
+  }
+  function getIndex() {
+    if (!ixP) {
+      ixP = retry(function () { return fetch(BASE + IX[fmt]).then(ok).then(function (r) { return r.json(); }); }, 3);
+      ixP.catch(function () { ixP = null; });
+    }
+    return ixP;
+  }
+  function fetchPack(file, noStore) {
+    return retry(function () { return fetch(BASE + file, noStore ? { cache: "no-store" } : undefined).then(ok).then(function (r) { return r.arrayBuffer(); }); }, 3);
+  }
+  var MIME = function () { return fmt === "jpg" ? "image/jpeg" : "image/webp"; };
+  function make(id, e, buf, off) {
+    var f = { uri: URL.createObjectURL(new Blob([new Uint8Array(buf, off, e[2])], { type: MIME() })), width: e[3], height: e[4] };
+    figs[id] = f;
+    return f;
+  }
+  // The whole pack again (kept in memory briefly, so several figures of one pack cost one download).
+  function wholePack(ix, i, noStore) {
+    if (!whole[i]) {
+      whole[i] = fetchPack(ix.packs[i].file, noStore);
+      whole[i].then(function () { setTimeout(function () { delete whole[i]; }, 30000); }, function () { delete whole[i]; });
+    }
+    return whole[i];
+  }
+  // One figure from its pack: a Range request for just its bytes, else the whole pack.
+  function rangeBytes(ix, e, noStore) {
+    var p = ix.packs[e[0]], from = e[1], to = e[1] + e[2] - 1;
+    return retry(function () {
+      var o = { headers: { Range: "bytes=" + from + "-" + to } };
+      if (noStore) o.cache = "no-store";
+      return fetch(BASE + p.file, o).then(ok).then(function (r) {
+        return r.arrayBuffer().then(function (b) {
+          // 206 only counts when it is the pack's own bytes: a compressing CDN may answer a Range request with a slice of
+          // the compressed file (Content-Encoding set, total size differs), which is useless.
+          var cr = /\/(\d+)$/.exec(r.headers.get("Content-Range") || "");
+          if (r.status === 206 && b.byteLength === e[2] && !r.headers.get("Content-Encoding") && cr && +cr[1] === p.bytes) return { buf: b, off: 0 };
+          if (r.status === 200 && b.byteLength === p.bytes) return { buf: b, off: from };
+          throw new Error("unexpected range response");
+        });
+      });
+    }, 3);
+  }
+  var inflight = {};
+  function load(id, force) {
+    if (!force && figs[id]) return Promise.resolve(figs[id]);
+    if (inflight[id]) return inflight[id];
+    var p = getIndex().then(function (ix) {
+      var e = ix.figs[id];
+      if (!e) return undefined;
+      return rangeBytes(ix, e, force).catch(function () {
+        return wholePack(ix, e[0], force).then(function (b) { return { buf: b, off: e[1] }; });
+      }).then(function (r) { return make(id, e, r.buf, r.off); });
+    });
+    inflight[id] = p;
+    var clear = function () { delete inflight[id]; };
+    p.then(clear, clear);
+    return p;
+  }
+  G.__P6_LOAD__ = function (id) { return load(id, false); };
+  // Drops a figure and fetches it again (its picture would not display).
+  G.__P6_RELOAD__ = function (id) {
+    var old = figs[id];
+    delete figs[id];
+    if (old) { try { URL.revokeObjectURL(old.uri); } catch (e) {} }
+    return load(id, true);
+  };
+
+  function loadPacks() {
+    return getIndex().then(function (ix) {
+      Object.keys(ix.figs).forEach(function (id) { known[id] = 1; });
+      var byPack = ix.packs.map(function () { return []; });
+      Object.keys(ix.figs).forEach(function (id) { byPack[ix.figs[id][0]].push(id); });
+      var total = ix.packs.reduce(function (a, p) { return a + p.bytes; }, 0), done = 0;
+      return Promise.all(ix.packs.map(function (p, i) {
+        return fetchPack(p.file).then(function (buf) {
+          byPack[i].forEach(function (id) { make(id, ix.figs[id], buf, ix.figs[id][1]); });
+          done += p.bytes; fill.style.width = Math.round(done / total * 100) + "%";
+        }, function () { /* this pack's figures are fetched when needed */ });
+      }));
+    });
+  }
+  supportsWebp().then(function (w) { fmt = w ? "webp" : "jpg"; return loadPacks(); })
+    .catch(function () { /* no index: the app starts anyway and asks for figures one by one */ })
+    .then(startApp);
 })();
 </script>
 """

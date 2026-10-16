@@ -5,14 +5,14 @@ import { Image, Modal, Platform, ScrollView, StyleSheet, Text, useWindowDimensio
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "./ui";
 import { FigureImg } from "./FigureImg";
-import { isRemoteFigure, type ShownFigure } from "../content/useFigure";
+import { bundledImage, isRemoteFigure, type ShownFigure } from "../content/useFigure";
 
 export function FigureViewer({ source, visible, onClose }: { source: ShownFigure; visible: boolean; onClose: () => void }) {
   const { width, height } = useWindowDimensions();
   const [zoom, setZoom] = useState(1);
   // resolveAssetSource exists on iOS/Android only; on web the bundled asset already carries its size.
   // A remote figure may come without a size: it is measured when it loads (square until then).
-  const bundled = isRemoteFigure(source) ? source.fallback : source;
+  const bundled = bundledImage(source);
   const resolved: { width?: number; height?: number } | null = isRemoteFigure(source)
     ? source
     : bundled === undefined ? null

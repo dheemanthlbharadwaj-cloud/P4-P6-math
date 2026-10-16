@@ -17,8 +17,22 @@ export function createNativeIO(packs: number[]): FigureIO {
     async readSlice(pack, offset, length) {
       let b = bufs.get(pack);
       if (!b) {
-        b = fetch(Asset.fromModule(packs[pack]).uri).then((r) => r.arrayBuffer());
+        const url = Asset.fromModule(packs[pack]).uri;
+        // 3 tries with backoff; a failed download is forgotten so the next call tries again.
+        b = (async () => {
+          for (let attempt = 0; ; attempt++) {
+            try {
+              const r = await fetch(url);
+              if (!r.ok) throw new Error(`HTTP ${r.status}`);
+              return await r.arrayBuffer();
+            } catch (e) {
+              if (attempt >= 2) throw e;
+              await new Promise((res) => setTimeout(res, 400 * 3 ** attempt));
+            }
+          }
+        })();
         bufs.set(pack, b);
+        b.catch(() => bufs.delete(pack));
       }
       return new Uint8Array(await b, offset, length);
     },
