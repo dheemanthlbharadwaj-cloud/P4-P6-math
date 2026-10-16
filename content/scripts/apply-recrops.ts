@@ -1,6 +1,6 @@
 // Apply re-cropped figures to the editor's question bank.
 //
-//   npx tsx scripts/apply-recrops.ts <dir-of-pngs> [--dry]
+//   npx tsx scripts/apply-recrops.ts <dir-of-pngs> [--dry] [--only <questionId>]
 //
 // Each <questionId>.png in the folder is uploaded to Cloudinary (p6maths/figures_edited/<id>_recrop) and the
 // question's figure_url is pointed at it, stamped last_edited_by = "app-recrop". Before writing, every target doc is
@@ -11,8 +11,11 @@ import crypto from "node:crypto";
 import { fetch as ufetch, FormData } from "undici";
 import { accessToken, loadCredentials, makeDispatcher, fromFsFields } from "../src/sync";
 
-const [dir, flag] = process.argv.slice(2);
-const DRY = flag === "--dry";
+const args = process.argv.slice(2);
+const dir = args[0];
+const DRY = args.includes("--dry");
+const onlyIdx = args.indexOf("--only");
+const ONLY = onlyIdx >= 0 ? args[onlyIdx + 1] : undefined; // restrict the run to one question id
 const CLOUD = "n9gn4u6k";
 const KEY = process.env.CLOUDINARY_KEY ?? "465242564664612";
 const SECRET = process.env.CLOUDINARY_SECRET ?? "";
@@ -20,7 +23,9 @@ const BASE = "https://firestore.googleapis.com/v1/projects/primary-math-sg/datab
 
 async function main() {
   if (!SECRET) throw new Error("set CLOUDINARY_SECRET");
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".png"));
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".png") && (!ONLY || f === `${ONLY}.png`));
+  if (ONLY && !files.length) throw new Error(`no ${ONLY}.png in ${dir}`);
+  console.log("files:", files.join(", "));
   const sa = loadCredentials();
   const token = await accessToken(sa);
   const dispatcher = makeDispatcher();
