@@ -1,7 +1,7 @@
 // Pop-up calculator for questions where a calculator is allowed (Paper 2). Slides up from the bottom; close with the
 // ✕ button, the backdrop or the device back button. Arithmetic is the safe evaluator in logic/calculator (no eval).
 import React, { useEffect, useRef, useState } from "react";
-import { Animated, Image, Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { Animated, Image, Modal, Platform, Pressable, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { evaluate, formatResult } from "../logic/calculator";
 import { uiAssets } from "../theme/assets";
@@ -25,8 +25,7 @@ const KEY_COLORS: Record<Kind, { face: string; text: string }> = {
   fn: { face: "#c6ecf5", text: colors.ink },
 };
 
-export function CalculatorModal({ visible, onClose }: { visible: boolean; onClose: () => void }) {
-  const insets = useSafeAreaInsets();
+function useCalc() {
   const [expr, setExpr] = useState("");
   const [result, setResult] = useState<string | null>(null);
   const pop = useRef(new Animated.Value(1)).current;
@@ -50,49 +49,97 @@ export function CalculatorModal({ visible, onClose }: { visible: boolean; onClos
     setExpr((e) => (result ? k : e + k));
     setResult(null);
   };
+  return { expr, result, pop, press };
+}
 
+type Calc = ReturnType<typeof useCalc>;
+
+function Header({ onClose, compact }: { onClose: () => void; compact?: boolean }) {
+  return (
+    <View style={[styles.header, compact && { marginBottom: 8 }]}>
+      <Image source={uiAssets.icons.calculator} style={{ width: 34, height: 34 }} />
+      <Text style={styles.title}>Calculator</Text>
+      <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel="Close calculator" hitSlop={10}
+        style={({ pressed }) => [styles.closeBtn, pressed && { transform: [{ scale: 0.92 }] }]}>
+        <Text style={styles.closeX}>✕</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+function Screen({ c, compact }: { c: Calc; compact?: boolean }) {
+  return (
+    <View style={[styles.screen, compact && { minHeight: 76, marginBottom: 10, paddingVertical: 6 }]} accessibilityLiveRegion="polite">
+      <Text style={styles.expr} numberOfLines={1} adjustsFontSizeToFit>{c.expr || "0"}</Text>
+      <Animated.Text style={[styles.result, c.result === "Oops!" && { color: "#ff8a80" }, { transform: [{ scale: c.pop }] }]} numberOfLines={1} adjustsFontSizeToFit>
+        {c.result != null ? `= ${c.result}` : " "}
+      </Animated.Text>
+    </View>
+  );
+}
+
+function Keys({ c, fill }: { c: Calc; fill?: boolean }) {
+  return (
+    <View style={[{ gap: 10 }, fill && { flex: 1 }]}>
+      {KEYS.map((row, i) => (
+        <View key={i} style={[styles.row, fill && { flex: 1 }]}>
+          {row.map(({ k, kind, label }) => {
+            const col = KEY_COLORS[kind];
+            return (
+              <Pressable key={k} onPress={() => c.press(k)} accessibilityRole="button" accessibilityLabel={label ?? k}
+                style={({ pressed }) => [styles.key, fill && { minHeight: 40 }, { backgroundColor: col.face }, pressed && styles.keyDown]}>
+                <Text style={[styles.keyText, { color: col.text }]}>{k}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
+      ))}
+    </View>
+  );
+}
+
+/** Portrait / phone: bottom sheet over everything (today's behaviour). */
+export function CalculatorModal({ visible, onClose }: { visible: boolean; onClose: () => void }) {
+  const insets = useSafeAreaInsets();
+  const c = useCalc();
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
       <Pressable style={styles.backdrop} onPress={onClose} accessibilityLabel="Close calculator" />
       <View style={[styles.sheet, { paddingBottom: 16 + insets.bottom }]} accessibilityViewIsModal>
         <Image source={catPoses.cute} style={styles.peekCat} resizeMode="contain" accessibilityIgnoresInvertColors />
-        <View style={styles.header}>
-          <Image source={uiAssets.icons.calculator} style={{ width: 34, height: 34 }} />
-          <Text style={styles.title}>Calculator</Text>
-          <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel="Close calculator" hitSlop={10}
-            style={({ pressed }) => [styles.closeBtn, pressed && { transform: [{ scale: 0.92 }] }]}>
-            <Text style={styles.closeX}>✕</Text>
-          </Pressable>
-        </View>
-
-        <View style={styles.screen} accessibilityLiveRegion="polite">
-          <Text style={styles.expr} numberOfLines={1} adjustsFontSizeToFit>{expr || "0"}</Text>
-          <Animated.Text style={[styles.result, result === "Oops!" && { color: "#ff8a80" }, { transform: [{ scale: pop }] }]} numberOfLines={1} adjustsFontSizeToFit>
-            {result != null ? `= ${result}` : " "}
-          </Animated.Text>
-        </View>
-
-        <View style={{ gap: 10 }}>
-          {KEYS.map((row, i) => (
-            <View key={i} style={styles.row}>
-              {row.map(({ k, kind, label }) => {
-                const c = KEY_COLORS[kind];
-                return (
-                  <Pressable key={k} onPress={() => press(k)} accessibilityRole="button" accessibilityLabel={label ?? k}
-                    style={({ pressed }) => [styles.key, { backgroundColor: c.face }, pressed && styles.keyDown]}>
-                    <Text style={[styles.keyText, { color: c.text }]}>{k}</Text>
-                  </Pressable>
-                );
-              })}
-            </View>
-          ))}
-        </View>
+        <Header onClose={onClose} />
+        <Screen c={c} />
+        <Keys c={c} />
       </View>
     </Modal>
   );
 }
 
+/** Landscape: fills its (positioned) parent, which is the working-space pane, so the question stays visible.
+ *  The parent keeps the scratchpad mounted underneath; the entry stays in memory while closed. */
+export function CalculatorPanel({ visible, onClose }: { visible: boolean; onClose: () => void }) {
+  const c = useCalc();
+  useEffect(() => {
+    if (!visible || Platform.OS !== "web") return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [visible, onClose]);
+  if (!visible) return null;
+  return (
+    <View style={styles.panel} accessibilityViewIsModal>
+      <Header onClose={onClose} compact />
+      <Screen c={c} compact />
+      <Keys c={c} fill />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
+  panel: {
+    position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#12aecf", borderRadius: 24, borderWidth: 3,
+    borderColor: colors.border, padding: 12, zIndex: 5,
+  },
   backdrop: { flex: 1, backgroundColor: "rgba(20,22,40,0.45)" },
   sheet: {
     backgroundColor: "#12aecf", borderTopLeftRadius: 28, borderTopRightRadius: 28, borderWidth: 3, borderBottomWidth: 0,

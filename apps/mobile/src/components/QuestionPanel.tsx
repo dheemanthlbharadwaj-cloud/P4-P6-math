@@ -6,7 +6,7 @@ import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleShee
 import type { Grade, Question, ReportQuestionRequest } from "@p6/shared";
 import { RichText } from "./RichText";
 import { Button } from "./ui";
-import { CalculatorModal } from "./Calculator";
+import { CalculatorModal, CalculatorPanel } from "./Calculator";
 import { FigureViewer } from "./FigureViewer";
 import { FigureImg } from "./FigureImg";
 import { Scratchpad } from "./Scratchpad";
@@ -193,7 +193,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
         </View>
       ) : null}
 
-      <CalculatorModal visible={calc} onClose={() => setCalc(false)} />
+      {landscape ? null : <CalculatorModal visible={calc} onClose={() => setCalc(false)} />}
       {fig ? <FigureViewer source={fig} visible={figOpen} onClose={() => setFigOpen(false)} /> : null}
       {reportContext ? (
         <ReportSheet visible={reportOpen} onClose={() => setReportOpen(false)} questionId={q.id} grade={grade} context={reportContext}
@@ -215,7 +215,13 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   return (
     <View style={{ flex: 1, flexDirection: "row" }}>
       <View style={{ flex: 45 }}>{left}</View>
-      <View style={{ flex: 55, padding: space.m, paddingLeft: space.s }}><Scratchpad /></View>
+      <View style={{ flex: 55, padding: space.m, paddingLeft: space.s }}>
+        {/* Calculator opens over the working space, never over the question; the scratchpad stays mounted underneath. */}
+        <View style={{ flex: 1 }}>
+          <Scratchpad />
+          <CalculatorPanel visible={calc} onClose={() => setCalc(false)} />
+        </View>
+      </View>
     </View>
   );
 }
