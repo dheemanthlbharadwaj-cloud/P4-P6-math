@@ -17,7 +17,7 @@ const UNIT_RE = new RegExp(
       "sq\\.?\\s*(?:cm|m|km)", "square\\s*(?:cm|m|km|units)", "cubic\\s*(?:cm|m)", "units?",
       "km", "cm", "mm", "m", "kg", "mg", "g", "ml", "mℓ", "ℓ", "l", "litres?", "liters?",
       "minutes?", "mins?", "hours?", "hrs?", "h", "seconds?", "secs?", "s", "days?", "weeks?", "years?",
-      "dollars?", "cents?", "c", "°c", "°f", "℃", "°", "%", "degrees?", "deg",
+      "dollars?", "cents?", "c", "¢", "°c", "°f", "℃", "°", "%", "degrees?", "deg",
     ].join("|") +
     ")\\.?$",
   "i",
@@ -38,6 +38,8 @@ export function normalizeInput(raw: string): string {
   s = s.replace(/(\d),(?=\d{3}(?:\D|$))/g, "$1").replace(/(\d),(?=\d{3}(?:\D|$))/g, "$1");
   // "x = 5" style prefix
   s = s.replace(/^[a-z]\s*=\s*(?=[-+\d.$])/, "");
+  // Singapore-style grouped thousands: "204 920" (only exact 3-digit groups, and not inside a fraction or ratio)
+  s = s.replace(/(?<![\d./:])(\d{1,3}(?: \d{3})+)(?![\d/:]|\.\d*\/)/g, (g) => g.replace(/ /g, ""));
   // trailing units, only if what precedes looks numeric
   const m = s.match(UNIT_RE);
   if (m && m.index !== undefined) {

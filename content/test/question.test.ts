@@ -35,15 +35,26 @@ describe("docToQuestion (pure doc → Question)", () => {
   });
 });
 
-// The committed bundle must be exactly what the editor snapshot builds (byte-identical questions, same version hash).
-describe.skipIf(!fs.existsSync(snapshotPath("P6")) || !fs.existsSync(path.join(assetsContentRoot(), "P6", "questions.json")))("committed P6 bundle", () => {
-  it("equals prepare() of the snapshot, byte for byte", () => {
+// Determinism, not frozen content: the editor moves on, so the test never pins the bundle to an old build.
+describe.skipIf(!fs.existsSync(snapshotPath("P6")))("P6 bundle build", () => {
+  const questionsOf = () => {
     const snap = loadSnapshot("P6");
     const prep = prepare(snap.questions, "P6", { mapping: loadMapping("P6") });
     const questions: Record<string, unknown> = {};
     for (const q of prep.candidates.filter((c) => !c.hasError).map((c) => c.q).sort((a, b) => (a.id < b.id ? -1 : 1))) questions[q.id] = q;
+    return questions;
+  };
+  it("building twice from the same snapshot gives identical questions and version", () => {
+    const a = questionsOf(), b = questionsOf();
+    expect(JSON.stringify(a)).toBe(JSON.stringify(b));
+    expect(sha256(JSON.stringify({ grade: "P6", questions: a }))).toBe(sha256(JSON.stringify({ grade: "P6", questions: b })));
+  });
+});
+
+// The committed bundle (whatever snapshot it came from) must be self-consistent: its version is the hash of its questions.
+describe.skipIf(!fs.existsSync(path.join(assetsContentRoot(), "P6", "questions.json")))("committed P6 bundle", () => {
+  it("version is the hash of its questions", () => {
     const bundle = JSON.parse(fs.readFileSync(path.join(assetsContentRoot(), "P6", "questions.json"), "utf8"));
-    expect(JSON.stringify(questions)).toBe(JSON.stringify(bundle.questions));
-    expect(sha256(JSON.stringify({ grade: "P6", questions })).slice(0, 16)).toBe(bundle.version);
+    expect(sha256(JSON.stringify({ grade: "P6", questions: bundle.questions })).slice(0, 16)).toBe(bundle.version);
   });
 });

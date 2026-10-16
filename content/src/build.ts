@@ -3,7 +3,7 @@ import path from "node:path";
 import type { Grade } from "@p6/shared";
 import { assetsContentRoot, rawFiguresDir, sanitizeId } from "./paths";
 import { writeOutputs, type FigureSource } from "./output";
-import { buildCurriculum, subtopicId, type SelCandidate, type SubtopicDef } from "./select";
+import { buildCurriculum, subtopicId, type SelCandidate, type SelectionNote, type SubtopicDef } from "./select";
 import {
   CANONICAL_TOPICS, convertQuestion, detectSubtopicField, loadMapping, loadSnapshot, newStats, normalizeDocs,
   type NormDoc, type RawDoc,
@@ -110,7 +110,8 @@ export async function runBuild(grade: Grade, opts: { subtopicField?: string; con
   const snap = loadSnapshot(grade, opts.snapshot);
   const prep = prepare(snap.questions, grade, { subtopicField: opts.subtopicField, mapping: loadMapping(grade) });
   const kept = prep.candidates.filter((c) => !c.hasError);
-  const curriculum = buildCurriculum({ grade, version: "", subtopics: prep.defs, candidates: kept });
+  const notes: SelectionNote[] = [];
+  const curriculum = buildCurriculum({ grade, version: "", subtopics: prep.defs, candidates: kept, notes });
   const res = await writeOutputs({
     grade,
     questions: kept.map((c) => c.q),
@@ -120,5 +121,5 @@ export async function runBuild(grade: Grade, opts: { subtopicField?: string; con
   });
   writeSourceInfo(res.dir, buildSourceInfo(grade, snap, kept.map((c) => c.q.id)));
   const short = curriculum.topics.flatMap((t) => t.subtopics.filter((s) => s.shortfall));
-  return { ...res, questions: kept.length, excludedHasError: prep.candidates.length - kept.length, skipped: prep.skipped.length, subtopics: prep.defs.length, shortfallSubtopics: short.length, unknownLatex: [...prep.stats.unknownCommands.entries()] };
+  return { ...res, questions: kept.length, excludedHasError: prep.candidates.length - kept.length, skipped: prep.skipped.length, subtopics: prep.defs.length, shortfallSubtopics: short.length, selectionNotes: notes, unknownLatex: [...prep.stats.unknownCommands.entries()] };
 }

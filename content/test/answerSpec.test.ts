@@ -69,3 +69,64 @@ describe("editor bank answer shapes", () => {
     expect(extractSpec({ symbol: "Drawing required: complete the trapezium PQRS in the square grid." }).autoMarkable).toBe(false);
   });
 });
+
+describe("number with unit words (answers stored as text before)", () => {
+  const num = (value: number, unit?: string) => ({ kind: "number", value, ...(unit ? { unit } : {}) });
+  it("22 cupcakes accepts 22 and 22 cupcakes", () => {
+    const r = extractSpec({ value: "22 cupcakes" });
+    expect(r.spec).toEqual(num(22, "cupcakes"));
+    expect(r.display).toBe("22 cupcakes");
+    expect(r.autoMarkable).toBe(true);
+    expect(checkAnswer(r.spec, "22")).toBe(true);
+    expect(checkAnswer(r.spec, "22 cupcakes")).toBe(true);
+    expect(checkAnswer(r.spec, "23")).toBe(false);
+  });
+  it.each([
+    ["6 years old", num(6, "years old")],
+    ["16 l per hour", num(16, "l per hour")],
+    ["15 L/min", num(15, "L/min")],
+    ["27 grey circles", num(27, "grey circles")],
+    ["32¢", num(32)],
+  ])("%s", (v, spec) => {
+    const r = extractSpec({ value: v });
+    expect(r.spec).toEqual(spec);
+    expect(checkAnswer(r.spec, r.display)).toBe(true);
+  });
+  it("money forms", () => {
+    expect(extractSpec({ value: "40 ＄" }).spec).toEqual({ kind: "number", value: 40, tolerance: 0.005, unit: "$" });
+    expect(extractSpec({ value: "$204 920" }).spec).toEqual({ kind: "number", value: 204920, tolerance: 0.005, unit: "$" });
+  });
+  it("already numeric answers are unchanged", () => {
+    expect(extractSpec({ value: "3.5 kg" }).spec).toEqual({ kind: "number", value: 3.5 });
+    expect(extractSpec({ value: "120 cm²" }).spec).toEqual({ kind: "number", value: 120 });
+    expect(extractSpec({ value: "15 %" }).spec).toEqual({ kind: "number", value: 15 });
+    expect(extractSpec({ value: "$12.50" }).spec).toEqual({ kind: "number", value: 12.5, tolerance: 0.005, unit: "$" });
+  });
+  it.each([
+    "15 and 21", "2 p.m.", "6:45 p.m.", "10 h 45 min", "5y - 10", "5y+2", "40 white squares; 16 grey squares", "1, 2, 3, 6",
+    "24 and 48", "12 p.m. to 1 p.m.", "2 triangular faces and 3 rectangular faces", "6A", "3x/0.6", "2 2/3 min (2 min 40 s)", "7 cm; 60 cm^2",
+  ])("%s stays text", (v) => {
+    expect(extractSpec({ value: v }).spec.kind).toBe("text");
+  });
+});
+
+describe("money: only a currency symbol in the answer makes it money (not the $ that delimits LaTeX math)", () => {
+  it("math-delimited answers are not money", () => {
+    expect(extractSpec({ symbol: "$\\frac{7}{20}$" }).spec).toEqual({ kind: "fraction", num: 7, den: 20 });
+    expect(extractSpec({ symbol: "$\\frac{7}{20}$ l" }).display).toBe("7/20 l");
+    expect(extractSpec({ symbol: "$68^\\circ$" }).spec).toEqual({ kind: "number", value: 68 });
+    expect(extractSpec({ symbol: "$68^\\circ$" }).display).toBe("68°");
+    expect(extractSpec({ value: "24 cm^2", symbol: "$24$" }).spec).toEqual({ kind: "number", value: 24 });
+  });
+  it("real money stays money", () => {
+    expect(extractSpec({ value: "＄3.50" }).spec).toEqual({ kind: "number", value: 3.5, tolerance: 0.005, unit: "$" });
+    expect(extractSpec({ value: "12", symbol: "＄" }).spec).toMatchObject({ tolerance: 0.005, unit: "$" });
+    expect(extractSpec({ value: "9000", unit: "＄" }).spec).toEqual({ kind: "number", value: 9000, unit: "＄" });
+    expect(extractSpec({ value: "12", unit: "dollars" }).spec).toMatchObject({ tolerance: 0.005, unit: "$" });
+  });
+  it("algebra in a money question keeps its ＄, elsewhere it does not", () => {
+    expect(extractSpec({ symbol: "$5p+4$", moneyContext: true }).display).toBe("＄5p+4");
+    expect(extractSpec({ symbol: "$5p+4$" }).display).toBe("5p+4");
+    expect(extractSpec({ symbol: "$2y+7$", unit: "cm", moneyContext: true }).display).toBe("2y+7 cm");
+  });
+});

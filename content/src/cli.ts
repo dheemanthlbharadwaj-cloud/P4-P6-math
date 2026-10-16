@@ -40,6 +40,7 @@ async function main() {
     case "build": {
       const r = await runBuild(grade, { subtopicField: sf });
       console.log(`Built ${grade}: ${r.questions} questions (${r.excludedHasError} has_error excluded, ${r.skipped} skipped), ${r.subtopics} subtopics, ${r.figureCount} figures, ${r.shortfallSubtopics} subtopics with shortfall, version ${r.version}\n→ ${r.dir}`);
+      for (const n of r.selectionNotes) console.log(`Level ${n.level} of ${n.subtopicId} filled with ${n.id} (${n.fromDifficulty}): too few allowed questions of its own difficulty`);
       if (r.unknownLatex.length) console.log("Unknown LaTeX commands:", r.unknownLatex.map(([c, n]) => `\\${c}×${n}`).join(" "));
       break;
     }

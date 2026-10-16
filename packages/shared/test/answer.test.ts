@@ -114,3 +114,41 @@ describe("markQuestion", () => {
     expect(markQuestion({ ...baseQ, type: "open" }, ["x"]).correct).toBe(false);
   });
 });
+
+describe("number answers with unit words (kids type the number, the number and unit, or a unit variant)", () => {
+  const cupcakes = num(22, { unit: "cupcakes" });
+  it("accepts the bare number and the number with the unit (singular, plural, odd case/spacing)", () => {
+    for (const a of ["22", "22 cupcakes", "22 cupcake", "22cupcakes", " 22   Cupcakes ", "22.0"]) expect(checkAnswer(cupcakes, a), a).toBe(true);
+    for (const a of ["21", "22 and 3", "2 2", "cupcakes", ""]) expect(checkAnswer(cupcakes, a), a).toBe(false);
+  });
+  it("units typed several ways", () => {
+    expect(checkAnswer(num(120, { unit: "cm²" }), "120 cm2")).toBe(true);
+    expect(checkAnswer(num(120, { unit: "cm²" }), "120 cm^2")).toBe(true);
+    expect(checkAnswer(num(120, { unit: "cm²" }), "120 sq cm")).toBe(true);
+    expect(checkAnswer(num(3.5, { unit: "kg" }), "3.5kg")).toBe(true);
+    expect(checkAnswer(num(15, { unit: "%" }), "15 %")).toBe(true);
+    expect(checkAnswer(num(15, { unit: "%" }), "15%")).toBe(true);
+    expect(checkAnswer(num(6, { unit: "years old" }), "6 years old")).toBe(true);
+    expect(checkAnswer(num(6, { unit: "years old" }), "6")).toBe(true);
+    expect(checkAnswer(num(15, { unit: "L/min" }), "15 L/min")).toBe(true);
+    expect(checkAnswer(num(32, { unit: "¢" }), "32¢")).toBe(true);
+    expect(checkAnswer(num(32, { unit: "¢" }), "32 cents")).toBe(true);
+    expect(checkAnswer(num(32, { unit: "¢" }), "32")).toBe(true);
+  });
+  it("money forms", () => {
+    const m = num(40, { tolerance: 0.005, unit: "$" });
+    for (const a of ["40", "$40", "＄40", "40 ＄", "40.00", "$ 40", "S$40"]) expect(checkAnswer(m, a), a).toBe(true);
+    expect(checkAnswer(num(12.5, { tolerance: 0.005, unit: "$" }), "$12.50")).toBe(true);
+  });
+  it("space-grouped thousands (Singapore style)", () => {
+    expect(normalizeInput("204 920")).toBe("204920");
+    expect(checkAnswer(num(204920, { tolerance: 0.005, unit: "$" }), "$204 920")).toBe(true);
+    expect(checkAnswer(num(204920), "204920")).toBe(true);
+    // not grouped: mixed numbers, ratios, lists and 4+ digit groups are left alone
+    expect(normalizeInput("2 1/2")).toBe("2 1/2");
+    expect(normalizeInput("3 : 4")).toBe("3:4");
+    expect(normalizeInput("12 3456")).toBe("12 3456");
+    expect(checkAnswer(frac(1, 2, 2), "2 1/2")).toBe(true);
+    expect(checkAnswer({ kind: "ratio", terms: [3, 4] }, "3 : 4")).toBe(true);
+  });
+});

@@ -107,10 +107,11 @@ export function docToQuestion(d: EditorDoc, ctx: QuestionCtx): Converted {
       const m = qp.find((p) => p.part === part);
       return m ? { label: tokenize(m.text, stats) } : {};
     };
+    const moneyIn = (...t: unknown[]) => /[＄]|dollar/i.test(t.map((x) => String(x ?? "")).join(" "));
     if (Array.isArray(d.answer_parts) && d.answer_parts.length) {
       for (const ap of d.answer_parts) {
         const part = String(ap.part ?? "").replace(/[()]/g, "");
-        const r = extractSpec({ value: ap.value ?? ap.answer, fraction: ap.fraction ?? ap.answer_fraction, symbol: ap.symbol, unit: ap.unit }, stats);
+        const r = extractSpec({ value: ap.value ?? ap.answer, fraction: ap.fraction ?? ap.answer_fraction, symbol: ap.symbol, unit: ap.unit, moneyContext: moneyIn(d.question, qp.find((p) => p.part === part)?.text) }, stats);
         if (!r.autoMarkable) reasons.push(`part ${part || "?"}: unparsable answer`);
         parts.push({ part, ...labelFor(part), answer: r.spec, display: r.display });
       }
@@ -128,7 +129,7 @@ export function docToQuestion(d: EditorDoc, ctx: QuestionCtx): Converted {
         parts.push({ part: "", answer: r.spec, display: r.display });
       }
     } else {
-      const r = extractSpec({ value: d.answer, fraction: d.answer_fraction, symbol: d.answer_symbol, unit: d.unit }, stats);
+      const r = extractSpec({ value: d.answer, fraction: d.answer_fraction, symbol: d.answer_symbol, unit: d.unit, moneyContext: moneyIn(d.question) }, stats);
       if (!r.autoMarkable) reasons.push(r.display ? "answer is an explanation / not parsable" : "missing answer");
       parts.push({ part: "", answer: r.spec, display: r.display });
     }
