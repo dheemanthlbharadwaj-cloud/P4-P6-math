@@ -152,7 +152,7 @@ export default function LeaderboardTab() {
           </View>
         ) : null}
         <Text style={{ color: colors.inkSoft, fontSize: 12 }}>
-          Ranking = stars earned this month. Resets at midnight at the end of the last day of the month (00:00 on the 1st, Singapore time). Medals show last month's top 3.
+          Ranking = stars earned this month. The leaderboard updates once a day, at 11:55 pm Singapore time. A new month starts on the 1st. Medals show last month's top 3.
         </Text>
         </View>
 

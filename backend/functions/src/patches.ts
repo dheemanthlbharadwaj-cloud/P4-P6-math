@@ -2,7 +2,7 @@ import { HttpsError, onCall } from "firebase-functions/v2/https";
 import type { GetQuestionPatchesResponse } from "./shared/index.js";
 import { col, db, requireUid, throwFail } from "./admin.js";
 import { CONTENT, type ServerContent } from "./content/index.js";
-import { PATCH_LIMIT, patchFloor, patchPage, validatePatchRequest, type PatchPage } from "./logic/patches.js";
+import { PATCH_LIMIT, patchFloor, patchPage, servePatches, validatePatchRequest, type PatchPage } from "./logic/patches.js";
 import { PatchCache, type PatchView } from "./logic/patchCache.js";
 
 /** One page of edits after `since` (never before the bundle's snapshot): `last_edited_at > floor`, ordered by it. A range
@@ -19,6 +19,10 @@ export async function queryPatchPage(grade: string, content: ServerContent, sinc
  * the SERVER's bundle: an app one OTA behind (bundleVersion differs from the server's) still gets patches for the ids
  * the server's bundle has (the ids both know are the same questions; a patch for an id the app lacks is simply unused).
  * New questions and level changes come with a new bundle, not with patches.
+ *
+ * Served from the per-instance patch cache (logic/patchCache.ts), not from a query per call: 0 Firestore reads while the
+ * cache is warm, at most one incremental refresh (new edits, minimum one read) per instance every 10 minutes. Editor edits
+ * therefore reach apps within about 10 minutes.
  */
 export const getQuestionPatches = onCall(async (req): Promise<GetQuestionPatchesResponse> => {
   requireUid(req);
@@ -27,19 +31,30 @@ export const getQuestionPatches = onCall(async (req): Promise<GetQuestionPatches
   const { grade, bundleVersion, since } = v.req;
   const content = CONTENT[grade];
   if (!content) throw new HttpsError("failed-precondition", "No content for this grade.");
-  const page = await queryPatchPage(grade, content, since);
+  const cache = patchCache(grade);
+  const view = await Promise.race([cache.get(), new Promise<null>((r) => setTimeout(() => r(null), FIRST_LOAD_WAIT_MS).unref?.())]);
+  // Before the first successful load "no edits" would be a lie (the app would move `until` on): ask the app to retry.
+  if (!view || !cache.loaded) throw new HttpsError("unavailable", "Question edits are loading, try again shortly.");
+  const page = servePatches(view.list, view.until, patchFloor(content, since));
   return { grade, bundleVersion, until: page.until, patches: page.patches, more: page.more };
 });
 
 const VIEW_WAIT_MS = 4000;
+const FIRST_LOAD_WAIT_MS = 15000;
 const caches = new Map<string, PatchCache>();
+
+/** The grade's patch cache (one per instance), created on first use. */
+function patchCache(grade: string): PatchCache {
+  const content = CONTENT[grade]!;
+  let c = caches.get(grade);
+  if (!c) caches.set(grade, (c = new PatchCache(content, (since) => queryPatchPage(grade, content, since))));
+  return c;
+}
 
 /** The editor's edits as the server marks with them (see logic/patchCache.ts). Never throws: no edits on any failure. */
 export async function patchView(grade: string): Promise<PatchView | null> {
-  const content = CONTENT[grade];
-  if (!content) return null;
-  let c = caches.get(grade);
-  if (!c) caches.set(grade, (c = new PatchCache(content, (since) => queryPatchPage(grade, content, since))));
+  if (!CONTENT[grade]) return null;
+  const c = patchCache(grade);
   // Never wait long: a slow refresh carries on in the background and the submit marks with the bundle's answers meanwhile.
   const slow = new Promise<null>((r) => setTimeout(() => r(null), VIEW_WAIT_MS).unref?.());
   try { return await Promise.race([c.get(), slow]); } catch { return null; }

@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { activeLevelIds, levelAttemptStars } from "../src/shared/index.js";
 import type { ServerContent } from "../src/content/index.js";
-import { buildPatch, figHash, isRetired, patchFloor, patchPage, toServerQuestion, validatePatchRequest } from "../src/logic/patches.js";
-import { PatchCache, REFRESH_MS } from "../src/logic/patchCache.js";
+import { buildPatch, figHash, isRetired, patchFloor, patchPage, servePatches, toServerQuestion, validatePatchRequest } from "../src/logic/patches.js";
+import { PatchCache, REFRESH_MS, RETRY_MS } from "../src/logic/patchCache.js";
 import { isCorrect } from "../src/logic/marking.js";
 import { PER_MINUTE } from "../src/logic/rateLimit.js";
 import { CONTENT } from "../src/content/index.js";
@@ -201,4 +201,92 @@ describe("generated content for patches", () => {
     expect(P6.questions["2021_ACS_P1A_Q03"].f).toBe(1);
   });
   it("figHash is stable", () => expect(figHash("https://a/b.png")).toBe(figHash("https://a/b.png")));
+});
+
+describe("servePatches (getQuestionPatches from the cache)", () => {
+  const P = (id: string, at: string) => ({ id, question: null, editedAt: at });
+  const T = (n: number) => `2026-10-15T01:00:${String(n).padStart(2, "0")}.000Z`;
+  const list = [P("A", T(1)), P("B", T(2)), P("C", T(3)), P("D", T(4))];
+  const FLOOR = "2026-10-14T02:07:46.934Z";
+  it("filters by editedAt > floor (exclusive)", () => {
+    expect(servePatches(list, T(9), FLOOR).patches.map((p) => p.id)).toEqual(["A", "B", "C", "D"]);
+    expect(servePatches(list, T(9), T(2)).patches.map((p) => p.id)).toEqual(["C", "D"]);
+    expect(servePatches(list, T(9), T(4)).patches).toEqual([]);
+  });
+  it("until = the cache's last read edit (also out-of-bundle ones) when nothing more, never before the floor", () => {
+    expect(servePatches(list, T(9), FLOOR)).toMatchObject({ until: T(9), more: false });
+    expect(servePatches(list, T(3), T(4))).toMatchObject({ until: T(4), more: false, patches: [] });
+    expect(servePatches([], "", FLOOR)).toEqual({ patches: [], until: FLOOR, more: false });
+  });
+  it("pages at the limit: until = last patch of the page, more = true, then the next page continues", () => {
+    const p1 = servePatches(list, T(9), FLOOR, 3);
+    expect(p1.patches.map((p) => p.id)).toEqual(["A", "B", "C"]);
+    expect(p1).toMatchObject({ until: T(3), more: true });
+    const p2 = servePatches(list, T(9), p1.until, 3);
+    expect(p2.patches.map((p) => p.id)).toEqual(["D"]);
+    expect(p2).toMatchObject({ until: T(9), more: false });
+    expect(servePatches(list, T(9), FLOOR, 4).more).toBe(false); // exactly the limit: nothing left
+  });
+  it("300 per page by default", () => {
+    const many = Array.from({ length: 650 }, (_, i) => P(`Q${String(i).padStart(4, "0")}`, `2026-10-15T02:${String(Math.floor(i / 60)).padStart(2, "0")}:${String(i % 60).padStart(2, "0")}.000Z`));
+    const a = servePatches(many, "z", FLOOR);
+    expect(a.patches).toHaveLength(300);
+    expect(a.more).toBe(true);
+    const b = servePatches(many, "z", a.until);
+    const c = servePatches(many, "z", b.until);
+    expect(a.patches.length + b.patches.length + c.patches.length).toBe(650);
+    expect(c.more).toBe(false);
+  });
+});
+
+describe("PatchCache serves getQuestionPatches without more reads", () => {
+  const edit = (id: string, at: string, key = 4) => ({ id, question: buildPatch("P6", content, mcqDoc(id, { answer_key: key }), at)!.question, editedAt: at });
+  it("keeps the latest patch per question, ordered, and an `until`", async () => {
+    const pages = [
+      { patches: [edit("Q2", "2026-10-15T02:00:00.000Z"), edit("Q1", "2026-10-15T01:00:00.000Z")], until: "2026-10-15T03:00:00.000Z", more: true },
+      { patches: [edit("Q1", "2026-10-15T04:00:00.000Z", 3)], until: "2026-10-15T05:00:00.000Z", more: false },
+    ];
+    const c = new PatchCache(content, async () => pages.shift()!, () => 1);
+    const v = await c.get();
+    expect(c.loaded).toBe(true);
+    expect(v.list.map((p) => [p.id, p.editedAt])).toEqual([["Q2", "2026-10-15T02:00:00.000Z"], ["Q1", "2026-10-15T04:00:00.000Z"]]);
+    expect(v.until).toBe("2026-10-15T05:00:00.000Z");
+  });
+  it("calls after the first cost 0 fetches inside the interval, one incremental fetch after it (stale view served meanwhile)", async () => {
+    let t = 1000;
+    const calls: string[] = [];
+    let release: (() => void) | null = null;
+    const fetchPage = vi.fn(async (since: string) => {
+      calls.push(since);
+      if (calls.length === 2) await new Promise<void>((r) => (release = r));
+      return since === "" ? { patches: [edit("Q1", AT)], until: AT, more: false } : { patches: [edit("Q2", "2026-10-15T02:00:00.000Z")], until: "2026-10-15T02:00:00.000Z", more: false };
+    });
+    const c = new PatchCache(content, fetchPage, () => t);
+    await c.get();
+    for (let i = 0; i < 50; i++) await c.get(); // 50 app opens
+    expect(fetchPage).toHaveBeenCalledTimes(1);
+    t += REFRESH_MS;
+    const stale = await c.get(); // refresh starts, the old list is served at once
+    expect(stale.list.map((p) => p.id)).toEqual(["Q1"]);
+    await c.get();
+    expect(fetchPage).toHaveBeenCalledTimes(2);
+    release!();
+    await new Promise((r) => setTimeout(r, 0));
+    expect((await c.get()).list.map((p) => p.id)).toEqual(["Q1", "Q2"]);
+    expect(calls).toEqual(["", AT]);
+  });
+  it("until the first load succeeds it is not loaded and retries after RETRY_MS, not 10 minutes", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => {});
+    let t = 1, fail = true;
+    const fetchPage = vi.fn(async () => { if (fail) throw new Error("down"); return { patches: [edit("Q1", AT)], until: AT, more: false }; });
+    const c = new PatchCache(content, fetchPage, () => t);
+    await c.get();
+    expect(c.loaded).toBe(false);
+    await c.get();
+    expect(fetchPage).toHaveBeenCalledTimes(1);
+    fail = false; t += RETRY_MS;
+    await c.get();
+    expect(c.loaded).toBe(true);
+    expect((await c.get()).list).toHaveLength(1);
+  });
 });

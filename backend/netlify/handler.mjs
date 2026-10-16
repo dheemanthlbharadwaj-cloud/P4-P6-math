@@ -80,10 +80,14 @@ export async function handleApi(request) {
   }
 }
 
-/** 00:00 Singapore time every day: close last month on the 1st, then snapshot the monthly board. */
+/** 00:00 Singapore time every day: on the 1st, close last month (medals). Nothing else (the per-user snapshot is retired). */
 export async function nightly(now = Date.now()) {
   if (dates.sgtDate(now).endsWith("-01")) await fns.monthlyClose.run({});
-  await fns.dailySnapshot.run({});
+}
+
+/** 23:55 Singapore time every day: build the day's leaderboard, the only time it changes (lib/logic/dailyBoard.js). */
+export async function boardBuild() {
+  await fns.dailyBoardBuild.run({});
 }
 
 /** RevenueCat → entitlements/{uid} (same as revenuecatWebhook in ../functions/src/revenuecat.ts). */

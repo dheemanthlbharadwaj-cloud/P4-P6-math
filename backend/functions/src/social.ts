@@ -1,15 +1,11 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
-import type {
-  GetLeaderboardResponse, PublicProfile, RespondFriendRequestResponse, SendFriendRequestResponse,
-} from "./shared/index.js";
-import { col, db, entriesRef, FieldValue, monthlyBoard, requireUid, snapshotEntriesRef, throwFail } from "./admin.js";
-import { sgtDate, sgtMonth } from "./logic/dates.js";
-import { CONTENT } from "./content/index.js";
-import { computeFriendSpots } from "./logic/friendSpots.js";
-import { buildEntries, type Medal, type Row } from "./logic/ranking.js";
+import type { GetLeaderboardResponse, RespondFriendRequestResponse, SendFriendRequestResponse } from "./shared/index.js";
+import { col, db, FieldValue, requireUid, throwFail } from "./admin.js";
+import { dailyBoard, lb } from "./leaderboard.js";
+import { MAX_FRIENDS } from "./logic/leaderboardData.js";
 import { isFriendCode, normalizeFriendCode, pairId, validateFriendRequest } from "./logic/rules.js";
 
-export const MAX_FRIENDS = 100;
+export { MAX_FRIENDS };
 
 async function uidForCode(raw: unknown): Promise<string | null> {
   const code = normalizeFriendCode(raw);
@@ -25,7 +21,7 @@ export const sendFriendRequest = onCall(async (req): Promise<SendFriendRequestRe
   const friendshipRef = db.collection(col.friendships).doc(pairId(uid, toUid));
   const reqRef = db.collection(col.friendRequests).doc(`${uid}_${toUid}`);
   const reverseRef = db.collection(col.friendRequests).doc(`${toUid}_${uid}`);
-  return db.runTransaction(async (tx) => {
+  const res = await db.runTransaction(async (tx) => {
     const [fs, mine, theirs] = await Promise.all([tx.get(friendshipRef), tx.get(reqRef), tx.get(reverseRef)]);
     const v = validateFriendRequest({
       fromUid: uid, toUid, alreadyFriends: fs.exists,
@@ -41,6 +37,8 @@ export const sendFriendRequest = onCall(async (req): Promise<SendFriendRequestRe
     tx.set(reqRef, { from: uid, to: toUid, status: "pending", createdAt: FieldValue.serverTimestamp() });
     return { status: "pending" as const };
   });
+  if (res.status === "accepted") lb.invalidateFriends(uid, toUid);
+  return res;
 });
 
 export const respondFriendRequest = onCall(async (req): Promise<RespondFriendRequestResponse> => {
@@ -48,7 +46,7 @@ export const respondFriendRequest = onCall(async (req): Promise<RespondFriendReq
   const { requestId, accept } = (req.data ?? {}) as { requestId?: unknown; accept?: unknown };
   if (typeof requestId !== "string" || typeof accept !== "boolean") throw new HttpsError("invalid-argument", "requestId and accept required");
   const reqRef = db.collection(col.friendRequests).doc(requestId);
-  return db.runTransaction(async (tx) => {
+  const res = await db.runTransaction(async (tx) => {
     const r = await tx.get(reqRef);
     if (!r.exists) throw new HttpsError("not-found", "no such request");
     const d = r.data()!;
@@ -56,94 +54,24 @@ export const respondFriendRequest = onCall(async (req): Promise<RespondFriendReq
     if (d.status !== "pending") throw new HttpsError("failed-precondition", "already answered");
     tx.update(reqRef, { status: accept ? "accepted" : "declined", respondedAt: FieldValue.serverTimestamp() });
     if (accept) tx.set(db.collection(col.friendships).doc(pairId(d.from, d.to)), { members: [d.from, d.to].sort(), createdAt: FieldValue.serverTimestamp() });
-    return { status: accept ? ("accepted" as const) : ("declined" as const) };
+    return { status: accept ? ("accepted" as const) : ("declined" as const), from: d.from as string };
   });
+  if (res.status === "accepted") lb.invalidateFriends(uid, res.from);
+  return { status: res.status };
 });
-
-async function getAll<T>(refs: FirebaseFirestore.DocumentReference[], pick: (d: FirebaseFirestore.DocumentSnapshot) => T | undefined): Promise<Map<string, T>> {
-  const out = new Map<string, T>();
-  for (let i = 0; i < refs.length; i += 300) {
-    const snaps = await db.getAll(...refs.slice(i, i + 300));
-    for (const s of snaps) if (s.exists) { const v = pick(s); if (v !== undefined) out.set(s.ref.id, v); }
-  }
-  return out;
-}
-
-async function sideData(uids: string[], now: number) {
-  const [profiles, medals, snap] = await Promise.all([
-    getAll<PublicProfile>(uids.map((u) => db.collection(col.publicProfiles).doc(u)), (d) => d.data() as PublicProfile),
-    getAll<Medal>(uids.map((u) => db.collection(col.medals).doc(u)), (d) => d.data()!.medal as Medal),
-    getAll<number>(uids.map((u) => snapshotEntriesRef(sgtDate(now)).doc(u)), (d) => d.data()!.stars as number),
-  ]);
-  return { profiles, medals, prevStars: snap.size ? snap : null };
-}
 
 /**
  * Ranking = stars earned this SGT month (arrows vs the 00:00 SGT snapshot).
  * scope "friends": me + friends. scope "school": everyone whose profile has my school (up to 200).
  * scope "global": top 100 (+ me when outside it). All return selfUid / friendUids / friends so the app can highlight
  * friends and draw them on the map and the race track.
+ * Served from the daily board (logic/dailyBoard.ts): built once a day at 23:55 SGT, so stars earned today show after
+ * the next build. Only when no board was ever built does it fall back to the live, cached leaderboard.
  */
-export const MAX_SCHOOL = 200;
+export { MAX_SCHOOL } from "./logic/leaderboardData.js";
 export const getLeaderboard = onCall(async (req): Promise<GetLeaderboardResponse> => {
   const uid = requireUid(req);
   const scope = (req.data as { scope?: unknown } | undefined)?.scope;
   if (scope !== "friends" && scope !== "school" && scope !== "global") throw new HttpsError("invalid-argument", 'scope must be "friends", "school" or "global"');
-  const now = Date.now();
-  const month = monthlyBoard(sgtMonth(now));
-
-  const fs = await db.collection(col.friendships).where("members", "array-contains", uid).limit(MAX_FRIENDS).get();
-  const friendUids = fs.docs.map((d) => (d.data().members as string[]).find((m) => m !== uid)!).filter(Boolean);
-  // Where each friend stands on each map (friends scope only): one progress doc read per friend, capped by MAX_FRIENDS.
-  const spotsFor = async (profiles: Map<string, PublicProfile>): Promise<Record<string, Record<string, string>>> => {
-    if (!friendUids.length) return {};
-    const gradeOf = (u: string) => profiles.get(u)?.grade ?? profiles.get(uid)?.grade ?? "P6";
-    const snaps = await db.getAll(...friendUids.map((u) => db.collection(col.users).doc(u).collection("progress").doc(gradeOf(u))));
-    const out: Record<string, Record<string, string>> = {};
-    snaps.forEach((s, i) => {
-      const u = friendUids[i];
-      const topics = CONTENT[gradeOf(u)]?.topics;
-      const levels = s.exists ? (s.data()?.levels as Record<string, { completed?: boolean }> | undefined) : undefined;
-      if (!topics || !levels) return;
-      const spots = computeFriendSpots(topics, levels);
-      if (Object.keys(spots).length) out[u] = spots;
-    });
-    return out;
-  };
-  const respond = async (entries: GetLeaderboardResponse["entries"], profiles: Map<string, PublicProfile>): Promise<GetLeaderboardResponse> => ({
-    scope, periodKey: sgtMonth(now), selfUid: uid, friendUids,
-    friends: friendUids.map((u) => profiles.get(u)).filter((p): p is PublicProfile => !!p),
-    entries, ...(scope === "friends" ? { friendSpots: await spotsFor(profiles) } : {}), // only the map (friends scope) needs spots
-  });
-  const monthlyRows = async (uids: string[]): Promise<Row[]> => {
-    const m = await getAll<{ stars: number; questionsDone: number }>(uids.map((u) => entriesRef(month).doc(u)), (d) => ({ stars: d.data()!.stars ?? 0, questionsDone: d.data()!.questionsDone ?? 0 }));
-    return uids.map((u) => ({ uid: u, stars: m.get(u)?.stars ?? 0, questionsDone: m.get(u)?.questionsDone ?? 0 }));
-  };
-
-  if (scope === "friends" || scope === "school") {
-    let uids = [uid, ...friendUids];
-    if (scope === "school") {
-      const me = await db.collection(col.publicProfiles).doc(uid).get();
-      const school = (me.data()?.school as string | undefined)?.trim();
-      const mates = school ? await db.collection(col.publicProfiles).where("school", "==", school).limit(MAX_SCHOOL).get() : null;
-      uids = [...new Set([uid, ...(mates?.docs.map((d) => d.id) ?? [])])];
-    }
-    const [rows, side] = await Promise.all([monthlyRows(uids), sideData([...new Set([...uids, ...friendUids])], now)]);
-    return respond(buildEntries(rows, side), side.profiles);
-  }
-
-  const top = await entriesRef(month).orderBy("stars", "desc").orderBy("questionsDone", "desc").limit(100).get();
-  const rows: Row[] = top.docs.map((d) => ({ uid: d.id, stars: d.data().stars ?? 0, questionsDone: d.data().questionsDone ?? 0 }));
-  const inTop = rows.some((r) => r.uid === uid);
-  const mine = inTop ? null : await entriesRef(month).doc(uid).get();
-  const uids = [...new Set([...rows.map((r) => r.uid), ...(mine?.exists ? [uid] : []), ...friendUids])];
-  const side = await sideData(uids, now);
-  const entries = buildEntries(rows, side);
-  if (mine?.exists) {
-    const stars = mine.data()!.stars ?? 0;
-    const ahead = (await entriesRef(month).where("stars", ">", stars).count().get()).data().count;
-    const [me] = buildEntries([{ uid, stars, questionsDone: mine.data()!.questionsDone ?? 0 }], { ...side, startRank: ahead + 1 });
-    entries.push(me);
-  }
-  return respond(entries, side.profiles);
+  return (await dailyBoard.leaderboard(uid, scope, lb.liveFallback())) ?? lb.leaderboard(uid, scope);
 });

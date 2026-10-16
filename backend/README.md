@@ -6,8 +6,9 @@ Firestore database **`"default"`** (a named database, not `"(default)"`): the st
 Firebase provides sign-in (email/password, Google, Apple; the editor's team logins use the same Auth) and Firestore.
 The backend code in `functions/` runs on **Netlify** (free plan, no card) instead of Cloud Functions:
 `netlify/handler.mjs` calls the same compiled handlers behind `POST https://<site>.netlify.app/api/<name>` (Firebase
-ID token as bearer), a scheduled function runs the 00:00 Singapore-time jobs (daily snapshot, monthly close on the
-1st), and `/revenuecat` takes the RevenueCat webhook. Profile edits go through `updateProfile`, which also refreshes the public copy (no Firestore trigger needed).
+ID token as bearer), scheduled functions build the leaderboard once a day at 23:55 Singapore time (`functions/board.mjs`;
+`getLeaderboard` serves that board from memory, so a view costs no reads for other players) and close the month at
+00:00 on the 1st (`functions/nightly.mjs`), and `/revenuecat` takes the RevenueCat webhook. Profile edits go through `updateProfile`, which also refreshes the public copy (no Firestore trigger needed).
 
 **The app never talks to Firestore directly.** Every read and write (profile, progress, bookmarks, friend requests,
 stars, reports, …) goes through the backend, which uses the Admin SDK and is not subject to security rules. So the
@@ -26,12 +27,16 @@ them: a ⚑ badge in the list, a "Student reports (open)" filter, and a box on t
 the live editor files and publishes them (re-run it if the editor is redeployed from a copy without it).
 
 **Editor edits reach the apps** (apps stay offline-capable on their bundle): `getQuestionPatches {grade, bundleVersion, since}`
-(auth, 20/min) reads `questions` where `last_edited_at > max(since, the bundle's editor snapshot time)` ordered by it
-(limit 300, automatic single-field index, one read per returned doc, minimum 1) and returns, for ids in the server's
+(auth, 20/min) is served from the per-instance patch cache (`logic/patchCache.ts`), not a query per call: **0 Firestore reads
+while the cache is warm**, and at most one incremental refresh per instance every 10 minutes (it reads `questions` where
+`last_edited_at > the last edit already cached`, starting at the bundle's editor snapshot time; one read per edited doc, minimum 1;
+the stale list is served while it refreshes; until the first load succeeds the call answers `unavailable` and the app retries).
+**An editor edit therefore reaches apps within about 10 minutes.** The list is filtered by `editedAt > max(since, snapshot time)`,
+ordered by it, cut at 300 per page and returns, for ids in the server's
 bundle only, the question rebuilt by the same transform as the content build (`content/src/question.ts`, copied to
 `functions/src/question`), `question: null` when retired (excluded, or un-picked after the build), and `figureUrl` only when
-the editor's `figure_url` differs from the one the bundled image came from. `until` = last `last_edited_at` seen, `more` =
-page was full. Served from the server's bundle even when the app's `bundleVersion` differs (one OTA behind). Marking
+the editor's `figure_url` differs from the one the bundled image came from. `until` = the last patch of a full page, else the last edit the cache has read, `more` =
+there are more than 300 matching patches. Served from the server's bundle even when the app's `bundleVersion` differs (one OTA behind). Marking
 (`submitLevelResult`, `submitMinigameResult`) uses the edited answers and `activeLevelIds` (retired questions are not part
 of a level) from a per-instance cache, refreshed incrementally at most every 10 min; if that fails the bundle's answers are
 used. `copy-shared.mjs` takes the bundle's `builtAt` and `source-info.json` (written by `npm run build`/`source-info` in

@@ -13,6 +13,21 @@ import {
 import { isCorrect } from "./logic/marking.js";
 import { CONTENT } from "./content/index.js";
 import { patchView } from "./patches.js";
+import { lb } from "./leaderboard.js";
+
+/** config/content.acceptedVersions per instance: a version found in the cache is accepted without a read (1 read saved per
+ *  submit). A version NOT in the cache always re-reads, so a freshly accepted bundle works at once; a version taken off the
+ *  list is dropped within CONFIG_TTL_MS. */
+const CONFIG_TTL_MS = 10 * 60_000;
+let acceptedCache: { at: number; byGrade: Record<string, string[]> } | null = null;
+async function contentVersionAccepted(grade: string, version: string): Promise<boolean> {
+  const hit = acceptedCache && Date.now() - acceptedCache.at < CONFIG_TTL_MS ? acceptedCache.byGrade[grade] : undefined;
+  if (hit && isContentVersionAccepted(hit, version)) return true;
+  const cfg = await db.collection(col.config).doc("content").get();
+  const byGrade = (cfg.data()?.acceptedVersions as Record<string, string[]> | undefined) ?? {};
+  acceptedCache = { at: Date.now(), byGrade };
+  return isContentVersionAccepted(byGrade[grade], version);
+}
 
 /** users/{uid}/attempted/{grade}_{questionId}: questions ever attempted (mini-game stars only for new ones). */
 const attemptedRef = (uid: string, grade: string, questionId: string) =>
@@ -34,9 +49,7 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   if (!v.ok) throwFail(v);
   const { result, answers } = v;
 
-  const cfg = await db.collection(col.config).doc("content").get();
-  const accepted = (cfg.data()?.acceptedVersions as Record<string, string[]> | undefined)?.[result.grade];
-  if (!isContentVersionAccepted(accepted, result.contentVersion)) {
+  if (!(await contentVersionAccepted(result.grade, result.contentVersion))) {
     throw new HttpsError("failed-precondition", "Unknown content version. Update the app.");
   }
   const content = CONTENT[result.grade];
@@ -61,7 +74,7 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   const ledgerRef = db.collection(col.users).doc(uid).collection("ledger").doc(`level_${result.attemptId}`);
   const starsRef = levelStarsRef(uid, result.grade, key);
 
-  return db.runTransaction(async (tx) => {
+  const res = await db.runTransaction(async (tx) => {
     const [attempt, wallet, month, levelDoc] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef), tx.get(starsRef)]);
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
@@ -104,6 +117,8 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
     }
     return response;
   });
+  lb.invalidateUser(uid); // the caller's cached monthly entry is stale now
+  return res;
 });
 
 /** One mini-game round: +1 star per question answered right (marked here) that was never attempted before. Idempotent per attemptId. */
@@ -120,7 +135,7 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
   const refs = questionIds.map((q) => attemptedRef(uid, result.grade, q));
   const edits = await patchView(result.grade); // the editor's edits since the bundle was built (marking uses edited answers)
 
-  return db.runTransaction(async (tx) => {
+  const res = await db.runTransaction(async (tx) => {
     const [round, wallet, month, ...seen] = await Promise.all([tx.get(roundRef), tx.get(walletRef), tx.get(monthRef), ...refs.map((r) => tx.get(r))]);
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
@@ -143,6 +158,8 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
     }
     return { starsAwarded: stars, starBalance: balance + stars, monthlyStars: monthNow + stars, totalStars: total + stars, duplicate: false };
   });
+  lb.invalidateUser(uid);
+  return res;
 });
 
 /** Lifetime stars ≥ the quest's goal → its reward goes into the inventory (once). */

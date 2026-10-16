@@ -6,6 +6,7 @@ import {
   nameProblem, nameProblemMessage, tidyName,
 } from "./shared/index.js";
 import { loadAccountState } from "./account.js";
+import { removeFromDailyBoard } from "./leaderboard.js";
 import { auth, col, db, FieldValue, REGION, requireUid } from "./admin.js";
 import { makeFriendCode } from "./logic/rules.js";
 
@@ -123,6 +124,7 @@ export const deleteAccount = onCall(async (req): Promise<DeleteAccountResponse> 
   // leaderboard entries + snapshots (all subcollections called "entries")
   const entries = await db.collectionGroup("entries").where("uid", "==", uid).get();
   await Promise.all(entries.docs.map((d) => d.ref.delete()));
+  await removeFromDailyBoard(uid); // the daily board (rebuilt at 23:55) would show the name until then
   // question reports stay for the editors, without the link to the account
   const reports = await db.collection(col.questionReports).where("reporter_uid", "==", uid).get();
   await Promise.all(reports.docs.map((d) => d.ref.update({ reporter_uid: null })));

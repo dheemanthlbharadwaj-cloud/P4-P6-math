@@ -159,6 +159,8 @@ export interface GetLeaderboardResponse {
   /** friends: caller + friends; school: the caller's school (top 200); global: top 100 (+ the caller when outside
    *  either list). Sorted by rank. */
   entries: LeaderboardEntry[];
+  /** When the daily board was built (ms; once a day at 23:55 SGT). Absent when served live. */
+  updatedAt?: number;
 }
 
 // ---- deleteAccount ----

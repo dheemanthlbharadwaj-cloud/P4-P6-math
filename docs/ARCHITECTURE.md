@@ -78,7 +78,8 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
   | `friendRequests/{from_to}` | server only | `{from,to,status}`; from/to may read (the app lists `where to == me, status == pending`) |
   | `leaderboards/daily-{yyyy-mm-dd}/entries/{uid}` | server only | `{uid, stars, questionsDone}` for that SGT day (path is `leaderboards/{boardId}/entries/{uid}`) |
   | `leaderboards/monthly-{yyyy-mm}/entries/{uid}` | server only | monthly stars (the ranking key) and questions done; a new month starts empty |
-  | `leaderboardSnapshots/{yyyy-mm-dd}/entries/{uid}` | `dailySnapshot` | `{uid, stars}` monthly stars at 00:00 SGT; last 3 days kept; source of the rank arrows |
+  | `leaderboardDaily/{yyyy-mm-dd}/parts/{i}` + `leaderboardDaily/current` | `dailyBoardBuild` 23:55 SGT | the day's whole board (≤1000 players per part: stars, profile, medal, map spots, yesterday's stars for the rank arrows); 2 days kept; `getLeaderboard` serves only this |
+  | `leaderboardSnapshots/{yyyy-mm-dd}/entries/{uid}` | (retired `dailySnapshot`) | old per-user snapshots; no longer written |
   | `leaderboardMeta/monthly-{yyyy-mm}` | `monthlyClose` | marks a month as closed (idempotency) + winners |
   | `medals/{uid}` | `monthlyClose` | previous month's top 3: `{medal, month, stars}`; signed-in users may read |
   | `config/content` | operator | optional `{acceptedVersions: {P6: [...]}}`; absent = every content version accepted |
@@ -105,7 +106,7 @@ figure_url (Cloudinary), verified, has_error, ...` plus the subtopic field (name
     entries carry `rank, rankDelta, medal, school`. All ranked by this month's stars: friends = me + friends; school =
     everyone whose public profile has my school (up to 200); global = top 100 (+ me). The app's race track uses the
     friends board.
-  - Scheduled: `dailySnapshot` 00:00 SGT (rank arrows); `monthlyClose` 00:00 SGT on the 1st (see OPEN_QUESTIONS #14).
+  - Scheduled: `dailyBoardBuild` 23:55 SGT (the leaderboard, once a day); `monthlyClose` 00:00 SGT on the 1st (see OPEN_QUESTIONS #14).
   - `revenuecatWebhook` (HTTPS) → `entitlements/{uid}`.
   - `updateProfile`, `syncProgress`, `listFriendRequests` (callables): the app has no direct Firestore access; profile,
     map progress (merged by max), "previously wrong" bookmarks and incoming friend requests go through these.

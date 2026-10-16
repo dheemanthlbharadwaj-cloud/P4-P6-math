@@ -74,3 +74,20 @@ export function patchPage(grade: Grade, content: ServerContent, docs: { doc: Edi
   // `until` is the last edit READ (also of docs outside the bundle), so the next call starts after it.
   return { patches, until: docs.length ? docs[docs.length - 1].editedAt : since, more: docs.length >= limit };
 }
+
+/**
+ * The response for one getQuestionPatches call, served from the cached patch list (latest patch per question, ordered by
+ * editedAt then id) instead of a Firestore query: patches with `editedAt > floor`, at most `limit`. `until` is the last
+ * patch of the page when there is more, else the later of the floor and `cacheUntil` (the last edit the cache has read,
+ * also of docs outside the bundle), so the next call starts after it. Same contract as patchPage.
+ */
+export function servePatches(list: QuestionPatch[], cacheUntil: string, floor: string, limit = PATCH_LIMIT): PatchPage {
+  const matching = list.filter((p) => p.editedAt > floor);
+  if (matching.length > limit) {
+    const patches = matching.slice(0, limit);
+    return { patches, until: patches[limit - 1].editedAt, more: true };
+  }
+  const last = matching.length ? matching[matching.length - 1].editedAt : floor;
+  const until = [floor, last, cacheUntil].reduce((a, b) => (b > a ? b : a));
+  return { patches: matching, until, more: false };
+}

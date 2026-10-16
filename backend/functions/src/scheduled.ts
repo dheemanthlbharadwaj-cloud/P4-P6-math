@@ -2,10 +2,17 @@ import { onSchedule } from "firebase-functions/v2/scheduler";
 import { col, dailyBoard, db, entriesRef, FieldValue, monthlyBoard, REGION, SCHEDULE_TZ, snapshotEntriesRef } from "./admin.js";
 import { previousMonthKey, sgtDate, sgtMonth, shiftDate } from "./logic/dates.js";
 import { pickMedalWinners } from "./logic/ranking.js";
+import { buildDailyBoard } from "./leaderboard.js";
 
 const opts = { region: REGION, timeZone: SCHEDULE_TZ, timeoutSeconds: 540, memory: "512MiB" as const };
 
-/** 00:00 SGT daily: store every user's monthly stars so getLeaderboard can show rank arrows vs. "yesterday". */
+/** 23:55 SGT daily: build the day's leaderboard (the only time it changes; see logic/dailyBoard.ts). */
+export const dailyBoardBuild = onSchedule({ ...opts, schedule: "55 23 * * *" }, async () => {
+  const r = await buildDailyBoard();
+  console.log(`daily board ${r.date}: ${r.count} players in ${r.parts} part(s)`);
+});
+
+/** RETIRED (the daily board carries yesterday's stars for the rank arrows). 00:00 SGT daily: store every user's monthly stars so getLeaderboard can show rank arrows vs. "yesterday". */
 export const dailySnapshot = onSchedule({ ...opts, schedule: "0 0 * * *" }, async () => {
   const now = Date.now();
   const date = sgtDate(now);
