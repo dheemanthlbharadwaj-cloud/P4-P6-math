@@ -4,7 +4,7 @@
 import React from "react";
 import { StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
 import type { RichToken } from "@p6/shared";
-import { chunkText, needsRowLayout, splitLines } from "../logic/richLayout";
+import { chunkText, glueOperators, needsRowLayout, splitLines } from "../logic/richLayout";
 import { colors } from "../theme/colors";
 
 export const normalizeText = (s: string) => s.replace(/＄/g, "$");
@@ -39,7 +39,7 @@ export function RichText({ tokens, size = 18, color = colors.ink, style, bold }:
   if (!needsRowLayout(tokens)) {
     return (
       <Text accessibilityLabel={label} style={[{ fontSize: size, color, lineHeight: size * 1.7, fontWeight: weight }, style]}>
-        {tokens.map((t, i) => (t.t === "text" ? normalizeText(t.v) : t.t === "br" ? "\n" : ""))}
+        {tokens.map((t, i) => (t.t === "text" ? glueOperators(normalizeText(t.v)) : t.t === "br" ? "\n" : ""))}
       </Text>
     );
   }
@@ -62,7 +62,7 @@ function Row({ tokens, size, color, bold, weight, wrap, style }: RowProps) {
       {tokens.map((t, i) => {
         switch (t.t) {
           case "text":
-            return (wrap ? chunkText(normalizeText(t.v)) : [normalizeText(t.v)]).map((c, j) => (
+            return (wrap ? chunkText(glueOperators(normalizeText(t.v))) : [normalizeText(t.v)]).map((c, j) => (
               <Text key={`${i}.${j}`} style={textStyle} numberOfLines={wrap ? undefined : 1}>{c}</Text>
             ));
           case "br":

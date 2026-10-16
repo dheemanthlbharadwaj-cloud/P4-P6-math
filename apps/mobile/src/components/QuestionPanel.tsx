@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from "react";
 import { Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View, type KeyboardTypeOptions, useWindowDimensions } from "react-native";
 import type { Grade, Question, ReportQuestionRequest } from "@p6/shared";
+import { answerFormatHint } from "@p6/shared";
 import { RichText } from "./RichText";
 import { Button } from "./ui";
 import { CalculatorModal, CalculatorPanel } from "./Calculator";
@@ -148,6 +149,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
               const kind = p.answer.kind;
               const unit = "unit" in p.answer ? p.answer.unit : undefined;
               const state = reveal ? (reveal.perPart[i] ? "right" : "wrong") : "idle";
+              const hint = answerFormatHint(p); // the fraction helper line below already explains the fraction format
               return (
                 <View key={i} style={{ marginBottom: space.m }}>
                   {p.label?.length || p.part ? (
@@ -171,6 +173,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                     />
                     {unit ? <Text style={styles.unit}>{unit}</Text> : null}
                   </View>}
+                  {!viewOnly && !locked && kind !== "fraction" && hint ? <Text style={styles.formatHint} accessibilityLabel={hint}>{hint}</Text> : null}
                   {kind === "fraction" && !locked ? (
                     <View style={{ flexDirection: "row", marginTop: 6, gap: 8 }}>
                       <Button title="/" small variant="ghost" style={styles.helper} onPress={() => setAt(i, (responses[i] ?? "") + "/")} />
@@ -252,6 +255,7 @@ const styles = StyleSheet.create({
   input: { flex: 1, minHeight: 56, borderWidth: 3, borderColor: colors.border, borderRadius: radius.m, paddingHorizontal: 14, fontSize: 22, backgroundColor: "#fff", color: colors.ink },
   unit: { marginLeft: 8, fontSize: font.body, fontWeight: "800", color: colors.inkSoft },
   helper: { minWidth: 56 },
+  formatHint: { marginTop: 4, marginLeft: 4, color: colors.inkSoft, fontSize: 13 },
   hint: { alignSelf: "center", color: colors.inkSoft, fontSize: 12, flexShrink: 1 },
   answerLine: { marginTop: 4, color: colors.good, fontFamily: fonts.display, fontSize: font.body },
   bar: { flexDirection: "row", gap: 12, padding: space.l, paddingTop: space.s, backgroundColor: colors.bg, borderTopWidth: 3, borderTopColor: colors.border },
