@@ -44,7 +44,7 @@ environment can do and the live status of every service. Flags: `--verify` (test
 - Name: **Catapult Math Athletes**. iOS + Android (Expo SDK 57, RN 0.86, expo-router, zustand persisted to
   AsyncStorage with key prefix `p6.`), fully offline question bank, AdMob rewarded ads, RevenueCat subscription.
 - Grade P6 now (P4/P5 later as data; every path/type is keyed by `grade`).
-- Map: each editor **chapter = one swipeable map page** (12 for P6); each **subtopic = a map node group** (62 for P6)
+- Map: each editor **chapter = one swipeable map page** (12 for P6; arrows, swipe, or the **Topics** button → side drawer listing every topic with levels done/total, tap = jump; `TopicPicker.tsx`, `logic/topicPicker.ts`); each **subtopic = a map node group** (62 for P6)
   with levels LV1/LV2/LV3 × 5 questions ("5-5-5").
 - Live test web app (with 🛠 Dev Tools panel): **https://catapult-math-athletes.web.app**
   (separate from the question editor site `primary-math-sg.web.app`).

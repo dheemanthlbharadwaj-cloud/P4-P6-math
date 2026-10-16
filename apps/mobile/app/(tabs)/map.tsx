@@ -5,6 +5,7 @@ import type { LevelNo } from "@p6/shared";
 import { Body, Button, CenterModal, H2, Screen } from "../../src/components/ui";
 import { TopBar } from "../../src/components/TopBar";
 import { TopicMapPage } from "../../src/components/TopicMapPage";
+import { TopicPicker } from "../../src/components/TopicPicker";
 import { KeyModal } from "../../src/components/KeyModal";
 import { ResourceModal } from "../../src/components/ResourceModal";
 import { getLevelQuestions, getSubtopic, getTopics } from "../../src/content";
@@ -43,6 +44,7 @@ export default function MapTab() {
   // Pages must be exactly as tall as the list viewport; a horizontal list does not stretch its items, and an
   // unstretched page grows to its map image so the map can no longer scroll and the bottom is hidden.
   const [pageHeight, setPageHeight] = useState(0);
+  const [picking, setPicking] = useState(false);
   const [keyTopic, setKeyTopic] = useState<string | null>(null);
   const [gate, setGate] = useState<null | "hearts">(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -62,10 +64,10 @@ export default function MapTab() {
   }, [progress, topics]);
 
   const lastStart = Math.max(0, topics.length - perView);
-  const go = useCallback((i: number) => {
+  const go = useCallback((i: number, animated = true) => {
     const clamped = Math.max(0, Math.min(lastStart, i));
     setIndex(clamped);
-    listRef.current?.scrollToIndex({ index: clamped, animated: true });
+    listRef.current?.scrollToIndex({ index: clamped, animated });
   }, [lastStart]);
 
   const onEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => setIndex(Math.round(e.nativeEvent.contentOffset.x / width));
@@ -110,6 +112,9 @@ export default function MapTab() {
             </View>
           )}
         </View>
+        <Pressable onPress={() => setPicking(true)} accessibilityRole="button" accessibilityLabel="Choose a topic" style={{ height: 40, paddingHorizontal: 10, marginRight: 4, borderRadius: 20, borderWidth: 2, borderColor: colors.border, backgroundColor: colors.card, alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ fontSize: 15, fontFamily: fonts.displayMedium, color: colors.ink }}>Topics</Text>
+        </Pressable>
         <Pressable onPress={() => go(index + 1)} disabled={index >= lastStart} accessibilityLabel="Next topic" style={{ width: 48, height: 48, alignItems: "center", justifyContent: "center", opacity: index >= lastStart ? 0.3 : 1 }}>
           <Text style={{ fontSize: 30, fontFamily: fonts.display, color: colors.ink }}>›</Text>
         </Pressable>
@@ -150,6 +155,17 @@ export default function MapTab() {
         )}
       />
 
+      <TopicPicker
+        visible={picking}
+        onClose={() => setPicking(false)}
+        // A long animated scroll leaves the pages it passes unrendered (blank map on the web), so only neighbours animate.
+        onPick={(i) => { setPicking(false); go(i, Math.abs(i - index) <= 1); }}
+        topics={topics}
+        grade={grade}
+        progress={progress}
+        index={index}
+        perView={perView}
+      />
       <KeyModal grade={grade} topic={topics.find((t) => t.id === keyTopic) ?? null} visible={!!keyTopic} onClose={() => setKeyTopic(null)} />
       <ResourceModal visible={gate === "hearts"} onRewarded={() => setGate(null)} onGiveUp={() => setGate(null)} giveUpLabel="Not now" />
       <CenterModal visible={!!referralNotice} onClose={() => useReferral.getState().set({ notice: null })}>
