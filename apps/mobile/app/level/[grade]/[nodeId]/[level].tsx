@@ -19,6 +19,8 @@ import { computeMeters, usePlayer } from "../../../../src/store/player";
 import { useProgress } from "../../../../src/store/progress";
 import { useWrong } from "../../../../src/store/wrong";
 import { useOfflineQueue } from "../../../../src/store/queue";
+import { useNotifications } from "../../../../src/store/notifications";
+import { onHeartsRanOut } from "../../../../src/services/notifications";
 import { useStars } from "../../../../src/store/stars";
 import { useMeters } from "../../../../src/hooks/useNow";
 import { flushOfflineQueue } from "../../../../src/services/sync";
@@ -101,6 +103,7 @@ export default function LevelScreen() {
     // Into the session now, not on Continue: leaving straight after answering must still send the answer (and its star).
     setSession((s) => recordAnswer(s, responses, r.correct));
     useStars.getState().markAttempted(grade, question.id);
+    useNotifications.getState().markPractised(); // answered one: today's practice reminder is skipped
     const st = r.correct && !before.correct.includes(question.id) ? 1 : 0;
     earnStars(st);
     setGain(st);
@@ -109,7 +112,7 @@ export default function LevelScreen() {
     usePlayer.getState().spendHeart();
     const p = usePlayer.getState();
     const left = computeMeters(p, Date.now());
-    if (!left.subscribed && left.hearts <= 0) { setMood("sad"); setGate(true); } else setMood("wrong");
+    if (!left.subscribed && left.hearts <= 0) { void onHeartsRanOut(); setMood("sad"); setGate(true); } else setMood("wrong");
   };
 
   const next = () => {

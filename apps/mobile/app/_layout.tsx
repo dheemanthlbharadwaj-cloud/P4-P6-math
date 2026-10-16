@@ -10,6 +10,7 @@ import { watchAuth } from "../src/services/auth";
 import { isFirebaseConfigured } from "../src/services/config";
 import { initAds } from "../src/services/ads";
 import { initPurchases } from "../src/services/purchases";
+import { cancelOurNotifications, startNotifications } from "../src/services/notifications";
 import { flushOfflineQueue } from "../src/services/sync";
 import { bootstrapServerProfile, refreshFriends, restoreAccount } from "../src/services/bootstrap";
 import { stopCloudSync } from "../src/services/cloudSync";
@@ -70,6 +71,16 @@ export default function RootLayout() {
   const restoring = !!user && !onboarded && restore !== "done";
 
   const signedIn = !!user || uid === "guest"; // "guest" = dev-only mode when Firebase is not configured
+
+  // Local notifications (phone apps only; the web service is a no-op). Plans on start and on returning to the foreground, and
+  // again when hearts, subscription, settings or today's practice change (see services/notifications.native.ts).
+  // Signed out: nothing stays scheduled. Tapping a notification opens the Map tab.
+  useEffect(() => {
+    if (!hydrated || !ready || restoring) return;
+    if (!signedIn) { void cancelOurNotifications(); return; }
+    if (!onboarded) return;
+    return startNotifications(() => router.navigate("/(tabs)/map"));
+  }, [hydrated, ready, restoring, signedIn, onboarded, router]);
 
   // Route guard.
   useEffect(() => {

@@ -20,6 +20,7 @@ import { getAllLv1, getQuestion } from "../../src/content";
 import { useWrong } from "../../src/store/wrong";
 import { useStars } from "../../src/store/stars";
 import { useOfflineQueue } from "../../src/store/queue";
+import { useNotifications } from "../../src/store/notifications";
 import { flushOfflineQueue } from "../../src/services/sync";
 import { useNow } from "../../src/hooks/useNow";
 import type { CatMood } from "../../src/theme/cats";
@@ -77,6 +78,7 @@ export default function MiniGame() {
   const finishQuestion = (correct: boolean, responses: string[], msg: string | null) => {
     if (!q) return;
     setTries((t) => t + 1);
+    useNotifications.getState().markPractised();
     const st = useStars.getState();
     const star = starsForMinigameAnswer(correct, st.wasAttempted(grade, q.id));
     st.markAttempted(grade, q.id);

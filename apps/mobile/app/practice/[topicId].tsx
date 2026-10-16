@@ -1,6 +1,7 @@
 // Classroom "Practice (show answer)": browse a topic's pool questions (including the ones that cannot be auto-marked),
 // reveal the answer, then self-mark. No hearts, stars or wrong-bookmarks: pure practice.
 import React, { useMemo, useState } from "react";
+import { useNotifications } from "../../src/store/notifications";
 import { Pressable, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import type { Grade } from "@p6/shared";
@@ -35,6 +36,7 @@ export default function Practice() {
   });
 
   const mark = (ok: boolean) => {
+    if (revealed) useNotifications.getState().markPractised(); // answered one: today's practice reminder is skipped
     if (ok) setRight((n) => n + 1);
     setI((n) => n + 1);
     setRevealed(false);

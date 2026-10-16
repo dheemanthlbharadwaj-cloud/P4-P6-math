@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { ScrollView, Text, TextInput, View } from "react-native";
+import { Platform, ScrollView, Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
 import { HEARTS_PER_AD, nameProblem, nameProblemMessage, REFERRAL_STARS, REFERRAL_WELCOME_STARS, SUBSCRIPTION_PRICE_LABEL, tidyName } from "@p6/shared";
 import { Body, Button, Card, CenterModal, H1, H2, Screen, Columns } from "../../src/components/ui";
@@ -9,6 +9,7 @@ import { ParentalGate } from "../../src/components/ParentalGate";
 import { SchoolPicker } from "../../src/components/SchoolPicker";
 import { Paywall } from "../../src/components/Paywall";
 import { FriendRequests } from "../../src/components/FriendRequests";
+import { RemindersCard } from "../../src/components/RemindersCard";
 import { TopBar } from "../../src/components/TopBar";
 import { useToast } from "../../src/components/Toast";
 import { copyText, openLink, shareText } from "../../src/services/share";
@@ -214,6 +215,8 @@ export default function ProfileTab() {
             <Button title={`+${HEARTS_PER_AD} Hearts`} onPress={watch} disabled={adBusy || subscribed} style={{ flex: 1 }} />
           </View>
         </Card>
+
+        {Platform.OS !== "web" ? <RemindersCard /> : null}
 
         <Card>
           <H2>Unlimited hearts</H2>

@@ -15,6 +15,8 @@ import { useWrong } from "../store/wrong";
 import { useStars } from "../store/stars";
 import { useFriends } from "../store/friends";
 import { resetAllStores } from "../store/reset";
+import { listScheduled, notificationsSupported, replanNotifications, sendTestNotification } from "../services/notifications";
+import { dayKey } from "../logic/notifications";
 import { useNow } from "../hooks/useNow";
 import { colors, fonts, radius } from "../theme/colors";
 import { DEV_TOOLS, useDev, type AdOutcome } from "./devTools";
@@ -76,6 +78,12 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
   const [note, setNote] = useState<string | null>(null);
   const topics = getTopics(grade);
   const done = (msg: string) => setNote(msg);
+  const [scheduled, setScheduled] = useState<string[] | null>(null);
+  const showScheduled = async () => {
+    await replanNotifications();
+    const list = await listScheduled();
+    setScheduled(list.length ? list.map((n) => `${n.id} · ${n.at ? `${dayKey(n.at)} ${new Date(n.at).toTimeString().slice(0, 5)}` : "soon"} · ${n.title}`) : ["Nothing scheduled."]);
+  };
 
   const setHearts = (value: number) => {
     usePlayer.setState({ hearts: { value, updatedAt: Date.now() } });
@@ -190,6 +198,13 @@ function DevToolsSheet({ onClose }: { onClose: () => void }) {
           <Btn label="Full hearts" onPress={() => setHearts(MAX_HEARTS)} />
           <Btn label="Simulate midnight" onPress={simulateMidnight} />
         </Section>
+        {notificationsSupported ? (
+          <Section title="Notifications">
+            <Btn label="Send test notification in 10 s" onPress={() => { void sendTestNotification().then(done); }} />
+            <Btn label="Show scheduled reminders" onPress={() => { void showScheduled(); }} />
+            {scheduled ? scheduled.map((l) => <Text key={l} style={{ width: "100%", fontSize: 12, color: colors.inkSoft }} selectable>{l}</Text>) : null}
+          </Section>
+        ) : null}
         <Section title="Next ad (watch-an-ad buttons)">
           {(["rewarded", "load-failed", "dismissed"] as AdOutcome[]).map((o) => (
             <Btn key={o} label={o === "rewarded" ? "Gives reward" : o === "load-failed" ? "Fails to load" : "Closed early"} tone={adOutcome === o ? "on" : "plain"} onPress={() => { useDev.getState().setAdOutcome(o); done(`Ads now: ${o}`); }} />

@@ -30,7 +30,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   name: "Catapult Math Athletes",
   slug: "catapult-math-athletes",
   scheme: "p6math",
-  version: "0.2.0",
+  version: "0.3.0",
   orientation: "default",
   userInterfaceStyle: "light",
   // Placeholder icon from the cat art (assets/ui/app-icon.png, adaptive-icon.png): replace the files to change it.
@@ -66,6 +66,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     "expo-router",
     ["expo-splash-screen", { image: "./assets/ui/adaptive-icon.png", imageWidth: 220, backgroundColor: "#fff7ea" }],
     "expo-apple-authentication",
+    // Local notifications only (no push). POST_NOTIFICATIONS comes from the library's own manifest (Android 13+ asks at
+    // run time). Channel "reminders" is created in code. Brand colour for the small icon tint.
+    ["expo-notifications", { color: "#12aecf" }],
     ...(GOOGLE_IOS_URL_SCHEME ? [["@react-native-google-signin/google-signin", { iosUrlScheme: GOOGLE_IOS_URL_SCHEME }] as [string, object]] : []),
     [
       "expo-build-properties",

@@ -6,8 +6,9 @@ import { useOfflineQueue } from "../store/queue";
 import { useProfile } from "../store/profile";
 import { useCosmetics } from "../store/cosmetics";
 import { useQuestionPatches } from "../store/questionPatches";
+import { useNotifications } from "../store/notifications";
 
-const stores = [usePlayer, useProgress, useWrong, useOfflineQueue, useProfile, useCosmetics, useQuestionPatches];
+const stores = [usePlayer, useProgress, useWrong, useOfflineQueue, useProfile, useCosmetics, useQuestionPatches, useNotifications];
 
 /** True once every persisted store has been rehydrated from AsyncStorage. */
 export function useHydrated(): boolean {
