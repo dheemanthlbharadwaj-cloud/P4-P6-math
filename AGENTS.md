@@ -31,7 +31,7 @@ and iOS.
 | Web app | https://catapult-math-athletes.web.app | GitHub Actions on push (`.github/workflows/deploy-web.yml`, keyless) |
 | Backend API | https://catapult-math-athletes-api.netlify.app | `node backend/scripts/deploy-netlify.mjs` |
 | Phones (OTA) | Expo `dheems-team/catapult-math-athletes`, channel `preview` | EAS workflow on push (`apps/mobile/.eas/workflows/publish-update.yml`) |
-| Android APK | https://catapult-math-athletes-download.netlify.app (team-only for now) | local build, then `node apps/mobile/scripts/deploy-apk.mjs` (`docs/ANDROID.md`) |
+| Android APK | sent to the owner as a file (they share it); Netlify page archived | local build (`docs/ANDROID.md`), verify the signing key |
 | Question editor | https://primary-math-sg.web.app (separate codebase) | — |
 
 ## 3. Rules (from the product owner)
@@ -39,6 +39,8 @@ and iOS.
 **Product changes**
 - **Do exactly what is asked.** No unrequested restyling or behaviour changes; ask first.
 - **Don't regress agreed behaviour.** Keep everything in the skill's "Current agreed behaviour" table.
+- **Update the skill with every change, in the same commit** (`skills/catapult-math-athletes/SKILL.md`): behaviour,
+  files, deploys, limits, fixes and owner decisions (its §9). A change without its skill update is not done.
 
 **Secrets**
 - **Never print, paste or commit secrets.** Never ask the user to paste them into chat.
@@ -55,7 +57,8 @@ and iOS.
   run low.
 - **Expo:** 60 CI minutes a month, and each phone update costs about 15. Put `[eas skip]` in commit messages that
   don't need to reach phones.
-- **Firebase:** the Spark plan, no billing. Don't host big files (APKs) there.
+- **Firebase:** the Spark plan, no billing: 50,000 Firestore reads a day, and when they run out every backend call
+  fails until the reset. Keep reads low and test runs small. Don't host big files (APKs) there.
 
 **Android**
 - **Signing:** every APK must be signed with the release key in Firestore `app_secrets/android-signing`. `setup.sh
