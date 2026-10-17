@@ -239,7 +239,7 @@ export default function ProfileTab() {
       <CenterModal visible={deleteOpen} onClose={() => !deleting && setDeleteOpen(false)}>
         <H2 style={{ textAlign: "center" }}>Delete account?</H2>
         <Body style={{ textAlign: "center", color: colors.inkSoft, marginTop: 6 }}>
-          This permanently deletes your account, stars, purchases and progress on this device. Type DELETE to confirm.
+          This permanently deletes your account, stars, purchases and progress, on every device. Type DELETE to confirm.
         </Body>
         <TextInput
           value={deleteText} onChangeText={setDeleteText} placeholder="DELETE" placeholderTextColor={colors.muted}
