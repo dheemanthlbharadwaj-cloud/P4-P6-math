@@ -1,5 +1,26 @@
 # Backend (student app)
 
+> **Two-project layout (in progress until `scripts/migrate-students.mjs` has run and the Netlify env vars are switched).**
+> The student app gets its own Firebase project (working id `catapult-math-students`, Auth + Firestore `(default)` in
+> asia-southeast1) holding ALL student data; `primary-math-sg` (db `default`) keeps only the question editor, and the
+> backend only reads `questions` and writes `question_reports` there (`editorDb` in `functions/src/admin.ts`). Each
+> project has its own 50k reads/day, so app traffic cannot take the editor down. The text below describes the current
+> single-project setup, which is what runs until the switch.
+>
+> Netlify env vars (`functions/src/logic/projects.ts`): `STUDENT_SERVICE_ACCOUNT_B64`, `STUDENT_DATABASE_ID` (default
+> `(default)`), `EDITOR_SERVICE_ACCOUNT_B64` (read `questions`, write `question_reports` in primary-math-sg),
+> `EDITOR_DATABASE_ID` (default `default`), `LEGACY_AUTH_PROJECT_ID` (e.g. `primary-math-sg`: its ID tokens are also
+> accepted while installed APKs still sign in there; same uids in both projects). Without `STUDENT_SERVICE_ACCOUNT_B64`
+> the old `BACKEND_SERVICE_ACCOUNT_B64` + `FIRESTORE_DATABASE_ID` single project is used.
+>
+> Switch-over order: (1) owner creates the project, adds the service account as Owner; (2) `STUDENT_SETUP_SERVICE_ACCOUNT_B64=... node
+> backend/scripts/setup-project.mjs --student --project <id>` (APIs, database, Auth, backend service account, student-only rules +
+> indexes; web config goes to `backend/reports/firebase.web.student.json`); (3) `node backend/scripts/migrate-students.mjs --dry --to <id>`, then
+> without `--dry` (copies Auth incl. password hashes, minus the editor's synthetic accounts, and all student Firestore
+> collections; record in `backend/reports/`); (4) `STUDENT_PROJECT_ID=<id> node backend/scripts/deploy-netlify.mjs` (sets the env vars
+> above, deploys); (5) point the app's `firebase.web.json` at the new project and ship an OTA/APK; later drop
+> `LEGACY_AUTH_PROJECT_ID`. `deploy-rules.mjs --project <id> --student-only` deploys just the student rules/indexes.
+
 The student app shares the question bank editor's Firebase project, **`primary-math-sg`** (free Spark plan), and its
 Firestore database **`"default"`** (a named database, not `"(default)"`): the student collections (`users`,
 `wallets`, `publicProfiles`, leaderboards, …) sit next to the editor's (`questions`, `meta`, `volunteers`, …).

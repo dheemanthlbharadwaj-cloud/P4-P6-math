@@ -1,0 +1,122 @@
+--- ../live/app.v5.js	2026-10-17 14:51:12.235480114 +0000
++++ app.v6.js	2026-10-17 14:53:40.917877213 +0000
+@@ -3,11 +3,14 @@
+ import {
+   getFirestore, collection, doc, setDoc, getDoc, getDocs, deleteDoc, onSnapshot, serverTimestamp, query, where,
+   updateDoc as __updateDoc,
++  initializeFirestore, persistentLocalCache, persistentMultipleTabManager, getDocsFromCache, Timestamp,
++  terminate, clearIndexedDbPersistence,
+ } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+ import {
+   getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged,
+   createUserWithEmailAndPassword, updatePassword, deleteUser,
+ } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
++import { markerKey, parseMarker, serializeMarker, isStale, markerFromDocs, advance, floors, skipChange } from "./syncdelta.v1.js";
+ 
+ const firebaseConfig = {
+   projectId: "primary-math-sg",
+@@ -18,7 +21,12 @@
+   messagingSenderId: "762269301954",
+ };
+ const fbApp = initializeApp(firebaseConfig);
+-const db = getFirestore(fbApp, "default");
++// persistent IndexedDB cache (shared by tabs) so a reload only has to fetch what changed (delta loading, see startListening)
++let db, persistOK = false;
++try {
++  db = initializeFirestore(fbApp, { localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }) }, "default");
++  persistOK = typeof indexedDB !== "undefined";
++} catch (e) { console.warn("persistent cache unavailable, full loads only", e); db = getFirestore(fbApp, "default"); }
+ const auth = getAuth(fbApp);
+ // secondary app: lets the master create / rotate volunteer logins without signing themselves out
+ const adminApp = initializeApp(firebaseConfig, "account-admin");
+@@ -72,6 +80,17 @@
+ }
+ 
+ document.getElementById("signoutBtn").onclick = async () => { await signOut(auth); location.reload(); };
++// Full refresh: forget the sync markers + the local copy, then reload (everything is read again; covers deletions / missed edits)
++document.getElementById("fullRefreshBtn").onclick = async () => {
++  const uid = auth.currentUser && auth.currentUser.uid;
++  try {
++    const kill = [];
++    for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith("qsync:" + (uid || ""))) kill.push(k); }
++    kill.forEach(k => localStorage.removeItem(k));
++  } catch (_) {}
++  try { await terminate(db); await clearIndexedDbPersistence(db); } catch (_) { /* another tab open: markers are gone anyway, so the reload does a full load */ }
++  location.reload();
++};
+ 
+ onAuthStateChanged(auth, async user => {
+   if (!user) { document.getElementById("loginwrap").style.display = "flex"; return; }
+@@ -149,12 +168,68 @@
+     allQuestions = Array.from(qById.values());
+     renderList();
+   };
+-  if (myRole === "master") {
+-    unsubs.push(onSnapshot(collection(db, "questions"), handle, onErr));
+-  } else {
++  // Delta loading. Per scope (master: "all"; volunteer: each access_key) a marker in localStorage holds the newest
++  // last_edited_at seen (one per stored type: Timestamp from editor saves, ISO string from scripts).
++  //  - marker present and < 7 days old and the local cache has docs: render the cache, then listen ONLY to docs edited after the marker
++  //  - otherwise: full load (as before), then set the marker and switch to the delta listeners
++  const uid = auth.currentUser.uid;
++  const qcol = collection(db, "questions");
++  const scopes = myRole === "master"
++    ? [{ id: "all", build: (...c) => query(qcol, ...c), owns: () => true }]
+     // one listener per topic|level pair: security rules only allow reading questions in scope
+-    myKeys.forEach(k => unsubs.push(onSnapshot(query(collection(db, "questions"), where("access_key", "==", k)), handle, onErr)));
++    : myKeys.map(k => ({ id: k, build: (...c) => query(qcol, where("access_key", "==", k), ...c), owns: d => d.access_key === k }));
++  scopes.forEach(sc => loadScope(sc, uid, handle, onErr));
++}
++
++function saveMarker(uid, sc, marker) { try { localStorage.setItem(markerKey(uid, sc.id), serializeMarker(marker)); } catch (_) {} }
++
++function attachDelta(uid, sc, marker, handle, onErr) {
++  const f = floors(marker);
++  const mk = () => snap => {
++    let moved = false;
++    snap.docChanges().forEach(ch => {
++      if (skipChange(ch.type, true)) return;
++      applyChange(ch);
++      if (!ch.doc.metadata.hasPendingWrites && advance(marker, ch.doc.data().last_edited_at)) moved = true;
++    });
++    if (moved) saveMarker(uid, sc, marker);
++    allQuestions = Array.from(qById.values());
++    renderList();
++  };
++  unsubs.push(onSnapshot(sc.build(where("last_edited_at", ">", Timestamp.fromMillis(f.tsMs))), mk(), onErr));
++  unsubs.push(onSnapshot(sc.build(where("last_edited_at", ">", f.strIso)), mk(), onErr));
++}
++
++async function loadScope(sc, uid, handle, onErr) {
++  let marker = null;
++  if (persistOK) { try { marker = parseMarker(localStorage.getItem(markerKey(uid, sc.id))); } catch (_) {} }
++  if (marker && !isStale(marker, Date.now())) {
++    try {
++      const snap = await getDocsFromCache(sc.build());
++      if (!snap.empty) {
++        snap.docs.forEach(d => qById.set(d.id, { id: d.id, ...d.data(), _loadedOnce: true }));
++        allQuestions = Array.from(qById.values());
++        renderList();
++        attachDelta(uid, sc, marker, handle, onErr);
++        return;
++      }
++    } catch (_) { /* cache unreadable: fall through to a full load */ }
+   }
++  // full load: first server-confirmed snapshot replaces this scope's questions, then hand over to the delta listeners
++  const loadStart = Date.now();
++  let un = null, done = false;
++  un = onSnapshot(sc.build(), { includeMetadataChanges: true }, snap => {
++    if (done || snap.metadata.fromCache) return;
++    done = true;
++    if (un) un(); else queueMicrotask(() => un && un());
++    Array.from(qById.keys()).forEach(id => { if (sc.owns(qById.get(id))) qById.delete(id); });
++    snap.docs.forEach(d => qById.set(d.id, { id: d.id, ...d.data(), _loadedOnce: true }));
++    allQuestions = Array.from(qById.values());
++    renderList();
++    const m = markerFromDocs(snap.docs.map(d => d.data()), loadStart);
++    if (persistOK) saveMarker(uid, sc, m);
++    attachDelta(uid, sc, m, handle, onErr);
++  }, onErr);
+ }
+ 
+ /* ---------- filters + list ---------- */

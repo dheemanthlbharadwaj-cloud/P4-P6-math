@@ -290,3 +290,35 @@ describe("PatchCache serves getQuestionPatches without more reads", () => {
     expect((await c.get()).list).toHaveLength(1);
   });
 });
+
+import { editedAtIso, mergeEditedPages } from "../src/logic/patches.js";
+describe("mixed last_edited_at types", () => {
+  const d = (id: string, editedAt: string) => ({ doc: { id } as never, editedAt });
+  it("normalises Timestamps to ISO", () => {
+    expect(editedAtIso({ toDate: () => new Date("2026-10-16T01:02:03.004Z") })).toBe("2026-10-16T01:02:03.004Z");
+    expect(editedAtIso("2026-10-16T01:02:03.004Z")).toBe("2026-10-16T01:02:03.004Z");
+  });
+  it("merges both sources in order", () => {
+    const r = mergeEditedPages([d("a", "2026-10-15T00:00:00.000Z"), d("c", "2026-10-17T00:00:00.000Z")], [d("b", "2026-10-16T00:00:00.000Z")]);
+    expect(r.docs.map((x) => x.doc.id)).toEqual(["a", "b", "c"]);
+    expect(r.more).toBe(false);
+  });
+  it("an empty source changes nothing", () => {
+    expect(mergeEditedPages([], [d("x", "2026-10-16T00:00:00.000Z")]).docs).toHaveLength(1);
+    expect(mergeEditedPages([], []).docs).toEqual([]);
+  });
+  it("stops at the last edit of a source that hit its limit", () => {
+    const a = [d("a1", "2026-10-11T00:00:00.000Z"), d("a2", "2026-10-12T00:00:00.000Z")];
+    const b = [d("b1", "2026-10-11T12:00:00.000Z"), d("b2", "2026-10-20T00:00:00.000Z")];
+    const r = mergeEditedPages(a, b, 2);
+    expect(r.docs.map((x) => x.doc.id)).toEqual(["a1", "b1"]);
+    expect(r.more).toBe(true);
+  });
+  it("truncates to the limit and flags more", () => {
+    const a = [d("a", "2026-10-11T00:00:00.000Z")];
+    const b = [d("b", "2026-10-12T00:00:00.000Z"), d("c", "2026-10-13T00:00:00.000Z")];
+    const r = mergeEditedPages(a, b, 2);
+    expect(r.docs.map((x) => x.doc.id)).toEqual(["a", "b"]);
+    expect(r.more).toBe(true);
+  });
+});

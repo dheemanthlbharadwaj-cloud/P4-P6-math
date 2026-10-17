@@ -108,6 +108,17 @@ const guard = async (group, name, fn) => {
     add(group, name, WARN, `request failed: ${msg}`, "Network problem or proxy; not fatal. Re-run later.");
   }
 };
+// Student Firebase project (two-project layout, in progress until the migration runs): shown only when configured.
+{
+  const sp = process.env.STUDENT_PROJECT_ID;
+  const key = process.env.STUDENT_SETUP_SERVICE_ACCOUNT_B64 || process.env.STUDENT_SERVICE_ACCOUNT_B64;
+  if (sp || key) {
+    let who = "";
+    try { who = JSON.parse(Buffer.from(key ?? "", "base64").toString("utf8")).project_id ?? ""; } catch { /* reported below */ }
+    if (key && !who) add("credentials", "Student Firebase project", FAIL, "student service account variable is set but not a valid key", "Re-export STUDENT_SETUP_SERVICE_ACCOUNT_B64 / STUDENT_SERVICE_ACCOUNT_B64 (base64 of the key JSON).");
+    else add("credentials", "Student Firebase project", OK, `${sp || who || "?"}${key ? ` (key for ${who})` : " (no key)"}; editor stays in primary-math-sg`, key ? "" : "Set STUDENT_SETUP_SERVICE_ACCOUNT_B64 to run the migration/setup scripts.");
+  }
+}
 if (OFFLINE) {
   for (const n of ["backend API", "web app", "question editor", "OTA channel", "Netlify credits", "APK download page"]) add("live", n, SKIP, "skipped (--offline)", "");
 } else {

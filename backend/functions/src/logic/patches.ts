@@ -62,17 +62,41 @@ export function toServerQuestion(q: Question): ServerQuestion | null {
   return q.type === "mcq" ? { t: "mcq", o: q.correctOption ?? "" } : { t: "open", p: (q.parts ?? []).map((x) => x.answer) };
 }
 
+export interface EditedDoc { doc: EditorDoc; editedAt: string }
+
+/** last_edited_at as an ISO string: the editor app stores a Firestore Timestamp, our scripts an ISO string. */
+export function editedAtIso(v: unknown): string {
+  if (v && typeof (v as { toDate?: unknown }).toDate === "function") return (v as { toDate(): Date }).toDate().toISOString();
+  if (v instanceof Date) return v.toISOString();
+  return String(v ?? "");
+}
+
+/**
+ * Merges the pages of the two last_edited_at types (each ordered, at most `limit` long) into one ordered page of at
+ * most `limit`. A source that hit its limit may hold more edits after its last one, so the merge stops there (the rest
+ * comes with the next call); `more` tells whether anything is left.
+ */
+export function mergeEditedPages(a: EditedDoc[], b: EditedDoc[], limit = PATCH_LIMIT): { docs: EditedDoc[]; more: boolean } {
+  const cmp = (x: EditedDoc, y: EditedDoc) => (x.editedAt < y.editedAt ? -1 : x.editedAt > y.editedAt ? 1 : x.doc.id < y.doc.id ? -1 : x.doc.id > y.doc.id ? 1 : 0);
+  const full = [a, b].filter((p) => p.length >= limit);
+  const cutoff = full.length ? full.map((p) => p[p.length - 1].editedAt).sort()[0] : null;
+  let merged = [...a, ...b].sort(cmp);
+  if (cutoff !== null) merged = merged.filter((d) => d.editedAt <= cutoff);
+  const more = full.length > 0 || merged.length > limit;
+  return { docs: merged.slice(0, limit), more };
+}
+
 export interface PatchPage { patches: QuestionPatch[]; until: string; more: boolean }
 
 /** Docs of one query page (already ordered by last_edited_at) → the response body. */
-export function patchPage(grade: Grade, content: ServerContent, docs: { doc: EditorDoc; editedAt: string }[], since: string, limit = PATCH_LIMIT): PatchPage {
+export function patchPage(grade: Grade, content: ServerContent, docs: EditedDoc[], since: string, limit = PATCH_LIMIT, more = docs.length >= limit): PatchPage {
   const patches: QuestionPatch[] = [];
   for (const d of docs) {
     const p = buildPatch(grade, content, d.doc, d.editedAt);
     if (p) patches.push(p);
   }
   // `until` is the last edit READ (also of docs outside the bundle), so the next call starts after it.
-  return { patches, until: docs.length ? docs[docs.length - 1].editedAt : since, more: docs.length >= limit };
+  return { patches, until: docs.length ? docs[docs.length - 1].editedAt : since, more };
 }
 
 /**

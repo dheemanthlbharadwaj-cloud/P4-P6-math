@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P6 Maths Question Bank Editor</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
+<style>
+:root{
+  --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --border:#2a2f3a;
+  --text:#e8eaed; --muted:#8b92a3; --accent:#5b8def; --accent2:#7c5cff;
+  --good:#3ecf8e; --warn:#f5a623; --bad:#ef5350;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f5f6f8; --panel:#ffffff; --panel2:#f0f1f4; --border:#e1e4ea; --text:#1a1d24; --muted:#6b7280; }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;height:100%}
+#app{display:none;height:100vh;grid-template-columns:340px 1fr;grid-template-rows:56px 1fr}
+#app.on{display:grid}
+#topbar{grid-column:1/3;display:flex;align-items:center;gap:12px;padding:0 16px;border-bottom:1px solid var(--border);background:var(--panel)}
+#topbar h1{font-size:15px;font-weight:600;margin:0;flex:0 0 auto}
+#topbar .spacer{flex:1}
+#presence{font-size:12px;color:var(--muted)}
+.btn{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:7px 12px;border-radius:8px;font-size:13px;cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{opacity:.9}
+.btn.good{background:var(--good);border-color:var(--good);color:#08281a}
+.btn.small{padding:4px 9px;font-size:12px}
+.btn:disabled{opacity:.4;cursor:default}
+#sidebar{border-right:1px solid var(--border);background:var(--panel);overflow-y:auto;display:flex;flex-direction:column}
+#filters{padding:12px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:8px}
+#filters input,#filters select{width:100%;background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:7px 9px;border-radius:7px;font-size:13px}
+.filter-row{display:flex;gap:6px}
+.filter-row>*{flex:1;min-width:0}
+#qlist{flex:1;overflow-y:auto}
+.qitem{padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;font-size:13px}
+.qitem:hover{background:var(--panel2)}
+.qitem.active{background:var(--panel2);border-left:3px solid var(--accent)}
+.qitem .qid{font-weight:600;color:var(--text)}
+.qitem .qmeta{color:var(--muted);font-size:11px;margin-top:2px}
+.qitem .qsnip{color:var(--muted);font-size:12px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#main{overflow-y:auto;padding:24px 32px}
+#empty{color:var(--muted);text-align:center;margin-top:80px;font-size:14px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:16px}
+.card h3{margin:0 0 12px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px;margin-top:10px}
+label:first-child{margin-top:0}
+textarea,input[type=text],input[type=number],select{width:100%;background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:9px 11px;border-radius:8px;font-size:14px;font-family:inherit}
+textarea{min-height:64px;resize:vertical}
+.preview{background:var(--panel2);border:1px dashed var(--border);border-radius:8px;padding:10px 12px;margin-top:6px;font-size:14px;min-height:20px}
+.row{display:flex;gap:12px}
+.row>*{flex:1}
+.chiprow{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{background:var(--panel2);border:1px solid var(--border);border-radius:16px;padding:4px 11px;font-size:12px;cursor:pointer;user-select:none}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.parts{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.part-row{display:flex;gap:8px;align-items:flex-start;background:var(--panel2);padding:8px;border-radius:8px}
+.part-row .plabel{width:22px;padding-top:9px;font-weight:600;color:var(--muted);font-size:12px}
+.part-row textarea{flex:1}
+.part-row .rm{flex:0 0 auto}
+.mcq-radio{display:flex;flex-direction:column;align-items:center;gap:2px;width:56px;padding-top:9px;font-size:11px;color:var(--muted)}
+.mcq-radio input{width:16px;height:16px}
+figwrap{display:block}
+.figbox{position:relative;display:inline-block;margin-top:6px}
+.figbox img{max-width:100%;max-height:280px;border-radius:8px;border:1px solid var(--border);display:block}
+.figbtns{display:flex;gap:8px;margin-top:8px}
+.nofig{color:var(--muted);font-size:13px;font-style:italic}
+.srclink{display:inline-flex;align-items:center;gap:6px;color:var(--accent);cursor:pointer;font-size:13px;text-decoration:none}
+.srclink:hover{text-decoration:underline}
+.toast{position:fixed;bottom:20px;right:20px;background:var(--panel2);border:1px solid var(--accent2);border-radius:10px;padding:12px 16px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:999;max-width:320px;animation:slidein .2s ease}
+@keyframes slidein{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;background:var(--panel2);border:1px solid var(--border);color:var(--muted);margin-left:6px}
+.badge.lv1{color:var(--good)}.badge.lv2{color:var(--warn)}.badge.lv3{color:var(--bad)}
+.badge.verified{color:var(--good);border-color:var(--good)}
+.badge.err{color:var(--bad);border-color:var(--bad)}
+.topic-header{position:sticky;top:0;background:var(--panel2);border-bottom:1px solid var(--border);padding:8px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);display:flex;justify-content:space-between;z-index:1}
+.topic-count{font-weight:400;text-transform:none;letter-spacing:0}
+.verify-toggle{display:flex;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;margin-top:12px;cursor:pointer;user-select:none}
+.verify-toggle input{width:18px;height:18px;accent-color:var(--good)}
+.verify-toggle.on{border-color:var(--good)}
+.verify-toggle .vlabel{font-size:13px;font-weight:600}
+.verify-toggle .vmeta{font-size:11px;color:var(--muted);margin-left:auto}
+.verify-toggle.err-toggle input{accent-color:var(--bad)}
+.verify-toggle.err-toggle.on{border-color:var(--bad)}
+.verify-toggle.err-toggle .vlabel{color:var(--bad)}
+#f_errorLog{margin-top:4px}
+#loginwrap{height:100vh;display:flex;align-items:center;justify-content:center}
+#loginbox{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px;width:320px}
+#loginbox h2{margin:0 0 18px;font-size:17px}
+#loginbox input{margin-bottom:10px}
+#loginerr{color:var(--bad);font-size:12px;min-height:16px;margin-top:6px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;align-items:center;justify-content:center}
+.modal-bg.on{display:flex}
+.modal{background:var(--panel);border-radius:14px;border:1px solid var(--border);width:min(900px,92vw);max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+.modal-head{display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border)}
+.modal-head h3{margin:0;font-size:14px;flex:1}
+.modal-body{padding:16px;overflow:auto;flex:1}
+.modal-body img{max-width:100%;display:block}
+.modal-body iframe{width:100%;height:70vh;border:0}
+.pdf-toolbar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--panel2)}
+.pdf-toolbar input{width:56px;text-align:center;padding:5px;border-radius:6px;border:1px solid var(--border);background:var(--panel);color:var(--text)}
+.pdf-toolbar .spacer{flex:1}
+#pdfCanvasWrap{display:flex;justify-content:center;background:var(--panel2);padding:12px}
+#pdfCanvasWrap canvas{box-shadow:0 2px 12px rgba(0,0,0,.3);max-width:100%}
+.pdf-status{font-size:12px;color:var(--muted)}
+#cropimg{max-width:100%;display:block}
+.crop-actions{display:flex;gap:8px;justify-content:flex-end;padding:14px 18px;border-top:1px solid var(--border)}
+.helptxt{font-size:11px;color:var(--muted);margin-top:4px}
+.sourcemeta{font-size:12.5px;color:var(--muted);line-height:1.7}
+.savebar{position:sticky;bottom:0;display:flex;gap:10px;justify-content:flex-end;padding:14px 0 4px;background:linear-gradient(var(--bg) 0%, var(--bg) 60%, transparent)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px}
+.status-saved{color:var(--good);font-size:12px}
+.status-dirty{color:var(--warn);font-size:12px}
+
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.acc-form label{margin-top:8px}
+.checkgrid{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.checkgrid label{display:flex;align-items:center;gap:5px;margin:0;background:var(--panel2);border:1px solid var(--border);border-radius:14px;padding:3px 10px;font-size:12px;color:var(--text);cursor:pointer}
+.checkgrid input{width:auto;margin:0}
+.acc-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.acc-table th,.acc-table td{border-bottom:1px solid var(--border);padding:8px 6px;text-align:left;vertical-align:top}
+.acc-table th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.acc-actions{display:flex;flex-wrap:wrap;gap:4px}
+.pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;border:1px solid var(--border)}
+.pill.on{color:var(--good);border-color:var(--good)}.pill.off{color:var(--bad);border-color:var(--bad)}
+.credbox{background:var(--panel2);border:1px dashed var(--accent);border-radius:8px;padding:10px 12px;margin-top:10px;font-family:ui-monospace,Menlo,monospace;font-size:13px;white-space:pre-wrap}
+@media (max-width:800px){.acc-grid{grid-template-columns:1fr}}
+.badge.sel{color:#b8860b;border-color:#b8860b}
+.sub-header{padding:6px 14px 6px 20px;font-size:11.5px;font-weight:600;color:var(--accent);background:var(--panel);border-bottom:1px solid var(--border);display:flex;justify-content:space-between}
+.verify-toggle.sel-toggle input{accent-color:#b8860b}
+.verify-toggle.sel-toggle.on{border-color:#b8860b}
+
+/* student reports (backend/scripts/editor-reports.mjs) */
+.badge.rep{color:#b8860b;border-color:#b8860b}
+.reports-box{margin-top:14px;border:1px solid #b8860b;border-radius:10px;padding:10px 14px;background:var(--panel2)}
+.reports-title{font-weight:700;color:#b8860b;margin-bottom:6px}
+.report{border-top:1px solid var(--border);padding:8px 0}
+.report:first-of-type{border-top:none}
+.report-reason{font-weight:600;font-size:13px}
+.report-note{font-size:13px;margin-top:4px;white-space:pre-wrap}
+.report-meta{font-size:11px;color:var(--muted);margin-top:3px}
+.report-actions{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.report-actions .report-res{flex:1;min-width:160px}
+</style>
+</head>
+<body>
+
+<div id="loginwrap">
+  <div id="loginbox">
+    <h2>P6 Maths Editor</h2>
+    <input type="text" id="loginName" placeholder="Username" autocomplete="username" autocapitalize="off">
+    <input type="password" id="loginPass" placeholder="Password" autocomplete="current-password">
+    <button class="btn primary" id="loginBtn" style="width:100%">Enter</button>
+    <div id="loginerr"></div>
+  </div>
+</div>
+
+<div id="app">
+  <div id="topbar">
+    <h1>P6 Maths Question Bank</h1>
+    <div class="spacer"></div>
+    <div id="presence"></div>
+    <button class="btn" id="accessBtn" style="display:none">Access dashboard</button>
+    <button class="btn" id="exportJsonBtn">Export JSON</button>
+    <button class="btn" id="exportZipBtn">Export ZIP</button>
+    <button class="btn" id="signoutBtn">Sign out</button>
+  </div>
+  <div id="sidebar">
+    <div id="filters">
+      <input type="text" id="searchBox" placeholder="Search question text / id / school…">
+      <div class="filter-row">
+        <select id="topicFilter"><option value="">All topics</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="subtopicFilter"><option value="">All subtopics</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="yearFilter"><option value="">All years</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="diffFilter"><option value="">All difficulty</option><option value="LV1">LV1</option><option value="LV2">LV2</option><option value="LV3">LV3</option></select>
+        <select id="figFilter"><option value="">All figures</option><option value="missing">Missing figure</option><option value="has">Has figure</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="selFilter"><option value="">Selected + others</option><option value="selected">★ Selected only (5-5-5)</option><option value="unselected">Not selected only</option></select>
+        
+      </div>
+      <div class="filter-row">
+        <select id="paperFilter"><option value="">All papers</option><option value="Paper 1 Booklet A">Paper 1 Booklet A (MCQ, No Calculator)</option><option value="Paper 1 Booklet B">Paper 1 Booklet B (No Calculator)</option><option value="Paper 2">Paper 2 (Calculator Allowed)</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="verifyFilter"><option value="">All (verified + not)</option><option value="verified">Verified only</option><option value="unverified">Unverified only</option><option value="errors">Errors flagged only</option><option value="reports">Student reports (open)</option></select>
+      </div>
+      <div class="helptxt" id="countLbl"></div>
+    </div>
+    <div id="qlist"></div>
+  </div>
+  <div id="main">
+    <div id="empty">Select a question from the list to edit it.</div>
+    <div id="editor" style="display:none"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" style="display:none"></div>
+
+<div class="modal-bg" id="sourceModal">
+  <div class="modal" style="width:min(1000px,94vw)">
+    <div class="modal-head"><h3 id="sourceModalTitle">Source</h3><button class="btn small" onclick="closeModal('sourceModal')">Close</button></div>
+    <div class="pdf-toolbar" id="pdfToolbar" style="display:none">
+      <button class="btn small" id="pdfPrev">&larr; Prev</button>
+      <input type="number" id="pdfPageInput" min="1" value="1">
+      <span class="pdf-status">/ <span id="pdfPageCount">?</span></span>
+      <button class="btn small" id="pdfNext">Next &rarr;</button>
+      <div class="spacer"></div>
+      <button class="btn small" id="pdfZoomOut">&minus;</button>
+      <span class="pdf-status" id="pdfZoomLbl">100%</span>
+      <button class="btn small" id="pdfZoomIn">+</button>
+      <button class="btn small" id="pdfJumpBtn">Jump to question's page</button>
+    </div>
+    <div class="modal-body" id="sourceModalBody"><div id="pdfCanvasWrap"><canvas id="pdfCanvas"></canvas></div></div>
+  </div>
+</div>
+
+<div class="modal-bg" id="accessModal">
+  <div class="modal" style="width:min(1100px,96vw)">
+    <div class="modal-head"><h3>Access dashboard — volunteers</h3><button class="btn small" onclick="closeModal('accessModal')">Close</button></div>
+    <div class="modal-body">
+      <div class="acc-grid">
+        <div class="card acc-form">
+          <h3 id="accFormTitle">Add volunteer</h3>
+          <label>Username (letters, numbers, dot, dash)</label>
+          <input type="text" id="accUser" autocapitalize="off" placeholder="e.g. priya.t">
+          <label>Display name</label>
+          <input type="text" id="accName" placeholder="e.g. Priya T">
+          <label>Topics</label>
+          <div class="checkgrid" id="accTopics"></div>
+          <label>Levels</label>
+          <div class="checkgrid" id="accLevels"></div>
+          <div class="helptxt" id="accScopeCount"></div>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <button class="btn primary" id="accSaveBtn">Create volunteer</button>
+            <button class="btn" id="accCancelEdit" style="display:none">Cancel edit</button>
+          </div>
+          <div id="accCred"></div>
+        </div>
+        <div class="card">
+          <h3>Coverage</h3>
+          <div id="accCoverage" class="helptxt" style="font-size:12.5px"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Volunteers</h3>
+        <div style="overflow-x:auto"><table class="acc-table" id="accTable"></table></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="cropModal">
+  <div class="modal">
+    <div class="modal-head"><h3>Crop image</h3><button class="btn small" onclick="closeModal('cropModal')">Close</button></div>
+    <div class="modal-body"><img id="cropimg"></div>
+    <div class="crop-actions">
+      <button class="btn" onclick="cropper.rotate(-90)">Rotate</button>
+      <button class="btn" onclick="cropper.reset()">Reset</button>
+      <button class="btn primary" id="cropSaveBtn">Save crop</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";</script>
+<script>
+  import("./app.v5.js").catch(e => {
+    document.getElementById("loginerr").textContent = "Failed to load app: " + e.message;
+    console.error(e);
+  });
+</script>
+</body>
+</html>

@@ -2,16 +2,20 @@ import { HttpsError, onCall } from "firebase-functions/v2/https";
 import type { GetQuestionPatchesResponse } from "./shared/index.js";
 import { col, editorDb, requireUid, throwFail } from "./admin.js";
 import { CONTENT, type ServerContent } from "./content/index.js";
-import { PATCH_LIMIT, patchFloor, patchPage, servePatches, validatePatchRequest, type PatchPage } from "./logic/patches.js";
+import { Timestamp } from "firebase-admin/firestore";
+import { editedAtIso, mergeEditedPages, PATCH_LIMIT, patchFloor, patchPage, servePatches, validatePatchRequest, type EditedDoc, type PatchPage } from "./logic/patches.js";
 import { PatchCache, type PatchView } from "./logic/patchCache.js";
 
-/** One page of edits after `since` (never before the bundle's snapshot): `last_edited_at > floor`, ordered by it. A range
- *  and orderBy on the one field use Firestore's automatic single-field index (no composite index). One read per doc read. */
+/** One page of edits after `since` (never before the bundle's snapshot): `last_edited_at > floor`, ordered by it. The
+ *  editor app stores last_edited_at as a Firestore Timestamp, our scripts as an ISO string, and a range query only matches
+ *  its own type: so one query per type (two reads when nothing changed), merged by mergeEditedPages. */
 export async function queryPatchPage(grade: string, content: ServerContent, since: string): Promise<PatchPage> {
   const floor = patchFloor(content, since);
-  const snap = await editorDb.collection(col.questions).where("last_edited_at", ">", floor).orderBy("last_edited_at").limit(PATCH_LIMIT).get();
-  const docs = snap.docs.map((d) => ({ doc: { ...d.data(), id: d.id }, editedAt: String(d.get("last_edited_at")) }));
-  return patchPage(grade as "P6", content, docs, floor);
+  const q = (bound: string | Timestamp) => editorDb.collection(col.questions).where("last_edited_at", ">", bound).orderBy("last_edited_at").limit(PATCH_LIMIT).get();
+  const toDocs = (snap: Awaited<ReturnType<typeof q>>): EditedDoc[] => snap.docs.map((d) => ({ doc: { ...d.data(), id: d.id }, editedAt: editedAtIso(d.get("last_edited_at")) }));
+  const [strings, stamps] = await Promise.all([q(floor), q(Timestamp.fromDate(new Date(floor)))]);
+  const { docs, more } = mergeEditedPages(toDocs(strings), toDocs(stamps));
+  return patchPage(grade as "P6", content, docs, floor, PATCH_LIMIT, more);
 }
 
 /**
