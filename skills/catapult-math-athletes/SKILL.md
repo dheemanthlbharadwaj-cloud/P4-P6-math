@@ -28,6 +28,9 @@ environment can do and the live status of every service. Flags: `--verify` (test
 - **Netlify free plan: 300 credits/month, 15 per production deploy (that is what uses them up).** Deploy the backend only when backend code changed, batch changes into one deploy, and never redeploy the APK page without a new APK. `node backend/scripts/netlify-budget.mjs` shows the period's usage; both deploy scripts refuse when fewer than 45 credits would be left (`--force` overrides). The web app is on Firebase Hosting and costs no Netlify credits.
 - **Expo free plan: 60 CI minutes/month** (each OTA update run ≈ 15 min; sandboxes count too). Use `[eas skip]` on commits that don't need to reach phones. **Web deploys run on GitHub Actions** (`.github/workflows/deploy-web.yml`, keyless Google auth); no need to deploy the web app by hand after pushing app changes.
 - Before claiming done: run tests, look at the result in a browser (web build), and report honestly.
+- **No new APK builds until the owner asks (owner rule, 2026-10-17).** Android changes wait; installed APKs keep
+  working through the backend's legacy sign-in (`LEGACY_AUTH_PROJECT_ID=primary-math-sg`, keep it set until a new APK
+  that signs in to the student project is out).
 - **Keep this skill current (owner rule, 2026-10-17): every change updates this file in the same commit.** New or
   changed behaviour → §1 "Current agreed behaviour"; new files/scripts → §2; credentials/deploys/limits → §0/§3;
   content or figure work → §5/§6; how you tested → §7; anything that went wrong and how it was fixed → §8. Owner
@@ -307,6 +310,7 @@ undo: `content/reports/figure-cut-recrops-undo-2026-10-17.json`). Method:
 | 2026-10-17 | Shop: no "you need N stars" message for unaffordable items; some hat names truncated | asked, awaiting owner |
 | 2026-10-17 | Dev Tools button visible in the live web app / tester APK. Turn off before launch? | asked, awaiting owner |
 | 2026-10-17 | Editor and student app in separate Firebase projects (own 50k reads/day each); same web address kept | **student project `catapult-math-students` (#310686010335) created by the owner and set up 17 Oct**: Firestore `(default)` asia-southeast1, email + Google sign-in, authorized domains incl. catapult-math-athletes.web.app, web app 1:310686010335:web:237d76dcb76e24c729d26a, Android app (SHA-256 added; SHA-1 refused because the Android OAuth client for package + release SHA-1 already lives in primary-math-sg → the app keeps primary-math-sg's Google web client id `762269301954-vt974…` for Google sign-in, which must be **safelisted** in the student project: Auth → Google → "Safelist client IDs from external projects"), runtime SA catapult-backend@catapult-math-students, rules + indexes deployed. App config ready in `apps/mobile/firebase.web.students.json` (swap in at the switch). Auth dry run: 9 students to move, 2 editor accounts stay. **Remaining:** Firestore copy + switch after the primary-math-sg quota reset |
+| 2026-10-17 | No new APKs until the owner asks; Google client 762269301954-vt974… safelisted in catapult-math-students by the owner | in force / done |
 | 2026-10-17 | Leaving sign-up halfway restarts it at the name step | reported to owner |
 | 2026-10-17 | Student data and Auth move to their own Firebase project (separate free quota; editor stays in primary-math-sg) | in progress; migration script written, not yet run |
 | 2026-10-16 | Enable Blaze billing on primary-math-sg so the read quota can't take the backend down | recommended, awaiting owner |

@@ -64,6 +64,7 @@ and iOS.
 - **Signing:** every APK must be signed with the release key in Firestore `app_secrets/android-signing`. `setup.sh
   --android` fetches it.
 - **Versions:** a native change means bumping `version` in `apps/mobile/app.config.ts` and shipping a new APK.
+- **No new APK builds until the owner asks** (owner rule, 17 Oct 2026).
 
 **Git and reporting**
 - Work on the branch you were given. No PR unless asked. No AI model names in commits or code.
