@@ -1,8 +1,8 @@
 # Figure cut-off audit, 2026-10-16
 
-Testers reported question figures that are cut off at the image edge, mostly in Angles. Scope this run: every figure in the
-**Angles in Geometrical Figures** chapter (357) and the **Triangles, Squares, Rectangles** chapter (179). Both chapters are
-finished. The remaining ~1,108 figures in other chapters were **not** audited (see "Not done").
+Testers reported question figures that are cut off at the image edge, mostly in Angles. Scope: every figure with an image in the
+P6 bundle (1,644), chapter by chapter: Angles first, then Triangles/Squares/Rectangles, then all other chapters. All chapters are done.
+Old images ("before") in all sheets are the images the app ships (`apps/mobile/assets/content/P6/figures/<id>.webp` at HEAD).
 
 ## Method
 1. Local inputs only: bundle `apps/mobile/assets/content/P6/questions.json`, current figures in `content/raw/P6/figures/`, editor
@@ -21,19 +21,26 @@ finished. The remaining ~1,108 figures in other chapters were **not** audited (s
    become `_` in the raw file name, as already used there). No commit, no content build/sync, no apply-recrops.
 
 ## Counts
-| Chapter | Figures checked | Edge-touch candidates | Confirmed cut / wrong / blank (fixed) | Of which found only by the by-eye pass | Not a real cut |
-|---|---|---|---|---|---|
-| Angles in Geometrical Figures | 357 | 190 | **110** | 5 | 85 candidates |
-| Triangles, Squares, Rectangles | 179 | 91 | **48** | 0 | 43 candidates |
-| All other chapters | 1,108 | 560 | not audited | - | - |
+| Chapter | Figures checked | Edge-touch candidates | Confirmed cut / wrong / blank (fixed) |
+|---|---|---|---|
+| Angles in Geometrical Figures | 357 | 190 | 110 |
+| Triangles, Squares, Rectangles | 179 | 91 | 48 |
+| Numbers to 10 Million | 44 | 24 | 11 |
+| Algebra | 22 | 10 | 4 |
+| Four Operations of Whole Numbers | 42 | 20 | 8 |
+| Fractions | 67 | 33 | 20 |
+| Decimals | 110 | 64 | 31 |
+| Percentage | 87 | 55 | 18 |
+| Circles | 175 | 86 | 40 |
+| Volume | 210 | 98 | 63 |
+| Data Representation | 274 | 127 | 48 |
+| Ratio and Rate | 77 | 43 | 19 |
+| **Total** | **1,644** | 841 | **420** |
 
-Of the 158 fixed figures, 11 were not clipping but **the wrong image** or a **blank image** (listed below as WRONG/blank):
-2021_MGS_P2_Q15, 2022_MGS_P1_Q23 (blank), 2022_Nan_Hua_P2_Q8, 2023_PeiChun_P1_Q18, 2024_TaoNan_P1_Q28, 2025_ACSJ_P1_Q29,
-2025_Henry_Park_P1A_Q13 (blank), 2025_NanHua_P1_Q20, 2025_Nan_Hua_P1A_Q06, 2025_RedSwastika_P1_Q27, 2025_Tao_Nan_P1A_Q15.
-The reported example `2022_Nanyang_P1A_Q05` is fixed (point D and the top of the vertical line at E are back).
-
-Most candidates that were not fixed legitimately touch an edge after tight trimming (a ruler, grid or frame line ending at
-the border) with nothing the question needs missing.
+All chapters were reviewed by eye, candidates (before/after sheets) and non-candidates (contact sheets). Chapters after the
+first two are listed below the first two tables, one section each, with their fixed ids. Pre-existing verified recrops
+(185 from the earlier session) were not changed; `2021_AITONG_P1_Q30` was briefly overwritten by this audit and has been restored
+to the committed version.
 
 ## Fixed: Angles in Geometrical Figures (110)
 | Question id | What was missing / wrong |
@@ -210,12 +217,10 @@ the border) with nothing the question needs missing.
 - 87 of the angles questions (2024-2026 papers) have `source_pdf_url: null` in the snapshot; their PDFs were found by year and school name
   instead. Every match was checked by eye (low-score matches were located by hand).
 
-## Before / after sheets (old on the left, new on the right)
-`/tmp/claude-0/-home-user-p4-p6-math/54c6ba52-9b91-5593-8e31-8984dd453c35/scratchpad/figcut/before_after/angles_000.png` ... `angles_021.png`, `triangles_000.png` ... `triangles_009.png`.
+## Before / after sheets (old shipped image on the left, new on the right)
+Scratchpad folder `/tmp/claude-0/-home-user-p4-p6-math/54c6ba52-9b91-5593-8e31-8984dd453c35/scratchpad/figcut/before_after/`: `angles_*.png`, `triangles_*.png`, and `FIXED_<chapter>_*.png` per chapter. Per-chapter `*_rev_*` and `*_dense_*` sheets are the review sheets (what was looked at).
 
-## Not done
-The 1,108 figures of all other chapters. The edge-touch pass already ran on them (560 candidates; re-crop matches for about
-500 of them exist in the scratchpad) but they were not reviewed by eye, so nothing was changed for them.
+`/tmp/claude-0/-home-user-p4-p6-math/54c6ba52-9b91-5593-8e31-8984dd453c35/scratchpad/figcut/before_after/angles_000.png` ... `angles_021.png`, `triangles_000.png` ... `triangles_009.png`.
 
 ## To apply tomorrow
 `cd content && npx tsx scripts/apply-recrops.ts recrops/P6 --dry`, review, then run without `--dry`, then sync and build.
@@ -223,12 +228,11 @@ Note `recrops/P6` also contains the 185 earlier verified re-crops, which are unt
 
 
 ## Chapter: Numbers to 10 Million
-Checked 44 figures; 24 edge-touch candidates; **12 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). 
+Checked 44 figures; 24 edge-touch candidates; **11 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_numbers_to_10_million_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
 |---|---|
-| `2021_AITONG_P1_Q30` | the number strip (5, 4, 0, 0, 2 ...) was cut off above the image; only arrows and 1st/15th left |
 | `2021_CATHOLIC_P1_Q28` | left tip of Figure 1 diamond cut at left edge; page frame line removed |
 | `2021_Catholic_High_P1A_Q09` | axis/ticks and "boys" label cut off at bottom, left label clipped |
 | `2021_HENRY_P2_Q08` | right end of the tape cut off |
@@ -243,7 +247,7 @@ Before/after sheets: `before_after/FIXED_numbers_to_10_million_000.png` ... in t
 
 
 ## Chapter: Algebra
-Checked 22 figures; 10 edge-touch candidates; **4 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). 
+Checked 22 figures; 10 edge-touch candidates; **4 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_algebra_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -255,7 +259,7 @@ Before/after sheets: `before_after/FIXED_algebra_000.png` ... in the scratchpad 
 
 
 ## Chapter: Four Operations of Whole Numbers
-Checked 42 figures; 20 edge-touch candidates; **8 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). 
+Checked 42 figures; 20 edge-touch candidates; **8 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_four_operations_of_whole_numbers_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -271,7 +275,7 @@ Before/after sheets: `before_after/FIXED_four_operations_of_whole_numbers_000.pn
 
 
 ## Chapter: Fractions
-Checked 67 figures; 33 edge-touch candidates; **20 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). 
+Checked 67 figures; 33 edge-touch candidates; **20 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_fractions_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -299,7 +303,7 @@ Before/after sheets: `before_after/FIXED_fractions_000.png` ... in the scratchpa
 
 
 ## Chapter: Decimals
-Checked 110 figures; 64 edge-touch candidates; **31 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). 
+Checked 110 figures; 64 edge-touch candidates; **31 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_decimals_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -338,7 +342,7 @@ Before/after sheets: `before_after/FIXED_decimals_000.png` ... in the scratchpad
 
 
 ## Chapter: Percentage
-Checked 87 figures; 55 edge-touch candidates; **18 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). 
+Checked 87 figures; 55 edge-touch candidates; **18 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_percentage_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -364,7 +368,7 @@ Before/after sheets: `before_after/FIXED_percentage_000.png` ... in the scratchp
 
 
 ## Chapter: Circles
-Checked 175 figures; 86 edge-touch candidates; **40 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). 
+Checked 175 figures; 86 edge-touch candidates; **40 confirmed cut / wrong / blank and re-cut** (0 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_circles_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -412,7 +416,7 @@ Before/after sheets: `before_after/FIXED_circles_000.png` ... in the scratchpad 
 
 
 ## Chapter: Volume
-Checked 210 figures; 98 edge-touch candidates; **63 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). Dense sheets (147 non-reviewed figures) were also inspected.
+Checked 210 figures; 98 edge-touch candidates; **63 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
 Before/after sheets: `before_after/FIXED_volume_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
 
 | Question id | What was missing / wrong |
@@ -486,3 +490,99 @@ Not fixed / needs a human look:
 - `2024_Rosyth_P1_Q30`: table of solids/nets is cut at the bottom (rows (b)-(c) missing); PDF match too weak (0.44) to re-cut automatically
 - `2025_StNicholas_P2_Q1`: top of the jug (rim) is cut at the top edge; automatic re-cut lost the right wall, left as is
 - `2022_MGS_P1_Q24`: figure image is blank (a few stray dots); the source page has no figure for this question (text-only). Suggest removing the figure from the editor question; not re-cut.
+
+
+## Chapter: Data Representation
+Checked 274 figures; 127 edge-touch candidates; **48 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
+Before/after sheets: `before_after/FIXED_data_representation_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
+
+| Question id | What was missing / wrong |
+|---|---|
+| `2021_ACS_P2_Q08` | x-axis labels (0, 10, 20 ... ) cut off at the bottom edge |
+| `2021_AITONG_P1_Q23` | top of the y-axis (label 10) and top of the frame cut off |
+| `2021_AITONG_P2_Q01` | right part of the graph frame / gridlines cut off at the right edge |
+| `2021_CATHOLIC_P2_Q06` | top of the graph frame (and top gridlines) cut off at the top edge |
+| `2021_HENRY_P2_Q03` | top of the table (header "Duration / Charges" line) cut off at the top edge |
+| `2021_HENRY_P2_Q12` | left vertex B and the bottom of the triangles cut off at the left/bottom edge |
+| `2021_HENRY_P2_Q15` | bottom row of the table (grey squares) and the right frame cut off; stem sentence removed |
+| `2021_NANCHIAU_P1_Q29` | bottom of the ink-blotted table cut off at the bottom edge |
+| `2021_NANCHIAU_P2_Q14` | label B and the left end of the base cut off at the left edge |
+| `2021_NANHUA_P2_Q10` | top of the table header (English / Chinese / Mathematics) clipped at the top edge |
+| `2021_PEIHWA_P1_Q29` | bottom of the first graph (x labels January/February/March) and the whole second graph ("Number of Workers" per company) missing; re-cut both graphs |
+| `2021_ROSYTH_P2_Q12` | y-axis labels clipped at the left edge (120 and 100 appeared as "20", "00"), left axis title missing; table top clipped |
+| `2021_SCGS_P1_Q29` | top and bottom of the chart cut off (y labels 8, 9 and x labels 1-4 missing) |
+| `2021_SCGS_P2_Q02` | bottom of the table (Devi row bottom frame) cut off; stem fragment on top removed |
+| `2021_TAO_NAN_P2_Q07` | x-axis title "Number of Cars" and the y-axis title clipped at the bottom/left edge |
+| `2022_Catholic_High_P1A_Q10` | y-axis title "Number of books sold" clipped at the left edge; stem fragments at top/bottom removed |
+| `2022_Henry_P1_Q29` | ink blot and right edge of the table cut off at the right/bottom edge |
+| `2022_Nan_Hua_P1A_Q14` | top of the bar chart (top bar and its "2" label) and the bottom axis labels clipped at the top/bottom edge |
+| `2022_St_Nicholas_P1_Q20` | last x-axis label "9.00 a.m." clipped at the right edge |
+| `2022_St_Nicholas_P1_Q28` | ink blot and the top of the bar graph clipped at the top edge; left axis cut |
+| `2022_St_Nicholas_P2_Q5` | y-axis labels (30, 25, 0) and left axis missing (cut off at left/top) |
+| `2022_Tao_Nan_P2_Q11` | y-axis top label "20" and the top of the graph cut off at the top edge |
+| `2023_ACSJ_P1A_Q13` | right column ("After 6 pm / $2.50 per entry") cut off at the right edge; stem line under the table removed |
+| `2023_ACSJ_P1_Q27` | last table row (D 4.60 / 12.50) cut off at the bottom edge |
+| `2023_Ai_Tong_P1A_Q09` | right end of the bar graph axis (label 40) and the frame cut off at the right edge |
+| `2023_Catholic_High_P1A_Q09` | x-axis month labels (April, May, June, July) cut off at the bottom edge |
+| `2023_MarisStella_P2_Q02` | top of the bar graph (y label 350 and top frame) cut off at the top edge; page frame line |
+| `2023_Pei_Chun_P1A_Q08` | bottom of the desk legs and the lower shelf cut off at the bottom/left edge |
+| `2023_Red_Swastika_P1A_Q15` | table header row ("Day / Amount saved") cut off at the top edge |
+| `2023_TAO_P1_Q27` | pie chart cut off at the left, right and bottom edges (circle not complete); stem fragment removed |
+| `2024_ACSP_P2_Q11` | bottom of the pie chart (circle bottom) cut off at the bottom edge |
+| `2024_Henry_Park_P1A_Q10` | bottom of the bar graph (baseline "0" and the bar bottoms) cut off at the bottom edge |
+| `2024_Nanyang_P1A_Q09` | option labels (1), (2) and the tops of the pie charts cut off at the top edge |
+| `2024_PeiChun_P2_Q12` | bottom of the pie chart clipped at the bottom edge |
+| `2024_Raffles_P1_Q18` | table header row ("Start time / Programme") cut off at the top and right column clipped at the right edge |
+| `2024_RedSwastika_P2_Q8` | y-axis labels (80, 40, 20) cut off at the left edge and top of the axis clipped |
+| `2024_Rosyth_P1A_Q04` | end of the graph line (at 12 00) and the left axis labels cut off at the right/left edge |
+| `2024_SCGS_P2_Q13` | x-axis title "Number of electronic devices" clipped at the bottom edge and top label 90 |
+| `2025_MGS_P1_Q20` | pie chart cut off at the right and top/bottom (Blue and White sectors clipped) |
+| `2025_Methodist_Girls_P1A_Q04` | x-axis month labels (Jun ... Oct) clipped at the bottom edge |
+| `2025_RedSwastika_P2_Q10` | x-axis labels (0, 1, 2, 3) cut off at the bottom edge |
+| `2025_Red_Swastika_P1A_Q13` | left of the pie chart (green sector) and the frame clipped at the left edge; right bar edge |
+| `2025_Rosyth_P2_Q8` | right side of the pie chart (Toy sector and circle) cut off at the right edge |
+| `2025_StNicholas_P1_Q20` | right edge of the last bar (4) and frame cut off at the right edge |
+| `2025_Tao_Nan_P1A_Q11` | top of the pie chart (Jogging 30 sector) cut off at the top edge; stem text fragments inside the image removed |
+| `2026_Methodist_Girls_P1A_Q15` | bottom of the pie chart (Green/Red sector bottoms) cut off at the bottom edge; stem fragment on top removed |
+| `2026_Raffles_Girls_P1A_Q05` | x-axis day labels (Mon ... Fri) and the bottom of the bars cut off at the bottom edge; stem fragment "Friday." removed |
+| `2026_SN_P1_21` | rounded frame of the poster (bottom and right) cut off at the bottom/right edge |
+
+Not fixed / needs a human look:
+- `2022_MGS_P2_Q17`: image holds no figure (only a page margin line, "Ans: (b)" and the answer box); the question is text-only. Suggest removing the figure in the editor; not re-cut.
+
+
+## Chapter: Ratio and Rate
+Checked 77 figures; 43 edge-touch candidates; **19 confirmed cut / wrong / blank and re-cut** (1 of them were not edge candidates, found by the by-eye pass). Dense sheets covered the figures that did not touch an edge or had no usable re-cut.
+Before/after sheets: `before_after/FIXED_ratio_and_rate_000.png` ... in the scratchpad figcut folder (old = shipped bundle image, left; new, right).
+
+| Question id | What was missing / wrong |
+|---|---|
+| `2021_MGS_P2_Q14` | labels Q and R and the top edge of the square cut off at the top edge |
+| `2021_NANYANG_P2_Q13` | right label "21 cm" clipped at the right edge, bottom dashed line cut |
+| `2022_Catholic_P2_Q11` | graph cut off at the bottom/left/right (x-axis 0-18 labels and "Time" missing, 10 label); stem fragment removed |
+| `2022_Catholic_P2_Q12` | labels "park" and "mall" clipped at the top edge |
+| `2022_RedSwastika_P1_Q19` | captions "Tank X / Tank Y" clipped at the bottom edge |
+| `2023_CHS_P2_Q8` | titles "Group A" / "Group B" clipped at the top edge |
+| `2023_NanHua_P1_Q23` | apex of the triangle and the shape cut off at the top edge; left base tip clipped |
+| `2023_PeiChun_P2_Q15` | the two taps (inflow above Tank B, outflow beside Tank A) cut off at the top/left edge |
+| `2023_RedSwastika_P2_Q17` | top of the donut tray cut off at the top edge |
+| `2024_ACSP_P2_Q15` | bottom of the table (Machine B row frame) cut off at the bottom edge |
+| `2024_Catholic_High_P1A_Q10` | right side of the Girls pie chart (circle and "Walk 20%" edge) cut off at the right edge |
+| `2024_Catholic_High_P2_Q10` | left end of the route line with label P cut off at the left edge |
+| `2025_MGS_P1_Q28` | label "6 cm" clipped at the right edge |
+| `2025_Raffles_Girls_P1A_Q11` | pie chart touching the left edge (Car sector circle clipped) and stem fragment "of the Primary 6 students go to school by MRT?" removed |
+| `2025_Rosyth_P2_Q13` | graph cut off at the right (x axis only to "10") and bottom (Time axis title missing; 08 00 labels clipped) |
+| `2026_AT_P1_27` | top y-axis label "140" clipped at the top edge |
+| `2026_AT_P2_01` | top of the tomatoes picture and frame cut off at the top edge |
+| `2026_CH_P1_Q19_19` | left part of the poster (S of SPECIAL, "2", muffins) cut off at the left edge |
+| `2026_MGS_P2_03` | right end of the necklace (continuing line) cut off at the right edge |
+
+Not fixed / needs a human look:
+- `2022_Catholic_P2_Q15`: image holds only the "(a) How many nuts ... (b) What is the mass of the metal box?" text lines, no figure; not a cut. Suggest removing the figure in the editor; not re-cut.
+
+
+## Notes on specific follow-ups
+- `2022_Rosyth_P2_Q15` ("PQST is a rhombus"): the source page does have the P and Q labels at the top corners; the earlier re-cut had cropped them off. Re-cut again from the page at 170 dpi including P and Q (checked by eye).
+- Pre-existing verified recrops (185 files from before this audit) were not modified. `2021_AITONG_P1_Q30` was overwritten by mistake
+  during chapter work and restored to the committed version (it must keep the full 15-number sequence).
+- Image-only issues for the editor, not re-cut: `2022_MGS_P1_Q24`, `2022_MGS_P2_Q17`, `2022_Catholic_P2_Q15` hold no figure (text/blank only).
