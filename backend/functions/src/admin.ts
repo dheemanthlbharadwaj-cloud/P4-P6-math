@@ -1,29 +1,60 @@
-import { cert, getApps, initializeApp } from "firebase-admin/app";
-import { getAuth } from "firebase-admin/auth";
-import { FieldValue, getFirestore } from "firebase-admin/firestore";
+import { cert, getApps, initializeApp, type App, type ServiceAccount } from "firebase-admin/app";
+import { getAuth, type Auth } from "firebase-admin/auth";
+import { FieldValue, getFirestore, type Firestore } from "firebase-admin/firestore";
 import { HttpsError, type CallableRequest } from "firebase-functions/v2/https";
 import { setGlobalOptions } from "firebase-functions/v2";
 import { FUNCTIONS_REGION, TIMEZONE } from "./shared/index.js";
 import type { Fail } from "./logic/rules.js";
+import { resolveProjects, verifyWithFallback, type ServiceAccountJson } from "./logic/projects.js";
 
-// Outside Google Cloud (the Netlify host) the service account comes from BACKEND_SERVICE_ACCOUNT_B64; on Cloud
-// Functions / the emulators the default credentials are used.
-if (!getApps().length) {
-  const b64 = process.env.BACKEND_SERVICE_ACCOUNT_B64;
-  if (b64) {
-    const sa = JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
-    initializeApp({ credential: cert(sa), projectId: sa.project_id });
-  } else initializeApp();
-}
+// Two Firebase projects (see logic/projects.ts): the STUDENT project (Auth + all student data in Firestore) and the
+// EDITOR project (primary-math-sg: the question bank `questions`, read; `question_reports`, write). Without the
+// STUDENT_* env vars everything is the one legacy project (BACKEND_SERVICE_ACCOUNT_B64 + FIRESTORE_DATABASE_ID).
+// On Cloud Functions / the emulators default credentials are used.
+const cfg = resolveProjects(process.env);
+const decode = (b64: string): ServiceAccountJson => JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
+const appFor = (name: string, b64: string | undefined): App => {
+  const existing = getApps().find((a) => a.name === name);
+  if (existing) return existing;
+  if (!b64) return initializeApp(undefined, name);
+  const sa = decode(b64);
+  return initializeApp({ credential: cert(sa as unknown as ServiceAccount), projectId: sa.project_id }, name);
+};
+const studentApp = appFor("[DEFAULT]", cfg.studentB64);
+const editorApp = cfg.split ? appFor("editor", cfg.editorB64 ?? cfg.legacyB64) : studentApp;
+const dbOf = (app: App, id: string): Firestore => (id === "(default)" ? getFirestore(app) : getFirestore(app, id));
 export const REGION = FUNCTIONS_REGION;
 export const SCHEDULE_TZ = TIMEZONE; // Asia/Singapore
 setGlobalOptions({ region: REGION, maxInstances: 20 });
 
-// The student data shares the question bank's Firestore database in primary-math-sg, which is a named database
-// "default" (not "(default)"): FIRESTORE_DATABASE_ID=default on the Netlify site. Emulators/tests use "(default)".
-export const DATABASE_ID = process.env.FIRESTORE_DATABASE_ID || "(default)";
-export const db = DATABASE_ID === "(default)" ? getFirestore() : getFirestore(DATABASE_ID);
-export const auth = getAuth();
+export const DATABASE_ID = cfg.studentDatabaseId;
+/** Student data (users, wallets, leaderboards, ...). */
+export const db = dbOf(studentApp, cfg.studentDatabaseId);
+/** The question editor's database: `questions` (read) and `question_reports` (write) only. */
+export const editorDb = dbOf(editorApp, cfg.editorDatabaseId);
+/** Student Auth. */
+export const auth = getAuth(studentApp);
+
+// During the transition, ID tokens of LEGACY_AUTH_PROJECT_ID (installed apps still sign in there) are accepted too.
+let legacyAuth: Auth | null = null;
+function getLegacyAuth(): Auth | null {
+  if (!cfg.legacyAuthProjectId) return null;
+  if (!legacyAuth) {
+    const name = "legacy-auth";
+    const existing = getApps().find((a) => a.name === name);
+    let app = existing;
+    if (!app) {
+      const b64 = cfg.editorB64 ?? cfg.legacyB64;
+      const sa = b64 ? decode(b64) : null;
+      app = initializeApp(sa && sa.project_id === cfg.legacyAuthProjectId ? { credential: cert(sa as unknown as ServiceAccount), projectId: sa.project_id } : { projectId: cfg.legacyAuthProjectId }, name);
+    }
+    legacyAuth = getAuth(app);
+  }
+  return legacyAuth;
+}
+/** Verifies a Firebase ID token against the student project, then (if configured) the legacy project. */
+export const verifyIdToken = (token: string) =>
+  verifyWithFallback((t) => auth.verifyIdToken(t), cfg.legacyAuthProjectId ? (t) => getLegacyAuth()!.verifyIdToken(t) : null, token);
 export { FieldValue };
 
 export function requireUid(req: CallableRequest): string {
@@ -49,8 +80,8 @@ export const col = {
   medals: "medals",
   entitlements: "entitlements",
   config: "config",
-  questions: "questions", // the question bank (editor-owned; read only here)
-  questionReports: "question_reports",
+  questions: "questions", // the question bank (EDITOR project; read only here: use editorDb)
+  questionReports: "question_reports", // EDITOR project (use editorDb)
 } as const;
 export const dailyBoard = (date: string) => `daily-${date}`;
 export const monthlyBoard = (ym: string) => `monthly-${ym}`;

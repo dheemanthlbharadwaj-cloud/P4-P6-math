@@ -1,6 +1,6 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import type { GetQuestionPatchesResponse } from "./shared/index.js";
-import { col, db, requireUid, throwFail } from "./admin.js";
+import { col, editorDb, requireUid, throwFail } from "./admin.js";
 import { CONTENT, type ServerContent } from "./content/index.js";
 import { PATCH_LIMIT, patchFloor, patchPage, servePatches, validatePatchRequest, type PatchPage } from "./logic/patches.js";
 import { PatchCache, type PatchView } from "./logic/patchCache.js";
@@ -9,7 +9,7 @@ import { PatchCache, type PatchView } from "./logic/patchCache.js";
  *  and orderBy on the one field use Firestore's automatic single-field index (no composite index). One read per doc read. */
 export async function queryPatchPage(grade: string, content: ServerContent, since: string): Promise<PatchPage> {
   const floor = patchFloor(content, since);
-  const snap = await db.collection(col.questions).where("last_edited_at", ">", floor).orderBy("last_edited_at").limit(PATCH_LIMIT).get();
+  const snap = await editorDb.collection(col.questions).where("last_edited_at", ">", floor).orderBy("last_edited_at").limit(PATCH_LIMIT).get();
   const docs = snap.docs.map((d) => ({ doc: { ...d.data(), id: d.id }, editedAt: String(d.get("last_edited_at")) }));
   return patchPage(grade as "P6", content, docs, floor);
 }

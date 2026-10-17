@@ -3,8 +3,8 @@
 import { createSign } from "node:crypto";
 
 /** The service account that administers the student project (Owner), from SETUP_SERVICE_ACCOUNT_B64 or FIREBASE_SERVICE_ACCOUNT_B64. */
-export function loadServiceAccount() {
-  const b64 = process.env.SETUP_SERVICE_ACCOUNT_B64 || process.env.FIREBASE_SERVICE_ACCOUNT_B64;
+export function loadServiceAccount(override) {
+  const b64 = override || process.env.SETUP_SERVICE_ACCOUNT_B64 || process.env.FIREBASE_SERVICE_ACCOUNT_B64;
   if (!b64) throw new Error("Set SETUP_SERVICE_ACCOUNT_B64 (or FIREBASE_SERVICE_ACCOUNT_B64).");
   return JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
 }

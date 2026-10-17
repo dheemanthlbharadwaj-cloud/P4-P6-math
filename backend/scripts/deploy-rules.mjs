@@ -4,6 +4,10 @@
 //
 //   node backend/scripts/deploy-rules.mjs [--dry]            merge + deploy (dry: write the merged file only)
 //   node backend/scripts/deploy-rules.mjs --restore <ruleset> put a previous ruleset back (undo)
+//   node backend/scripts/deploy-rules.mjs --project <id> --student-only [--database "(default)"] [--dry]
+//       the student project: deploy ONLY backend/firestore.rules (server only) + the indexes, no editor merge.
+//       Needs a service account that is Owner of that project (SETUP_SERVICE_ACCOUNT_B64 /
+//       STUDENT_SETUP_SERVICE_ACCOUNT_B64). The default (no flags) merged deploy to primary-math-sg is unchanged.
 //
 // Every deploy saves the previous live rules and ruleset name to backend/reports/ (the undo manifest).
 // Needs the setup service account (SETUP_SERVICE_ACCOUNT_B64 / FIREBASE_SERVICE_ACCOUNT_B64). Never prints secrets.
@@ -14,17 +18,27 @@ import { googleClient, loadServiceAccount } from "./gcp.mjs";
 import { mergeRules } from "./rules-merge.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const PROJECT = process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
-const DATABASE = process.env.FIRESTORE_DATABASE_ID || "default";
+const argOf = (name) => { const i = process.argv.indexOf(name); return i > 0 ? process.argv[i + 1] : undefined; };
+const STUDENT_ONLY = process.argv.includes("--student-only");
+if (STUDENT_ONLY && !argOf("--project")) throw new Error("--student-only needs --project <student project id>");
+const PROJECT = argOf("--project") || process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
+const DATABASE = argOf("--database") || (STUDENT_ONLY ? process.env.STUDENT_DATABASE_ID || "(default)" : process.env.FIRESTORE_DATABASE_ID || "default");
 const DRY = process.argv.includes("--dry");
 const restoreAt = process.argv.indexOf("--restore");
 const RULES = "https://firebaserules.googleapis.com/v1";
-const RELEASE = `projects/${PROJECT}/releases/cloud.firestore/${DATABASE}`;
+const RELEASE = `projects/${PROJECT}/releases/cloud.firestore${DATABASE === "(default)" ? "" : `/${DATABASE}`}`;
 const log = (...a) => console.log(...a);
-const { api, must, wait } = await googleClient(loadServiceAccount());
+const { api, must, wait } = await googleClient(loadServiceAccount(STUDENT_ONLY ? process.env.STUDENT_SETUP_SERVICE_ACCOUNT_B64 : undefined));
 
-const release = must(await api("GET", `${RULES}/${RELEASE}`), "live release");
-const setRelease = async (rulesetName) => must(await api("PATCH", `${RULES}/${RELEASE}`, { release: { name: RELEASE, rulesetName } }), "update release");
+// The student project's (default) database has no release until the first deploy.
+const releaseRes = await api("GET", `${RULES}/${RELEASE}`);
+if (STUDENT_ONLY && releaseRes.status === 404) releaseRes.body = {}, releaseRes.status = 200;
+const release = must(releaseRes, "live release");
+const setRelease = async (rulesetName) => {
+  const r = await api("PATCH", `${RULES}/${RELEASE}`, { release: { name: RELEASE, rulesetName } });
+  if (r.status === 404 && STUDENT_ONLY) return must(await api("POST", `${RULES}/projects/${PROJECT}/releases`, { name: RELEASE, rulesetName }), "create release");
+  return must(r, "update release");
+};
 
 if (restoreAt > 0) {
   const name = process.argv[restoreAt + 1];
@@ -35,13 +49,11 @@ if (restoreAt > 0) {
 }
 
 // 1) Rules
-const liveSet = must(await api("GET", `${RULES}/${release.rulesetName}`), "live ruleset");
-const live = liveSet.source.files[0].content;
-const merged = mergeRules(
-  live,
-  fs.readFileSync(path.join(ROOT, "backend/firestore.rules"), "utf8"),
-  fs.readFileSync(path.join(ROOT, "backend/firestore.editor-reports.rules"), "utf8"),
-);
+const live = release.rulesetName ? must(await api("GET", `${RULES}/${release.rulesetName}`), "live ruleset").source.files[0].content : "";
+const studentRules = fs.readFileSync(path.join(ROOT, "backend/firestore.rules"), "utf8");
+const merged = STUDENT_ONLY
+  ? studentRules // the student project has no editor: server-only rules
+  : mergeRules(live, studentRules, fs.readFileSync(path.join(ROOT, "backend/firestore.editor-reports.rules"), "utf8"));
 const reports = path.join(ROOT, "backend/reports");
 fs.mkdirSync(reports, { recursive: true });
 if (merged === live) log("rules: live rules already up to date");
@@ -52,7 +64,7 @@ else if (DRY) {
 } else {
   const stamp = new Date().toISOString().replace(/[:.]/g, "-");
   fs.writeFileSync(path.join(reports, `rules-${stamp}-previous.rules`), live);
-  fs.writeFileSync(path.join(reports, `rules-${stamp}-previous.json`), JSON.stringify({ release: RELEASE, rulesetName: release.rulesetName, undo: `node backend/scripts/deploy-rules.mjs --restore ${release.rulesetName}` }, null, 2) + "\n");
+  fs.writeFileSync(path.join(reports, `rules-${stamp}-previous.json`), JSON.stringify({ release: RELEASE, rulesetName: release.rulesetName ?? null, undo: release.rulesetName ? `node backend/scripts/deploy-rules.mjs${STUDENT_ONLY ? ` --project ${PROJECT} --student-only` : ""} --restore ${release.rulesetName}` : "none (first deploy)" }, null, 2) + "\n");
   // Creating the ruleset compiles it: a syntax/type error stops here, before anything goes live.
   const created = must(await api("POST", `${RULES}/projects/${PROJECT}/rulesets`, { source: { files: [{ name: "firestore.rules", content: merged }] } }), "compile rules");
   await setRelease(created.name);
@@ -61,7 +73,7 @@ else if (DRY) {
 
 // 2) Indexes (from firestore.indexes.json) in the named database
 const idx = JSON.parse(fs.readFileSync(path.join(ROOT, "backend/firestore.indexes.json"), "utf8"));
-const FS = `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/${DATABASE}`;
+const FS = `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/${DATABASE}`; // "(default)" is the literal id here
 const existing = must(await api("GET", `${FS}/collectionGroups/-/indexes`), "list indexes").indexes ?? [];
 const sig = (cg, scope, fields) => `${cg}|${scope}|${fields.map((f) => `${f.fieldPath}:${f.order ?? f.arrayConfig}`).join(",")}`;
 const have = new Set(existing.map((i) => sig(i.name.split("/collectionGroups/")[1].split("/")[0], i.queryScope, i.fields.filter((f) => f.fieldPath !== "__name__"))));

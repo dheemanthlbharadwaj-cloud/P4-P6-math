@@ -3,6 +3,14 @@
 //
 //   node backend/scripts/deploy-netlify.mjs [--dry] [--rotate-key]
 //
+// Two-project layout (student data in its own Firebase project): set STUDENT_PROJECT_ID (e.g. catapult-math-students; its
+// setup service account is STUDENT_SETUP_SERVICE_ACCOUNT_B64 or the usual one if that is Owner there too). Then the site gets
+//   STUDENT_SERVICE_ACCOUNT_B64 (key for catapult-backend@<student project>), STUDENT_DATABASE_ID ("(default)"),
+//   EDITOR_SERVICE_ACCOUNT_B64 (a key for catapult-backend@primary-math-sg; it must have read on questions and write on
+//   question_reports there, which setup-project.mjs grants), EDITOR_DATABASE_ID ("default"),
+//   LEGACY_AUTH_PROJECT_ID (primary-math-sg, unless LEGACY_AUTH_PROJECT_ID=none), and keeps BACKEND_SERVICE_ACCOUNT_B64 until
+//   you drop it. Without STUDENT_PROJECT_ID the single-project setup below is unchanged.
+//
 // Needs NETLIFY_AUTH_TOKEN or NETLIFY_SECRET (Netlify → User settings → Applications → Personal access tokens) and the setup service
 // account (SETUP_SERVICE_ACCOUNT_B64 or FIREBASE_SERVICE_ACCOUNT_B64, Owner of the project). Project primary-math-sg
 // (FIREBASE_PROJECT_ID overrides), Firestore database "default"; site name NETLIFY_SITE_NAME (default below).
@@ -30,6 +38,9 @@ const SITE_NAME = process.env.NETLIFY_SITE_NAME || "catapult-math-athletes-api";
 const PROJECT = process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
 const DATABASE = process.env.FIRESTORE_DATABASE_ID || "default"; // the question bank's named database
 const RUNTIME_SA = `catapult-backend@${PROJECT}.iam.gserviceaccount.com`; // created by setup-project.mjs
+const STUDENT_PROJECT = process.env.STUDENT_PROJECT_ID || "";
+const STUDENT_DATABASE = process.env.STUDENT_DATABASE_ID || "(default)";
+const LEGACY_AUTH = (process.env.LEGACY_AUTH_PROJECT_ID || PROJECT) === "none" ? "" : process.env.LEGACY_AUTH_PROJECT_ID || PROJECT;
 const NL_TOKEN = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_SECRET;
 if (!NL_TOKEN) throw new Error("Set NETLIFY_AUTH_TOKEN or NETLIFY_SECRET (Netlify → User settings → Applications → Personal access tokens).");
 const log = (...a) => console.log(...a);
@@ -71,21 +82,40 @@ async function setEnv(key, value) {
   have.add(key);
 }
 
-if (!have.has("BACKEND_SERVICE_ACCOUNT_B64") || ROTATE) {
-  log(`Env: BACKEND_SERVICE_ACCOUNT_B64 ← new key for ${RUNTIME_SA}`);
-  if (!DRY) {
-    const { api, must } = await googleClient(loadServiceAccount());
-    const keysUrl = `https://iam.googleapis.com/v1/projects/-/serviceAccounts/${RUNTIME_SA}/keys`;
-    const old = must(await api("GET", `${keysUrl}?keyTypes=USER_MANAGED`), "list keys (run setup-project.mjs first)").keys ?? [];
-    const key = must(await api("POST", keysUrl, {}), "create key");
-    const full = JSON.parse(Buffer.from(key.privateKeyData, "base64").toString("utf8"));
-    // Only what firebase-admin needs: function env vars share a 4 KB limit.
-    const compact = { type: full.type, project_id: full.project_id, client_email: full.client_email, private_key: full.private_key };
-    await setEnv("BACKEND_SERVICE_ACCOUNT_B64", Buffer.from(JSON.stringify(compact)).toString("base64"));
-    for (const k of old) must(await api("DELETE", `https://iam.googleapis.com/v1/${k.name}`), "delete old key");
-    if (old.length) log(`Env: deleted ${old.length} old key(s)`);
-  }
-} else log("Env: BACKEND_SERVICE_ACCOUNT_B64 set");
+/** Creates a key for catapult-backend@<project> (deleting the old ones) and stores the compact JSON in env var `name`. */
+async function ensureKey(name, project, saFile) {
+  if (have.has(name) && !ROTATE) { log(`Env: ${name} set`); return; }
+  const email = `catapult-backend@${project}.iam.gserviceaccount.com`;
+  log(`Env: ${name} ← new key for ${email}`);
+  if (DRY) return;
+  const { api, must } = await googleClient(loadServiceAccount(saFile));
+  const keysUrl = `https://iam.googleapis.com/v1/projects/-/serviceAccounts/${email}/keys`;
+  const old = must(await api("GET", `${keysUrl}?keyTypes=USER_MANAGED`), `list keys (run setup-project.mjs${project === STUDENT_PROJECT ? " --student" : ""} first)`).keys ?? [];
+  const key = must(await api("POST", keysUrl, {}), "create key");
+  const full = JSON.parse(Buffer.from(key.privateKeyData, "base64").toString("utf8"));
+  // Only what firebase-admin needs: function env vars share a 4 KB limit.
+  const compact = { type: full.type, project_id: full.project_id, client_email: full.client_email, private_key: full.private_key };
+  await setEnv(name, Buffer.from(JSON.stringify(compact)).toString("base64"));
+  // Two env vars may hold keys of the same service account (BACKEND_ and EDITOR_ for primary-math-sg): then old keys
+  // are not deleted automatically, or one variable would lose its key.
+  if (STUDENT_PROJECT && project === PROJECT) { if (old.length) log(`Env: ${old.length} older key(s) of ${email} kept (shared by two variables); prune them in IAM → Service accounts → Keys`); return; }
+  for (const k of old) must(await api("DELETE", `https://iam.googleapis.com/v1/${k.name}`), "delete old key");
+  if (old.length) log(`Env: deleted ${old.length} old key(s)`);
+}
+const envValue = (k) => (Array.isArray(env) ? env : []).find((e) => e.key === k)?.values?.[0]?.value;
+async function ensureVar(key, value) {
+  if (envValue(key) === value) { log(`Env: ${key} = ${value}`); return; }
+  log(`Env: ${key} ← ${value}`);
+  if (!DRY) await setEnv(key, value);
+}
+await ensureKey("BACKEND_SERVICE_ACCOUNT_B64", PROJECT); // the editor-side/legacy key (stays until the switch is proven)
+if (STUDENT_PROJECT) {
+  await ensureKey("STUDENT_SERVICE_ACCOUNT_B64", STUDENT_PROJECT, process.env.STUDENT_SETUP_SERVICE_ACCOUNT_B64);
+  await ensureKey("EDITOR_SERVICE_ACCOUNT_B64", PROJECT);
+  await ensureVar("STUDENT_DATABASE_ID", STUDENT_DATABASE);
+  await ensureVar("EDITOR_DATABASE_ID", DATABASE);
+  if (LEGACY_AUTH) await ensureVar("LEGACY_AUTH_PROJECT_ID", LEGACY_AUTH);
+}
 const dbVar = (Array.isArray(env) ? env : []).find((e) => e.key === "FIRESTORE_DATABASE_ID");
 if (dbVar?.values?.[0]?.value !== DATABASE) {
   log(`Env: FIRESTORE_DATABASE_ID ← ${DATABASE}`);

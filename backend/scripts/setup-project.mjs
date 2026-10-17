@@ -21,8 +21,12 @@ import { googleClient, loadServiceAccount } from "./gcp.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const DRY = process.argv.includes("--dry");
 const NO_DEPLOY = process.argv.includes("--no-deploy");
-const PROJECT = process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
-const DATABASE = "default"; // the question bank's named database (not "(default)")
+// --student: set up the separate STUDENT project (STUDENT_PROJECT_ID / --project <id>, database "(default)"): same steps, but
+// student-only rules, and the web config goes to backend/reports/firebase.web.student.json (the app config is switched by hand).
+const STUDENT = process.argv.includes("--student");
+const projArg = process.argv.indexOf("--project") > 0 ? process.argv[process.argv.indexOf("--project") + 1] : undefined;
+const PROJECT = STUDENT ? projArg || process.env.STUDENT_PROJECT_ID || "catapult-math-students" : process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
+const DATABASE = STUDENT ? process.env.STUDENT_DATABASE_ID || "(default)" : "default"; // primary-math-sg: the question bank's named database
 const WEB_APP_NAME = "Catapult Math Athletes (web)";
 const AUTH_DOMAINS = ["localhost", "catapult-math-athletes.web.app", "catapult-math-athletes.firebaseapp.com"];
 const APIS = [
@@ -32,7 +36,7 @@ const APIS = [
 const RUNTIME_SA_ID = "catapult-backend"; // same id in deploy-netlify.mjs
 const RUNTIME_ROLES = ["roles/datastore.user", "roles/firebaseauth.admin"];
 
-const sa = loadServiceAccount();
+const sa = loadServiceAccount(STUDENT ? process.env.STUDENT_SETUP_SERVICE_ACCOUNT_B64 : undefined);
 const log = (...a) => console.log(...a);
 
 const { api, must, wait } = await googleClient(sa);
@@ -73,7 +77,14 @@ if (fb.status === 404 || fb.status === 403) {
 } else { must(fb, "firebase project"); log("Firebase: already added"); }
 
 // 3) Firestore: the question bank's database must be there (student collections are added next to its own)
-const dbGet = must(await api("GET", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/${DATABASE}`), `Firestore database "${DATABASE}"`);
+let dbRes = await api("GET", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/${DATABASE}`);
+if (STUDENT && dbRes.status === 404 && !DRY) {
+  log(`Firestore: creating database ${DATABASE} in asia-southeast1`);
+  const op = must(await api("POST", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases?databaseId=${encodeURIComponent(DATABASE)}`, { type: "FIRESTORE_NATIVE", locationId: "asia-southeast1" }), "create database");
+  if (op.name && !op.done) await wait(op.name, "https://firestore.googleapis.com/v1");
+  dbRes = await api("GET", `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/${DATABASE}`);
+}
+const dbGet = must(dbRes, `Firestore database "${DATABASE}"`);
 log(`Firestore: database "${DATABASE}" in ${dbGet.locationId}`);
 
 // 4) Auth: email/password on, authorized domains
@@ -105,9 +116,10 @@ const conf = must(await api("GET", `https://firebase.googleapis.com/v1beta1/proj
 // The Google provider's OAuth client (public; created when Google sign-in is switched on): the native apps' web client id.
 const googleWebClientId = (idps.body.defaultSupportedIdpConfigs ?? []).find((i) => i.enabled && i.name.endsWith("/google.com"))?.clientId;
 const out = { apiKey: conf.apiKey, authDomain: conf.authDomain, projectId: conf.projectId, storageBucket: conf.storageBucket, messagingSenderId: conf.messagingSenderId, appId: conf.appId, databaseId: DATABASE, ...(googleWebClientId ? { googleWebClientId } : {}) };
-const webPath = path.join(ROOT, "apps/mobile/firebase.web.json");
+const webPath = STUDENT ? path.join(ROOT, "backend/reports/firebase.web.student.json") : path.join(ROOT, "apps/mobile/firebase.web.json");
+fs.mkdirSync(path.dirname(webPath), { recursive: true });
 const same = fs.existsSync(webPath) && fs.readFileSync(webPath, "utf8") === JSON.stringify(out, null, 2) + "\n";
-log(`Web app: "${app.displayName ?? app.appId}" → apps/mobile/firebase.web.json ${same ? "(up to date)" : DRY ? "(would update)" : "(written)"}`);
+log(`Web app: "${app.displayName ?? app.appId}" → ${path.relative(ROOT, webPath)} ${same ? "(up to date)" : DRY ? "(would update)" : "(written)"}`);
 if (!same && !DRY) fs.writeFileSync(webPath, JSON.stringify(out, null, 2) + "\n");
 
 // 7) The service account the backend (Netlify) runs as: Firestore read/write + Auth admin (delete account), nothing else.
@@ -143,5 +155,5 @@ if (!DRY) {
 
 // 8) Security rules (merged with the editor's) + indexes
 if (NO_DEPLOY) { log("skipping rules (--no-deploy)"); process.exit(0); }
-execFileSync(process.execPath, [path.join(ROOT, "backend/scripts/deploy-rules.mjs"), ...(DRY ? ["--dry"] : [])], { stdio: "inherit", env: { ...process.env, FIREBASE_PROJECT_ID: PROJECT } });
+execFileSync(process.execPath, [path.join(ROOT, "backend/scripts/deploy-rules.mjs"), ...(STUDENT ? ["--student-only", "--project", PROJECT, "--database", DATABASE] : []), ...(DRY ? ["--dry"] : [])], { stdio: "inherit", env: { ...process.env, FIREBASE_PROJECT_ID: PROJECT } });
 log(DRY ? "dry run: nothing changed" : "Done. Next: node backend/scripts/deploy-netlify.mjs");

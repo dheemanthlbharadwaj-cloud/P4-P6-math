@@ -5,7 +5,8 @@
 //   → 200 {"result": <response>}   or   4xx/5xx {"error": {"status": "<callable error code>", "message": "..."}}
 //
 // Firebase Auth + Firestore stay in the (Spark plan) Firebase project; the service account comes from
-// BACKEND_SERVICE_ACCOUNT_B64 (see ../functions/src/admin.ts).
+// BACKEND_SERVICE_ACCOUNT_B64, or the STUDENT_* / EDITOR_* / LEGACY_AUTH_PROJECT_ID variables (see ../functions/src/admin.ts
+// and logic/projects.ts). Tokens are verified against the student project, then LEGACY_AUTH_PROJECT_ID if set.
 import { timingSafeEqual } from "node:crypto";
 import fns from "./lib/index.js";
 import admin from "./lib/admin.js";
@@ -63,7 +64,7 @@ export async function handleApi(request) {
   const token = (request.headers.get("authorization") ?? "").match(/^Bearer (.+)$/)?.[1];
   if (token) {
     try {
-      const decoded = await admin.auth.verifyIdToken(token);
+      const decoded = await admin.verifyIdToken(token);
       auth = { uid: decoded.uid, token: decoded, rawToken: token };
     } catch { return fail("unauthenticated", "Sign in again."); }
   }
