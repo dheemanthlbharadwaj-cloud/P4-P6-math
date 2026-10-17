@@ -1,0 +1,24 @@
+{
+  "when": "2026-10-17T15:19:11.989Z",
+  "dry": true,
+  "from": {
+    "project": "primary-math-sg",
+    "database": "default"
+  },
+  "to": {
+    "project": "catapult-math-students",
+    "database": "(default)"
+  },
+  "auth": {
+    "exported": 11,
+    "editorAccountsSkipped": 2,
+    "toImport": 9,
+    "withPassword": 5,
+    "providerOnly": 4,
+    "imported": 0,
+    "alreadyThere": 0,
+    "failed": 0,
+    "uids": []
+  },
+  "undo": "nothing was written"
+}
