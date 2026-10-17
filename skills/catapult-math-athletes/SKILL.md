@@ -246,8 +246,8 @@ undo: `content/reports/figure-cut-recrops-undo-2026-10-17.json`). Method:
 - Apply **only the new recrops**: copy just those PNGs into a scratch folder and run apply-recrops on that folder
   (`recrops/P6` holds every recrop ever made; re-applying old ones re-uploads them). `git diff --name-only
   --diff-filter=A <before> HEAD -- content/recrops/P6` lists the new ones.
-- After applying, the live API serves the new `figureUrl`s as patches within ~10 min (no backend deploy, no new
-  bundle needed); still run `npm run sync && npm run build` so the offline bundle/APK carry them (content version
+- After applying, the live API serves the new `figureUrl`s as patches within ~10 min; but **deploy the backend with
+  the rebuilt bundle the same day** (see §8: otherwise every cold start re-reads all the edits). Also run `npm run sync && npm run build` so the offline bundle/APK carry them (content version
   stays the same when only figures change).
 - Left for a human (see the report): 2023_Temasek_P1A_Q10, 2024_Rosyth_P1_Q30 (cut, PDF match too weak);
   2022_MGS_P1_Q24, 2022_MGS_P2_Q17, 2022_Catholic_P2_Q15 (image has no figure: remove it in the editor);
@@ -275,6 +275,13 @@ undo: `content/reports/figure-cut-recrops-undo-2026-10-17.json`). Method:
 - Bundle contains stale figure → raw file still old; check `content/raw/P6/figures/.sources.json` and that the
   editor `figure_url` changed; delete the raw file and re-sync.
 - Background shell commands time out at 30 min by default; long OCR/render jobs must save progress incrementally.
+- **Every backend call returns 500, or the question editor won't let you sign in** → check the Firestore daily read
+  quota first (Spark plan; the editor needs reads to log in too). Quick test: any REST read returns 429 "Quota limit
+  exceeded". Per-source read counts (Cloud Monitoring) need billing, so they can't be checked on Spark.
+- **Big editor edits make every backend cold start expensive** (17 Oct 2026: 421 figure fixes → quota gone again the
+  same day). Each fresh Netlify instance reads every question edited since the backend's bundled snapshot
+  (`patchCache`). After any bulk editor write: `cd content && npm run sync && npm run build`, commit, then deploy the
+  backend once so its snapshot is newer than the edits (cold start back to ~1 read).
 - **Every backend call returns 500** → check the Firestore daily read quota first (Spark plan). Wait for the reset
   (~15:00 SGT) or enable billing; nothing else fixes it.
 - **APK signed with the wrong key** (SHA-256 not 4dfb2351…) → the signing Gradle properties were missing; fetch the
