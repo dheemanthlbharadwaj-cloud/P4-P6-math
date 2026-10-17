@@ -55,6 +55,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   android: {
     package: BUNDLE_ID,
+    // Raise for every APK. The app `version` (= runtimeVersion) stays while no native code changes, so earlier APKs of the
+    // same version keep taking over-the-air updates. 2 = 0.3.0 with the Topics picker, format hints, re-cut figures.
+    versionCode: 2,
     adaptiveIcon: { foregroundImage: "./assets/ui/adaptive-icon.png", backgroundColor: "#12aecf" },
     // Children's app (Google Play Families policy): only internet + vibration; nothing the app doesn't use.
     blockedPermissions: [
