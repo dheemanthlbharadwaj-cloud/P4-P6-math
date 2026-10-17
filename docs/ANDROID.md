@@ -5,6 +5,7 @@ One codebase (`apps/mobile`) serves the web app, Android and iOS. Phones get cha
 | Change | How it reaches phones |
 | --- | --- |
 | JS/TS code, screens, question content, figures, images | **Over-the-air update** (automatic): push to `main` or `ccr-41770098-9l0q6b` touching `apps/mobile/**` or `packages/shared/**` → EAS workflow `apps/mobile/.eas/workflows/publish-update.yml` publishes to the `preview` channel → phones download it on launch and use it on the next launch. |
+| Same native code, new JS (e.g. while the Expo CI minutes are used up) | **New APK, same `version`**: raise only `android.versionCode` in `app.config.ts` (2 = 17 Oct 2026). Installs over the old APK and every copy keeps taking over-the-air updates. |
 | Native: a new native module, permissions, icon/splash, `app.config.ts` plugins, Expo SDK upgrade | **New APK**: bump `version` in `app.config.ts` (runtime version = app version, so old APKs stop taking updates meant for the new one), build, publish the APK. |
 
 Skip an update for a commit with `[eas skip]` in the commit message. **Expo free plan: 60 CI minutes a month (about 4 update runs); used up until 1 Nov 2026.** Batch app changes and use `[eas skip]` for commits that don't need to reach phones.
@@ -23,7 +24,7 @@ Skip an update for a commit with `[eas skip]` in the commit message. **Expo free
 ## Build a new APK (local, in a cloud session)
 
 1. Android SDK in `/root/android-sdk` (cmdline-tools, `platforms;android-36`, `build-tools;36.0.0`, `ndk;27.1.12297006`); JDK 21.
-2. Read the key from Firestore into a 0700 directory outside the repo (never print it).
+2. `node scripts/android-key.mjs` (fetch + verify), then `node scripts/android-key.mjs --write-gradle-props`; check it printed "wrote signing properties". **Always confirm the SHA-256 with `apksigner` after the build**: without the properties Gradle silently signs with the debug key.
 3. `cd apps/mobile && EXPO_PUBLIC_APP_ENV=preview EXPO_PUBLIC_DEV_TOOLS=1 npx expo prebuild --platform android --no-install --clean`
 4. `cd android && ./gradlew assembleRelease --no-daemon -PreactNativeArchitectures=arm64-v8a,armeabi-v7a` with the key passed as `android.injected.signing.store.file / store.password / key.alias / key.password` Gradle properties (remove them afterwards). Maven Central sometimes answers 429 through the proxy: just retry; the Gradle cache keeps progress.
 5. Check: `apksigner verify --print-certs` shows the SHA-256 above.
