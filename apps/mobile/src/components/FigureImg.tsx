@@ -54,7 +54,7 @@ export function FigureImg({ fig, style, onRatio, label }: {
   return <Image
       source={src} style={style} resizeMode="contain" accessibilityLabel={label}
       onError={web ? () => setBroken(true) : undefined}
-      onLoad={onRatio ? (e) => { const { width, height } = e.nativeEvent.source; if (width && height) onRatio(width / height); } : undefined}
+      onLoad={onRatio ? (e) => { const { width, height } = e.nativeEvent?.source ?? {}; if (width && height) onRatio(width / height); } : undefined}
     />;
 }
 

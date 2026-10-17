@@ -54,6 +54,17 @@ function useCalc() {
 
 type Calc = ReturnType<typeof useCalc>;
 
+const TIGHT_PANEL_HEIGHT = 420;
+
+function CloseButton({ onClose }: { onClose: () => void }) {
+  return (
+    <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel="Close calculator" hitSlop={10}
+      style={({ pressed }) => [styles.closeBtn, { alignSelf: "flex-end" }, pressed && { transform: [{ scale: 0.92 }] }]}>
+      <Text style={styles.closeX}>✕</Text>
+    </Pressable>
+  );
+}
+
 function Header({ onClose, compact }: { onClose: () => void; compact?: boolean }) {
   return (
     <View style={[styles.header, compact && { marginBottom: 8 }]}>
@@ -78,17 +89,18 @@ function Screen({ c, compact }: { c: Calc; compact?: boolean }) {
   );
 }
 
-function Keys({ c, fill }: { c: Calc; fill?: boolean }) {
+function Keys({ c, fill, tight }: { c: Calc; fill?: boolean; tight?: boolean }) {
+  const gap = tight ? 5 : 10;
   return (
-    <View style={[{ gap: 10 }, fill && { flex: 1 }]}>
+    <View style={[{ gap }, fill && { flex: 1 }]}>
       {KEYS.map((row, i) => (
-        <View key={i} style={[styles.row, fill && { flex: 1 }]}>
+        <View key={i} style={[styles.row, { gap }, fill && { flex: 1 }]}>
           {row.map(({ k, kind, label }) => {
             const col = KEY_COLORS[kind];
             return (
               <Pressable key={k} onPress={() => c.press(k)} accessibilityRole="button" accessibilityLabel={label ?? k}
-                style={({ pressed }) => [styles.key, fill && { minHeight: 40 }, { backgroundColor: col.face }, pressed && styles.keyDown]}>
-                <Text style={[styles.keyText, { color: col.text }]}>{k}</Text>
+                style={({ pressed }) => [styles.key, fill && { minHeight: 40 }, tight && styles.keyTight, { backgroundColor: col.face }, pressed && (tight ? styles.keyDownTight : styles.keyDown)]}>
+                <Text style={[styles.keyText, tight && { fontSize: 18 }, { color: col.text }]}>{k}</Text>
               </Pressable>
             );
           })}
@@ -119,6 +131,9 @@ export function CalculatorModal({ visible, onClose }: { visible: boolean; onClos
  *  The parent keeps the scratchpad mounted underneath; the entry stays in memory while closed. */
 export function CalculatorPanel({ visible, onClose }: { visible: boolean; onClose: () => void }) {
   const c = useCalc();
+  // Short panes (landscape phones, ~200–400 px tall): screen + close on the left, keypad on the right, so every key fits.
+  const [height, setHeight] = useState(0);
+  const tight = height > 0 && height < TIGHT_PANEL_HEIGHT;
   useEffect(() => {
     if (!visible || Platform.OS !== "web") return;
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -127,10 +142,22 @@ export function CalculatorPanel({ visible, onClose }: { visible: boolean; onClos
   }, [visible, onClose]);
   if (!visible) return null;
   return (
-    <View style={styles.panel} accessibilityViewIsModal>
-      <Header onClose={onClose} compact />
-      <Screen c={c} compact />
-      <Keys c={c} fill />
+    <View style={[styles.panel, tight && { padding: 8 }]} accessibilityViewIsModal onLayout={(e) => setHeight(e.nativeEvent.layout.height)}>
+      {tight ? (
+        <View style={{ flex: 1, flexDirection: "row", gap: 8 }}>
+          <View style={{ flex: 2, gap: 8 }}>
+            <CloseButton onClose={onClose} />
+            <View style={{ flex: 1, justifyContent: "flex-end" }}><Screen c={c} compact /></View>
+          </View>
+          <View style={{ flex: 3 }}><Keys c={c} fill tight /></View>
+        </View>
+      ) : (
+        <>
+          <Header onClose={onClose} compact />
+          <Screen c={c} compact />
+          <Keys c={c} fill />
+        </>
+      )}
     </View>
   );
 }
@@ -165,5 +192,7 @@ const styles = StyleSheet.create({
     alignItems: "center", justifyContent: "center",
   },
   keyDown: { borderBottomWidth: 3, transform: [{ translateY: 4 }] },
+  keyTight: { minHeight: 0, borderRadius: 12, borderBottomWidth: 4 },
+  keyDownTight: { borderBottomWidth: 3, transform: [{ translateY: 1 }] },
   keyText: { fontSize: 26, fontFamily: fonts.display },
 });
