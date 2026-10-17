@@ -83,6 +83,10 @@ export default function ProfileTab() {
   };
 
   const addFriend = async () => {
+    if (profile.friendCode && friendCode.trim().toUpperCase() === profile.friendCode.toUpperCase()) {
+      flash("That's your own code. Ask your friend for theirs.");
+      return;
+    }
     try {
       const r = await api.sendFriendRequest({ friendCode: friendCode.trim().toUpperCase() });
       flash(r.status === "accepted" ? "You're friends now!" : "Friend request sent!");
