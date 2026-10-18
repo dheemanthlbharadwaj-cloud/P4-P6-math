@@ -90,7 +90,7 @@ export interface ExtractResult {
 /** Turn one source answer into an AnswerSpec. Falls back to a non-auto-markable text spec holding the raw answer. */
 export function extractSpec(raw: RawAnswer, stats?: TokenizeStats): ExtractResult {
   // a bare unit "l" is a litre (no number before it, so litreSymbol does not reach it)
-  const unitRaw = plainAnswer(raw.unit, stats).replace(/^l$/, "ℓ");
+  const unitRaw = plainAnswer(raw.unit, stats).replace(/^l$/, "L");
   const valuePlain = plainAnswer(raw.value, stats);
   const fracPlain = plainAnswer(fractionText(raw.fraction), stats);
   const symPlain = plainAnswer(raw.symbol, stats);

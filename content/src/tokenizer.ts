@@ -137,11 +137,11 @@ export function tokenizeMath(src: string, stats: TokenizeStats = newStats()): Ri
 }
 
 /**
- * The litre unit: a lowercase "l" directly after a number (one optional space), not followed by a letter or digit.
- * "9 l 75 ml" → "9 ℓ 75 ml", "2l" → "2ℓ"; "ml", "7 lb", "5 litres" and "line l" are untouched. Pure.
+ * The litre unit: a lowercase "l" directly after a number (one optional space), not followed by a letter or digit, shows as the
+ * official capital "L". "9 l 75 ml" → "9 L 75 ml", "2l" → "2L"; "ml", "7 lb", "5 litres" and "line l" are untouched. Pure.
  */
 export function litreSymbol(text: string): string {
-  return text.replace(/(\d)( ?)l(?![A-Za-z\d])/g, "$1$2ℓ");
+  return text.replace(/(\d)( ?)l(?![A-Za-z\d])/g, "$1$2L");
 }
 
 function plainWithBreaks(text: string, out: RichToken[]) {

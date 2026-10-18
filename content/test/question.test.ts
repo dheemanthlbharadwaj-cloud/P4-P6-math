@@ -60,13 +60,13 @@ describe.skipIf(!fs.existsSync(path.join(assetsContentRoot(), "P6", "questions.j
   });
 });
 
-describe("litreSymbol (litres show as ℓ)", () => {
+describe("litreSymbol (litres show as L)", () => {
   it.each([
-    ["9 l 75 ml", "9 ℓ 75 ml"],
-    ["2l", "2ℓ"],
-    ["3.5 l of water", "3.5 ℓ of water"],
-    ["1 l.", "1 ℓ."],
-    ["(4 l)", "(4 ℓ)"],
+    ["9 l 75 ml", "9 L 75 ml"],
+    ["2l", "2L"],
+    ["3.5 l of water", "3.5 L of water"],
+    ["1 l.", "1 L."],
+    ["(4 l)", "(4 L)"],
   ])("changes %j to %j", (input, out) => expect(litreSymbol(input)).toBe(out));
 
   it.each(["ml", "ml.", "7 lb", "5 litres", "line l", "length l", "9 L", "40 ml l"])("does not change %j", (input) => {
@@ -79,15 +79,15 @@ describe("litreSymbol (litres show as ℓ)", () => {
       question: "Which is the same as 9 l 75 ml? Math $2l$ stays.", options: { "1": "9 l 75 ml", "2": "9 ml", "3": "$5l$ l", "4": "2l" }, answer_key: 1,
     };
     const q = docToQuestion(d, { grade: "P6", subtopicId: "p6-x", topic: "Measurement", hasFigure: false }).question;
-    expect(richToPlain(q.stem)).toBe("Which is the same as 9 ℓ 75 ml? Math 2l stays.");
-    expect(q.options!.map((o) => richToPlain(o.text))).toEqual(["9 ℓ 75 ml", "9 ml", "5l l", "2ℓ"]);
+    expect(richToPlain(q.stem)).toBe("Which is the same as 9 L 75 ml? Math 2l stays.");
+    expect(q.options!.map((o) => richToPlain(o.text))).toEqual(["9 L 75 ml", "9 ml", "5l l", "2L"]);
     expect(q.id).toBe("2026_TEST_P6_Q01");
   });
 
   it("converts a bare litre unit on an open answer", () => {
     const d = { id: "2026_TEST_P6_Q02", year: 2026, topic_primary: "Measurement", difficulty: "LV1", question_type: "short", paper: "Paper 2", question: "Find the volume.", answer: "9.075", unit: "l" };
     const { question } = docToQuestion(d, { grade: "P6", subtopicId: "p6-x", topic: "Measurement", hasFigure: false });
-    expect(question.parts![0].answer).toMatchObject({ kind: "number", value: 9.075, unit: "ℓ" });
-    expect(question.parts![0].display).toBe("9.075 ℓ");
+    expect(question.parts![0].answer).toMatchObject({ kind: "number", value: 9.075, unit: "L" });
+    expect(question.parts![0].display).toBe("9.075 L");
   });
 });

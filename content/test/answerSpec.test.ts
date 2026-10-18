@@ -83,7 +83,7 @@ describe("number with unit words (answers stored as text before)", () => {
   });
   it.each([
     ["6 years old", num(6, "years old")],
-    ["16 l per hour", num(16, "l per hour")],
+    ["16 l per hour", num(16, "L per hour")],
     ["15 L/min", num(15, "L/min")],
     ["27 grey circles", num(27, "grey circles")],
     ["32¢", num(32)],
