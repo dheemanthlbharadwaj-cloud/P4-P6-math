@@ -72,6 +72,7 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
               <>
                 {retry ? <Button title="Try again" variant="good" disabled={gate} onPress={() => setReveal(null)} /> : null}
                 <Button title="Try another question" variant={retry ? "ghost" : "primary"} disabled={gate} onPress={() => { if (topic) useProgress.getState().setKeyQuestion(grade, topic.id, undefined); setReveal(null); setTried([]); setAttempt((a) => a + 1); }} />
+                <Button title="Not now" variant="ghost" onPress={close} />
               </>
             )}
           </View>
