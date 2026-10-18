@@ -1,0 +1,19 @@
+{
+ "note": "undo for editor delta QA; restore these raw Firestore values",
+ "original": {
+  "name": "projects/primary-math-sg/databases/default/documents/questions/2025_Ai_Tong_P1A_Q13",
+  "id": "2025_Ai_Tong_P1A_Q13",
+  "verification_notes": {
+   "stringValue": "confirmed bundle's answer; two arcs of 21π each = 42π, plus two exposed straight segments of 21m each = 42; total (42π+42)m"
+  },
+  "source": {
+   "stringValue": "(Ai_Tong) (Prelims) (2025)"
+  },
+  "last_edited_by": {
+   "stringValue": "structure-v1"
+  },
+  "last_edited_at": {
+   "stringValue": "2026-10-01T09:53:25.593718+00:00"
+  }
+ }
+}
