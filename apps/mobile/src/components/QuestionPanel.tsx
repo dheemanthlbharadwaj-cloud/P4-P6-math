@@ -17,11 +17,12 @@ import { uiAssets } from "../theme/assets";
 import { BUBBLE_BAND } from "./CatCompanion";
 import { colors, font, fonts, MIN_TOUCH, radius, space } from "../theme/colors";
 import { useLayout } from "../theme/layout";
+import { showAnswerLines, showCorrectOption } from "../logic/feedback";
 
 export interface Reveal {
   correct: boolean;
   perPart: boolean[];
-  /** show the correct answer(s) (review mode) */
+  /** list the correct answer(s); honoured only when `correct` (wrong answers never reveal it) */
   showAnswer?: boolean;
 }
 
@@ -122,7 +123,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
           <View style={{ marginTop: space.l }}>
             {(q.options ?? []).map((o) => {
               const picked = responses[0] === o.key;
-              const isRight = reveal && o.key === q.correctOption;
+              const isRight = showCorrectOption(reveal) && o.key === q.correctOption; // never on a wrong answer (owner rule)
               const isWrongPick = reveal && picked && !reveal.correct;
               return (
                 <Pressable
@@ -181,7 +182,7 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
                       <Text style={styles.hint}>Mixed number: whole, space, then a/b</Text>
                     </View>
                   ) : null}
-                  {reveal?.showAnswer ? <Text style={styles.answerLine}>Answer: {p.display || "no model answer in the question bank yet"}</Text> : null}
+                  {showAnswerLines(reveal) ? <Text style={styles.answerLine}>Answer: {p.display || "no model answer in the question bank yet"}</Text> : null}
                 </View>
               );
             })}
