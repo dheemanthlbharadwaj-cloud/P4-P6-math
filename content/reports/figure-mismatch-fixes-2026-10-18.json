@@ -1,0 +1,72 @@
+[
+ {
+  "id": "2022_MGS_P1_Q24",
+  "field": "figure_url",
+  "old": "https://res.cloudinary.com/n9gn4u6k/image/upload/v1789285342/p6maths/figures2022/MGS_P1_Q24.png",
+  "new": null,
+  "reason": "Source paper (2022 MGS P1 p13, Q24) has no figure: the question is text only (tank 30 cm x 20 cm, 5 bottles of 1.5 l). The shipped image was blank."
+ },
+ {
+  "id": "2022_MGS_P1_Q24",
+  "field": "figure.required",
+  "old": true,
+  "new": false,
+  "reason": "Companion to the figure_url removal: the question has no figure, so it must not be flagged as needing one."
+ },
+ {
+  "id": "2022_MGS_P2_Q17",
+  "field": "figure_url",
+  "old": "https://res.cloudinary.com/n9gn4u6k/image/upload/v1789285349/p6maths/figures2022/MGS_P2_Q17.png",
+  "new": null,
+  "reason": "Source paper (2022 MGS P2 p35, Q17) has no figure: text only (deck of cards 1 to 50). The shipped image was an almost blank page fragment with 'Ans: (b)'."
+ },
+ {
+  "id": "2022_MGS_P2_Q17",
+  "field": "figure.required",
+  "old": true,
+  "new": false,
+  "reason": "Companion to the figure_url removal: the question has no figure, so it must not be flagged as needing one."
+ },
+ {
+  "id": "2023_Catholic_High_P1A_Q11",
+  "field": "figure_url",
+  "old": "https://res.cloudinary.com/n9gn4u6k/image/upload/v1791189327/p6maths/figures_edited/2023_Catholic_High_P1A_Q11_recrop.png",
+  "new": null,
+  "reason": "Source paper (2023 Catholic High P1A p6, Q11) shows the three volumes 2.35 l, 2 l 305 ml, 2 3/5 l only as a text box that our question text already contains; the shipped image was the cake bar chart of Q9."
+ },
+ {
+  "id": "2023_Catholic_High_P1A_Q11",
+  "field": "figure.required",
+  "old": true,
+  "new": false,
+  "reason": "Companion to the figure_url removal: the question has no figure, so it must not be flagged as needing one."
+ },
+ {
+  "id": "2023_PeiChun_P1_Q18",
+  "field": "question",
+  "old": "PAR is an equilateral triangle. Find $\\angle w$.",
+  "new": "PQR is an equilateral triangle. Find $\\angle w$.",
+  "reason": "Source paper (2023 Pei Chun P1 p1, Q18) reads 'PQR is an equilateral triangle. Find angle w.'; the figure has vertices P, Q, R. Our text had a transcription slip (PAR)."
+ },
+ {
+  "id": "2023_St Nicholas_P2_Q4",
+  "field": "question",
+  "old": "In the figure, KN and JL are straight lines. LPK is an equilateral triangle and JKT is perpendicular to ML. The sum of $\\angle MJL$ and $\\angle LMJ$ is 138°. Find $\\angle QLP$.",
+  "new": "In the figure, KN and JL are straight lines. LPK is an equilateral triangle and JK // ML. The sum of $\\angle MJL$ and $\\angle LMJ$ is 138°. Find $\\angle QLP$.",
+  "reason": "Source paper (2023 St Nicholas P2 p4, Q4) reads 'LPK is an equilateral triangle and JK // ML.' (checked at 200 dpi). Our text had 'JKT is perpendicular to ML', a mis-transcription; the figure has no point T."
+ },
+ {
+  "id": "2026_RG_P2_10",
+  "field": "has_error",
+  "old": null,
+  "new": true,
+  "reason": "Question text and answers are Red Swastika 2026 P2 Q10 (muffins), but the figure and source are Raffles Girls 2026 P2 Q10 (Fiona, Tap A/Tap B, volume of water in tank). Flagged until the real RG Q10 text/answers are entered; has_error keeps it out of the apps."
+ },
+ {
+  "id": "2026_RG_P2_10",
+  "field": "error_log",
+  "old": null,
+  "new": "18 Oct 2026 (app review): text/answers belong to 2026_RS_P2_10 (muffin sales). The figure (tap/tank volume graph) is correct for this paper's Q10 (Fiona, Tap A and Tap B). Replace question, parts and answers with the Raffles Girls Q10 from the source PDF, then untick Flag error.",
+  "reason": "explain the flag for editors"
+ }
+]

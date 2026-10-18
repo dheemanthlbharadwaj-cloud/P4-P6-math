@@ -271,6 +271,16 @@ undo: `content/reports/figure-cut-recrops-undo-2026-10-17.json`). Method:
   and Ai Tong 2026 Q11 (full grid border), ACS Junior 2025 Q07 (prism + 3 cm + incomplete net), Catholic High 2026 Q09,
   MGS Paya Lebar 2025 Q10 (nets (1)-(4)); apply with apply-recrops on a folder holding just those five.
 
+**Mismatch review, 18 Oct 2026** (reviewers looked at each question next to its figure; ~33 flagged, 16 re-cut, 3 figures removed, 2 text fixes; table per id in
+`content/reports/figure-cut-audit-2026-10-16.md` "Mismatch review 18 Oct", fixes in `content/reports/figure-mismatch-fixes-2026-10-18.json`, not yet applied). Method:
+find the question's page by OCR of its text (word overlap per page, not by template-matching the old figure: a low match score is a false alarm as often as a real
+mismatch), look at page and shipped figure side by side, then decide: ok / re-cut (wrong or incomplete picture, also stacked parts such as Figure A + B or table + graph) /
+remove (`figure_url` null + `figure.required` false in the edit list; the paper really has no picture) / text fix (only when OUR text differs from the paper).
+Lessons: "figure" shown can be another question's (Nan Hua 2026 Q7/Q8 carried Q12/Q13; SCGS 2021 reused 2022's pictures); a question whose paper
+figure exists is NOT text only (Catholic 2022 Q15 bolt/nut); the editor can hold text copied from another school (2026_RG_P2_10 = Red Swastika's muffin question);
+ids with spaces (`2023_St Nicholas_P2_Q2`) keep the space in `recrops/P6/` and `apply-edits` but `_` in `raw/P6/figures/`. After removing a figure delete its raw file
+before `npm run build`. Recrops that overwrote earlier ones (`git status` shows them as modified) must be applied too.
+
 ## 7. Testing the app in a browser
 - `web-preview.py` → `dist-preview/`; serve with `python3 -m http.server PORT`; drive with Playwright
   (Chromium path above). Use the Dev Tools panel to unlock levels, set hearts, simulate midnight.

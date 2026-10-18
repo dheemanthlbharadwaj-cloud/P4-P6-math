@@ -586,3 +586,54 @@ Not fixed / needs a human look:
 - Pre-existing verified recrops (185 files from before this audit) were not modified. `2021_AITONG_P1_Q30` was overwritten by mistake
   during chapter work and restored to the committed version (it must keep the full 15-number sequence).
 - Image-only issues for the editor, not re-cut: `2022_MGS_P1_Q24`, `2022_MGS_P2_Q17`, `2022_Catholic_P2_Q15` hold no figure (text/blank only).
+
+## Mismatch review 18 Oct
+Reviewers put every question next to its figure and flagged ~33 ids (wrong picture, blank, partly missing, label slips). Each was checked
+against the source PDF page (question found by OCR of the question text, `findq`-style; the page and figure looked at by eye at 70-170 dpi).
+Fix list: `content/reports/figure-mismatch-fixes-2026-10-18.json` (apply with `apply-edits.ts --dry` first); 16 re-cuts in `content/recrops/P6/`
+(4 of them overwrite earlier recrops: `2023_CHS_P2_Q17`, `2024_ACSJ_P1A_Q12`, `2024_ACSJ_P2_Q4`, `2024_MGS_P2_Q16`). Nothing was written to Firestore or Cloudinary.
+
+| id | verdict | action |
+|---|---|---|
+| `2022_MGS_P1_Q24` | paper has no figure (text only) | remove figure (`figure_url` null) |
+| `2022_MGS_P2_Q17` | paper has no figure (text only) | remove figure |
+| `2022_Catholic_P2_Q15` | paper HAS a figure: bolt and nut pictures, labelled "a bolt", "a nut" (shipped image was only text lines) | re-cut |
+| `2024_MGS_P2_Q15` | wrong figure (the Q14(b) band); needs Figure A (page 16) and Figure B (page 17, used by part b) | re-cut A + B stacked, with the "Opening" label |
+| `2023_Catholic_High_P1A_Q11` | paper has only a text box of the 3 volumes (already in our text); shipped cake chart belongs to Q9 | remove figure |
+| `2024_MGS_P2_Q16` | wrong figure (3D box); right-angled triangles ABC, BCD with E, F | re-cut |
+| `2026_NH_P2_07` | shipped the Q12 trapezium picture; Q7 is the "Before / After folding" paper | re-cut |
+| `2026_NH_P2_08` | shipped the Q13 quarter-circle figure; Q8 is the trampoline fee graph | re-cut |
+| `2026_RG_P2_10` | NOT a figure problem: the figure (tap graph "Volume of water in tank") is the paper's real Q10 (Fiona, Tap A and Tap B), but our question text and answers are the muffin question of Red Swastika 2026 P2 Q10 (`2026_RS_P2_10`) | unresolved, see below |
+| `2022_ACSJ_P1A_Q12` | correct (radius 7 cm is in the text; 3 cm is the overlap) | none |
+| `2025_HenryPark_P1_Q22` | correct (the paper's own figure shows 2 cm notches; radius 5 cm is in the text) | none |
+| `2021_SCGS_P1_Q28` | wrong figure (it showed 2022's semicircle with 28 cm); paper has a 60 cm square with 2 quadrants | re-cut |
+| `2022_SCGS_P1_Q28` | correct | none |
+| `2021_SCGS_P2_Q12` | wrong figure (it showed 2022's square + triangle picture); paper: rectangle ABCD, square EFDG, points X, Y, 235 degrees | re-cut |
+| `2022_SCGS_P2_Q12` | correct picture but a page-sized image with a stray text corner | re-cut (same content, cleaner) |
+| `2022_Henry_P2_Q3` | correct (15 cm is the triangle base, radius 14 cm is in the text) | none |
+| `2021_NANCHIAU_P1_Q25` | partly missing: the question needs the "amount of money spent" table plus the bar graph; only the graph was shown | re-cut table + graph |
+| `2024_ACSJ_P2_Q4` | corner T cut off (text says PQRT) | re-cut |
+| `2024_ACSJ_P1A_Q12` | label V cut off at the bottom | re-cut |
+| `2021_SCGS_P2_Q09` | correct (a drawing question: only angle DAB is given, the trapezium is drawn by the student) | none |
+| `2023_PeiChun_P1_Q18` | figure correct; OUR text said "PAR", the paper says "PQR" | text fix |
+| `2023_St Nicholas_P2_Q4` | figure correct; OUR text said "JKT is perpendicular to ML", the paper says "JK // ML" | text fix |
+| `2023_CHS_P2_Q17` | figure ok but incomplete: Figure 3 lacked the "1 m" label and a text line was at the top | re-cut Fig 1+2 (page 16) + Fig 3 (page 17) |
+| `2023_Nanyang_P1A_Q04`, `2024_Nanyang_P1A_Q04` | correct (low template score was a scan-quality false alarm) | none |
+| `2023_St Nicholas_P2_Q5`, `2023_St_Nicholas_P1A_Q06`, `2025_TaoNan_P1_Q30`, `2023_Nanyang_P1_Q28` | correct | none |
+| `2021_PEIHWA_P1_Q20` | correct (the "Month" axis title is not in the image: left as is) | none |
+| `2023_St Nicholas_P2_Q2` | figure complete in content but the square's top, left and right borders were cut off | re-cut |
+| `2024_Rosyth_P2_Q16` | correct figures + table but with a stray text line on top | re-cut |
+| `2022_Nanyang_P1_Q28` | correct figure but with a text line on top and a big blank area below | re-cut |
+| `2021_ACS_P1_Q25` | correct figure, stray "Find angle y" text fragment | re-cut |
+| `2026_NH_P2_07` / `_08` | swapped? No: each carried the figure of a later question (Q12 / Q13), whose own images are correct | see above |
+
+Unresolved / for the owner:
+- `2026_RG_P2_10`: the editor doc holds the muffin question text and answers (a $3, b $40, c "Promotion B; $20") copied from Red Swastika, while the Raffles Girls
+  paper's Q10 is: "Fiona filled a tank with water using two taps. She turned on Tap A first. After 4 minutes, she also turned on Tap B. Both taps were turned off at
+  the same time when the tank was completely filled without overflowing. (a) How many litres of water flowed from Tap A per minute? (b) What was the capacity of the tank?
+  (c) After both taps were turned off, what fraction of the tank was filled with water from Tap B?" (graph 0 to 12 min, 4 min = 10 l, 8 min = 90 l). `apply-edits.ts` cannot set
+  `question_parts`/`answer_parts` (arrays), so this needs an editor-side rewrite, or `has_error` until then. Its figure is correct for the paper's real Q10.
+- `2022_SCGS_P2_Q12`: the paper shows "Find angle DCF" struck out and "angle DCE" typed over it, so the paper has 2 parts; our bank has 3 (DCF, DCE, BFC)
+  with answers 30, 75, 150. Left unchanged (the paper's own revision, not a label slip), but the part list/answers deserve a look.
+- After a figure removal the sync keeps the old raw file: delete `content/raw/P6/figures/<id>.*` for the 3 removed ids before `npm run build` (sync only downloads
+  figures with a URL and does not delete cached ones).
