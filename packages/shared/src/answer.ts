@@ -30,7 +30,7 @@ export function normalizeInput(raw: string): string {
   s = s.normalize("NFKC").replace(/⁄|∕/g, "/");
   s = s.replace(/[−–—‒‐‑﹣－]/g, "-");
   s = s.replace(/[   　]/g, " ").trim().toLowerCase();
-  s = s.replace(/\s+/g, " ");
+  s = s.replace(/\s+/g, " ").replace(/ℓ/g, "l"); // litre: ℓ, l and L are the same unit
   // currency prefix
   s = s.replace(/^([+-]?)\s*\$\s*/, "$1");
   s = s.replace(/^(?:s\$|sgd)\s*/, "");
@@ -106,7 +106,7 @@ const OPS = "+-×÷*/=()^<>";
 
 /** Lowercase, unify symbols, "&" → "and", drop , ; ! ? and the dots/colons that are not part of a number or time. */
 function looseNorm(s: string): string {
-  let t = String(s ?? "").normalize("NFKC").toLowerCase();
+  let t = String(s ?? "").normalize("NFKC").toLowerCase().replace(/ℓ/g, "l");
   t = t.replace(/[−–—‒‐‑﹣－]/g, "-").replace(/&/g, " and ");
   t = t.replace(/\b([ap])\s*\.?\s*m\b\.?/g, "$1m"); // p.m. / p m / pm
   t = t.replace(/²/g, "^2").replace(/³/g, "^3").replace(/\b(mm|cm|km|m)(?:\s*\^\s*)?([23])(?!\d)/g, (m, u, n) => (/\^/.test(m) || m.length === u.length + 1 ? u + (n === "2" ? "sq" : "cu") : m)); // cm^2, cm², cm2 → one unit word

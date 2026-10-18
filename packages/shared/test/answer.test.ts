@@ -214,3 +214,21 @@ describe("forgiving text answers", () => {
     expect(checkAnswer({ kind: "number", value: 22 }, "22 and 3")).toBe(false);
   });
 });
+
+describe("litre unit: ℓ, l and L are the same", () => {
+  const text = (accepted: string[]): AnswerSpec => ({ kind: "text", accepted });
+  it("a typed ℓ matches an accepted l answer, and the other way round", () => {
+    expect(checkAnswer(text(["9 l 75 ml"]), "9 ℓ 75 ml")).toBe(true);
+    expect(checkAnswer(text(["9 ℓ 75 ml"]), "9 l 75 ml")).toBe(true);
+    expect(checkAnswer(text(["9 ℓ 75 ml"]), "9ℓ 75ml")).toBe(true);
+  });
+  it("ℓ with no space matches a numeric answer with an l unit", () => {
+    expect(checkAnswer(num(9), "9ℓ")).toBe(true);
+    expect(checkAnswer(num(9.075, { unit: "ℓ" }), "9.075 l")).toBe(true);
+    expect(checkAnswer(num(9.075, { unit: "l" }), "9.075 L")).toBe(true);
+    expect(checkAnswer(num(9.075), "9.075 ℓ")).toBe(true);
+  });
+  it("ℓ still does not match a different number", () => {
+    expect(checkAnswer(num(9), "8ℓ")).toBe(false);
+  });
+});

@@ -5,6 +5,10 @@ import type { AnswerPart, Difficulty, Grade, Paper, Question } from "@p6/shared"
 import { extractSpec, plainAnswer, splitLetteredAnswer } from "./answerSpec";
 import { newStats, tokenize, type TokenizeStats } from "./tokenizer";
 
+// Litres show as ℓ. Defined in tokenizer.ts (where plain text runs are made, so every displayed text field gets it,
+// math segments excepted); re-exported here so the doc → question API is reachable from this module.
+export { litreSymbol } from "./tokenizer";
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type EditorDoc = Record<string, any> & { id: string };
 

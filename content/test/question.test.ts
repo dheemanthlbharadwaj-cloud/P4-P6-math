@@ -2,7 +2,8 @@ import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import { prepare } from "../src/build";
 import { sha256 } from "../src/output";
-import { docToQuestion } from "../src/question";
+import { docToQuestion, litreSymbol } from "../src/question";
+import { richToPlain } from "../src/tokenizer";
 import { loadMapping, loadSnapshot, type RawDoc } from "../src/source";
 import { snapshotPath } from "../src/paths";
 import { assetsContentRoot } from "../src/paths";
@@ -56,5 +57,37 @@ describe.skipIf(!fs.existsSync(path.join(assetsContentRoot(), "P6", "questions.j
   it("version is the hash of its questions", () => {
     const bundle = JSON.parse(fs.readFileSync(path.join(assetsContentRoot(), "P6", "questions.json"), "utf8"));
     expect(sha256(JSON.stringify({ grade: "P6", questions: bundle.questions })).slice(0, 16)).toBe(bundle.version);
+  });
+});
+
+describe("litreSymbol (litres show as ℓ)", () => {
+  it.each([
+    ["9 l 75 ml", "9 ℓ 75 ml"],
+    ["2l", "2ℓ"],
+    ["3.5 l of water", "3.5 ℓ of water"],
+    ["1 l.", "1 ℓ."],
+    ["(4 l)", "(4 ℓ)"],
+  ])("changes %j to %j", (input, out) => expect(litreSymbol(input)).toBe(out));
+
+  it.each(["ml", "ml.", "7 lb", "5 litres", "line l", "length l", "9 L", "40 ml l"])("does not change %j", (input) => {
+    expect(litreSymbol(input)).toBe(input);
+  });
+
+  it("is applied to stem, options and parts, but not inside $...$ math", () => {
+    const d = {
+      id: "2026_TEST_P6_Q01", year: 2026, topic_primary: "Measurement", difficulty: "LV1", question_type: "mcq", paper: "Paper 1 Booklet A",
+      question: "Which is the same as 9 l 75 ml? Math $2l$ stays.", options: { "1": "9 l 75 ml", "2": "9 ml", "3": "$5l$ l", "4": "2l" }, answer_key: 1,
+    };
+    const q = docToQuestion(d, { grade: "P6", subtopicId: "p6-x", topic: "Measurement", hasFigure: false }).question;
+    expect(richToPlain(q.stem)).toBe("Which is the same as 9 ℓ 75 ml? Math 2l stays.");
+    expect(q.options!.map((o) => richToPlain(o.text))).toEqual(["9 ℓ 75 ml", "9 ml", "5l l", "2ℓ"]);
+    expect(q.id).toBe("2026_TEST_P6_Q01");
+  });
+
+  it("converts a bare litre unit on an open answer", () => {
+    const d = { id: "2026_TEST_P6_Q02", year: 2026, topic_primary: "Measurement", difficulty: "LV1", question_type: "short", paper: "Paper 2", question: "Find the volume.", answer: "9.075", unit: "l" };
+    const { question } = docToQuestion(d, { grade: "P6", subtopicId: "p6-x", topic: "Measurement", hasFigure: false });
+    expect(question.parts![0].answer).toMatchObject({ kind: "number", value: 9.075, unit: "ℓ" });
+    expect(question.parts![0].display).toBe("9.075 ℓ");
   });
 });
