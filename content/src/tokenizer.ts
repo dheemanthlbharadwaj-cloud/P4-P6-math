@@ -141,7 +141,8 @@ export function tokenizeMath(src: string, stats: TokenizeStats = newStats()): Ri
  * official capital "L". "9 l 75 ml" → "9 L 75 ml", "2l" → "2L"; "ml", "7 lb", "5 litres" and "line l" are untouched. Pure.
  */
 export function litreSymbol(text: string): string {
-  return text.replace(/(\d)( ?)l(?![A-Za-z\d])/g, "$1$2L");
+  // Litres: capital L ("9 l" → "9 L"). Millilitres: script ℓ inside ml ("75 ml" → "75 mℓ"). Only right after a number.
+  return text.replace(/(\d)( ?)l(?![A-Za-z\d])/g, "$1$2L").replace(/(\d)( ?)ml(?![A-Za-z\d])/g, "$1$2mℓ");
 }
 
 function plainWithBreaks(text: string, out: RichToken[]) {

@@ -60,16 +60,16 @@ describe.skipIf(!fs.existsSync(path.join(assetsContentRoot(), "P6", "questions.j
   });
 });
 
-describe("litreSymbol (litres show as L)", () => {
+describe("litreSymbol (litres show as L, millilitres as mℓ)", () => {
   it.each([
-    ["9 l 75 ml", "9 L 75 ml"],
+    ["9 l 75 ml", "9 L 75 mℓ"], ["250ml", "250mℓ"], ["40 ml.", "40 mℓ."],
     ["2l", "2L"],
     ["3.5 l of water", "3.5 L of water"],
     ["1 l.", "1 L."],
     ["(4 l)", "(4 L)"],
   ])("changes %j to %j", (input, out) => expect(litreSymbol(input)).toBe(out));
 
-  it.each(["ml", "ml.", "7 lb", "5 litres", "line l", "length l", "9 L", "40 ml l"])("does not change %j", (input) => {
+  it.each(["ml", "ml.", "7 lb", "5 litres", "line l", "length l", "9 L", "mls", "5 mlx"])("does not change %j", (input) => {
     expect(litreSymbol(input)).toBe(input);
   });
 
@@ -79,8 +79,8 @@ describe("litreSymbol (litres show as L)", () => {
       question: "Which is the same as 9 l 75 ml? Math $2l$ stays.", options: { "1": "9 l 75 ml", "2": "9 ml", "3": "$5l$ l", "4": "2l" }, answer_key: 1,
     };
     const q = docToQuestion(d, { grade: "P6", subtopicId: "p6-x", topic: "Measurement", hasFigure: false }).question;
-    expect(richToPlain(q.stem)).toBe("Which is the same as 9 L 75 ml? Math 2l stays.");
-    expect(q.options!.map((o) => richToPlain(o.text))).toEqual(["9 L 75 ml", "9 ml", "5l l", "2L"]);
+    expect(richToPlain(q.stem)).toBe("Which is the same as 9 L 75 mℓ? Math 2l stays.");
+    expect(q.options!.map((o) => richToPlain(o.text))).toEqual(["9 L 75 mℓ", "9 mℓ", "5l l", "2L"]);
     expect(q.id).toBe("2026_TEST_P6_Q01");
   });
 
