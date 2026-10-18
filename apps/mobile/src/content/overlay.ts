@@ -77,8 +77,12 @@ export function allLv1From(src: Source, topicId?: string): Question[] {
   return resolve(src, [...new Set(ids)]).filter((q) => q.difficulty === "LV1" && q.autoMarkable);
 }
 
+/** The topic's usable "Find the key" questions (patched, not retired, auto-marked MCQs). */
+export function unlockCandidatesFrom(src: Source, topic: TopicMap | undefined): Question[] {
+  return topic ? resolve(src, topic.unlockPool).filter((q) => q.type === "mcq" && q.autoMarkable) : [];
+}
+
 export function unlockQuestionFrom(src: Source, topic: TopicMap | undefined, rand: () => number = Math.random): Question | undefined {
-  if (!topic) return undefined;
-  const mcqs = resolve(src, topic.unlockPool).filter((q) => q.type === "mcq" && q.autoMarkable);
+  const mcqs = unlockCandidatesFrom(src, topic);
   return mcqs.length ? mcqs[Math.floor(rand() * mcqs.length)] : undefined;
 }

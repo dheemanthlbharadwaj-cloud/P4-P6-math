@@ -1,19 +1,29 @@
 // "Find the key": 1 basic MCQ from the topic's unlockPool. Correct → topic unlocked.
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Modal, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { markQuestion, type Grade, type TopicMap } from "@p6/shared";
 import { QuestionPanel, type Reveal } from "./QuestionPanel";
 import { Body, Button, H2 } from "./ui";
 import { CatCompanion } from "./CatCompanion";
-import { getUnlockQuestion } from "../content";
+import { getUnlockCandidates } from "../content";
+import { chooseKeyQuestion } from "../logic/keyQuestion";
 import { useProgress } from "../store/progress";
 import { colors, fonts, space } from "../theme/colors";
 
 export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; topic: TopicMap | null; visible: boolean; onClose: () => void }) {
   const [attempt, setAttempt] = useState(0);
   const [reveal, setReveal] = useState<Reveal | null>(null);
-  const question = useMemo(() => (topic && visible ? getUnlockQuestion(grade, topic.id) : undefined), [grade, topic, visible, attempt]); // eslint-disable-line react-hooks/exhaustive-deps
+  // The key question is picked once per topic map and remembered (store) until the key is earned; "Not now" keeps it,
+  // "Try another question" (after a wrong answer) forgets it so a new one is picked.
+  const chosen = useMemo(
+    () => (topic && visible ? chooseKeyQuestion(getUnlockCandidates(grade, topic.id), useProgress.getState().keyQuestions?.[grade]?.[topic.id]) : undefined),
+    [grade, topic, visible, attempt], // eslint-disable-line react-hooks/exhaustive-deps
+  );
+  const question = chosen?.question;
+  useEffect(() => {
+    if (topic && chosen && chosen.remember !== undefined) useProgress.getState().setKeyQuestion(grade, topic.id, chosen.remember);
+  }, [chosen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const close = () => { setReveal(null); setAttempt(0); onClose(); };
   const submit = (responses: string[]) => {
@@ -47,7 +57,7 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
             {reveal.correct ? (
               <Button title="Open the map" variant="good" onPress={close} />
             ) : (
-              <Button title="Try another question" onPress={() => { setReveal(null); setAttempt((a) => a + 1); }} />
+              <Button title="Try another question" onPress={() => { if (topic) useProgress.getState().setKeyQuestion(grade, topic.id, undefined); setReveal(null); setAttempt((a) => a + 1); }} />
             )}
           </View>
         ) : (

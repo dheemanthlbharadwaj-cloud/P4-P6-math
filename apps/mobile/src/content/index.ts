@@ -3,7 +3,7 @@
 import type { Curriculum, Grade, LevelNo, Question, QuestionPatch, SubtopicNode, TopicMap } from "@p6/shared";
 import { availableGrades, contentFor, hasContent } from "../../assets/content";
 import type { FigureImage } from "./figpack";
-import { allLv1From, levelIdsFrom, levelQuestionsFrom, poolFrom, questionFrom, unlockQuestionFrom, type PatchMap, type PoolFilter, type Source } from "./overlay";
+import { allLv1From, levelIdsFrom, levelQuestionsFrom, poolFrom, questionFrom, unlockCandidatesFrom, unlockQuestionFrom, type PatchMap, type PoolFilter, type Source } from "./overlay";
 import { retiredIds } from "../logic/patches";
 import { useQuestionPatches } from "../store/questionPatches";
 
@@ -88,6 +88,11 @@ export function getAllLv1(grade: Grade, topicId?: string): Question[] {
 /** One random basic MCQ for the "Find the key" modal. */
 export function getUnlockQuestion(grade: Grade, topicId: string, rand: () => number = Math.random): Question | undefined {
   return unlockQuestionFrom(source(grade), getTopic(grade, topicId), rand);
+}
+
+/** Every usable key question of a topic (for keeping the chosen one stable, see logic/keyQuestion.ts). */
+export function getUnlockCandidates(grade: Grade, topicId: string): Question[] {
+  return unlockCandidatesFrom(source(grade), getTopic(grade, topicId));
 }
 
 /** The remote image of a question whose figure changed after the bundle was built (cached on the device). */
