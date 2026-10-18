@@ -1,0 +1,52 @@
+{
+  "when": "2026-10-18T07:23:51.544Z",
+  "dry": false,
+  "from": {
+    "project": "primary-math-sg",
+    "database": "default"
+  },
+  "to": {
+    "project": "catapult-math-students",
+    "database": "(default)"
+  },
+  "auth": {
+    "exported": 11,
+    "editorAccountsSkipped": 2,
+    "toImport": 9,
+    "withPassword": 5,
+    "providerOnly": 4,
+    "imported": 5,
+    "alreadyThere": 0,
+    "failed": 4,
+    "uids": [
+      "Q4vCZXpRTFRuvfsMkjHmfCLS9Z62",
+      "cGqaQ1akRgXYRL41b11f8dud1Cl2",
+      "dhUEPU3rgcRUL1oPLxkWY7WDcov2",
+      "jCjMQ8MGNgbF95xg07NZ2QJztvy2",
+      "tmmekovFE1clhor5OtqFqROX34K3"
+    ]
+  },
+  "firestore": {
+    "reads": 666,
+    "writes": 327,
+    "perCollection": {
+      "users": 274,
+      "wallets": 7,
+      "publicProfiles": 7,
+      "friendCodes": 7,
+      "referrals": 1,
+      "friendships": 2,
+      "friendRequests": 1,
+      "leaderboards": 13,
+      "leaderboardSnapshots": 12,
+      "leaderboardMeta": 0,
+      "leaderboardDaily": 3,
+      "medals": 0,
+      "entitlements": 0,
+      "config": 0
+    },
+    "collectionIds": [],
+    "totalDocuments": 327
+  },
+  "undo": "Auth: delete the uids listed in auth.uids from catapult-math-students (accounts:batchDelete or console); Firestore: delete the documents listed in catapult-math-students's (default) database (paths in the .paths.txt next to this file). The source primary-math-sg was only read."
+}

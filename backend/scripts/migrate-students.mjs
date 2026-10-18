@@ -78,7 +78,7 @@ export function toImportUser(u) {
     localId: u.localId, email: u.email, emailVerified: !!u.emailVerified, displayName: u.displayName, photoUrl: u.photoUrl,
     passwordHash: u.passwordHash, salt: u.salt, createdAt: u.createdAt, lastLoginAt: u.lastLoginAt, disabled: u.disabled,
     phoneNumber: u.phoneNumber, customAttributes: u.customAttributes,
-    providerUserInfo: providers.map((p) => ({ providerId: p.providerId, rawId: p.rawId, email: p.email, displayName: p.displayName, photoUrl: p.photoUrl, federatedId: p.federatedId })),
+    providerUserInfo: providers.map((p) => ({ providerId: p.providerId, rawId: p.rawId, email: p.email, displayName: p.displayName, photoUrl: p.photoUrl })),
   };
   for (const k of Object.keys(out)) if (out[k] === undefined || (Array.isArray(out[k]) && !out[k].length)) delete out[k];
   return out;
@@ -147,10 +147,12 @@ async function migrateFirestore(summary) {
   };
   const guard = () => { if (f.reads > MAX_READS) throw new Error(`Stopped: more than --max-reads ${MAX_READS} reads (raise it if this is expected)`); };
 
+  // Doc ids can contain characters that break a URL path (e.g. "#" in levelStars ids): encode each segment.
+  const enc = (path) => path.split("/").map(encodeURIComponent).join("/");
   async function walk(colPath, top) {
     let token = "";
     do {
-      const r = await call(src, "GET", `${FS}/${SRC_ROOT}/${colPath}?pageSize=300&showMissing=true${token ? `&pageToken=${encodeURIComponent(token)}` : ""}`, undefined, `read ${colPath}`);
+      const r = await call(src, "GET", `${FS}/${SRC_ROOT}/${enc(colPath)}?pageSize=300&showMissing=true${token ? `&pageToken=${encodeURIComponent(token)}` : ""}`, undefined, `read ${colPath}`);
       const docs = r.documents ?? [];
       f.reads += Math.max(docs.length, 1);
       guard();
@@ -162,7 +164,7 @@ async function migrateFirestore(summary) {
           pending.push({ update: { name: `${DST_ROOT}/${rel}`, fields: retarget(d.fields ?? {}) } });
           if (pending.length >= 200) await flush();
         }
-        const ids = await call(src, "POST", `${FS}/${SRC_ROOT}/${rel}:listCollectionIds`, { pageSize: 100 }, `list subcollections of ${rel}`);
+        const ids = await call(src, "POST", `${FS}/${SRC_ROOT}/${enc(rel)}:listCollectionIds`, { pageSize: 100 }, `list subcollections of ${rel}`);
         f.reads++;
         for (const sub of ids.collectionIds ?? []) await walk(`${rel}/${sub}`, top);
       }

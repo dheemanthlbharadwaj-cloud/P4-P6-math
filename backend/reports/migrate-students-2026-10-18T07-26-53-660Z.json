@@ -1,0 +1,29 @@
+{
+  "when": "2026-10-18T07:26:52.606Z",
+  "dry": false,
+  "from": {
+    "project": "primary-math-sg",
+    "database": "default"
+  },
+  "to": {
+    "project": "catapult-math-students",
+    "database": "(default)"
+  },
+  "auth": {
+    "exported": 11,
+    "editorAccountsSkipped": 2,
+    "toImport": 9,
+    "withPassword": 5,
+    "providerOnly": 4,
+    "imported": 4,
+    "alreadyThere": 5,
+    "failed": 0,
+    "uids": [
+      "ErnAgXm0h9QTi8jetyD6uER08Ex1",
+      "iYIghjyOzGhxOjRsi9UHrCbIgxK2",
+      "xOwiFoeKk6PSEB1EBzHCqIdhNeE2",
+      "yvZznaoJMPf1kzToMrgKfj2QQAB2"
+    ]
+  },
+  "undo": "Auth: delete the uids listed in auth.uids from catapult-math-students (accounts:batchDelete or console); Firestore: delete the documents listed in catapult-math-students's (default) database (paths in the .paths.txt next to this file). The source primary-math-sg was only read."
+}

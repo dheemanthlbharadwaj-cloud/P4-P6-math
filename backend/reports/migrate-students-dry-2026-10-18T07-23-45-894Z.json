@@ -1,0 +1,46 @@
+{
+  "when": "2026-10-18T07:20:53.235Z",
+  "dry": true,
+  "from": {
+    "project": "primary-math-sg",
+    "database": "default"
+  },
+  "to": {
+    "project": "catapult-math-students",
+    "database": "(default)"
+  },
+  "auth": {
+    "exported": 11,
+    "editorAccountsSkipped": 2,
+    "toImport": 9,
+    "withPassword": 5,
+    "providerOnly": 4,
+    "imported": 0,
+    "alreadyThere": 0,
+    "failed": 0,
+    "uids": []
+  },
+  "firestore": {
+    "reads": 666,
+    "writes": 327,
+    "perCollection": {
+      "users": 274,
+      "wallets": 7,
+      "publicProfiles": 7,
+      "friendCodes": 7,
+      "referrals": 1,
+      "friendships": 2,
+      "friendRequests": 1,
+      "leaderboards": 13,
+      "leaderboardSnapshots": 12,
+      "leaderboardMeta": 0,
+      "leaderboardDaily": 3,
+      "medals": 0,
+      "entitlements": 0,
+      "config": 0
+    },
+    "collectionIds": [],
+    "totalDocuments": 327
+  },
+  "undo": "nothing was written"
+}
