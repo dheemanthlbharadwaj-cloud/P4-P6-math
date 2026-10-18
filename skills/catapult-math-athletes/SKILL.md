@@ -98,6 +98,7 @@ environment can do and the live status of every service. Flags: `--verify` (test
 | Content level rules | Per-subtopic picking rules in `content/src/subtopicRules.ts`: "Addition and Subtraction of Fractions and Mixed Numbers" levels exclude algebra and ×/÷ questions, prefer real add/subtract ones, and fill short levels from the nearest difficulty (build prints which). |
 | Friends / profile | Entering your own friend code says "That's your own code. Ask your friend for theirs." Delete account (grown-up gate + type DELETE) deletes everything server-side, on every device, and takes the player off the saved daily leaderboard at once. Profile > Reminders shows on phones only. |
 | Dev Tools 🛠 | On in the live web app and the tester APKs (`EXPO_PUBLIC_DEV_TOOLS=1`) for testers; the floating button can cover a card corner on phones. Turn off only when the owner says (open question, §9). |
+| Question figures (web) | The web app ships NO figure bytes (Firebase Hosting transfer): `web-preview.py` writes `figures-<hash>.json` {question id → [Cloudinary URL, w, h]} from the committed `assets/content/P6/source-info.json` `figureSources` (the editor `figure_url` each bundled figure came from; kept in sync because `content build` rewrites it with the bundle) plus the pixel size of the committed `figures/*.webp`. URL = `…/image/upload/f_auto,q_auto,w_1200,c_limit/<version…>`; the page's `__P6_LOAD__` looks an id up in the map, `__P6_RELOAD__` (tap to retry) re-requests with a cache-busting `?retry=`; an id missing from the map shows the "Picture didn't load" box. Live patches with `figureUrl` still override. Phones keep their bundled packs (offline). |
 | Question figures | Figure only; only text allowed is labels inside the figure. Parts separated by question text are cropped separately and stacked; text that can't be cropped out is whited out. Never under/over-crop. |
 
 ## 2. Repo map
@@ -123,7 +124,7 @@ apps/mobile/       Expo app
                      global boards show only real users from the backend
   src/theme/         assets.ts (uiAssets), cats.ts (catMoodImage), mapPaths.ts (generated), colors.ts
   assets/content/P6/ GENERATED bundle: questions.json, curriculum.json, source-info.json, figures/*.webp + manifest.json (only content/ writes here); figpacks/ = packs built on npm install (gitignored)
-  scripts/web-preview.py   build dist-preview/ (packed figures, Dev Tools on)
+  scripts/web-preview.py   build dist-preview/ (Dev Tools on; web pictures come from Cloudinary via figures-<hash>.json, no figure files)
   scripts/deploy-hosting.ts  deploy a folder to Firebase Hosting site via REST
   scripts/map-layers.py    one-off: render river + 12 themed islands from the pack PSD into map-pack/layers/ (committed)
   scripts/map-scenes.py    map-bg-N.webp = river + ONLY chapter N's island (1 yacht marina … 12 space base), + route, aspects
@@ -306,8 +307,9 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
   editor `figure_url` changed; delete the raw file and re-sync.
 - Background shell commands time out at 30 min by default; long OCR/render jobs must save progress incrementally.
 - **Firebase Hosting "8 GB of 10 GB monthly"** (18 Oct 2026) = download transfer of the web app, not Firestore. Cause:
-  the web start-up downloaded ALL figure packs (~29 MB) on every first visit (every test browser too). Fixed: start-up
-  loads only the figure index; each figure is fetched by Range request when shown (first visit ~1.5 MB over the wire).
+  the web start-up downloaded ALL figure packs (~29 MB) on every first visit (every test browser too). Fixed first by Range requests (first visit ~1.5 MB); since 18 Oct 2026 the web build
+  ships no figure bytes at all: pictures load from Cloudinary (see "Question figures (web)"; start-up fetches only `figures-<hash>.json`, ~26 KB gzipped).
+  Cloudinary free plan: 25 credits/month (1 credit = 1 GB delivery or 1,000 transformations); each distinct f_auto URL is transformed once, then cached. Watch it if web traffic grows.
   Hosting keeps at most 10 versions of catapult-math-athletes (`maxVersions`). Test the web app on LOCAL builds
   (`expo export` / web-preview.py + a local server) and keep live-site test runs few: each fresh browser downloads the app.
 - **Every backend call returns 500, or the question editor won't let you sign in** → check the Firestore daily read

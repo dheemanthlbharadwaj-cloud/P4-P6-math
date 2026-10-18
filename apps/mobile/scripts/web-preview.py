@@ -5,27 +5,28 @@
 
 The normal web export assumes it is served from a site root and ships every question figure as its own file
 (1,600+). This script makes it work from any folder with few files:
-1. Figures are resized and packed into a handful of binary pack files; the page fetches each figure from its pack
-   (Range request) the first time it is shown, and a temporary web-only figures registry (figures/index.web.ts) reads them.
+1. Question pictures are NOT shipped: the page loads a small map (figures-<hash>.json: question id -> [Cloudinary URL, width,
+   height]) and each <img> is served by Cloudinary (the editor's own storage) with f_auto,q_auto,w_1200,c_limit, so Firebase
+   Hosting serves no figure bytes. The map is made from the committed assets/content/<grade>/source-info.json
+   (figureSources = the editor figure_url each bundled figure came from) plus the pixel size of the committed bundled
+   figure files. A temporary web-only registry (figures/index.web.ts) reads it through globalThis.__P6_LOAD__ / __P6_FIGS__.
 2. Asset URLs in the bundle start from a base: "/" by default (the site root, as on Firebase Hosting, where every path
    falls back to index.html, so deep links like /level/P6/... work). `--base .` keeps the old folder-relative build
    (works from any subfolder; the address bar is then reset to "/" before the app starts).
-3. Two figure pack sets are built: WebP (small) and JPEG (for browsers that cannot decode WebP, e.g. old iPad Safari).
-   A visitor downloads only one set. Packs are fetched with retries; a pack that still fails does not stop the app,
-   its figures are fetched on demand (HTTP Range request, else the whole pack) when a question needs them.
 Phone builds are untouched: index.web.ts exists only while this script runs.
 
-    python scripts/web-preview.py [--base /|.|/sub/] [--figures DIR]  (DIR: a folder with manifest.json + the .webp files)
+    python scripts/web-preview.py [--base /|.|/sub/] [--figures DIR]  (DIR: a folder with manifest.json + the .webp files, read for their pixel sizes)
 """
 import glob
 import hashlib
-import io
 import json
 import os
 import re
 import shutil
 import subprocess
 import sys
+
+from urllib.parse import quote
 
 from PIL import Image
 
@@ -35,12 +36,13 @@ FIG_DIR = os.path.join(APP, "assets", "content", GRADE, "figures")
 WEB_REGISTRY = os.path.join(FIG_DIR, "index.web.ts")
 EXPORT = os.path.join(APP, "dist-web-raw")
 OUT = os.path.join(APP, "dist-preview")
-PACK_LIMIT = 12 * 1024 * 1024  # bytes per pack file
-MAX_W, QUALITY, JPEG_QUALITY = 760, 70, 82
+SOURCE_INFO = os.path.join(APP, "assets", "content", GRADE, "source-info.json")
+CLOUD_MAX_W = 1200  # Cloudinary caps the delivered width (figures stay sharp on desktop; never upscaled)
+CLOUD_TRANSFORM = f"f_auto,q_auto,w_{CLOUD_MAX_W},c_limit"
 
 REGISTRY_TS = """// TEMPORARY web-preview registry written by scripts/web-preview.py (deleted after export).
 // The page loads only the figure index at start-up (globalThis.__P6_KNOWN__); each figure is fetched the first time it is
-// needed by the page's loader (globalThis.__P6_LOAD__, a Range request into its pack) and kept in __P6_FIGS__.
+// needed by the page's loader (globalThis.__P6_LOAD__, looked up in the map) and kept in __P6_FIGS__.
 type Fig = { uri: string; width: number; height: number };
 type G = { __P6_FIGS__?: Record<string, Fig>; __P6_KNOWN__?: Record<string, unknown>; __P6_LOAD__?: (id: string) => Promise<Fig | undefined> };
 const g = globalThis as unknown as G;
@@ -64,60 +66,30 @@ def run(cmd, cwd):
         sys.exit(f"{cmd} failed:\n{r.stdout[-3000:]}\n{r.stderr[-3000:]}")
 
 
-def encode(path, fmt):
-    """Resized figure bytes. JPEG gets a white background (no alpha)."""
-    im = Image.open(path)
-    if im.width > MAX_W:
-        im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
-    b = io.BytesIO()
-    if fmt == "jpg":
-        if im.mode in ("RGBA", "LA", "P"):
-            im = im.convert("RGBA")
-            bg = Image.new("RGB", im.size, (255, 255, 255))
-            bg.paste(im, mask=im.getchannel("A"))
-            im = bg
-        else:
-            im = im.convert("RGB")
-        im.save(b, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
-    else:
-        im.save(b, "WEBP", quality=QUALITY, method=4)
-    return b.getvalue(), im.width, im.height
+def cloud_url(url):
+    """The editor's Cloudinary URL with automatic format/quality and a width cap after /upload/ (version segment kept)."""
+    marker = "/image/upload/"
+    if "res.cloudinary.com" not in url or marker not in url:
+        return url
+    head, tail = url.split(marker, 1)
+    return head + marker + CLOUD_TRANSFORM + "/" + quote(tail, safe="/:@!$&'()*+,;=~-._%")
 
 
-def build_set(fmt, files_by_key):
-    """Packs + index for one image format. Returns (index file name, packs, figure count).
-    Figure keys (= question ids, may contain spaces) map to files through manifest.json."""
-    index, packs, buf, n = {}, [], io.BytesIO(), 0
-    cache = {}  # file -> index entry, in case two keys share a file
-
-    def flush():
-        nonlocal buf, n
-        if buf.tell():
-            # Images joined end to end (types a static host serves). Content-hashed names: the host caches
-            # them for a year, so a new build must never reuse an old name (a cached pack + new offsets =
-            # broken pictures, a cached index = questions without pictures).
-            data = buf.getvalue()
-            name = f"figpack-{fmt}{n}-{hashlib.sha1(data).hexdigest()[:10]}.{fmt}"
-            open(os.path.join(OUT, name), "wb").write(data)
-            packs.append({"file": name, "bytes": len(data)})
-            buf, n = io.BytesIO(), n + 1
-
-    for key in sorted(files_by_key):
-        f = files_by_key[key]
-        if f in cache:
-            index[key] = list(cache[f])
+def build_figure_map(fig_dir, manifest):
+    """question id -> [delivery URL, width, height] for every bundled figure that has an editor URL.
+    Size = the committed bundled file (the same picture as the Cloudinary original), capped like the delivery."""
+    sources = json.load(open(SOURCE_INFO, encoding="utf8"))["figureSources"]
+    out, no_url = {}, []
+    for key in sorted(manifest):
+        url = sources.get(key)
+        if not url:
+            no_url.append(key)
             continue
-        data, w, h = encode(f, fmt)
-        if buf.tell() + len(data) > PACK_LIMIT:
-            flush()
-        index[key] = [n, buf.tell(), len(data), w, h]
-        cache[f] = index[key]
-        buf.write(data)
-    flush()
-    ix = json.dumps({"packs": packs, "figs": index}, separators=(",", ":"))
-    ix_name = f"figpack-index-{fmt}-{hashlib.sha1(ix.encode()).hexdigest()[:10]}.json"
-    open(os.path.join(OUT, ix_name), "w").write(ix)
-    return ix_name, packs, len(index)
+        w, h = Image.open(os.path.join(fig_dir, manifest[key])).size
+        if w > CLOUD_MAX_W:
+            w, h = CLOUD_MAX_W, max(1, round(h * CLOUD_MAX_W / w))
+        out[key] = [cloud_url(url), w, h]
+    return out, no_url
 
 
 def main():
@@ -132,6 +104,9 @@ def main():
     missing = [k for k, f in files_by_key.items() if not os.path.exists(f)]
     if missing:
         sys.exit(f"manifest lists {len(missing)} missing figure files, e.g. {missing[:3]}")
+    figure_map, no_url = build_figure_map(fig_dir, manifest)
+    if len(figure_map) < len(manifest) * 0.95:
+        sys.exit(f"only {len(figure_map)} of {len(manifest)} figures have an editor URL in source-info.json, e.g. {no_url[:3]}")
     os.makedirs(FIG_DIR, exist_ok=True)
     with open(WEB_REGISTRY, "w") as f:
         f.write(REGISTRY_TS)
@@ -161,21 +136,20 @@ def main():
             shutil.copy(src, dst)
     entry = os.path.relpath(glob.glob(os.path.join(OUT, "js", "entry-*.js"))[0], OUT)
 
-    # figure packs, one set per image format
-    webp_ix, webp_packs, n_webp = build_set("webp", files_by_key)
-    jpg_ix, jpg_packs, n_jpg = build_set("jpg", files_by_key)
+    # figure map (no figure bytes are written to the output)
+    fm = json.dumps(figure_map, separators=(",", ":"), ensure_ascii=False)
+    fm_name = f"figures-{hashlib.sha1(fm.encode()).hexdigest()[:10]}.json"
+    open(os.path.join(OUT, fm_name), "w", encoding="utf8").write(fm)
 
     stamp = hashlib.sha1(open(os.path.join(OUT, entry), "rb").read()).hexdigest()[:8]
     base_js = '(function () { var b = location.href.split("#")[0].split("?")[0]; return b.slice(0, b.lastIndexOf("/") + 1); })()' if base == "." else json.dumps(base)
     page = (PAGE.replace("__ENTRY__", entry).replace("__STAMP__", stamp).replace("__BASEJS__", base_js)
             .replace("__RELATIVE__", "true" if base == "." else "false")
-            .replace("__IX_WEBP__", webp_ix).replace("__IX_JPG__", jpg_ix))
+            .replace("__FIGMAP__", fm_name))
     open(os.path.join(OUT, "index.html"), "w").write(page)
     files = [os.path.relpath(p, OUT) for p in glob.glob(os.path.join(OUT, "**", "*"), recursive=True) if os.path.isfile(p)]
-    mb = lambda ps: round(sum(p["bytes"] for p in ps) / 1e6, 1)
-    print(json.dumps({"out": OUT, "base": base, "files": len(files), "figures": n_webp,
-                      "webp": {"packs": len(webp_packs), "MB": mb(webp_packs), "index": webp_ix},
-                      "jpg": {"packs": len(jpg_packs), "MB": mb(jpg_packs), "index": jpg_ix}, "entry": entry}))
+    print(json.dumps({"out": OUT, "base": base, "files": len(files), "figures": len(figure_map), "withoutUrl": no_url,
+                      "figureMap": fm_name, "figureMapBytes": len(fm.encode()), "entry": entry}))
 
 
 PAGE = r"""<!doctype html>
@@ -206,7 +180,7 @@ PAGE = r"""<!doctype html>
 <div id="update" role="status" hidden><span>A new version of the app is ready.</span><button type="button" onclick="location.reload()">Update</button></div>
 <div id="boot" role="status" aria-live="polite">
   <h1>Catapult Math Athletes</h1>
-  <p id="bootmsg">Loading the question bank and figures…</p>
+  <p id="bootmsg">Loading the question bank…</p>
   <div id="bar"><i id="barfill"></i></div>
 </div>
 <script>
@@ -243,107 +217,50 @@ if (typeof globalThis === "undefined") window.globalThis = window; // older Safa
   }
 
   // ---- figures -------------------------------------------------------------------------------------------------
-  // Packs (images joined end to end) are fetched here, before the app starts, and sliced into blob URLs.
-  // Which set: WebP, or JPEG when this browser cannot decode WebP (or ?nowebp=1, for testing).
-  // Failure handling: every request is retried 3 times; a pack that still fails is skipped (the app starts with the
-  // figures that did load) and its figures are fetched when a question needs them (__P6_LOAD__).
-  var figs = G.__P6_FIGS__ = {}, known = G.__P6_KNOWN__ = {};
-  var IX = { webp: "__IX_WEBP__", jpg: "__IX_JPG__" }, fmt = "webp", ixP = null, whole = {};
-  var forceJpg = /[?&]nowebp=1(&|$)/.test(location.search);
+  // Pictures are not hosted here: figures-<hash>.json maps question id -> [Cloudinary URL (f_auto,q_auto), width, height]
+  // and the page's <img> loads them straight from Cloudinary. A question whose id is not in the map gets no figure (the
+  // app shows "Picture didn't load, tap to retry"; never a crash). A figure that fails to display is re-requested with
+  // a cache-busting query (__P6_RELOAD__).
+  var figs = G.__P6_FIGS__ = {}, known = G.__P6_KNOWN__ = {}, mapP = null;
   function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
   function retry(fn, tries) {
     var n = 0;
     return (function go() { return fn().catch(function (e) { n++; if (n >= tries) throw e; return sleep(400 * Math.pow(3, n - 1)).then(go); }); })();
   }
   function ok(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r; }
-  function supportsWebp() {
-    if (forceJpg) return Promise.resolve(false);
-    return new Promise(function (res) {
-      var i = new Image(), done = false;
-      function fin(v) { if (!done) { done = true; res(v); } }
-      i.onload = function () { fin(i.width === 1 && i.height === 1); };
-      i.onerror = function () { fin(false); };
-      setTimeout(function () { fin(false); }, 4000);
-      i.src = "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAsBMJaQAA3AA/veMAAA=";
-    });
-  }
-  function getIndex() {
-    if (!ixP) {
-      ixP = retry(function () { return fetch(BASE + IX[fmt]).then(ok).then(function (r) { return r.json(); }); }, 3);
-      ixP.catch(function () { ixP = null; });
+  function getMap() {
+    if (!mapP) {
+      mapP = retry(function () { return fetch(BASE + "__FIGMAP__").then(ok).then(function (r) { return r.json(); }); }, 3);
+      mapP.catch(function () { mapP = null; });
     }
-    return ixP;
+    return mapP;
   }
-  function fetchPack(file, noStore) {
-    return retry(function () { return fetch(BASE + file, noStore ? { cache: "no-store" } : undefined).then(ok).then(function (r) { return r.arrayBuffer(); }); }, 3);
-  }
-  var MIME = function () { return fmt === "jpg" ? "image/jpeg" : "image/webp"; };
-  function make(id, e, buf, off) {
-    var f = { uri: URL.createObjectURL(new Blob([new Uint8Array(buf, off, e[2])], { type: MIME() })), width: e[3], height: e[4] };
-    figs[id] = f;
-    return f;
-  }
-  // The whole pack again (kept in memory briefly, so several figures of one pack cost one download).
-  function wholePack(ix, i, noStore) {
-    if (!whole[i]) {
-      whole[i] = fetchPack(ix.packs[i].file, noStore);
-      whole[i].then(function () { setTimeout(function () { delete whole[i]; }, 30000); }, function () { delete whole[i]; });
-    }
-    return whole[i];
-  }
-  // One figure from its pack: a Range request for just its bytes, else the whole pack.
-  function rangeBytes(ix, e, noStore) {
-    var p = ix.packs[e[0]], from = e[1], to = e[1] + e[2] - 1;
-    return retry(function () {
-      var o = { headers: { Range: "bytes=" + from + "-" + to } };
-      if (noStore) o.cache = "no-store";
-      return fetch(BASE + p.file, o).then(ok).then(function (r) {
-        return r.arrayBuffer().then(function (b) {
-          // 206 only counts when it is the pack's own bytes: a compressing CDN may answer a Range request with a slice of
-          // the compressed file (Content-Encoding set, total size differs), which is useless.
-          var cr = /\/(\d+)$/.exec(r.headers.get("Content-Range") || "");
-          if (r.status === 206 && b.byteLength === e[2] && !r.headers.get("Content-Encoding") && cr && +cr[1] === p.bytes) return { buf: b, off: 0 };
-          if (r.status === 200 && b.byteLength === p.bytes) return { buf: b, off: from };
-          throw new Error("unexpected range response");
-        });
-      });
-    }, 3);
-  }
-  var inflight = {};
+  var bust = 0;
   function load(id, force) {
     if (!force && figs[id]) return Promise.resolve(figs[id]);
-    if (inflight[id]) return inflight[id];
-    var p = getIndex().then(function (ix) {
-      var e = ix.figs[id];
+    return getMap().then(function (m) {
+      var e = m[id];
       if (!e) return undefined;
-      return rangeBytes(ix, e, force).catch(function () {
-        return wholePack(ix, e[0], force).then(function (b) { return { buf: b, off: e[1] }; });
-      }).then(function (r) { return make(id, e, r.buf, r.off); });
+      var uri = e[0];
+      if (force) uri += (uri.indexOf("?") < 0 ? "?" : "&") + "retry=" + Date.now() + "-" + (++bust);
+      var f = { uri: uri, width: e[1], height: e[2] };
+      figs[id] = f;
+      return f;
     });
-    inflight[id] = p;
-    var clear = function () { delete inflight[id]; };
-    p.then(clear, clear);
-    return p;
   }
   G.__P6_LOAD__ = function (id) { return load(id, false); };
-  // Drops a figure and fetches it again (its picture would not display).
-  G.__P6_RELOAD__ = function (id) {
-    var old = figs[id];
-    delete figs[id];
-    if (old) { try { URL.revokeObjectURL(old.uri); } catch (e) {} }
-    return load(id, true);
-  };
+  // Drops a figure and builds its request again (its picture would not display).
+  G.__P6_RELOAD__ = function (id) { delete figs[id]; return load(id, true); };
 
-  // Start-up loads only the small figure index; each figure is fetched (Range request) the first time a question shows
-  // it. Downloading every pack up front cost ~29 MB per first visit and used up the Firebase Hosting free 10 GB/month.
+  // Start-up loads only the small map; no picture is downloaded until a question shows it.
   function loadPacks() {
-    return getIndex().then(function (ix) {
-      Object.keys(ix.figs).forEach(function (id) { known[id] = 1; });
+    return getMap().then(function (m) {
+      Object.keys(m).forEach(function (id) { known[id] = 1; });
       fill.style.width = "100%";
     });
   }
-  supportsWebp().then(function (w) { fmt = w ? "webp" : "jpg"; return loadPacks(); })
-    .catch(function () { /* no index: the app starts anyway and asks for figures one by one */ })
+  loadPacks()
+    .catch(function () { /* no map: the app starts anyway and asks for figures one by one */ })
     .then(startApp);
 })();
 </script>

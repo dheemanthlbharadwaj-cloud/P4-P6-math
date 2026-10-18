@@ -67,7 +67,7 @@ async function main() {
         { glob: "**", headers: { "Cache-Control": "no-cache" } },
         { glob: "/js/**", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
         { glob: "/assets/**", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
-        { glob: "/figpack-*", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+        { glob: "/figures-*", headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
       ],
     },
   });
