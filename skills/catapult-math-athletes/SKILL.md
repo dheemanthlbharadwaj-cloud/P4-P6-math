@@ -129,7 +129,8 @@ apps/mobile/       Expo app
   scripts/map-scenes.py    map-bg-N.webp = river + ONLY chapter N's island (1 yacht marina … 12 space base), + route, aspects
   scripts/map-spots.py     even button spots per map from map-bg-N.webp (run after map-scenes.py)
 editor-hosting/    the question editor's hosting files: live copy (17 Oct 2026) + delta-v6 = read-saving change (local cache,
-                   only edits since last sync; not deployed yet; see its README and CHANGES.md)
+                   only edits since last sync; DEPLOYED 18 Oct 2026, index access_key+last_edited_at built). Deploy editor
+                   files ONLY with editor-hosting/deploy-editor.mjs (keeps the live config + every live file; pull + diff live first)
 docs/              WORKFLOW.md (spec), ARCHITECTURE.md (contract), OPEN_QUESTIONS.md
 design/source-assets/  originals not shipped; map-pack/pack.zip = the artist's map pack ("Game Level Map for Water Games":
                    full river map PNG/PSD, per-island PNGs, separated object layers); map-pack/layers/ = river.png,
