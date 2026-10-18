@@ -9,11 +9,18 @@ import { CatCompanion } from "./CatCompanion";
 import { getUnlockCandidates } from "../content";
 import { chooseKeyQuestion } from "../logic/keyQuestion";
 import { useProgress } from "../store/progress";
+import { computeMeters, usePlayer } from "../store/player";
+import { ResourceModal } from "./ResourceModal";
+import { onHeartsRanOut } from "../services/notifications";
 import { colors, fonts, space } from "../theme/colors";
 
 export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; topic: TopicMap | null; visible: boolean; onClose: () => void }) {
   const [attempt, setAttempt] = useState(0);
   const [reveal, setReveal] = useState<Reveal | null>(null);
+  // MCQ retry (owner decision 18 Oct 2026): a wrong pick costs a heart; the student may try the same question again
+  // (tried options stay red) or ask for another one. Typed key questions keep one try.
+  const [tried, setTried] = useState<string[]>([]);
+  const [gate, setGate] = useState(false);
   // The key question is picked once per topic map and remembered (store) until the key is earned; "Not now" keeps it,
   // "Try another question" (after a wrong answer) forgets it so a new one is picked.
   const chosen = useMemo(
@@ -25,13 +32,18 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
     if (topic && chosen && chosen.remember !== undefined) useProgress.getState().setKeyQuestion(grade, topic.id, chosen.remember);
   }, [chosen]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const close = () => { setReveal(null); setAttempt(0); onClose(); };
+  const close = () => { setReveal(null); setTried([]); setGate(false); setAttempt(0); onClose(); };
   const submit = (responses: string[]) => {
     if (!question || !topic) return;
     const r = markQuestion(question, responses);
     setReveal({ correct: r.correct, perPart: r.perPart });
-    if (r.correct) useProgress.getState().unlockTopic(grade, topic.id);
+    if (r.correct) { useProgress.getState().unlockTopic(grade, topic.id); return; }
+    if (question.type === "mcq") setTried((x) => [...x, responses[0]]);
+    usePlayer.getState().spendHeart();
+    const left = computeMeters(usePlayer.getState(), Date.now());
+    if (!left.subscribed && left.hearts <= 0) { void onHeartsRanOut(); setGate(true); }
   };
+  const retry = !!reveal && !reveal.correct && question?.type === "mcq";
 
   return (
     <Modal visible={visible} animationType="slide" onRequestClose={close}>
@@ -45,19 +57,22 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
           <CatCompanion key={attempt} mood={reveal ? (reveal.correct ? "correct" : "wrong") : "thinking"} size={80} />
         </View>
         {question ? (
-          <QuestionPanel reportContext="key" question={question} grade={grade} reveal={reveal} onSubmit={submit} submitLabel="Unlock" />
+          <QuestionPanel reportContext="key" question={question} grade={grade} reveal={reveal} onSubmit={submit} submitLabel="Unlock" triedOptions={tried} />
         ) : (
           <View style={{ flex: 1, padding: space.l }}><Body>No key question is available for this topic yet.</Body></View>
         )}
         {reveal ? (
           <View style={{ padding: space.l, gap: 10 }}>
             <Text style={{ fontSize: 22, fontFamily: fonts.display, color: reveal.correct ? colors.good : colors.bad, textAlign: "center" }}>
-              {reveal.correct ? "Unlocked! Have fun exploring." : "Not quite. Try another key."}
+              {reveal.correct ? "Unlocked! Have fun exploring." : (retry ? "Not quite. -1 heart. Try again or try another question." : "Not quite. Try another key.")}
             </Text>
             {reveal.correct ? (
               <Button title="Open the map" variant="good" onPress={close} />
             ) : (
-              <Button title="Try another question" onPress={() => { if (topic) useProgress.getState().setKeyQuestion(grade, topic.id, undefined); setReveal(null); setAttempt((a) => a + 1); }} />
+              <>
+                {retry ? <Button title="Try again" variant="good" disabled={gate} onPress={() => setReveal(null)} /> : null}
+                <Button title="Try another question" variant={retry ? "ghost" : "primary"} disabled={gate} onPress={() => { if (topic) useProgress.getState().setKeyQuestion(grade, topic.id, undefined); setReveal(null); setTried([]); setAttempt((a) => a + 1); }} />
+              </>
             )}
           </View>
         ) : (
@@ -65,6 +80,7 @@ export function KeyModal({ grade, topic, visible, onClose }: { grade: Grade; top
             <Button title="Not now" variant="ghost" onPress={close} />
           </View>
         )}
+        <ResourceModal visible={gate} giveUpLabel="Not now" onRewarded={() => setGate(false)} onGiveUp={close} />
       </SafeAreaView>
     </Modal>
   );

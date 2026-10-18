@@ -136,7 +136,7 @@ export interface LevelResult {
   contentVersion: string;
   subtopicId: string;
   level: LevelNo;
-  /** One entry per question answered in this attempt (each question is answered once: a wrong answer moves on), with
+  /** One entry per question answered in this attempt (one entry per question: the final pick (an MCQ may be retried until right; earlier wrong tries are not sent)), with
    *  what the student entered. The server marks the responses itself (stars: see stars.ts). Questions skipped or not
    *  reached are left out. Attempts that end early are sent too. */
   answers: LevelAnswer[];

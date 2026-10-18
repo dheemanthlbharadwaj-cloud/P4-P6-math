@@ -32,6 +32,8 @@ interface Props {
   reveal?: Reveal | null; // when set the inputs are locked and coloured
   onSubmit: (responses: string[]) => void;
   onSkip?: () => void;
+  /** MCQ options already tried wrong (retry): shown red and can't be picked again. */
+  triedOptions?: readonly string[];
   canSkip?: boolean;
   submitLabel?: string;
   /** Classroom "Practice (show answer)": no answer boxes or submit bar; the parent reveals the answer and self-marks. */
@@ -50,7 +52,7 @@ function keyboardFor(kind: string, value?: number): KeyboardTypeOptions {
 
 let hintDismissed = false; // once per app session
 
-export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, canSkip = true, submitLabel = "Submit", viewOnly = false, companion, reportContext }: Props) {
+export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, triedOptions = [], canSkip = true, submitLabel = "Submit", viewOnly = false, companion, reportContext }: Props) {
   const nInputs = q.type === "mcq" ? 1 : Math.max(1, q.parts?.length ?? 1);
   const [responses, setResponses] = useState<string[]>(() => Array(nInputs).fill(""));
   const [calc, setCalc] = useState(false);
@@ -68,6 +70,9 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
   const [hintGone, setHintGone] = useState(hintDismissed);
   const showHint = !landscape && !stacked && !hintGone && (Platform.OS !== "web" || width >= 600);
   useEffect(() => setResponses(Array(nInputs).fill("")), [q.id, nInputs]);
+  // MCQ retry: the wrong pick is cleared so a new option has to be chosen.
+  const triedKey = triedOptions.join(",");
+  useEffect(() => { if (q.type === "mcq" && triedOptions.includes(responses[0])) setResponses([""]); }, [triedKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fig = useFigure(grade, q.figure, q.id);
   const locked = !!reveal || viewOnly;
@@ -124,15 +129,16 @@ export function QuestionPanel({ question: q, grade, reveal, onSubmit, onSkip, ca
             {(q.options ?? []).map((o) => {
               const picked = responses[0] === o.key;
               const isRight = showCorrectOption(reveal) && o.key === q.correctOption; // never on a wrong answer (owner rule)
-              const isWrongPick = reveal && picked && !reveal.correct;
+              const tried = triedOptions.includes(o.key);
+              const isWrongPick = (reveal && picked && !reveal.correct) || tried;
               return (
                 <Pressable
                   key={o.key}
-                  disabled={locked}
+                  disabled={locked || tried}
                   onPress={() => setAt(0, o.key)}
                   accessibilityRole="radio"
-                  accessibilityState={{ selected: picked, disabled: locked }}
-                  style={[styles.option, picked && styles.optionPicked, isRight && styles.optionRight, isWrongPick && styles.optionWrong]}
+                  accessibilityState={{ selected: picked, disabled: locked || tried }}
+                  style={[styles.option, picked && !tried && styles.optionPicked, isRight && styles.optionRight, isWrongPick && styles.optionWrong]}
                 >
                   <View style={[styles.optKey, { backgroundColor: OPTION_COLORS[(Number(o.key) - 1 + OPTION_COLORS.length) % OPTION_COLORS.length] ?? colors.primary }, picked && styles.optKeyPicked]}>
                     <Text style={styles.optKeyText}>{o.key}</Text>

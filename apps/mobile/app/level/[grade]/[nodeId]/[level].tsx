@@ -1,5 +1,6 @@
-// Level / question screen: the level's questions without a star yet (all 5 once the level is complete), each answered
-// once (a wrong answer costs a heart and moves on); progress bar, cat companion, hearts, skip, calculator, pictures.
+// Level / question screen: the level's questions without a star yet (all 5 once the level is complete). A typed question
+// gets one try (a wrong answer costs a heart and moves on); an MCQ can be retried until right (each wrong try costs a
+// heart; "Skip" moves on; a right pick on a retry still earns the star); progress bar, cat companion, hearts, skip, calculator, pictures.
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Image, Pressable, Text, View, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -13,7 +14,7 @@ import { ResourceModal } from "../../../../src/components/ResourceModal";
 import { useLeaveConfirm } from "../../../../src/components/LeaveConfirm";
 import { Stat } from "../../../../src/components/TopBar";
 import { getContentVersion, getLevelIds, getLevelQuestions, getSubtopic } from "../../../../src/content";
-import { advance, correctIds, currentId, isDone, progressFraction, recordAnswer, skip, startSession, toAnswers, type SessionState } from "../../../../src/logic/levelSession";
+import { advance, canRetry, correctIds, currentId, isDone, progressFraction, recordAnswer, skip, startSession, toAnswers, triedWrong, type SessionState } from "../../../../src/logic/levelSession";
 import { isLevelComplete, levelStarCount, nextMapLevel } from "../../../../src/logic/unlock";
 import { computeMeters, usePlayer } from "../../../../src/store/player";
 import { useProgress } from "../../../../src/store/progress";
@@ -135,6 +136,8 @@ export default function LevelScreen() {
     }
   };
 
+  // MCQ wrong: the same question again (the wrong option stays red; the heart was already spent in submit).
+  const tryAgain = () => { setReveal(null); setGain(0); setMood("thinking"); };
   const doSkip = () => { setSession((s) => skip(s)); setMood("thinking"); setStartedAt(Date.now()); };
   const giveUp = () => { setGate(false); save(false, session); setPhase("gaveup"); };
 
@@ -212,13 +215,20 @@ export default function LevelScreen() {
       </View>
       {question ? (
         <View style={{ flex: 1 }}>
-          <QuestionPanel reportContext="level" key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} timerStartedAt={startedAt} />} onSubmit={submit} onSkip={doSkip} canSkip={session.queue.length > 1} />
+          <QuestionPanel reportContext="level" key={question.id} question={question} grade={grade} reveal={reveal} companion={<CatCompanion floating mood={mood} size={150} message={message} timerStartedAt={startedAt} />} onSubmit={submit} onSkip={doSkip} triedOptions={triedWrong(session)} canSkip={session.queue.length > 1} />
           {reveal ? (
             <View style={{ padding: space.l, backgroundColor: reveal.correct ? colors.goodBg : colors.badBg, borderTopWidth: 3, borderTopColor: colors.border }}>
               <Text style={{ fontSize: 20, fontFamily: fonts.display, color: reveal.correct ? colors.good : colors.bad, marginBottom: 8 }}>
-                {reveal.correct ? (gain ? "Correct! +1 star" : "Correct!") : "Not quite. -1 heart. Try it again next time."}
+                {reveal.correct ? (gain ? "Correct! +1 star" : "Correct!") : (canRetry(question.type, false) ? "Not quite. -1 heart. Try again or skip." : "Not quite. -1 heart. Try it again next time.")}
               </Text>
-              <Button title={isDone(advance(session)) ? "Finish" : "Continue"} variant={reveal.correct ? "good" : "primary"} onPress={next} disabled={gate} />
+              {!reveal.correct && canRetry(question.type, false) ? (
+                <View style={{ flexDirection: "row", gap: 12 }}>
+                  <Button title="Skip" variant="ghost" onPress={next} disabled={gate} style={{ flex: 1 }} />
+                  <Button title="Try again" variant="primary" onPress={tryAgain} disabled={gate} style={{ flex: 2 }} />
+                </View>
+              ) : (
+                <Button title={isDone(advance(session)) ? "Finish" : "Continue"} variant={reveal.correct ? "good" : "primary"} onPress={next} disabled={gate} />
+              )}
             </View>
           ) : null}
         </View>
