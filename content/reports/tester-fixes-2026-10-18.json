@@ -1,0 +1,72 @@
+[
+ {
+  "id": "2026_Raffles_Girls_P1A_Q09",
+  "field": "answer_key",
+  "old": 2,
+  "new": 3,
+  "reason": "Source paper's own marking scheme (Booklet A table, Q9 = 3). Maths: O (rectangle) has parallel and perpendicular sides; H (two verticals + crossbar) has both; M has two parallel verticals and its two slanted strokes each run 2 squares across and 2 down, so they meet at a right angle (perpendicular) = both; N has parallel verticals but its diagonal is 2 across x 3-4 down, not 45 degrees, so no perpendicular pair; L has a perpendicular pair but no parallel pair. O, M, H = 3. Tester was right. (2025_ACS_Junior_P1A_Q08 is consistent: its M counts, F counts, X/Y/N do not = 2.)"
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.1",
+  "old": "Visual option 1 (a net arrangement of 2 squares and 2 triangles in a zig-zag strip)",
+  "new": "Visual option 1",
+  "reason": "Tester: machine-written option descriptions are unnecessary (the numbered nets are in the figure) and option 1's was wrong (net (1) is 1 square + 4 triangles, the text said 2 squares + 2 triangles). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.2",
+  "old": "Visual option 2 (a square with a triangle fan on top and 2 triangles on the sides)",
+  "new": "Visual option 2",
+  "reason": "Tester: machine-written option descriptions are unnecessary (the numbered nets are in the figure) and option 1's was wrong (net (1) is 1 square + 4 triangles, the text said 2 squares + 2 triangles). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.3",
+  "old": "Visual option 3 (a square with a triangle above and 2 triangles below, in a vertical strip)",
+  "new": "Visual option 3",
+  "reason": "Tester: machine-written option descriptions are unnecessary (the numbered nets are in the figure) and option 1's was wrong (net (1) is 1 square + 4 triangles, the text said 2 squares + 2 triangles). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.4",
+  "old": "Visual option 4 (a square with a diamond of 4 triangles above it)",
+  "new": "Visual option 4",
+  "reason": "Tester: machine-written option descriptions are unnecessary (the numbered nets are in the figure) and option 1's was wrong (net (1) is 1 square + 4 triangles, the text said 2 squares + 2 triangles). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.1",
+  "old": "Net diagram (1): a square with two triangles joined at a shared vertex on one side and a single triangle on the opposite side (only 3 triangles, not attached edge-to-edge on all 4 sides)",
+  "new": "Visual option 1",
+  "reason": "Tester: remove the machine-written option descriptions; the four nets are in the figure (re-cut from the PDF). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.2",
+  "old": "Net diagram (2): a square with one triangle attached to each of its 4 sides (top, bottom, left, right)",
+  "new": "Visual option 2",
+  "reason": "Tester: remove the machine-written option descriptions; the four nets are in the figure (re-cut from the PDF). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.3",
+  "old": "Net diagram (3): a square with a triangle on top and two triangles fanning out from the bottom edge",
+  "new": "Visual option 3",
+  "reason": "Tester: remove the machine-written option descriptions; the four nets are in the figure (re-cut from the PDF). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.4",
+  "old": "Net diagram (4): a square with a triangle on one side and a pair of triangles joined at a shared vertex on the opposite side",
+  "new": "Visual option 4",
+  "reason": "Tester: remove the machine-written option descriptions; the four nets are in the figure (re-cut from the PDF). Plain 'Visual option N' labels, the bank's convention for picture options."
+ },
+ {
+  "id": "2026_Ai_Tong_P1A_Q06",
+  "field": "question",
+  "old": "Use the information below to answer Questions 6 and 7.\n\nThe bar graph shows the favourite food of a group of students (Noodles, Chicken Rice, Pizza, Pasta).\n\nWhich is the least popular type of food?",
+  "new": "The bar graph shows the favourite food of a group of students (Noodles, Chicken Rice, Pizza, Pasta).\n\nWhich is the least popular type of food?",
+  "reason": "Tester: the 'Questions 6 and 7' sentence is meaningless here because only this question carries the bar graph stem. Rest of the stem unchanged."
+ }
+]

@@ -261,6 +261,15 @@ undo: `content/reports/figure-cut-recrops-undo-2026-10-17.json`). Method:
 - Left for a human (see the report): 2023_Temasek_P1A_Q10, 2024_Rosyth_P1_Q30 (cut, PDF match too weak);
   2022_MGS_P1_Q24, 2022_MGS_P2_Q17, 2022_Catholic_P2_Q15 (image has no figure: remove it in the editor);
   2026_TN_P1_25, 2024_RedSwastika_P1_Q20 (label cut in the scan itself).
+- **Non-figure editor edits** (answer key, option texts, stems) go through `content/scripts/apply-edits.ts`: it applies a JSON list
+  `[{id, field, old, new, reason}]` (e.g. `content/reports/tester-fixes-2026-10-18.json`; `field` = `answer_key`, `question`,
+  `options.2` …). Run `npx tsx scripts/apply-edits.ts <file> --dry` first; it re-reads each doc live, refuses everything when
+  live != `old`, stamps `last_edited_by` "app-tester-fix" + `last_edited_at`, and writes `reports/edits-undo-<stamp>.json`.
+  Prepared 18 Oct 2026 (tester round, NOT yet applied: editor over read quota): 2026_Raffles_Girls_P1A_Q09 key 2 -> 3 (marking
+  scheme Q9 = 3; M's V is a right angle), Catholic High Q09 / MGS Paya Lebar Q10 picture-option texts -> "Visual option N",
+  Ai Tong Q06 stem loses "Use the information below to answer Questions 6 and 7." Re-cuts in `content/recrops/P6/`: Red Swastika 2025 Q11
+  and Ai Tong 2026 Q11 (full grid border), ACS Junior 2025 Q07 (prism + 3 cm + incomplete net), Catholic High 2026 Q09,
+  MGS Paya Lebar 2025 Q10 (nets (1)-(4)); apply with apply-recrops on a folder holding just those five.
 
 ## 7. Testing the app in a browser
 - `web-preview.py` → `dist-preview/`; serve with `python3 -m http.server PORT`; drive with Playwright
