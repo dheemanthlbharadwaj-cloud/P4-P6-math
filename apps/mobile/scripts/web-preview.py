@@ -5,8 +5,8 @@
 
 The normal web export assumes it is served from a site root and ships every question figure as its own file
 (1,600+). This script makes it work from any folder with few files:
-1. Figures are resized and packed into a handful of binary pack files; the page unpacks them into blob URLs
-   before the app starts, and a temporary web-only figures registry (figures/index.web.ts) reads them.
+1. Figures are resized and packed into a handful of binary pack files; the page fetches each figure from its pack
+   (Range request) the first time it is shown, and a temporary web-only figures registry (figures/index.web.ts) reads them.
 2. Asset URLs in the bundle start from a base: "/" by default (the site root, as on Firebase Hosting, where every path
    falls back to index.html, so deep links like /level/P6/... work). `--base .` keeps the old folder-relative build
    (works from any subfolder; the address bar is then reset to "/" before the app starts).
@@ -39,8 +39,8 @@ PACK_LIMIT = 12 * 1024 * 1024  # bytes per pack file
 MAX_W, QUALITY, JPEG_QUALITY = 760, 70, 82
 
 REGISTRY_TS = """// TEMPORARY web-preview registry written by scripts/web-preview.py (deleted after export).
-// Figures come from packs the preview page downloads before the app starts (globalThis.__P6_FIGS__); a figure whose
-// pack failed is fetched on demand by the page's loader (globalThis.__P6_LOAD__), see PAGE in web-preview.py.
+// The page loads only the figure index at start-up (globalThis.__P6_KNOWN__); each figure is fetched the first time it is
+// needed by the page's loader (globalThis.__P6_LOAD__, a Range request into its pack) and kept in __P6_FIGS__.
 type Fig = { uri: string; width: number; height: number };
 type G = { __P6_FIGS__?: Record<string, Fig>; __P6_KNOWN__?: Record<string, unknown>; __P6_LOAD__?: (id: string) => Promise<Fig | undefined> };
 const g = globalThis as unknown as G;
@@ -334,18 +334,12 @@ if (typeof globalThis === "undefined") window.globalThis = window; // older Safa
     return load(id, true);
   };
 
+  // Start-up loads only the small figure index; each figure is fetched (Range request) the first time a question shows
+  // it. Downloading every pack up front cost ~29 MB per first visit and used up the Firebase Hosting free 10 GB/month.
   function loadPacks() {
     return getIndex().then(function (ix) {
       Object.keys(ix.figs).forEach(function (id) { known[id] = 1; });
-      var byPack = ix.packs.map(function () { return []; });
-      Object.keys(ix.figs).forEach(function (id) { byPack[ix.figs[id][0]].push(id); });
-      var total = ix.packs.reduce(function (a, p) { return a + p.bytes; }, 0), done = 0;
-      return Promise.all(ix.packs.map(function (p, i) {
-        return fetchPack(p.file).then(function (buf) {
-          byPack[i].forEach(function (id) { make(id, ix.figs[id], buf, ix.figs[id][1]); });
-          done += p.bytes; fill.style.width = Math.round(done / total * 100) + "%";
-        }, function () { /* this pack's figures are fetched when needed */ });
-      }));
+      fill.style.width = "100%";
     });
   }
   supportsWebp().then(function (w) { fmt = w ? "webp" : "jpg"; return loadPacks(); })

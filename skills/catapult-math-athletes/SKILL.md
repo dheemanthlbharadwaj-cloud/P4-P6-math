@@ -305,6 +305,11 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
 - Bundle contains stale figure → raw file still old; check `content/raw/P6/figures/.sources.json` and that the
   editor `figure_url` changed; delete the raw file and re-sync.
 - Background shell commands time out at 30 min by default; long OCR/render jobs must save progress incrementally.
+- **Firebase Hosting "8 GB of 10 GB monthly"** (18 Oct 2026) = download transfer of the web app, not Firestore. Cause:
+  the web start-up downloaded ALL figure packs (~29 MB) on every first visit (every test browser too). Fixed: start-up
+  loads only the figure index; each figure is fetched by Range request when shown (first visit ~1.5 MB over the wire).
+  Hosting keeps at most 10 versions of catapult-math-athletes (`maxVersions`). Test the web app on LOCAL builds
+  (`expo export` / web-preview.py + a local server) and keep live-site test runs few: each fresh browser downloads the app.
 - **Every backend call returns 500, or the question editor won't let you sign in** → check the Firestore daily read
   quota first (Spark plan; the editor needs reads to log in too). Quick test: any REST read returns 429 "Quota limit
   exceeded". Per-source read counts (Cloud Monitoring) need billing, so they can't be checked on Spark.
