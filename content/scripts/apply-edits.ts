@@ -18,7 +18,8 @@ const NOTES = args.includes("--notes");
 const file = args.find((a) => !a.startsWith("--")) ?? "reports/tester-fixes-2026-10-18.json";
 const edits: Edit[] = JSON.parse(fs.readFileSync(file, "utf8"));
 
-const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
+// A missing field counts as null (the snapshot records absent fields as null).
+const same = (a: unknown, b: unknown) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 const getPath = (o: unknown, path: string[]): unknown => path.reduce<unknown>((c, k) => (c && typeof c === "object" ? (c as Record<string, unknown>)[k] : undefined), o);
 const q = (seg: string) => (/^[A-Za-z_][A-Za-z0-9_]*$/.test(seg) ? seg : `\`${seg}\``);
 function toFs(v: unknown): unknown {

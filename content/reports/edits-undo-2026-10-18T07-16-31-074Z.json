@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026_Raffles_Girls_P1A_Q09",
+  "field": "answer_key",
+  "old": 2,
+  "new": 3
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.1",
+  "old": "Visual option 1 (a net arrangement of 2 squares and 2 triangles in a zig-zag strip)",
+  "new": "Visual option 1"
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.2",
+  "old": "Visual option 2 (a square with a triangle fan on top and 2 triangles on the sides)",
+  "new": "Visual option 2"
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.3",
+  "old": "Visual option 3 (a square with a triangle above and 2 triangles below, in a vertical strip)",
+  "new": "Visual option 3"
+ },
+ {
+  "id": "2026_Catholic_High_P1A_Q09",
+  "field": "options.4",
+  "old": "Visual option 4 (a square with a diamond of 4 triangles above it)",
+  "new": "Visual option 4"
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.1",
+  "old": "Net diagram (1): a square with two triangles joined at a shared vertex on one side and a single triangle on the opposite side (only 3 triangles, not attached edge-to-edge on all 4 sides)",
+  "new": "Visual option 1"
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.2",
+  "old": "Net diagram (2): a square with one triangle attached to each of its 4 sides (top, bottom, left, right)",
+  "new": "Visual option 2"
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.3",
+  "old": "Net diagram (3): a square with a triangle on top and two triangles fanning out from the bottom edge",
+  "new": "Visual option 3"
+ },
+ {
+  "id": "2025_MGS_Paya_Lebar_P1A_Q10",
+  "field": "options.4",
+  "old": "Net diagram (4): a square with a triangle on one side and a pair of triangles joined at a shared vertex on the opposite side",
+  "new": "Visual option 4"
+ },
+ {
+  "id": "2026_Ai_Tong_P1A_Q06",
+  "field": "question",
+  "old": "Use the information below to answer Questions 6 and 7.\n\nThe bar graph shows the favourite food of a group of students (Noodles, Chicken Rice, Pizza, Pasta).\n\nWhich is the least popular type of food?",
+  "new": "The bar graph shows the favourite food of a group of students (Noodles, Chicken Rice, Pizza, Pasta).\n\nWhich is the least popular type of food?"
+ }
+]

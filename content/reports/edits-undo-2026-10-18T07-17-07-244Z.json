@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2022_MGS_P1_Q24",
+  "field": "figure_url",
+  "old": "https://res.cloudinary.com/n9gn4u6k/image/upload/v1789285342/p6maths/figures2022/MGS_P1_Q24.png",
+  "new": null
+ },
+ {
+  "id": "2022_MGS_P1_Q24",
+  "field": "figure.required",
+  "old": true,
+  "new": false
+ },
+ {
+  "id": "2022_MGS_P2_Q17",
+  "field": "figure_url",
+  "old": "https://res.cloudinary.com/n9gn4u6k/image/upload/v1789285349/p6maths/figures2022/MGS_P2_Q17.png",
+  "new": null
+ },
+ {
+  "id": "2022_MGS_P2_Q17",
+  "field": "figure.required",
+  "old": true,
+  "new": false
+ },
+ {
+  "id": "2023_Catholic_High_P1A_Q11",
+  "field": "figure_url",
+  "old": "https://res.cloudinary.com/n9gn4u6k/image/upload/v1791189327/p6maths/figures_edited/2023_Catholic_High_P1A_Q11_recrop.png",
+  "new": null
+ },
+ {
+  "id": "2023_Catholic_High_P1A_Q11",
+  "field": "figure.required",
+  "old": true,
+  "new": false
+ },
+ {
+  "id": "2023_PeiChun_P1_Q18",
+  "field": "question",
+  "old": "PAR is an equilateral triangle. Find $\\angle w$.",
+  "new": "PQR is an equilateral triangle. Find $\\angle w$."
+ },
+ {
+  "id": "2023_St Nicholas_P2_Q4",
+  "field": "question",
+  "old": "In the figure, KN and JL are straight lines. LPK is an equilateral triangle and JKT is perpendicular to ML. The sum of $\\angle MJL$ and $\\angle LMJ$ is 138°. Find $\\angle QLP$.",
+  "new": "In the figure, KN and JL are straight lines. LPK is an equilateral triangle and JK // ML. The sum of $\\angle MJL$ and $\\angle LMJ$ is 138°. Find $\\angle QLP$."
+ },
+ {
+  "id": "2026_RG_P2_10",
+  "field": "has_error",
+  "old": null,
+  "new": true
+ },
+ {
+  "id": "2026_RG_P2_10",
+  "field": "error_log",
+  "old": null,
+  "new": "18 Oct 2026 (app review): text/answers belong to 2026_RS_P2_10 (muffin sales). The figure (tap/tank volume graph) is correct for this paper's Q10 (Fiona, Tap A and Tap B). Replace question, parts and answers with the Raffles Girls Q10 from the source PDF, then untick Flag error."
+ }
+]
