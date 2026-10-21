@@ -1,6 +1,6 @@
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import {
-  REFERRAL_STARS, REFERRAL_WELCOME_STARS, STORE_ITEMS, activeLevelIds, levelAttemptStars, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
+  REFERRAL_STARS, REFERRAL_WELCOME_STARS, STORE_ITEMS, activeLevelIds, levelKey, type ClaimQuestRequest, type ClaimQuestResponse,
   type LevelResultResponse, type MinigameResultResponse, type PurchaseItemRequest, type PurchaseItemResponse,
   type RedeemReferralRequest, type RedeemReferralResponse,
 } from "./shared/index.js";
@@ -14,6 +14,9 @@ import { isCorrect } from "./logic/marking.js";
 import { CONTENT } from "./content/index.js";
 import { patchView } from "./patches.js";
 import { lb } from "./leaderboard.js";
+import { levelNewlyComplete, resolveLevelStars, type LevelStarsDoc } from "./logic/levelStars.js";
+import { buildQstatsPatch, deltasFromAnswers, mapQuestionSet } from "./logic/qstats.js";
+import { levelCompleted, qstatsRef, qstatsOps } from "./classroom.js";
 
 /** config/content.acceptedVersions per instance: a version found in the cache is accepted without a read (1 read saved per
  *  submit). A version NOT in the cache always re-reads, so a freshly accepted bundle works at once; a version taken off the
@@ -74,14 +77,18 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
   const ledgerRef = db.collection(col.users).doc(uid).collection("ledger").doc(`level_${result.attemptId}`);
   const starsRef = levelStarsRef(uid, result.grade, key);
 
+  const qstats = qstatsRef(uid, result.grade);
+  const qDeltas = deltasFromAnswers(inLevel.map((a) => ({ questionId: a.questionId, correct: correctNow.includes(a.questionId) })), (id) => mapQuestionSet(content).has(id));
+  let newlyComplete = false;
+
   const res = await db.runTransaction(async (tx) => {
+    newlyComplete = false; // the transaction body may run more than once
     const [attempt, wallet, month, levelDoc] = await Promise.all([tx.get(attemptRef), tx.get(walletRef), tx.get(monthRef), tx.get(starsRef)]);
     const balance = (wallet.data()?.starBalance as number | undefined) ?? 0;
     const total = (wallet.data()?.totalStars as number | undefined) ?? 0;
-    const storedBefore = ((levelDoc.data()?.correct as string[] | undefined) ?? []).filter((id) => bundleIds.includes(id));
-    const correctBefore = storedBefore.filter((id) => levelIds.includes(id));
-    const retiredBefore = storedBefore.filter((id) => !levelIds.includes(id)); // keep their stars on record
-    const bonusClaimed = levelDoc.data()?.bonus === true;
+    // stars.ts rules via the helper the teacher's paper marks use too (logic/levelStars.ts)
+    const upd = resolveLevelStars(levelDoc.data() as LevelStarsDoc | undefined, bundleIds, levelIds, correctNow);
+    const correctBefore = upd.correctBefore;
     if (attempt.exists) {
       // Replay of an already-counted attempt: report the CURRENT balances and level state, not the (stale) ones stored
       // with the attempt, so a client that applies the response never overwrites newer values.
@@ -91,14 +98,17 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
         levelCorrectIds: correctBefore, levelComplete: levelIds.every((id) => correctBefore.includes(id)),
       };
     }
-    const r = levelAttemptStars(levelIds, correctBefore, correctNow, bonusClaimed);
+    const r = upd.r;
     const stars = r.stars;
+    newlyComplete = levelNewlyComplete(levelIds, correctBefore, upd);
     const monthlyStars = ((month.data()?.stars as number | undefined) ?? 0) + stars;
     const response: LevelResultResponse = {
       starsAwarded: stars, starBalance: balance + stars, monthlyStars, duplicate: false, levelCorrectIds: r.correctIds, levelComplete: r.complete,
     };
-    if (r.newIds.length || r.bonus) tx.set(starsRef, { correct: [...r.correctIds, ...retiredBefore], bonus: bonusClaimed || r.bonus, updatedAt: FieldValue.serverTimestamp() });
+    if (upd.write) tx.set(starsRef, { ...upd.write, updatedAt: FieldValue.serverTimestamp() });
     for (const q of attemptedIds) tx.set(attemptedRef(uid, result.grade, q), { at: FieldValue.serverTimestamp() }, { merge: true });
+    const qpatch = buildQstatsPatch(result.grade, qDeltas, qstatsOps(when)); // classroom analytics: one merge write
+    if (qpatch) tx.set(qstats, qpatch, { merge: true });
 
     tx.set(attemptRef, {
       attemptId: result.attemptId, grade: result.grade, subtopicId: result.subtopicId, level: result.level,
@@ -118,6 +128,7 @@ export const submitLevelResult = onCall(async (req): Promise<LevelResultResponse
     return response;
   });
   lb.invalidateUser(uid); // the caller's cached monthly entry is stale now
+  if (newlyComplete && !res.duplicate) await levelCompleted(uid, result.grade, result.subtopicId, result.level, levelIds); // class milestone posts (best effort)
   return res;
 });
 
@@ -133,6 +144,7 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
   const monthRef = entriesRef(monthlyBoard(sgtMonth(when))).doc(uid);
   const dayRef = entriesRef(dailyBoard(sgtDate(when))).doc(uid);
   const refs = questionIds.map((q) => attemptedRef(uid, result.grade, q));
+  const qstats = qstatsRef(uid, result.grade);
   const edits = await patchView(result.grade); // the editor's edits since the bundle was built (marking uses edited answers)
 
   const res = await db.runTransaction(async (tx) => {
@@ -146,6 +158,9 @@ export const submitMinigameResult = onCall(async (req): Promise<MinigameResultRe
     const marked = result.answers.map((a) => ({ questionId: a.questionId, correct: isCorrect(content, a.questionId, a.responses, edits?.answers) }));
     const stars = minigameStars(marked, before);
     tx.set(roundRef, { mode: result.mode, grade: result.grade, stars, answers: result.answers.length, createdAt: FieldValue.serverTimestamp() });
+    // classroom analytics (map questions only): one merge write for the whole round
+    const qpatch = buildQstatsPatch(result.grade, deltasFromAnswers(marked, (id) => mapQuestionSet(content).has(id)), qstatsOps(when));
+    if (qpatch) tx.set(qstats, qpatch, { merge: true });
     for (const r of refs) tx.set(r, { at: FieldValue.serverTimestamp() }, { merge: true });
     tx.set(walletRef, { starBalance: balance + stars, totalStars: total + stars, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
     const inc = { uid, stars: FieldValue.increment(stars), questionsDone: FieldValue.increment(result.answers.length), updatedAt: FieldValue.serverTimestamp() };

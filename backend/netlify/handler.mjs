@@ -13,10 +13,15 @@ import admin from "./lib/admin.js";
 import rc from "./lib/logic/revenuecat.js";
 import dates from "./lib/logic/dates.js";
 import rateLimit from "./lib/logic/rateLimit.js";
+import classroom from "./lib/classroom.js";
 
 const CALLABLES = new Set([
   "bootstrapProfile", "submitLevelResult", "submitMinigameResult", "claimQuest", "purchaseItem", "redeemReferral",
   "sendFriendRequest", "respondFriendRequest", "getLeaderboard", "refreshPublicProfile", "reportQuestion", "updateProfile", "syncProgress", "listFriendRequests", "deleteAccount", "getDailyQuests", "claimDailyQuest", "getQuestionPatches",
+  // classroom (packages/shared/src/classroom.ts)
+  "teacherGetDashboard", "teacherSaveClass", "teacherDeleteClass", "teacherAddStudent", "teacherRemoveStudent", "teacherSetBirthday", "teacherPost",
+  "teacherDeletePost", "teacherUploadSignature", "teacherCreateTask", "teacherListTasks", "teacherGetTaskMarks", "teacherMarkTask", "teacherGetAnalytics",
+  "getMyClassroom", "submitTaskAnswers",
 ]);
 // Callable error code → HTTP status (same table as Firebase callables).
 const STATUS = {
@@ -81,9 +86,10 @@ export async function handleApi(request) {
   }
 }
 
-/** 00:00 Singapore time every day: on the 1st, close last month (medals). Nothing else (the per-user snapshot is retired). */
+/** 00:00 Singapore time every day: on the 1st, close last month (medals); every day, the classes' birthday posts (one read per class). */
 export async function nightly(now = Date.now()) {
   if (dates.sgtDate(now).endsWith("-01")) await fns.monthlyClose.run({});
+  try { await classroom.postBirthdays(now); } catch (e) { console.error("birthday posts failed", e); } // never blocks the month close above
 }
 
 /** 23:55 Singapore time every day: build the day's leaderboard, the only time it changes (lib/logic/dailyBoard.js). */

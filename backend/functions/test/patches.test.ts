@@ -12,7 +12,7 @@ const content: ServerContent = {
   version: "v1", builtAt: "2026-10-14T02:08:49.555Z", snapshotAt: "2026-10-14T02:07:46.934Z",
   levels: { "p6-a#1": ["Q1", "Q2", "Q3"] },
   answers: { Q1: { t: "mcq", o: "2" }, Q2: { t: "mcq", o: "1" }, Q3: { t: "open", p: [{ kind: "number", value: 4 }] } },
-  topics: [], subtopics: ["p6-a"],
+  topics: [], names: {}, subtopics: ["p6-a"],
   questions: {
     Q1: { s: 0, c: "Arithmetic", d: 1, p: 1 },
     Q2: { s: 0, c: "Arithmetic", d: 1, p: 1, f: 1, u: figHash(OLD) },

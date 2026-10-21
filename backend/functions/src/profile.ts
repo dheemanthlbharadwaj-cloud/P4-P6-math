@@ -9,6 +9,7 @@ import { loadAccountState } from "./account.js";
 import { removeFromDailyBoard } from "./leaderboard.js";
 import { auth, col, db, editorDb, FieldValue, REGION, requireUid } from "./admin.js";
 import { makeFriendCode } from "./logic/rules.js";
+import { leaveAllClasses } from "./classroom.js";
 
 const str = (v: unknown, max: number, min = 0): string => {
   if (typeof v !== "string") throw new HttpsError("invalid-argument", "expected string");
@@ -121,6 +122,7 @@ export const deleteAccount = onCall(async (req): Promise<DeleteAccountResponse> 
     const s = await q.get();
     await Promise.all(s.docs.map((d) => d.ref.delete()));
   }
+  await leaveAllClasses(uid, (user as { classIds?: string[] } | undefined)?.classIds); // class rosters
   // leaderboard entries + snapshots (all subcollections called "entries")
   const entries = await db.collectionGroup("entries").where("uid", "==", uid).get();
   await Promise.all(entries.docs.map((d) => d.ref.delete()));

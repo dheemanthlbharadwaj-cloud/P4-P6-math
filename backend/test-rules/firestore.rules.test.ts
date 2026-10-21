@@ -19,6 +19,8 @@ const PATHS = [
   "users/alice", "users/alice/progress/P6", "users/alice/wrong/q1", "users/alice/ledger/l1", "wallets/alice",
   "publicProfiles/bob", "friendCodes/ABCD2345", "referrals/alice", "friendships/alice_bob", "friendRequests/carol_alice",
   "leaderboards/monthly-2026-10/entries/alice", "medals/alice", "entitlements/alice", "question_reports/q1__alice",
+  // classroom
+  "teachers/alice", "classes/c1", "classes/c1/posts/p1", "classes/c1/tasks/t1", "classes/c1/tasks/t1/marks/alice", "users/alice/qstats/P6",
 ];
 
 beforeEach(async () => {

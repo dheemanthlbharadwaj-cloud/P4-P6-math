@@ -7,6 +7,10 @@ export const PER_MINUTE: Record<string, number> = {
   bootstrapProfile: 10, submitLevelResult: 30, submitMinigameResult: 10, claimQuest: 10, purchaseItem: 10,
   redeemReferral: 5, sendFriendRequest: 10, respondFriendRequest: 20, getLeaderboard: 30, refreshPublicProfile: 10,
   reportQuestion: 10, updateProfile: 10, syncProgress: 20, listFriendRequests: 20, deleteAccount: 3, getDailyQuests: 20, claimDailyQuest: 10, getQuestionPatches: 20,
+  // classroom: teachers mark/read in bursts; students open the Classroom screen and submit a test now and then
+  teacherGetDashboard: 30, teacherSaveClass: 20, teacherDeleteClass: 10, teacherAddStudent: 60, teacherRemoveStudent: 30, teacherSetBirthday: 60,
+  teacherPost: 20, teacherDeletePost: 20, teacherUploadSignature: 30, teacherCreateTask: 20, teacherListTasks: 30, teacherGetTaskMarks: 60,
+  teacherMarkTask: 90, teacherGetAnalytics: 30, getMyClassroom: 20, submitTaskAnswers: 10,
 };
 export const DEFAULT_PER_MINUTE = 20;
 /** Every function together, per account. */

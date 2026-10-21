@@ -80,6 +80,8 @@ export const col = {
   medals: "medals",
   entitlements: "entitlements",
   config: "config",
+  teachers: "teachers", // classroom (classroom.ts contract): teachers/{uid}
+  classes: "classes", // classes/{id} + posts, tasks, tasks/{id}/marks (server only)
   questions: "questions", // the question bank (EDITOR project; read only here: use editorDb)
   questionReports: "question_reports", // EDITOR project (use editorDb)
 } as const;

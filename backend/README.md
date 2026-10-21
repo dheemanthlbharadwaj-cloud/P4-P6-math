@@ -121,6 +121,38 @@ Limits to keep in mind (free tiers): Firestore 50k reads / 20k writes a day, sha
 each, requests and compute cost credits; when they run out the site pauses until next month, nothing is billed);
 Netlify scheduled functions stop after 30 seconds, plenty for the nightly jobs at school scale.
 
+## Classroom (teachers, classes, worksheets, marks, analytics)
+
+Contract: `packages/shared/src/classroom.ts` (callable names in `api.ts` `CallableName`, all listed in `netlify/handler.mjs`).
+Code: `functions/src/classroom.ts` (callables, Firestore), pure rules in `functions/src/logic/` (`classroom.ts` validation, access,
+diagnostic picking, mark planning, Cloudinary signature; `levelStars.ts` the star bookkeeping shared with `submitLevelResult`;
+`qstats.ts`; `milestones.ts`; `classAnalytics.ts`; `feedCache.ts`). Tests: `functions/test/classroom.test.ts`.
+
+- **Data** (student project, server only; `firestore.rules` already denies every client): `teachers/{uid}`, `classes/{id}`
+  (+ `posts/{id}`, `tasks/{id}`, `tasks/{id}/marks/{studentUid}`), `users/{uid}/qstats/{grade}`, `users/{uid}.classIds|birthday`.
+  No new indexes (single-field filters only). Extra server-only fields beyond the contract: `qstats.homework` ({questionId: true},
+  teacher-marked wrong and not yet right), `qstats.tasksDone` (in-app task ids submitted).
+- **Teachers**: `node backend/scripts/add-teacher.mjs --project catapult-math-students --email … --name "…" [--dry]` creates the
+  Auth user (generated password written once to a 0600 file in `--out-dir`, never printed) and `teachers/{uid}`; `--disable` turns a
+  teacher off; `--reset-password` re-issues a password. Disabled teachers are refused within 60 s (cached teacher doc).
+- **Marking** (`applyTaskMarks`, used by `teacherMarkTask` and by `submitTaskAnswers` for in-app diagnostics): stars exactly as in the app
+  (`stars.ts` through the shared `resolveLevelStars`: one star per question ever; the replay bonus once per level, never for a correction),
+  wrong marks become `users/{uid}/wrong/{id}` bookmarks (`{grade, active, flaggedAt, updatedAt}`, what `syncProgress` pull returns) and
+  go on the student's homework list; idempotent per (task, student, question).
+- **qstats**: `submitLevelResult`, `submitMinigameResult` and marks add ONE merge write each (blind: `increment`, no read). Map questions only.
+  Attempts of an MCQ retried until right are one answer (the app sends only the final pick), so `a`/`w` undercount retries.
+  Levels completed before this feature have no qstats (analytics start from the first answer after the deploy).
+- **Automatic posts**: first completion of a level (and the level-up of a map group) in `submitLevelResult` / marks → `levelCompleted`;
+  birthdays in `nightly()` (`netlify/handler.mjs`, 00:00 SGT) via `postBirthdays` which reads every class once. Fixed post ids make
+  retries safe.
+- **Cloudinary**: `teacherUploadSignature` needs `CLOUDINARY_SECRET` on the Netlify site; `deploy-netlify.mjs` sets it from the local env
+  (not printed). Cloud `n9gn4u6k`, key `465242564664612` (override `CLOUDINARY_CLOUD_NAME` / `CLOUDINARY_KEY`), folder `p6maths/classroom/<classId>`.
+- **Reads** (per-instance caches: class docs 60 s, class feed 60 s with incremental refresh, analytics 5 min, teacher doc 60 s, user info
+  60 s): table at the top of `functions/src/classroom.ts`. Rule of thumb: a warm `getMyClassroom` = 1 read (the student's qstats);
+  `teacherMarkTask` = about 4 reads; analytics = one read per student per 5 minutes.
+- **Deploy**: only with the other backend changes (15 Netlify credits per deploy); nothing here needs `deploy-rules.mjs` (rules unchanged
+  in behaviour for both projects).
+
 ## Security (shared test link)
 
 Anyone with the link can sign up; nothing a student does on their own device can change stars, the leaderboard or

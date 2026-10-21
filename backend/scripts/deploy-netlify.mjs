@@ -18,7 +18,7 @@
 //
 // Steps: Netlify site (create if missing) → site env vars: BACKEND_SERVICE_ACCOUNT_B64 (a key for the
 // catapult-backend service account made by setup-project.mjs; created once, new one with --rotate-key),
-// FIRESTORE_DATABASE_ID and REVENUECAT_WEBHOOK_AUTH (random, if missing) → build ../functions + copy to netlify/lib → netlify deploy --prod
+// FIRESTORE_DATABASE_ID, CLOUDINARY_SECRET (from the local env, classroom uploads) and REVENUECAT_WEBHOOK_AUTH (random, if missing) → build ../functions + copy to netlify/lib → netlify deploy --prod
 // → apps/mobile/backend.json {url} → smoke test.
 // Each production deploy costs Netlify credits (15 of the free 300/month): deploy when the backend changed.
 import { randomBytes } from "node:crypto";
@@ -121,6 +121,12 @@ if (dbVar?.values?.[0]?.value !== DATABASE) {
   log(`Env: FIRESTORE_DATABASE_ID ← ${DATABASE}`);
   if (!DRY) await setEnv("FIRESTORE_DATABASE_ID", DATABASE);
 } else log(`Env: FIRESTORE_DATABASE_ID = ${DATABASE}`);
+// Classroom: signed Cloudinary uploads for answer sheets (teacherUploadSignature). The value comes from the local env and is never printed.
+if (process.env.CLOUDINARY_SECRET) {
+  if (envValue("CLOUDINARY_SECRET") === process.env.CLOUDINARY_SECRET) log("Env: CLOUDINARY_SECRET set");
+  else { log("Env: CLOUDINARY_SECRET ← local value (not shown)"); if (!DRY) await setEnv("CLOUDINARY_SECRET", process.env.CLOUDINARY_SECRET); }
+} else if (!have.has("CLOUDINARY_SECRET")) log("Env: CLOUDINARY_SECRET is not set here or on the site: teachers can't upload answer sheets until it is (export it and re-run)");
+else log("Env: CLOUDINARY_SECRET set on the site");
 if (!have.has("REVENUECAT_WEBHOOK_AUTH")) {
   log("Env: REVENUECAT_WEBHOOK_AUTH ← random value (copy it from the Netlify site's environment variables into RevenueCat)");
   if (!DRY) await setEnv("REVENUECAT_WEBHOOK_AUTH", `Bearer ${randomBytes(24).toString("hex")}`);

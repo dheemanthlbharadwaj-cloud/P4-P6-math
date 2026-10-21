@@ -9,6 +9,9 @@ rules_version = '2';
 // Student collections: users/{uid} (+ progress, wrong, ledger, attempts, starredLevels, attempted, minigames,
 // reportQuota), wallets, publicProfiles, friendCodes, referrals, friendships, friendRequests, leaderboards,
 // leaderboardSnapshots, leaderboardMeta, medals, entitlements, question_reports.
+// Classroom (packages/shared/src/classroom.ts): teachers, classes (+ posts, tasks, tasks/{id}/marks) and users/{uid}/qstats,
+// levelStars, attempted are server only too: the catch-all below denies every client, signed in or not, so nothing
+// more is needed here (and backend/scripts/deploy-rules.mjs keeps deploying this one file to both projects unchanged).
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
