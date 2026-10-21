@@ -10,6 +10,7 @@ import { useWrong } from "../../src/store/wrong";
 import { useQuestionPatches } from "../../src/store/questionPatches";
 import { colors, fonts, space } from "../../src/theme/colors";
 import { useLayout } from "../../src/theme/layout";
+import { MyClass } from "../../src/components/MyClass";
 
 export default function ClassroomTab() {
   const router = useRouter();
@@ -42,6 +43,8 @@ export default function ClassroomTab() {
       <ScrollView contentContainerStyle={{ padding: wide ? space.xl : space.l, gap: space.l }}>
         <H1>Classroom</H1>
         <Body style={{ color: colors.inkSoft, marginTop: -8 }}>Mini games and practice. No map hearts needed.</Body>
+
+        <MyClass />
 
         <Columns columns={columns}>
         <View style={{ gap: space.l }}>

@@ -3,6 +3,8 @@
 //   costs one). These hearts belong to the round only, not the player's map hearts.
 // - "mistakes": Unlimited Mistakes. Only questions answered wrong before, no timer, no hearts; a right answer takes
 //   the question's flag off. "all-wrong" is the same game over every question ever answered wrong.
+// - "homework": the questions the teacher marked wrong (ids in the `ids` param), same rules as Unlimited Mistakes; a right
+//   one leaves the Classroom homework list (the server drops it on the next getMyClassroom).
 // Stars (stars.ts): +1 for each question answered right that was never attempted before (levels or mini games), so
 // re-attempts (every Unlimited Mistakes question, a question coming round again in the challenge) give none.
 import React, { useEffect, useMemo, useRef, useState } from "react";
@@ -18,6 +20,8 @@ import { CatCompanion } from "../../src/components/CatCompanion";
 import { useLeaveConfirm } from "../../src/components/LeaveConfirm";
 import { getAllLv1, getQuestion } from "../../src/content";
 import { useWrong } from "../../src/store/wrong";
+import { useClassroom } from "../../src/store/classroom";
+import { accountKey } from "../../src/services/classroom";
 import { useStars } from "../../src/store/stars";
 import { useOfflineQueue } from "../../src/store/queue";
 import { useNotifications } from "../../src/store/notifications";
@@ -41,16 +45,17 @@ export default function MiniGame() {
   useQuestionOrientation();
   const dim = useWindowDimensions();
   const landscape = dim.width > dim.height;
-  const { mode, grade: g, topicId } = useLocalSearchParams<{ mode: string; grade: string; topicId?: string }>();
+  const { mode, grade: g, topicId, ids: idsParam } = useLocalSearchParams<{ mode: string; grade: string; topicId?: string; ids?: string }>();
   const grade = g as Grade;
   const timed = mode === "challenge";
 
   const questions = useMemo<Question[]>(() => {
     if (timed) return shuffle(getAllLv1(grade, topicId).filter((q) => q.autoMarkable));
+    if (mode === "homework") return (idsParam ?? "").split(",").filter(Boolean).map((id) => getQuestion(grade, id)).filter((q): q is Question => !!q && q.autoMarkable);
     const w = useWrong.getState();
     const ids = mode === "all-wrong" ? w.historyIds(grade) : w.ids(grade);
     return shuffle(ids.map((id) => getQuestion(grade, id)).filter((q): q is Question => !!q && q.autoMarkable));
-  }, [grade, mode, timed, topicId]);
+  }, [grade, mode, timed, topicId, idsParam]);
 
   const [queue, setQueue] = useState<string[]>(() => questions.map((q) => q.id));
   const [total] = useState(questions.length);
@@ -87,6 +92,7 @@ export default function MiniGame() {
     if (correct) {
       setScore((s) => s + 1);
       if (!timed && useWrong.getState().byGrade[grade]?.[q.id]) { useWrong.getState().remove(grade, q.id); msg = "Flag removed. Nice!"; }
+      if (mode === "homework") useClassroom.getState().markHomeworkDone(accountKey(), q.id);
     } else {
       useWrong.getState().add(grade, q.id);
       wrongIds.current.add(q.id);
@@ -133,14 +139,14 @@ export default function MiniGame() {
   sendRound.current = () => {
     if (sent.current || !roundAnswers.current.length) return;
     sent.current = true;
-    const result: MinigameResult = { attemptId: Crypto.randomUUID(), grade, mode: timed ? "challenge" : mode === "all-wrong" ? "all-wrong" : "mistakes", answers: roundAnswers.current, finishedAt: Date.now() };
+    const result: MinigameResult = { attemptId: Crypto.randomUUID(), grade, mode: timed ? "challenge" : mode === "all-wrong" ? "all-wrong" : "mistakes" /* homework counts as mistakes */, answers: roundAnswers.current, finishedAt: Date.now() };
     useOfflineQueue.getState().enqueue({ ...result, kind: "minigame" });
     void flushOfflineQueue();
   };
   useEffect(() => { if (!q) sendRound.current(); }, [q]);
   useEffect(() => () => sendRound.current(), []);
 
-  const title = timed ? "5-Minute Challenge" : mode === "all-wrong" ? "Unlimited Mistakes · all ever" : "Unlimited Mistakes";
+  const title = timed ? "5-Minute Challenge" : mode === "homework" ? "Homework" : mode === "all-wrong" ? "Unlimited Mistakes · all ever" : "Unlimited Mistakes";
 
   if (!q) {
     const heading = total === 0 ? "Nothing to practise" : over === "time" ? "Time's up!" : over === "hearts" ? "Out of hearts!" : "Round finished!";

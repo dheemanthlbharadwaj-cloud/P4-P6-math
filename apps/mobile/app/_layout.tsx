@@ -23,6 +23,7 @@ import { useHydrated } from "../src/hooks/useHydrated";
 import { colors } from "../src/theme/colors";
 import { prefetchAllFigures } from "../src/content";
 import { lockPortrait } from "../src/hooks/useQuestionOrientation";
+import "../src/services/classroomFlag"; // reads ?mock= at load
 import { DevToolsButton } from "../src/dev/DevToolsPanel";
 
 export default function RootLayout() {
@@ -34,6 +35,9 @@ export default function RootLayout() {
   const onboarded = useProfile((s) => s.onboarded);
   const router = useRouter();
   const segments = useSegments();
+  // The teacher dashboard (/teacher, web) has its own sign-in and uses a teacher account, not a student's: none of the
+  // student set-up below (profile reset, account restore, server sync, route guard) applies there.
+  const inTeacher = segments[0] === "teacher";
 
   // Auth listener (Firebase persists the session; offline start still resolves from cache).
   useEffect(() => {
@@ -53,21 +57,21 @@ export default function RootLayout() {
 
   // A different account on this device starts clean; same account keeps local progress.
   useEffect(() => {
-    if (!hydrated || !user) return;
+    if (!hydrated || !user || inTeacher) return;
     const p = useProfile.getState();
     if (p.uid && p.uid !== user.uid) resetAllStores();
     useProfile.getState().set({ uid: user.uid, email: user.email });
-  }, [hydrated, user]);
+  }, [hydrated, user, inTeacher]);
 
   // New device / reinstall: after sign-in, look the account up on the server BEFORE showing onboarding, so an
   // existing student gets progress, stars, inventory, look and entitlement back instead of a blank start.
   const [restore, setRestore] = useState<"idle" | "checking" | "done">("idle");
   useEffect(() => { if (!user) setRestore("idle"); }, [user]);
   useEffect(() => {
-    if (!hydrated || !user || onboarded || restore !== "idle") return;
+    if (!hydrated || !user || onboarded || restore !== "idle" || inTeacher) return;
     setRestore("checking");
     void restoreAccount().finally(() => setRestore("done"));
-  }, [hydrated, user, onboarded, restore]);
+  }, [hydrated, user, onboarded, restore, inTeacher]);
   const restoring = !!user && !onboarded && restore !== "done";
 
   const signedIn = !!user || uid === "guest"; // "guest" = dev-only mode when Firebase is not configured
@@ -84,7 +88,7 @@ export default function RootLayout() {
 
   // Route guard.
   useEffect(() => {
-    if (!hydrated || !ready || restoring) return;
+    if (!hydrated || !ready || restoring || inTeacher) return;
     const group = segments[0] as string | undefined;
     const inOnboarding = group === "(onboarding)";
     const onLogin = inOnboarding && (segments as string[])[1] === "login";
@@ -95,7 +99,7 @@ export default function RootLayout() {
     } else if (inOnboarding || group === undefined) {
       router.replace("/(tabs)/map");
     }
-  }, [hydrated, ready, restoring, signedIn, onboarded, segments, router]);
+  }, [hydrated, ready, restoring, signedIn, onboarded, segments, router, inTeacher]);
 
   // Keep progress initialised for the active grade.
   useEffect(() => {
@@ -107,7 +111,7 @@ export default function RootLayout() {
 
   // Server sync: bootstrap, RevenueCat, friends, offline queue flush whenever we are online.
   useEffect(() => {
-    if (!hydrated || !user || !onboarded) return;
+    if (!hydrated || !user || !onboarded || inTeacher) return;
     let cancelled = false;
     const run = async () => {
       if (cancelled) return;
@@ -128,7 +132,7 @@ export default function RootLayout() {
     const appState = AppState.addEventListener("change", (st) => { if (st === "active") void refreshQuestionPatches(); });
     const timer = setInterval(run, 60_000);
     return () => { cancelled = true; unsub(); appState.remove(); clearInterval(timer); stopCloudSync(); };
-  }, [hydrated, user, onboarded]);
+  }, [hydrated, user, onboarded, inTeacher]);
 
   if (!hydrated || !ready || !fontsReady) {
     return (
@@ -143,6 +147,7 @@ export default function RootLayout() {
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg } }}>
         <Stack.Screen name="level/[grade]/[nodeId]/[level]" options={{ gestureEnabled: false }} />
         <Stack.Screen name="minigame/[mode]" options={{ gestureEnabled: false }} />
+        <Stack.Screen name="test/[taskId]" options={{ gestureEnabled: false }} />
       </Stack>
       <DevToolsButton />
       {/* Looking the account up after sign-in: cover the screens instead of unmounting the navigator (a remount loses
