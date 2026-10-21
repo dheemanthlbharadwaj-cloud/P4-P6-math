@@ -149,7 +149,7 @@ export default function RootLayout() {
         <Stack.Screen name="minigame/[mode]" options={{ gestureEnabled: false }} />
         <Stack.Screen name="test/[taskId]" options={{ gestureEnabled: false }} />
       </Stack>
-      <DevToolsButton />
+      {inTeacher ? null : <DevToolsButton />}
       {/* Looking the account up after sign-in: cover the screens instead of unmounting the navigator (a remount loses
           the route and lands on a screen without its params). */}
       {restoring ? (

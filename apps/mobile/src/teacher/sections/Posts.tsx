@@ -87,7 +87,7 @@ function PostCard({ p, task, onDelete, busy }: { p: ClassPost; task?: ClassTask;
         {badge ? <Badge text={badge} tone={p.kind === "birthday" ? "pink" : "gold"} /> : <Badge text="You" tone="blue" />}
         <Muted style={{ fontSize: 13 }}>{formatDateTime(p.createdAt)}</Muted>
         {task ? <Badge text={task.title} tone="grey" /> : null}
-        <View style={{ marginLeft: "auto" }}>{p.kind === "teacher" ? <ConfirmButton title="Delete" confirmTitle="Sure? Delete" onConfirm={onDelete} disabled={busy} /> : <ConfirmButton title="Hide" confirmTitle="Sure? Delete" onConfirm={onDelete} disabled={busy} />}</View>
+        <View style={{ marginLeft: "auto" }}><ConfirmButton title="Delete" confirmTitle="Sure? Delete" onConfirm={onDelete} disabled={busy} /></View>
       </View>
       <Text style={{ fontSize: 16, color: colors.ink, lineHeight: 23 }}>{p.text}</Text>
       {p.attachments?.length ? (

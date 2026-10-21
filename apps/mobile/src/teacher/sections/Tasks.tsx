@@ -104,7 +104,7 @@ export function TasksSection() {
         {tasks.loading && !tasks.data ? <Spinner /> : (
           <Table
             empty="Nothing yet. Create a worksheet or a test above."
-            columns={[{ key: "t", title: "Title", flex: 3 }, { key: "b", title: "Based on", flex: 2.2 }, { key: "q", title: "Qs", width: 52, align: "center" }, { key: "d", title: "Created", width: 100 }, { key: "u", title: "Due", width: 100 }, { key: "a", title: "", flex: 3.4, align: "right" }]}
+            columns={[{ key: "t", title: "Title", flex: 2.6 }, { key: "b", title: "Based on", flex: 2 }, { key: "q", title: "Qs", width: 44, align: "center" }, { key: "d", title: "Created", width: 108 }, { key: "u", title: "Due", width: 108 }, { key: "a", title: "", flex: 4.2, align: "right" }]}
             rows={list.map((t) => ({
               key: t.id,
               cells: [
