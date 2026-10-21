@@ -86,7 +86,7 @@ export const teacherApi = {
   post: (r: PostReq) => call<PostReq, { post: TClassPost }>("teacherPost", r),
   deletePost: (classId: string, postId: string) => call<{ classId: string; postId: string }, { ok: true }>("teacherDeletePost", { classId, postId }),
   /** Proposed, not in CallableName yet: the backend answers "not-found"/"unknown" until it exists. */
-  listPosts: (r: ListPostsReq) => call<ListPostsReq, { posts: TClassPost[] }>("teacherListPosts" as never, r),
+  listPosts: (r: ListPostsReq) => call<ListPostsReq, { posts: TClassPost[] }>("teacherListPosts", r),
   uploadSignature: (classId: string, fileName: string) => call<{ classId: string; fileName: string }, UploadSignature>("teacherUploadSignature", { classId, fileName }),
   createTask: (r: CreateTaskReq) => call<CreateTaskReq, { task: TClassTask }>("teacherCreateTask", r),
   listTasks: (classId: string) => call<{ classId: string }, { tasks: TClassTask[] }>("teacherListTasks", { classId }),

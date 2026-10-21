@@ -109,6 +109,7 @@ export interface ClassAnalytics {
 //   teacherRemoveStudent    { classId; studentUid } → { ok: true }
 //   teacherSetBirthday      { classId; studentUid; birthday: string | null } → { ok: true }
 //   teacherPost             { classId; text: string; attachments?: PostAttachment[]; taskId?: string } → { post: ClassPost }
+//   teacherListPosts        { classId; before?: number } → { posts: ClassPost[] }  (newest first, one page)
 //   teacherDeletePost       { classId; postId } → { ok: true }
 //   teacherUploadSignature  { classId; fileName: string } → { cloudName; apiKey; timestamp; signature; folder; publicId }
 //                           (signed Cloudinary upload for answer sheets: folder p6maths/classroom/<classId>)

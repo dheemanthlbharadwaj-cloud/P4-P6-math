@@ -21,7 +21,7 @@ function Cell({ value, onToggle, onKey, label, innerRef }: { value?: "right" | "
   return (
     <Pressable
       ref={innerRef as never} onPress={onToggle} {...webKeys} accessibilityRole="checkbox" accessibilityLabel={label}
-      accessibilityState={{ checked: right ? true : wrong ? false : "mixed" }}
+      aria-checked={right ? true : wrong ? false : "mixed"}
       style={({ pressed }) => [{ width: CELL, height: CELL - 6, marginHorizontal: 3, borderRadius: 10, borderWidth: 2, alignItems: "center", justifyContent: "center",
         borderColor: right ? colors.good : wrong ? colors.bad : "#d9cfc6", backgroundColor: right ? colors.goodBg : wrong ? colors.badBg : "#fff" }, pressed && { opacity: 0.7 }]}
     >

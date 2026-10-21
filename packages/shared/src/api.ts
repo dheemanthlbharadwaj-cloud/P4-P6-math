@@ -42,7 +42,7 @@ export type CallableName =
   | "claimDailyQuest"
   // classroom.ts
   | "teacherGetDashboard" | "teacherSaveClass" | "teacherDeleteClass" | "teacherAddStudent" | "teacherRemoveStudent"
-  | "teacherSetBirthday" | "teacherPost" | "teacherDeletePost" | "teacherUploadSignature" | "teacherCreateTask"
+  | "teacherSetBirthday" | "teacherPost" | "teacherDeletePost" | "teacherListPosts" | "teacherUploadSignature" | "teacherCreateTask"
   | "teacherListTasks" | "teacherGetTaskMarks" | "teacherMarkTask" | "teacherGetAnalytics"
   | "getMyClassroom" | "submitTaskAnswers";
 

@@ -98,11 +98,7 @@ export function Table({ columns, rows, empty = "Nothing here yet." }: { columns:
       {rows.length === 0 ? <View style={{ padding: space.l }}><Muted>{empty}</Muted></View> : null}
       {rows.map((r, ri) => (
         <View key={r.key}>
-          <Pressable
-            disabled={!r.onPress} onPress={r.onPress} accessibilityRole={r.onPress ? "button" : undefined}
-            {...(r.title ? ({ title: r.title } as object) : {})}
-            style={(st) => { const hovered = (st as { hovered?: boolean }).hovered; return [s.tr, ri % 2 === 1 && { backgroundColor: "#fffbf3" }, r.highlight && { backgroundColor: colors.highlight }, r.onPress && hovered && { backgroundColor: colors.friend }]; }}
-          >
+          <RowShell row={r} stripe={ri % 2 === 1}>
             {r.cells.map((cell, ci) => (
               <View key={ci} style={[s.td, cellStyle(columns[ci])]}>
                 {typeof cell === "string" || typeof cell === "number"
@@ -110,11 +106,23 @@ export function Table({ columns, rows, empty = "Nothing here yet." }: { columns:
                   : cell}
               </View>
             ))}
-          </Pressable>
+          </RowShell>
           {r.expanded ? <View style={s.expanded}>{r.expanded}</View> : null}
         </View>
       ))}
     </View>
+  );
+}
+
+/** A table row: pressable (hover highlight) only when it has an action, else a plain row (so inputs inside stay enabled). */
+function RowShell({ row, stripe, children }: { row: RowData; stripe: boolean; children: React.ReactNode }) {
+  const base: ViewStyle[] = [s.tr, stripe ? { backgroundColor: "#fffbf3" } : {}, row.highlight ? { backgroundColor: colors.highlight } : {}];
+  if (!row.onPress) return <View style={base}>{children}</View>;
+  return (
+    <Pressable onPress={row.onPress} accessibilityRole="button" {...(row.title ? ({ title: row.title } as object) : {})}
+      style={(st) => [...base, (st as { hovered?: boolean }).hovered ? { backgroundColor: colors.friend } : {}]}>
+      {children}
+    </Pressable>
   );
 }
 

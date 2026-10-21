@@ -20,7 +20,7 @@ const CALLABLES = new Set([
   "sendFriendRequest", "respondFriendRequest", "getLeaderboard", "refreshPublicProfile", "reportQuestion", "updateProfile", "syncProgress", "listFriendRequests", "deleteAccount", "getDailyQuests", "claimDailyQuest", "getQuestionPatches",
   // classroom (packages/shared/src/classroom.ts)
   "teacherGetDashboard", "teacherSaveClass", "teacherDeleteClass", "teacherAddStudent", "teacherRemoveStudent", "teacherSetBirthday", "teacherPost",
-  "teacherDeletePost", "teacherUploadSignature", "teacherCreateTask", "teacherListTasks", "teacherGetTaskMarks", "teacherMarkTask", "teacherGetAnalytics",
+  "teacherDeletePost", "teacherListPosts", "teacherUploadSignature", "teacherCreateTask", "teacherListTasks", "teacherGetTaskMarks", "teacherMarkTask", "teacherGetAnalytics",
   "getMyClassroom", "submitTaskAnswers",
 ]);
 // Callable error code → HTTP status (same table as Firebase callables).

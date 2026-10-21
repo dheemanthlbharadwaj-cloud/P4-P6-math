@@ -322,6 +322,17 @@ export const teacherDeletePost = onCall(async (req): Promise<{ ok: true }> => {
   return { ok: true };
 });
 
+/** A class's feed for the dashboard, newest first, one page (CLASS_LIMITS.feedPage reads); `before` = createdAt cursor. */
+export const teacherListPosts = onCall(async (req): Promise<{ posts: ClassPost[] }> => {
+  const { uid } = await requireTeacher(req);
+  const d = obj(req.data);
+  const cls = await ownedClass(uid, d.classId);
+  let q = postsRef(cls.id).orderBy("createdAt", "desc");
+  if (typeof d.before === "number") q = q.startAfter(d.before);
+  const snap = await q.limit(CLASS_LIMITS.feedPage).get();
+  return { posts: snap.docs.map((x) => x.data() as ClassPost) };
+});
+
 const CLOUDINARY_CLOUD = process.env.CLOUDINARY_CLOUD_NAME || "n9gn4u6k";
 const CLOUDINARY_KEY = process.env.CLOUDINARY_KEY || "465242564664612";
 /** Signed Cloudinary upload parameters for an answer sheet: the secret never leaves the server (CLOUDINARY_SECRET). */
