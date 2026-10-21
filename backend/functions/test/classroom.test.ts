@@ -417,3 +417,17 @@ describe("feed cache", () => {
     expect(calls.newest).toBe(3); // hard TTL: deleted posts disappear
   });
 });
+
+describe("callable wiring", () => {
+  it("every callable the Netlify handler serves is exported from index.ts", async () => {
+    const fs = await import("node:fs");
+    const url = await import("node:url");
+    const here = url.fileURLToPath(new URL(".", import.meta.url));
+    const handler = fs.readFileSync(here + "../../netlify/handler.mjs", "utf8");
+    const set = handler.slice(handler.indexOf("const CALLABLES"), handler.indexOf("]);", handler.indexOf("const CALLABLES")));
+    const names = [...set.matchAll(/"(\w+)"/g)].map((m) => m[1]);
+    const index = fs.readFileSync(here + "../src/index.ts", "utf8");
+    const missing = names.filter((n) => !new RegExp(`\\b${n}\\b`).test(index));
+    expect(missing).toEqual([]);
+  });
+});

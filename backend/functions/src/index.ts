@@ -10,6 +10,6 @@ export { getDailyQuests, claimDailyQuest } from "./dailyQuests.js";
 export { getQuestionPatches } from "./patches.js";
 export {
   teacherGetDashboard, teacherSaveClass, teacherDeleteClass, teacherAddStudent, teacherRemoveStudent, teacherSetBirthday, teacherPost,
-  teacherDeletePost, teacherUploadSignature, teacherCreateTask, teacherListTasks, teacherGetTaskMarks, teacherMarkTask, teacherGetAnalytics,
+  teacherDeletePost, teacherListPosts, teacherUploadSignature, teacherCreateTask, teacherListTasks, teacherGetTaskMarks, teacherMarkTask, teacherGetAnalytics,
   getMyClassroom, submitTaskAnswers, classroomNightly,
 } from "./classroom.js";
