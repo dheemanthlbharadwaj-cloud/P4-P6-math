@@ -39,7 +39,12 @@ export type CallableName =
   | "listFriendRequests"
   | "deleteAccount"
   | "getDailyQuests"
-  | "claimDailyQuest";
+  | "claimDailyQuest"
+  // classroom.ts
+  | "teacherGetDashboard" | "teacherSaveClass" | "teacherDeleteClass" | "teacherAddStudent" | "teacherRemoveStudent"
+  | "teacherSetBirthday" | "teacherPost" | "teacherDeletePost" | "teacherUploadSignature" | "teacherCreateTask"
+  | "teacherListTasks" | "teacherGetTaskMarks" | "teacherMarkTask" | "teacherGetAnalytics"
+  | "getMyClassroom" | "submitTaskAnswers";
 
 /** Server-owned account state: everything needed to restore a device (stars, inventory, look, entitlement). */
 export interface AccountState {

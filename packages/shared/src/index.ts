@@ -6,3 +6,4 @@ export * from "./stars";
 export * from "./progress";
 export * from "./names";
 export * from "./answerHint";
+export * from "./classroom";
