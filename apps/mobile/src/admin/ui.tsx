@@ -21,7 +21,7 @@ export function Select({ label, value, onChange, options, disabled, style }: { l
         {
           value, disabled, "aria-label": label,
           onChange: (e: { target: { value: string } }) => onChange(e.target.value),
-          style: { minHeight: 44, border: `2px solid ${colors.border}`, borderRadius: radius.s, padding: "8px 12px", fontSize: 16, background: "#fff", color: colors.ink, fontFamily: "inherit", maxWidth: "100%" },
+          style: { minHeight: 44, border: `2px solid ${colors.border}`, borderRadius: radius.s, padding: "8px 12px", fontSize: 16, background: "#fff", color: colors.ink, fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif", maxWidth: "100%" },
         },
         options.map((o) => React.createElement("option", { key: o.value, value: o.value }, o.label)),
       )}

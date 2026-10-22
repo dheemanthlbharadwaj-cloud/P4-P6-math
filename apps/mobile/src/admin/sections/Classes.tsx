@@ -20,7 +20,8 @@ function NewClass({ defaultTeacher }: { defaultTeacher: string }) {
   useEffect(() => { if (defaultTeacher) setTeacherUid(defaultTeacher); }, [defaultTeacher]);
   const { busy, error, run } = useAction();
   const options = sortTeachers(teachers).map((t) => ({ value: t.uid, label: t.active ? t.name : `${t.name} (disabled)` }));
-  const chosen = teacherUid || options[0]?.value || "";
+  const firstActive = sortTeachers(teachers).find((t) => t.active)?.uid ?? options[0]?.value ?? "";
+  const chosen = options.some((o) => o.value === teacherUid) ? teacherUid : firstActive;
   const create = () => void run(async () => {
     const { classId } = await backend.saveClass({ name: name.trim(), grade, teacherUid: chosen });
     const row: AdminClassRow = { id: classId, name: name.trim(), grade, teacherUid: chosen, teacherName: teacherNameOf(teachers, chosen), students: [], createdAt: Date.now() };
