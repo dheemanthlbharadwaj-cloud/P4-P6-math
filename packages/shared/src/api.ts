@@ -44,7 +44,10 @@ export type CallableName =
   | "teacherGetDashboard" | "teacherSaveClass" | "teacherDeleteClass" | "teacherAddStudent" | "teacherRemoveStudent"
   | "teacherSetBirthday" | "teacherPost" | "teacherDeletePost" | "teacherListPosts" | "teacherUploadSignature" | "teacherCreateTask"
   | "teacherListTasks" | "teacherGetTaskMarks" | "teacherMarkTask" | "teacherGetAnalytics"
-  | "getMyClassroom" | "submitTaskAnswers";
+  | "getMyClassroom" | "submitTaskAnswers"
+  // admin.ts
+  | "adminGetOverview" | "adminSaveTeacher" | "adminSetTeacherActive" | "adminResetPassword" | "adminFindUser"
+  | "adminSetUserDisabled" | "adminSaveClass" | "adminDeleteClass" | "adminAddStudent" | "adminRemoveStudent";
 
 /** Server-owned account state: everything needed to restore a device (stars, inventory, look, entitlement). */
 export interface AccountState {
