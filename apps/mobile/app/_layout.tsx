@@ -37,7 +37,8 @@ export default function RootLayout() {
   const segments = useSegments();
   // The teacher dashboard (/teacher, web) has its own sign-in and uses a teacher account, not a student's: none of the
   // student set-up below (profile reset, account restore, server sync, route guard) applies there.
-  const inTeacher = segments[0] === "teacher";
+  // The owner's admin dashboard (/admin) is treated the same way.
+  const inTeacher = segments[0] === "teacher" || segments[0] === "admin";
 
   // Auth listener (Firebase persists the session; offline start still resolves from cache).
   useEffect(() => {

@@ -94,3 +94,19 @@ export const teacherApi = {
   markTask: (r: MarkTaskReq) => call<MarkTaskReq, { starsAwarded: number }>("teacherMarkTask", r),
   getAnalytics: (r: AnalyticsReq) => call<AnalyticsReq, { class: ClassAnalytics; student?: StudentAnalytics }>("teacherGetAnalytics", r),
 };
+
+// Admin (owner) dashboard (web). Contract: packages/shared/src/admin.ts ("Callables"); used through src/admin/client.ts.
+import type { AdminOverview, SaveAdminClassReq } from "../admin/types";
+import type { AdminUserRow, TeacherDoc } from "@p6/shared";
+export const adminApi = {
+  getOverview: () => call<Record<string, never>, AdminOverview>("adminGetOverview", {}),
+  saveTeacher: (email: string, name: string) => call<{ email: string; name: string }, { teacher: TeacherDoc; password?: string }>("adminSaveTeacher", { email, name }),
+  setTeacherActive: (uid: string, active: boolean) => call<{ uid: string; active: boolean }, { ok: true }>("adminSetTeacherActive", { uid, active }),
+  resetPassword: (uid: string) => call<{ uid: string }, { password: string }>("adminResetPassword", { uid }),
+  findUser: (query: string) => call<{ query: string }, { users: AdminUserRow[] }>("adminFindUser", { query }),
+  setUserDisabled: (uid: string, disabled: boolean) => call<{ uid: string; disabled: boolean }, { ok: true }>("adminSetUserDisabled", { uid, disabled }),
+  saveClass: (r: SaveAdminClassReq) => call<SaveAdminClassReq, { classId: string }>("adminSaveClass", r),
+  deleteClass: (classId: string) => call<{ classId: string }, { ok: true }>("adminDeleteClass", { classId }),
+  addStudent: (classId: string, friendCode: string) => call<{ classId: string; friendCode: string }, { student: ClassStudent }>("adminAddStudent", { classId, friendCode }),
+  removeStudent: (classId: string, studentUid: string) => call<{ classId: string; studentUid: string }, { ok: true }>("adminRemoveStudent", { classId, studentUid }),
+};
