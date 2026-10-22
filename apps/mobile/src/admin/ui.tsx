@@ -51,7 +51,7 @@ export function SecretBox({ title, password, onClose }: { title: string; passwor
         <Button title="Close" small variant="ghost" onPress={onClose} />
       </View>
       {copied === false ? <Text style={{ fontSize: 13, color: colors.bad, marginBottom: 4 }}>Couldn't copy. Select the password and copy it by hand.</Text> : null}
-      <Muted>Give this to the teacher privately. It won't be shown again.</Muted>
+      <Muted>Give this to them privately. It won't be shown again.</Muted>
     </View>
   );
 }
