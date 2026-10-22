@@ -66,11 +66,11 @@ const idOf = (v: unknown, what: string): string => {
 const obj = (v: unknown): Record<string, unknown> => ((v && typeof v === "object" ? v : {}) as Record<string, unknown>);
 
 // ---------------------------------------------------------------- refs and caches
-const classRef = (id: string) => db.collection(col.classes).doc(id);
+export const classRef = (id: string) => db.collection(col.classes).doc(id);
 const postsRef = (classId: string) => classRef(classId).collection("posts");
 const tasksRef = (classId: string) => classRef(classId).collection("tasks");
 const marksRef = (classId: string, taskId: string, uid: string) => tasksRef(classId).doc(taskId).collection("marks").doc(uid);
-const userRef = (uid: string) => db.collection(col.users).doc(uid);
+export const userRef = (uid: string) => db.collection(col.users).doc(uid);
 const levelStarsRef = (uid: string, grade: string, key: string) => userRef(uid).collection("levelStars").doc(`${grade}_${key}`);
 export const qstatsRef = (uid: string, grade: string) => userRef(uid).collection("qstats").doc(grade);
 
@@ -101,7 +101,7 @@ const feed = new FeedCache({
   },
 }, FEED_PAGE);
 
-async function loadClass(classId: string): Promise<ClassDoc | null> {
+export async function loadClass(classId: string): Promise<ClassDoc | null> {
   const hit = classCache.get(classId);
   if (hit !== undefined) return hit;
   const snap = await classRef(classId).get();
@@ -110,11 +110,17 @@ async function loadClass(classId: string): Promise<ClassDoc | null> {
   return c;
 }
 /** Teacher-side writes to a class clear what this instance cached about it. */
-function touchClass(c: Pick<ClassDoc, "id" | "teacherUid"> & { students?: ClassStudent[] }): void {
+export function touchClass(c: Pick<ClassDoc, "id" | "teacherUid"> & { students?: ClassStudent[] }): void {
   classCache.delete(c.id);
   teacherClassesCache.delete(c.teacherUid);
   analyticsCache.delete(c.id);
   for (const s of c.students ?? []) userInfoCache.delete(s.uid);
+}
+
+/** Admin writes to a teacher record: this instance forgets what it cached (other instances catch up within the 60 s TTL). */
+export function forgetTeacher(uid: string): void {
+  teacherCache.delete(uid);
+  teacherNameCache.delete(uid);
 }
 
 async function requireTeacher(req: Parameters<typeof requireUid>[0]): Promise<{ uid: string; teacher: TeacherDoc }> {
@@ -200,7 +206,7 @@ export const teacherSaveClass = onCall(async (req): Promise<{ classId: string }>
   touchClass(doc);
   return { classId: id };
 });
-async function teacherClasses(uid: string): Promise<ClassDoc[]> {
+export async function teacherClasses(uid: string): Promise<ClassDoc[]> {
   const hit = teacherClassesCache.get(uid);
   if (hit) return hit;
   const s = await db.collection(col.classes).where("teacherUid", "==", uid).limit(MAX_CLASSES_PER_TEACHER + 20).get();
@@ -210,10 +216,11 @@ async function teacherClasses(uid: string): Promise<ClassDoc[]> {
   return classes;
 }
 
-export const teacherDeleteClass = onCall(async (req): Promise<{ ok: true }> => {
-  const { uid } = await requireTeacher(req);
-  const cls = await ownedClass(uid, obj(req.data).classId);
-  // students lose the class first (a failure half way leaves them in a class that is still there, not in a missing one)
+/**
+ * Deletes a class for good (shared by teacherDeleteClass and adminDeleteClass). Students lose the class first (a failure half
+ * way leaves them in a class that is still there, not in a missing one), then the doc and its posts / tasks / marks go.
+ */
+export async function deleteClassCascade(cls: ClassDoc): Promise<void> {
   for (let i = 0; i < cls.students.length; i += 400) {
     const batch = db.batch();
     for (const s of cls.students.slice(i, i + 400)) batch.set(userRef(s.uid), { classIds: FieldValue.arrayRemove(cls.id) }, { merge: true });
@@ -225,27 +232,32 @@ export const teacherDeleteClass = onCall(async (req): Promise<{ ok: true }> => {
   tasksCache.delete(cls.id);
   inAppTasksCache.delete(cls.id);
   classCache.set(cls.id, null);
+}
+export const teacherDeleteClass = onCall(async (req): Promise<{ ok: true }> => {
+  const { uid } = await requireTeacher(req);
+  await deleteClassCascade(await ownedClass(uid, obj(req.data).classId));
   return { ok: true };
 });
 
-export const teacherAddStudent = onCall(async (req): Promise<{ student: ClassStudent }> => {
-  const { uid } = await requireTeacher(req);
-  const d = obj(req.data);
-  const cls = await ownedClass(uid, d.classId);
-  const code = normalizeFriendCode(d.friendCode);
+/**
+ * Adds the student with this friend code to a class (shared by teacherAddStudent and adminAddStudent; the caller has already
+ * checked who may touch the class). Keeps users/{uid}.classIds in step. Already on the roster → returns that entry unchanged.
+ */
+export async function addStudentToClassByCode(cls: ClassDoc, friendCode: unknown): Promise<ClassStudent> {
+  const code = normalizeFriendCode(friendCode);
   if (!isFriendCode(code)) throw new HttpsError("not-found", "No student has this friend code.");
   const codeSnap = await db.collection(col.friendCodes).doc(code).get();
   const studentUid = codeSnap.exists ? (codeSnap.data()!.uid as string) : null;
   if (!studentUid) throw new HttpsError("not-found", "No student has this friend code.");
   const existing = cls.students.find((s) => s.uid === studentUid);
-  if (existing) return { student: existing };
+  if (existing) return existing;
   const u = (await userRef(studentUid).get()).data();
   if (!u) throw new HttpsError("not-found", "No student has this friend code.");
   const student: ClassStudent = { uid: studentUid, displayName: tidyName(String(u.fullName ?? "Student")) || "Student", ...(validBirthday(u.birthday) ? { birthday: u.birthday } : {}) };
   const res = await db.runTransaction(async (tx) => {
     const snap = await tx.get(classRef(cls.id));
     const cur = snap.data() as ClassDoc | undefined;
-    if (!cur || cur.teacherUid !== uid) throw new HttpsError("not-found", "No such class.");
+    if (!cur || cur.teacherUid !== cls.teacherUid) throw new HttpsError("not-found", "No such class.");
     const there = cur.students.find((s) => s.uid === studentUid);
     if (there) return { student: there, added: false };
     if (cur.students.length >= CLASS_LIMITS.maxStudents) throw new HttpsError("failed-precondition", `A class holds at most ${CLASS_LIMITS.maxStudents} students.`);
@@ -254,21 +266,30 @@ export const teacherAddStudent = onCall(async (req): Promise<{ student: ClassStu
   });
   if (res.added) await userRef(studentUid).set({ classIds: FieldValue.arrayUnion(cls.id) }, { merge: true });
   touchClass({ ...cls, students: [student] });
-  return { student: res.student };
-});
-
-export const teacherRemoveStudent = onCall(async (req): Promise<{ ok: true }> => {
+  return res.student;
+}
+export const teacherAddStudent = onCall(async (req): Promise<{ student: ClassStudent }> => {
   const { uid } = await requireTeacher(req);
   const d = obj(req.data);
   const cls = await ownedClass(uid, d.classId);
-  const studentUid = idOf(d.studentUid, "studentUid");
+  return { student: await addStudentToClassByCode(cls, d.friendCode) };
+});
+
+/** Takes a student off a class roster and the class off users/{uid}.classIds (shared by teacherRemoveStudent and adminRemoveStudent). */
+export async function removeStudentFromClass(cls: ClassDoc, studentUid: string): Promise<void> {
   await db.runTransaction(async (tx) => {
     const cur = (await tx.get(classRef(cls.id))).data() as ClassDoc | undefined;
-    if (!cur || cur.teacherUid !== uid) throw new HttpsError("not-found", "No such class.");
+    if (!cur || cur.teacherUid !== cls.teacherUid) throw new HttpsError("not-found", "No such class.");
     if (cur.students.some((s) => s.uid === studentUid)) tx.update(classRef(cls.id), { students: cur.students.filter((s) => s.uid !== studentUid) });
   });
   await userRef(studentUid).set({ classIds: FieldValue.arrayRemove(cls.id) }, { merge: true });
   touchClass({ ...cls, students: [{ uid: studentUid, displayName: "" }] });
+}
+export const teacherRemoveStudent = onCall(async (req): Promise<{ ok: true }> => {
+  const { uid } = await requireTeacher(req);
+  const d = obj(req.data);
+  const cls = await ownedClass(uid, d.classId);
+  await removeStudentFromClass(cls, idOf(d.studentUid, "studentUid"));
   return { ok: true };
 });
 

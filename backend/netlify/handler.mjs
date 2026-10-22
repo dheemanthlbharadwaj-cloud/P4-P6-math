@@ -22,6 +22,9 @@ const CALLABLES = new Set([
   "teacherGetDashboard", "teacherSaveClass", "teacherDeleteClass", "teacherAddStudent", "teacherRemoveStudent", "teacherSetBirthday", "teacherPost",
   "teacherDeletePost", "teacherListPosts", "teacherUploadSignature", "teacherCreateTask", "teacherListTasks", "teacherGetTaskMarks", "teacherMarkTask", "teacherGetAnalytics",
   "getMyClassroom", "submitTaskAnswers",
+  // admin dashboard (packages/shared/src/admin.ts; functions/src/adminDashboard.ts)
+  "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword", "adminFindUser", "adminSetUserDisabled", "adminSaveClass",
+  "adminDeleteClass", "adminAddStudent", "adminRemoveStudent",
 ]);
 // Callable error code → HTTP status (same table as Firebase callables).
 const STATUS = {

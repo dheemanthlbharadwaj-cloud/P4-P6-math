@@ -81,6 +81,8 @@ export const col = {
   entitlements: "entitlements",
   config: "config",
   teachers: "teachers", // classroom (classroom.ts contract): teachers/{uid}
+  admins: "admins", // owner dashboard (packages/shared/src/admin.ts): admins/{uid}, written only by backend/scripts/add-admin.mjs
+  adminLog: "adminLog", // one doc per admin write (server only)
   classes: "classes", // classes/{id} + posts, tasks, tasks/{id}/marks (server only)
   questions: "questions", // the question bank (EDITOR project; read only here: use editorDb)
   questionReports: "question_reports", // EDITOR project (use editorDb)

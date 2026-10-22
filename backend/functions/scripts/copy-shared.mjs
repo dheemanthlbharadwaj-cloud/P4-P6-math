@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 const here = path.dirname(fileURLToPath(import.meta.url));
 const from = path.resolve(here, "../../../packages/shared/src");
 const to = path.resolve(here, "../src/shared");
-const FILES = ["types", "gameRules", "api", "stars", "progress", "answer", "names", "classroom"]; // answer.ts: the server marks answers itself
+const FILES = ["types", "gameRules", "api", "stars", "progress", "answer", "names", "classroom", "admin"]; // answer.ts: the server marks answers itself
 fs.mkdirSync(to, { recursive: true });
 for (const f of FILES) {
   let src = fs.readFileSync(path.join(from, `${f}.ts`), "utf8");

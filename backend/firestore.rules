@@ -11,7 +11,9 @@ rules_version = '2';
 // leaderboardSnapshots, leaderboardMeta, medals, entitlements, question_reports.
 // Classroom (packages/shared/src/classroom.ts): teachers, classes (+ posts, tasks, tasks/{id}/marks) and users/{uid}/qstats,
 // levelStars, attempted are server only too: the catch-all below denies every client, signed in or not, so nothing
-// more is needed here (and backend/scripts/deploy-rules.mjs keeps deploying this one file to both projects unchanged).
+// more is needed here. Same for admins/{uid} and adminLog/{id} (owner dashboard, packages/shared/src/admin.ts): no client
+// ever reads or writes them, admins are created only by backend/scripts/add-admin.mjs (Admin SDK / REST with the setup account).
+// (backend/scripts/deploy-rules.mjs keeps deploying this one file to both projects unchanged.)
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {

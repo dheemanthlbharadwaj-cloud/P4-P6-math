@@ -13,3 +13,7 @@ export {
   teacherDeletePost, teacherListPosts, teacherUploadSignature, teacherCreateTask, teacherListTasks, teacherGetTaskMarks, teacherMarkTask, teacherGetAnalytics,
   getMyClassroom, submitTaskAnswers, classroomNightly,
 } from "./classroom.js";
+export {
+  adminGetOverview, adminSaveTeacher, adminSetTeacherActive, adminResetPassword, adminFindUser, adminSetUserDisabled, adminSaveClass,
+  adminDeleteClass, adminAddStudent, adminRemoveStudent,
+} from "./adminDashboard.js";

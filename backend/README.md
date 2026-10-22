@@ -184,3 +184,21 @@ The dev server (port 8888) runs the same handler as Netlify; `POST /nightly` run
 mini games, leaderboard, friends, referrals, quests, the store and question reports all run against the local
 backend. `npm run test:rules` also checks the merged editor + student rules (`test-rules/merged.rules.test.ts`,
 editor rules snapshot in `test-rules/editor.fixture.rules`).
+
+## Admin dashboard (owner: teachers, classes, logins)
+
+Contract: `packages/shared/src/admin.ts`. Code: `functions/src/adminDashboard.ts` (ten `admin*` callables, listed in `netlify/handler.mjs`;
+the file is not `admin.ts` because that one is the Firebase Admin SDK setup), pure rules in `functions/src/logic/admin.ts`
+(access, query parsing, password generator, validators, user rows). Tests: `functions/test/admin.test.ts`.
+
+- **Admins**: `node backend/scripts/add-admin.mjs --project catapult-math-students --email … --name "…" [--dry]` creates the Auth user
+  (generated password in a 0600 file in `--out-dir`, never printed) and `admins/{uid}`. An email that already has a login (the
+  owner's Google account) is reused and gets no password unless `--reset-password`. `--disable` turns an admin off (refused within 60 s).
+- **Data** (server only, `firestore.rules` denies every client): `admins/{uid}`, `adminLog/{id}` (one doc per admin write: who, what,
+  target, when; never a password).
+- **Shared with the teacher code**: `classroom.ts` exports `deleteClassCascade`, `addStudentToClassByCode`, `removeStudentFromClass`,
+  `forgetTeacher`; the admin callables call them without the ownership check, so limits and caches behave the same.
+- **Reads**: table at the top of `adminDashboard.ts`; admin doc cached 60 s, overview 60 s per instance, no "list all users" call.
+- Disabling a login or teacher also revokes its refresh tokens; an ID token already issued can still be accepted for up to an hour
+  by the student callables (teacher callables stop within the 60 s teacher-doc cache).
+- Use it only with the split student/editor projects: with no `STUDENT_*` vars `admins` would be the question editor's own collection.

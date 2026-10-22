@@ -21,6 +21,8 @@ const PATHS = [
   "leaderboards/monthly-2026-10/entries/alice", "medals/alice", "entitlements/alice", "question_reports/q1__alice",
   // classroom
   "teachers/alice", "classes/c1", "classes/c1/posts/p1", "classes/c1/tasks/t1", "classes/c1/tasks/t1/marks/alice", "users/alice/qstats/P6",
+  // admin dashboard
+  "admins/alice", "adminLog/l1",
 ];
 
 beforeEach(async () => {
