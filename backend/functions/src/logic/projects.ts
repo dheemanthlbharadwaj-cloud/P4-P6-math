@@ -47,3 +47,6 @@ export async function verifyWithFallback<T>(primary: (t: string) => Promise<T>, 
     try { return await legacy(token); } catch { throw e; }
   }
 }
+
+/** Callables of the teacher and admin dashboards check for revoked / disabled logins on every call; student callables don't (no extra Auth call). */
+export const needsRevocationCheck = (callable: string): boolean => /^(admin|teacher)[A-Z]/.test(callable);

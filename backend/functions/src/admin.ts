@@ -52,9 +52,13 @@ function getLegacyAuth(): Auth | null {
   }
   return legacyAuth;
 }
-/** Verifies a Firebase ID token against the student project, then (if configured) the legacy project. */
-export const verifyIdToken = (token: string) =>
-  verifyWithFallback((t) => auth.verifyIdToken(t), cfg.legacyAuthProjectId ? (t) => getLegacyAuth()!.verifyIdToken(t) : null, token);
+/**
+ * Verifies a Firebase ID token against the student project, then (if configured) the legacy project. `checkRevoked` (admin* and
+ * teacher* callables, see needsRevocationCheck) also asks Auth whether the login is disabled or its tokens were revoked: one extra
+ * Auth lookup, so a disabled login loses access at once instead of when its 1 h token expires.
+ */
+export const verifyIdToken = (token: string, checkRevoked = false) =>
+  verifyWithFallback((t) => auth.verifyIdToken(t, checkRevoked), cfg.legacyAuthProjectId ? (t) => getLegacyAuth()!.verifyIdToken(t, checkRevoked) : null, token);
 export { FieldValue };
 
 export function requireUid(req: CallableRequest): string {

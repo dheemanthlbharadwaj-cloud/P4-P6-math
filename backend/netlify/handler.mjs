@@ -13,6 +13,7 @@ import admin from "./lib/admin.js";
 import rc from "./lib/logic/revenuecat.js";
 import dates from "./lib/logic/dates.js";
 import rateLimit from "./lib/logic/rateLimit.js";
+import projects from "./lib/logic/projects.js";
 import classroom from "./lib/classroom.js";
 
 const CALLABLES = new Set([
@@ -72,7 +73,7 @@ export async function handleApi(request) {
   const token = (request.headers.get("authorization") ?? "").match(/^Bearer (.+)$/)?.[1];
   if (token) {
     try {
-      const decoded = await admin.verifyIdToken(token);
+      const decoded = await admin.verifyIdToken(token, projects.needsRevocationCheck(name)); // admin*/teacher*: disabled or revoked logins are refused at once
       auth = { uid: decoded.uid, token: decoded, rawToken: token };
     } catch { return fail("unauthenticated", "Sign in again."); }
   }
