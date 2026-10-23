@@ -6,19 +6,19 @@
 // │ call                     │ cold                                         │ warm                                      │
 // ├──────────────────────────┼──────────────────────────────────────────────┼───────────────────────────────────────────┤
 // │ teacherGetDashboard      │ 1 teacher + N classes (query)                │ 0 (60 s; any class write here clears it)  │
-// │ teacherSaveClass         │ new: 1 teacher + N classes (limit check)     │ new: 0; edit: 0 (class doc cached 60 s)   │
-// │ teacherDeleteClass       │ 1 + docs deleted (posts, tasks, marks)       │ same                                      │
+// │ teacherSaveClass         │ new: 1 teacher + N classes (limit check)     │ new: 0; rename: 1 class (always fresh)    │
+// │ teacherDeleteClass       │ 1 + 1 class (fresh) + docs deleted           │ 1 class (fresh) + docs deleted            │
 // │ teacherAddStudent        │ 1 teacher + 1 class + 1 friend code + 1 user │ 1 friend code + 1 user + 1 class (txn)    │
 // │                          │ + 1 class (txn)                              │                                           │
 // │ teacherRemoveStudent     │ 1 teacher + 1 class + 1 class (txn)          │ 1 (txn)                                   │
-// │ teacherSetBirthday       │ same as remove                               │ 1 (txn)                                   │
-// │ teacherPost / DeletePost │ 1 teacher + 1 class                          │ 0                                         │
+// │ teacherSetBirthday       │ same as remove (+ 1 fresh class)             │ 1 fresh class + 1 (txn)                   │
+// │ teacherPost / DeletePost │ 1 teacher + 1 class                          │ 1 class (fresh, so a moved class is gone) │
 // │ teacherUploadSignature   │ 1 teacher + 1 class                          │ 0                                         │
-// │ teacherCreateTask        │ 1 teacher + 1 class (+ edits: see patches)   │ 0                                         │
+// │ teacherCreateTask        │ 1 teacher + 1 class (+ edits: see patches)   │ 1 class (fresh)                           │
 // │ teacherListTasks         │ 1 + 1 + up to 100 tasks                      │ 0 (60 s, cleared by task writes here)     │
 // │ teacherGetTaskMarks      │ 1 + 1 + up to 60 marks docs                  │ up to 60 (not cached: marking screen)     │
-// │ teacherMarkTask          │ 1 + 1 class + 1 task + 1 marks + <=1 levelStars│ 1 task + 1 marks + levelStars per level  │
-// │                          │ per level touched (+1 wallet when stars)     │ (a worksheet = 1, a diagnostic <= 12)     │
+// │ teacherMarkTask          │ 1 + 1 class + 1 task + 1 marks + <=1 levelStars│ 1 class (fresh) + 1 task + 1 marks +     │
+// │                          │ per level touched (+1 wallet when stars)     │ levelStars per level (worksheet 1, diag <=12)│
 // │ teacherGetAnalytics      │ 1 + 1 + one qstats doc per student (<= 60)   │ 0 (5 min per class; marks here clear it)  │
 // │ getMyClassroom           │ 1 user + 1 qstats + per class: 1 class,      │ 1 qstats (homework is always fresh)       │
 // │                          │ <=30 posts, <=50 in-app tasks, 1 teacher     │ + new posts since the last refresh        │
@@ -29,6 +29,8 @@
 // │                          │                                              │ 1 progress doc (only to find a level-up)  │
 // │ nightly birthdays        │ 1 read per class (all classes) at 00:00 SGT  │ -                                         │
 // └──────────────────────────┴──────────────────────────────────────────────┴───────────────────────────────────────────┘
+// Writing / deleting teacher callables (save-rename, delete, post, delete post, create task, mark, birthday) read the class fresh
+// instead of the 60 s cache; read-only ones (dashboard, list posts / tasks / marks, analytics, upload signature) keep the cache.
 // Feed refresh after the 60 s TTL reads only posts newer than the newest cached (0 when none); a full re-read every 10 min.
 import { randomBytes } from "node:crypto";
 import { HttpsError, onCall } from "firebase-functions/v2/https";
@@ -135,9 +137,21 @@ async function requireTeacher(req: Parameters<typeof requireUid>[0]): Promise<{ 
   if (!ok.ok) throwFail(ok);
   return { uid, teacher: t! };
 }
-async function ownedClass(uid: string, classId: unknown): Promise<ClassDoc> {
+/**
+ * The class this teacher owns. `fresh` reads it from Firestore (1 read) instead of the 60 s per-instance cache: every callable
+ * that writes or deletes uses it, so a teacher whose class an admin just moved can't keep acting on it from a stale copy.
+ * Read-only callables keep the cache.
+ */
+async function ownedClass(uid: string, classId: unknown, fresh = false): Promise<ClassDoc> {
   const id = idOf(classId, "classId");
-  const c = await loadClass(id);
+  let c: ClassDoc | null;
+  if (fresh) {
+    const snap = await classRef(id).get();
+    c = snap.exists ? (snap.data() as ClassDoc) : null;
+    classCache.set(id, c);
+  } else {
+    c = await loadClass(id);
+  }
   const ok = checkClassOwner(c, uid);
   if (!ok.ok) throwFail(ok);
   return c!;
@@ -192,7 +206,7 @@ export const teacherSaveClass = onCall(async (req): Promise<{ classId: string }>
   const v = validateSaveClass(req.data);
   if (!v.ok) throwFail(v);
   if (v.id) {
-    const cur = await ownedClass(uid, v.id);
+    const cur = await ownedClass(uid, v.id, true);
     if (cur.grade !== v.grade) throw new HttpsError("failed-precondition", "A class's grade can't be changed.");
     await classRef(cur.id).update({ name: v.name });
     touchClass({ ...cur, students: [] });
@@ -221,10 +235,8 @@ export async function teacherClasses(uid: string): Promise<ClassDoc[]> {
  * way leaves them in a class that is still there, not in a missing one), then the doc and its posts / tasks / marks go.
  */
 export async function deleteClassCascade(cls: ClassDoc): Promise<void> {
-  for (let i = 0; i < cls.students.length; i += 400) {
-    const batch = db.batch();
-    for (const s of cls.students.slice(i, i + 400)) batch.set(userRef(s.uid), { classIds: FieldValue.arrayRemove(cls.id) }, { merge: true });
-    await batch.commit();
+  for (let i = 0; i < cls.students.length; i += 20) { // one update each: a deleted account (NOT_FOUND) must not fail a batch or leave a stub doc
+    await Promise.all(cls.students.slice(i, i + 20).map((s) => updateUser(s.uid, { classIds: FieldValue.arrayRemove(cls.id) })));
   }
   await db.recursiveDelete(classRef(cls.id));
   touchClass(cls);
@@ -235,7 +247,7 @@ export async function deleteClassCascade(cls: ClassDoc): Promise<void> {
 }
 export const teacherDeleteClass = onCall(async (req): Promise<{ ok: true }> => {
   const { uid } = await requireTeacher(req);
-  await deleteClassCascade(await ownedClass(uid, obj(req.data).classId));
+  await deleteClassCascade(await ownedClass(uid, obj(req.data).classId, true));
   return { ok: true };
 });
 
@@ -250,7 +262,10 @@ export async function addStudentToClassByCode(cls: ClassDoc, friendCode: unknown
   const studentUid = codeSnap.exists ? (codeSnap.data()!.uid as string) : null;
   if (!studentUid) throw new HttpsError("not-found", "No student has this friend code.");
   const existing = cls.students.find((s) => s.uid === studentUid);
-  if (existing) return existing;
+  if (existing) {
+    await updateUser(studentUid, { classIds: FieldValue.arrayUnion(cls.id) }); // already on the roster: repair users/{uid}.classIds if it drifted
+    return existing;
+  }
   const u = (await userRef(studentUid).get()).data();
   if (!u) throw new HttpsError("not-found", "No student has this friend code.");
   const student: ClassStudent = { uid: studentUid, displayName: tidyName(String(u.fullName ?? "Student")) || "Student", ...(validBirthday(u.birthday) ? { birthday: u.birthday } : {}) };
@@ -264,7 +279,7 @@ export async function addStudentToClassByCode(cls: ClassDoc, friendCode: unknown
     tx.update(classRef(cls.id), { students: [...cur.students, student] });
     return { student, added: true };
   });
-  if (res.added) await userRef(studentUid).set({ classIds: FieldValue.arrayUnion(cls.id) }, { merge: true });
+  await updateUser(studentUid, { classIds: FieldValue.arrayUnion(cls.id) }); // also when a concurrent add won the race: same repair
   touchClass({ ...cls, students: [student] });
   return res.student;
 }
@@ -275,6 +290,12 @@ export const teacherAddStudent = onCall(async (req): Promise<{ student: ClassStu
   return { student: await addStudentToClassByCode(cls, d.friendCode) };
 });
 
+const NOT_FOUND = 5; // gRPC code
+/** update() on users/{uid} that ignores a missing doc: set(merge) would create a stub users doc for a deleted account. */
+async function updateUser(uid: string, data: Record<string, unknown>): Promise<void> {
+  try { await userRef(uid).update(data); } catch (e) { if ((e as { code?: number }).code !== NOT_FOUND) throw e; }
+}
+
 /** Takes a student off a class roster and the class off users/{uid}.classIds (shared by teacherRemoveStudent and adminRemoveStudent). */
 export async function removeStudentFromClass(cls: ClassDoc, studentUid: string): Promise<void> {
   await db.runTransaction(async (tx) => {
@@ -282,7 +303,7 @@ export async function removeStudentFromClass(cls: ClassDoc, studentUid: string):
     if (!cur || cur.teacherUid !== cls.teacherUid) throw new HttpsError("not-found", "No such class.");
     if (cur.students.some((s) => s.uid === studentUid)) tx.update(classRef(cls.id), { students: cur.students.filter((s) => s.uid !== studentUid) });
   });
-  await userRef(studentUid).set({ classIds: FieldValue.arrayRemove(cls.id) }, { merge: true });
+  await updateUser(studentUid, { classIds: FieldValue.arrayRemove(cls.id) });
   touchClass({ ...cls, students: [{ uid: studentUid, displayName: "" }] });
 }
 export const teacherRemoveStudent = onCall(async (req): Promise<{ ok: true }> => {
@@ -296,7 +317,7 @@ export const teacherRemoveStudent = onCall(async (req): Promise<{ ok: true }> =>
 export const teacherSetBirthday = onCall(async (req): Promise<{ ok: true }> => {
   const { uid } = await requireTeacher(req);
   const d = obj(req.data);
-  const cls = await ownedClass(uid, d.classId);
+  const cls = await ownedClass(uid, d.classId, true);
   const studentUid = idOf(d.studentUid, "studentUid");
   const b = d.birthday;
   if (b !== null && !validBirthday(b)) throw new HttpsError("invalid-argument", "birthday must be MM-DD or null");
@@ -321,7 +342,7 @@ export const teacherSetBirthday = onCall(async (req): Promise<{ ok: true }> => {
 export const teacherPost = onCall(async (req): Promise<{ post: ClassPost }> => {
   const { uid } = await requireTeacher(req);
   const d = obj(req.data);
-  const cls = await ownedClass(uid, d.classId);
+  const cls = await ownedClass(uid, d.classId, true);
   const v = validatePost(d);
   if (!v.ok) throwFail(v);
   const id = postsRef(cls.id).doc().id;
@@ -337,7 +358,7 @@ export const teacherPost = onCall(async (req): Promise<{ post: ClassPost }> => {
 export const teacherDeletePost = onCall(async (req): Promise<{ ok: true }> => {
   const { uid } = await requireTeacher(req);
   const d = obj(req.data);
-  const cls = await ownedClass(uid, d.classId);
+  const cls = await ownedClass(uid, d.classId, true);
   await postsRef(cls.id).doc(idOf(d.postId, "postId")).delete();
   feed.invalidate(cls.id);
   return { ok: true };
@@ -375,7 +396,7 @@ export const teacherUploadSignature = onCall(async (req): Promise<{ cloudName: s
 export const teacherCreateTask = onCall(async (req): Promise<{ task: ClassTask }> => {
   const { uid } = await requireTeacher(req);
   const d = obj(req.data);
-  const cls = await ownedClass(uid, d.classId);
+  const cls = await ownedClass(uid, d.classId, true);
   const v = validateCreateTask(d, Date.now());
   if (!v.ok) throwFail(v);
   const { req: r } = v;
@@ -516,7 +537,7 @@ export async function applyTaskMarks(a: ApplyArgs): Promise<ApplyResult> {
 export const teacherMarkTask = onCall(async (req): Promise<{ starsAwarded: number }> => {
   const { uid } = await requireTeacher(req);
   const d = obj(req.data);
-  const cls = await ownedClass(uid, d.classId);
+  const cls = await ownedClass(uid, d.classId, true);
   const studentUid = idOf(d.studentUid, "studentUid");
   const ok = checkRosterMember(cls, studentUid);
   if (!ok.ok) throwFail({ ...ok, code: "not-found", message: "This student is not in the class." });

@@ -36,16 +36,21 @@ export interface AdminUserRow {
 // ---------- Callables (names added to CallableName in api.ts) ----------
 //   adminGetOverview      {} → { admin: AdminDoc; teachers: TeacherDoc[]; classes: AdminClassRow[] }
 //                         (reads: 1 admin + teachers + classes collections; cached 60 s per instance)
-//   adminSaveTeacher      { email: string; name: string } → { teacher: TeacherDoc; password?: string }
-//                         Creates the Auth user (email + generated password) and teachers/{uid}, or renames an existing
-//                         teacher / turns an existing student login into a teacher too. `password` is returned ONLY when a
+//   adminSaveTeacher      { uid?: string; email: string; name: string } → { teacher: TeacherDoc; password?: string }
+//                         With `uid` it ONLY renames that teacher (not-found if there is no such teacher; never creates or
+//                         promotes a login, the stored email is kept). Without `uid` it creates the Auth user (email + generated password) and teachers/{uid}, or renames an existing
+//                         teacher by email / turns an existing student login into a teacher too (failed-precondition "Enable this login first" if that
+//                         login is disabled). `password` is returned ONLY when a
 //                         new Auth user was created; the dashboard shows it once with a Copy button and never stores it.
 //   adminSetTeacherActive { uid: string; active: boolean } → { ok: true }  (also disables/enables the Auth user)
-//   adminResetPassword    { uid: string } → { password: string }
+//   adminResetPassword    { uid: string } → { password: string }   (own password allowed; another admin: failed-precondition)
 //                         Email/password logins only (failed-precondition for Google-only accounts). Shown once.
 //   adminFindUser         { query: string } → { users: AdminUserRow[] }
 //                         query = friend code (8 chars, case-insensitive), an email, or a uid. ≤ 5 results.
-//   adminSetUserDisabled  { uid: string; disabled: boolean } → { ok: true }  (Auth disable; not for the caller itself)
+//   adminSetUserDisabled  { uid: string; disabled: boolean } → { ok: true }  (Auth disable; not for the caller itself or another admin;
+//                         disabling a teacher login also sets teachers/{uid}.active=false, enabling leaves it)
+//   Targets with an admins/{uid} doc are refused by reset / disable / teacher-active: "Other admins are managed with add-admin.mjs".
+//   admin* and teacher* callables verify the ID token with checkRevoked, so a disabled login loses access at once.
 //   adminSaveClass        { id?: string; name: string; grade: Grade; teacherUid: string } → { classId: string }
 //                         Create a class for any teacher, rename it, or move it to another teacher (assign).
 //   adminDeleteClass      { classId: string } → { ok: true }

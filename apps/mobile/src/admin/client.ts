@@ -17,7 +17,7 @@ export const ADMIN_MOCK = readMock();
 
 const realBackend: AdminBackend = {
   getOverview: () => adminApi.getOverview(),
-  saveTeacher: (email, name) => adminApi.saveTeacher(email, name),
+  saveTeacher: (email, name, uid) => adminApi.saveTeacher(email, name, uid),
   setTeacherActive: async (uid, active) => { await adminApi.setTeacherActive(uid, active); },
   resetPassword: async (uid) => (await adminApi.resetPassword(uid)).password,
   findUser: async (query) => (await adminApi.findUser(query)).users,

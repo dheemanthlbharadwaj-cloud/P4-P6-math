@@ -100,7 +100,7 @@ import type { AdminOverview, SaveAdminClassReq } from "../admin/types";
 import type { AdminUserRow, TeacherDoc } from "@p6/shared";
 export const adminApi = {
   getOverview: () => call<Record<string, never>, AdminOverview>("adminGetOverview", {}),
-  saveTeacher: (email: string, name: string) => call<{ email: string; name: string }, { teacher: TeacherDoc; password?: string }>("adminSaveTeacher", { email, name }),
+  saveTeacher: (email: string, name: string, uid?: string) => call<{ uid?: string; email: string; name: string }, { teacher: TeacherDoc; password?: string }>("adminSaveTeacher", { ...(uid ? { uid } : {}), email, name }),
   setTeacherActive: (uid: string, active: boolean) => call<{ uid: string; active: boolean }, { ok: true }>("adminSetTeacherActive", { uid, active }),
   resetPassword: (uid: string) => call<{ uid: string }, { password: string }>("adminResetPassword", { uid }),
   findUser: (query: string) => call<{ query: string }, { users: AdminUserRow[] }>("adminFindUser", { query }),

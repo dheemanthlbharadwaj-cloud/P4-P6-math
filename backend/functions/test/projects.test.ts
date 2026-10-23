@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { resolveProjects, verifyWithFallback } from "../src/logic/projects.js";
+import { needsRevocationCheck, resolveProjects, verifyWithFallback } from "../src/logic/projects.js";
 
 describe("resolveProjects", () => {
   it("legacy single project when STUDENT vars are absent", () => {
@@ -30,5 +30,14 @@ describe("verifyWithFallback", () => {
   });
   it("no legacy configured: primary error", async () => {
     await expect(verifyWithFallback(bad("p"), null, "t")).rejects.toThrow("p");
+  });
+});
+
+describe("needsRevocationCheck", () => {
+  it("admin* and teacher* callables check revoked / disabled logins", () => {
+    for (const n of ["adminGetOverview", "adminSetUserDisabled", "teacherGetDashboard", "teacherMarkTask"]) expect(needsRevocationCheck(n)).toBe(true);
+  });
+  it("student callables don't (no extra Auth call)", () => {
+    for (const n of ["submitLevelResult", "getMyClassroom", "submitTaskAnswers", "bootstrapProfile", "getLeaderboard"]) expect(needsRevocationCheck(n)).toBe(false);
   });
 });

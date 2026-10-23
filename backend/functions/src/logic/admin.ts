@@ -26,6 +26,17 @@ export function checkNotSelf(callerUid: string, targetUid: string): Fail | Ok {
   return { ok: true };
 }
 
+/** Other admins are managed with add-admin.mjs, never from the dashboard (reset / disable / deactivate). The caller's own account is fine here. */
+export function checkNotOtherAdmin(callerUid: string, targetUid: string, targetIsAdmin: boolean): Fail | Ok {
+  if (targetIsAdmin && callerUid !== targetUid) return fail("failed-precondition", "Other admins are managed with add-admin.mjs");
+  return { ok: true };
+}
+/** A login that is disabled can't be promoted to teacher: enable it first (a disabled teacher record would be active on a dead login). */
+export function checkPromotable(authDisabled: boolean): Fail | Ok {
+  if (authDisabled) return fail("failed-precondition", "Enable this login first");
+  return { ok: true };
+}
+
 // ---------------------------------------------------------------- passwords
 const PASSWORD_SETS = ["ABCDEFGHJKLMNPQRSTUVWXYZ", "abcdefghijkmnopqrstuvwxyz", "23456789"]; // no 0/O, 1/l/I
 /** `length` readable characters (default 16), at least one of each class, from a CSPRNG (injectable for tests). */
@@ -63,14 +74,16 @@ export function parseUserQuery(raw: unknown): Fail | Ok<{ query: UserQuery }> {
 }
 
 // ---------------------------------------------------------------- validators
-export function validateSaveTeacher(d: unknown): Fail | Ok<{ email: string; name: string }> {
-  const x = d as { email?: unknown; name?: unknown } | null;
+/** `uid` given = rename that teacher only (never creates or promotes a login); without it the email decides (create / promote / rename). */
+export function validateSaveTeacher(d: unknown): Fail | Ok<{ email: string; name: string; uid?: string }> {
+  const x = d as { email?: unknown; name?: unknown; uid?: unknown } | null;
   if (!x || typeof x !== "object") return fail("invalid-argument", "missing body");
   const email = typeof x.email === "string" ? x.email.trim().toLowerCase() : "";
   if (!email || email.length > MAX_EMAIL || !EMAIL_RE.test(email)) return fail("invalid-argument", "A valid email is required.");
   const name = typeof x.name === "string" ? tidyName(x.name) : "";
   if (!name || name.length > MAX_ADMIN_NAME) return fail("invalid-argument", `name must be 1..${MAX_ADMIN_NAME} characters`);
-  return { ok: true, email, name };
+  if (x.uid !== undefined && !validId(x.uid)) return fail("invalid-argument", "bad uid");
+  return { ok: true, email, name, ...(x.uid !== undefined ? { uid: x.uid as string } : {}) };
 }
 
 export function validateAdminSaveClass(d: unknown): Fail | Ok<{ id?: string; name: string; grade: Grade; teacherUid: string }> {

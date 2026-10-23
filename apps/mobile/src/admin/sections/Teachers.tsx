@@ -43,7 +43,7 @@ function TeacherDetail({ t, onSecret }: { t: TeacherDoc; onSecret: (s: Secret | 
   const [name, setName] = useState(t.name);
   useEffect(() => setName(t.name), [t.uid, t.name]);
   const { busy, error, run } = useAction();
-  const rename = () => void run(async () => { const r = await backend.saveTeacher(t.email, name.trim()); upsertTeacher(r.teacher); });
+  const rename = () => void run(async () => { const r = await backend.saveTeacher(t.email, name.trim(), t.uid); upsertTeacher(r.teacher); });
   const toggle = () => void run(async () => { await backend.setTeacherActive(t.uid, !t.active); patchTeacher(t.uid, { active: !t.active }); });
   const reset = () => void run(async () => {
     onSecret(null);

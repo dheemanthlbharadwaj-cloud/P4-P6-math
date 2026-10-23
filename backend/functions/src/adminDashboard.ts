@@ -9,12 +9,13 @@
 // ├──────────────────────────┼──────────────────────────────────────────────┼───────────────────────────────────────────┤
 // │ (every call) requireAdmin│ 1 admins/{uid}                               │ 0 (60 s)                                  │
 // │ adminGetOverview         │ 1 + all teachers + all classes               │ 0 (60 s; every admin write clears it)     │
-// │ adminSaveTeacher         │ 1 + 1 teacher doc (+ Auth lookup/create)     │ 1 teacher doc                             │
-// │ adminSetTeacherActive    │ 1 + 1 teacher doc (+ Auth update)            │ 1 teacher doc                             │
-// │ adminResetPassword       │ 1 (+ Auth lookup/update)                     │ 0                                         │
+// │ adminSaveTeacher         │ 1 + 1 teacher doc (+ Auth lookup/create)     │ 1 teacher doc (rename by uid: same)       │
+// │ adminSetTeacherActive    │ 1 + 1 admins doc + 1 teacher doc (+ Auth)    │ 1 admins doc + 1 teacher doc              │
+// │ adminResetPassword       │ 1 + 1 admins doc (+ Auth lookup/update)      │ 1 admins doc (own password: 0)            │
 // │ adminFindUser            │ 1 + (friend code: 1 code doc) + 1 user       │ 1 user + 1 teacher doc (+ friend code)    │
 // │                          │ + 1 teacher doc                              │                                           │
-// │ adminSetUserDisabled     │ 1 (+ Auth update)                            │ 0                                         │
+// │ adminSetUserDisabled     │ 1 + 1 admins doc (+ Auth update; disabling  │ 1 admins doc (+ 1 write when disabling)   │
+// │                          │ also writes teachers/{uid}.active=false)     │                                           │
 // │ adminSaveClass           │ new: 1 + 1 teacher + N classes of that       │ new: 1 teacher + 0 (limit cached 60 s);   │
 // │                          │ teacher (limit); edit: 1 + 1 class           │ edit: 1 class (+ 1 teacher, + N when moved)│
 // │ adminDeleteClass         │ 1 + 1 class + docs deleted (posts, tasks, …) │ same                                      │
@@ -34,7 +35,7 @@ import {
 import { MAX_CLASSES_PER_TEACHER, validId } from "./logic/classroom.js";
 import { TtlCache } from "./logic/ttlCache.js";
 import {
-  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotSelf, hasPasswordLogin, logDetail, makePassword, parseUserQuery, validateAdminSaveClass,
+  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotOtherAdmin, checkNotSelf, checkPromotable, hasPasswordLogin, logDetail, makePassword, parseUserQuery, validateAdminSaveClass,
   validateSaveTeacher, validateUidFlag,
 } from "./logic/admin.js";
 
@@ -105,6 +106,13 @@ async function teacherDoc(uid: string): Promise<TeacherDoc | null> {
   return snap.exists ? ({ ...(snap.data() as TeacherDoc), uid }) : null;
 }
 const touchOverview = () => overviewCache.clear();
+/** Refuses a target that has an admins/{uid} doc (1 read), except the caller itself. */
+async function refuseOtherAdmin(callerUid: string, targetUid: string): Promise<void> {
+  if (callerUid === targetUid) return;
+  const isAdmin = (await db.collection(col.admins).doc(targetUid).get()).exists;
+  const ok = checkNotOtherAdmin(callerUid, targetUid, isAdmin);
+  if (!ok.ok) throwFail(ok);
+}
 
 // ================================================================ overview
 export const adminGetOverview = onCall(async (req): Promise<{ admin: AdminDoc; teachers: TeacherDoc[]; classes: AdminClassRow[] }> => {
@@ -127,11 +135,27 @@ export const adminSaveTeacher = onCall(async (req): Promise<{ teacher: TeacherDo
   const { uid: adminUid } = await requireAdmin(req);
   const v = validateSaveTeacher(req.data);
   if (!v.ok) throwFail(v);
+  if (v.uid) {
+    // rename only: by uid, so a rename can never create a login (the email in the request is ignored)
+    const cur = await teacherDoc(v.uid);
+    if (!cur) throw new HttpsError("not-found", "No such teacher.");
+    await teacherRef(v.uid).update({ name: v.name });
+    forgetTeacher(v.uid);
+    touchOverview();
+    await logAdmin(adminUid, "teacher.rename", v.uid, `${cur.email} ${v.name}`);
+    return { teacher: { ...cur, name: v.name } };
+  }
   const existing = await authUserByEmail(v.email);
   let uid: string;
   let password: string | undefined;
+  let cur: TeacherDoc | null = null;
   if (existing) {
     uid = existing.uid;
+    cur = await teacherDoc(uid);
+    if (!cur) {
+      const ok = checkPromotable(existing.disabled);
+      if (!ok.ok) throwFail(ok);
+    }
   } else {
     password = makePassword();
     try {
@@ -142,7 +166,6 @@ export const adminSaveTeacher = onCall(async (req): Promise<{ teacher: TeacherDo
       throw e;
     }
   }
-  const cur = await teacherDoc(uid);
   const teacher: TeacherDoc = { uid, name: v.name, email: v.email, active: cur ? cur.active : true, createdAt: cur?.createdAt ?? Date.now() };
   try {
     await teacherRef(uid).set(teacher);
@@ -162,6 +185,7 @@ export const adminSetTeacherActive = onCall(async (req): Promise<{ ok: true }> =
   if (!v.ok) throwFail(v);
   const self = checkNotSelf(adminUid, v.uid);
   if (!self.ok) throwFail(self);
+  await refuseOtherAdmin(adminUid, v.uid);
   if (!(await teacherDoc(v.uid))) throw new HttpsError("not-found", "No such teacher.");
   await mustAuthUser(v.uid);
   await teacherRef(v.uid).update({ active: v.value });
@@ -176,6 +200,7 @@ export const adminSetTeacherActive = onCall(async (req): Promise<{ ok: true }> =
 export const adminResetPassword = onCall(async (req): Promise<{ password: string }> => {
   const { uid: adminUid } = await requireAdmin(req);
   const uid = idOf(obj(req.data).uid, "uid");
+  await refuseOtherAdmin(adminUid, uid); // your own password is fine
   const user = await mustAuthUser(uid);
   if (!hasPasswordLogin(user.providerData.map((p) => p.providerId))) {
     throw new HttpsError("failed-precondition", "This account signs in with Google, it has no password to reset.");
@@ -216,9 +241,16 @@ export const adminSetUserDisabled = onCall(async (req): Promise<{ ok: true }> =>
   if (!v.ok) throwFail(v);
   const self = checkNotSelf(adminUid, v.uid);
   if (!self.ok) throwFail(self);
+  await refuseOtherAdmin(adminUid, v.uid);
   await mustAuthUser(v.uid);
   await auth.updateUser(v.uid, { disabled: v.value });
-  if (v.value) await auth.revokeRefreshTokens(v.uid);
+  if (v.value) {
+    await auth.revokeRefreshTokens(v.uid);
+    // a disabled login must not stay an active teacher record (no read: update, NOT_FOUND = not a teacher). Enabling leaves it as it was.
+    await teacherRef(v.uid).update({ active: false }).catch((e) => { if ((e as { code?: number }).code !== 5) throw e; });
+    forgetTeacher(v.uid);
+    touchOverview();
+  }
   await logAdmin(adminUid, v.value ? "user.disable" : "user.enable", v.uid);
   return { ok: true };
 });

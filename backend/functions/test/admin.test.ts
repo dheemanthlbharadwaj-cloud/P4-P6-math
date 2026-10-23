@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotSelf, hasPasswordLogin, makePassword, parseUserQuery, validateAdminSaveClass,
+  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotOtherAdmin, checkNotSelf, checkPromotable, hasPasswordLogin, makePassword, parseUserQuery, validateAdminSaveClass,
   validateSaveTeacher, validateUidFlag, type AuthLike,
 } from "../src/logic/admin";
 
@@ -76,6 +76,21 @@ describe("access checks", () => {
 });
 
 describe("validators", () => {
+  it("checkNotOtherAdmin refuses another admin but allows the caller itself", () => {
+    expect(checkNotOtherAdmin("a1", "a2", true)).toMatchObject({ ok: false, code: "failed-precondition", message: "Other admins are managed with add-admin.mjs" });
+    expect(checkNotOtherAdmin("a1", "a1", true)).toEqual({ ok: true });
+    expect(checkNotOtherAdmin("a1", "t1", false)).toEqual({ ok: true });
+  });
+  it("checkPromotable refuses a disabled login", () => {
+    expect(checkPromotable(true)).toMatchObject({ ok: false, code: "failed-precondition", message: "Enable this login first" });
+    expect(checkPromotable(false)).toEqual({ ok: true });
+  });
+  it("validateSaveTeacher accepts an optional uid (rename only) and rejects a bad one", () => {
+    expect(validateSaveTeacher({ uid: "t1", email: "a@b.sg", name: "Ms Tan" })).toEqual({ ok: true, uid: "t1", email: "a@b.sg", name: "Ms Tan" });
+    expect(validateSaveTeacher({ uid: "bad/uid", email: "a@b.sg", name: "Ms Tan" })).toMatchObject({ ok: false, code: "invalid-argument" });
+    expect(validateSaveTeacher({ uid: 5, email: "a@b.sg", name: "Ms Tan" }).ok).toBe(false);
+    expect("uid" in (validateSaveTeacher({ email: "a@b.sg", name: "Ms Tan" }) as object)).toBe(false);
+  });
   it("validateSaveTeacher tidies and checks email and name", () => {
     expect(validateSaveTeacher({ email: " Ms.Tan@School.edu.sg ", name: "  Ms   Tan " })).toEqual({ ok: true, email: "ms.tan@school.edu.sg", name: "Ms Tan" });
     expect(validateSaveTeacher({ email: "nope", name: "X" }).ok).toBe(false);

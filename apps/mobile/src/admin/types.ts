@@ -7,8 +7,8 @@ export interface SaveAdminClassReq { id?: string; name: string; grade: Grade; te
 
 export interface AdminBackend {
   getOverview(): Promise<AdminOverview>;
-  /** `password` is present only when a new login was created. */
-  saveTeacher(email: string, name: string): Promise<{ teacher: TeacherDoc; password?: string }>;
+  /** `password` is present only when a new login was created. With `uid` it only renames that teacher (never creates a login). */
+  saveTeacher(email: string, name: string, uid?: string): Promise<{ teacher: TeacherDoc; password?: string }>;
   setTeacherActive(uid: string, active: boolean): Promise<void>;
   resetPassword(uid: string): Promise<string>;
   findUser(query: string): Promise<AdminUserRow[]>;

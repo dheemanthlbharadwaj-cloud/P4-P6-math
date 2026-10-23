@@ -76,8 +76,17 @@ function fakePassword(): string {
 
 export const mockBackend: AdminBackend = {
   getOverview: () => wait({ admin: ADMIN, teachers: clone(load().teachers), classes: clone(load().classes) }),
-  async saveTeacher(email, name) {
+  async saveTeacher(email, name, uid) {
     const s = load();
+    if (uid) {
+      const t = s.teachers.find((x) => x.uid === uid);
+      if (!t) throw new ApiError("not-found", "No such teacher.");
+      if (!name.trim()) throw new ApiError("invalid-argument", "Name and email are required");
+      t.name = name.trim();
+      s.classes.forEach((c) => { if (c.teacherUid === uid) c.teacherName = t.name; });
+      save();
+      return wait({ teacher: clone(t) });
+    }
     const e = email.trim().toLowerCase();
     if (!name.trim() || !e) throw new ApiError("invalid-argument", "Name and email are required");
     const have = s.teachers.find((t) => t.email.toLowerCase() === e);
@@ -88,6 +97,7 @@ export const mockBackend: AdminBackend = {
       return wait({ teacher: clone(have) });
     }
     const existing = s.users.find((x) => x.email?.toLowerCase() === e);
+    if (existing?.disabled) throw new ApiError("failed-precondition", "Enable this login first");
     const t: TeacherDoc = { uid: existing?.uid ?? `t${++s.seq}`, name: name.trim(), email: e, active: true, createdAt: Date.now() };
     s.teachers.push(t);
     if (existing) { existing.isTeacher = true; existing.teacherActive = true; save(); return wait({ teacher: clone(t) }); }
