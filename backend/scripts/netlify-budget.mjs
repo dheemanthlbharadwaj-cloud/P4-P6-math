@@ -8,6 +8,10 @@
 // The deploy scripts call assertNetlifyBudget() first: it refuses when one more deploy would leave less than RESERVE
 // credits (kept for traffic and emergencies) unless --force is passed. Bandwidth and function traffic also cost
 // credits but their rates aren't in the API; the estimate counts deploys only and prints bandwidth for reference.
+// The API has no credit balance, but when the real credits run out Netlify grants a one-off grace top-up and stamps
+// account.grace_topup_granted_at (21 Oct 2026: the estimate said 60 left while the real balance was 0, because function
+// traffic had used the rest). A grace stamp inside the current period = credits exhausted: deploys are refused until the
+// reset (next_usage_period_start) unless --force is passed.
 import { fileURLToPath } from "node:url";
 
 export const PLAN_CREDITS = 300;
@@ -37,7 +41,9 @@ export async function netlifyBudget() {
   }
   const bw = await nl(`/accounts/${account.slug}/bandwidth`).catch(() => null);
   const deployCredits = perSite.reduce((a, s) => a + s.deploys, 0) * DEPLOY_CREDITS;
-  return { plan, start, end, perSite, deployCredits, left: plan - deployCredits, bandwidthMB: bw ? Math.round(bw.used / 1e6) : null };
+  const grace = account.grace_topup_granted_at ?? null;
+  const exhausted = !!grace && new Date(grace) >= new Date(start);
+  return { plan, start, end, perSite, deployCredits, left: plan - deployCredits, bandwidthMB: bw ? Math.round(bw.used / 1e6) : null, exhausted, graceTopupAt: grace };
 }
 
 /** Throws unless one more production deploy leaves at least RESERVE credits (or --force is passed). */
@@ -45,6 +51,9 @@ export async function assertNetlifyBudget(what) {
   const b = await netlifyBudget();
   const after = b.left - DEPLOY_CREDITS;
   console.log(`Netlify credits (estimate, deploys only): ${b.deployCredits}/${b.plan} used this period (resets ${String(b.end).slice(0, 10)}); after this ${what} deploy: ${after} left.`);
+  if (b.exhausted && !process.argv.includes("--force")) {
+    throw new Error(`Refusing the ${what} deploy: Netlify's real credits ran out this period (grace top-up granted ${b.graceTopupAt}); deploys are blocked until ${String(b.end).slice(0, 10)}. --force overrides.`);
+  }
   if (after < RESERVE && !process.argv.includes("--force")) {
     throw new Error(`Refusing the ${what} deploy: it would leave ${after} Netlify credits (< ${RESERVE} reserve). Batch changes or wait for the reset; --force overrides.`);
   }
