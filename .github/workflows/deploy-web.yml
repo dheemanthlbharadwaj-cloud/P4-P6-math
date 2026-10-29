@@ -1,4 +1,4 @@
-# Web app (https://catapult-math-athletes.web.app): every push that changes the app or the shared package rebuilds the
+# Web app (https://catapult-mathletes.web.app): every push that changes the app or the shared package rebuilds the
 # web build and publishes it to Firebase Hosting. Keyless: GitHub's OIDC token is exchanged (workload identity
 # federation, pool "github" in primary-math-sg, limited to this repository) for a short-lived token of
 # catapult-web-deployer, whose only role is Firebase Hosting Admin. No secrets are stored anywhere.

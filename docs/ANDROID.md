@@ -10,7 +10,7 @@ One codebase (`apps/mobile`) serves the web app, Android and iOS. Phones get cha
 
 Skip an update for a commit with `[eas skip]` in the commit message. **Expo free plan: 60 CI minutes a month (about 4 update runs); used up until 1 Nov 2026.** Batch app changes and use `[eas skip]` for commits that don't need to reach phones.
 
-**Web app:** `.github/workflows/deploy-web.yml` (GitHub Actions, free for this public repo) rebuilds and publishes https://catapult-math-athletes.web.app on every push touching `apps/mobile/**` or `packages/shared/**`. It authenticates keylessly: GitHub OIDC → workload identity pool `github` / provider `github-actions` in primary-math-sg (condition: repository `dheemanthlbharadwaj-cloud/P4-P6-math`) → `catapult-web-deployer` (Firebase Hosting Admin only). No secrets exist to leak or rotate.
+**Web app:** `.github/workflows/deploy-web.yml` (GitHub Actions, free for this public repo) rebuilds and publishes https://catapult-mathletes.web.app on every push touching `apps/mobile/**` or `packages/shared/**`. It authenticates keylessly: GitHub OIDC → workload identity pool `github` / provider `github-actions` in primary-math-sg (condition: repository `dheemanthlbharadwaj-cloud/P4-P6-math`) → `catapult-web-deployer` (Firebase Hosting Admin only). No secrets exist to leak or rotate.
 
 ## Where things are
 

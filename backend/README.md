@@ -82,7 +82,7 @@ Scripts use the service account in `FIREBASE_SERVICE_ACCOUNT_B64` (Owner on prim
 overrides). Each takes `--dry` to show what it would do; all are idempotent.
 
 1. `node backend/scripts/setup-project.mjs` — enables the APIs, checks the `default` database, turns on email/password
-   sign-in (already on for the editor), adds the authorized domains (incl. catapult-math-athletes.web.app), writes the
+   sign-in (already on for the editor), adds the authorized domains (incl. catapult-mathletes.web.app), writes the
    project's public web config to `apps/mobile/firebase.web.json` (with `databaseId: "default"`), creates the
    `catapult-backend` service account the backend runs as (Firestore user + Auth admin), then runs step 2.
 2. `node backend/scripts/deploy-rules.mjs` — merges the student rules into the editor's live rules and creates the

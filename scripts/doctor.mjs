@@ -132,7 +132,7 @@ if (OFFLINE) {
       add("live", "backend API", unauth ? OK : FAIL, `getLeaderboard -> HTTP ${r.status}${unauth ? " unauthenticated (expected)" : ""}`, unauth ? "" : "Backend not answering as expected; see backend/README.md (deploy-netlify.mjs).");
     }),
     guard("live", "web app", async () => {
-      const r = await http("https://catapult-math-athletes.web.app"); live.web = r.status;
+      const r = await http("https://catapult-mathletes.web.app"); live.web = r.status;
       add("live", "web app", r.status === 200 ? OK : FAIL, `HTTP ${r.status}`, r.status === 200 ? "" : "Web build not live; the GitHub Actions deploy may have failed.");
     }),
     guard("live", "question editor", async () => {

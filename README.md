@@ -15,7 +15,7 @@ Cat-themed Singapore PSLE math game for iOS and Android. P6 ships first; P4 and 
 
 ## Test web app
 
-Live test build (with the 🛠 Dev Tools panel): https://catapult-math-athletes.web.app
+Live test build (with the 🛠 Dev Tools panel): https://catapult-mathletes.web.app
 
 To update it:
 

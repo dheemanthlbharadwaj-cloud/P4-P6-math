@@ -70,7 +70,7 @@ small{color:var(--soft);word-break:break-all}
 <li>Open the app and sign up with email. Your stars and friends are the same as on the web app.</li>
 <li>Updates arrive by themselves: the app downloads them when you open it and uses them the next time.</li>
 </ol>
-<p>On an iPhone, iPad or computer? Use the web app: <a href="https://catapult-math-athletes.web.app">catapult-math-athletes.web.app</a></p>
+<p>On an iPhone, iPad or computer? Use the web app: <a href="https://catapult-mathletes.web.app">catapult-mathletes.web.app</a></p>
 <p><small>SHA-256 ${sha256}</small></p>
 </main></body></html>
 `);

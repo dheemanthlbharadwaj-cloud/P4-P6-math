@@ -28,7 +28,7 @@ and iOS.
 
 | Live | URL | Updated by |
 |---|---|---|
-| Web app | https://catapult-math-athletes.web.app | GitHub Actions on push (`.github/workflows/deploy-web.yml`, keyless) |
+| Web app | https://catapult-mathletes.web.app | GitHub Actions on push (`.github/workflows/deploy-web.yml`, keyless) |
 | Backend API | https://catapult-math-athletes-api.netlify.app | `node backend/scripts/deploy-netlify.mjs` |
 | Phones (OTA) | Expo `dheems-team/catapult-math-athletes`, channel `preview` | EAS workflow on push (`apps/mobile/.eas/workflows/publish-update.yml`) |
 | Android APK | sent to the owner as a file (they share it); Netlify page archived | local build (`docs/ANDROID.md`), verify the signing key |

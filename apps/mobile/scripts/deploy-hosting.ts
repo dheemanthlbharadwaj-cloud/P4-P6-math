@@ -14,7 +14,7 @@ import { JWT } from "google-auth-library";
 import { fetch as ufetch } from "undici";
 import { loadCredentials, makeDispatcher } from "../../../content/src/sync";
 
-const [dir, siteId = "catapult-math-athletes", project = "primary-math-sg"] = process.argv.slice(2);
+const [dir, siteId = "catapult-mathletes", project = "primary-math-sg"] = process.argv.slice(2);
 const API = "https://firebasehosting.googleapis.com/v1beta1";
 
 async function main() {

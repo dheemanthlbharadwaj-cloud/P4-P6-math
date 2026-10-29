@@ -51,7 +51,7 @@ environment can do and the live status of every service. Flags: `--verify` (test
 ### Live services (what exists, where)
 | Service | Where | Deployed by |
 |---|---|---|
-| Web app (test build, 🛠 Dev Tools) | https://catapult-math-athletes.web.app (Firebase Hosting site in `primary-math-sg`) | **automatic**: GitHub Actions `.github/workflows/deploy-web.yml` on push (keyless auth); by hand: `web-preview.py` + `deploy-hosting.ts` |
+| Web app (test build, 🛠 Dev Tools) | https://catapult-mathletes.web.app (Firebase Hosting site in `primary-math-sg`) | **automatic**: GitHub Actions `.github/workflows/deploy-web.yml` on push (keyless auth); by hand: `web-preview.py` + `deploy-hosting.ts` |
 | Backend API | https://catapult-math-athletes-api.netlify.app/api/<callable> (Netlify free plan) | `node backend/scripts/deploy-netlify.mjs` (15 Netlify credits each; guarded) |
 | Database / auth | **Since 18 Oct 2026:** student project `catapult-math-students` (Auth + all student data, db `(default)`); `primary-math-sg` keeps only the editor (`questions` read, `question_reports` write) and, during the transition, still holds the sign-ins of installed APKs, which the backend accepts (`LEGACY_AUTH_PROJECT_ID`; keep until a new APK is out) | rules: `backend/scripts/deploy-rules.mjs` (merged, primary-math-sg) or `--project <id> --student-only`; setup `setup-project.mjs --student`; data move `migrate-students.mjs` |
 | Question editor (source of truth) | https://primary-math-sg.web.app (separate codebase; student reports patched in by `backend/scripts/editor-reports.mjs`) | — |
@@ -63,7 +63,7 @@ environment can do and the live status of every service. Flags: `--verify` (test
 - Grade P6 now (P4/P5 later as data; every path/type is keyed by `grade`).
 - Map: each editor **chapter = one swipeable map page** (12 for P6; arrows, swipe, or the **Topics** button → side drawer listing every topic with levels done/total, tap = jump; `TopicPicker.tsx`, `logic/topicPicker.ts`); each **subtopic = a map node group** (62 for P6)
   with levels LV1/LV2/LV3 × 5 questions ("5-5-5").
-- Live test web app (with 🛠 Dev Tools panel): **https://catapult-math-athletes.web.app**
+- Live test web app (with 🛠 Dev Tools panel): **https://catapult-mathletes.web.app**
   (separate from the question editor site `primary-math-sg.web.app`).
 
 ### Pending release: admin dashboard (waiting for the Netlify reset, 7 Nov 2026)
@@ -79,7 +79,12 @@ Release steps on or after 7 Nov:
 3. First admin: `node backend/scripts/add-admin.mjs --project catapult-math-students --email <owner email> --name "<name>"`
    (an existing Google login is reused with no password; a new one gets a 0600 password file, never printed).
 4. Short live check with a throwaway admin-made teacher + one student, then delete them (keep reads low).
-5. Release the web app: run `.github/workflows/deploy-web.yml` (workflow_dispatch) on the branch; check /admin loads.
+5. Release the web app: run `.github/workflows/deploy-web.yml` (workflow_dispatch) on the branch. Since the 29 Oct rename it
+   deploys to the NEW site **catapult-mathletes.web.app** (`deploy-hosting.ts` default). Check / , /teacher and /admin load
+   there and that sign-in works (the backend deploy in step 2 is what lets the new origin call the API).
+5b. Then `node backend/scripts/redirect-old-site.mjs --dry` and without `--dry`: the old catapult-math-athletes.web.app
+   becomes a 301 redirect to the new address (path and query kept). Students' progress is on the server, so they sign in
+   again on the new address; a guest's on-device progress does not move across addresses (browser storage is per site).
 6. Move this block into "Current agreed behaviour" / §9 as done.
 
 ### Current agreed behaviour (do not regress)
@@ -355,7 +360,8 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
   on `/`: harmless web noise, not bugs.
 
 ## 9. Owner decisions and open questions (keep up to date)
-- **Name (owner, 29 Oct 2026): "Catapult Mathletes"** everywhere people see it (app name, web title, dashboards, share text, login files). Technical ids are unchanged on purpose: URLs (catapult-math-athletes.web.app, -api.netlify.app), Expo slug `catapult-math-athletes`, Android package / bundle id, Firebase projects, this skill's folder name. The phone launcher name changes only with the next APK (no APK until the owner asks); in-app text arrives by OTA.
+- **Web address (owner, 29 Oct 2026): https://catapult-mathletes.web.app** (Hosting site `catapult-mathletes` in `primary-math-sg`, created 29 Oct; Firebase Auth authorized domains added in both projects; backend CORS allows it from the next backend deploy). Switch-over happens with the 7 Nov release (steps above); until then the live app stays on catapult-math-athletes.web.app, which afterwards only redirects.
+- **Name (owner, 29 Oct 2026): "Catapult Mathletes"** everywhere people see it (app name, web title, dashboards, share text, login files). Technical ids are unchanged on purpose: URLs (catapult-mathletes.web.app, -api.netlify.app), Expo slug `catapult-math-athletes`, Android package / bundle id, Firebase projects, this skill's folder name. The phone launcher name changes only with the next APK (no APK until the owner asks); in-app text arrives by OTA.
 | Date | Decision / question | Status |
 |---|---|---|
 | 2026-10-16 | Leaderboard updates once a day at 23:55 SGT to save Firestore reads | done (§1 Leaderboard) |
@@ -365,7 +371,7 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
 | 2026-10-17 | Daily quests count questions only when a level is finished (answers in a quit level don't count). Keep or count every answer? | asked, awaiting owner |
 | 2026-10-17 | Shop: no "you need N stars" message for unaffordable items; some hat names truncated | asked, awaiting owner |
 | 2026-10-17 | Dev Tools button visible in the live web app / tester APK. Turn off before launch? | asked, awaiting owner |
-| 2026-10-17 | Editor and student app in separate Firebase projects (own 50k reads/day each); same web address kept | **student project `catapult-math-students` (#310686010335) created by the owner and set up 17 Oct**: Firestore `(default)` asia-southeast1, email + Google sign-in, authorized domains incl. catapult-math-athletes.web.app, web app 1:310686010335:web:237d76dcb76e24c729d26a, Android app (SHA-256 added; SHA-1 refused because the Android OAuth client for package + release SHA-1 already lives in primary-math-sg → the app keeps primary-math-sg's Google web client id `762269301954-vt974…` for Google sign-in, which must be **safelisted** in the student project: Auth → Google → "Safelist client IDs from external projects"), runtime SA catapult-backend@catapult-math-students, rules + indexes deployed. App config ready in `apps/mobile/firebase.web.students.json` (swap in at the switch). Auth dry run: 9 students to move, 2 editor accounts stay. **SWITCHED 18 Oct 2026 07:30 UTC:** 9 students (5 password, 4 Google) + 327 docs migrated (`backend/reports/migrate-students-2026-10-18*`), backend deployed with STUDENT_PROJECT_ID (LEGACY_AUTH_PROJECT_ID=primary-math-sg kept for installed APKs), first daily board built there, web app config swapped (`apps/mobile/firebase.web.json` = student project; Google client stays primary-math-sg's, safelisted). Re-run `migrate-students.mjs --skip-firestore` later to pick up accounts made on old APKs. |
+| 2026-10-17 | Editor and student app in separate Firebase projects (own 50k reads/day each); same web address kept | **student project `catapult-math-students` (#310686010335) created by the owner and set up 17 Oct**: Firestore `(default)` asia-southeast1, email + Google sign-in, authorized domains incl. catapult-mathletes.web.app, web app 1:310686010335:web:237d76dcb76e24c729d26a, Android app (SHA-256 added; SHA-1 refused because the Android OAuth client for package + release SHA-1 already lives in primary-math-sg → the app keeps primary-math-sg's Google web client id `762269301954-vt974…` for Google sign-in, which must be **safelisted** in the student project: Auth → Google → "Safelist client IDs from external projects"), runtime SA catapult-backend@catapult-math-students, rules + indexes deployed. App config ready in `apps/mobile/firebase.web.students.json` (swap in at the switch). Auth dry run: 9 students to move, 2 editor accounts stay. **SWITCHED 18 Oct 2026 07:30 UTC:** 9 students (5 password, 4 Google) + 327 docs migrated (`backend/reports/migrate-students-2026-10-18*`), backend deployed with STUDENT_PROJECT_ID (LEGACY_AUTH_PROJECT_ID=primary-math-sg kept for installed APKs), first daily board built there, web app config swapped (`apps/mobile/firebase.web.json` = student project; Google client stays primary-math-sg's, safelisted). Re-run `migrate-students.mjs --skip-firestore` later to pick up accounts made on old APKs. |
 | 2026-10-17 | No new APKs until the owner asks; Google client 762269301954-vt974… safelisted in catapult-math-students by the owner | in force / done |
 | 2026-10-17 | Leaving sign-up halfway restarts it at the name step | reported to owner |
 | 2026-10-17 | Student data and Auth move to their own Firebase project (separate free quota; editor stays in primary-math-sg) | in progress; migration script written, not yet run |

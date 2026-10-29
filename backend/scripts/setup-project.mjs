@@ -28,7 +28,7 @@ const projArg = process.argv.indexOf("--project") > 0 ? process.argv[process.arg
 const PROJECT = STUDENT ? projArg || process.env.STUDENT_PROJECT_ID || "catapult-math-students" : process.env.FIREBASE_PROJECT_ID || "primary-math-sg";
 const DATABASE = STUDENT ? process.env.STUDENT_DATABASE_ID || "(default)" : "default"; // primary-math-sg: the question bank's named database
 const WEB_APP_NAME = "Catapult Mathletes (web)";
-const AUTH_DOMAINS = ["localhost", "catapult-math-athletes.web.app", "catapult-math-athletes.firebaseapp.com"];
+const AUTH_DOMAINS = ["localhost", "catapult-mathletes.web.app", "catapult-mathletes.firebaseapp.com", "catapult-math-athletes.web.app", "catapult-math-athletes.firebaseapp.com"];
 const APIS = [
   "firebase.googleapis.com", "firestore.googleapis.com", "identitytoolkit.googleapis.com", "securetoken.googleapis.com",
   "firebaserules.googleapis.com", "iam.googleapis.com", "cloudresourcemanager.googleapis.com",

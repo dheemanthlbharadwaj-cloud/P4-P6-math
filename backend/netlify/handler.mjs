@@ -36,6 +36,8 @@ const STATUS = {
 // Browsers may call the API only from the app's own pages (the native apps send no Origin). Extra origins:
 // ALLOWED_ORIGINS (comma-separated) in the site's environment variables.
 const ALLOWED_ORIGINS = new Set([
+  "https://catapult-mathletes.web.app", "https://catapult-mathletes.firebaseapp.com",
+  // the old address (29 Oct 2026 rename): it only redirects to the new one now, kept so a stale open tab still works
   "https://catapult-math-athletes.web.app", "https://catapult-math-athletes.firebaseapp.com",
   ...(process.env.ALLOWED_ORIGINS ?? "").split(",").map((o) => o.trim()).filter(Boolean),
 ]);
