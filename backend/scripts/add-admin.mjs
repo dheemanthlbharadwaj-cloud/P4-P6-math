@@ -107,7 +107,7 @@ must(await api("PATCH", `${FS}/admins/${uid}`, { fields: adminFields({ uid, name
 if (password) {
   fs.mkdirSync(OUT_DIR, { recursive: true, mode: 0o700 });
   const file = path.join(OUT_DIR, `${EMAIL.replace(/[^a-z0-9@._-]/g, "_")}.txt`);
-  fs.writeFileSync(file, `Catapult Math Athletes admin login\nProject: ${PROJECT}\nEmail: ${EMAIL}\nPassword: ${password}\n`, { mode: 0o600 });
+  fs.writeFileSync(file, `Catapult Mathletes admin login\nProject: ${PROJECT}\nEmail: ${EMAIL}\nPassword: ${password}\n`, { mode: 0o600 });
   fs.chmodSync(file, 0o600); // writeFileSync's mode only applies to a NEW file
   log(`Admin ${EMAIL} ready (uid ${uid}${reused ? ", existing login reused" : ""}). The password was written to ${file} (not shown here). Store it somewhere safe, then delete the file.`);
 } else log(`Admin ${EMAIL} ${DISABLE ? "disabled" : "updated"} (uid ${uid}).${DISABLE ? "" : " Their way of signing in is unchanged (no password set)."}`);

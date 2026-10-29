@@ -101,6 +101,6 @@ must(await api("PATCH", `${FS}/teachers/${uid}`, { fields: teacherFields({ uid, 
 if (password) {
   fs.mkdirSync(OUT_DIR, { recursive: true, mode: 0o700 });
   const file = path.join(OUT_DIR, `${EMAIL.replace(/[^a-z0-9@._-]/g, "_")}.txt`);
-  fs.writeFileSync(file, `Catapult Math Athletes teacher login\nProject: ${PROJECT}\nEmail: ${EMAIL}\nPassword: ${password}\n`, { mode: 0o600 });
+  fs.writeFileSync(file, `Catapult Mathletes teacher login\nProject: ${PROJECT}\nEmail: ${EMAIL}\nPassword: ${password}\n`, { mode: 0o600 });
   log(`Teacher ${EMAIL} ready (uid ${uid}). The password was written to ${file} (not shown here). Hand it over privately, then delete the file.`);
 } else log(`Teacher ${EMAIL} ${DISABLE ? "disabled" : "updated"} (uid ${uid}).${DISABLE ? "" : " Their password is unchanged."}`);

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Environment doctor for Catapult Math Athletes: what works in THIS checkout / session, and what to do about the rest.
+// Environment doctor for Catapult Mathletes: what works in THIS checkout / session, and what to do about the rest.
 //
 //   node scripts/doctor.mjs            human table (tooling, credentials, live status, "You can now...")
 //   node scripts/doctor.mjs --offline  skip every network request

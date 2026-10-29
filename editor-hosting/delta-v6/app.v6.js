@@ -1121,7 +1121,7 @@ function renderCoverage() {
      <div style="margin-top:6px">✓ = assigned to at least one active volunteer.</div>`;
 }
 
-/* ---------- student reports (question_reports, from the Catapult Math Athletes app) ---------- */
+/* ---------- student reports (question_reports, from the Catapult Mathletes app) ---------- */
 /* student-reports v1: added by backend/scripts/editor-reports.mjs in the p4-p6-math repo */
 var __REPORT_REASONS = {
   "wrong-answer": "The answer is wrong", "marked-wrong": "Right answer was marked wrong", "unclear": "Unclear or has a typo",

@@ -27,7 +27,7 @@ const EAS_PROJECT_ID = "ea8a1c9d-c3dd-4cac-903d-78956443efe9"; // expo.dev proje
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "Catapult Math Athletes",
+  name: "Catapult Mathletes",
   slug: "catapult-math-athletes",
   scheme: "p6math",
   version: "0.3.0",

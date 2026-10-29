@@ -47,7 +47,7 @@ fs.copyFileSync(path.join(ROOT, "apps/mobile/assets/ui/app-icon.png"), path.join
 fs.writeFileSync(path.join(out, "_headers"), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n/*.apk\n  Content-Type: application/vnd.android.package-archive\n  Content-Disposition: attachment; filename="${file}"\n`);
 fs.writeFileSync(path.join(out, "index.html"), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>Catapult Math Athletes for Android</title><link rel="icon" href="icon.png">
+<meta name="robots" content="noindex"><title>Catapult Mathletes for Android</title><link rel="icon" href="icon.png">
 <style>
 :root{--bg:#fff7ea;--ink:#2a1f1a;--soft:#6b5b52;--card:#fff;--line:#2a1f1a;--blue:#12aecf}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -61,7 +61,7 @@ li{margin:6px 0}
 small{color:var(--soft);word-break:break-all}
 </style></head><body><main>
 <img src="icon.png" alt="">
-<h1>Catapult Math Athletes</h1>
+<h1>Catapult Mathletes</h1>
 <p class="meta">Android test version ${config.version} · ${(bytes / 1e6).toFixed(0)} MB · ${built}</p>
 <a class="btn" href="${file}" download>Download for Android</a>
 <ol>

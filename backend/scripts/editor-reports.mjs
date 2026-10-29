@@ -44,7 +44,7 @@ export function patchJs(js) {
     '${escapeHtml(q.error_log || "")}</textarea>\n      <div id="reportsBox"></div>', "error log textarea");
   return `${s.replace(/\s*$/, "")}
 
-/* ---------- student reports (question_reports, from the Catapult Math Athletes app) ---------- */
+/* ---------- student reports (question_reports, from the Catapult Mathletes app) ---------- */
 ${MARKER}: added by backend/scripts/editor-reports.mjs in the p4-p6-math repo */
 var __REPORT_REASONS = {
   "wrong-answer": "The answer is wrong", "marked-wrong": "Right answer was marked wrong", "unclear": "Unclear or has a typo",

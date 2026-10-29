@@ -81,7 +81,7 @@ export default function LeaderboardTab() {
   return (
     <Screen>
       <ScrollView contentContainerStyle={{ padding: wide ? space.xl : space.l, gap: space.m }} refreshControl={<RefreshControl refreshing={loading} onRefresh={load} />}>
-        <H1 style={{ textAlign: "center" }}>Catapult Math Athletes</H1>
+        <H1 style={{ textAlign: "center" }}>Catapult Mathletes</H1>
         {racers.length ? (
           <View style={{ gap: 6 }}>
             <RaceTrack racers={racers} />

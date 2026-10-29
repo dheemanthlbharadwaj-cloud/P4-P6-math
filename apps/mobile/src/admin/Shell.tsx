@@ -32,7 +32,7 @@ export function Shell({ children }: { children: (section: Section) => React.Reac
       <View style={narrow ? { padding: space.m, borderBottomWidth: 3, borderColor: colors.border, backgroundColor: colors.card, gap: space.s } : { width: 244, padding: space.l, borderRightWidth: 3, borderColor: colors.border, backgroundColor: colors.card }}>
         <View style={narrow ? { flexDirection: "row", alignItems: "center", justifyContent: "space-between" } : { marginBottom: space.l }}>
           <View>
-            <Text style={{ fontSize: 20, fontFamily: fonts.display, color: colors.ink }}>Catapult Math Athletes</Text>
+            <Text style={{ fontSize: 20, fontFamily: fonts.display, color: colors.ink }}>Catapult Mathletes</Text>
             <Text style={{ fontSize: 13, color: colors.inkSoft }}>Admin dashboard</Text>
           </View>
           {narrow ? <Button title="Sign out" small variant="ghost" onPress={() => { void signOut(); }} disabled={ADMIN_MOCK} /> : null}

@@ -1,4 +1,4 @@
-# AGENTS.md: Catapult Math Athletes
+# AGENTS.md: Catapult Mathletes
 
 Instructions for any AI coding agent (Codex, Cursor, Copilot, Gemini CLI, Claude Code, …) and for humans.
 The full guide is the skill **`skills/catapult-math-athletes/SKILL.md`**. Read it before changing anything.

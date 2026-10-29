@@ -1,4 +1,4 @@
-# Backend API for Catapult Math Athletes (deployed by ../scripts/deploy-netlify.mjs; see ../README.md).
+# Backend API for Catapult Mathletes (deployed by ../scripts/deploy-netlify.mjs; see ../README.md).
 [build]
   publish = "public"
 

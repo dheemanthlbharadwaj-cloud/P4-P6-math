@@ -77,7 +77,7 @@ export default function ProfileTab() {
 
   const referralLink = `${extra.referralBaseUrl ?? "https://p6math.app/r"}?code=${profile.friendCode}`;
   const share = async () => {
-    const r = await shareText(`Join me on Catapult Math Athletes! Use my code ${profile.friendCode}: ${referralLink}`);
+    const r = await shareText(`Join me on Catapult Mathletes! Use my code ${profile.friendCode}: ${referralLink}`);
     if (r === "copied") flash("Invite link copied. Paste it in a message to your friend.");
     else if (r === "failed") flash(`Couldn't share automatically. Your link: ${referralLink}`);
   };

@@ -155,7 +155,7 @@ def main():
 PAGE = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Catapult Math Athletes</title>
+<title>Catapult Mathletes</title>
 <style>
   :root { --bg: #fff7e6; --ink: #2b2d42; --soft: #5b5e78; --accent: #2a9d8f; --track: #e3e1f0; color-scheme: light; }
   html, body { height: 100%; }
@@ -179,7 +179,7 @@ PAGE = r"""<!doctype html>
 <div id="root"></div>
 <div id="update" role="status" hidden><span>A new version of the app is ready.</span><button type="button" onclick="location.reload()">Update</button></div>
 <div id="boot" role="status" aria-live="polite">
-  <h1>Catapult Math Athletes</h1>
+  <h1>Catapult Mathletes</h1>
   <p id="bootmsg">Loading the question bank…</p>
   <div id="bar"><i id="barfill"></i></div>
 </div>

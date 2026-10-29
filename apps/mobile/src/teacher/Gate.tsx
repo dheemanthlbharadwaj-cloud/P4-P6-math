@@ -29,7 +29,7 @@ function SignIn() {
   return (
     <Centered>
       <Title>Teacher sign-in</Title>
-      <Muted style={{ marginBottom: space.l }}>Catapult Math Athletes · classroom dashboard</Muted>
+      <Muted style={{ marginBottom: space.l }}>Catapult Mathletes · classroom dashboard</Muted>
       {error ? <Notice kind="error">{error}</Notice> : null}
       <Field label="Email" value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" autoComplete="email" onSubmitEditing={submit} />
       <Field label="Password" value={password} onChangeText={setPassword} secureTextEntry autoComplete="current-password" onSubmitEditing={submit} />
