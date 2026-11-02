@@ -78,6 +78,8 @@ and iOS.
   verified.
 - Larger builds: if your agent supports sub-agents, act as the orchestrator. Define shared types and contracts
   first, delegate parallel pieces, then review and verify yourself.
+- **Always delegate smaller tasks** to small/fast sub-agents (Claude Code: `haiku` for mechanical work, `sonnet` for
+  self-contained pieces); keep contracts, decisions and the final review yourself (owner rule, 2 Nov 2026).
 
 ## 4. Everyday commands
 

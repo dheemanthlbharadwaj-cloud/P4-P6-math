@@ -15,6 +15,10 @@ environment can do and the live status of every service. Flags: `--verify` (test
 - **Do exactly what is asked. Never add unrequested changes** (restyling, extra badges, removed behaviours). Past
   mistakes the owner called out: swapping the gold "completed" node for a star, adding lock badges next to levels,
   pinning the cat to the timer board and losing its mood reactions. If something seems worth changing, ask first.
+- **Always delegate smaller tasks to small/fast sub-agents (owner rule, 2 Nov 2026: "Always delegate smaller tasks to
+  haiku or sonnet agents. Always remember").** Claude Code: Agent tool with `model: "haiku"` for mechanical work (copying,
+  renames, doc edits, screenshots, test runs, searches) and `model: "sonnet"` for self-contained pieces (one screen, one
+  script, one set of tests). Keep for yourself only the contract, the design decisions and the final review + verification.
 - **Work as the orchestrator** (owner request 2026-10): if your agent can run sub-agents, split the work and delegate
   it (a small/fast model for mechanical tasks, a stronger one when more is needed; Claude Code: Agent tool with
   `haiku` / `sonnet`, definitions in `.claude/agents/`). Fix the shared contract (types, API shapes) yourself first so
@@ -438,4 +442,5 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
 | 2026-11-02 | **Separate backend with separate limits** for Catapult Classroom, not combined with the game | done in code (backend-classroom/, own project + Netlify account); game backend back to exactly its pre-classroom state; launch waits for the owner's project, accounts and keys (see "Catapult Classroom launch") |
 | 2026-11-02 | Worksheet answers: question source left for later (teachers may add questions from their login); children answer on a tablet/laptop with the family code + "Who's doing this?"; OEQ phrasing must be EXACT (marks for grammar, spelling, sentence structure); override = teacher account, per student; spelling = exact; PDF worksheets = AI analysis of the hand-corrected paper (preferred); finishing a lesson worksheet only OFFERS "mark complete" to the teacher, who confirms (no automatic completion for now) | recorded; to build with worksheets |
 | 2026-11-02 | **Open, owner will answer later (remind them):** (3) MCQ after the 3rd wrong try: does the app show the right answer, or the teacher tells it; and should "Talk to Teacher Lisa" use each teacher's own name? (6) Maths open-ended = same rules as MCQ (3 tries, then talk to the teacher, enter the right answer)? | awaiting owner |
+| 2026-11-02 | Always delegate smaller tasks to haiku / sonnet sub-agents | in force (§0) |
 | 2026-10-16 | Enable Blaze billing on primary-math-sg so the read quota can't take the backend down | recommended, awaiting owner |
