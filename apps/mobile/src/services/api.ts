@@ -8,8 +8,6 @@ import type {
   ListFriendRequestsResponse, SyncProgressRequest, SyncProgressResponse, UpdateProfileRequest, UpdateProfileResponse, RespondFriendRequestResponse, RestoreProfileRequest, SendFriendRequestRequest,
   SendFriendRequestResponse, GetDailyQuestsRequest, GetDailyQuestsResponse, GetQuestionPatchesRequest, GetQuestionPatchesResponse, ClaimDailyQuestRequest, ClaimDailyQuestResponse,
 } from "@p6/shared";
-import type { MarkValue } from "@p6/shared";
-import type { MyClassroom } from "../logic/classroom";
 import { extra } from "./config";
 import { currentUser } from "./auth";
 
@@ -63,50 +61,4 @@ export const api = {
   claimDailyQuest: (r: ClaimDailyQuestRequest) => call<ClaimDailyQuestRequest, ClaimDailyQuestResponse>("claimDailyQuest", r),
   getQuestionPatches: (r: GetQuestionPatchesRequest) => call<GetQuestionPatchesRequest, GetQuestionPatchesResponse>("getQuestionPatches", r),
   deleteAccount: () => call<DeleteAccountRequest, DeleteAccountResponse>("deleteAccount", {}),
-};
-
-// Classroom (student side). Contract: packages/shared/src/classroom.ts ("Student callables").
-export const getMyClassroom = () => call<Record<string, never>, MyClassroom>("getMyClassroom", {});
-export const submitTaskAnswers = (r: { classId: string; taskId: string; answers: { questionId: string; responses: string[] }[] }) =>
-  call<typeof r, { marks: Record<string, MarkValue> }>("submitTaskAnswers", r);
-
-// Teacher dashboard (web). Contract: packages/shared/src/classroom.ts ("Callables"); used through src/teacher/client.ts.
-import type {
-  AnalyticsReq, CreateTaskReq, ListPostsReq, MarkTaskReq, PostReq, SaveClassReq, TeacherDashboard,
-} from "../teacher/types";
-import type { UploadSignature } from "../teacher/helpers";
-import type { ClassAnalytics, ClassPost as TClassPost, ClassStudent, ClassTask as TClassTask, StudentAnalytics, TaskMarks } from "@p6/shared";
-export const teacherApi = {
-  getDashboard: () => call<Record<string, never>, TeacherDashboard>("teacherGetDashboard", {}),
-  saveClass: (r: SaveClassReq) => call<SaveClassReq, { classId: string }>("teacherSaveClass", r),
-  deleteClass: (classId: string) => call<{ classId: string }, { ok: true }>("teacherDeleteClass", { classId }),
-  addStudent: (classId: string, friendCode: string) => call<{ classId: string; friendCode: string }, { student: ClassStudent }>("teacherAddStudent", { classId, friendCode }),
-  removeStudent: (classId: string, studentUid: string) => call<{ classId: string; studentUid: string }, { ok: true }>("teacherRemoveStudent", { classId, studentUid }),
-  setBirthday: (classId: string, studentUid: string, birthday: string | null) => call<{ classId: string; studentUid: string; birthday: string | null }, { ok: true }>("teacherSetBirthday", { classId, studentUid, birthday }),
-  post: (r: PostReq) => call<PostReq, { post: TClassPost }>("teacherPost", r),
-  deletePost: (classId: string, postId: string) => call<{ classId: string; postId: string }, { ok: true }>("teacherDeletePost", { classId, postId }),
-  /** Proposed, not in CallableName yet: the backend answers "not-found"/"unknown" until it exists. */
-  listPosts: (r: ListPostsReq) => call<ListPostsReq, { posts: TClassPost[] }>("teacherListPosts", r),
-  uploadSignature: (classId: string, fileName: string) => call<{ classId: string; fileName: string }, UploadSignature>("teacherUploadSignature", { classId, fileName }),
-  createTask: (r: CreateTaskReq) => call<CreateTaskReq, { task: TClassTask }>("teacherCreateTask", r),
-  listTasks: (classId: string) => call<{ classId: string }, { tasks: TClassTask[] }>("teacherListTasks", { classId }),
-  getTaskMarks: (classId: string, taskId: string) => call<{ classId: string; taskId: string }, { marks: TaskMarks[] }>("teacherGetTaskMarks", { classId, taskId }),
-  markTask: (r: MarkTaskReq) => call<MarkTaskReq, { starsAwarded: number }>("teacherMarkTask", r),
-  getAnalytics: (r: AnalyticsReq) => call<AnalyticsReq, { class: ClassAnalytics; student?: StudentAnalytics }>("teacherGetAnalytics", r),
-};
-
-// Admin (owner) dashboard (web). Contract: packages/shared/src/admin.ts ("Callables"); used through src/admin/client.ts.
-import type { AdminOverview, SaveAdminClassReq } from "../admin/types";
-import type { AdminUserRow, TeacherDoc } from "@p6/shared";
-export const adminApi = {
-  getOverview: () => call<Record<string, never>, AdminOverview>("adminGetOverview", {}),
-  saveTeacher: (email: string, name: string, uid?: string) => call<{ uid?: string; email: string; name: string }, { teacher: TeacherDoc; password?: string }>("adminSaveTeacher", { ...(uid ? { uid } : {}), email, name }),
-  setTeacherActive: (uid: string, active: boolean) => call<{ uid: string; active: boolean }, { ok: true }>("adminSetTeacherActive", { uid, active }),
-  resetPassword: (uid: string) => call<{ uid: string }, { password: string }>("adminResetPassword", { uid }),
-  findUser: (query: string) => call<{ query: string }, { users: AdminUserRow[] }>("adminFindUser", { query }),
-  setUserDisabled: (uid: string, disabled: boolean) => call<{ uid: string; disabled: boolean }, { ok: true }>("adminSetUserDisabled", { uid, disabled }),
-  saveClass: (r: SaveAdminClassReq) => call<SaveAdminClassReq, { classId: string }>("adminSaveClass", r),
-  deleteClass: (classId: string) => call<{ classId: string }, { ok: true }>("adminDeleteClass", { classId }),
-  addStudent: (classId: string, friendCode: string) => call<{ classId: string; friendCode: string }, { student: ClassStudent }>("adminAddStudent", { classId, friendCode }),
-  removeStudent: (classId: string, studentUid: string) => call<{ classId: string; studentUid: string }, { ok: true }>("adminRemoveStudent", { classId, studentUid }),
 };

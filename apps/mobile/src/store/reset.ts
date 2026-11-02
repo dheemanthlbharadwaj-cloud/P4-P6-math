@@ -8,7 +8,6 @@ import { useFriends } from "./friends";
 import { useStars } from "./stars";
 import { useReferral } from "./referral";
 import { useNotifications } from "./notifications";
-import { useClassroom } from "./classroom";
 
 /** Wipe all local data (account deletion / sign-out). */
 export function resetAllStores() {
@@ -22,5 +21,4 @@ export function resetAllStores() {
   useStars.getState().reset();
   useReferral.getState().reset();
   useNotifications.getState().reset();
-  useClassroom.getState().reset();
 }
