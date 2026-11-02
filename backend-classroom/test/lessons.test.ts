@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   canTouch, codeDocId, familyIdOfUid, makeFamilyCode, parentUid, staffOf, toParentReport, validateFamily, validateLesson, validateSession,
 } from "../src/logic/lessons";
-import { isFamilyCode, type LessonReport } from "../src/shared/index";
+import { CLASSROOM_CALLABLES, isFamilyCode, type LessonReport } from "../src/shared/index";
 
 const seq = () => { let i = 0; return (max: number) => (i++ * 7) % max; };
 
@@ -80,19 +80,15 @@ describe("parents", () => {
   });
 });
 
-describe("callable wiring (lessons)", () => {
-  it("every lessons callable is exported, served and in the contract", async () => {
+describe("callable wiring", () => {
+  it("every callable of the contract is served by index.ts, and nothing else", async () => {
     const fs = await import("node:fs");
     const url = await import("node:url");
     const here = url.fileURLToPath(new URL(".", import.meta.url));
-    const names = ["teacherGetStudents", "teacherSaveFamily", "teacherResetFamilyCode", "teacherDeleteFamily", "teacherGetChild", "teacherListLessons", "teacherSaveLesson", "teacherDeleteLesson", "teacherSaveSession", "parentSignIn", "parentGetHome"];
-    const handler = fs.readFileSync(here + "../../netlify/handler.mjs", "utf8");
     const index = fs.readFileSync(here + "../src/index.ts", "utf8");
-    const api = fs.readFileSync(here + "../../../packages/shared/src/api.ts", "utf8");
-    for (const n of names) {
-      expect(handler, n).toMatch(new RegExp(`"${n}"`));
-      expect(index, n).toMatch(new RegExp(`\\b${n}\\b`));
-      expect(api, n).toMatch(new RegExp(`"${n}"`));
-    }
+    const map = index.slice(index.indexOf("CALLABLES"));
+    for (const n of CLASSROOM_CALLABLES) expect(map, n).toMatch(new RegExp(`\\b${n}\\b`));
+    const served = [...map.slice(map.indexOf("{")).matchAll(/\b(get|admin|teacher|parent)\w+/g)].map((m) => m[0]);
+    expect(new Set(served)).toEqual(new Set(CLASSROOM_CALLABLES));
   });
 });

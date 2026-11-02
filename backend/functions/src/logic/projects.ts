@@ -49,4 +49,4 @@ export async function verifyWithFallback<T>(primary: (t: string) => Promise<T>, 
 }
 
 /** Callables of the teacher and admin dashboards check for revoked / disabled logins on every call; student callables don't (no extra Auth call). */
-export const needsRevocationCheck = (callable: string): boolean => /^(admin|teacher|parent)[A-Z]/.test(callable); // parent*: a reset family code ends old sign-ins at once
+export const needsRevocationCheck = (callable: string): boolean => /^(admin|teacher)[A-Z]/.test(callable);

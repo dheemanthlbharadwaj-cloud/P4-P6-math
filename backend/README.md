@@ -150,14 +150,6 @@ diagnostic picking, mark planning, Cloudinary signature; `levelStars.ts` the sta
 - **Reads** (per-instance caches: class docs 60 s, class feed 60 s with incremental refresh, analytics 5 min, teacher doc 60 s, user info
   60 s): table at the top of `functions/src/classroom.ts`. Rule of thumb: a warm `getMyClassroom` = 1 read (the student's qstats);
   `teacherMarkTask` = about 4 reads; analytics = one read per student per 5 minutes.
-- **Catapult Classroom** (`apps/classroom`, contract `packages/shared/src/lessons.ts`, code `functions/src/lessons.ts`): families,
-  children, the shared lesson library, sessions + one report per child, parents. Parents sign in with a family code:
-  `parentSignIn` (no login, 5/min per IP) → custom token `parent_<familyId>`; codes are stored only as sha256 doc ids in
-  `familyCodes`. All new collections are server only (rules catch-all; listed in `test-rules`). Reads-per-call table at the top
-  of `lessons.ts`. Emulator check: `netlify/scripts/e2e-lessons.mjs`.
-- **Classroom web app, first version** (`apps/classroom`): `getMyRoles` (any login → `{teacher, admin}`, 2 cached reads; code in
-  `adminDashboard.ts`, rule `rolesOf`) picks the areas it offers; `getMyClassroom` tasks carry `classId` so a test goes to its
-  own class. Its address is in the handler's `ALLOWED_ORIGINS`.
 - **Deploy**: only with the other backend changes (15 Netlify credits per deploy); nothing here needs `deploy-rules.mjs` (rules unchanged
   in behaviour for both projects).
 

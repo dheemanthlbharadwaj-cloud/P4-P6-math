@@ -1,7 +1,8 @@
-// Catapult Classroom backend: families (one parent code each), children, the shared lesson library, lesson sessions with
+// Catapult Classroom backend (its own project): families (one parent code each), children, the shared lesson library, lesson sessions with
 // one report per child, and the parent view. Contract: packages/shared/src/lessons.ts. Pure rules: logic/lessons.ts.
 //
 // Reads per call (Firestore documents; staff check = teachers/{uid} + admins/{uid}, both cached 60 s):
+// (staff check: staff.ts)
 //   teacherGetStudents      families of the teacher (all for admins) + their children (+ teachers list for admins)
 //   teacherSaveFamily       new: 0 (+1 code check); edit: 1 family + its children
 //   teacherResetFamilyCode  1 family (+1 code check)          teacherDeleteFamily  1 family + its reports (deleted)
@@ -10,17 +11,17 @@
 //   teacherSaveLesson       edit: 1 lesson                    teacherDeleteLesson  1 lesson
 //   teacherSaveSession      1 lesson + the children named (+ 1 session when editing)
 //   parentSignIn            1 code doc + 1 family              parentGetHome        1 family + children + reports + lessons named
-import { HttpsError, onCall } from "firebase-functions/v2/https";
 import { randomInt } from "node:crypto";
-import { auth, col, db, requireUid, throwFail } from "./admin.js";
-import { teacherRecord } from "./classroom.js";
-import { adminRecord } from "./adminDashboard.js";
+import { auth, col, db } from "./firebase.js";
+import { HttpsError, onCall, requireUid, throwFail } from "./errors.js";
+import { requireStaff, teacherRecord, type Staff } from "./staff.js";
 import { TtlCache } from "./logic/ttlCache.js";
+import type { StaffDoc } from "./logic/staff.js";
 import {
-  canTouch, codeDocId, familyIdOfUid, makeFamilyCode, parentUid, staffOf, toParentReport, validDocId, validateFamily, validateLesson, validateSession,
+  canTouch, codeDocId, familyIdOfUid, makeFamilyCode, parentUid, toParentReport, validDocId, validateFamily, validateLesson, validateSession,
 } from "./logic/lessons.js";
 import {
-  isFamilyCode, normalizeFamilyCode, type Child, type Family, type Lesson, type LessonReport, type LessonSession, type ParentHome, type TeacherDoc,
+  isFamilyCode, normalizeFamilyCode, type Child, type Family, type Lesson, type LessonReport, type LessonSession, type ParentHome,
 } from "./shared/index.js";
 
 const obj = (v: unknown): Record<string, unknown> => ((v && typeof v === "object" ? v : {}) as Record<string, unknown>);
@@ -42,14 +43,6 @@ async function byIds<T>(c: FirebaseFirestore.CollectionReference, ids: string[])
 }
 
 // ---------------------------------------------------------------- access
-type Staff = { uid: string; admin: boolean };
-async function requireStaff(req: Parameters<typeof requireUid>[0]): Promise<Staff> {
-  const uid = requireUid(req);
-  const [t, a] = await Promise.all([teacherRecord(uid), adminRecord(uid)]);
-  const ok = staffOf(t, a);
-  if (!ok.ok) throwFail(ok);
-  return { uid, admin: ok.admin };
-}
 async function familyFor(staff: Staff, familyId: string): Promise<Family> {
   const snap = await families().doc(familyId).get();
   const f = snap.exists ? (snap.data() as Family) : null;
@@ -79,7 +72,7 @@ export const teacherGetStudents = onCall(async (req): Promise<{ families: Family
   const fams = docs<Family>(await (staff.admin ? families().get() : families().where("teacherUid", "==", staff.uid).get()));
   const kids = docs<Child>(await (staff.admin ? childrenCol().get() : childrenCol().where("teacherUid", "==", staff.uid).get()));
   if (!staff.admin) return { families: fams, children: kids };
-  const teachers = docs<TeacherDoc>(await db.collection(col.teachers).get()).filter((t) => t.active).map((t) => ({ uid: t.uid, name: t.name }));
+  const teachers = docs<StaffDoc>(await db.collection(col.teachers).get()).filter((t) => t.active).map((t) => ({ uid: t.uid, name: t.name }));
   return { families: fams, children: kids, teachers };
 });
 

@@ -81,9 +81,6 @@ mine = await call(S1, "getMyClassroom");
 ok(!mine.homework.includes(mcqId), "homework cleared after answering it right");
 
 const dia = (await call(T1, "teacherCreateTask", { classId, kind: "diagnostic", topicId: P6.topics[0].id, inApp: true })).task;
-ok((await call(S1, "getMyClassroom")).tasks.find((t) => t.id === dia.id)?.classId === classId, "student: an in-app test says which class it is from");
-const rs = await call(S1, "getMyRoles"), rt = await call(T1, "getMyRoles"), ra = await call(A, "getMyRoles");
-ok(!rs.teacher && !rs.admin && rt.teacher && !rt.admin && ra.admin, "getMyRoles: student / teacher / admin");
 const first = await call(S1, "submitTaskAnswers", { classId, taskId: dia.id, answers: dia.questionIds.map((q) => ({ questionId: q, responses: ["0"] })) });
 const again = await call(S1, "submitTaskAnswers", { classId, taskId: dia.id, answers: dia.questionIds.map((q) => ({ questionId: q, responses: [P6.answers[q]?.o ?? "1"] })) });
 ok(JSON.stringify(again.marks) === JSON.stringify(first.marks), "in-app test: a second submission cannot change the marks");

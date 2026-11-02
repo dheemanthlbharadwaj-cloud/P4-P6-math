@@ -11,9 +11,6 @@ export const PER_MINUTE: Record<string, number> = {
   teacherGetDashboard: 30, teacherSaveClass: 20, teacherDeleteClass: 10, teacherAddStudent: 60, teacherRemoveStudent: 30, teacherSetBirthday: 60,
   teacherPost: 20, teacherDeletePost: 20, teacherUploadSignature: 30, teacherCreateTask: 20, teacherListTasks: 30, teacherGetTaskMarks: 60,
   teacherMarkTask: 90, teacherGetAnalytics: 30, getMyClassroom: 20, submitTaskAnswers: 10,
-  // Catapult Classroom; parentSignIn runs signed out, so it is limited per IP (guessing codes)
-  teacherGetStudents: 30, teacherSaveFamily: 30, teacherResetFamilyCode: 10, teacherDeleteFamily: 10, teacherGetChild: 60, teacherListLessons: 30,
-  teacherSaveLesson: 30, teacherDeleteLesson: 10, teacherSaveSession: 30, parentSignIn: 5, parentGetHome: 20,
 };
 export const DEFAULT_PER_MINUTE = 20;
 /** Every function together, per account. */

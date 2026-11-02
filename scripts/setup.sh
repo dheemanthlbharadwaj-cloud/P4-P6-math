@@ -2,7 +2,7 @@
 # One-command setup for a fresh checkout (any AI coding agent or human; Linux/macOS; no sudo; safe to re-run).
 #
 #   bash scripts/setup.sh              node/npm check, npm ci, Pillow, figure packs, then scripts/doctor.mjs
-#   bash scripts/setup.sh --verify     also: npm test, apps/mobile tsc --noEmit, backend/functions typecheck
+#   bash scripts/setup.sh --verify     also: npm test, apps/mobile tsc --noEmit, backend/functions + backend-classroom typecheck
 #   bash scripts/setup.sh --browser    also: make sure Playwright Chromium is available
 #   bash scripts/setup.sh --android    also: Android SDK + release signing key (needs JDK 17+, Firebase service account)
 #   bash scripts/setup.sh --quick      for session-start hooks: skip npm ci when package-lock.json is unchanged
@@ -65,11 +65,11 @@ fi
 
 # ---- npm install (stamped so --quick can skip) ----
 STAMP="node_modules/.setup-stamp"
-lock_hash() { node -e 'const c=require("crypto"),f=require("fs");const h=c.createHash("sha256");for(const p of ["package-lock.json","backend/functions/package-lock.json","apps/mobile/package.json"]){try{h.update(f.readFileSync(p))}catch{}}console.log(h.digest("hex"))'; }
+lock_hash() { node -e 'const c=require("crypto"),f=require("fs");const h=c.createHash("sha256");for(const p of ["package-lock.json","backend/functions/package-lock.json","backend-classroom/package-lock.json","apps/mobile/package.json"]){try{h.update(f.readFileSync(p))}catch{}}console.log(h.digest("hex"))'; }
 HASH="$(lock_hash)"
 REG="apps/mobile/assets/content/P6/figpacks/registry.ts"
 need_install=1
-if [ "$QUICK" = 1 ] && [ -d node_modules ] && [ -d backend/functions/node_modules ] && [ -f "$REG" ] && [ "$(cat "$STAMP" 2>/dev/null)" = "$HASH" ]; then
+if [ "$QUICK" = 1 ] && [ -d node_modules ] && [ -d backend/functions/node_modules ] && [ -d backend-classroom/node_modules ] && [ -f "$REG" ] && [ "$(cat "$STAMP" 2>/dev/null)" = "$HASH" ]; then
   need_install=0
   ok "dependencies unchanged (quick): skipped npm ci"
 fi
@@ -86,6 +86,12 @@ if [ "$need_install" = 1 ]; then
   else
     fail "npm install failed in backend/functions"
   fi
+  step "npm ci (backend-classroom)"
+  if (cd backend-classroom && { npm ci --no-audit --no-fund || npm install --no-audit --no-fund; }); then
+    ok "backend-classroom dependencies installed"
+  else
+    fail "npm install failed in backend-classroom"
+  fi
   if [ ! -f "$REG" ]; then
     echo "figure packs missing, rebuilding"; (cd apps/mobile && node scripts/build-figpacks.mjs) || true
   fi
@@ -101,6 +107,8 @@ if [ "$VERIFY" = 1 ]; then
   (cd apps/mobile && npx tsc --noEmit) && ok "apps/mobile typecheck" || fail "apps/mobile typecheck"
   step "backend/functions typecheck"
   (cd backend/functions && npm run typecheck) && ok "backend/functions typecheck" || fail "backend/functions typecheck"
+  step "backend-classroom typecheck"
+  (cd backend-classroom && npm run typecheck) && ok "backend-classroom typecheck" || fail "backend-classroom typecheck"
 fi
 
 # ---- browser ----

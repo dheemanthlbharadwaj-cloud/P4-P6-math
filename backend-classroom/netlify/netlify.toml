@@ -1,0 +1,8 @@
+# Catapult Classroom backend API: its OWN Netlify site (and account), separate from the game's (deployed by
+# ../scripts/deploy.mjs). Ships lib/ (compiled ../src, copied by the build) and this folder's node_modules only.
+[build]
+  publish = "public"
+
+[functions]
+  directory = "functions"
+  included_files = ["backend-classroom/netlify/lib/**/*", "backend-classroom/netlify/node_modules/**/*"]

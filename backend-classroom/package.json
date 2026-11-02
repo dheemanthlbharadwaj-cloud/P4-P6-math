@@ -1,0 +1,25 @@
+{
+  "name": "catapult-classroom-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Catapult Classroom backend: its own Netlify site and Firebase project (separate limits from the game).",
+  "type": "commonjs",
+  "scripts": {
+    "copy-shared": "node scripts/copy-shared.mjs",
+    "prebuild": "npm run copy-shared",
+    "build": "tsc && node scripts/copy-lib.mjs",
+    "typecheck": "npm run copy-shared && tsc --noEmit",
+    "pretest": "npm run copy-shared",
+    "test": "vitest run",
+    "dev": "npm run build && node scripts/dev-server.mjs",
+    "emulators": "npx --yes firebase-tools@14 emulators:start --only auth,firestore --project demo-classroom"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3",
+    "vitest": "^5.0.3"
+  }
+}

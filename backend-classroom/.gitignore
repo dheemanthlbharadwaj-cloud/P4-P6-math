@@ -1,0 +1,5 @@
+node_modules/
+lib/
+src/shared/
+netlify/lib/
+netlify/node_modules/

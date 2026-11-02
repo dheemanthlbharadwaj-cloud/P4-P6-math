@@ -44,10 +44,7 @@ export type CallableName =
   | "teacherGetDashboard" | "teacherSaveClass" | "teacherDeleteClass" | "teacherAddStudent" | "teacherRemoveStudent"
   | "teacherSetBirthday" | "teacherPost" | "teacherDeletePost" | "teacherListPosts" | "teacherUploadSignature" | "teacherCreateTask"
   | "teacherListTasks" | "teacherGetTaskMarks" | "teacherMarkTask" | "teacherGetAnalytics"
-  | "getMyClassroom" | "submitTaskAnswers" | "getMyRoles"
-  // lessons.ts (Catapult Classroom)
-  | "teacherGetStudents" | "teacherSaveFamily" | "teacherResetFamilyCode" | "teacherDeleteFamily" | "teacherGetChild"
-  | "teacherListLessons" | "teacherSaveLesson" | "teacherDeleteLesson" | "teacherSaveSession" | "parentSignIn" | "parentGetHome"
+  | "getMyClassroom" | "submitTaskAnswers"
   // admin.ts
   | "adminGetOverview" | "adminSaveTeacher" | "adminSetTeacherActive" | "adminResetPassword" | "adminFindUser"
   | "adminSetUserDisabled" | "adminSaveClass" | "adminDeleteClass" | "adminAddStudent" | "adminRemoveStudent";

@@ -1,0 +1,9 @@
+{
+  "name": "catapult-classroom-backend-netlify",
+  "private": true,
+  "description": "What the Catapult Classroom Netlify function ships: lib/ (compiled ../src) + firebase-admin only.",
+  "type": "commonjs",
+  "dependencies": {
+    "firebase-admin": "^13.0.0"
+  }
+}

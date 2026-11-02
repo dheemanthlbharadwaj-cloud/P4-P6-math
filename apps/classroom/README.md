@@ -1,8 +1,8 @@
 # Catapult Classroom (web)
 
 For parents (one family code shows all their children's completed lessons and the teacher's messages) and teachers / the
-owner (lessons, students, running a lesson with feedback for WhatsApp, admin). Same accounts (student Firebase project) and
-the same Netlify backend as the game. The full guide is the skill (`skills/catapult-math-athletes/SKILL.md`, row
+owner (lessons, students, running a lesson with feedback for WhatsApp, admin). Its own Firebase project (catapult-classroom)
+and its own backend (`../../backend-classroom`), separate from the game. The full guide is the skill (`skills/catapult-math-athletes/SKILL.md`, row
 "Catapult Classroom (web)").
 
 ```bash

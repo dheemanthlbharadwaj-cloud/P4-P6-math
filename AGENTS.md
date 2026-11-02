@@ -24,14 +24,16 @@ and iOS.
 - **Questions:** an offline question bundle built from the question editor's Firestore by `content/`.
 - **Live edits:** questions edited in the editor reach apps as patches via the backend's `getQuestionPatches`.
 - **Backend:** in `backend/`, running on Netlify.
-- **Catapult Classroom:** `apps/classroom`, web only, for parents (one family code) and teachers / the owner (lessons,
-  students, feedback). Same accounts and backend; the game keeps no classroom screens (owner decision, 2 Nov 2026).
+- **Catapult Classroom:** `apps/classroom` (web, for parents with one family code and teachers / the owner) with its OWN
+  backend `backend-classroom/` and Firebase project `catapult-classroom`: separate limits, never combined with the game
+  (owner decision, 2 Nov 2026). The game keeps no classroom screens.
 - **Shared code:** types and rules in `packages/shared`.
 
 | Live | URL | Updated by |
 |---|---|---|
 | Web app | https://catapult-mathletes.web.app | GitHub Actions on push (`.github/workflows/deploy-web.yml`, keyless) |
 | Catapult Classroom | https://catapult-classroom.web.app (not live yet; own Firebase project) | `.github/workflows/deploy-classroom.yml` (manual for now) |
+| Classroom backend | https://catapult-classroom-api.netlify.app (not live yet; own Netlify account) | `node backend-classroom/scripts/deploy.mjs` |
 | Backend API | https://catapult-math-athletes-api.netlify.app | `node backend/scripts/deploy-netlify.mjs` |
 | Phones (OTA) | Expo `dheems-team/catapult-math-athletes`, channel `preview` | EAS workflow on push (`apps/mobile/.eas/workflows/publish-update.yml`) |
 | Android APK | sent to the owner as a file (they share it); Netlify page archived | local build (`docs/ANDROID.md`), verify the signing key |
@@ -48,7 +50,8 @@ and iOS.
 **Secrets**
 - **Never print, paste or commit secrets.** Never ask the user to paste them into chat.
 - Credentials come from environment variables only: `FIREBASE_SERVICE_ACCOUNT_B64`, `NETLIFY_AUTH_TOKEN` /
-  `NETLIFY_SECRET`, `CLOUDINARY_SECRET`, optional `EXPO_TOKEN`.
+  `NETLIFY_SECRET`, `CLOUDINARY_SECRET`, optional `EXPO_TOKEN`. Catapult Classroom: `CLASSROOM_SETUP_SERVICE_ACCOUNT_B64`,
+  `CLASSROOM_NETLIFY_AUTH_TOKEN` (its own Netlify account).
 
 **Editor writes**
 - Writes to the editor bank (Firestore `questions`) need a `--dry` run first and an undo manifest in

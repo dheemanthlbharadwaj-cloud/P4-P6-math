@@ -1,13 +1,15 @@
-// End-to-end check of Catapult Classroom (families, parent codes, lessons, sessions, parent view) against the Firebase
-// EMULATORS and the local backend, like e2e-classroom.mjs (same set-up; refuses to run without the emulator variables).
-//   (env as in e2e-classroom.mjs) node backend/netlify/scripts/e2e-lessons.mjs     (clear the emulators between runs)
+// End-to-end check of the Catapult Classroom backend (staff, families, parent codes, lessons, sessions, parent view) against
+// the Firebase EMULATORS and the local dev server. Refuses to run without the emulator variables. Clear the emulators between runs.
+//   cd backend-classroom && npm run emulators          (another terminal)
+//   npm run build && FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099 GCLOUD_PROJECT=demo-classroom node scripts/dev-server.mjs
+//   (same env) node scripts/e2e.mjs
 import { createRequire } from "node:module";
 if (!process.env.FIRESTORE_EMULATOR_HOST || !process.env.FIREBASE_AUTH_EMULATOR_HOST) throw new Error("emulators only: set FIRESTORE_EMULATOR_HOST and FIREBASE_AUTH_EMULATOR_HOST");
 const require = createRequire(new URL("../package.json", import.meta.url));
 const admin = require("firebase-admin");
-admin.initializeApp({ projectId: "demo-p6-math" });
+admin.initializeApp({ projectId: process.env.GCLOUD_PROJECT || "demo-classroom" });
 const db = admin.firestore();
-const API = "http://127.0.0.1:8888/api/";
+const API = "http://127.0.0.1:8899/api/";
 const AUTH = "http://127.0.0.1:9099/identitytoolkit.googleapis.com/v1/accounts:";
 let pass = 0, failN = 0;
 const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); c ? pass++ : failN++; };
@@ -26,6 +28,14 @@ await db.doc(`admins/${aUid}`).set({ uid: aUid, name: "Owner", email: "owner@tes
 const T1 = await signIn("lisa@test.local", (await call(A, "adminSaveTeacher", { email: "lisa@test.local", name: "Teacher Lisa" })).password);
 const T2 = await signIn("tom@test.local", (await call(A, "adminSaveTeacher", { email: "tom@test.local", name: "Teacher Tom" })).password);
 const S = await signUp("kid@test.local", "kid-pass-123");
+
+// staff
+ok(JSON.stringify(await call(A, "getMyRoles")) === JSON.stringify({ teacher: false, admin: true }) && (await call(T1, "getMyRoles")).teacher, "getMyRoles: admin / teacher");
+ok(!(await call(S, "getMyRoles")).teacher, "getMyRoles: a plain login has no area");
+ok((await call(A, "adminGetOverview")).teachers.length === 2, "admin: overview lists the teachers");
+ok(await errOf(T1, "adminGetOverview") === "permission-denied", "a teacher is not an admin");
+ok(!(await call(A, "adminSaveTeacher", { uid: (await admin.auth().getUserByEmail("tom@test.local")).uid, email: "x@y.z", name: "Mr Tom" })).password, "admin: rename teacher, no new password");
+ok(await errOf(null, "nope") === "not-found", "unknown function refused");
 
 ok(await errOf(S, "teacherGetStudents") === "permission-denied", "a plain login is not staff");
 ok(await errOf(null, "teacherListLessons") === "unauthenticated", "signed out: refused");

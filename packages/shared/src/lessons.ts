@@ -1,9 +1,12 @@
-// Catapult Classroom: lessons, students and parent reports (owner brief, 1–2 Nov 2026). Replaces the 2 Nov class-feed plan.
-// Teachers run lessons with several children at once; each child gets their own report (a face per learning goal, a
-// note, which parts were done). Parents sign in with ONE code per family and see every child of the family.
-// Everything is server-only in the student project (rules deny clients); all access goes through the callables below.
+// Catapult Classroom: lessons, students and parent reports (owner brief, 1–2 Nov 2026).
+// Its OWN backend (owner decision 2 Nov 2026: separate limits, never combined with the game): backend-classroom/ on its
+// own Netlify site, Firebase project catapult-classroom (its own Auth + Firestore). Teachers run lessons with several
+// children; each child gets a report (a face per learning goal, a note, which parts were done). Parents sign in with ONE
+// code per family and see every child of the family. All data is server only (rules deny clients).
 //
-// Firestore (student project):
+// Firestore (classroom project):
+//   teachers/{uid}               TeacherDoc    (made by an admin, Admin > Teachers)
+//   admins/{uid}                 TeacherDoc    (made only by backend-classroom/scripts/add-admin.mjs)
 //   families/{familyId}          Family        (parent login = custom token uid "parent_<familyId>")
 //   familyCodes/{sha256(code)}   { familyId }  (the code itself is never stored)
 //   children/{childId}           Child
@@ -11,7 +14,12 @@
 //   sessions/{sessionId}         LessonSession (one lesson run on one day with some children)
 //   reports/{reportId}           LessonReport  (one per child per session; id = `${sessionId}_${childId}`)
 //
-// Callables (teacher* / admin*: teachers see their own families; admins see everyone):
+// Callables: POST <backend>/api/<name> { data } with "Authorization: Bearer <Firebase ID token>" (ClassroomCallable).
+//   getMyRoles               {} → MyRoles
+//   adminGetOverview         {} → { admin: TeacherDoc; teachers: TeacherDoc[] }
+//   adminSaveTeacher         { uid?; email; name } → { teacher; password? (new login only, shown once) }   (uid = rename only)
+//   adminSetTeacherActive    { uid; active } → { ok }
+//   adminResetPassword       { uid } → { password }
 //   teacherGetStudents       {} → { families: Family[]; children: Child[]; teachers?: {uid,name}[] (admins) }
 //   teacherSaveFamily        { id?; parentName; teacherUid? (admin only); children: {id?; name; level}[] } → { family; children; code? (new family only, shown once) }
 //   teacherResetFamilyCode   { familyId } → { code }
@@ -23,6 +31,18 @@
 //   teacherSaveSession       { id?; lessonId; date; reports: SessionChildInput[]; familyTexts: Record<familyId, string> } → { session; reports }
 //   parentSignIn             { code } (no sign-in needed) → { token }   (Firebase custom token; rate limited per IP)
 //   parentGetHome            {} → ParentHome
+export type ClassroomCallable =
+  | "getMyRoles" | "adminGetOverview" | "adminSaveTeacher" | "adminSetTeacherActive" | "adminResetPassword"
+  | "teacherGetStudents" | "teacherSaveFamily" | "teacherResetFamilyCode" | "teacherDeleteFamily" | "teacherGetChild"
+  | "teacherListLessons" | "teacherSaveLesson" | "teacherDeleteLesson" | "teacherSaveSession" | "parentSignIn" | "parentGetHome";
+export const CLASSROOM_CALLABLES: readonly ClassroomCallable[] = [
+  "getMyRoles", "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword",
+  "teacherGetStudents", "teacherSaveFamily", "teacherResetFamilyCode", "teacherDeleteFamily", "teacherGetChild",
+  "teacherListLessons", "teacherSaveLesson", "teacherDeleteLesson", "teacherSaveSession", "parentSignIn", "parentGetHome",
+];
+/** Which staff areas a login may open (an active teachers / admins doc). Parents are "parent_<familyId>" logins. */
+export interface MyRoles { teacher: boolean; admin: boolean }
+
 import type { Grade } from "./types";
 
 export type Face = "good" | "ok" | "bad";

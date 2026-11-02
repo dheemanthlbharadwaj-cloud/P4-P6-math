@@ -5,7 +5,7 @@ import {
   FACES, FAMILY_CODE_ALPHABET, LESSON_LIMITS as L, SUBJECTS, type Child, type Face, type LearningGoal, type Lesson, type LessonPart,
   type LessonReport, type ParentReport, type SessionChildInput, type Subject,
 } from "../shared/index.js";
-import type { Fail, Ok } from "./rules.js";
+import type { Fail, Ok } from "../errors.js";
 
 const fail = (code: Fail["code"], message: string): Fail => ({ ok: false, code, message });
 const obj = (v: unknown): Record<string, unknown> => ((v && typeof v === "object" && !Array.isArray(v) ? v : {}) as Record<string, unknown>);

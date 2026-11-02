@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotOtherAdmin, checkNotSelf, checkPromotable, hasPasswordLogin, makePassword, parseUserQuery, rolesOf, validateAdminSaveClass,
+  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotOtherAdmin, checkNotSelf, checkPromotable, hasPasswordLogin, makePassword, parseUserQuery, validateAdminSaveClass,
   validateSaveTeacher, validateUidFlag, type AuthLike,
 } from "../src/logic/admin";
 
@@ -63,12 +63,6 @@ describe("access checks", () => {
     expect(checkAdmin({ active: false })).toMatchObject({ ok: false, code: "permission-denied" });
     expect(checkAdmin({ active: "yes" })).toMatchObject({ ok: false });
     expect(checkAdmin({ active: true })).toEqual({ ok: true });
-  });
-  it("rolesOf (getMyRoles): only ACTIVE teacher / admin records open those areas", () => {
-    expect(rolesOf(null, null)).toEqual({ teacher: false, admin: false });
-    expect(rolesOf({ active: true }, undefined)).toEqual({ teacher: true, admin: false });
-    expect(rolesOf({ active: false }, { active: true })).toEqual({ teacher: false, admin: true });
-    expect(rolesOf({ active: "yes" }, { active: "yes" })).toEqual({ teacher: false, admin: false });
   });
   it("checkNotSelf refuses the caller's own uid", () => {
     expect(checkNotSelf("a1", "a1")).toMatchObject({ ok: false, code: "failed-precondition" });
@@ -148,11 +142,11 @@ describe("buildUserRow", () => {
 });
 
 describe("callable wiring (admin)", () => {
-  it("the ten admin callables (and getMyRoles) are exported from index.ts and served by the Netlify handler", async () => {
+  it("the ten admin callables are exported from index.ts and served by the Netlify handler", async () => {
     const fs = await import("node:fs");
     const url = await import("node:url");
     const here = url.fileURLToPath(new URL(".", import.meta.url));
-    const names = ["getMyRoles", "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword", "adminFindUser", "adminSetUserDisabled", "adminSaveClass", "adminDeleteClass", "adminAddStudent", "adminRemoveStudent"];
+    const names = ["adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword", "adminFindUser", "adminSetUserDisabled", "adminSaveClass", "adminDeleteClass", "adminAddStudent", "adminRemoveStudent"];
     const handler = fs.readFileSync(here + "../../netlify/handler.mjs", "utf8");
     const index = fs.readFileSync(here + "../src/index.ts", "utf8");
     const api = fs.readFileSync(here + "../../../packages/shared/src/api.ts", "utf8");
