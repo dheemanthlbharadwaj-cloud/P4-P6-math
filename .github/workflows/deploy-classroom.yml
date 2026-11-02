@@ -1,0 +1,50 @@
+# Classroom web app (https://catapult-classroom.web.app, apps/classroom): build and publish to Firebase Hosting.
+# Hosting lives in its OWN Firebase project (owner decision, 2 Nov 2026); sign-in and data stay in the student project
+# (catapult-math-students) through the shared Netlify backend. Keyless, like deploy-web.yml: GitHub's OIDC token is
+# exchanged (workload identity pool "github" in primary-math-sg) for catapult-web-deployer, which needs the
+# "Firebase Hosting Admin" role on the classroom project too. Runs on GitHub's free minutes (no Expo minutes, no
+# Netlify credits).
+#
+# Manual only until the classroom project exists and the deployer has its role (skill §9). Then add a push trigger:
+#   push: { branches: [main, classroom-web], paths: ['apps/classroom/**', 'packages/shared/**', 'apps/mobile/assets/content/**', '!**/*.md'] }
+name: Deploy classroom web app
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-classroom
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  CLASSROOM_PROJECT: catapult-classroom # the classroom's Firebase project id (change here if the owner picks another id)
+  CLASSROOM_SITE: catapult-classroom
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/762269301954/locations/global/workloadIdentityPools/github/providers/github-actions
+          service_account: catapult-web-deployer@primary-math-sg.iam.gserviceaccount.com
+          token_format: access_token
+      - name: Build
+        run: node apps/classroom/scripts/build-web.mjs
+      - name: Publish to Firebase Hosting
+        working-directory: content
+        env:
+          GOOGLE_OAUTH_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: npx tsx ../apps/mobile/scripts/deploy-hosting.ts ../apps/classroom/dist "$CLASSROOM_SITE" "$CLASSROOM_PROJECT"

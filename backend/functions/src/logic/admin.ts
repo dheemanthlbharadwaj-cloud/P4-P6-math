@@ -20,6 +20,10 @@ export function checkAdmin(doc: { active?: unknown } | undefined | null): Fail |
   if (doc.active !== true) return fail("permission-denied", "Not an admin");
   return { ok: true };
 }
+/** getMyRoles: an active teacher / admin record each opens that area of the Classroom web app. */
+export function rolesOf(teacher: { active?: unknown } | null | undefined, admin: { active?: unknown } | null | undefined): { teacher: boolean; admin: boolean } {
+  return { teacher: teacher?.active === true, admin: checkAdmin(admin).ok };
+}
 /** An admin may not lock themselves out: disabling their own login / teacher record is refused. */
 export function checkNotSelf(callerUid: string, targetUid: string): Fail | Ok {
   if (callerUid === targetUid) return fail("failed-precondition", "You can't do this to your own account.");

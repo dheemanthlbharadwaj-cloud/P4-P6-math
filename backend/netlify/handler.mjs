@@ -22,7 +22,7 @@ const CALLABLES = new Set([
   // classroom (packages/shared/src/classroom.ts)
   "teacherGetDashboard", "teacherSaveClass", "teacherDeleteClass", "teacherAddStudent", "teacherRemoveStudent", "teacherSetBirthday", "teacherPost",
   "teacherDeletePost", "teacherListPosts", "teacherUploadSignature", "teacherCreateTask", "teacherListTasks", "teacherGetTaskMarks", "teacherMarkTask", "teacherGetAnalytics",
-  "getMyClassroom", "submitTaskAnswers",
+  "getMyClassroom", "submitTaskAnswers", "getMyRoles",
   // admin dashboard (packages/shared/src/admin.ts; functions/src/adminDashboard.ts)
   "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword", "adminFindUser", "adminSetUserDisabled", "adminSaveClass",
   "adminDeleteClass", "adminAddStudent", "adminRemoveStudent",
@@ -39,6 +39,8 @@ const ALLOWED_ORIGINS = new Set([
   "https://catapult-mathletes.web.app", "https://catapult-mathletes.firebaseapp.com",
   // the old address (29 Oct 2026 rename): it only redirects to the new one now, kept so a stale open tab still works
   "https://catapult-math-athletes.web.app", "https://catapult-math-athletes.firebaseapp.com",
+  // Classroom web app (apps/classroom; its own Firebase Hosting project, decided 2 Nov 2026)
+  "https://catapult-classroom.web.app", "https://catapult-classroom.firebaseapp.com",
   ...(process.env.ALLOWED_ORIGINS ?? "").split(",").map((o) => o.trim()).filter(Boolean),
 ]);
 const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/; // local test builds

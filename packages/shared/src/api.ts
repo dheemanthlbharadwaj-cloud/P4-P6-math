@@ -44,7 +44,7 @@ export type CallableName =
   | "teacherGetDashboard" | "teacherSaveClass" | "teacherDeleteClass" | "teacherAddStudent" | "teacherRemoveStudent"
   | "teacherSetBirthday" | "teacherPost" | "teacherDeletePost" | "teacherListPosts" | "teacherUploadSignature" | "teacherCreateTask"
   | "teacherListTasks" | "teacherGetTaskMarks" | "teacherMarkTask" | "teacherGetAnalytics"
-  | "getMyClassroom" | "submitTaskAnswers"
+  | "getMyClassroom" | "submitTaskAnswers" | "getMyRoles"
   // admin.ts
   | "adminGetOverview" | "adminSaveTeacher" | "adminSetTeacherActive" | "adminResetPassword" | "adminFindUser"
   | "adminSetUserDisabled" | "adminSaveClass" | "adminDeleteClass" | "adminAddStudent" | "adminRemoveStudent";

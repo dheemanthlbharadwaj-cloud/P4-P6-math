@@ -125,14 +125,20 @@ export function forgetTeacher(uid: string): void {
   teacherNameCache.delete(uid);
 }
 
-async function requireTeacher(req: Parameters<typeof requireUid>[0]): Promise<{ uid: string; teacher: TeacherDoc }> {
-  const uid = requireUid(req);
+/** The caller's teachers/{uid} doc, or null (1 read, cached 60 s per instance). Also used by getMyRoles. */
+export async function teacherRecord(uid: string): Promise<TeacherDoc | null> {
   let t = teacherCache.get(uid);
   if (t === undefined) {
     const snap = await db.collection(col.teachers).doc(uid).get();
     t = snap.exists ? ({ ...(snap.data() as TeacherDoc), uid }) : null;
     teacherCache.set(uid, t);
   }
+  return t;
+}
+
+async function requireTeacher(req: Parameters<typeof requireUid>[0]): Promise<{ uid: string; teacher: TeacherDoc }> {
+  const uid = requireUid(req);
+  const t = await teacherRecord(uid);
   const ok = checkTeacher(t);
   if (!ok.ok) throwFail(ok);
   return { uid, teacher: t! };
@@ -593,7 +599,9 @@ export const getMyClassroom = onCall(async (req): Promise<{
   ]);
   const done = new Set((qSnap.data()?.tasksDone as string[] | undefined) ?? []);
   const posts = [...new Map(feeds.flat().map((p) => [`${p.id}`, p] as const)).values()].sort((a, b) => b.createdAt - a.createdAt).slice(0, CLASS_LIMITS.feedPage);
-  const tasks = taskLists.flat().filter((t) => !done.has(t.id) && taskOpen(t, now, startOfSgtDay)).sort((a, b) => b.createdAt - a.createdAt).slice(0, 20);
+  // each task says which class it is from (a student in two classes submits a test to the right one)
+  const tasks = taskLists.flatMap((list, i) => list.map((t) => ({ ...t, classId: classes[i].id })))
+    .filter((t) => !done.has(t.id) && taskOpen(t, now, startOfSgtDay)).sort((a, b) => b.createdAt - a.createdAt).slice(0, 20);
   const homework = Object.keys((qSnap.data()?.homework as Record<string, unknown> | undefined) ?? {});
   return { classes: classes.map((c, i) => ({ id: c.id, name: c.name, teacherName: names[i] })), posts, tasks, homework };
 });

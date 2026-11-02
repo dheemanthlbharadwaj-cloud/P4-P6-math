@@ -8,6 +8,7 @@
 // │ call                     │ cold                                         │ warm                                      │
 // ├──────────────────────────┼──────────────────────────────────────────────┼───────────────────────────────────────────┤
 // │ (every call) requireAdmin│ 1 admins/{uid}                               │ 0 (60 s)                                  │
+// │ getMyRoles (any login)   │ 1 admins/{uid} + 1 teachers/{uid}            │ 0 (60 s each)                             │
 // │ adminGetOverview         │ 1 + all teachers + all classes               │ 0 (60 s; every admin write clears it)     │
 // │ adminSaveTeacher         │ 1 + 1 teacher doc (+ Auth lookup/create)     │ 1 teacher doc (rename by uid: same)       │
 // │ adminSetTeacherActive    │ 1 + 1 admins doc + 1 teacher doc (+ Auth)    │ 1 admins doc + 1 teacher doc              │
@@ -26,16 +27,16 @@
 // There is deliberately no "list all users" call.
 import { HttpsError, onCall } from "firebase-functions/v2/https";
 import {
-  ADMIN_LIMITS, type AdminClassRow, type AdminDoc, type AdminLogEntry, type AdminUserRow, type ClassDoc, type ClassStudent, type TeacherDoc,
+  ADMIN_LIMITS, type AdminClassRow, type AdminDoc, type AdminLogEntry, type AdminUserRow, type ClassDoc, type ClassStudent, type MyRoles, type TeacherDoc,
 } from "./shared/index.js";
 import { auth, col, db, requireUid, throwFail } from "./admin.js";
 import {
-  addStudentToClassByCode, classRef, deleteClassCascade, forgetTeacher, removeStudentFromClass, teacherClasses, touchClass, userRef,
+  addStudentToClassByCode, classRef, deleteClassCascade, forgetTeacher, removeStudentFromClass, teacherClasses, teacherRecord, touchClass, userRef,
 } from "./classroom.js";
 import { MAX_CLASSES_PER_TEACHER, validId } from "./logic/classroom.js";
 import { TtlCache } from "./logic/ttlCache.js";
 import {
-  buildUserRow, checkAdmin, checkAssignableTeacher, checkNotOtherAdmin, checkNotSelf, checkPromotable, hasPasswordLogin, logDetail, makePassword, parseUserQuery, validateAdminSaveClass,
+  buildUserRow, checkAdmin, rolesOf, checkAssignableTeacher, checkNotOtherAdmin, checkNotSelf, checkPromotable, hasPasswordLogin, logDetail, makePassword, parseUserQuery, validateAdminSaveClass,
   validateSaveTeacher, validateUidFlag,
 } from "./logic/admin.js";
 
@@ -51,14 +52,19 @@ const teacherRef = (uid: string) => db.collection(col.teachers).doc(uid);
 const adminCache = new TtlCache<AdminDoc | null>(60_000, 50);
 const overviewCache = new TtlCache<{ teachers: TeacherDoc[]; classes: ClassDoc[] }>(60_000, 2);
 
-async function requireAdmin(req: Parameters<typeof requireUid>[0]): Promise<{ uid: string; admin: AdminDoc }> {
-  const uid = requireUid(req);
+async function adminRecord(uid: string): Promise<AdminDoc | null> {
   let a = adminCache.get(uid);
   if (a === undefined) {
     const snap = await db.collection(col.admins).doc(uid).get();
     a = snap.exists ? ({ ...(snap.data() as AdminDoc), uid }) : null;
     adminCache.set(uid, a);
   }
+  return a;
+}
+
+async function requireAdmin(req: Parameters<typeof requireUid>[0]): Promise<{ uid: string; admin: AdminDoc }> {
+  const uid = requireUid(req);
+  const a = await adminRecord(uid);
   const ok = checkAdmin(a);
   if (!ok.ok) throwFail(ok);
   return { uid, admin: a! };
@@ -113,6 +119,14 @@ async function refuseOtherAdmin(callerUid: string, targetUid: string): Promise<v
   const ok = checkNotOtherAdmin(callerUid, targetUid, isAdmin);
   if (!ok.ok) throwFail(ok);
 }
+
+// ================================================================ roles (Classroom web app, any signed-in login)
+/** Which areas of the Classroom web app the caller may open (Student is open to every login). */
+export const getMyRoles = onCall(async (req): Promise<MyRoles> => {
+  const uid = requireUid(req);
+  const [t, a] = await Promise.all([teacherRecord(uid), adminRecord(uid)]);
+  return rolesOf(t, a);
+});
 
 // ================================================================ overview
 export const adminGetOverview = onCall(async (req): Promise<{ admin: AdminDoc; teachers: TeacherDoc[]; classes: AdminClassRow[] }> => {

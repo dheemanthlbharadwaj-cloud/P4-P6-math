@@ -15,5 +15,5 @@ export {
 } from "./classroom.js";
 export {
   adminGetOverview, adminSaveTeacher, adminSetTeacherActive, adminResetPassword, adminFindUser, adminSetUserDisabled, adminSaveClass,
-  adminDeleteClass, adminAddStudent, adminRemoveStudent,
+  adminDeleteClass, adminAddStudent, adminRemoveStudent, getMyRoles,
 } from "./adminDashboard.js";

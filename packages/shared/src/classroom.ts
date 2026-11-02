@@ -61,6 +61,9 @@ export interface ClassTask {
   dueAt?: number;
   /** diagnostic: students may take it in the app (Classroom → Tests); worksheets are paper (teacher marks) */
   inApp: boolean;
+  /** getMyClassroom only: the class the task belongs to (a student can be in several classes; submitTaskAnswers needs it).
+   *  Not stored in Firestore. Older backends leave it out. */
+  classId?: string;
 }
 export type MarkValue = "right" | "wrong";
 export interface TaskMarks {
@@ -129,7 +132,16 @@ export interface ClassAnalytics {
 //                                  by the teacher and not yet answered right */ }   ([] everything → "You're not in any class")
 //   submitTaskAnswers       { classId; taskId; answers: { questionId: string; responses: string[] }[] }
 //                           → { marks: Record<string, MarkValue> }  (in-app diagnostic: server marks)
+//   getMyRoles              {} → MyRoles   (Classroom web app: which areas this login may open; 2 reads, cached 60 s)
 // Automatic posts (server): milestone when a student completes a level ("Zach completed Fractions · Level 1"),
 // and when a map's level group opens ("Zach levelled up to LV2 in Fractions!"); birthday posts from the 00:00 SGT
 // nightly job for students whose birthday is today. Posted to every class the student is in.
 export const CLASS_LIMITS = { maxStudents: 60, maxPostChars: 2000, feedPage: 30, maxDiagnostic: 12 } as const;
+
+/** getMyRoles: which areas of the Classroom web app this login may open. Every signed-in login may open Student. */
+export interface MyRoles {
+  /** an active teachers/{uid} doc */
+  teacher: boolean;
+  /** an active admins/{uid} doc */
+  admin: boolean;
+}
