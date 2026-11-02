@@ -3,7 +3,6 @@ import { useLocalSearchParams } from "expo-router";
 import { Shell } from "../../src/admin/Shell";
 import { SECTIONS, useAdmin, type Section } from "../../src/admin/store";
 import { TeachersSection } from "../../src/admin/sections/Teachers";
-import { ClassesSection } from "../../src/admin/sections/Classes";
 import { LoginsSection } from "../../src/admin/sections/Logins";
 
 export default function AdminDashboard() {
@@ -17,7 +16,6 @@ export default function AdminDashboard() {
       {(section: Section) => {
         switch (section) {
           case "teachers": return <TeachersSection />;
-          case "classes": return <ClassesSection />;
           case "logins": return <LoginsSection />;
         }
       }}

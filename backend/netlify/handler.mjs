@@ -23,6 +23,9 @@ const CALLABLES = new Set([
   "teacherGetDashboard", "teacherSaveClass", "teacherDeleteClass", "teacherAddStudent", "teacherRemoveStudent", "teacherSetBirthday", "teacherPost",
   "teacherDeletePost", "teacherListPosts", "teacherUploadSignature", "teacherCreateTask", "teacherListTasks", "teacherGetTaskMarks", "teacherMarkTask", "teacherGetAnalytics",
   "getMyClassroom", "submitTaskAnswers", "getMyRoles",
+  // Catapult Classroom (packages/shared/src/lessons.ts; functions/src/lessons.ts)
+  "teacherGetStudents", "teacherSaveFamily", "teacherResetFamilyCode", "teacherDeleteFamily", "teacherGetChild", "teacherListLessons",
+  "teacherSaveLesson", "teacherDeleteLesson", "teacherSaveSession", "parentSignIn", "parentGetHome",
   // admin dashboard (packages/shared/src/admin.ts; functions/src/adminDashboard.ts)
   "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword", "adminFindUser", "adminSetUserDisabled", "adminSaveClass",
   "adminDeleteClass", "adminAddStudent", "adminRemoveStudent",

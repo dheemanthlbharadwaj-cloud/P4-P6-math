@@ -1,14 +1,14 @@
-// Logins (students and teachers): find one by friend code, email or uid, then disable / enable the sign-in, reset the
-// password, move the student between classes or make them a teacher.
+// Logins (teachers and game accounts): find one by friend code, email or uid, then disable / enable the sign-in, reset the
+// password or make them a teacher. (Parents have no login of their own: they use their family code, see Students.)
 import React, { useState } from "react";
 import { Text, View } from "react-native";
 import type { AdminUserRow } from "@p6/shared";
 import { Button } from "../../components/ui";
 import { colors, fonts, radius, space } from "../../theme/colors";
 import { backend } from "../client";
-import { canResetPassword, canSearch, classNamesFor, formatDate, joinableClasses, normalizeQuery, signInMethods } from "../helpers";
+import { canResetPassword, canSearch, formatDate, normalizeQuery, signInMethods } from "../helpers";
 import { useAdmin } from "../store";
-import { Badge, ConfirmButton, Field, Muted, Notice, PageHeader, Panel, SecretBox, Select, useAction } from "../ui";
+import { Badge, ConfirmButton, Field, Muted, Notice, PageHeader, Panel, SecretBox, useAction } from "../ui";
 
 interface Secret { title: string; password: string }
 
@@ -22,29 +22,13 @@ function Fact({ label, value }: { label: string; value: React.ReactNode }) {
 }
 
 function UserCard({ u, onChange, onSecret }: { u: AdminUserRow; onChange: (patch: Partial<AdminUserRow>) => void; onSecret: (s: Secret | null) => void }) {
-  const { classes, patchClass, upsertTeacher } = useAdmin();
-  const joinable = joinableClasses(u, classes);
-  const [joinId, setJoinId] = useState("");
+  const { upsertTeacher } = useAdmin();
   const [msg, setMsg] = useState<string | null>(null);
   const { busy, error, run } = useAction();
-  const target = joinable.some((c) => c.id === joinId) ? joinId : joinable[0]?.id ?? "";
   const name = u.displayName || u.email || u.uid;
 
   const toggleDisabled = () => void run(async () => { await backend.setUserDisabled(u.uid, !u.disabled); onChange({ disabled: !u.disabled }); setMsg(null); });
   const reset = () => void run(async () => { onSecret(null); setMsg(null); const password = await backend.resetPassword(u.uid); onSecret({ title: `New password for ${name}`, password }); });
-  const join = () => void run(async () => {
-    const cls = classes.find((c) => c.id === target);
-    if (!cls || !u.friendCode) return;
-    const st = await backend.addStudent(cls.id, u.friendCode);
-    patchClass(cls.id, { students: [...cls.students.filter((x) => x.uid !== st.uid), st] });
-    onChange({ classIds: [...u.classIds.filter((x) => x !== cls.id), cls.id] }); setMsg(`${name} joined ${cls.name}.`);
-  });
-  const leave = (classId: string) => void run(async () => {
-    const cls = classes.find((c) => c.id === classId);
-    await backend.removeStudent(classId, u.uid);
-    if (cls) patchClass(classId, { students: cls.students.filter((x) => x.uid !== u.uid) });
-    onChange({ classIds: u.classIds.filter((x) => x !== classId) }); setMsg(`${name} left ${cls?.name ?? "the class"}.`);
-  });
   const makeTeacher = () => void run(async () => {
     if (!u.email) return;
     const r = await backend.saveTeacher(u.email, name);
@@ -71,26 +55,7 @@ function UserCard({ u, onChange, onSecret }: { u: AdminUserRow; onChange: (patch
         <Fact label="Created" value={formatDate(u.createdAt)} />
         <Fact label="Last sign-in" value={formatDate(u.lastSignInAt)} />
       </View>
-      <View style={{ marginBottom: space.m }}>
-        <Text style={{ fontSize: 12, fontFamily: fonts.displayMedium, color: colors.inkSoft, marginBottom: 4 }}>Classes</Text>
-        {u.classIds.length === 0 ? <Muted>Not in any class.</Muted> : (
-          <View style={{ gap: 6 }}>
-            {classNamesFor(u.classIds, classes).map((c) => (
-              <View key={c.id} style={{ flexDirection: "row", alignItems: "center", gap: space.m }}>
-                <Text style={{ fontSize: 15, color: colors.ink, minWidth: 160 }}>{c.name}</Text>
-                <ConfirmButton title="Remove from class" confirmTitle="Sure? Remove" disabled={busy} onConfirm={() => leave(c.id)} />
-              </View>
-            ))}
-          </View>
-        )}
-      </View>
       <View style={{ flexDirection: "row", alignItems: "flex-end", gap: space.m, flexWrap: "wrap", paddingTop: space.m, borderTopWidth: 1, borderTopColor: "#eadfd3" }}>
-        {u.friendCode && joinable.length > 0 ? (
-          <>
-            <Select label="Add to class" value={target} onChange={setJoinId} options={joinable.map((c) => ({ value: c.id, label: `${c.name} (${c.teacherName})` }))} style={{ minWidth: 260 }} />
-            <Button title="Add to class" small variant="ghost" onPress={join} disabled={busy || !target} />
-          </>
-        ) : null}
         {canResetPassword(u) ? <ConfirmButton title="Reset password" confirmTitle="Sure? Make a new password" onConfirm={reset} disabled={busy} /> : null}
         {!u.isTeacher && u.email ? <ConfirmButton title="Make teacher" confirmTitle="Sure? Make this login a teacher" onConfirm={makeTeacher} disabled={busy} /> : null}
         <View style={{ marginLeft: "auto" }}>

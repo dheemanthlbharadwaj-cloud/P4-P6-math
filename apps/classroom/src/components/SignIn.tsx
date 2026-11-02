@@ -1,13 +1,12 @@
-// One sign-in for everyone (students, teachers, the owner): the same accounts as the Catapult Mathletes game.
-// Email + password or Google. No sign-up here: students make their account in the game; teachers get theirs from the
-// owner. "Forgot password?" sends Firebase's reset email (for email logins).
+// The front door. Parents (default tab): their family code from the teacher. Teachers: email + password or Google.
 import React, { useState } from "react";
-import { Linking, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Button, Card } from "./ui";
 import { colors, fonts, space } from "../theme/colors";
-import { friendlyAuthError, sendPasswordReset, signInEmail, signInGooglePopup } from "../services/auth";
-import { extra } from "../services/config";
-import { Field, Muted, Notice, useAction } from "../teacher/ui";
+import { friendlyAuthError, sendPasswordReset, signInEmail, signInGooglePopup, signInWithFamilyCode } from "../services/auth";
+import { friendlyError } from "../services/errors";
+import { ApiError } from "../services/api";
+import { Field, Muted, Notice, Pill, useAction } from "./dash";
 
 export function Centered({ children, maxWidth = 460 }: { children: React.ReactNode; maxWidth?: number }) {
   return (
@@ -20,7 +19,21 @@ export const Title = ({ children }: { children: string }) => (
   <Text accessibilityRole="header" style={{ fontSize: 28, fontFamily: fonts.display, color: colors.ink, marginBottom: space.s }}>{children}</Text>
 );
 
-export function SignIn({ heading = "Sign in" }: { heading?: string }) {
+function ParentForm() {
+  const [code, setCode] = useState("");
+  const { busy, error, run } = useAction();
+  const submit = () => { if (code.trim()) void run(async () => { try { await signInWithFamilyCode(code); } catch (e) { throw new Error(e instanceof ApiError ? friendlyError(e) : friendlyAuthError(e)); } }); };
+  return (
+    <>
+      <Muted style={{ marginBottom: space.l }}>Enter the family code your teacher gave you. One code shows all your children.</Muted>
+      {error ? <Notice kind="error">{error}</Notice> : null}
+      <Field label="Family code" value={code} onChangeText={setCode} autoCapitalize="characters" autoCorrect={false} placeholder="ABCDE-FGHJK" onSubmitEditing={submit} />
+      <Button title={busy ? "Opening…" : "Open"} onPress={submit} disabled={busy || !code.trim()} />
+    </>
+  );
+}
+
+function TeacherForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [sent, setSent] = useState(false);
@@ -29,19 +42,28 @@ export function SignIn({ heading = "Sign in" }: { heading?: string }) {
   const submit = () => { if (email.trim() && password) void wrap(() => signInEmail(email, password)); };
   const forgot = () => { if (email.trim()) void wrap(async () => { await sendPasswordReset(email); setSent(true); }); };
   return (
-    <Centered>
-      <Title>{heading}</Title>
-      <Muted style={{ marginBottom: space.l }}>Catapult Mathletes Classroom · use the same account as the game</Muted>
+    <>
       {error ? <Notice kind="error">{error}</Notice> : null}
       {sent ? <Notice kind="good">If that email has a password login, a reset link is on its way.</Notice> : null}
       <Button title="Continue with Google" variant="ghost" onPress={() => void wrap(signInGooglePopup)} disabled={busy} style={{ marginBottom: space.l }} />
       <Field label="Email" value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" autoComplete="email" onSubmitEditing={submit} />
       <Field label="Password" value={password} onChangeText={setPassword} secureTextEntry autoComplete="current-password" onSubmitEditing={submit} />
       <Button title={busy ? "Signing in…" : "Sign in"} onPress={submit} disabled={busy || !email.trim() || !password} />
-      <View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", gap: space.s, marginTop: space.m }}>
-        <Text onPress={forgot} accessibilityRole="button" style={{ color: email.trim() ? colors.primaryDark : colors.muted, fontFamily: fonts.displayMedium }}>Forgot password?</Text>
-        <Text onPress={() => void Linking.openURL(extra.gameUrl)} accessibilityRole="link" style={{ color: colors.primaryDark, fontFamily: fonts.displayMedium }}>No account? Make one in the game</Text>
+      <Text onPress={forgot} accessibilityRole="button" style={{ marginTop: space.m, color: email.trim() ? colors.primaryDark : colors.muted, fontFamily: fonts.displayMedium }}>Forgot password?</Text>
+    </>
+  );
+}
+
+export function SignIn({ teacherFirst = false }: { teacherFirst?: boolean }) {
+  const [tab, setTab] = useState<"parent" | "teacher">(teacherFirst ? "teacher" : "parent");
+  return (
+    <Centered>
+      <Title>Catapult Classroom</Title>
+      <View style={{ flexDirection: "row", gap: 6, marginBottom: space.m }}>
+        <Pill label="Parents" selected={tab === "parent"} onPress={() => setTab("parent")} />
+        <Pill label="Teachers" selected={tab === "teacher"} onPress={() => setTab("teacher")} />
       </View>
+      {tab === "parent" ? <ParentForm /> : <TeacherForm />}
     </Centered>
   );
 }

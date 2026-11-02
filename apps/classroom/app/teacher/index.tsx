@@ -1,31 +1,18 @@
 import React, { useEffect } from "react";
 import { useLocalSearchParams } from "expo-router";
-import { Shell } from "../../src/teacher/Shell";
-import { SECTIONS, useTeacher, type Section } from "../../src/teacher/store";
-import { ClassesSection } from "../../src/teacher/sections/Classes";
-import { PostsSection } from "../../src/teacher/sections/Posts";
-import { TasksSection } from "../../src/teacher/sections/Tasks";
-import { MarkingSection } from "../../src/teacher/sections/Marking";
-import { AnalyticsSection } from "../../src/teacher/sections/Analytics";
+import { Shell } from "../../src/lessons/Shell";
+import { SECTIONS, useTeacher } from "../../src/lessons/store";
+import { LessonsSection } from "../../src/lessons/sections/Lessons";
+import { StudentsSection } from "../../src/lessons/sections/Students";
+import { BuilderSection } from "../../src/lessons/sections/Builder";
 
-export default function TeacherDashboard() {
-  const { section: wanted, class: classWanted } = useLocalSearchParams<{ section?: string; class?: string }>();
-  useEffect(() => {
-    const s = SECTIONS.find((x) => x.id === wanted)?.id;
-    if (s) useTeacher.getState().go(s);
-    if (classWanted && useTeacher.getState().classes.some((c) => c.id === classWanted)) useTeacher.getState().selectClass(classWanted);
-  }, [wanted, classWanted]);
+export default function TeacherHome() {
+  const { section: wanted } = useLocalSearchParams<{ section?: string }>();
+  const section = useTeacher((s) => s.section);
+  useEffect(() => { const s = SECTIONS.find((x) => x.id === wanted)?.id; if (s) useTeacher.getState().go(s); }, [wanted]);
   return (
     <Shell>
-      {(section: Section) => {
-        switch (section) {
-          case "classes": return <ClassesSection />;
-          case "posts": return <PostsSection />;
-          case "tasks": return <TasksSection />;
-          case "marking": return <MarkingSection />;
-          case "analytics": return <AnalyticsSection />;
-        }
-      }}
+      {section === "lessons" ? <LessonsSection /> : section === "students" ? <StudentsSection /> : <BuilderSection />}
     </Shell>
   );
 }

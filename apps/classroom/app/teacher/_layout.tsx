@@ -1,12 +1,8 @@
-// /teacher: the teacher dashboard (web). Everything below passes through the sign-in / teacher check.
+// /teacher: teachers and admins only (parents are sent to /parent).
 import React from "react";
 import { Slot } from "expo-router";
-import { TeacherGate } from "../../src/teacher/Gate";
+import { TeacherGate } from "../../src/lessons/Gate";
 
 export default function TeacherLayout() {
-  return (
-    <TeacherGate>
-      <Slot />
-    </TeacherGate>
-  );
+  return <TeacherGate><Slot /></TeacherGate>;
 }

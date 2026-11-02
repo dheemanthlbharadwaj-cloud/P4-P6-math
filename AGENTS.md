@@ -24,14 +24,14 @@ and iOS.
 - **Questions:** an offline question bundle built from the question editor's Firestore by `content/`.
 - **Live edits:** questions edited in the editor reach apps as patches via the backend's `getQuestionPatches`.
 - **Backend:** in `backend/`, running on Netlify.
-- **Classroom web app:** `apps/classroom` (students, teachers, owner/admin; web only, same accounts and backend). All
-  classroom use lives there (owner decision, 2 Nov 2026); the game keeps no classroom screens.
+- **Catapult Classroom:** `apps/classroom`, web only, for parents (one family code) and teachers / the owner (lessons,
+  students, feedback). Same accounts and backend; the game keeps no classroom screens (owner decision, 2 Nov 2026).
 - **Shared code:** types and rules in `packages/shared`.
 
 | Live | URL | Updated by |
 |---|---|---|
 | Web app | https://catapult-mathletes.web.app | GitHub Actions on push (`.github/workflows/deploy-web.yml`, keyless) |
-| Classroom web app | https://catapult-classroom.web.app (not live yet; own Firebase project) | `.github/workflows/deploy-classroom.yml` (manual for now) |
+| Catapult Classroom | https://catapult-classroom.web.app (not live yet; own Firebase project) | `.github/workflows/deploy-classroom.yml` (manual for now) |
 | Backend API | https://catapult-math-athletes-api.netlify.app | `node backend/scripts/deploy-netlify.mjs` |
 | Phones (OTA) | Expo `dheems-team/catapult-math-athletes`, channel `preview` | EAS workflow on push (`apps/mobile/.eas/workflows/publish-update.yml`) |
 | Android APK | sent to the owner as a file (they share it); Netlify page archived | local build (`docs/ANDROID.md`), verify the signing key |

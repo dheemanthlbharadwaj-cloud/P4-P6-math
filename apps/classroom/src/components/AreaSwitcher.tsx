@@ -1,10 +1,10 @@
-// "Student · Teacher · Admin" switch shown in every area's frame when the login has more than one area.
+// "Teacher · Admin" switch shown in the staff frames when the login is an admin (parents never see it).
 import React from "react";
 import { View } from "react-native";
 import { useRouter } from "expo-router";
 import { useAuth } from "../store/auth";
 import { AREAS, areasFor, rememberArea, useRoles, type Area } from "../roles/store";
-import { Pill } from "../teacher/ui";
+import { Pill } from "./dash";
 
 export function AreaSwitcher({ current }: { current: Area }) {
   const router = useRouter();

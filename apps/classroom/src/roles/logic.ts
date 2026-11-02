@@ -1,26 +1,27 @@
-// Pure rules for the Classroom areas (no React, no network; tested in logic.test.ts).
+// Pure rules for the Classroom areas (no React, no network; tested in logic.test.ts). Staff areas only: parents sign in
+// with their family code and only ever see /parent (the teacher panel is never shown to them).
 import type { MyRoles } from "@p6/shared";
 
-export type Area = "student" | "teacher" | "admin";
+export type Area = "teacher" | "admin";
 export const AREAS: { id: Area; label: string; blurb: string }[] = [
-  { id: "student", label: "Student", blurb: "Your class news, tests from your teacher and homework." },
-  { id: "teacher", label: "Teacher", blurb: "Classes, posts, worksheets and printing, marking and analytics." },
-  { id: "admin", label: "Admin", blurb: "Teachers, every class and logins." },
+  { id: "teacher", label: "Teacher", blurb: "Lessons, students, feedback and the worksheet builder." },
+  { id: "admin", label: "Admin", blurb: "Teacher accounts and logins." },
 ];
 
 export type RolesPhase = "idle" | "loading" | "ready" | "unknown";
 
-/** The areas to offer: Student always; Teacher / Admin when the login has them (all of them when unknown). */
+/** The staff areas to offer: Teacher for teachers and admins, Admin for admins; both while the roles are unknown. */
 export function areasFor(phase: RolesPhase, roles: MyRoles): Area[] {
-  if (phase === "unknown") return ["student", "teacher", "admin"];
-  return ["student", ...(roles.teacher ? ["teacher" as const] : []), ...(roles.admin ? ["admin" as const] : [])];
+  if (phase === "unknown") return ["teacher", "admin"];
+  return [...(roles.teacher || roles.admin ? ["teacher" as const] : []), ...(roles.admin ? ["admin" as const] : [])];
 }
 
-/** Where to go straight after sign-in: the last area used (if still allowed), else the only / highest area. null = ask. */
+/** Where to go after sign-in: the last area used (if still allowed), else Teacher when allowed. null = ask (or not staff). */
 export function startArea(offered: readonly Area[], last: Area | null, known: boolean): Area | null {
   if (last && offered.includes(last)) return last;
   if (!known) return null;
-  if (offered.length === 1) return offered[0];
-  return null;
+  return offered.includes("teacher") ? "teacher" : offered[0] ?? null;
 }
 
+/** Parent logins are custom-token users "parent_<familyId>" (backend logic/lessons.ts). */
+export const isParentUid = (uid: string | null | undefined): boolean => !!uid && uid.startsWith("parent_");

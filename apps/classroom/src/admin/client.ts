@@ -5,7 +5,7 @@ import { adminApi } from "../services/api";
 import type { AdminBackend } from "./types";
 import { mockBackend } from "./mock";
 
-export { friendlyError, isPermissionDenied } from "../teacher/client";
+export { friendlyError, isPermissionDenied } from "../services/errors";
 
 export const ADMIN_MOCK = MOCK_AREAS; // ?mock=1 (roles/mock.ts)
 

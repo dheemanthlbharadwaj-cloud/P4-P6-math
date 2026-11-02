@@ -88,6 +88,13 @@ export const col = {
   admins: "admins", // owner dashboard (packages/shared/src/admin.ts): admins/{uid}, written only by backend/scripts/add-admin.mjs
   adminLog: "adminLog", // one doc per admin write (server only)
   classes: "classes", // classes/{id} + posts, tasks, tasks/{id}/marks (server only)
+  // Catapult Classroom (packages/shared/src/lessons.ts; server only)
+  families: "families",
+  familyCodes: "familyCodes",
+  children: "children",
+  lessons: "lessons",
+  sessions: "sessions",
+  reports: "reports",
   questions: "questions", // the question bank (EDITOR project; read only here: use editorDb)
   questionReports: "question_reports", // EDITOR project (use editorDb)
 } as const;

@@ -1,4 +1,4 @@
-// One question for the student area (in-app tests and homework), adapted from the game's QuestionPanel: stem (RichText),
+// One interactive question (kept for the lesson worksheets, next phase), adapted from the game's QuestionPanel: stem (RichText),
 // figure (tap to enlarge), MCQ options or one box per answer part with the game's format hints, the calculator for
 // calculator-allowed questions, and Submit. Marking is done by the parent (markQuestion / the server). A wrong answer
 // never reveals the right one (owner rule, logic/feedback.ts). No working-space pad here (paper is fine on the web).

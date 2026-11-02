@@ -8,8 +8,7 @@ import type {
   ListFriendRequestsResponse, SyncProgressRequest, SyncProgressResponse, UpdateProfileRequest, UpdateProfileResponse, RespondFriendRequestResponse, RestoreProfileRequest, SendFriendRequestRequest,
   SendFriendRequestResponse, GetDailyQuestsRequest, GetDailyQuestsResponse, GetQuestionPatchesRequest, GetQuestionPatchesResponse, ClaimDailyQuestRequest, ClaimDailyQuestResponse,
 } from "@p6/shared";
-import type { MarkValue, MyRoles } from "@p6/shared";
-import type { MyClassroom } from "../logic/classroom";
+import type { Child, Family, Lesson, LessonReport, LessonSession, MyRoles, ParentHome, SessionChildInput } from "@p6/shared";
 import { extra } from "./config";
 import { currentUser } from "./auth";
 
@@ -65,41 +64,45 @@ export const api = {
   deleteAccount: () => call<DeleteAccountRequest, DeleteAccountResponse>("deleteAccount", {}),
 };
 
-// Classroom (student side). Contract: packages/shared/src/classroom.ts ("Student callables").
-export const getMyClassroom = () => call<Record<string, never>, MyClassroom>("getMyClassroom", {});
-/** Classroom web app: which areas this login may open (Student is open to every login). Live from the 7 Nov backend deploy. */
-export const getMyRoles = () => call<Record<string, never>, MyRoles>("getMyRoles", {});
-export const submitTaskAnswers = (r: { classId: string; taskId: string; answers: { questionId: string; responses: string[] }[] }) =>
-  call<typeof r, { marks: Record<string, MarkValue> }>("submitTaskAnswers", r);
+/** Calls that work signed out (only parentSignIn). */
+async function callPublic<Req, Res>(name: CallableName, data: Req): Promise<Res> {
+  if (!extra.backendUrl) throw new ApiError("unavailable", "Backend not configured");
+  let res: Response;
+  try {
+    res = await fetch(`${extra.backendUrl}/api/${name}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ data }) });
+  } catch (e) {
+    throw new ApiError("unavailable", (e as Error)?.message ?? "Network error");
+  }
+  const body = (await res.json().catch(() => null)) as { result?: Res; error?: { status?: string; message?: string } } | null;
+  if (res.ok && body && "result" in body) return body.result as Res;
+  throw new ApiError(body?.error?.status ?? (res.status >= 500 ? "unavailable" : "unknown"), body?.error?.message ?? `HTTP ${res.status}`);
+}
 
-// Teacher dashboard (web). Contract: packages/shared/src/classroom.ts ("Callables"); used through src/teacher/client.ts.
-import type {
-  AnalyticsReq, CreateTaskReq, ListPostsReq, MarkTaskReq, PostReq, SaveClassReq, TeacherDashboard,
-} from "../teacher/types";
-import type { UploadSignature } from "../teacher/helpers";
-import type { ClassAnalytics, ClassPost as TClassPost, ClassStudent, ClassTask as TClassTask, StudentAnalytics, TaskMarks } from "@p6/shared";
-export const teacherApi = {
-  getDashboard: () => call<Record<string, never>, TeacherDashboard>("teacherGetDashboard", {}),
-  saveClass: (r: SaveClassReq) => call<SaveClassReq, { classId: string }>("teacherSaveClass", r),
-  deleteClass: (classId: string) => call<{ classId: string }, { ok: true }>("teacherDeleteClass", { classId }),
-  addStudent: (classId: string, friendCode: string) => call<{ classId: string; friendCode: string }, { student: ClassStudent }>("teacherAddStudent", { classId, friendCode }),
-  removeStudent: (classId: string, studentUid: string) => call<{ classId: string; studentUid: string }, { ok: true }>("teacherRemoveStudent", { classId, studentUid }),
-  setBirthday: (classId: string, studentUid: string, birthday: string | null) => call<{ classId: string; studentUid: string; birthday: string | null }, { ok: true }>("teacherSetBirthday", { classId, studentUid, birthday }),
-  post: (r: PostReq) => call<PostReq, { post: TClassPost }>("teacherPost", r),
-  deletePost: (classId: string, postId: string) => call<{ classId: string; postId: string }, { ok: true }>("teacherDeletePost", { classId, postId }),
-  /** Proposed, not in CallableName yet: the backend answers "not-found"/"unknown" until it exists. */
-  listPosts: (r: ListPostsReq) => call<ListPostsReq, { posts: TClassPost[] }>("teacherListPosts", r),
-  uploadSignature: (classId: string, fileName: string) => call<{ classId: string; fileName: string }, UploadSignature>("teacherUploadSignature", { classId, fileName }),
-  createTask: (r: CreateTaskReq) => call<CreateTaskReq, { task: TClassTask }>("teacherCreateTask", r),
-  listTasks: (classId: string) => call<{ classId: string }, { tasks: TClassTask[] }>("teacherListTasks", { classId }),
-  getTaskMarks: (classId: string, taskId: string) => call<{ classId: string; taskId: string }, { marks: TaskMarks[] }>("teacherGetTaskMarks", { classId, taskId }),
-  markTask: (r: MarkTaskReq) => call<MarkTaskReq, { starsAwarded: number }>("teacherMarkTask", r),
-  getAnalytics: (r: AnalyticsReq) => call<AnalyticsReq, { class: ClassAnalytics; student?: StudentAnalytics }>("teacherGetAnalytics", r),
+/** Which areas this login may open (teacher / admin). Live from the 7 Nov backend deploy. */
+export const getMyRoles = () => call<Record<string, never>, MyRoles>("getMyRoles", {});
+
+// Catapult Classroom: lessons, students, parents. Contract: packages/shared/src/lessons.ts.
+export interface StudentsList { families: Family[]; children: Child[]; teachers?: { uid: string; name: string }[] }
+export interface SaveFamilyReq { id?: string; parentName: string; teacherUid?: string; children: { id?: string; name: string; level: string }[] }
+export type SaveLessonReq = Partial<Pick<Lesson, "id">> & Pick<Lesson, "title" | "subject" | "level" | "intro" | "goals" | "parts">;
+export interface SaveSessionReq { id?: string; lessonId: string; date: number; reports: SessionChildInput[]; familyTexts: Record<string, string> }
+export const lessonsApi = {
+  getStudents: () => call<Record<string, never>, StudentsList>("teacherGetStudents", {}),
+  saveFamily: (r: SaveFamilyReq) => call<SaveFamilyReq, { family: Family; children: Child[]; code?: string }>("teacherSaveFamily", r),
+  resetFamilyCode: (familyId: string) => call<{ familyId: string }, { code: string }>("teacherResetFamilyCode", { familyId }),
+  deleteFamily: (familyId: string) => call<{ familyId: string }, { ok: true }>("teacherDeleteFamily", { familyId }),
+  getChild: (childId: string) => call<{ childId: string }, { child: Child; family: Family; reports: LessonReport[] }>("teacherGetChild", { childId }),
+  listLessons: () => call<Record<string, never>, { lessons: Lesson[] }>("teacherListLessons", {}),
+  saveLesson: (r: SaveLessonReq) => call<SaveLessonReq, { lesson: Lesson }>("teacherSaveLesson", r),
+  deleteLesson: (lessonId: string) => call<{ lessonId: string }, { ok: true }>("teacherDeleteLesson", { lessonId }),
+  saveSession: (r: SaveSessionReq) => call<SaveSessionReq, { session: LessonSession; reports: LessonReport[] }>("teacherSaveSession", r),
+  parentSignIn: (code: string) => callPublic<{ code: string }, { token: string }>("parentSignIn", { code }),
+  parentGetHome: () => call<Record<string, never>, ParentHome>("parentGetHome", {}),
 };
 
 // Admin (owner) dashboard (web). Contract: packages/shared/src/admin.ts ("Callables"); used through src/admin/client.ts.
 import type { AdminOverview, SaveAdminClassReq } from "../admin/types";
-import type { AdminUserRow, TeacherDoc } from "@p6/shared";
+import type { AdminUserRow, ClassStudent, TeacherDoc } from "@p6/shared";
 export const adminApi = {
   getOverview: () => call<Record<string, never>, AdminOverview>("adminGetOverview", {}),
   saveTeacher: (email: string, name: string, uid?: string) => call<{ uid?: string; email: string; name: string }, { teacher: TeacherDoc; password?: string }>("adminSaveTeacher", { ...(uid ? { uid } : {}), email, name }),

@@ -52,7 +52,7 @@ const teacherRef = (uid: string) => db.collection(col.teachers).doc(uid);
 const adminCache = new TtlCache<AdminDoc | null>(60_000, 50);
 const overviewCache = new TtlCache<{ teachers: TeacherDoc[]; classes: ClassDoc[] }>(60_000, 2);
 
-async function adminRecord(uid: string): Promise<AdminDoc | null> {
+export async function adminRecord(uid: string): Promise<AdminDoc | null> {
   let a = adminCache.get(uid);
   if (a === undefined) {
     const snap = await db.collection(col.admins).doc(uid).get();

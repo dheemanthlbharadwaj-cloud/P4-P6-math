@@ -3,10 +3,9 @@ import { create } from "zustand";
 import type { AdminClassRow, AdminDoc, TeacherDoc } from "@p6/shared";
 import { backend, friendlyError, isPermissionDenied } from "./client";
 
-export type Section = "teachers" | "classes" | "logins";
+export type Section = "teachers" | "logins";
 export const SECTIONS: { id: Section; label: string }[] = [
   { id: "teachers", label: "Teachers" },
-  { id: "classes", label: "Classes" },
   { id: "logins", label: "Logins" },
 ];
 

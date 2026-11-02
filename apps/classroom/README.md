@@ -1,11 +1,12 @@
-# Catapult Mathletes Classroom (web)
+# Catapult Classroom (web)
 
-Students, teachers and the owner (admin) in one web app: `/student`, `/teacher`, `/admin`. Same accounts (student
-Firebase project) and the same Netlify backend as the game; questions from the game's content bundle, figures from
-Cloudinary. The full guide is the skill (`skills/catapult-math-athletes/SKILL.md`, row "Classroom web app").
+For parents (one family code shows all their children's completed lessons and the teacher's messages) and teachers / the
+owner (lessons, students, running a lesson with feedback for WhatsApp, admin). Same accounts (student Firebase project) and
+the same Netlify backend as the game. The full guide is the skill (`skills/catapult-math-athletes/SKILL.md`, row
+"Catapult Classroom (web)").
 
 ```bash
-npm start            # dev server; open /?mock=1 for demo data without sign-in or backend
+npm start            # dev server; /teacher?mock=1 (teacher demo) or /parent?mock=parent (parent demo), no sign-in or backend
 npm run build        # → dist/ (static single-page app for Firebase Hosting)
 npm test && npm run typecheck
 ```

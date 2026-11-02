@@ -6,7 +6,7 @@ import { ApiError, getMyRoles } from "../services/api";
 import { readLocal, writeLocal } from "../store/storage";
 import { MOCK_AREAS } from "./mock";
 import type { Area } from "./logic";
-export { AREAS, areasFor, startArea, type Area } from "./logic";
+export { AREAS, areasFor, isParentUid, startArea, type Area } from "./logic";
 
 import type { RolesPhase } from "./logic";
 export type { RolesPhase };
@@ -25,7 +25,7 @@ export const useRoles = create<RolesState>((set, get) => ({
   async load(uid) {
     if (get().uid === uid && (get().phase === "ready" || get().phase === "loading")) return;
     set({ uid, phase: "loading" });
-    if (MOCK_AREAS) { set({ phase: "ready", roles: { teacher: true, admin: true } }); return; }
+    if (MOCK_AREAS) { set({ phase: "ready", roles: { teacher: true, admin: true } }); return; } // ?mock=1: the demo teacher is also an admin
     try {
       const roles = await getMyRoles();
       if (get().uid === uid) set({ phase: "ready", roles: { teacher: !!roles.teacher, admin: !!roles.admin } });
@@ -41,6 +41,6 @@ export const useRoles = create<RolesState>((set, get) => ({
 const key = (uid: string) => `p6c.area.${uid}`;
 export const lastArea = (uid: string): Area | null => {
   const v = readLocal(key(uid));
-  return v === "student" || v === "teacher" || v === "admin" ? v : null;
+  return v === "teacher" || v === "admin" ? v : null;
 };
 export const rememberArea = (uid: string, area: Area) => writeLocal(key(uid), area);

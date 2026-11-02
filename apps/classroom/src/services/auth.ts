@@ -1,14 +1,20 @@
-// Sign-in for everyone (students, teachers, the owner): the same Firebase Auth accounts as the game. Email + password,
-// or Google (Firebase's pop-up). No sign-up here: students make their account in the game, teachers get theirs from
-// the owner (Admin > Teachers).
+// Sign-in. Teachers and admins: email + password or Google (Firebase's pop-up), the same Firebase Auth as the game;
+// accounts come from Admin > Teachers (no sign-up here). Parents: their family code → parentSignIn → a Firebase custom
+// token for the login "parent_<familyId>".
 import {
-  GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut as fbSignOut, type User,
+  GoogleAuthProvider, onAuthStateChanged, signInWithCustomToken, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut as fbSignOut, type User,
 } from "firebase/auth";
 import { firebaseAuth } from "./firebase";
 
 export const signInEmail = async (email: string, password: string) =>
   (await signInWithEmailAndPassword(firebaseAuth(), email.trim(), password)).user;
 export const signInGooglePopup = async () => (await signInWithPopup(firebaseAuth(), new GoogleAuthProvider())).user;
+/** Parent: sign in with the family code (the backend checks it and returns a custom token). */
+export async function signInWithFamilyCode(code: string) {
+  const { lessonsApi } = await import("./api");
+  const { token } = await lessonsApi.parentSignIn(code);
+  return (await signInWithCustomToken(firebaseAuth(), token)).user;
+}
 export const sendPasswordReset = (email: string) => sendPasswordResetEmail(firebaseAuth(), email.trim());
 export const signOut = () => fbSignOut(firebaseAuth());
 export const watchAuth = (cb: (u: User | null) => void) => onAuthStateChanged(firebaseAuth(), cb);
@@ -20,7 +26,7 @@ export const signInMethod = (u: User | null | undefined): string => u?.providerD
 export function friendlyAuthError(e: unknown): string {
   const code = (e as { code?: string })?.code ?? "";
   if (code.includes("invalid-credential") || code.includes("wrong-password") || code.includes("user-not-found")) return "Wrong email or password.";
-  if (code.includes("user-disabled")) return "This account is switched off. Ask your teacher or the owner.";
+  if (code.includes("user-disabled")) return "This account is switched off. Ask the owner.";
   if (code.includes("invalid-email")) return "That email does not look right.";
   if (code.includes("too-many-requests")) return "Too many tries. Wait a few minutes and try again.";
   if (code.includes("network")) return "No internet connection.";

@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { Text, View, type StyleProp, type ViewStyle } from "react-native";
 import { Button } from "../components/ui";
 import { colors, fonts, radius, space } from "../theme/colors";
-import { Field, Muted } from "../teacher/ui";
+import { Field, Muted } from "../components/dash";
 import { matchesClassName } from "./helpers";
 
-export { Badge, ConfirmButton, Field, Muted, Notice, PageHeader, Panel, Pill, PillRow, Table, useAction } from "../teacher/ui";
+export { Badge, ConfirmButton, Field, Muted, Notice, PageHeader, Panel, Pill, PillRow, Table, useAction } from "../components/dash";
 
 export interface Option { value: string; label: string }
 
@@ -29,7 +29,7 @@ export function Select({ label, value, onChange, options, disabled, style }: { l
   );
 }
 
-async function copyText(text: string): Promise<boolean> {
+export async function copyText(text: string): Promise<boolean> {
   try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
 }
 

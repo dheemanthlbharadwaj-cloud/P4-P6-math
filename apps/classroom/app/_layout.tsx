@@ -1,4 +1,4 @@
-// Root of the Classroom web app: fonts, the Firebase sign-in listener, the live question edits, the roles lookup.
+// Root of Catapult Classroom: fonts, the Firebase sign-in listener, the staff roles lookup.
 import React, { useEffect } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { Stack } from "expo-router";
@@ -10,8 +10,7 @@ import { isFirebaseConfigured } from "../src/services/config";
 import { useAuth } from "../src/store/auth";
 import { useRoles } from "../src/roles/store";
 import { MOCK_AREAS } from "../src/roles/mock";
-import { refreshQuestionPatches } from "../src/content/patches";
-import { useFigureMap } from "../src/content/figures";
+import { isParentUid } from "../src/roles/logic";
 import { colors } from "../src/theme/colors";
 
 export default function RootLayout() {
@@ -23,17 +22,15 @@ export default function RootLayout() {
     return watchAuth(setUser);
   }, [setUser]);
 
-  // signed in: which areas this login has (2 reads, cached on the server) and the editor's live question edits
+  // staff signed in: which areas this login has (2 reads, cached on the server). Parents need neither.
   useEffect(() => {
     if (MOCK_AREAS) { void useRoles.getState().load("mock"); return; }
-    if (!user) { useRoles.getState().reset(); return; }
+    if (!user || isParentUid(user.uid)) { useRoles.getState().reset(); return; }
     void useRoles.getState().load(user.uid);
-    void refreshQuestionPatches();
   }, [user]);
-  useEffect(() => { void useFigureMap.getState().load(); }, []);
 
   if (!fontsLoaded && !fontError) {
     return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: colors.bg }}><ActivityIndicator size="large" color={colors.primary} /></View>;
   }
-  return <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg }, title: "Catapult Mathletes Classroom" }} />;
+  return <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg }, title: "Catapult Classroom" }} />;
 }

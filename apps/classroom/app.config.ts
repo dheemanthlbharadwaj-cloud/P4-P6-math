@@ -1,6 +1,6 @@
 import type { ExpoConfig, ConfigContext } from "expo/config";
 
-// Catapult Mathletes Classroom: the web app for students, teachers and the owner (admin). Web only.
+// Catapult Classroom: the web app for parents (family code) and teachers / the owner (admin). Web only.
 // Same Firebase Auth (student project catapult-math-students) and the same Netlify backend as the game.
 const env = (k: string, fallback: string) => process.env[k] || fallback;
 
@@ -16,7 +16,7 @@ const EMU_HOST = env("EXPO_PUBLIC_EMULATOR_HOST", "127.0.0.1");
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "Catapult Mathletes Classroom",
+  name: "Catapult Classroom",
   slug: "catapult-mathletes-classroom",
   scheme: "p6classroom",
   version: "0.1.0",

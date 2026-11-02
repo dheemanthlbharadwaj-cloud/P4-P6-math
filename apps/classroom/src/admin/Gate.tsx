@@ -3,7 +3,8 @@
 // the account is not an admin. In mock mode (?mock=1) the sign-in is skipped.
 import React, { useEffect } from "react";
 import { ActivityIndicator, Text } from "react-native";
-import { useRouter } from "expo-router";
+import { Redirect, useRouter } from "expo-router";
+import { isParentUid } from "../roles/logic";
 import { Button } from "../components/ui";
 import { Centered, SignIn, Title } from "../components/SignIn";
 import { colors, space } from "../theme/colors";
@@ -18,7 +19,7 @@ export function AdminGate({ children }: { children: React.ReactNode }) {
   const { user, ready } = useAuth();
   const router = useRouter();
   const { phase, error, load, reset } = useAdmin();
-  const uid = ADMIN_MOCK ? "mock" : user?.uid;
+  const uid = ADMIN_MOCK ? "mock" : isParentUid(user?.uid) ? undefined : user?.uid;
 
   useEffect(() => {
     if (!uid) { reset(); return; }
@@ -29,7 +30,8 @@ export function AdminGate({ children }: { children: React.ReactNode }) {
   if (!ADMIN_MOCK) {
     if (!isFirebaseConfigured) return <Centered><Title>Admin dashboard</Title><Notice kind="error">Sign-in isn't set up in this build.</Notice></Centered>;
     if (!ready) return <Centered><ActivityIndicator size="large" color={colors.primary} /></Centered>;
-    if (!user) return <SignIn heading="Admin sign-in" />;
+    if (!user) return <SignIn teacherFirst />;
+    if (isParentUid(user.uid)) return <Redirect href="/parent" />; // the staff panel is never shown to parents
   }
   if (phase === "idle" || phase === "loading") {
     return <Centered><ActivityIndicator size="large" color={colors.primary} /><Muted style={{ marginTop: space.m, textAlign: "center" }}>Loading…</Muted></Centered>;
@@ -40,7 +42,7 @@ export function AdminGate({ children }: { children: React.ReactNode }) {
         <Title>Not an admin account</Title>
         <Text style={{ fontSize: 18, color: colors.ink, marginBottom: space.l }}>This account isn't an admin account.</Text>
         <Muted style={{ marginBottom: space.l }}>Signed in as {user?.email ?? "this account"}. Sign in with the owner account instead.</Muted>
-        <Button title="Go to the student area" onPress={() => router.replace("/student")} style={{ marginBottom: space.s }} />
+        <Button title="Back to the start" onPress={() => router.replace("/")} style={{ marginBottom: space.s }} />
         <Button title="Sign out" variant="ghost" onPress={() => { void signOut(); }} />
       </Centered>
     );

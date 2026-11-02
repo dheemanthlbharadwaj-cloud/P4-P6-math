@@ -23,6 +23,7 @@ const PATHS = [
   "teachers/alice", "classes/c1", "classes/c1/posts/p1", "classes/c1/tasks/t1", "classes/c1/tasks/t1/marks/alice", "users/alice/qstats/P6",
   // admin dashboard
   "admins/alice", "adminLog/l1",
+  "families/f1", "familyCodes/h1", "children/c1", "lessons/l1", "sessions/s1", "reports/r1",
 ];
 
 beforeEach(async () => {

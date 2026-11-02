@@ -1,4 +1,4 @@
-// Browser storage for the few things kept between visits (the student's last classroom answer, the chosen area).
+// Browser storage for the few things kept between visits (the staff area used last, the demo data in ?mock=1).
 // Private windows / blocked storage: everything still works, it just isn't remembered.
 import { createJSONStorage } from "zustand/middleware";
 

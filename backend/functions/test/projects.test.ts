@@ -35,7 +35,7 @@ describe("verifyWithFallback", () => {
 
 describe("needsRevocationCheck", () => {
   it("admin* and teacher* callables check revoked / disabled logins", () => {
-    for (const n of ["adminGetOverview", "adminSetUserDisabled", "teacherGetDashboard", "teacherMarkTask"]) expect(needsRevocationCheck(n)).toBe(true);
+    for (const n of ["adminGetOverview", "adminSetUserDisabled", "teacherGetDashboard", "teacherMarkTask", "teacherSaveSession", "parentGetHome"]) expect(needsRevocationCheck(n)).toBe(true);
   });
   it("student callables don't (no extra Auth call)", () => {
     for (const n of ["submitLevelResult", "getMyClassroom", "submitTaskAnswers", "bootstrapProfile", "getLeaderboard"]) expect(needsRevocationCheck(n)).toBe(false);
