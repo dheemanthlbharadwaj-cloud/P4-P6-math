@@ -5,9 +5,9 @@
 //                                        once the owner has made it Owner of the classroom project. The project id is still
 //                                        always the classroom one (PROJECT below), so the game's projects are never touched.
 //   CLASSROOM_NETLIFY_AUTH_TOKEN         personal access token of the classroom's OWN Netlify account
-//   CLASSROOM_PROJECT_ID                 default catapult-classroom
+//   CLASSROOM_PROJECT_ID                 default catapultclassroom
 //   CLASSROOM_NETLIFY_SITE               default catapult-classroom-api
-export const PROJECT = process.env.CLASSROOM_PROJECT_ID || "catapult-classroom";
+export const PROJECT = process.env.CLASSROOM_PROJECT_ID || "catapultclassroom";
 export const SITE_NAME = process.env.CLASSROOM_NETLIFY_SITE || "catapult-classroom-api";
 export const RUNTIME_SA_ID = "classroom-backend";
 export const runtimeEmail = () => `${RUNTIME_SA_ID}@${PROJECT}.iam.gserviceaccount.com`;

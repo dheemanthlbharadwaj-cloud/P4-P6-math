@@ -1,5 +1,5 @@
 # Classroom web app (https://catapult-classroom.web.app, apps/classroom): build and publish to Firebase Hosting.
-# Its OWN Firebase project catapult-classroom (hosting, sign-in, data) and its OWN backend (backend-classroom, own Netlify
+# Its OWN Firebase project catapultclassroom (site catapult-classroom; hosting, sign-in, data) and its OWN backend (backend-classroom, own Netlify
 # account): separate from the game (owner decision, 2 Nov 2026). Keyless, like deploy-web.yml: GitHub's OIDC token is
 # exchanged (workload identity pool "github" in primary-math-sg) for catapult-web-deployer, which needs the
 # "Firebase Hosting Admin" role on the classroom project too. Runs on GitHub's free minutes (no Expo minutes, no
@@ -21,7 +21,7 @@ permissions:
   id-token: write
 
 env:
-  CLASSROOM_PROJECT: catapult-classroom # the classroom's Firebase project id (change here if the owner picks another id)
+  CLASSROOM_PROJECT: catapultclassroom # the classroom's Firebase project id (change here if the owner picks another id)
   CLASSROOM_SITE: catapult-classroom
 
 jobs:

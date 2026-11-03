@@ -25,7 +25,7 @@ and iOS.
 - **Live edits:** questions edited in the editor reach apps as patches via the backend's `getQuestionPatches`.
 - **Backend:** in `backend/`, running on Netlify.
 - **Catapult Classroom:** `apps/classroom` (web, for parents with one family code and teachers / the owner) with its OWN
-  backend `backend-classroom/` and Firebase project `catapult-classroom`: separate limits, never combined with the game
+  backend `backend-classroom/` and Firebase project `catapultclassroom`: separate limits, never combined with the game
   (owner decision, 2 Nov 2026). The game keeps no classroom screens.
 - **Shared code:** types and rules in `packages/shared`.
 

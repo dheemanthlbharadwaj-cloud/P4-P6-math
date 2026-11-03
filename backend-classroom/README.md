@@ -1,7 +1,7 @@
 # Catapult Classroom backend
 
 The API of Catapult Classroom (`apps/classroom`). Separate from the game on purpose (owner, 2 Nov 2026): its own Firebase
-project `catapult-classroom` (Auth, Firestore, Hosting; its own free quota) and its own Netlify site in its own Netlify
+project `catapultclassroom` (Auth, Firestore, Hosting; its own free quota) and its own Netlify site in its own Netlify
 account (its own 300 credits). Contract: `packages/shared/src/lessons.ts`. Guide: the skill, "Catapult Classroom launch".
 
 ```bash
