@@ -48,7 +48,8 @@ environment can do and the live status of every service. Flags: `--verify` (test
 - **Catapult Classroom is a separate system (owner, 2 Nov 2026: "separate backend with separate limits, not combined
   with the other apps").** Its own Firebase project (`catapult-classroom`: Auth, Firestore, Hosting; its own 50k reads/day),
   its own backend `backend-classroom/` on its own Netlify site in its OWN Netlify account (own 300 credits). Its scripts use
-  only `CLASSROOM_*` credentials and refuse a Netlify token that can see the game's site. Never point it at the game's
+  `CLASSROOM_*` credentials: the Netlify token must be the classroom's own (no fallback), and the Firebase setup key may be
+  the main service account once it is Owner of the classroom project. They refuse a Netlify token that can see the game's site. Never point it at the game's
   projects or backend, and never add classroom callables to `backend/`.
 - **Holding a web release:** a push that touches `apps/mobile/**` or `packages/shared/**` redeploys the web app. To push
   without deploying (e.g. app changes that need a backend deploy first), put `[skip ci]` in the head commit message;
@@ -102,7 +103,7 @@ Release steps on or after 7 Nov:
 ### Catapult Classroom launch (not done yet; any day, independent of the game's 7 Nov release)
 Owner first: (a) create the Firebase project (console → Add project, id `catapult-classroom`, no Analytics, Spark), open
 Build → Authentication → Get started and switch on Google sign-in; (b) give a service account Owner on it and put its key in
-the environment as `CLASSROOM_SETUP_SERVICE_ACCOUNT_B64`; (c) create a NEW Netlify account (its own email: credits are per
+the environment as `CLASSROOM_SETUP_SERVICE_ACCOUNT_B64`, or simply add `p6-app-reader@primary-math-sg.iam.gserviceaccount.com` (the main service account already in the environment) as Owner of the new project; the setup scripts then use FIREBASE_SERVICE_ACCOUNT_B64; (c) create a NEW Netlify account (its own email: credits are per
 account/team, so a site in the game's account would share the game's 300) and put a personal access token in
 `CLASSROOM_NETLIFY_AUTH_TOKEN`; (d) for the web deploy, give `catapult-web-deployer@primary-math-sg.iam.gserviceaccount.com`
 "Firebase Hosting Admin" on the new project (or hand-deploy with `deploy-hosting.ts`). Then:
@@ -443,4 +444,5 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
 | 2026-11-02 | Worksheet answers: question source left for later (teachers may add questions from their login); children answer on a tablet/laptop with the family code + "Who's doing this?"; OEQ phrasing must be EXACT (marks for grammar, spelling, sentence structure); override = teacher account, per student; spelling = exact; PDF worksheets = AI analysis of the hand-corrected paper (preferred); finishing a lesson worksheet only OFFERS "mark complete" to the teacher, who confirms (no automatic completion for now) | recorded; to build with worksheets |
 | 2026-11-02 | **Open, owner will answer later (remind them):** (3) MCQ after the 3rd wrong try: does the app show the right answer, or the teacher tells it; and should "Talk to Teacher Lisa" use each teacher's own name? (6) Maths open-ended = same rules as MCQ (3 tries, then talk to the teacher, enter the right answer)? | awaiting owner |
 | 2026-11-02 | Always delegate smaller tasks to haiku / sonnet sub-agents | in force (§0) |
+| 2026-11-03 | Owner: keep Netlify + Firebase for Classroom; the owner opens the new Netlify account; the new Firebase project must be created from the owner's Google login (a service account can't create projects without an organization: tried, HTTP 403) | awaiting owner: create catapult-classroom, add the main service account as Owner, add CLASSROOM_NETLIFY_AUTH_TOKEN |
 | 2026-10-16 | Enable Blaze billing on primary-math-sg so the read quota can't take the backend down | recommended, awaiting owner |
