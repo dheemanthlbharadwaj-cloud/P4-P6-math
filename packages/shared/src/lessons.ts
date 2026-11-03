@@ -1,6 +1,6 @@
 // Catapult Classroom: lessons, students and parent reports (owner brief, 1–2 Nov 2026).
 // Its OWN backend (owner decision 2 Nov 2026: separate limits, never combined with the game): backend-classroom/ on its
-// own Netlify site, Firebase project catapult-classroom (its own Auth + Firestore). Teachers run lessons with several
+// own Netlify site, Firebase project catapultclassroom (site catapult-classroom.web.app) (its own Auth + Firestore). Teachers run lessons with several
 // children; each child gets a report (a face per learning goal, a note, which parts were done). Parents sign in with ONE
 // code per family and see every child of the family. All data is server only (rules deny clients).
 //

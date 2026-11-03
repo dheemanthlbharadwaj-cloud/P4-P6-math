@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Prepares the CLASSROOM Firebase project (Spark, its own limits; never the game's). Idempotent: safe to re-run.
 //   node backend-classroom/scripts/setup-project.mjs [--dry]
-// Before: the owner creates the project (console → Add project, id catapult-classroom, no Analytics), opens
+// Before: the owner creates the project (console → Add project, id catapultclassroom (done 3 Nov 2026), no Analytics), opens
 // Build → Authentication → Get started, switches on Google sign-in there, and gives the setup service account the Owner role.
 // Steps: APIs → Firebase → Firestore (default) in asia-southeast1 → Auth (email/password on, authorized domains) → web app
 // "Catapult Classroom (web)" (created if missing) → its config into apps/classroom/firebase.web.json → the backend's service

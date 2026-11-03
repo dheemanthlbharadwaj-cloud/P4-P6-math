@@ -1,7 +1,7 @@
 import type { ExpoConfig, ConfigContext } from "expo/config";
 
 // Catapult Classroom: the web app for parents (family code) and teachers / the owner (admin). Web only.
-// Its OWN Firebase project (catapult-classroom: Auth + Firestore + Hosting) and its OWN backend (backend-classroom on its own
+// Its OWN Firebase project (catapultclassroom: Auth + Firestore + Hosting site catapult-classroom) and its OWN backend (backend-classroom on its own
 // Netlify site), never the game's (owner decision 2 Nov 2026: separate limits).
 const env = (k: string, fallback: string) => process.env[k] || fallback;
 
