@@ -41,6 +41,12 @@ if (!site) {
   if (r.status === 422) throw new Error(`Site name ${SITE_NAME} is taken; set CLASSROOM_NETLIFY_SITE.`);
   site = ok(r, "create site");
 } else log(`Netlify: site ${SITE_NAME}`);
+// New Netlify accounts protect every site with "Visitor access: Netlify login" (account_sso_login): the API must be public
+// (found 4 Nov 2026: every call got Netlify's login page, HTTP 401 HTML), so switch it off for this site.
+if (site.sso_login) {
+  log("Netlify: turning off visitor login protection for this site (the API must be public)");
+  if (!DRY) site = ok(await netlify("PATCH", `/sites/${site.id}`, { sso_login: false }), "visitor access");
+}
 const url = site.ssl_url || `https://${SITE_NAME}.netlify.app`;
 const account = site.account_slug ?? site.account_id;
 

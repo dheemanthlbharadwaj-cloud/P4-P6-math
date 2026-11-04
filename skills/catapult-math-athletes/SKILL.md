@@ -62,8 +62,8 @@ environment can do and the live status of every service. Flags: `--verify` (test
 | Service | Where | Deployed by |
 |---|---|---|
 | Web app (test build, 🛠 Dev Tools) | https://catapult-mathletes.web.app (Firebase Hosting site in `primary-math-sg`) | **automatic**: GitHub Actions `.github/workflows/deploy-web.yml` on push (keyless auth); by hand: `web-preview.py` + `deploy-hosting.ts` |
-| **Catapult Classroom** web app (parents by family code; teachers; owner/admin) | **https://catapult-classroom.web.app** (NOT live yet: Firebase Hosting in its OWN new project, which the owner creates; see "Pending release" and §9) | `.github/workflows/deploy-classroom.yml` (workflow_dispatch for now, keyless; push trigger once the project exists) |
-| Catapult Classroom backend | https://catapult-classroom-api.netlify.app/api/<callable> (NOT live yet; its own Netlify account + Firebase project `catapultclassroom`) | `node backend-classroom/scripts/deploy.mjs` (15 credits of the CLASSROOM account) |
+| **Catapult Classroom** web app (parents by family code; teachers; owner/admin) | **https://catapult-classroom.web.app** (LIVE since 4 Nov 2026; Firebase Hosting site `catapult-classroom` in its own project `catapultclassroom`) | `.github/workflows/deploy-classroom.yml` (workflow_dispatch for now, keyless; push trigger still to add) or by hand: `node apps/classroom/scripts/build-web.mjs` then `cd content && npx tsx ../apps/mobile/scripts/deploy-hosting.ts ../apps/classroom/dist catapult-classroom catapultclassroom` |
+| Catapult Classroom backend | https://catapult-classroom-api.netlify.app/api/<callable> (LIVE since 4 Nov 2026; Netlify account `catapult-classrooms`, the classroom's own, 300 credits; Firebase project `catapultclassroom`) | `node backend-classroom/scripts/deploy.mjs` (15 credits of the CLASSROOM account) |
 | Backend API | https://catapult-math-athletes-api.netlify.app/api/<callable> (Netlify free plan) | `node backend/scripts/deploy-netlify.mjs` (15 Netlify credits each; guarded) |
 | Database / auth | **Since 18 Oct 2026:** student project `catapult-math-students` (Auth + all student data, db `(default)`); `primary-math-sg` keeps only the editor (`questions` read, `question_reports` write) and, during the transition, still holds the sign-ins of installed APKs, which the backend accepts (`LEGACY_AUTH_PROJECT_ID`; keep until a new APK is out) | rules: `backend/scripts/deploy-rules.mjs` (merged, primary-math-sg) or `--project <id> --student-only`; setup `setup-project.mjs --student`; data move `migrate-students.mjs` |
 | Question editor (source of truth) | https://primary-math-sg.web.app (separate codebase; student reports patched in by `backend/scripts/editor-reports.mjs`) | — |
@@ -100,7 +100,7 @@ Release steps on or after 7 Nov:
    again on the new address; a guest's on-device progress does not move across addresses (browser storage is per site).
 6. Move this block into "Current agreed behaviour" / §9 as done.
 
-### Catapult Classroom launch (not done yet; any day, independent of the game's 7 Nov release)
+### Catapult Classroom launch (LIVE 4 Nov 2026; left: owner admin + workflow push trigger)
 Owner first: (a) create the Firebase project (console → Add project, id `catapultclassroom`, no Analytics, Spark), open
 Build → Authentication → Get started and switch on Google sign-in; (b) give a service account Owner on it and put its key in
 the environment as `CLASSROOM_SETUP_SERVICE_ACCOUNT_B64`, or simply add `p6-app-reader@primary-math-sg.iam.gserviceaccount.com` (the main service account already in the environment) as Owner of the new project; the setup scripts then use FIREBASE_SERVICE_ACCOUNT_B64 (done 3 Nov 2026: project `catapultclassroom` created by the owner, main service account p6-app-reader is Owner; setup-project.mjs ran: Firestore (default) asia-southeast1, email + Google sign-in, web app 'Catapult Classroom (web)' → apps/classroom/firebase.web.json, service account classroom-backend, deny-all rules); (c) create a NEW Netlify account (its own email: credits are per
@@ -110,10 +110,9 @@ account/team, so a site in the game's account would share the game's 300) and pu
 1. `node backend-classroom/scripts/setup-project.mjs --dry`, then without `--dry` (APIs, Firestore asia-southeast1, Auth +
    authorized domains, web app → `apps/classroom/firebase.web.json`, backend service account `classroom-backend`, deny-all rules) (done 3 Nov 2026).
 2. `node backend-classroom/scripts/deploy.mjs --dry`, then without (site `catapult-classroom-api`, key env var, credit check,
-   deploy, `apps/classroom/backend.json`, smoke test 401).
-3. `node backend-classroom/scripts/add-admin.mjs --email <owner email> --name "<name>"` (owner email still to come).
-4. Commit firebase.web.json + backend.json, run `.github/workflows/deploy-classroom.yml`, sign in as the owner, add a test
-   family, open its code in a private window, delete it. Then add the workflow's push trigger.
+   deploy, `apps/classroom/backend.json`, smoke test 401). (done 4 Nov 2026: 1 deploy = 15 credits of the classroom account, 285 left; the new account had 'Visitor access: Netlify login' on every site, so the API answered with Netlify's login page; deploy.mjs now switches it off for the site (`sso_login: false`)).
+3. `node backend-classroom/scripts/add-admin.mjs --email <owner email> --name "<name>"` (owner email still to come). Not done: waiting for the owner's email (it may be their account email; ask).
+4. Commit firebase.web.json + backend.json, publish the web app (done 4 Nov 2026 by hand with deploy-hosting.ts; live check passed, see §7). Left: add the workflow's push trigger (`.github/workflows/deploy-classroom.yml` is still workflow_dispatch only), then sign in as the owner once their admin exists.
 
 ### Current agreed behaviour (do not regress)
 | Area | Rule |
@@ -383,10 +382,22 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
   account each** (`qa-<area>-<digits>@example.com`, credentials saved in the scratchpad) deleted through Profile at
   the end; screenshots at 390×844, 844×390 and 1280×800; report bugs with screenshots, no code changes. The
   orchestrator verifies each finding (several were by design) before fixing.
+- **Catapult Classroom live check (4 Nov 2026, launch):** a throwaway admin `classroom-test-admin@catapult-test.invalid`
+  (`add-admin.mjs`, password to a 0600 scratchpad file, never printed, deleted afterwards) signed in on
+  https://catapult-classroom.web.app with Playwright (sonnet sub-agent); added a test family + one child (family code read
+  from testID `shown-once-password`, never logged), made a 1-goal/1-part lesson, ran it for the child with a family message;
+  a fresh browser context signed in with the family code and saw the lesson and message but not "Parts finished" or the
+  part names; a wrong code was refused ("That code doesn't work…", parentSignIn 404); then the family was deleted and the
+  lesson archived through the UI and the admin disabled (`--disable`). One full run only (reads). No page errors. Also:
+  backend-classroom tests 13/13, apps/classroom typecheck + 31/31.
 
 ## 8. Troubleshooting
 - Editor UI edits never reach apps (live edits missing) -> `last_edited_at` type mismatch: the editor saves a Timestamp, our scripts an ISO string; `getQuestionPatches` must query both types (fixed in `patches.ts`; keep it when touching the patch code).
 - `No Firebase credentials found` → set one of the §3 env vars (new session in cloud).
+- **Classroom API answers every call with an HTML "Login Redirect" page (HTTP 401)** (4 Nov 2026) → the classroom's new
+  Netlify account protects every site with "Visitor access: Netlify login" (`account_sso_login`). `deploy.mjs` now switches
+  it off for `catapult-classroom-api` (PATCH site `sso_login: false`); by hand: Netlify → site → Project configuration →
+  Access & security → Visitor access → off.
 - Proxy 403 / ECONNRESET in cloud → host not in network allowlist; see `/root/.ccr/README.md`.
 - `sharp` install issues → optionalDependencies pin linux/darwin binaries; reinstall in `content/`.
 - Bundle contains stale figure → raw file still old; check `content/raw/P6/figures/.sources.json` and that the
@@ -434,13 +445,14 @@ before `npm run build`. Recrops that overwrote earlier ones (`git status` shows 
 | 2026-11-02 | **Classroom web app**: all classroom use (students, teachers, owner) moves to a separate web app; the game keeps no classroom screens (removed in the other session). Built as apps/classroom (Expo web, reuses packages/shared, the game's content bundle and Cloudinary figures, the shared backend) | built on branch `classroom-web`; not live |
 | 2026-11-02 | Classroom address: **a completely new Firebase project**, site **catapult-classroom.web.app** (free on 2 Nov). Owner to create the project (console → Add project, id `catapultclassroom` if free, no Analytics, Spark), then the release steps above (authorized domains in catapult-math-students, Hosting Admin for catapult-web-deployer) | awaiting owner |
 | 2026-11-02 | Screen sizes: "everything works on everything" (every area on phones too); owner will send details | in force; details awaiting owner |
-| 2026-11-02 | Owner's admin email for `add-admin.mjs` | asked; owner will tell later |
+| 2026-11-02 | Owner's admin email for `add-admin.mjs` | asked again 4 Nov (launch done; needed to create the owner admin); maybe their account email |
 | 2026-11-02 | Open: once the game's /teacher and /admin are removed, redirect https://catapult-mathletes.web.app/teacher and /admin to the classroom site? | to ask the owner |
 | 2026-11-01 | **New brief from Lisa Lim Xin Quan (WhatsApp, 1 Nov):** Catapult Classroom is for PARENTS, not students. Teacher account (= admin) sees everything; parents log in with a code per child. Features: Lessons (preset content + questions; parents see only lessons their child completed, with the questions and answers given), Students (profile with full analysis + per-lesson feedback), Worksheet Builder (Leitner baskets 1/2/3 from topics × completed/uncompleted question types × new/previous mistakes/correct; save, do as a test, download PDF). Per lesson: feedback script per learning goal (:) :\| :( + custom note → text to copy to WhatsApp); teacher marks which parts were completed (hidden from parents). Interactive worksheets with special rules: MCQ 3 tries, no skip, no ✗ shown, after 3rd wrong "Talk to Teacher Lisa" and must enter the right answer; OEQ key-phrase detection ("N phrases missing"), retry or give up → answer shown, copy word for word to go on, teacher override to mark correct; spelling by lesson; Science + Math; printable PDF worksheets embedded. AI: upload scanned school exams → scores over time, per topic, itemised mistakes and whether later answered right; "test all previous mistakes"; find near-identical questions. Plan + questions sent to the owner (scope vs the 2 Nov build, content sources for science/spelling/lessons, lesson sessions, parent codes for siblings, where children do worksheets, AI provider/cost/consent) | answered 2 Nov (rows below); phase 1 built |
 | 2026-11-02 | Owner answers: **replace the 2 Nov plan**; **one code per family** (one login shows all children); "main apps" = Catapult Mathletes and Catapult Scientists; **no questions/content needed for now**; lessons run with several children but each child is separate, siblings' feedback goes to their parent; worksheets mostly at home (maybe in class; details later); **teacher panel completely hidden from parents and students**; **more teachers, each with their own students** | built: phase 1 (families/codes, lessons, run lesson + feedback, child profiles, parent view); worksheets, builder and AI exam upload next |
 | 2026-11-02 | AI for exam scans: asked "best free option". Answer given: Google Gemini API free tier (Flash models read scans/handwriting) for trying it out, but free-tier content may be used by Google and seen by reviewers, so real children's papers need the paid tier (or names removed) and parents' consent; alternatives with free tiers: Mistral (experiment tier), Cloudflare Workers AI | awaiting owner's choice |
 | 2026-11-02 | Lisa's worksheet details (MCQ 3 tries/no ✗/"Talk to Teacher Lisa"; OEQ key phrases, give up → copy the answer, teacher override; spelling; printable PDFs) | Lisa, 2 Nov 11:42: children DO solve worksheets in class too (same solving rules as above); she specifies the exact questions per lesson (no adaptive learning in lesson worksheets; the builder's Leitner baskets stay for practice). Questions on the solving rules sent back (question source, who answers on which device, MCQ reveal after 3 tries, key-phrase matching, override, spelling, PDFs) | awaiting answers |
 | 2026-11-02 | **Separate backend with separate limits** for Catapult Classroom, not combined with the game | done in code (backend-classroom/, own project + Netlify account); game backend back to exactly its pre-classroom state; launch waits for the owner's project, accounts and keys (see "Catapult Classroom launch") |
+| 2026-11-04 | Catapult Classroom launch: backend deployed to the classroom's own Netlify account `catapult-classrooms` (site catapult-classroom-api, 15 of 300 credits), web app published to catapult-classroom.web.app, live check passed with a throwaway admin (disabled afterwards) | done; owner admin email still awaited; deploy-classroom.yml push trigger still to add |
 | 2026-11-02 | Worksheet answers: question source left for later (teachers may add questions from their login); children answer on a tablet/laptop with the family code + "Who's doing this?"; OEQ phrasing must be EXACT (marks for grammar, spelling, sentence structure); override = teacher account, per student; spelling = exact; PDF worksheets = AI analysis of the hand-corrected paper (preferred); finishing a lesson worksheet only OFFERS "mark complete" to the teacher, who confirms (no automatic completion for now) | recorded; to build with worksheets |
 | 2026-11-02 | **Open, owner will answer later (remind them):** (3) MCQ after the 3rd wrong try: does the app show the right answer, or the teacher tells it; and should "Talk to Teacher Lisa" use each teacher's own name? (6) Maths open-ended = same rules as MCQ (3 tries, then talk to the teacher, enter the right answer)? | awaiting owner |
 | 2026-11-02 | Always delegate smaller tasks to haiku / sonnet sub-agents | in force (§0) |

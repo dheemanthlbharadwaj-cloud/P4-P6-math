@@ -32,8 +32,8 @@ and iOS.
 | Live | URL | Updated by |
 |---|---|---|
 | Web app | https://catapult-mathletes.web.app | GitHub Actions on push (`.github/workflows/deploy-web.yml`, keyless) |
-| Catapult Classroom | https://catapult-classroom.web.app (not live yet; own Firebase project) | `.github/workflows/deploy-classroom.yml` (manual for now) |
-| Classroom backend | https://catapult-classroom-api.netlify.app (not live yet; own Netlify account) | `node backend-classroom/scripts/deploy.mjs` |
+| Catapult Classroom | https://catapult-classroom.web.app (live since 4 Nov 2026; own Firebase project) | `.github/workflows/deploy-classroom.yml` (manual for now) |
+| Classroom backend | https://catapult-classroom-api.netlify.app (live since 4 Nov 2026; own Netlify account) | `node backend-classroom/scripts/deploy.mjs` |
 | Backend API | https://catapult-math-athletes-api.netlify.app | `node backend/scripts/deploy-netlify.mjs` |
 | Phones (OTA) | Expo `dheems-team/catapult-math-athletes`, channel `preview` | EAS workflow on push (`apps/mobile/.eas/workflows/publish-update.yml`) |
 | Android APK | sent to the owner as a file (they share it); Netlify page archived | local build (`docs/ANDROID.md`), verify the signing key |
