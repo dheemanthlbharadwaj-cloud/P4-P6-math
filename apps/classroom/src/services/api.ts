@@ -55,12 +55,15 @@ export const lessonsApi = {
   saveSession: (r: SaveSessionReq) => call<{ session: LessonSession; reports: LessonReport[] }>("teacherSaveSession", r),
   /** Signed out: the family code → a custom token. */
   parentSignIn: (code: string) => post<{ token: string }>("parentSignIn", { code }),
+  /** Signed out: a family code or a staff access code → a custom token and which kind it was. */
+  codeSignIn: (code: string) => post<{ token: string; kind: "parent" | "staff" }>("codeSignIn", { code }),
   parentGetHome: () => call<ParentHome>("parentGetHome"),
 };
 
 export const adminApi = {
   getOverview: () => call<{ admin: TeacherDoc; teachers: TeacherDoc[] }>("adminGetOverview"),
-  saveTeacher: (email: string, name: string, uid?: string) => call<{ teacher: TeacherDoc; password?: string }>("adminSaveTeacher", { ...(uid ? { uid } : {}), email, name }),
+  /** A new teacher (no uid): email optional; the access code comes back raw, once. With uid: rename only. */
+  saveTeacher: (name: string, email?: string, uid?: string) => call<{ teacher: TeacherDoc; code?: string }>("adminSaveTeacher", { ...(uid ? { uid } : {}), ...(email ? { email } : {}), name }),
   setTeacherActive: (uid: string, active: boolean) => call<{ ok: true }>("adminSetTeacherActive", { uid, active }),
-  resetPassword: (uid: string) => call<{ password: string }>("adminResetPassword", { uid }),
+  resetAccessCode: (uid: string) => call<{ code: string }>("adminResetAccessCode", { uid }),
 };

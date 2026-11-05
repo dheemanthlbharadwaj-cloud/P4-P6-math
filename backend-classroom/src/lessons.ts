@@ -10,18 +10,18 @@
 //   teacherListLessons      all lessons (cached 60 s per instance; every lesson write clears it)
 //   teacherSaveLesson       edit: 1 lesson                    teacherDeleteLesson  1 lesson
 //   teacherSaveSession      1 lesson + the children named (+ 1 session when editing)
-//   parentSignIn            1 code doc + 1 family              parentGetHome        1 family + children + reports + lessons named
+//   parentSignIn            1 code doc + 1 family (codeSignIn: the same, or 1 staff code doc + teacher/admin docs + 1 Auth lookup)             parentGetHome        1 family + children + reports + lessons named
 import { randomInt } from "node:crypto";
 import { auth, col, db } from "./firebase.js";
 import { HttpsError, onCall, requireUid, throwFail } from "./errors.js";
-import { requireStaff, teacherRecord, type Staff } from "./staff.js";
+import { adminRecord, requireStaff, teacherRecord, type Staff } from "./staff.js";
 import { TtlCache } from "./logic/ttlCache.js";
-import type { StaffDoc } from "./logic/staff.js";
+import { staffCodeDocId, type StaffDoc } from "./logic/staff.js";
 import {
-  canTouch, codeDocId, familyIdOfUid, makeFamilyCode, parentUid, toParentReport, validDocId, validateFamily, validateLesson, validateSession,
+  canTouch, codeDocId, familyIdOfUid, makeFamilyCode, parentUid, staffOf, toParentReport, validDocId, validateFamily, validateLesson, validateSession,
 } from "./logic/lessons.js";
 import {
-  isFamilyCode, normalizeFamilyCode, type Child, type Family, type Lesson, type LessonReport, type LessonSession, type ParentHome,
+  codeKind, isFamilyCode, normalizeFamilyCode, type Child, type Family, type Lesson, type LessonReport, type LessonSession, type ParentHome,
 } from "./shared/index.js";
 
 const obj = (v: unknown): Record<string, unknown> => ((v && typeof v === "object" ? v : {}) as Record<string, unknown>);
@@ -241,14 +241,35 @@ export const teacherSaveSession = onCall(async (req): Promise<{ session: LessonS
 });
 
 // ================================================================ parents
-export const parentSignIn = onCall(async (req): Promise<{ token: string }> => {
-  const code = normalizeFamilyCode(String(obj(req.data).code ?? ""));
-  const wrong = new HttpsError("not-found", "That code doesn't work. Check it with your teacher.");
+const WRONG_CODE = "That code doesn't work. Check it with your teacher.";
+async function parentToken(code: string): Promise<string> {
+  const wrong = new HttpsError("not-found", WRONG_CODE);
   if (!isFamilyCode(code)) throw wrong;
   const c = await db.collection(col.familyCodes).doc(codeDocId(code)).get();
   const familyId = c.exists ? String(c.data()?.familyId ?? "") : "";
   if (!familyId || !(await families().doc(familyId).get()).exists) throw wrong;
-  return { token: await auth.createCustomToken(parentUid(familyId), { role: "parent", familyId }) };
+  return auth.createCustomToken(parentUid(familyId), { role: "parent", familyId });
+}
+
+export const parentSignIn = onCall(async (req): Promise<{ token: string }> => {
+  return { token: await parentToken(normalizeFamilyCode(String(obj(req.data).code ?? ""))) };
+});
+
+/** The front page's one code box: a family code (10 chars) → parent login; a staff access code (12) → that teacher's / admin's own login. */
+export const codeSignIn = onCall(async (req): Promise<{ token: string; kind: "parent" | "staff" }> => {
+  const code = normalizeFamilyCode(String(obj(req.data).code ?? ""));
+  const kind = codeKind(code);
+  if (kind === "parent") return { token: await parentToken(code), kind };
+  const wrong = new HttpsError("not-found", WRONG_CODE);
+  if (kind !== "staff") throw wrong;
+  const c = await db.collection(col.staffCodes).doc(staffCodeDocId(code)).get();
+  const uid = c.exists ? String(c.data()?.uid ?? "") : "";
+  if (!uid) throw wrong;
+  const [t, a] = await Promise.all([teacherRecord(uid), adminRecord(uid)]);
+  if (!staffOf(t, a).ok) throw wrong;
+  const user = await auth.getUser(uid).catch(() => null);
+  if (!user || user.disabled) throw wrong;
+  return { token: await auth.createCustomToken(uid), kind };
 });
 
 export const parentGetHome = onCall(async (req): Promise<ParentHome> => {

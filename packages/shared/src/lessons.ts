@@ -9,6 +9,7 @@
 //   admins/{uid}                 TeacherDoc    (made only by backend-classroom/scripts/add-admin.mjs)
 //   families/{familyId}          Family        (parent login = custom token uid "parent_<familyId>")
 //   familyCodes/{sha256(code)}   { familyId }  (the code itself is never stored)
+//   staffCodes/{staffCodeDocId(code)}  { uid, createdAt }  (a teacher's / admin's access code; never stored itself; one per uid)
 //   children/{childId}           Child
 //   lessons/{lessonId}           Lesson        (shared library: every teacher can use every lesson)
 //   sessions/{sessionId}         LessonSession (one lesson run on one day with some children)
@@ -17,9 +18,12 @@
 // Callables: POST <backend>/api/<name> { data } with "Authorization: Bearer <Firebase ID token>" (ClassroomCallable).
 //   getMyRoles               {} → MyRoles
 //   adminGetOverview         {} → { admin: TeacherDoc; teachers: TeacherDoc[] }
-//   adminSaveTeacher         { uid?; email; name } → { teacher; password? (new login only, shown once) }   (uid = rename only)
+//   adminSaveTeacher         { uid?; email?; name } → { teacher; code? }   (uid = rename only; otherwise a new teacher: email is
+//                            optional (an existing login with that email is reused), and a NEW access code is always
+//                            returned, shown once)
 //   adminSetTeacherActive    { uid; active } → { ok }
-//   adminResetPassword       { uid } → { password }
+//   adminResetAccessCode     { uid } → { code }   (a teacher's, or the caller's own; another admin's: failed-precondition,
+//                            use add-admin.mjs --access-code). The old code stops working.
 //   teacherGetStudents       {} → { families: Family[]; children: Child[]; teachers?: {uid,name}[] (admins) }
 //   teacherSaveFamily        { id?; parentName; teacherUid? (admin only); children: {id?; name; level}[] } → { family; children; code? (new family only, shown once) }
 //   teacherResetFamilyCode   { familyId } → { code }
@@ -29,16 +33,22 @@
 //   teacherSaveLesson        { id?; title; subject; level; intro; goals; parts } → { lesson }
 //   teacherDeleteLesson      { lessonId } → { ok }        (archived: old reports keep working)
 //   teacherSaveSession       { id?; lessonId; date; reports: SessionChildInput[]; familyTexts: Record<familyId, string> } → { session; reports }
-//   parentSignIn             { code } (no sign-in needed) → { token }   (Firebase custom token; rate limited per IP)
+//   parentSignIn             { code } (no sign-in needed) → { token }   (Firebase custom token; rate limited per IP; kept for
+//                            older open pages; the app uses codeSignIn)
+//   codeSignIn               { code } (no sign-in needed) → { token; kind: "parent" | "staff" }   (owner decision 5 Nov 2026:
+//                            the front page is ONE code box. A family code (10 chars) → the family's parent login; a staff
+//                            access code (12 chars) → that teacher's / admin's own Auth uid, only while their teachers/admins
+//                            doc is active and the Auth user is not disabled. Wrong code: not-found "That code doesn't work.
+//                            Check it with your teacher." Rate limited per IP like parentSignIn.)
 //   parentGetHome            {} → ParentHome
 export type ClassroomCallable =
-  | "getMyRoles" | "adminGetOverview" | "adminSaveTeacher" | "adminSetTeacherActive" | "adminResetPassword"
+  | "getMyRoles" | "adminGetOverview" | "adminSaveTeacher" | "adminSetTeacherActive" | "adminResetAccessCode"
   | "teacherGetStudents" | "teacherSaveFamily" | "teacherResetFamilyCode" | "teacherDeleteFamily" | "teacherGetChild"
-  | "teacherListLessons" | "teacherSaveLesson" | "teacherDeleteLesson" | "teacherSaveSession" | "parentSignIn" | "parentGetHome";
+  | "teacherListLessons" | "teacherSaveLesson" | "teacherDeleteLesson" | "teacherSaveSession" | "parentSignIn" | "parentGetHome" | "codeSignIn";
 export const CLASSROOM_CALLABLES: readonly ClassroomCallable[] = [
-  "getMyRoles", "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetPassword",
+  "getMyRoles", "adminGetOverview", "adminSaveTeacher", "adminSetTeacherActive", "adminResetAccessCode",
   "teacherGetStudents", "teacherSaveFamily", "teacherResetFamilyCode", "teacherDeleteFamily", "teacherGetChild",
-  "teacherListLessons", "teacherSaveLesson", "teacherDeleteLesson", "teacherSaveSession", "parentSignIn", "parentGetHome",
+  "teacherListLessons", "teacherSaveLesson", "teacherDeleteLesson", "teacherSaveSession", "parentSignIn", "parentGetHome", "codeSignIn",
 ];
 /** Which staff areas a login may open (an active teachers / admins doc). Parents are "parent_<familyId>" logins. */
 export interface MyRoles { teacher: boolean; admin: boolean }
@@ -147,6 +157,15 @@ export function normalizeFamilyCode(raw: string): string {
 }
 export const isFamilyCode = (c: string) => c.length === 10 && [...c].every((ch) => FAMILY_CODE_ALPHABET.includes(ch));
 export const formatFamilyCode = (c: string) => `${c.slice(0, 5)}-${c.slice(5)}`;
+
+/** Staff access codes (teachers / admins; owner decision 5 Nov 2026): 12 characters, same alphabet, shown XXXX-XXXX-XXXX.
+ *  Normalized with normalizeFamilyCode; the length tells a family code (10) from a staff code (12). */
+export const STAFF_CODE_LENGTH = 12;
+export const isStaffCode = (c: string) => c.length === STAFF_CODE_LENGTH && [...c].every((ch) => FAMILY_CODE_ALPHABET.includes(ch));
+export const formatStaffCode = (c: string) => `${c.slice(0, 4)}-${c.slice(4, 8)}-${c.slice(8)}`;
+export type CodeKind = "parent" | "staff";
+/** Which kind of code was typed (after normalizeFamilyCode), or null when it can't be either. */
+export const codeKind = (c: string): CodeKind | null => (isFamilyCode(c) ? "parent" : isStaffCode(c) ? "staff" : null);
 
 const firstName = (n: string) => n.trim().split(/\s+/)[0] ?? "";
 /** "Zimo", "Zimo and Ziqiao", "Zimo, Ziqiao and Ann". */

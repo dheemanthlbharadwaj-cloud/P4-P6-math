@@ -32,6 +32,9 @@ describe("admin helpers", () => {
     expect(canSaveTeacher("Ms Tan", "tan@x.sg")).toBe(true);
     expect(canSaveTeacher(" ", "tan@x.sg")).toBe(false);
     expect(canSaveTeacher("Ms Tan", "nope")).toBe(false);
+    expect(canSaveTeacher("Ms Tan", "")).toBe(true);
+    expect(canSaveTeacher("Ms Tan", "  ")).toBe(true);
+    expect(canSaveTeacher(" ", "")).toBe(false);
   });
   it("labels sign-in methods and allows password reset only for email logins", () => {
     expect(signInMethods(["password", "google.com"])).toBe("Email + password, Google");

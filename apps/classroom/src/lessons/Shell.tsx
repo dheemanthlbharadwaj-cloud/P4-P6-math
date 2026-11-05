@@ -1,4 +1,4 @@
-// Teacher frame: side navigation (Lessons · Students · Worksheet builder), the admin switch, the signed-in teacher.
+// Teacher frame (teachers and admins alike): side navigation (Lessons · Students · Worksheet builder · Teachers for admins only).
 // Under 900 px the navigation becomes a bar across the top (tablets, phones).
 import React from "react";
 import { Pressable, ScrollView, Text, View, useWindowDimensions } from "react-native";
@@ -6,9 +6,10 @@ import { usePathname, useRouter } from "expo-router";
 import { colors, fonts, radius, space } from "../theme/colors";
 import { signOut } from "../services/auth";
 import { Button } from "../components/ui";
-import { AreaSwitcher } from "../components/AreaSwitcher";
 import { useAuth } from "../store/auth";
 import { MOCK_AREAS } from "../roles/mock";
+import { useRoles } from "../roles/store";
+import { useAdmin } from "../admin/store";
 import { SECTIONS, useTeacher, type Section } from "./store";
 
 export function Shell({ children, active }: { children: React.ReactNode; active?: Section }) {
@@ -19,10 +20,13 @@ export function Shell({ children, active }: { children: React.ReactNode; active?
   const path = usePathname();
   const open = (s: Section) => { go(s); if (path !== "/teacher") router.replace("/teacher"); };
   const user = useAuth((s) => s.user);
+  const isAdmin = useRoles((s) => s.roles.admin) || MOCK_AREAS;
+  const adminName = useAdmin((s) => s.admin?.name);
+  const myName = user?.displayName || adminName || "";
   const current = active ?? section;
   const nav = (
     <View style={narrow ? { flexDirection: "row", flexWrap: "wrap", gap: 6 } : { gap: 6 }}>
-      {SECTIONS.map((s) => {
+      {SECTIONS.filter((s) => s.id !== "teachers" || isAdmin).map((s) => {
         const on = s.id === current;
         return (
           <Pressable key={s.id} onPress={() => open(s.id)} accessibilityRole="button" accessibilityState={{ selected: on }}
@@ -44,11 +48,10 @@ export function Shell({ children, active }: { children: React.ReactNode; active?
           </View>
           {narrow ? signOutBtn : null}
         </View>
-        <AreaSwitcher current="teacher" />
         {nav}
         {narrow ? null : (
           <View style={{ marginTop: "auto", gap: 6 }}>
-            <Text style={{ fontSize: 13, color: colors.inkSoft }} numberOfLines={1}>{user?.email ?? ""}</Text>
+            {myName ? <Text style={{ fontSize: 13, color: colors.inkSoft }} numberOfLines={1}>{myName}</Text> : null}
             {signOutBtn}
           </View>
         )}

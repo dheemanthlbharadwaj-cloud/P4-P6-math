@@ -25,7 +25,8 @@ export function classNamesFor(classIds: string[], classes: AdminClassRow[]): { i
 export const normalizeQuery = (q: string): string => q.trim();
 export const isEmail = (s: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.trim());
 export const canSearch = (q: string): boolean => normalizeQuery(q).length >= 3;
-export const canSaveTeacher = (name: string, email: string): boolean => name.trim().length > 0 && isEmail(email);
+/** Name is required; the email is optional but must look right when given. */
+export const canSaveTeacher = (name: string, email: string): boolean => name.trim().length > 0 && (!email.trim() || isEmail(email));
 
 const METHODS: Record<string, string> = { password: "Email + password", "google.com": "Google", "apple.com": "Apple", phone: "Phone", anonymous: "Guest" };
 export const signInMethods = (providers: string[]): string =>

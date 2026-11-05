@@ -88,7 +88,7 @@ describe("callable wiring", () => {
     const index = fs.readFileSync(here + "../src/index.ts", "utf8");
     const map = index.slice(index.indexOf("CALLABLES"));
     for (const n of CLASSROOM_CALLABLES) expect(map, n).toMatch(new RegExp(`\\b${n}\\b`));
-    const served = [...map.slice(map.indexOf("{")).matchAll(/\b(get|admin|teacher|parent)\w+/g)].map((m) => m[0]);
+    const served = [...map.slice(map.indexOf("{")).matchAll(/\b(get|admin|teacher|parent|code)\w+/g)].map((m) => m[0]);
     expect(new Set(served)).toEqual(new Set(CLASSROOM_CALLABLES));
   });
 });

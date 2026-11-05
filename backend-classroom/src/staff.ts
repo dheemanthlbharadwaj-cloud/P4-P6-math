@@ -1,10 +1,10 @@
 // Staff: roles, teacher records and the owner's admin calls (Admin > Teachers). Admins are made only by
 // scripts/add-admin.mjs. Reads: requireStaff / getMyRoles = teachers/{uid} + admins/{uid}, both cached 60 s per instance;
-// adminGetOverview = all teachers; adminSaveTeacher = 1 teacher doc (+ Auth); the others 1 doc (+ Auth).
+// adminGetOverview = all teachers; adminSaveTeacher = 1 teacher doc (+ Auth, + 1 code query and write); the others 1 doc (+ Auth).
 import { auth, col, db } from "./firebase.js";
 import { HttpsError, onCall, requireUid, throwFail, type CallableRequest } from "./errors.js";
 import { TtlCache } from "./logic/ttlCache.js";
-import { checkAdmin, makePassword, rolesOf, validateTeacher, type StaffDoc } from "./logic/staff.js";
+import { checkAdmin, makeStaffCode, rolesOf, staffCodeDocId, validateTeacher, type StaffDoc } from "./logic/staff.js";
 import { staffOf } from "./logic/lessons.js";
 import type { MyRoles } from "./shared/index.js";
 
@@ -21,6 +21,17 @@ async function record(c: TtlCache<StaffDoc | null>, collection: string, uid: str
 }
 export const teacherRecord = (uid: string) => record(teacherCache, col.teachers, uid);
 export const adminRecord = (uid: string) => record(adminCache, col.admins, uid);
+
+/** Gives a teacher / admin a NEW access code (the old one stops working: one code per uid). Returns the raw 12 characters. */
+export async function issueStaffCode(uid: string): Promise<string> {
+  const old = await db.collection(col.staffCodes).where("uid", "==", uid).get();
+  await Promise.all(old.docs.map((d) => d.ref.delete()));
+  for (;;) {
+    const code = makeStaffCode();
+    try { await db.collection(col.staffCodes).doc(staffCodeDocId(code)).create({ uid, createdAt: Date.now() }); return code; }
+    catch (e) { if ((e as { code?: number }).code !== 6) throw e; } // 6 = ALREADY_EXISTS: draw another code
+  }
+}
 
 export type Staff = { uid: string; admin: boolean };
 /** An active teacher (own families) or admin (everything). */
@@ -56,11 +67,11 @@ export const adminGetOverview = onCall(async (req): Promise<{ admin: StaffDoc; t
   return { admin, teachers };
 });
 
-export const adminSaveTeacher = onCall(async (req): Promise<{ teacher: StaffDoc; password?: string }> => {
+export const adminSaveTeacher = onCall(async (req): Promise<{ teacher: StaffDoc; code?: string }> => {
   const { uid: me } = await requireAdmin(req);
   const v = validateTeacher(req.data);
   if (!v.ok) throwFail(v);
-  if (v.uid) { // rename only: never creates or promotes a login
+  if (v.uid) { // rename only: never creates or promotes a login, no code
     const ref = db.collection(col.teachers).doc(v.uid);
     const snap = await ref.get();
     if (!snap.exists) throw new HttpsError("not-found", "No such teacher.");
@@ -69,17 +80,18 @@ export const adminSaveTeacher = onCall(async (req): Promise<{ teacher: StaffDoc;
     await log(me, "renameTeacher", v.uid);
     return { teacher: { ...(snap.data() as StaffDoc), uid: v.uid, name: v.name } };
   }
-  let password: string | undefined;
-  let user = await auth.getUserByEmail(v.email).catch((e) => { if (authCode(e) === "auth/user-not-found") return null; throw e; });
+  // an existing login with that email is reused; otherwise a login WITHOUT a password (staff sign in with their access code)
+  let user = v.email ? await auth.getUserByEmail(v.email).catch((e) => { if (authCode(e) === "auth/user-not-found") return null; throw e; }) : null;
   if (user?.disabled) throw new HttpsError("failed-precondition", "That login is disabled. Enable it first.");
-  if (!user) { password = makePassword(); user = await auth.createUser({ email: v.email, password, displayName: v.name }); }
+  if (!user) user = await auth.createUser({ displayName: v.name, ...(v.email ? { email: v.email } : {}) });
   const ref = db.collection(col.teachers).doc(user.uid);
   const old = (await ref.get()).data() as StaffDoc | undefined;
   const teacher: StaffDoc = { uid: user.uid, name: v.name, email: v.email, active: true, createdAt: old?.createdAt ?? Date.now() };
   await ref.set(teacher);
   teacherCache.delete(user.uid);
+  const code = await issueStaffCode(user.uid);
   await log(me, "saveTeacher", user.uid);
-  return { teacher, ...(password ? { password } : {}) };
+  return { teacher, code };
 });
 
 export const adminSetTeacherActive = onCall(async (req): Promise<{ ok: true }> => {
@@ -98,14 +110,13 @@ export const adminSetTeacherActive = onCall(async (req): Promise<{ ok: true }> =
   return { ok: true };
 });
 
-export const adminResetPassword = onCall(async (req): Promise<{ password: string }> => {
+export const adminResetAccessCode = onCall(async (req): Promise<{ code: string }> => {
   const { uid: me } = await requireAdmin(req);
   const uid = String(obj(req.data).uid ?? "");
-  if (!(await db.collection(col.teachers).doc(uid).get()).exists) throw new HttpsError("not-found", "No such teacher.");
+  if (!uid || !(await db.collection(col.teachers).doc(uid).get()).exists) throw new HttpsError("not-found", "No such teacher.");
   if (uid !== me && (await adminRecord(uid))) throw new HttpsError("failed-precondition", "Other admins are managed with add-admin.mjs.");
-  const password = makePassword();
-  await auth.updateUser(uid, { password });
+  const code = await issueStaffCode(uid);
   await auth.revokeRefreshTokens(uid);
-  await log(me, "resetPassword", uid);
-  return { password };
+  await log(me, "resetAccessCode", uid);
+  return { code };
 });

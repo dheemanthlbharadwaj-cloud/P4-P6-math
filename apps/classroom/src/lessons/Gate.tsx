@@ -1,4 +1,4 @@
-// Everything under /teacher: a teacher or admin login (email / Google). Parents are sent to /parent and never see any of
+// Everything under /teacher: a teacher or admin login (access code). Parents are sent to /parent and never see any of
 // this. teacherGetStudents decides: permission-denied = not a teacher account. ?mock=1 skips the sign-in.
 import React, { useEffect } from "react";
 import { ActivityIndicator, Text } from "react-native";
@@ -28,7 +28,7 @@ export function TeacherGate({ children }: { children: React.ReactNode }) {
   if (!MOCK_AREAS) {
     if (!isFirebaseConfigured) return <Centered><Title>Catapult Classroom</Title><Notice kind="error">Sign-in isn't set up in this build.</Notice></Centered>;
     if (!ready) return <Centered><ActivityIndicator size="large" color={colors.primary} /></Centered>;
-    if (!user) return <SignIn teacherFirst />;
+    if (!user) return <SignIn />;
     if (parent) return <Redirect href="/parent" />;
   }
   if (phase === "idle" || phase === "loading") {
@@ -39,7 +39,7 @@ export function TeacherGate({ children }: { children: React.ReactNode }) {
       <Centered>
         <Title>Not a teacher account</Title>
         <Text style={{ fontSize: 18, color: colors.ink, marginBottom: space.l }}>This account isn't a teacher account.</Text>
-        <Muted style={{ marginBottom: space.l }}>Signed in as {user?.email ?? "this account"}. Ask the owner to add you as a teacher. Parents: sign out and use your family code.</Muted>
+        <Muted style={{ marginBottom: space.l }}>This code isn't a teacher's. Sign out and try again.</Muted>
         <Button title="Sign out" variant="ghost" onPress={() => { void signOut(); }} />
       </Centered>
     );

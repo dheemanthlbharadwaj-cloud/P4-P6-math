@@ -22,6 +22,7 @@ export const col = {
   adminLog: "adminLog",
   families: "families",
   familyCodes: "familyCodes",
+  staffCodes: "staffCodes",
   children: "children",
   lessons: "lessons",
   sessions: "sessions",

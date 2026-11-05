@@ -1,12 +1,9 @@
-// Which areas the signed-in login may open (Student / Teacher / Admin) and which one was used last (remembered per
-// login in this browser, so a teacher lands back on the teacher dashboard).
+// Which staff roles the signed-in login has (teacher / admin): admins also see the Teachers menu item.
 import { create } from "zustand";
 import type { MyRoles } from "@p6/shared";
 import { ApiError, getMyRoles } from "../services/api";
-import { readLocal, writeLocal } from "../store/storage";
 import { MOCK_AREAS } from "./mock";
-import type { Area } from "./logic";
-export { AREAS, areasFor, isParentUid, startArea, type Area } from "./logic";
+export { areasFor, isParentUid, type Area } from "./logic";
 
 import type { RolesPhase } from "./logic";
 export type { RolesPhase };
@@ -37,10 +34,3 @@ export const useRoles = create<RolesState>((set, get) => ({
   },
   reset: () => set({ uid: null, phase: "idle", roles: { teacher: false, admin: false } }),
 }));
-
-const key = (uid: string) => `p6c.area.${uid}`;
-export const lastArea = (uid: string): Area | null => {
-  const v = readLocal(key(uid));
-  return v === "teacher" || v === "admin" ? v : null;
-};
-export const rememberArea = (uid: string, area: Area) => writeLocal(key(uid), area);

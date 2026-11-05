@@ -4,11 +4,13 @@ import type { Child, Family, Lesson } from "@p6/shared";
 import { backend } from "./client";
 import { friendlyError, isPermissionDenied } from "../services/errors";
 
-export type Section = "lessons" | "students" | "builder";
+export type Section = "lessons" | "students" | "builder" | "teachers";
 export const SECTIONS: { id: Section; label: string }[] = [
   { id: "lessons", label: "Lessons" },
   { id: "students", label: "Students" },
   { id: "builder", label: "Worksheet builder" },
+  /** admins only (the Shell hides it from teachers) */
+  { id: "teachers", label: "Teachers" },
 ];
 export type Phase = "idle" | "loading" | "ready" | "denied" | "error";
 

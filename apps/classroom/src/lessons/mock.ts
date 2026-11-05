@@ -112,6 +112,7 @@ export const mockLessons: typeof lessonsApi = {
     save(d); return delay({ session, reports });
   },
   async parentSignIn() { return delay({ token: "mock" }); },
+  async codeSignIn(c: string) { return delay({ token: "mock", kind: c.length === 12 ? ("staff" as const) : ("parent" as const) }); },
   async parentGetHome(): Promise<ParentHome> {
     const d = load(); const family = d.families.find((f) => f.id === "f1") ?? d.families[0];
     const reps = d.reports.filter((r) => r.familyId === family.id).sort((a, b) => b.date - a.date);

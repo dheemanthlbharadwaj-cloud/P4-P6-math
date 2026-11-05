@@ -1,22 +1,6 @@
-import React, { useEffect } from "react";
-import { useLocalSearchParams } from "expo-router";
-import { Shell } from "../../src/admin/Shell";
-import { SECTIONS, useAdmin, type Section } from "../../src/admin/store";
-import { TeachersSection } from "../../src/admin/sections/Teachers";
+import React from "react";
+import { Redirect } from "expo-router";
 
-export default function AdminDashboard() {
-  const { section: wanted } = useLocalSearchParams<{ section?: string }>();
-  useEffect(() => {
-    const s = SECTIONS.find((x) => x.id === wanted)?.id;
-    if (s) useAdmin.getState().go(s);
-  }, [wanted]);
-  return (
-    <Shell>
-      {(section: Section) => {
-        switch (section) {
-          case "teachers": return <TeachersSection />;
-        }
-      }}
-    </Shell>
-  );
+export default function AdminRedirect() {
+  return <Redirect href="/teacher?section=teachers" />;
 }

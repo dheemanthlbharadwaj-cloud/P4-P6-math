@@ -15,18 +15,25 @@ let pass = 0, failN = 0;
 const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); c ? pass++ : failN++; };
 const idt = async (path, body) => { const r = await fetch(`${AUTH}${path}?key=fake`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }); const j = await r.json(); if (!r.ok) throw new Error(`${path}: ${j.error?.message}`); return j; };
 const signUp = async (email, password) => (await idt("signUp", { email, password, returnSecureToken: true })).idToken;
-const signIn = async (email, password) => (await idt("signInWithPassword", { email, password, returnSecureToken: true })).idToken;
-const raw = async (tok, name, data = {}) => { const r = await fetch(API + name, { method: "POST", headers: { "content-type": "application/json", ...(tok ? { authorization: "Bearer " + tok } : {}) }, body: JSON.stringify({ data }) }); return r.json(); };
+const raw = async (tok, name, data = {}) => { const r = await fetch(API + name, { method: "POST", headers: { "content-type": "application/json", ...(tok ? { authorization: "Bearer " + tok } : { "x-forwarded-for": `10.0.${Math.floor(Math.random() * 250)}.${Math.floor(Math.random() * 250)}` }) }, body: JSON.stringify({ data }) }); return r.json(); };
 const call = async (tok, name, data) => { const j = await raw(tok, name, data); if (j.error) throw new Error(`${name}: ${j.error.status} ${j.error.message}`); return j.result; };
 const errOf = async (tok, name, data) => (await raw(tok, name, data)).error?.status ?? "ok";
 const parentToken = async (code) => { const { token } = await call(null, "parentSignIn", { code }); return (await idt("signInWithCustomToken", { token, returnSecureToken: true })).idToken; };
+const codeToken = async (code) => { const { token, kind } = await call(null, "codeSignIn", { code }); return { kind, idToken: (await idt("signInWithCustomToken", { token, returnSecureToken: true })).idToken }; };
 
 // seed: an admin (as add-admin.mjs would), two teachers made by the admin
 const A = await signUp("owner@test.local", "owner-pass-123");
 const aUid = (await admin.auth().getUserByEmail("owner@test.local")).uid;
 await db.doc(`admins/${aUid}`).set({ uid: aUid, name: "Owner", email: "owner@test.local", active: true, createdAt: Date.now() });
-const T1 = await signIn("lisa@test.local", (await call(A, "adminSaveTeacher", { email: "lisa@test.local", name: "Teacher Lisa" })).password);
-const T2 = await signIn("tom@test.local", (await call(A, "adminSaveTeacher", { email: "tom@test.local", name: "Teacher Tom" })).password);
+const lisaSave = await call(A, "adminSaveTeacher", { email: "lisa@test.local", name: "Teacher Lisa" });
+const tomSave = await call(A, "adminSaveTeacher", { name: "Teacher Tom" }); // no email: a login without email or password
+ok(/^[A-Z2-9]{12}$/.test(lisaSave.code) && /^[A-Z2-9]{12}$/.test(tomSave.code) && !("password" in lisaSave) && tomSave.teacher.email === "", "admin: new teachers get a 12-char access code (email optional), no password");
+ok(!(await db.collection("staffCodes").get()).docs.some((d) => d.id === lisaSave.code || JSON.stringify(d.data()).includes(lisaSave.code)), "the staff code is never stored in clear");
+const lisaIn = await codeToken(lisaSave.code);
+const T1 = lisaIn.idToken;
+let T2 = (await codeToken(tomSave.code.toLowerCase().replace(/(.{4})(.{4})(.{4})/, "$1-$2-$3"))).idToken; // typed in lower case with dashes
+ok(lisaIn.kind === "staff" && (await call(T1, "getMyRoles")).teacher, "codeSignIn: a staff code signs the teacher in");
+ok(await errOf(null, "codeSignIn", { code: "ABCDEFGHJKMN" }) === "not-found" && await errOf(null, "codeSignIn", { code: "ABC" }) === "not-found", "codeSignIn: a wrong staff code is refused");
 const S = await signUp("kid@test.local", "kid-pass-123");
 
 // staff
@@ -34,7 +41,13 @@ ok(JSON.stringify(await call(A, "getMyRoles")) === JSON.stringify({ teacher: fal
 ok(!(await call(S, "getMyRoles")).teacher, "getMyRoles: a plain login has no area");
 ok((await call(A, "adminGetOverview")).teachers.length === 2, "admin: overview lists the teachers");
 ok(await errOf(T1, "adminGetOverview") === "permission-denied", "a teacher is not an admin");
-ok(!(await call(A, "adminSaveTeacher", { uid: (await admin.auth().getUserByEmail("tom@test.local")).uid, email: "x@y.z", name: "Mr Tom" })).password, "admin: rename teacher, no new password");
+ok(!("code" in await call(A, "adminSaveTeacher", { uid: tomSave.teacher.uid, name: "Mr Tom" })), "admin: rename teacher, no new code");
+const tomCode2 = (await call(A, "adminResetAccessCode", { uid: tomSave.teacher.uid })).code;
+ok(tomCode2 !== tomSave.code && await errOf(null, "codeSignIn", { code: tomSave.code }) === "not-found" && (await codeToken(tomCode2)).kind === "staff", "adminResetAccessCode: the old code stops, the new one works");
+ok(await errOf(T1, "adminResetAccessCode", { uid: tomSave.teacher.uid }) === "permission-denied", "a teacher can't reset codes");
+ok(await errOf(A, "adminSetTeacherActive", { uid: tomSave.teacher.uid, active: false }) === "ok" && await errOf(null, "codeSignIn", { code: tomCode2 }) === "not-found", "a disabled teacher's code is refused");
+await call(A, "adminSetTeacherActive", { uid: tomSave.teacher.uid, active: true });
+T2 = (await codeToken(tomCode2)).idToken; // the reset revoked the old session
 ok(await errOf(null, "nope") === "not-found", "unknown function refused");
 
 ok(await errOf(S, "teacherGetStudents") === "permission-denied", "a plain login is not staff");

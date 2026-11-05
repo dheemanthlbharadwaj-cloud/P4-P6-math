@@ -34,10 +34,10 @@ export async function copyText(text: string): Promise<boolean> {
 }
 
 /**
- * A password shown ONCE. The parent owns it only while the box is open: `onClose` must drop it. It is never logged or
+ * A code (family code, access code) shown ONCE. The parent owns it only while the box is open: `onClose` must drop it. It is never logged or
  * stored anywhere else.
  */
-export function SecretBox({ title, password, onClose }: { title: string; password: string; onClose: () => void }) {
+export function SecretBox({ title, password, onClose, noun = "code" }: { title: string; password: string; onClose: () => void; /** what it is, for the hint text: "code" */ noun?: string }) {
   const [copied, setCopied] = useState<boolean | null>(null);
   useEffect(() => { if (copied) { const t = setTimeout(() => setCopied(null), 2500); return () => clearTimeout(t); } }, [copied]);
   return (
@@ -50,7 +50,7 @@ export function SecretBox({ title, password, onClose }: { title: string; passwor
         <Button title={copied ? "Copied" : "Copy"} small variant="good" onPress={() => { void copyText(password).then((ok) => setCopied(ok)); }} />
         <Button title="Close" small variant="ghost" onPress={onClose} />
       </View>
-      {copied === false ? <Text style={{ fontSize: 13, color: colors.bad, marginBottom: 4 }}>Couldn't copy. Select the password and copy it by hand.</Text> : null}
+      {copied === false ? <Text style={{ fontSize: 13, color: colors.bad, marginBottom: 4 }}>Couldn't copy. Select the {noun} and copy it by hand.</Text> : null}
       <Muted>Give this to them privately. It won't be shown again.</Muted>
     </View>
   );

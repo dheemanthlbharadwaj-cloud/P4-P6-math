@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 // Creates (or disables / re-enables) an ADMIN (owner) of Catapult Classroom, in the CLASSROOM project. The only way to make
 // an admin (the app can't). Admins also use the Teacher area and see every family.
-//   node backend-classroom/scripts/add-admin.mjs --email owner@example.com --name "Owner" [--disable] [--reset-password] [--out-dir <dir>] [--dry]
+//   node backend-classroom/scripts/add-admin.mjs --email owner@example.com --name "Owner" [--disable] [--reset-password] [--access-code] [--out-dir <dir>] [--dry]
+// Everyone signs in with a code (owner decision 5 Nov 2026). --access-code issues the admin's personal STAFF ACCESS CODE
+// (12 characters; the old one stops working) into staffCodes/{sha256("catapult-staff:" + code)} {uid, createdAt}, and writes it
+// ONCE as "Access code: XXXX-XXXX-XXXX" to the credentials file, never to the terminal. With --access-code a NEW login is made
+// WITHOUT a password (unless --reset-password is also given).
 // An email that already has a login (e.g. the owner's Google sign-in on the classroom site) is reused with NO password.
 // A generated password (new login or --reset-password) is written ONCE to <out-dir>/<email>.txt (0600), never printed.
 // Credentials: CLASSROOM_SETUP_SERVICE_ACCOUNT_B64 only (scripts/env.mjs).
-import { randomInt } from "node:crypto";
+import { createHash, randomInt } from "node:crypto";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -23,9 +27,10 @@ const DATABASE = "(default)";
 const DRY = flag("--dry");
 const DISABLE = flag("--disable");
 const RESET = flag("--reset-password");
+const ACCESS = flag("--access-code");
 const OUT_DIR = opt("--out-dir", process.env.ADMIN_CREDENTIALS_DIR || path.join(os.homedir(), ".catapult-classroom-admins"));
 const log = (...a) => console.log(...a);
-const usage = () => { console.error('Usage: node backend-classroom/scripts/add-admin.mjs --email <email> --name "<Name>" [--disable] [--reset-password] [--out-dir <dir>] [--dry]'); process.exit(2); };
+const usage = () => { console.error('Usage: node backend-classroom/scripts/add-admin.mjs --email <email> --name "<Name>" [--disable] [--reset-password] [--access-code] [--out-dir <dir>] [--dry]'); process.exit(2); };
 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(EMAIL)) usage();
 if (!DISABLE && (!NAME || NAME.length > 60)) usage();
 /** 16 characters, no look-alikes (0/O, 1/l/I), at least one of each class. */
@@ -38,6 +43,16 @@ export function makePassword(rand = randomInt) {
   return chars.join("");
 }
 
+/** Staff access codes: 12 characters from the family-code alphabet (same as packages/shared FAMILY_CODE_ALPHABET), hashed doc id. */
+const CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+export function makeStaffCode(rand = randomInt) {
+  let s = "";
+  for (let i = 0; i < 12; i++) s += CODE_ALPHABET[rand(CODE_ALPHABET.length)];
+  return s;
+}
+export const staffCodeDocId = (code) => createHash("sha256").update(`catapult-staff:${code}`).digest("hex");
+export const formatStaffCode = (c) => `${c.slice(0, 4)}-${c.slice(4, 8)}-${c.slice(8)}`;
+
 /** Firestore REST value for an AdminDoc. */
 export const adminFields = (t) => ({
   uid: { stringValue: t.uid }, name: { stringValue: t.name }, email: { stringValue: t.email },
@@ -47,7 +62,8 @@ export const adminFields = (t) => ({
 if (DRY) {
   log(`dry run: project ${PROJECT}, database ${DATABASE}`);
   log(DISABLE ? `would disable the Auth user and set admins/{uid}.active=false for ${EMAIL}` : `would create the Auth user ${EMAIL} (or reuse it), write admins/{uid} {name: ${JSON.stringify(NAME)}, active: true}`);
-  if (!DISABLE) log(`a new login gets a generated password written to ${path.join(OUT_DIR, `${EMAIL}.txt`)} (not to the terminal); an existing login keeps its sign-in method${RESET ? " except that --reset-password sets a new password on it" : " (no password is set)"}`);
+  if (!DISABLE && ACCESS) log(`would issue a new 12-character staff access code (deleting the uid's old staffCodes docs, creating staffCodes/{sha256 of "catapult-staff:" + code}) and write it as "Access code: XXXX-XXXX-XXXX" to ${path.join(OUT_DIR, `${EMAIL}.txt`)} (not to the terminal); a NEW login is made without a password${RESET ? ", and --reset-password sets one anyway" : ""}`);
+  else if (!DISABLE) log(`a new login gets a generated password written to ${path.join(OUT_DIR, `${EMAIL}.txt`)} (not to the terminal); an existing login keeps its sign-in method${RESET ? " except that --reset-password sets a new password on it" : " (no password is set)"}`);
   process.exit(0);
 }
 
@@ -66,8 +82,8 @@ if (DISABLE) {
   if (!uid) throw new Error(`No Auth user ${EMAIL} in ${PROJECT}.`);
   must(await api("POST", `${AUTH}/accounts:update`, { localId: uid, disableUser: true }), "disable the Auth user");
 } else if (!uid) {
-  password = makePassword();
-  const created = must(await api("POST", `${AUTH}/accounts`, { email: EMAIL, password, displayName: NAME, emailVerified: true }), "create the Auth user");
+  if (!ACCESS || RESET) password = makePassword();
+  const created = must(await api("POST", `${AUTH}/accounts`, { email: EMAIL, ...(password ? { password } : {}), displayName: NAME, emailVerified: true }), "create the Auth user");
   uid = created.localId;
 } else {
   // an existing login (e.g. the owner's Google account) keeps its name and way of signing in
@@ -83,11 +99,22 @@ const createdAt = cur.status === 200 ? Number(cur.body.fields?.createdAt?.intege
 const name = DISABLE ? cur.body.fields?.name?.stringValue || NAME || EMAIL : NAME;
 must(await api("PATCH", `${FS}/admins/${uid}`, { fields: adminFields({ uid, name, email: EMAIL, active: !DISABLE, createdAt }) }), "write admins/{uid}");
 
-// 3) credentials file (only when a password was generated)
-if (password) {
+// 3) staff access code (--access-code): one code per uid, so the uid's old codes are deleted first
+let accessCode = null;
+if (ACCESS && !DISABLE) {
+  const q = must(await api("POST", `${FS}:runQuery`, { structuredQuery: {
+    from: [{ collectionId: "staffCodes" }], where: { fieldFilter: { field: { fieldPath: "uid" }, op: "EQUAL", value: { stringValue: uid } } }, select: { fields: [] },
+  } }), "look up the old access codes");
+  for (const row of Array.isArray(q) ? q : []) if (row.document?.name) must(await api("DELETE", `https://firestore.googleapis.com/v1/${row.document.name}`), "delete an old access code");
+  accessCode = makeStaffCode();
+  must(await api("PATCH", `${FS}/staffCodes/${staffCodeDocId(accessCode)}?currentDocument.exists=false`, { fields: { uid: { stringValue: uid }, createdAt: { integerValue: String(Date.now()) } } }), "write staffCodes/{hash}");
+}
+
+// 4) credentials file (only when a password or an access code was generated)
+if (password || accessCode) {
   fs.mkdirSync(OUT_DIR, { recursive: true, mode: 0o700 });
   const file = path.join(OUT_DIR, `${EMAIL.replace(/[^a-z0-9@._-]/g, "_")}.txt`);
-  fs.writeFileSync(file, `Catapult Classroom admin login\nProject: ${PROJECT}\nEmail: ${EMAIL}\nPassword: ${password}\n`, { mode: 0o600 });
+  fs.writeFileSync(file, `Catapult Classroom admin login\nProject: ${PROJECT}\nEmail: ${EMAIL}\n${password ? `Password: ${password}\n` : ""}${accessCode ? `Access code: ${formatStaffCode(accessCode)}\n` : ""}`, { mode: 0o600 });
   fs.chmodSync(file, 0o600); // writeFileSync's mode only applies to a NEW file
-  log(`Admin ${EMAIL} ready (uid ${uid}${reused ? ", existing login reused" : ""}). The password was written to ${file} (not shown here). Store it somewhere safe, then delete the file.`);
+  log(`Admin ${EMAIL} ready (uid ${uid}${reused ? ", existing login reused" : ""}). The ${[password && "password", accessCode && "access code"].filter(Boolean).join(" and ")} was written to ${file} (not shown here). Store it somewhere safe, then delete the file.`);
 } else log(`Admin ${EMAIL} ${DISABLE ? "disabled" : "updated"} (uid ${uid}).${DISABLE ? "" : " Their way of signing in is unchanged (no password set)."}`);

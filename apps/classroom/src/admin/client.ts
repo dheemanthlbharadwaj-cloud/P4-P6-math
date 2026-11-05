@@ -9,8 +9,8 @@ export const ADMIN_MOCK = MOCK_AREAS;
 
 const realBackend: AdminBackend = {
   getOverview: () => adminApi.getOverview(),
-  saveTeacher: (email, name, uid) => adminApi.saveTeacher(email, name, uid),
+  saveTeacher: (name, email, uid) => adminApi.saveTeacher(name, email, uid),
   setTeacherActive: async (uid, active) => { await adminApi.setTeacherActive(uid, active); },
-  resetPassword: async (uid) => (await adminApi.resetPassword(uid)).password,
+  resetAccessCode: async (uid) => (await adminApi.resetAccessCode(uid)).code,
 };
 export const backend: AdminBackend = ADMIN_MOCK ? mockBackend : realBackend;

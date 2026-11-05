@@ -4,8 +4,9 @@ import type { TeacherDoc } from "@p6/shared";
 export interface AdminOverview { admin: TeacherDoc; teachers: TeacherDoc[] }
 export interface AdminBackend {
   getOverview(): Promise<AdminOverview>;
-  /** `password` only when a new login was created. With `uid` it only renames that teacher. */
-  saveTeacher(email: string, name: string, uid?: string): Promise<{ teacher: TeacherDoc; password?: string }>;
+  /** A new teacher (no uid): email is optional and a new access `code` (raw, shown once) always comes back. With `uid` it only renames that teacher. */
+  saveTeacher(name: string, email?: string, uid?: string): Promise<{ teacher: TeacherDoc; code?: string }>;
   setTeacherActive(uid: string, active: boolean): Promise<void>;
-  resetPassword(uid: string): Promise<string>;
+  /** A new access code (raw); the old one stops working. */
+  resetAccessCode(uid: string): Promise<string>;
 }

@@ -4,11 +4,11 @@
 
 /** Requests per minute per account, per function (everything else: DEFAULT_PER_MINUTE). */
 export const PER_MINUTE: Record<string, number> = {
-  getMyRoles: 30, adminGetOverview: 30, adminSaveTeacher: 20, adminSetTeacherActive: 20, adminResetPassword: 10,
+  getMyRoles: 30, adminGetOverview: 30, adminSaveTeacher: 20, adminSetTeacherActive: 20, adminResetAccessCode: 10,
   teacherGetStudents: 30, teacherSaveFamily: 30, teacherResetFamilyCode: 10, teacherDeleteFamily: 10, teacherGetChild: 60, teacherListLessons: 30,
   teacherSaveLesson: 30, teacherDeleteLesson: 10, teacherSaveSession: 30,
-  // parentSignIn runs signed out, so it is limited per IP: guessing codes is hopeless at 5 a minute
-  parentSignIn: 5, parentGetHome: 20,
+  // parentSignIn / codeSignIn run signed out, so it is limited per IP: guessing codes is hopeless at 5 a minute
+  parentSignIn: 5, codeSignIn: 5, parentGetHome: 20,
 };
 export const DEFAULT_PER_MINUTE = 20;
 /** Every function together, per account. */

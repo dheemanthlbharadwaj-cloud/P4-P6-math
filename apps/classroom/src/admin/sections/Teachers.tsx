@@ -1,7 +1,7 @@
-// Teachers: list, add (a new login's password is shown once), rename, disable / enable, reset password.
+// Teachers (admins only): list, add (the new teacher's access code is shown once), rename, disable / enable, new access code.
 import React, { useEffect, useState } from "react";
 import { Text, View } from "react-native";
-import type { TeacherDoc } from "@p6/shared";
+import { formatStaffCode, type TeacherDoc } from "@p6/shared";
 import { Button } from "../../components/ui";
 import { colors, space } from "../../theme/colors";
 import { backend } from "../client";
@@ -9,7 +9,7 @@ import { canSaveTeacher, sortTeachers } from "../helpers";
 import { useAdmin } from "../store";
 import { Badge, ConfirmButton, Field, Muted, Notice, PageHeader, Panel, SecretBox, Table, useAction } from "../ui";
 
-interface Secret { title: string; password: string }
+interface Secret { title: string; code: string }
 
 function AddTeacher({ onSecret }: { onSecret: (s: Secret | null) => void }) {
   const upsertTeacher = useAdmin((s) => s.upsertTeacher);
@@ -19,10 +19,10 @@ function AddTeacher({ onSecret }: { onSecret: (s: Secret | null) => void }) {
   const { busy, error, run } = useAction();
   const add = () => void run(async () => {
     setDone(null); onSecret(null);
-    const r = await backend.saveTeacher(email.trim(), name.trim());
+    const r = await backend.saveTeacher(name.trim(), email.trim() || undefined);
     upsertTeacher(r.teacher);
-    if (r.password) onSecret({ title: `Password for ${r.teacher.name} (${r.teacher.email})`, password: r.password });
-    else setDone(`${r.teacher.name} is a teacher now. They already had a login, so their password is unchanged.`);
+    if (r.code) onSecret({ title: `Access code for ${r.teacher.name}`, code: r.code });
+    else setDone(`${r.teacher.name} is a teacher now.`);
     setName(""); setEmail("");
   });
   return (
@@ -31,7 +31,7 @@ function AddTeacher({ onSecret }: { onSecret: (s: Secret | null) => void }) {
       {done ? <Notice kind="good">{done}</Notice> : null}
       <View style={{ flexDirection: "row", alignItems: "flex-end", gap: space.m, flexWrap: "wrap" }}>
         <Field label="Name" placeholder="e.g. Ms Tan" value={name} onChangeText={setName} style={{ width: 240, marginBottom: 0 }} />
-        <Field label="Email" placeholder="teacher@school.edu.sg" value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" autoCorrect={false} onSubmitEditing={add} style={{ width: 300, marginBottom: 0 }} />
+        <Field label="Email" placeholder="optional" value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" autoCorrect={false} onSubmitEditing={add} style={{ width: 300, marginBottom: 0 }} />
         <Button title={busy ? "Adding…" : "Add teacher"} onPress={add} disabled={busy || !canSaveTeacher(name, email)} />
       </View>
     </Panel>
@@ -43,12 +43,12 @@ function TeacherDetail({ t, onSecret }: { t: TeacherDoc; onSecret: (s: Secret | 
   const [name, setName] = useState(t.name);
   useEffect(() => setName(t.name), [t.uid, t.name]);
   const { busy, error, run } = useAction();
-  const rename = () => void run(async () => { const r = await backend.saveTeacher(t.email, name.trim(), t.uid); upsertTeacher(r.teacher); });
+  const rename = () => void run(async () => { const r = await backend.saveTeacher(name.trim(), undefined, t.uid); upsertTeacher(r.teacher); });
   const toggle = () => void run(async () => { await backend.setTeacherActive(t.uid, !t.active); patchTeacher(t.uid, { active: !t.active }); });
   const reset = () => void run(async () => {
     onSecret(null);
-    const password = await backend.resetPassword(t.uid);
-    onSecret({ title: `New password for ${t.name} (${t.email})`, password });
+    const code = await backend.resetAccessCode(t.uid);
+    onSecret({ title: `New access code for ${t.name}`, code });
   });
   return (
     <View style={{ gap: space.m }}>
@@ -57,7 +57,7 @@ function TeacherDetail({ t, onSecret }: { t: TeacherDoc; onSecret: (s: Secret | 
         <Field label="Name" value={name} onChangeText={setName} onSubmitEditing={rename} style={{ width: 260, marginBottom: 0 }} />
         <Button title="Rename" variant="ghost" small onPress={rename} disabled={busy || !name.trim() || name.trim() === t.name} />
         <View style={{ marginLeft: "auto", flexDirection: "row", gap: space.s, flexWrap: "wrap" }}>
-          <ConfirmButton title="Reset password" confirmTitle="Sure? Make a new password" onConfirm={reset} disabled={busy} />
+          <ConfirmButton title="New access code" confirmTitle="Sure? The old code stops working" onConfirm={reset} disabled={busy} />
           <ConfirmButton title={t.active ? "Disable" : "Enable"} confirmTitle={t.active ? "Sure? Disable this teacher" : "Sure? Enable this teacher"} onConfirm={toggle} disabled={busy} />
         </View>
       </View>
@@ -72,8 +72,8 @@ export function TeachersSection() {
   const list = sortTeachers(teachers);
   return (
     <View>
-      <PageHeader title="Teachers" subtitle="Everyone who can sign in to the teacher dashboard." />
-      {secret ? <SecretBox title={secret.title} password={secret.password} onClose={() => setSecret(null)} /> : null}
+      <PageHeader title="Teachers" subtitle="Everyone who can sign in to the teacher dashboard with an access code." />
+      {secret ? <SecretBox title={secret.title} password={formatStaffCode(secret.code)} onClose={() => setSecret(null)} /> : null}
       <Panel title={`All teachers (${list.length})`}>
         <Table
           columns={[{ key: "n", title: "Name", flex: 2 }, { key: "e", title: "Email", flex: 3 }, { key: "a", title: "Status", flex: 1 }]}
@@ -84,13 +84,13 @@ export function TeachersSection() {
             onPress: () => { setOpenUid(t.uid === openUid ? null : t.uid); },
             cells: [
               <Text key="n" style={{ fontSize: 15, color: t.active ? colors.ink : colors.muted }}>{t.name}</Text>,
-              t.email,
+              t.email || "—",
               <Badge key="a" text={t.active ? "Active" : "Disabled"} tone={t.active ? "green" : "grey"} />,
             ],
             expanded: t.uid === openUid ? <TeacherDetail t={t} onSecret={setSecret} /> : undefined,
           }))}
         />
-        <Muted style={{ marginTop: space.s }}>Click a teacher to rename, disable or reset their password.</Muted>
+        <Muted style={{ marginTop: space.s }}>Click a teacher to rename, disable or make a new access code for them.</Muted>
       </Panel>
       <AddTeacher onSecret={setSecret} />
     </View>
