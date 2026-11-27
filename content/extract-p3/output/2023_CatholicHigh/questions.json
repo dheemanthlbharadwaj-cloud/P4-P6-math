@@ -1,0 +1,1372 @@
+[
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q01",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is three thousand, four hundred and forty in numerals?",
+  "options": {
+   "1": "3040",
+   "2": "3400",
+   "3": "3440",
+   "4": "3444"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 'ti.'",
+   "'threé', 'and!' cleaned"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q02",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the value of digit 6 in 7362?",
+  "options": {
+   "1": "6",
+   "2": "60",
+   "3": "600",
+   "4": "6000"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'73627' -> '7362?'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q03",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following numbers is the smallest even number?",
+  "options": {
+   "1": "2391",
+   "2": "2392",
+   "3": "2929",
+   "4": "2930"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options '2392/2930' repaired from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q04",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the remainder when 839 is divided by 5?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'whem' -> 'when'",
+   "option numbers garbled in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q05",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the sum of 1899 and 2760?",
+  "options": {
+   "1": "861",
+   "2": "1139",
+   "3": "4559",
+   "4": "4659"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'27607' -> '2760?'",
+   "'-867' -> '861'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q06",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "5 groups of 9 = ______.",
+  "options": {
+   "1": "5 + 9",
+   "2": "9 $\\div$ 5",
+   "3": "9 $\\times$ 9 $\\times$ 9 $\\times$ 9 $\\times$ 9",
+   "4": "9 + 9 + 9 + 9 + 9"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 3 and 4 garbled, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q07",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the product of 312 and 6.",
+  "options": {
+   "1": "1872",
+   "2": "318",
+   "3": "306",
+   "4": "52"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'342' -> '312'",
+   "option numbers garbled"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q08",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "In the figure below, name a pair of parallel lines in the square grid.",
+  "options": {
+   "1": "DF and BA",
+   "2": "DF and AE",
+   "3": "GF and AE",
+   "4": "CH and BA"
+  },
+  "answer_key": "1",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with points A-H joined by line segments",
+  "ocr_fixes": [
+   "'Im' -> 'In'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q09",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "$\\frac{3}{8} - \\square = \\frac{1}{4}$\nWhat is the missing fraction in the box?",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{1}{3}$",
+   "3": "$\\frac{1}{8}$",
+   "4": "$\\frac{5}{8}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "equation and options garbled, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q10",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "There were 9000 spectators watching a football match. 856 of them were female spectators. How many male spectators were there?",
+  "options": {
+   "1": "8144",
+   "2": "8154",
+   "3": "8244",
+   "4": "9856"
+  },
+  "answer_key": "1",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'8244' option repaired"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q11",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "In the figure below, which of these angles is an acute angle?",
+  "options": {
+   "1": "$\\angle a$",
+   "2": "$\\angle b$",
+   "3": "$\\angle c$",
+   "4": "$\\angle d$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "arrow-shaped figure with angles a, b, c, d marked",
+  "ocr_fixes": [
+   "'Im' -> 'In'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q12",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A bookshop sold a highlighter and a pen for ＄3. Claire bought 6 highlighters and 6 pens. How much did Claire pay altogether?",
+  "options": {
+   "1": "＄12",
+   "2": "＄15",
+   "3": "＄18",
+   "4": "＄36"
+  },
+  "answer_key": "3",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'2 highlighter' -> 'a highlighter'",
+   "'$' -> '＄'",
+   "'Haw' -> 'How'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q13",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Figure ABCD is made up of identical rectangles. What fraction of ABCD is not shaded?",
+  "options": {
+   "1": "$\\frac{5}{7}$",
+   "2": "$\\frac{7}{12}$",
+   "3": "$\\frac{1}{2}$",
+   "4": "$\\frac{5}{12}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "4 by 3 grid of rectangles, 5 shaded",
+  "ocr_fixes": [
+   "options read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q14",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How many minutes are there in 3 h 15 min?",
+  "options": {
+   "1": "15 minutes",
+   "2": "180 minutes",
+   "3": "195 minutes",
+   "4": "315 minutes"
+  },
+  "answer_key": "3",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'+95' -> '195'",
+   "'345' -> '315'"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q15",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A glass of orange juice costs ＄2.50 and a glass of lemon juice costs ＄1.80. Claire bought 2 glasses of orange juice and a glass of lemon juice. How much did she pay?",
+  "options": {
+   "1": "＄4.30",
+   "2": "＄5.00",
+   "3": "＄6.10",
+   "4": "＄6.80"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$'->'＄'",
+   "'sine' -> 'she'",
+   "'lermon' -> 'lemon'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q16",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express $\\frac{6}{9}$ in its simplest form.",
+  "answer": "$\\frac{2}{3}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'g' -> 6/9",
+   "key line garbled, read as 2/3"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q17",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Complete the following number pattern.\n1750, 1850, 1950, ______, 2150, 2250",
+  "answer": "2050",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'#950' -> '1950'"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q18",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "7 m 4 cm = ______ cm",
+  "answer": "704",
+  "unit": "cm",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Fm4enn=' -> '7 m 4 cm ='"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q19",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the difference between 2270 and 1654.",
+  "answer": "616",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q20",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the area of the square shown below.",
+  "answer": "64",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square with side 8 cm",
+  "ocr_fixes": [
+   "'46' noise removed"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q21",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 21,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n$\\frac{3}{4} = \\frac{\\square}{12}$",
+  "answer": "9",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q22",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following fractions in order.\nBegin with the greatest.\n$\\frac{7}{10}$ , $\\frac{2}{5}$ , $\\frac{1}{2}$",
+  "answer": "$\\frac{7}{10}$, $\\frac{1}{2}$, $\\frac{2}{5}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q23",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the quotient when 918 is divided by 7?",
+  "answer": "131",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'9718' -> '918'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q24",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The difference between two numbers is 785. The bigger number is 1072. What is the other number?",
+  "answer": "287",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'10/72' -> '1072'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q25",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "In the sum below, a digit is missing from the box.\nWhat is the missing digit?\n2 3 $\\square$ 7\n+ 3 1 8 5\n5 5 6 2",
+  "answer": "7",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "sum read from image"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q26",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Derrick and Evan shared some stickers equally. After Derrick gave Evan 47 stickers, how many more stickers does Evan have than Derrick?",
+  "answer": "94",
+  "unit": "stickers",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q27",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How many fewer trading cards does Miguel have compared than Lennon?",
+  "answer": "19",
+  "unit": "trading cards",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of trading cards owned by Miguel, Lennon, Karl, James",
+  "ocr_fixes": [
+   "graph intro 'answer questions 27 and 28' kept in figure"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q28",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How many trading cards do the 4 boys have altogether?",
+  "answer": "104",
+  "unit": "trading cards",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "same bar graph as Q27",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q29",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "When a number is divided by 4, it has a remainder of 2. The number is between 20 and 25. What is the number?",
+  "answer": "22",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q30",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "100 g of cherries cost ＄2. What is the cost of 1 kg of cherries?",
+  "answer": "20",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'7 kg' -> '1 kg' (image)",
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q31",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the mass of the bag of sugar.",
+  "answer": "1 kg 250 g",
+  "unit": "kg g",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1",
+    "unit": "kg"
+   },
+   {
+    "part": "",
+    "value": "250",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "bag of sugar on a round kg scale, pointer past 1 kg",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "unsure: dial pointer slightly past 1 kg, fine ticks hard to read, key 1 kg 250 g accepted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q32",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A shopkeeper had 297 story books. He wanted to pack them equally into 8 boxes. How many story books were left unpacked?",
+  "answer": "1",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'207' -> '297'",
+   "'& boxes' -> '8 boxes'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q33",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Figure EFGH below is made up of 3 identical rectangles. Find the perimeter of figure EFGH.",
+  "answer": "30",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "figure of 3 rectangles, EF = 6 cm, one rectangle height 3 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q34",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Laurence took 1 h 55 min to finish his homework. He ended at 2.15 p.m. What time did he start doing his homework?",
+  "answer": "12.20 p.m.",
+  "unit": "p.m.",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Laurence' read from image"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q35",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 35,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Jacob bought 9 packets of potato chips. He planned to eat a packet every 3 days. How many days would he take to finish eating all the packets of potato chips?",
+  "answer": "27",
+  "unit": "days",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q36",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Rita collected some beads. She gave 45 of them away and packed the remaining beads into 5 bags. There were 67 beads in each bag. How many beads did Rita collect?",
+  "answer": "380",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'45' and '67' as printed in OCR"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q37",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 37,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The capacity of a beaker is 240 mℓ.\n2 such beakers of water can fill a jug completely.\n6 such jugs of water can fill a tank completely.\nWhat is the capacity of the tank?\nWrite your answer in litres and millilitres.",
+  "answer": "2 ℓ 880 mℓ",
+  "unit": "ℓ mℓ",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "2",
+    "unit": "ℓ"
+   },
+   {
+    "part": "",
+    "value": "880",
+    "unit": "mℓ"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q38",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 38,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mary, Laura and Joyce baked some cookies.\nMary baked twice as many cookies as Joyce.\nLaura baked thrice as many cookies as Mary.\nLaura baked 405 more cookies than Joyce.\nHow many cookies did Mary bake?",
+  "answer": "162",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR lines reordered"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q39",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 39,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Alan had ＄50. He bought a pair of shorts and a blouse. A blouse cost ＄12 more than a pair of shorts. He received ＄2 change. How much did a pair of shorts cost?",
+  "answer": "18",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Alam' -> 'Alan' (guess, OCR m/n)",
+   "'$' -> '＄'",
+   "'Heteceived' -> 'He received'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_CatholicHigh_EOY_Q40",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Catholic High",
+  "exam": "EOY",
+  "source": "(Catholic High) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-CatholicHigh.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 40,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Rectangles and dots are arranged to form the figures below. Study the pattern of the figures as shown below.\n(a) Fill in the missing number of rectangles for Pattern 4.\n(b) Fill in the missing number of dots for Pattern 4.\n(c) How many dots are needed for Pattern 10?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Fill in the missing number of rectangles for Pattern 4."
+   },
+   {
+    "part": "b",
+    "text": "Fill in the missing number of dots for Pattern 4."
+   },
+   {
+    "part": "c",
+    "text": "How many dots are needed for Pattern 10?"
+   }
+  ],
+  "answer": "4; 9; 21",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "4",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "9",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "21",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "Patterns 1-3 of rectangles with dots, and a table of pattern number, rectangles, dots",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

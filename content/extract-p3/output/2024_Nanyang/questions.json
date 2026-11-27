@@ -1,0 +1,1115 @@
+[
+ {
+  "id": "2024_P3_Nanyang_EOY_Q01",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 3,
+  "section": "MCQ",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is three thousand, six hundred and six written as a numeral?",
+  "options": {
+   "1": "3066",
+   "2": "3366",
+   "3": "3606",
+   "4": "3660"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q02",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 3,
+  "section": "MCQ",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number in the equation below?\n7023 = 7000 + ______ + 3",
+  "options": {
+   "1": "203",
+   "2": "200",
+   "3": "23",
+   "4": "20"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "missing-number box read from image"
+  ],
+  "checked_against_image": [
+   3,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q03",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 4,
+  "section": "MCQ",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Arrange the fractions in order from the greatest to the smallest.\n$\\frac{1}{2}$, $\\frac{2}{8}$, $\\frac{5}{7}$",
+  "options": {
+   "1": "$\\frac{5}{7}$, $\\frac{1}{2}$, $\\frac{2}{8}$",
+   "2": "$\\frac{5}{7}$, $\\frac{2}{8}$, $\\frac{1}{2}$",
+   "3": "$\\frac{2}{8}$, $\\frac{1}{2}$, $\\frac{5}{7}$",
+   "4": "$\\frac{2}{8}$, $\\frac{5}{7}$, $\\frac{1}{2}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions and options garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q04",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 4,
+  "section": "MCQ",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Express 2080 g in kilograms and grams.",
+  "options": {
+   "1": "2 kg 8 g",
+   "2": "2 kg 80 g",
+   "3": "20 kg 8 g",
+   "4": "20 kg 80 g"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q05",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 5,
+  "section": "MCQ",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Each square has an area of 1 square unit.\nWhat is the area of the figure above?",
+  "options": {
+   "1": "23 square units",
+   "2": "21 square units",
+   "3": "19 square units",
+   "4": "18 square units"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "polygon on a square grid (unit squares, with diagonal sides)",
+  "ocr_fixes": [
+   "'Each [ ] has' -> 'Each square has' (box symbol)"
+  ],
+  "checked_against_image": [
+   5,
+   19
+  ],
+  "answer_check": "ok: solved 21 by coordinates (shoelace), matches key",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q06",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 6,
+  "section": "SAQ",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing denominator?\n$\\frac{3}{5} = \\frac{9}{?}$",
+  "answer": "15",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   6,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q07",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 6,
+  "section": "SAQ",
+  "question_no": 7,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express $\\frac{14}{35}$ in its simplest form.",
+  "answer": "$\\frac{2}{5}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'35' -> $\\frac{14}{35}$, read from image"
+  ],
+  "checked_against_image": [
+   6,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q08",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 6,
+  "section": "SAQ",
+  "question_no": 8,
+  "marks": 1,
+  "question_type": "short",
+  "question": "How many acute angles are there in the figure below?",
+  "answer": "2",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "irregular hexagon-like polygon, two acute angles marked",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6,
+   19
+  ],
+  "answer_check": "ok: key 2; bottom-left angle looks about 90 degrees",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q09",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 7,
+  "section": "SAQ",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the perimeter of the square.",
+  "answer": "36",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square with one side labelled 9 cm",
+  "ocr_fixes": [
+   "'9,' -> '9.'"
+  ],
+  "checked_against_image": [
+   7,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q10",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 7,
+  "section": "SAQ",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The length of a rectangular grass patch is 8 m. Its breadth is 7 m. What is the area of the grass patch?",
+  "answer": "56",
+  "unit": "m²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'lts' -> 'Its'"
+  ],
+  "checked_against_image": [
+   7,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q11",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 7,
+  "section": "SAQ",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write the time 00 10 in 12-hour clock.",
+  "answer": "12.10 a.m.",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'| Write' stray bar removed"
+  ],
+  "checked_against_image": [
+   7,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q12",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 8,
+  "section": "SAQ",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Axel started to cycle at 11 30. He finished cycling at 13 17. How long did he cycle?",
+  "answer": "1 h 47 min",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q13",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 8,
+  "section": "SAQ",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "There are 3 bags, A, B and C. All the pens in each bag are put into groups of 6.\nBag A has 36 pens. It contains the least number of pens. The number of pens in Bag B is between 45 and 50. Bag C has fewer pens than Bag B.\nHow many pens are there in Bag C?",
+  "answer": "42",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "three empty bags labelled Bag A, Bag B, Bag C",
+  "ocr_fixes": [
+   "'has.' and 'pens.are' stray dots removed"
+  ],
+  "checked_against_image": [
+   8,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q14",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 9,
+  "section": "SAQ",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the number patterns below.\nFind the missing number in each number pattern.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "3699, 3709, 3809, 3819, 3919, 3929, ______, 4039, 4139"
+   },
+   {
+    "part": "b",
+    "text": "______, 7489, 7539, 7589, 7639, 7689"
+   }
+  ],
+  "answer": "4029; 7439",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "4029",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "7439",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "part (a) digits '3029' -> '3929' and spacing, read from image"
+  ],
+  "checked_against_image": [
+   9,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q15",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 9,
+  "section": "SAQ",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "short",
+  "question": "",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the sum of 560 and 1320."
+   },
+   {
+    "part": "b",
+    "text": "8001 − ______ = 2417"
+   }
+  ],
+  "answer": "1880; 5584",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "1880",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "5584",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'8001 —' -> '8001 −'",
+   "no common stem printed; parts only"
+  ],
+  "checked_against_image": [
+   9,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q16",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 10,
+  "section": "SAQ",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Michelle bought 5 trays of eggs. Each tray had 8 eggs. How many eggs did Michelle buy altogether?"
+   },
+   {
+    "part": "b",
+    "text": "Michelle used 4 eggs to bake each cake. How many cakes could she bake with all the eggs that she bought?"
+   }
+  ],
+  "answer": "40; 10",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "40",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "10",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "no common stem printed; parts only"
+  ],
+  "checked_against_image": [
+   10,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q17",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 10,
+  "section": "SAQ",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the figure below.\nAB, BC, CD, DE and EF are straight lines.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Name a pair of parallel lines."
+   },
+   {
+    "part": "b",
+    "text": "Name a pair of perpendicular lines."
+   }
+  ],
+  "answer": "AB and EF; BC and CD",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "AB and EF",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "BC and CD",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "zig-zag of straight lines A-B-C-D-E-F on a square grid",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10,
+   20
+  ],
+  "answer_check": "ok: key accepted, figure not independently measured",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q18",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 11,
+  "section": "SAQ",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Cheva formed 2 different numbers using the digit cards below. Each digit can only be used once for each number.\n8, 3, 9, 0, 1",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "For the first number, he formed the smallest 4-digit odd number. What number did he form?"
+   },
+   {
+    "part": "b",
+    "text": "For the second number, he formed the greatest 3-digit even number between 800 and 900. What number did he form?"
+   }
+  ],
+  "answer": "1039; 890",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "1039",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "890",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "five digit cards: 8 3 9 0 1",
+  "ocr_fixes": [
+   "'Forthe' -> 'For the'",
+   "digit cards read from image"
+  ],
+  "checked_against_image": [
+   11,
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q19",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 11,
+  "section": "SAQ",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A wallet costs ＄56.90. A water bottle costs ＄12.50 less than the wallet. How much does the water bottle cost?",
+  "answer": "44.40",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Awallet' -> 'A wallet'",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   11,
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q20",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 12,
+  "section": "SAQ",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the number lines below.\nFind the difference between B and A.",
+  "answer": "$\\frac{1}{8}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "two number lines from 0 to 1: first divided into 8 parts with A at the 3rd mark, second divided into 2 parts with B at the middle",
+  "ocr_fixes": [
+   "number lines read from image"
+  ],
+  "checked_against_image": [
+   12,
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q21",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 12,
+  "section": "SAQ",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Li Meng started doing her homework at 14 30. She took 1 h to write an English composition. She then took another 1 h 35 min to solve some word problems. What time did she complete her homework?",
+  "answer": "17 05",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Li Meng' kept as printed"
+  ],
+  "checked_against_image": [
+   12,
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q22",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 13,
+  "section": "SAQ",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There were some students in the library at first. 18 students left the library. 13 students then went into the library. In the end, there were 312 students left in the library. How many students were there in the library at first?",
+  "answer": "317",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'+8 students' -> '18 students' (read from image)",
+   "'ithe' -> 'the'"
+  ],
+  "checked_against_image": [
+   13,
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q23",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 13,
+  "section": "SAQ",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Joey has 76 sweets. She packs all the sweets into bags of 3 sweets or bags of 5 sweets. She has 20 bags of sweets after packing. How many bags of 3 sweets are there?",
+  "answer": "12",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Joey' kept as printed"
+  ],
+  "checked_against_image": [
+   13,
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q24",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 14,
+  "section": "LAQ",
+  "question_no": 24,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The bar graph shows the number of egg sandwiches and tuna sandwiches sold at Nanyang Cafe from Monday to Thursday.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many more tuna sandwiches than egg sandwiches were sold on Tuesday?"
+   },
+   {
+    "part": "b",
+    "text": "Which day had the greatest difference in the number of egg sandwiches and tuna sandwiches sold?"
+   },
+   {
+    "part": "c",
+    "text": "The cafe sold each egg sandwich for ＄2. What was the total amount collected from the sale of egg sandwiches on Wednesday and Thursday?"
+   }
+  ],
+  "answer": "35; Monday; ＄240",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "35",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "Monday",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "240",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph, egg and tuna sandwiches sold Monday to Thursday (axis 0 to 90)",
+  "ocr_fixes": [
+   "parts (b),(c) are on the next page (15)"
+  ],
+  "checked_against_image": [
+   14,
+   15,
+   21,
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q25",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 16,
+  "section": "LAQ",
+  "question_no": 25,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Ali had 128 more stickers than Bala at first. Ali gave 25 stickers to Bala. How many more stickers did Ali have than Bala in the end?",
+  "answer": "78",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Ali' kept as printed"
+  ],
+  "checked_against_image": [
+   16,
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q26",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 16,
+  "section": "LAQ",
+  "question_no": 26,
+  "marks": 3,
+  "question_type": "long",
+  "question": "There was a total of 756 visitors at the zoo. There were 3 times as many children as adults. How many more children than adults were there?",
+  "answer": "378",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'aS' -> 'as'"
+  ],
+  "checked_against_image": [
+   16,
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q27",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 17,
+  "section": "LAQ",
+  "question_no": 27,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A total of 382 packets of biscuits were collected for a donation drive on Saturday and Sunday. These biscuits collected were given to families. Each family was given 6 packets of biscuits.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What was the greatest number of families that received the biscuits?"
+   },
+   {
+    "part": "b",
+    "text": "22 more packets of biscuits were collected on Sunday than on Saturday. How many packets of biscuits were collected on Saturday?"
+   }
+  ],
+  "answer": "63; 180",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "63",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "180",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'given.to' -> 'given to'"
+  ],
+  "checked_against_image": [
+   17,
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Nanyang_EOY_Q28",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 18,
+  "section": "LAQ",
+  "question_no": 28,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A pail contains 5320 mℓ of water. Meera poured away 4470 mℓ of water from the pail.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How much water was left in the pail?"
+   },
+   {
+    "part": "b",
+    "text": "Meera poured all the water left in the pail equally into 5 identical empty jugs. How much water did she pour into each jug?"
+   }
+  ],
+  "answer": "850; 170",
+  "unit": "mℓ",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "850",
+    "unit": "mℓ"
+   },
+   {
+    "part": "b",
+    "value": "170",
+    "unit": "mℓ"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Apail' -> 'A pail'",
+   "'mi' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   18,
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

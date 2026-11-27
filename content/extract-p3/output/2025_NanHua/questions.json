@@ -1,0 +1,937 @@
+[
+ {
+  "id": "2025_P3_NanHua_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is eight thousand, three hundred and two in numerals?",
+  "options": {
+   "1": "832",
+   "2": "8032",
+   "3": "8302",
+   "4": "8320"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing in index"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "How many of the marked angles are acute angles?",
+  "options": {
+   "1": "5",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "figure with several marked angles",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (key 2; figure not recounted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is 6 m 7 cm in centimetres?",
+  "options": {
+   "1": "607 cm",
+   "2": "670 cm",
+   "3": "6007 cm",
+   "4": "6700 cm"
+  },
+  "answer_key": "1",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number?\n$\\frac{3}{4} = \\frac{?}{8}$",
+  "options": {
+   "1": "7",
+   "2": "6",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Study the figure below. Which line is perpendicular to line AB?",
+  "options": {
+   "1": "CD",
+   "2": "EF",
+   "3": "GH",
+   "4": "IJ"
+  },
+  "answer_key": "2",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "figure with line AB and lines CD, EF, GH, IJ",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (key 2; figure not re-checked)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Julia started her music lesson at 13 55. Her music lesson lasted for 1 hour 45 minutes. What time did her music lesson end?",
+  "options": {
+   "1": "12 10",
+   "2": "14 45",
+   "3": "15 00",
+   "4": "15 40"
+  },
+  "answer_key": "4",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (13 55 + 1 h 45 min = 15 40)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following is true?",
+  "options": {
+   "1": "$\\frac{7}{9} < \\frac{1}{3}$",
+   "2": "$\\frac{3}{4} < \\frac{1}{3}$",
+   "3": "$\\frac{1}{3} > \\frac{1}{2}$",
+   "4": "$\\frac{4}{7} > \\frac{4}{9}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing; options read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following fractions from the smallest to the greatest.\n$\\frac{3}{4}$, $\\frac{4}{9}$, $\\frac{7}{12}$",
+  "options": {
+   "1": "$\\frac{4}{9}$, $\\frac{7}{12}$, $\\frac{3}{4}$",
+   "2": "$\\frac{4}{9}$, $\\frac{3}{4}$, $\\frac{7}{12}$",
+   "3": "$\\frac{7}{12}$, $\\frac{3}{4}$, $\\frac{4}{9}$",
+   "4": "$\\frac{7}{12}$, $\\frac{4}{9}$, $\\frac{3}{4}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing; fractions read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Figures A, B, C and D are made up of 1-cm squares. Which two figures have the same perimeter?",
+  "options": {
+   "1": "A and C",
+   "2": "B and D",
+   "3": "C and D",
+   "4": "D and A"
+  },
+  "answer_key": "4",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "four figures A-D made of 1-cm squares",
+  "ocr_fixes": [
+   "Q number missing"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (key 4; perimeters not recomputed)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Benson had 263 stickers. He had 28 fewer stickers than Lionel. How many stickers did they have altogether?",
+  "options": {
+   "1": "235",
+   "2": "291",
+   "3": "498",
+   "4": "554"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "number 10 read mid-line"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (263 + 291 = 554)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the pattern?\n1215, 1225, 1245, 1255, 1275, 1285, ______, 1315",
+  "answer": "1305",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'4315'->'1315'"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (+10, +20 alternating)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the mass of the pineapple?",
+  "answer": "2700",
+  "unit": "g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "pineapple on a kg weighing scale",
+  "ocr_fixes": [
+   "Q number read as 12 without dot"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (key 2700 g; dial reading ~2.7 kg)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of $\\frac{7}{12} - \\frac{1}{4}$.",
+  "answer": "$\\frac{1}{3}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "number read as 43"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (7/12 - 3/12 = 4/12 = 1/3)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the remainder when 137 is divided by 6.",
+  "answer": "5",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "number read as 44"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (137 = 6 x 22 + 5)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What fraction of the figure shown below is unshaded? Give your answer in the simplest form.",
+  "answer": "$\\frac{2}{5}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "figure divided into equal parts, some shaded",
+  "ocr_fixes": [
+   "number read as 45"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (key 2/5; figure not re-checked)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "George reached the library at 15 45. He left the library at 17 20. How long was he at the library?",
+  "answer": "1 h 35 min",
+  "answer_parts": [
+   {
+    "part": "h",
+    "value": "1",
+    "unit": "h"
+   },
+   {
+    "part": "min",
+    "value": "35",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "number read as 46"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "In the square grid below, draw a line that is parallel to AB, passing through point G.",
+  "answer": "(drawn line through G parallel to AB)",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line AB and point G",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (key shows drawn line)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A scarf costs ＄68.20. It costs ＄12.50 less than a blouse. What is the price of the blouse?",
+  "answer": "80.70",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "number read as 18 'Ascarf'->'A scarf'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mei Ling has some water in the two beakers. Mei Ling needed 5 litres of water to make some juice. How much more water does she need?",
+  "answer": "3900",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "two beakers: 700 mℓ and 400 mℓ readings",
+  "ocr_fixes": [
+   "number read as 49"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok (key 700+400=1100; 5000-1100=3900)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Samuel bought a total of 20 donuts. What was the least amount of money he needed to pay for all the donuts? (1 for ＄2; 3 for ＄5)",
+  "answer": "34",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "price table: 1 donut for ＄2, 3 donuts for ＄5",
+  "ocr_fixes": [
+   "'14 for $2'->'1 for ＄2'"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok (6 sets of 3 = ＄30, + 2 x ＄2 = ＄34)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of cups of bubble tea sold over 5 days.\nEach statement below is either 'True' or 'False'. For each statement, put a tick (✓) to indicate your answer.\n(a) The number of cups of bubble tea sold on Thursday is twice the number of cups of bubble tea sold on Wednesday.\n(b) The total number of cups of bubble tea sold on Monday and Tuesday is the same as the number of cups of bubble tea sold on Friday.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "The number of cups of bubble tea sold on Thursday is twice the number of cups of bubble tea sold on Wednesday."
+   },
+   {
+    "part": "b",
+    "text": "The total number of cups of bubble tea sold on Monday and Tuesday is the same as the number of cups of bubble tea sold on Friday."
+   }
+  ],
+  "answer": "(a) False; (b) True",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "False",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "True",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of bubble tea Monday to Friday plus true/false tick table",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (graph not re-read; matches key False, True)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure is made up of two identical rectangles. The breadth of rectangle A is 5 cm. The length of rectangle A is twice its breadth. What is the total area of rectangle A and B?",
+  "answer": "100",
+  "unit": "cm$^2$",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "two identical rectangles A and B, breadth 5 cm",
+  "ocr_fixes": [
+   "'5m'->'5 cm'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (5 x 10 x 2 = 100)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Jane wanted to run 2 km 80 m. She completed 3 rounds on a running track. Each round is 400 m. How much further did she have to run?",
+  "answer": "880",
+  "unit": "m",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (2080 - 1200 = 880)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure below shows some balloons placed along a straight line at equal distance apart. The distance between the 1st and the 8th balloon is 77 cm. What is the distance between the 2nd and the 5th balloon?",
+  "answer": "33",
+  "unit": "cm",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "row of balloons along a line",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (7 gaps = 77, 1 gap = 11, 3 gaps = 33)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Chan had 36 muffins and some tarts. She packed all the muffins and tarts equally into boxes. There were 4 muffins and 6 tarts in each box. How many tarts did she have at first?",
+  "answer": "54",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (9 boxes x 6)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q26",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 26,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The bar graph shows a total of 390 students from Primary 1 to Primary 4 who wear spectacles. The number of Primary 3 girls who wear spectacles is not shown. Study the graph below and answer the questions.\n(a) How many more boys from Primary 4 than Primary 1 wear spectacles?\n(b) How many girls from Primary 3 wear spectacles?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many more boys from Primary 4 than Primary 1 wear spectacles?"
+   },
+   {
+    "part": "b",
+    "text": "How many girls from Primary 3 wear spectacles?"
+   }
+  ],
+  "answer": "45; 40",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "45",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "40",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "grouped bar graph boys/girls Pri 1-4 with Pri 3 girls missing",
+  "ocr_fixes": [
+   "number read as 26 within graph text"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok (matches key; graph values not re-read)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q27",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 27,
+  "marks": 4,
+  "question_type": "long",
+  "question": "There were 28 more boys than girls in the library at first. 6 girls left the library and 4 boys entered the library.\n(a) How many more boys than girls were there in the library in the end?\n(b) There were a total of 96 students in the library in the end. How many girls were there in the library in the end?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many more boys than girls were there in the library in the end?"
+   },
+   {
+    "part": "b",
+    "text": "There were a total of 96 students in the library in the end. How many girls were there in the library in the end?"
+   }
+  ],
+  "answer": "38; 29",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "38",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "29",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (28+6+4=38; (96-38)/2=29)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_NanHua_EOY_Q28",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 28,
+  "marks": 3,
+  "question_type": "long",
+  "question": "There are 16 bicycles and tricycles in a shop. There are 38 wheels altogether. How many bicycles are there?",
+  "answer": "10",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (6 tricycles, 10 bicycles)",
+  "confidence": "high"
+ }
+]

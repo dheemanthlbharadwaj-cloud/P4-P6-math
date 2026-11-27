@@ -1,0 +1,927 @@
+[
+ {
+  "id": "2023_P3_SCGS_EOY_Q01",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The digit ______ in 3985 is in the hundreds place.",
+  "options": {
+   "1": "9",
+   "2": "8",
+   "3": "3",
+   "4": "5"
+  },
+  "answer_key": "1",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Thedigit. iri 3986' -> 'The digit ______ in 3985' (image)",
+   "options read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q02",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the product of 182 and 4?",
+  "options": {
+   "1": "428",
+   "2": "728",
+   "3": "1628",
+   "4": "4328"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option numbers (4) -> (1) in OCR"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q03",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the volume of water in the beaker?",
+  "options": {
+   "1": "500 mℓ",
+   "2": "530 mℓ",
+   "3": "800 mℓ",
+   "4": "1000 mℓ"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale, 500 and 1000 mℓ marks, water about 800 mℓ",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q04",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which fraction is less than $\\frac{1}{2}$?",
+  "options": {
+   "1": "$\\frac{5}{9}$",
+   "2": "$\\frac{5}{10}$",
+   "3": "$\\frac{2}{3}$",
+   "4": "$\\frac{5}{12}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions rebuilt from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q05",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The figure below is made up of 1-cm squares.\nFind the area of the figure.\nThe area of the figure is ______.",
+  "options": {
+   "1": "18 cm$^2$",
+   "2": "20 cm$^2$",
+   "3": "22 cm$^2$",
+   "4": "30 cm$^2$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "shape on 1-cm grid: trapezoid on top of an L-shaped block",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok (trapezoid 8 + rows 6 + 3 + 3 = 20)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q06",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "100 more than ______ is 2063.",
+  "options": {
+   "1": "1963",
+   "2": "2083",
+   "3": "2163",
+   "4": "3163"
+  },
+  "answer_key": "1",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q07",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "7 kg 50 g = ______ g.",
+  "options": {
+   "1": "750 g",
+   "2": "7005 g",
+   "3": "7050 g",
+   "4": "7500 g"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 4 read from image (7500 g)"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q08",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The length of a square mat is 8 m. Find the area of the mat.",
+  "options": {
+   "1": "8 m$^2$",
+   "2": "16 m$^2$",
+   "3": "32 m$^2$",
+   "4": "64 m$^2$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square with side 8 m",
+  "ocr_fixes": [
+   "'&m' -> '8 m'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q09",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Raj took 2 hour 45 minutes to travel to his school. Gina took 50 minutes less to travel to her school. How long did Gina take to travel to her school?",
+  "options": {
+   "1": "1 h 45 min",
+   "2": "1 h 55 min",
+   "3": "2 h 5 min",
+   "4": "3 h 35 min"
+  },
+  "answer_key": "2",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q10",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "In the figure below, which two lines are parallel?",
+  "options": {
+   "1": "AB // BE",
+   "2": "AF // BE",
+   "3": "GC // FD",
+   "4": "AB // FD"
+  },
+  "answer_key": "2",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "quadrilateral-like figure with points A, B, C, D, E, F, G",
+  "ocr_fixes": [
+   "'//' read from OCR 'I' marks"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q11",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 7412 in words.",
+  "answer": "Seven thousand, four hundred and twelve",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'41.' -> '11.'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q12",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write the missing number.\n6198, ______, 6218, 6228, 6238",
+  "answer": "6208",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q13",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "5492 = 5000 + $\\square$ tens + 90 + 2",
+  "answer": "40",
+  "unit": "tens",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "box rebuilt from image"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q14",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "$\\frac{1}{2}$ + $\\frac{4}{10}$ = $\\square$",
+  "answer": "$\\frac{9}{10}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q15",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Mark the acute angle in the figure below.",
+  "answer": "(mark the angle at the top peak of the figure, between the two thick sides)",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "hexagon-like polygon with a notch at the top",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok (drawing/marking question; key shows the angle at the top peak marked)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q16",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following fractions from the greatest to the smallest.\n$\\frac{2}{3}$, $\\frac{2}{6}$, $\\frac{3}{4}$",
+  "answer": "$\\frac{3}{4}$, $\\frac{2}{3}$, $\\frac{2}{6}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q17",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Jennifer gave away $\\frac{1}{2}$ of a cake and ate $\\frac{1}{3}$ of it. What fraction of the cake was left?",
+  "answer": "$\\frac{1}{6}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q18",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There were 420 audience at a concert. There were 4 times as many adults as children. How many children were at the concert?",
+  "answer": "84",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q19",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The art section in the library has 218 books. 77 books are on the top shelf and the rest are arranged equally at the bottom three shelves.\nHow many books are there on the last shelf at the bottom?",
+  "answer": "47",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "four shelves with books, top shelf labelled",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok (218-77=141, 141/3=47)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q20",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The picture below shows the amount of money in Nurul's wallet.\nShe wanted to buy a handphone charger which costs ＄22.10.\nHow much more money does she need?",
+  "answer": "3.80",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "＄2, ＄5, ＄10 notes and 1 dollar, 20 cent, 10 cent coins",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (total ＄18.30; 22.10 - 18.30 = 3.80)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q21",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Natalie started watching a show at 1615. The show lasted 1 h 55 min.\nWhat time did the show end? Give your answer in the 24 hour clock.",
+  "answer": "1810",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'1h55 min' spacing"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q22",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the movie preferences of boys and girls in a school.\nPut a tick (✓) in the correct box.\n(a) The number of boys who like iron man is twice the number of boys who like transformers.\n(b) The total number of children who like Thor movie is the same as the total number of children who like Iron Man movie.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "The number of boys who like iron man is twice the number of boys who like transformers. (True / False)"
+   },
+   {
+    "part": "b",
+    "text": "The total number of children who like Thor movie is the same as the total number of children who like Iron Man movie. (True / False)"
+   }
+  ],
+  "answer": "(a) True (b) True",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "True",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "True",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph Movie Preferences: boys and girls for Transformers, Thor, Iron Man",
+  "ocr_fixes": [
+   "'Tranformers' spelling kept as printed on graph"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok (Transformers boys 3, Iron Man boys 6; Thor 7+1, Iron Man 6+2)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q23",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 23,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The length of a blue ribbon is 1 m 20 cm longer than a red ribbon.\nGiven that the total length of both ribbons is 4 m, how long is the red ribbon?",
+  "answer": "140",
+  "unit": "cm",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'4 m 20 cm' -> '1 m 20 cm' (image)"
+  ],
+  "checked_against_image": [
+   13,
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q24",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 24,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Geraldine wants to pack 260 colour pencils into bags.\nEach bag can hold up to 6 colour pencils.\nWhat is the smallest number of bags needed to pack all the colour pencils?",
+  "answer": "44",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok (260 ÷ 6 = 43 R 2, so 44)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q25",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 25,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The football coach arranged 9 poles on the field that are of equal distance apart. The distance between the first pole and fourth pole is 27 m. What is the distance between the first and last pole?",
+  "answer": "72",
+  "unit": "m",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "poles in a row: first, fourth (27 m apart), ninth",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok (27 ÷ 3 = 9 m per gap, 8 gaps = 72)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q26",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 26,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Jamie bought 1 bunch of grapes and 15 apples.\nShe gave the cashier ＄50. How much change did she receive?",
+  "answer": "24.65",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "3 apples for ＄4; 1 bunch of grapes for ＄5.35",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_SCGS_EOY_Q27",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Singapore Chinese Girls'",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 27,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Alfred and Bala had an equal number of marbles at first.\nAfter Alfred gave Bala 12 marbles, Alfred had 65 marbles left.\n(a) How many more marbles did Bala have than Alfred in the end?\n(b) How many marbles did Bala have in the end?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many more marbles did Bala have than Alfred in the end?"
+   },
+   {
+    "part": "b",
+    "text": "How many marbles did Bala have in the end?"
+   }
+  ],
+  "answer": "(a) 24 (b) 89",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "24",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "89",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'ai first' -> 'at first'"
+  ],
+  "checked_against_image": [
+   15,
+   18
+  ],
+  "answer_check": "ok (part marks not read, total 3 inferred from 16-mark section total)",
+  "confidence": "medium"
+ }
+]

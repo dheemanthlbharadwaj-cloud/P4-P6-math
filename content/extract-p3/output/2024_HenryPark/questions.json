@@ -1,0 +1,1069 @@
+[
+ {
+  "id": "2024_P3_HenryPark_EOY_Q01",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 6893, the digit 8 stands for",
+  "options": {
+   "1": "8",
+   "2": "80",
+   "3": "800",
+   "4": "8000"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "question number/text read from image"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q02",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 1432, the digit 1 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q03",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the value of $\\frac{5}{7} + \\frac{1}{7}$.",
+  "options": {
+   "1": "$\\frac{4}{7}$",
+   "2": "$\\frac{6}{7}$",
+   "3": "$\\frac{4}{14}$",
+   "4": "$\\frac{6}{14}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q04",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the total volume of water in this set of beakers.",
+  "options": {
+   "1": "2 ℓ 230 mℓ",
+   "2": "2 ℓ 300 mℓ",
+   "3": "4 ℓ 30 mℓ",
+   "4": "5 ℓ"
+  },
+  "answer_key": "1",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "five beakers: two full 1000 mℓ, three small ones (scale to 100 mℓ) partly filled",
+  "ocr_fixes": [
+   "options garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "unsure: two beakers 1000 mℓ each; small beakers read roughly 90, 90, 20 (about 2 ℓ 200 mℓ); key option (1) 2 ℓ 230 mℓ is the only close option and is accepted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q05",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "2 h 5 min = ______ min",
+  "options": {
+   "1": "25",
+   "2": "125",
+   "3": "205",
+   "4": "250"
+  },
+  "answer_key": "2",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "blank line read as '='"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q06",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following letters has parallel lines?",
+  "options": {
+   "1": "L",
+   "2": "O",
+   "3": "V",
+   "4": "E"
+  },
+  "answer_key": "4",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "letters L, O, V, E drawn on a square grid",
+  "ocr_fixes": [
+   "options garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q07",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Sally wants to pack 40 oranges into bags. Each bag can hold at most 6 oranges. What is the least number of bags Sally needs?",
+  "options": {
+   "1": "6",
+   "2": "7",
+   "3": "34",
+   "4": "46"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q08",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following fractions is nearest to 1 whole?",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{3}{10}$",
+   "3": "$\\frac{4}{5}$",
+   "4": "$\\frac{7}{10}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "number line from 0 to 10/10 in tenths, 5/10 marked",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q09",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write eight thousand, three hundred and nine in numerals.",
+  "answer": "8309",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q10",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Arrange the numbers in increasing order.\n9461, 6857, 6535, 9716",
+  "answer": "6535, 6857, 9461, 9716",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "question number read as '10. |'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q11",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Complete the number pattern.\n4320, 4310, 4300, ______, 4280, 4270",
+  "answer": "4290",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "question number read as 41"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q12",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "6 km 75 m = ______ m",
+  "answer": "6075",
+  "unit": "m",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q13",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the perimeter of the shaded figure below.",
+  "answer": "18",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "shaded figure of 14 unit squares on a grid, each square 1 cm by 1 cm",
+  "ocr_fixes": [
+   "labels '1 cm' garbled"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (perimeter 18 cm by counting)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q14",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Eugene started exercising at the time shown on the clock.\nWhat time did he start exercising?",
+  "answer": "10.20",
+  "unit": "am",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock showing 10.20",
+  "ocr_fixes": [
+   "'am' unit kept"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q15",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "＄3.40 + ＄2.20 + $\\square$ = ＄10\nWhat is the missing value?",
+  "answer": "4.40",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'",
+   "'15,' -> '15.'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q16",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Study the figure below. Which of these angles are acute angles?",
+  "answer": "a, c",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "pentagon with angles a, b, c, d, e marked",
+  "ocr_fixes": [
+   "'16,' -> '16.'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok (a and c acute; b, d, e obtuse by eye)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q17",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The bar graph below shows the number of Primary 3 students in four classes who went for the SwimSafer programme after school.\nHow many more girls went for the SwimSafer programme in 3C than in 3B?",
+  "answer": "3",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "double bar graph (boys, girls) for 3A to 3D; girls 12, 10, 13, 11",
+  "ocr_fixes": [
+   "question number read as 'Do ot write' noise removed"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q18",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Find the sum of 376 and 825.\n(b) Find the difference between 781 and 1000.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the sum of 376 and 825."
+   },
+   {
+    "part": "b",
+    "text": "Find the difference between 781 and 1000."
+   }
+  ],
+  "answer": "(a) 1201; (b) 219",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "1201",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "219",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q19",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There are 936 apples in a box. There are 6 times as many apples as pears. How many apples and pears are there altogether in the box?",
+  "answer": "1092",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q20",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Find the product of 750 and 8.\n(b) Find the quotient and remainder when $649 \\div 9$.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the product of 750 and 8."
+   },
+   {
+    "part": "b",
+    "text": "Find the quotient and remainder when $649 \\div 9$."
+   }
+  ],
+  "answer": "(a) 6000; (b) 72 R 1",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "6000",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "72 R 1",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'+' -> '$\\div$'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q21",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the values of A and B.\n$\\frac{A}{4} = \\frac{6}{8} = \\frac{9}{B}$",
+  "answer": "A = 3, B = 12",
+  "answer_parts": [
+   {
+    "part": "A",
+    "value": "3",
+    "unit": ""
+   },
+   {
+    "part": "B",
+    "value": "12",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q22",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A piece of metal wire was bent into the shape of a square. Each side of the square was 9 cm. The same piece of wire was then bent into the shape of a rectangle. The length of the rectangle was 12 cm. What was the breadth of the rectangle?",
+  "answer": "6",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square with side 9 cm and rectangle with length 12 cm and unknown breadth",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q23",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Anand spent 2 h 30 min on his project. He stopped working on his project at 10 20 as shown on his watch. His watch was 15 min slow. What was the correct time he started working on his project? Give your answer in the 24-hour clock.",
+  "answer": "0805",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'10 20' kept as printed"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok (10 20 + 15 min = 10 35; minus 2 h 30 min = 08 05)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q24",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "At the bookshop, erasers were sold for 55¢ each. Nora had 3 two-dollar notes in her wallet. How much money would Nora have left after buying 10 such erasers?",
+  "answer": "0.50",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Ans: 3' read as '＄'"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q25",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 25,
+  "marks": 3,
+  "question_type": "short",
+  "question": "The bar graph below shows the mass of newspapers collected for recycling by students in five Primary 3 classes.\nEach statement below is either 'True' or 'False'. For each statement, put a tick to indicate your answer.\na) 3C collected three times the mass of newspapers 3A collected.\nb) 3B collected 20 kg less newspapers than 3D.\nc) The total mass of newspapers collected by 3A and 3D is the same as the mass collected by 3B.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "3C collected three times the mass of newspapers 3A collected."
+   },
+   {
+    "part": "b",
+    "text": "3B collected 20 kg less newspapers than 3D."
+   },
+   {
+    "part": "c",
+    "text": "The total mass of newspapers collected by 3A and 3D is the same as the mass collected by 3B."
+   }
+  ],
+  "answer": "a) True; b) False; c) True",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "True",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "False",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "True",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of mass (kg): 3A 20, 3B 50, 3C 60, 3D 30, 3E 40, with True/False table",
+  "ocr_fixes": [
+   "tick table kept as statements"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q26",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The table below shows the number of paper stars Jenny made each day. On the first day, she made 10 paper stars. Each day, she makes twice as many paper stars as she did on the previous day. On which day would she make 320 paper stars?",
+  "answer": "6",
+  "unit": "Day",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "table: Day 1 10, Day 2 20, Day 3 40",
+  "ocr_fixes": [
+   "table rows read from image"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok (10, 20, 40, 80, 160, 320)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q27",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 27,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Randy has 1289 blue and yellow pencils. 475 pencils are blue and the rest are yellow.\n(a) How many yellow pencils does Randy have?\n(b) Randy buys another 1256 blue pencils. How many blue pencils does he have in total?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many yellow pencils does Randy have?"
+   },
+   {
+    "part": "b",
+    "text": "Randy buys another 1256 blue pencils. How many blue pencils does he have in total?"
+   }
+  ],
+  "answer": "(a) 814; (b) 1731",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "814",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "1731",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q28",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 28,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Tan had some blueberries. She packed them equally into 9 boxes and found that she had 600 g of blueberries left. Each box had 720 g of blueberries. What was the mass of blueberries Mrs Tan had at first? Give your answer in kilograms and grams.",
+  "answer": "7 kg 80 g",
+  "answer_parts": [
+   {
+    "part": "kg",
+    "value": "7",
+    "unit": "kg"
+   },
+   {
+    "part": "g",
+    "value": "80",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q29",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 29,
+  "marks": 3,
+  "question_type": "long",
+  "question": "At first, Vanessa had 758 cards, while Gary had 1548 cards. Vanessa then bought some more cards. In the end, Gary had 125 fewer cards than Vanessa. How many cards did Vanessa buy?",
+  "answer": "915",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   17,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_HenryPark_EOY_Q30",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 30,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Gina had 698 more beads than Liz. She gave 225 beads to Liz. How many more beads does Gina have than Liz in the end?",
+  "answer": "248",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'a this space' noise removed"
+  ],
+  "checked_against_image": [
+   18,
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

@@ -1,0 +1,937 @@
+[
+ {
+  "id": "2024_P3_StHilda_EOY_Q01",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 8047, what is the value of the digit 0?",
+  "options": {
+   "1": "0",
+   "2": "10",
+   "3": "100",
+   "4": "1000"
+  },
+  "answer_key": "1",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 4"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "solved:1 differs from key 3 (key says 100; digit 0 sits in the hundreds place so its value is 0, key looks like a place-value slip)",
+  "confidence": "low"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q02",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the difference between 816 and 7910?",
+  "options": {
+   "1": "25",
+   "2": "250",
+   "3": "7094",
+   "4": "8726"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q03",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the product of 7 and 8.",
+  "options": {
+   "1": "1",
+   "2": "15",
+   "3": "56",
+   "4": "78"
+  },
+  "answer_key": "3",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "stray 'x' above 'product' (page mark) removed"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q04",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Sally had 40 pencils. Rebekah had 3 times as many pencils as Sally. How many pencils did both of them have?",
+  "options": {
+   "1": "43",
+   "2": "80",
+   "3": "120",
+   "4": "160"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q05",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "A file cost ＄16.75. A t-shirt cost ＄67.50 more than the file. How much did the t-shirt cost?",
+  "options": {
+   "1": "＄50.75",
+   "2": "＄84.25",
+   "3": "＄101.00",
+   "4": "＄118.25"
+  },
+  "answer_key": "2",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄",
+   "'triuch' -> 'much'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q06",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the total volume of water in the two beakers shown below?",
+  "options": {
+   "1": "30 mℓ",
+   "2": "350 mℓ",
+   "3": "380 mℓ",
+   "4": "650 mℓ"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "two beakers with mℓ scales, about 350 mℓ and 30 mℓ",
+  "ocr_fixes": [
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok (key accepted; readings about 350 + 30)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q07",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 7,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the difference between $\\frac{3}{4}$ and $\\frac{7}{12}$.",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{1}{4}$",
+   "3": "$\\frac{1}{6}$",
+   "4": "$\\frac{5}{8}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q08",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 8,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Look at the figure below. There are four angles in the figure.\nHow many of the angles are acute angles?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "parallelogram with four marked angles",
+  "ocr_fixes": [
+   "Q8 number missing in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q09",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Name a pair of parallel lines in the figure below.",
+  "options": {
+   "1": "AB // BC",
+   "2": "AB // DG",
+   "3": "BC // DG",
+   "4": "BC // FE"
+  },
+  "answer_key": "2",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "lines A to G on a square grid, points A, B, C, D, E, F, G labelled",
+  "ocr_fixes": [
+   "Q9 number missing in OCR",
+   "option (1) read as 'AB//BC' from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q10",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Four students took part in a 100-m race.\nThe graph below shows the time taken by each student to complete the run.\nWho finished last?",
+  "options": {
+   "1": "Weiming",
+   "2": "Xenia",
+   "3": "Yashora",
+   "4": "Zachary"
+  },
+  "answer_key": "3",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of time in seconds for Weiming, Xenia, Yashora, Zachary",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q11",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "9752 = 9 thousands + 7 hundreds + ______ ones",
+  "options": {
+   "1": "5",
+   "2": "2",
+   "3": "50",
+   "4": "52"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q12",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "2583 more than a number is 6479. What is 100 more than that number?",
+  "options": {
+   "1": "3896",
+   "2": "3996",
+   "3": "9062",
+   "4": "9162"
+  },
+  "answer_key": "2",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 42",
+   "'2583 more than a number is 6479, What' comma -> full stop"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q13",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A bus left a bus interchange with 47 people onboard. When it reached the first bus stop, 12 people boarded the bus and some people alighted the bus. There were 23 people on the bus when it left the first bus stop. How many people alighted the bus at the first bus stop?",
+  "options": {
+   "1": "12",
+   "2": "24",
+   "3": "35",
+   "4": "36"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q14",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Fatin spent ＄13.60 on a file. She also bought a toy robot which cost ＄47.90 more than the file. How much did she spend on both items?",
+  "options": {
+   "1": "＄34.30",
+   "2": "＄61.50",
+   "3": "＄75.10",
+   "4": "＄109.40"
+  },
+  "answer_key": "3",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄",
+   "'ona' -> 'on a'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q15",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Aunt Amanda had 7 kg of flour at first. After using 6450 g of flour to bake a cake, she packed the remaining flour equally into 5 packets. What was the mass of flour in each packet?",
+  "options": {
+   "1": "11 g",
+   "2": "110 g",
+   "3": "2690 g",
+   "4": "2750 g"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'flou.' -> 'flour'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q16",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 8,
+  "section": "Booklet B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the numbers in decreasing order.\n3090, 3900, 930, 9003",
+  "answer": "9003, 3900, 3090, 930",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "numbers in ovals written as a list",
+   "'Greatest' label removed"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q17",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 8,
+  "section": "Booklet B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Write the missing number in the number pattern below.\n480, 581, 682, ?, 884, 985",
+  "answer": "783",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q18",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 8,
+  "section": "Booklet B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Aiman had 2389 toy airplanes and 1762 toy cars at first. He gave away 325 toy cars. What was the total number of toy airplanes and cars left in the end?",
+  "answer": "3826",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q19",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 9,
+  "section": "Booklet B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A bookshop had 9 boxes of pencils. Each box contained 6 pencils. The bookshop seller bought another 2 pencils and repacked all the pencils equally into 8 packets. How many pencils were packed into each packet?",
+  "answer": "7",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q20",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 9,
+  "section": "Booklet B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Ling prepared some gift packs for Children's Day. There were 8 bars of chocolate and 5 sweets in each gift pack. There was a total of 195 sweets in all the gift packs. How many bars of chocolate were there altogether?",
+  "answer": "312",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'&' -> '8'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q21",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 9,
+  "section": "Booklet B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Anusha wanted to buy a doll that cost ＄94.75. She had ＄36.50 in savings and her mother gave her ＄20. How much more money did she need to buy the doll?",
+  "answer": "38.25",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q22",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 10,
+  "section": "Booklet B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "James ran 3 complete rounds around a 400 m running track. He walked for another 250 m. What was the total distance he ran and walked?\nGive your answer in kilometres and metres.",
+  "answer": "1 km 450 m",
+  "unit": "km m",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1",
+    "unit": "km"
+   },
+   {
+    "part": "",
+    "value": "450",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "oval running track labelled 400 m with a start mark",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q23",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 10,
+  "section": "Booklet B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the fractions from the smallest to the greatest.\n$\\frac{7}{11}$, $\\frac{1}{3}$, $\\frac{1}{10}$",
+  "answer": "$\\frac{1}{10}$, $\\frac{1}{3}$, $\\frac{7}{11}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image",
+   "'Smallest' label removed"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q24",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 11,
+  "section": "Booklet B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the figure below. There are six angles in the figure.\nHow many of the angles are greater than a right angle?",
+  "answer": "3",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "arrow-head (chevron) shape with six marked angles",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (key accepted; one angle is reflex)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q25",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 11,
+  "section": "Booklet B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Draw a line perpendicular to AB that passes through Point X.",
+  "answer": "Line through X perpendicular to AB (drawn on the grid)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line AB and point X",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (drawing; no numerical answer, key shows a drawn line)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q26",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 12,
+  "section": "Booklet B",
+  "question_no": 26,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Ming En had ＄289.60 at first. After spending ＄45 on a meal and receiving some money from his mother, he had ＄300.60.\nHow much money did he receive from his mother?",
+  "answer": "56",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q27",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 13,
+  "section": "Booklet B",
+  "question_no": 27,
+  "marks": 3,
+  "question_type": "long",
+  "question": "There were 129 fewer students in the canteen than in the hall at first. 329 students moved from the hall to the canteen.\nHow many more students were there in the canteen than in the hall in the end?",
+  "answer": "529",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_StHilda_EOY_Q28",
+  "grade": "P3",
+  "year": "2024",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 14,
+  "section": "Booklet B",
+  "question_no": 28,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Rei has 183 stickers. Ali has 129 stickers.\nHow many stickers does Ali have to give to Rei so that Rei has two times the number of stickers that Ali has in the end?",
+  "answer": "25",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

@@ -1,0 +1,885 @@
+[
+ {
+  "id": "2025_P3_ACSP_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is fifty-six thousand and thirty in numerals?",
+  "options": {
+   "1": "5613",
+   "2": "5630",
+   "3": "56 013",
+   "4": "56 030"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 4",
+   "'folowing', 'thirly' typos"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which fraction is not equivalent to $\\frac{2}{3}$?",
+  "options": {
+   "1": "$\\frac{6}{9}$",
+   "2": "$\\frac{9}{12}$",
+   "3": "$\\frac{10}{15}$",
+   "4": "$\\frac{14}{21}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "James had 42 chairs. He arranged all the chairs in rows of 7. How many rows of chairs did he have?",
+  "options": {
+   "1": "6",
+   "2": "7",
+   "3": "35",
+   "4": "49"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following numbers in decreasing order.\n4881, 4818, 4188, 4848\nGreatest ... Smallest",
+  "options": {
+   "1": "4881, 4818, 4848, 4188",
+   "2": "4881, 4848, 4818, 4188",
+   "3": "4848, 4818, 4881, 4188",
+   "4": "4848, 4881, 4818, 4188"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "numbers/options misread in OCR, read from image",
+   "Q number missing in OCR"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the value of the missing digit?\n7 4 ? _\n- 3 8 9 7\n= 3 5 1 9",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "0",
+   "4": "8"
+  },
+  "answer_key": "1",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical subtraction with a boxed missing digit",
+  "ocr_fixes": [
+   "option 3/4 '8','8' -> '0','8' (from image)",
+   "layout read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok (key 1; minuend 7416 = 3519 + 3897)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following division equations leaves a remainder of 3?",
+  "options": {
+   "1": "645 $\\div$ 6",
+   "2": "753 $\\div$ 4",
+   "3": "816 $\\div$ 3",
+   "4": "935 $\\div$ 8"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "operators misread in OCR ('=','+','-')"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Gary had some stamps. After he bought another 39 stamps, he had 8 times as many stamps as his sister. His sister had 48 stamps. How many stamps did Gary have at first?",
+  "options": {
+   "1": "312",
+   "2": "345",
+   "3": "384",
+   "4": "423"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option (1) '(4)' -> '(1)'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The bar graph below shows the goals scored by 4 boys in a soccer game.\nHow many fewer goals were scored by Caleb than Ben?",
+  "options": {
+   "1": "20",
+   "2": "25",
+   "3": "30",
+   "4": "55"
+  },
+  "answer_key": "2",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of goals by Alex, Ben, Caleb, Dylan",
+  "ocr_fixes": [
+   "Q number missing in OCR",
+   "option 3 '3}' -> '(3)'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How many acute angles are there inside the figure?",
+  "options": {
+   "1": "5",
+   "2": "8",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "4",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "block arrow with notched tail",
+  "ocr_fixes": [
+   "Q number read as 8"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok (key 4; two arrow-head barbs and two tail tips, head tip about 90 degrees)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "David bought a basketball for ＄21.98. He gave the cashier a ＄100 note. How much change did he receive?",
+  "options": {
+   "1": "＄78.02",
+   "2": "＄79.98",
+   "3": "＄81.98",
+   "4": "＄121.98"
+  },
+  "answer_key": "1",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> fullwidth"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Anitha had a roll of ribbon which was 5 m long. She used 127 cm of it to tie a present. What was the length of the remaining ribbon?",
+  "answer": "373",
+  "unit": "cm",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'17.' -> '11.'",
+   "'Anttha' -> 'Anitha'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the number pattern shown below?\n6010, 7010, 7020, ______, 8030, 9030, 9040",
+  "answer": "8020",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'eo1a' -> '6010'",
+   "Q number '12.'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Arrange the following fractions from the smallest to the greatest.\n$\\frac{3}{7}$, $\\frac{1}{5}$, $\\frac{9}{11}$",
+  "answer": "$\\frac{1}{5}$, $\\frac{3}{7}$, $\\frac{9}{11}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph below shows the number of toys sold by a shop from March to June.\nEach of the statements below is either true or false from the information given. Put a tick to indicate your answer.\n(a) 21 toys were sold in the April.\n(b) 10 more toys were sold in May then June.",
+  "answer": "(a) False (b) True",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "False",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "True",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical bar graph of toys sold March-June plus a True/False table",
+  "ocr_fixes": [
+   "'in the April', 'then June' kept as printed"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Draw a line perpendicular to CD passing through Point P.",
+  "answer": "(draw a line through P perpendicular to CD)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with line CD and point P",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok (drawing answer; key page shows the line)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A countdown party lasted 3 h 52 min and ended at 01 46 the next day. What time did the countdown party start? Express your answer using the 24-hour clock.",
+  "answer": "21 54",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Acountdown' -> 'A countdown'"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A farmer packed 1421 apples into boxes. Each box can hold 9 apples. After filling all the boxes, how many apples were left unpacked?",
+  "answer": "8",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 7"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "3243 students joined a school carnival. 1478 of them were boys. How many fewer boys than girls joined the carnival?",
+  "answer": "287",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'scnosi' -> 'school', 'jomed' -> 'joined'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ryan bought a pair of sports shoes that cost ＄68.95 and a sports bag for ＄24.90. How much did he spend in total?",
+  "answer": "93.85",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> fullwidth"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (key line prints 68.75 + 24.90 but shows the correct total 93.85)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The capacity of Container A is 17 ℓ more than Container B and 15 ℓ less than Container C. What is the total capacity of Container B and Container C if Container A has a capacity of 51 ℓ?",
+  "answer": "100",
+  "unit": "ℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'812' -> '51 ℓ'"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 21,
+  "marks": 3,
+  "question_type": "long",
+  "question": "A stadium had 1845 spectators in the morning. In the afternoon, 976 more spectators entered the stadium, while 1258 spectators left after the morning event. How many spectators were in the stadium by the end of the day?",
+  "answer": "1563",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 22,
+  "marks": 3,
+  "question_type": "long",
+  "question": "A factory produces 112 cartons of juice every day. Each carton contains 6 packets of juice. The packets are then packed equally into 8 delivery boxes. How many packets of juice are in each delivery box?",
+  "answer": "84",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 23,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Fazil and Ramesh each bought a strawberry cake during recess. Fazil ate $\\frac{1}{4}$ of his cake during recess. During little bites, Ramesh ate $\\frac{2}{5}$ of his cake and Fazil ate another $\\frac{5}{12}$ of his cake.\n(a) What fraction of Ramesh's cake was left?\n(b) What fraction of Fazil's cake was eaten?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What fraction of Ramesh's cake was left?"
+   },
+   {
+    "part": "b",
+    "text": "What fraction of Fazil's cake was eaten?"
+   }
+  ],
+  "answer": "(a) $\\frac{3}{5}$ (b) $\\frac{2}{3}$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "$\\frac{3}{5}$",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "$\\frac{2}{3}$",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image",
+   "'Fazilt' -> 'Fazil'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 24,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Jia Wei spent a total of 2 h 35 min revising for his English and Mathematics tests. He spent 42 min revising for his English test. He finished revising for his Mathematics test at 20 20. What time did he start revising for his Mathematics test?",
+  "answer": "18 27",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'24,' -> '24.'"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_ACSP_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "ACS (Primary)",
+  "exam": "EOY",
+  "source": "(ACS (Primary)) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-ACSP.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A piece of wire was bent into a rectangle as shown below.\n(a) What was the area of the rectangle?\n(b) The same piece of wire was bent into a square. What was the area of the square?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What was the area of the rectangle?"
+   },
+   {
+    "part": "b",
+    "text": "The same piece of wire was bent into a square. What was the area of the square?"
+   }
+  ],
+  "answer": "(a) 65 cm$^2$ (b) 81 cm$^2$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "65",
+    "unit": "cm$^2$"
+   },
+   {
+    "part": "b",
+    "value": "81",
+    "unit": "cm$^2$"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 13 cm by 5 cm, and an empty square",
+  "ocr_fixes": [
+   "'reclangle' -> 'rectangle'"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

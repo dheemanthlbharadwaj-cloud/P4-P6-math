@@ -1,0 +1,959 @@
+[
+ {
+  "id": "2025_P3_Rosyth_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 8930, the digit 3 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 4"
+  ],
+  "checked_against_image": [
+   2,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number?\n______ $\\div$ 6 = 9 R 1",
+  "options": {
+   "1": "14",
+   "2": "16",
+   "3": "55",
+   "4": "60"
+  },
+  "answer_key": "3",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option (1) read as '(4)'",
+   "equation garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   2,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "$\\frac{4}{5} - \\frac{1}{10} =$ ?",
+  "options": {
+   "1": "$\\frac{3}{5}$",
+   "2": "$\\frac{3}{10}$",
+   "3": "$\\frac{5}{10}$",
+   "4": "$\\frac{7}{10}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   2,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is the same as 8015 mℓ?",
+  "options": {
+   "1": "8 ℓ 15 mℓ",
+   "2": "8 ℓ 105 mℓ",
+   "3": "80 ℓ 15 mℓ",
+   "4": "801 ℓ 5 mℓ"
+  },
+  "answer_key": "1",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options garbled in OCR ('8215 mi' etc.), read from image",
+   "ml -> mℓ",
+   "Q number missing in OCR"
+  ],
+  "checked_against_image": [
+   3,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange these numbers from the greatest to the smallest.\n6089, 6890, 6809",
+  "options": {
+   "1": "6089, 6809, 6890",
+   "2": "6890, 6809, 6089",
+   "3": "6809, 6890, 6089",
+   "4": "6890, 6089, 6809"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing in OCR"
+  ],
+  "checked_against_image": [
+   3,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The difference between two numbers is 218. The smaller number is 357. What is the greater number?",
+  "options": {
+   "1": "139",
+   "2": "141",
+   "3": "565",
+   "4": "575"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options (1),(2) read as '(4) 139','(2) 144', corrected to 139 and 141 from image"
+  ],
+  "checked_against_image": [
+   3,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "There were some children in a school hall. 332 of them were boys. There were 140 more boys than girls. How many children were there in the school hall altogether?",
+  "options": {
+   "1": "332",
+   "2": "472",
+   "3": "524",
+   "4": "612"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure below is made up of 3 identical squares. One square is divided equally into 4 triangles. What fraction of the figure is shaded?",
+  "options": {
+   "1": "$\\frac{1}{4}$",
+   "2": "$\\frac{1}{5}$",
+   "3": "$\\frac{3}{16}$",
+   "4": "$\\frac{7}{8}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "L-shaped figure of 3 squares, one square split into 4 triangles with some shaded",
+  "ocr_fixes": [
+   "fraction options garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4,
+   16
+  ],
+  "answer_check": "ok: key accepted (shaded triangles not counted precisely)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 5,
+  "section": "B",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the smallest 4-digit odd number that can be formed with all the digits below?\n3, 1, 0, 6",
+  "answer": "1063",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "four digit cards: 3 1 0 6",
+  "ocr_fixes": [
+   "digit cards read from image"
+  ],
+  "checked_against_image": [
+   5,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 5,
+  "section": "B",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box below?\n647 + ? = 6500",
+  "answer": "5853",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 5,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express 2480 m in km and m.",
+  "answer": "2 km 480 m",
+  "unit": "",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "How much did the book and the pencil case cost altogether?",
+  "answer": "19.20",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "book ＄12.75 and pencil case ＄6.45",
+  "ocr_fixes": [
+   "price labels read from image"
+  ],
+  "checked_against_image": [
+   6,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure below is made up of 2 identical rectangles. Find the perimeter of the figure.",
+  "answer": "54",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "two identical rectangles side by side, 10 cm by 7 cm each",
+  "ocr_fixes": [
+   "'7om' -> '7 cm'"
+  ],
+  "checked_against_image": [
+   6,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows the number of ice cream cones Mr Ahmad sold over 5 days.\nEach ice cream cone was sold for ＄3.\nHow much money did Mr Ahmad collect on Wednesday?",
+  "answer": "132",
+  "unit": "＄",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph, Ice Cream Sales Over 5 Days, Monday to Friday",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   7,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows the number of boys and girls from 3 classes who took part in an Art competition.\nFind the total number of students who took part in the Art competition.",
+  "answer": "97",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical bar graph of girls and boys in 3A, 3B, 3C",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ali reached the bus stop at 6:45 am. He waited 8 minutes before he got on the bus. He got off the bus at 7:30 am. How long was he on the bus?",
+  "answer": "37",
+  "unit": "min",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'bus:stop' -> 'bus stop'"
+  ],
+  "checked_against_image": [
+   9,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Johan and Ben had the same number of marbles at first. Then, Johan lost 50 marbles and Ben bought another 138 marbles. How many more marbles did Ben have than Johan in the end?",
+  "answer": "188",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Tan spent ＄35. How many mangoes did she buy?\n3 mangoes for ＄7",
+  "answer": "15",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "picture of mangoes with price tag: 3 mangoes for ＄7",
+  "ocr_fixes": [
+   "price tag read from OCR, not opened at page level"
+  ],
+  "checked_against_image": [
+   9,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Lokman and Vincent had 84 stickers at first. Lokman had 5 times as many stickers as Vincent. Then Vincent bought 17 more stickers. How many stickers did Vincent have in the end?",
+  "answer": "31",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'How. many' -> 'How many'"
+  ],
+  "checked_against_image": [
+   10,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the fractions $\\frac{1}{2}$, $\\frac{11}{12}$, $\\frac{1}{6}$ in order.\nBegin with the smallest fraction.",
+  "answer": "$\\frac{1}{6}$, $\\frac{1}{2}$, $\\frac{11}{12}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   10,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Name the two angles that are smaller than a right angle.",
+  "answer": "a and e",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "polygon with angles a, b, c, d, e, f marked",
+  "ocr_fixes": [
+   "Q numbering: '21.' misplaced in OCR"
+  ],
+  "checked_against_image": [
+   10,
+   16
+  ],
+  "answer_check": "ok: key a and e; a and e look acute, f is close to a right angle",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Study the figure in the square grid and fill in the blanks below.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Identify and name a pair of perpendicular lines."
+   },
+   {
+    "part": "b",
+    "text": "Identify and name a pair of parallel lines."
+   }
+  ],
+  "answer": "BE ⊥ ED; AG // BF",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "BE ⊥ ED",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "AG // BF",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with points A to G and joined line segments",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11,
+   16
+  ],
+  "answer_check": "ok: key accepted, lines not independently measured",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 12,
+  "section": "C",
+  "question_no": 23,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The diagrams below show some similar rubber balls, toy cars and a teddy bear being placed on 3 identical weighting scales.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the mass of 1 rubber ball?"
+   },
+   {
+    "part": "b",
+    "text": "What is the mass of the teddy bear?"
+   }
+  ],
+  "answer": "20; 540",
+  "unit": "g",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "20",
+    "unit": "g"
+   },
+   {
+    "part": "b",
+    "value": "540",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "three balance scales with rubber balls, a 140 g weight, toy cars and a teddy bear",
+  "ocr_fixes": [
+   "'cars and a teddy' highlight noise removed"
+  ],
+  "checked_against_image": [
+   12,
+   16,
+   17
+  ],
+  "answer_check": "ok: (a) 7 balls = 140 g gives 20 g; key accepted for (b)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 24,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The figure below is made up of 4 identical squares. The length of the figure is 12 cm.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the length of one square?"
+   },
+   {
+    "part": "b",
+    "text": "What is the area of the figure?"
+   }
+  ],
+  "answer": "3; 36",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "3",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "36",
+    "unit": "cm²"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "row of 4 identical squares labelled 12 cm",
+  "ocr_fixes": [
+   "'42cm' -> '12 cm'",
+   "page 13 image not opened"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "1402 visitors went to the zoo on Tuesday. 564 of them were adults and the rest were children.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many children were at the zoo?"
+   },
+   {
+    "part": "b",
+    "text": "Among the 564 adults, there were twice as many women as men. How many of them were women?"
+   }
+  ],
+  "answer": "838; 376",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "838",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "376",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Rosyth_EOY_Q26",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 26,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Some lamp posts were placed in a straight row at an equal distance apart. The distance between the 1st and the 5th lamp post was 36 m. The distance between the 2nd and the last lamp post was 144 m. What was the total number of lamp posts along the straight row?",
+  "answer": "18",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok: 36 m = 4 gaps, 9 m a gap, 144 m = 16 gaps, so 18 posts",
+  "confidence": "high"
+ }
+]

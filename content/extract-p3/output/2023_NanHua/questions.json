@@ -1,0 +1,1231 @@
+[
+ {
+  "id": "2023_P3_NanHua_EOY_Q01",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following is five thousand, four hundred and one in numerals?",
+  "options": {
+   "1": "514",
+   "2": "5041",
+   "3": "5401",
+   "4": "5410"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option (1) '614' -> '514'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q02",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the number shown below?",
+  "options": {
+   "1": "675",
+   "2": "6075",
+   "3": "6705",
+   "4": "6750"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "place-value discs: 6 thousands, 7 tens, 5 ones",
+  "ocr_fixes": [
+   "option (1) read as 675 from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q03",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the quotient when 760 is divided by 7?",
+  "options": {
+   "1": "112",
+   "2": "108",
+   "3": "18",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q3 number missing in OCR",
+   "option (1) '412' -> '112'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q04",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following shows 5 sixes?",
+  "options": {
+   "1": "picture option 1",
+   "2": "picture option 2",
+   "3": "picture option 3",
+   "4": "picture option 4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "four star arrays as options",
+  "ocr_fixes": [
+   "options are pictures, no text in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q05",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which fraction is greater than $\\frac{1}{2}$?",
+  "options": {
+   "1": "$\\frac{1}{3}$",
+   "2": "$\\frac{3}{8}$",
+   "3": "$\\frac{4}{7}$",
+   "4": "$\\frac{6}{12}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q5 number missing in OCR",
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q06",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How many numbers between 11 and 28 can be divided exactly by 5 with no remainder?",
+  "options": {
+   "1": "5",
+   "2": "2",
+   "3": "3",
+   "4": "7"
+  },
+  "answer_key": "3",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q07",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following fractions is equivalent to $\\frac{2}{3}$?",
+  "options": {
+   "1": "$\\frac{4}{9}$",
+   "2": "$\\frac{1}{2}$",
+   "3": "$\\frac{6}{9}$",
+   "4": "$\\frac{5}{6}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q08",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the time shown on the clock below?",
+  "options": {
+   "1": "10 minutes to 8",
+   "2": "10 minutes past 8",
+   "3": "20 minutes to 2",
+   "4": "20 minutes past 3"
+  },
+  "answer_key": "2",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock, hour hand near 8, minute hand at 2",
+  "ocr_fixes": [
+   "Q number read as 3"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q09",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Healing Hands Clinic opens only on weekdays for the timings shown in the table below.\nHow long is the clinic open on a Tuesday?",
+  "options": {
+   "1": "3 h 30 min",
+   "2": "4 h 30 min",
+   "3": "7 h",
+   "4": "8 h"
+  },
+  "answer_key": "4",
+  "topic_primary": "Time",
+  "topics": [
+   "Time",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "opening hours table: Mon-Fri 9:00 am-12:30 pm and 3:30 pm-8:00 pm; Sat, Sun closed",
+  "ocr_fixes": [
+   "Q9 number missing in OCR",
+   "Q number read as 5"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q10",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How many angles are smaller than a right angle inside the figure below?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "6"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "figure of line segments drawn on a square grid",
+  "ocr_fixes": [
+   "option (1) '47' -> '1'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok (key accepted; angle count not re-derived)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q11",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the value of $\\frac{6}{8} - \\frac{1}{2}$.",
+  "options": {
+   "1": "$\\frac{10}{8}$",
+   "2": "$\\frac{5}{6}$",
+   "3": "$\\frac{7}{10}$",
+   "4": "$\\frac{1}{4}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q12",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure below shows a mango and a durian on a weighing scale. The mass of the mango is 250 g. What is the mass of the durian?",
+  "options": {
+   "1": "1 kg 950 g",
+   "2": "2 kg 450 g",
+   "3": "2 kg 700 g",
+   "4": "2 kg 950 g"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "mango and durian on a dial scale in kg, pointer between 2 and 3",
+  "ocr_fixes": [
+   "'ihe' -> 'the'"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (key accepted; dial about 2.7 kg, minus 250 g)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q13",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure below is made up of 8 identical squares. The length of each square is 1 cm. What is the perimeter of the figure?",
+  "options": {
+   "1": "8 cm",
+   "2": "12 cm",
+   "3": "22 cm",
+   "4": "32 cm"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle of 2 rows by 4 columns of squares",
+  "ocr_fixes": [
+   "'made_up' -> 'made up'",
+   "option (2) '420m' -> '12 cm'",
+   "option (4) '320m' -> '32 cm'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q14",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following lengths from the longest to the shortest.\n1 m 20 cm, 1 km 2 m, 120 m",
+  "options": {
+   "1": "1 m 20 cm, 120 m, 1 km 2 m",
+   "2": "1 m 20 cm, 1 km 2 m, 120 m",
+   "3": "1 km 2 m, 1 m 20 cm, 120 m",
+   "4": "1 km 2 m, 120 m, 1 m 20 cm"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options garbled in OCR (tkm2m etc.), read from image"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q15",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 9,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The picture graph below shows the different types of pets kept by 63 children.\nGiven that the number of children who kept rabbits as pets was the same as the number of children who kept fish as pets, how many children does each smiley face represent?",
+  "options": {
+   "1": "7",
+   "2": "9",
+   "3": "441",
+   "4": "567"
+  },
+  "answer_key": "1",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "picture graph Our Pets: cat 1 face, fish 2, hamster 4, rabbit blank; each face stands for ? children",
+  "ocr_fixes": [
+   "Q number read as 8",
+   "smiley symbol in question written as 'smiley face'"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q16",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 9,
+  "section": "A",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Ariel wants to shade $\\frac{3}{4}$ of the hearts. How many more hearts should she shade?",
+  "options": {
+   "1": "5",
+   "2": "7",
+   "3": "9",
+   "4": "4"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "12 hearts in a 3 by 4 box, 5 shaded",
+  "ocr_fixes": [
+   "fraction garbled in OCR"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q17",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Use the following digits to form the smallest four-digit even number.\n5, 7, 2, 1",
+  "answer": "1572",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "digit cards 5 7 2 1 written in text"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q18",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Write the missing number in the number pattern below.\n7120, 7000, 6880, ______, 6640, 6520",
+  "answer": "6760",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q19",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the product of 712 and 4?",
+  "answer": "2848",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 49"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q20",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n$\\square \\times 9 = 432$",
+  "answer": "48",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "box written as LaTeX square"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q21",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Seto bakes 438 cupcakes. Each box can only fit 4 cupcakes. What is the number of boxes she will need to pack all the cupcakes?",
+  "answer": "110",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (key working says 438/4 = 109 R3 but 438/4 = 109 R2; final 110 is right)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q22",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A toy costs ＄223.50. Keith has the total amount of money as shown below. How much more money does he need to purchase the toy?",
+  "answer": "67.50",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "pictures of Singapore notes: three notes and a second group (key: total ＄156)",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (key accepted; notes not recounted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q23",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The difference between two numbers is 832. The greater number is 986. What is the smaller number?",
+  "answer": "154",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q24",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "All the water from the two beakers were poured into the jug. 125 mℓ of water flowed out from the jug. Find the capacity of the jug.\nExpress your answer in litres and millilitres.",
+  "answer": "1 ℓ 275 mℓ",
+  "unit": "ℓ mℓ",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1",
+    "unit": "ℓ"
+   },
+   {
+    "part": "",
+    "value": "275",
+    "unit": "mℓ"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "two beakers with 1 ℓ scale (800 mℓ and 600 mℓ per key) poured into a jug",
+  "ocr_fixes": [
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok (key accepted; beaker readings 800 and 600 not verified)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q25",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There are 30 apples and 25 pears in a crate. How many fruits are there in 6 similar crates?",
+  "answer": "330",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q26",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A baker bakes 100 cookies at the start of each day from Monday to Friday. The bar graph shows the numbers of cookies sold each day.\nStudy the graph below and answer the question.\nHow many cookies were unsold on Monday and Tuesday?",
+  "answer": "112",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of cookies sold Monday to Friday, scale 0-100; Monday 60, Tuesday 28",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q27",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "In the grid below, draw a line perpendicular to AB, passing through point M.",
+  "answer": "Line through M perpendicular to AB (drawn on the grid)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line AB and point M",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok (drawing; no numerical answer)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q28",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "10 arrows are spaced out equally along Line XY. The distance between the 1st arrow and the 4th arrow is 180 cm. Find the length of Line XY.",
+  "answer": "540",
+  "unit": "cm",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "line XY with arrows 1st, 2nd, 3rd, 4th ... 10th",
+  "ocr_fixes": [
+   "superscripts 'st'/'th' restored"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q29",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The sum of 2 numbers is 3764. The difference of the 2 numbers is 132. Find the greater number.",
+  "answer": "1948",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 28"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q30",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A bus left a bus interchange with some people onboard. When it reached the first bus-stop, 7 people boarded the bus and 9 people alighted the bus. There were 24 people on the bus when it left the bus-stop. How many people were onboard the bus when it left the bus interchange?",
+  "answer": "26",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q31",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Anne baked 240 more chocolate tarts than strawberry tarts. She baked 9 times as many chocolate tarts as strawberry tarts. How many tarts did she bake?",
+  "answer": "300",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 3 1"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q32",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Joe took 1 h 25 min to complete his painting. He finished his painting at 1:10pm. What time did Joe start painting?\nGive your answer in 24-h clock.",
+  "answer": "1145",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok (key '11 45')",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q33",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 33,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Jeya collected 2540 bottle caps. He collected 1230 more bottle caps than Hansel. How many bottle caps did they collect altogether?",
+  "answer": "3850",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "stray period after '1230 more' removed"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q34",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 34,
+  "marks": 3,
+  "question_type": "long",
+  "question": "In a tin, there are 482 blue, green and yellow marbles altogether. There are three times as many blue marbles as green marbles. There are 42 yellow marbles. How many blue marbles are there in the tin?",
+  "answer": "330",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Inatin' -> 'In a tin'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q35",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 35,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Li Ming had 432 pears. He put them into 6 equal bags. He gave 2 bags to Ali. How many pears had Li Ming left?",
+  "answer": "288",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q36",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 36,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Notebooks are sold in a shop as shown.\n1 notebook for ＄2.80\n3 notebooks for ＄8\nMr Muthu bought 14 notebooks. What was the least amount of money he needed to pay for all the notebooks?",
+  "answer": "37.60",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "two offers: 1 notebook for ＄2.80, 3 notebooks for ＄8",
+  "ocr_fixes": [
+   "offer '4 notebook' -> '1 notebook' (image)",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_NanHua_EOY_Q37",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Nan Hua",
+  "exam": "EOY",
+  "source": "(Nan Hua) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-NanHua.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 37,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The figure below is made up of 5 identical rectangular tiles.\nFind the area of 1 tile.",
+  "answer": "75",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle of 5 tiles: two vertical tiles at the ends and three stacked horizontal tiles, total width 25 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

@@ -1,0 +1,879 @@
+[
+ {
+  "id": "2024_P3_TaoNan_EOY_Q01",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is eight thousand and fifteen in numerals?",
+  "options": {
+   "1": "815",
+   "2": "8015",
+   "3": "80 015",
+   "4": "800 015"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing in index"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q02",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Complete the number pattern.\n9999, 9989, 9979, 9969, ______, 9949",
+  "options": {
+   "1": "9939",
+   "2": "9950",
+   "3": "9959",
+   "4": "9960"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q03",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "How many of the marked angles are acute angles?",
+  "options": {
+   "1": "5",
+   "2": "6",
+   "3": "7",
+   "4": "8"
+  },
+  "answer_key": "1",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "arrow shape with marked angles",
+  "ocr_fixes": [
+   "options: '«5' -> '5'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok per key (marked angles not independently recounted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q04",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following fractions is not an equivalent fraction of $\\frac{2}{3}$?",
+  "options": {
+   "1": "$\\frac{4}{6}$",
+   "2": "$\\frac{6}{9}$",
+   "3": "$\\frac{8}{15}$",
+   "4": "$\\frac{12}{18}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q05",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the mass of the packet of flour?",
+  "options": {
+   "1": "2 kg 50 g",
+   "2": "2 kg 60 g",
+   "3": "2 kg 500 g",
+   "4": "2 kg 600 g"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "flour packet on a dial scale (0 to 4 kg)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok per key (dial pointer between 2 kg and 3 kg, read about 2 kg 600 g)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q06",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What digit does ☺ stand for?\n  4 3 ☺ 1\n− 1 2 3 4\n  3 0 9 7",
+  "options": {
+   "1": "6",
+   "2": "2",
+   "3": "3",
+   "4": "9"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical subtraction 43?1 − 1234 = 3097 with a smiley for the missing digit",
+  "ocr_fixes": [
+   "smiley read as '©'",
+   "Q number read as '6,'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok (4331 − 1234 = 3097)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q07",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "8753 is 80 tens more than ______.",
+  "options": {
+   "1": "7953",
+   "2": "8673",
+   "3": "8833",
+   "4": "9553"
+  },
+  "answer_key": "1",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q08",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Isaac wants to buy an apple for 80¢, a bunch of bananas for ＄1.25 and an orange for 75¢. He only has ＄2.50. How much more money does he need?",
+  "options": {
+   "1": "＄2.80",
+   "2": "＄2.00",
+   "3": "＄0.50",
+   "4": "＄0.30"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q09",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The bar graph shows the number of points scored by four classes in a Math competition. Which class scored the highest points in total?",
+  "options": {
+   "1": "3K",
+   "2": "3L",
+   "3": "3M",
+   "4": "3N"
+  },
+  "answer_key": "2",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "double bar graph (Boys, Girls) of points for 3K, 3L, 3M, 3N",
+  "ocr_fixes": [
+   "question text and the line 'Which class...' joined"
+  ],
+  "checked_against_image": [
+   6,
+   19
+  ],
+  "answer_check": "solved:2 differs from key (key page prints 4): 3K 12+5=17, 3L 9+13=22, 3M 4+17=21, 3N 13+8=21, so 3L; answer_key set to 2",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q10",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the area of the figure?",
+  "options": {
+   "1": "30 cm²",
+   "2": "28 cm²",
+   "3": "26 cm²",
+   "4": "18 cm²"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "octagon-like figure on a 1 cm grid",
+  "ocr_fixes": [
+   "'cm?' -> 'cm²'"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (6 x 5 rectangle 30 minus four half-squares 2 = 28)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q11",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 8619 in words.",
+  "answer": "Eight thousand, six hundred and nineteen",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q12",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "A shirt has 7 buttons. How many buttons are there on 357 similar shirts?",
+  "answer": "2499",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Ashirt' -> 'A shirt'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q13",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of $\\square$.\n$\\square \\times 6 = 822$",
+  "answer": "137",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 43",
+   "equation garbled in OCR"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok (key 822 ÷ 6 = 137)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q14",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Draw a line parallel to line AB that passes through point C. Use a pencil to draw your line.",
+  "answer": "A line through C parallel to AB (drawn on the grid)",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with line AB and point C",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9,
+   19
+  ],
+  "answer_check": "ok (drawing question; key shows the line through C parallel to AB)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q15",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "$\\frac{7}{10} - \\frac{2}{5} = $ ______",
+  "answer": "$\\frac{3}{10}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing; fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q16",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Use all the digits 8, 2, 0, 1 to form the smallest 4-digit odd number.",
+  "answer": "2081",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q17",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The numbers in each row and column add up to 370. Fill in the missing numbers in the boxes.",
+  "answer": "115 and 135",
+  "answer_parts": [
+   {
+    "part": "column middle",
+    "value": "115",
+    "unit": ""
+   },
+   {
+    "part": "row middle",
+    "value": "135",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "T-shaped grid of boxes with 120, 110 and 125 given",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10,
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q18",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ahmad has ＄21.30. Peter has ＄3.20 less than Ahmad. How much do the two boys have altogether?",
+  "answer": "39.40",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'",
+   "Q number read as 18 with prefix"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q19",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange these fractions from the smallest to the greatest.\n$\\frac{3}{4}$, $\\frac{4}{9}$, $\\frac{4}{11}$, $\\frac{5}{8}$",
+  "answer": "$\\frac{4}{11}$, $\\frac{4}{9}$, $\\frac{5}{8}$, $\\frac{3}{4}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q20",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mdm Lim drove from her house to her office. After that, she drove to the supermarket to buy groceries before driving home. Mdm Lim drove a total distance of 5 km 375 m. What was the distance between the supermarket and her house?",
+  "answer": "1 km 400 m",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "triangle diagram: office–house 2 km 225 m, office–supermarket 1 km 750 m, supermarket–house ?",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12,
+   20
+  ],
+  "answer_check": "ok (5375 − 3975 = 1400; the key writes 3976 once, a typo)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q21",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 21,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mrs Lee had 500 sweets. She gave some of the sweets to her students. After giving each student 6 sweets, she had 56 sweets left.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many sweets did she give to her students in total?"
+   },
+   {
+    "part": "b",
+    "text": "How many students were there?"
+   }
+  ],
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "444",
+    "unit": "sweets"
+   },
+   {
+    "part": "b",
+    "value": "74",
+    "unit": "students"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q22",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 22,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The Tan family shared a pizza. Mr Tan ate $\\frac{5}{12}$ of the pizza. Mrs Tan ate $\\frac{1}{3}$ of the pizza. The rest of the pizza was eaten by their son.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What fraction of the pizza was eaten by Mr and Mrs Tan altogether? Give your answer in the simplest form."
+   },
+   {
+    "part": "b",
+    "text": "What fraction of the pizza was eaten by their son? Give your answer in the simplest form."
+   }
+  ],
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "$\\frac{3}{4}$",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "$\\frac{1}{4}$",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR (5/12 read as 5/To), read from image"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q23",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 23,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Adam, Ben and Clare had 2659 stickers altogether. Ben had 162 more stickers than Adam. Clare had 137 fewer stickers than Adam. How many stickers did Adam have?",
+  "answer": "878",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q24",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 24,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Samantha watched two movies continuously at the cinema. The first movie lasted for 2 h 15 min. The second movie lasted for 1 h 50 min.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How long did Samantha spend watching the two movies? Give your answer in h and min."
+   },
+   {
+    "part": "b",
+    "text": "She started watching the first movie at 14 25. What time did she finish watching the second movie?"
+   }
+  ],
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "4 h 5 min",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "18 30",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'(o)' -> '(b)'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_TaoNan_EOY_Q25",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The length of a rectangle is twice its breadth. The perimeter of the rectangle is 54 m.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the length of the rectangle?"
+   },
+   {
+    "part": "b",
+    "text": "What is the area of the rectangle?"
+   }
+  ],
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "18",
+    "unit": "m"
+   },
+   {
+    "part": "b",
+    "value": "162",
+    "unit": "m²"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

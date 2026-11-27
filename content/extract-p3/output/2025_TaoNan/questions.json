@@ -1,0 +1,938 @@
+[
+ {
+  "id": "2025_P3_TaoNan_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 2061, which digit is in the hundreds place?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "0",
+   "4": "6"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 4"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the remainder when 103 is divided by 7?",
+  "options": {
+   "1": "5",
+   "2": "2",
+   "3": "3",
+   "4": "14"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Whatis' split"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which angle is an obtuse angle?",
+  "options": {
+   "1": "angle (1) in the figure",
+   "2": "angle (2) in the figure",
+   "3": "angle (3) in the figure",
+   "4": "angle (4) in the figure"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four angles labelled (1) to (4) drawn as options",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2,
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is an equivalent fraction of $\\frac{2}{3}$?",
+  "options": {
+   "1": "$\\frac{1}{3}$",
+   "2": "$\\frac{4}{9}$",
+   "3": "$\\frac{5}{6}$",
+   "4": "$\\frac{6}{9}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions rebuilt from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "A bag of apples is measured using the scale. What is the mass of the bag of apples?",
+  "options": {
+   "1": "470 g",
+   "2": "350 g",
+   "3": "290 g",
+   "4": "270 g"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "dial scale 0, 250, 500, 750 g with pointer between 250 and 500",
+  "ocr_fixes": [
+   "'380 g' read, image shows 350 g"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the area of the rectangle?",
+  "options": {
+   "1": "14 cm²",
+   "2": "28 cm²",
+   "3": "45 cm²",
+   "4": "59 cm²"
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 9 cm by 5 cm",
+  "ocr_fixes": [
+   "'140m²' read, image shows 14 cm²"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following numbers from the greatest to the smallest.\n\n3690  9036  9630  3906",
+  "options": {
+   "1": "3690 3906 9036 9630",
+   "2": "9036 9630 3906 3690",
+   "3": "9630 9036 3690 3906",
+   "4": "9630 9036 3906 3690"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The bar graph shows the number of ice-cream cones sold at a funfair.\n\nEach ice-cream cone was sold for ＄2.\nWhat was the total amount received from the sale of the ice-cream cones?",
+  "options": {
+   "1": "＄380",
+   "2": "＄480",
+   "3": "＄760",
+   "4": "＄960"
+  },
+  "answer_key": "4",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical bar graph, ice-cream cones: Chocolate, Mango, Strawberry, Vanilla",
+  "ocr_fixes": [
+   "'$' to '＄'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok (key 4; bar heights read as 180+100+80+120=480 cones)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Two number patterns are shown.\n\nPattern 1: 7, 10, 13, 16, ...\nPattern 2: 8, 12, 16, 20, ...\n\nThe number 16 appears in both patterns. Which of the following numbers will also appear in both patterns?",
+  "options": {
+   "1": "22",
+   "2": "28",
+   "3": "32",
+   "4": "36"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "table of the two number patterns",
+  "ocr_fixes": [
+   "'Pattem' to 'Pattern'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Mother bought a cake and 2 slices of pie. She gave the cashier ＄50. How much change did she receive?\n\n1 cake for ＄27.15\n1 slice of pie for ＄1.40",
+  "options": {
+   "1": "＄20.05",
+   "2": "＄21.45",
+   "3": "＄28.55",
+   "4": "＄29.95"
+  },
+  "answer_key": "1",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "prices: cake ＄27.15, slice of pie ＄1.40",
+  "ocr_fixes": [
+   "'4 cake' to '1 cake'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "solved:1 (＄50 - ＄27.15 - 2 x ＄1.40 = ＄20.05) differs from key 2 (＄21.45 = one slice only)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 8195 in words.",
+  "answer": "Eight thousand, one hundred and ninety-five",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of 3812 − 2123.",
+  "answer": "1689",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The figure is made up of identical rectangles. What fraction of the figure is shaded?",
+  "answer": "$\\frac{3}{10}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "grid of 10 identical rectangles, 3 shaded",
+  "ocr_fixes": [
+   "'is'shadéd' to 'is shaded'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Arrange these fractions from the greatest to the smallest.\n\n$\\frac{3}{5}$, $\\frac{4}{9}$, $\\frac{1}{2}$",
+  "answer": "$\\frac{3}{5}$, $\\frac{1}{2}$, $\\frac{4}{9}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions rebuilt from image"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The square grid shows line AB and point C. Use a pencil to draw a line that is parallel to AB and passes through C.",
+  "answer": "a line through C parallel to AB (drawn)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line AB and point C",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (drawing; key shows the parallel line)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing number?\n\n$3 \\times 8 = \\square - 9$",
+  "answer": "33",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "equation rebuilt from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing number?\n\n$\\square \\div 6 = 857$ R 1",
+  "answer": "5143",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "equation rebuilt from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Pen ＄1.75, Eraser 65¢, Highlighter ＄2.15, Stapler ＄4.90.\n\nWhat is the price difference between the cheapest and most expensive item?",
+  "answer": "4.25",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "four items with prices: pen, eraser, highlighter, stapler",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Use all the digits below to form the smallest 4-digit odd number.\n\n6  0  5  8",
+  "answer": "6085",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "four digit cards 6, 0, 5, 8",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "solved:6085 differs from key 0685 (key prints a leading 0, a typo; 6085 is the smallest 4-digit odd number)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Two containers with some water are shown below. All the water from the two containers was poured into an empty jug. The capacity of the jug was 2 ℓ. How much more water was needed to fill the jug completely?",
+  "answer": "1 ℓ 0 mℓ",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "ℓ",
+    "value": "1",
+    "unit": "ℓ"
+   },
+   {
+    "part": "mℓ",
+    "value": "0",
+    "unit": "mℓ"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two 500 mℓ beakers with water and an empty jug",
+  "ocr_fixes": [
+   "'2 l' to '2 ℓ'",
+   "'ml' to 'mℓ'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "unsure: water levels in the two beakers are not legible in the scan; answer from key (2 ℓ - 500 mℓ - 500 mℓ = 1 ℓ)",
+  "confidence": "low"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 9,
+  "section": "C",
+  "question_no": 21,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mr Low baked 1845 cookies. He baked 365 more cookies than Mr Tan.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many cookies did Mr Tan bake?"
+   },
+   {
+    "part": "b",
+    "text": "How many cookies did Mr Low and Mr Tan bake altogether?"
+   }
+  ],
+  "answer": "(a) 1480, (b) 3325",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "1480",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "3325",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 24"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 10,
+  "section": "C",
+  "question_no": 22,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Adam, Ben and Clarice shared a chocolate bar. Adam ate $\\frac{5}{12}$ of the chocolate bar while Ben ate $\\frac{1}{4}$ of the chocolate bar. Clarice ate the rest of the chocolate bar.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What fraction of the chocolate bar did Adam and Ben eat altogether? Give your answer in the simplest form."
+   },
+   {
+    "part": "b",
+    "text": "How much more of the chocolate bar was eaten by Clarice than Ben?"
+   }
+  ],
+  "answer": "(a) $\\frac{2}{3}$, (b) $\\frac{1}{12}$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "$\\frac{2}{3}$",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "$\\frac{1}{12}$",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions rebuilt from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 11,
+  "section": "C",
+  "question_no": 23,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Raju took 2 h 35 min to complete a race. Peter took 50 min more than Raju to complete the same race.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How long did Peter take to complete the race? Give your answer in h and min."
+   },
+   {
+    "part": "b",
+    "text": "The race started at 5.45 a.m. At what time did Raju complete the race? Give your answer in 24-hour clock."
+   }
+  ],
+  "answer": "(a) 3 h 25 min, (b) 0820",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "3 h 25 min",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "0820",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 12,
+  "section": "C",
+  "question_no": 24,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Jane used a piece of wire to form a rectangle and a square. The length of the rectangle was twice the length of the square.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the area of the square."
+   },
+   {
+    "part": "b",
+    "text": "Find the length of the piece of wire Jane used."
+   }
+  ],
+  "answer": "(a) 144 cm², (b) 128 cm",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "144",
+    "unit": "cm²"
+   },
+   {
+    "part": "b",
+    "value": "128",
+    "unit": "cm"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 24 cm by 16 cm and a square joined at a corner",
+  "ocr_fixes": [
+   "'24,' read as number 24"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_TaoNan_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Tao Nan",
+  "exam": "EOY",
+  "source": "(Tao Nan) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-TaoNan.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Buy 1 packet and get 2 pens free. ＄9 per packet (each packet has 6 pens).",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Mdm Aishah needs 48 pens. What is the least amount of money she has to pay?"
+   },
+   {
+    "part": "b",
+    "text": "Sam has ＄46. What is the greatest number of pens he can get?"
+   }
+  ],
+  "answer": "(a) ＄54, (b) 40",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "54",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "40",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "packet of 6 pens for ＄9 with 2 free pens",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok (key (b): 46 ÷ 9 = 5 R 1, 5 x 8 = 40 pens)",
+  "confidence": "medium"
+ }
+]

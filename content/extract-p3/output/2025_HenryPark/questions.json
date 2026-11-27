@@ -1,0 +1,1079 @@
+[
+ {
+  "id": "2025_P3_HenryPark_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Seven thousand, three hundred and sixteen in numerals is ______.",
+  "options": {
+   "1": "7036",
+   "2": "7306",
+   "3": "7316",
+   "4": "7360"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 4",
+   "'threes hundred' -> 'three hundred'"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The value of the digit 8 in 8439 is ______.",
+  "options": {
+   "1": "8",
+   "2": "80",
+   "3": "800",
+   "4": "8000"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which fraction is equivalent to $\\frac{2}{5}$?",
+  "options": {
+   "1": "$\\frac{2}{10}$",
+   "2": "$\\frac{4}{15}$",
+   "3": "$\\frac{6}{15}$",
+   "4": "$\\frac{12}{15}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction and options garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the amount of water shown in the beaker below?",
+  "options": {
+   "1": "410 mℓ",
+   "2": "420 mℓ",
+   "3": "450 mℓ",
+   "4": "490 mℓ"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale to 500 mℓ",
+  "ocr_fixes": [
+   "options 'mt' -> 'mℓ'",
+   "'In' -> 'in'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "unsure: beaker scale too small to read at this resolution, key 450 mℓ accepted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "How many seconds are there in 3 min 15 s?",
+  "options": {
+   "1": "18 s",
+   "2": "45 s",
+   "3": "195 s",
+   "4": "315 s"
+  },
+  "answer_key": "3",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "trailing '7' removed"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following marked angles is an acute angle?",
+  "options": {
+   "1": "[figure]",
+   "2": "[figure]",
+   "3": "[figure]",
+   "4": "[figure]"
+  },
+  "answer_key": "1",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four marked angles drawn as figures (options are pictures)",
+  "ocr_fixes": [
+   "options are pictures: (1) acute, (2) right angle, (3) obtuse, (4) obtuse"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A shop printed 325 shirts on Monday. It printed 178 fewer shirts on Tuesday than on Monday. The shop printed 600 shirts in total on Tuesday and Wednesday. How many shirts did the shop print on Wednesday?",
+  "options": {
+   "1": "97",
+   "2": "147",
+   "3": "453",
+   "4": "503"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options (1) and (4) read as '(4) 97' and '(4) 503'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Look at the figure below. Grace wants to shade $\\frac{1}{2}$ of the figure. How many more part(s) must she shade?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle of 8 equal parts, 3 shaded",
+  "ocr_fixes": [
+   "options (1),(3) misread"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "short",
+  "question": "How many hundreds are there in 4800?",
+  "answer": "48",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'48007' -> '4800?'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n$6 \\times 4 = \\boxed{?} \\times 8$",
+  "answer": "3",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "equation garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Arrange the following numbers in order. Begin with the smallest.\n7586, 5678, 7856, 5867",
+  "answer": "5678, 5867, 7586, 7856",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'§678' -> '5678'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express 6035 g in kilograms and grams.",
+  "answer": "6 kg 35 g",
+  "unit": "kg g",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "6",
+    "unit": "kg"
+   },
+   {
+    "part": "",
+    "value": "35",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The figure is drawn on a square grid. Find the area of the figure.",
+  "answer": "7",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "shape on 1 cm square grid made of whole squares and half squares",
+  "ocr_fixes": [
+   "Q number read as 43"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express 2:15 pm using the 24-hour clock.",
+  "answer": "1415",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'2°15' -> '2:15'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Miss Lee bought a storybook and a pen. How much did Miss Lee pay in total?",
+  "answer": "30.05",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "pen ＄2.75 and storybook ＄27.30",
+  "ocr_fixes": [
+   "'2 storybook' -> 'a storybook'",
+   "prices $ -> ＄"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Name one pair of parallel lines in the figure.",
+  "answer": "AB // ED",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "pentagon ABCDE on a grid",
+  "ocr_fixes": [
+   "Q number read as 46"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The bar graph shows the number of books read by 4 classes.\nWhat is the total number of books read by all 4 classes?",
+  "answer": "430",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph, classes 1A 130, 1B 110, 1C 100, 1D 90",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Find the difference between 7900 and 168.\n(b) Form the greatest 4-digit number using all the digits shown below.\n0 1 9 3",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the difference between 7900 and 168."
+   },
+   {
+    "part": "b",
+    "text": "Form the greatest 4-digit number using all the digits shown below. 0 1 9 3"
+   }
+  ],
+  "answer": "7732; 9310",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "7732",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "9310",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 48",
+   "digit cards 0 1 9 3 shown in text"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mei Mei baked 200 cupcakes. She kept 20 cupcakes for herself and shared the rest equally among her 9 friends. How many cupcakes did each friend receive?",
+  "answer": "20",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 49"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mdm Wong took 6 classes of pupils to the zoo.\nShe gave each pupil a packet of milk.\nThere were 35 pupils in one of the classes and 39 pupils in each of the remaining classes.\nHow many packets of milk did Mdm Wong give away altogether?",
+  "answer": "230",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Which two of the following fractions are greater than $\\frac{1}{2}$?\n$\\frac{5}{11}$, $\\frac{7}{9}$, $\\frac{4}{8}$, $\\frac{4}{7}$",
+  "answer": "$\\frac{7}{9}$ and $\\frac{4}{7}$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "$\\frac{7}{9}$",
+    "unit": ""
+   },
+   {
+    "part": "",
+    "value": "$\\frac{4}{7}$",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'greater than 4' -> 'greater than 1/2' (read from image)",
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Joy ran 4 complete rounds around the field. What was the total distance she ran? Give your answer in kilometres and metres.",
+  "answer": "1 km 200 m",
+  "unit": "km m",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1",
+    "unit": "km"
+   },
+   {
+    "part": "",
+    "value": "200",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 100 m by 50 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Fatimah went to the library at 13 45 and left at 15 50. How much time did she spend in the library? Give your answer in h and min.",
+  "answer": "2 h 5 min",
+  "unit": "h min",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "2",
+    "unit": "h"
+   },
+   {
+    "part": "",
+    "value": "5",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows the favourite sports chosen by a group of students.\nEach statement is either true or false from the information given. Put a tick (✓) to indicate your answer.\n1. There are twice as many girls who chose Basketball as their favourite sport than Floorball.\n2. There are 130 boys who chose Tennis and Badminton as their favourite sport.",
+  "answer": "1. False; 2. True",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "1",
+    "value": "False",
+    "unit": ""
+   },
+   {
+    "part": "2",
+    "value": "True",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of Girls and Boys for Floorball, Basketball, Tennis, Badminton; plus True/False table",
+  "ocr_fixes": [
+   "Q number 24 key labelled Q34",
+   "axis garbled"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "unsure: bar values hard to read in scan (watermark/blur), key accepted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Anisah paid ＄4.90 for 2 packets of sweets during a sale on Wednesday.\nUsual Price: ＄4 per packet\nShe bought another 2 identical packets of the sweets at the usual price on Friday.\nHow much more did she have to pay for the 2 packets of sweets on Friday?",
+  "answer": "3.10",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "sale poster: Wednesday sale ＄4.90 for 2 packets, usual price ＄4 per packet",
+  "ocr_fixes": [
+   "key labelled Q35"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q26",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Emily has 80 more stickers than Sarah. Emily gave 27 stickers to Sarah. How many more stickers did Emily have than Sarah in the end?",
+  "answer": "26",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q27",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 27,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mr Lim made 325 mℓ of apple juice in the morning. He then made 650 mℓ of apple juice in the afternoon.\n(a) How much apple juice did he make in total?\n(b) All the apple juice was poured into 1 jug and 1 bottle without spilling. Both the jug and the bottle were filled completely. The jug was filled with 4 times as much apple juice as the bottle.\nHow much more apple juice was there in the jug than in the bottle?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How much apple juice did he make in total?"
+   },
+   {
+    "part": "b",
+    "text": "All the apple juice was poured into 1 jug and 1 bottle without spilling. Both the jug and the bottle were filled completely. The jug was filled with 4 times as much apple juice as the bottle. How much more apple juice was there in the jug than in the bottle?"
+   }
+  ],
+  "answer": "975 mℓ; 585 mℓ",
+  "unit": "mℓ",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "975",
+    "unit": "mℓ"
+   },
+   {
+    "part": "b",
+    "value": "585",
+    "unit": "mℓ"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'mé' -> 'mℓ'",
+   "'Julce' -> 'juice'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "solved:585 differs from key (key part (b) ends at 975-195=780, which is the jug's amount, not the difference; difference = 780-195 = 585)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q28",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 28,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mr Lim needs 1250 cupcakes for a carnival. He has 377 cupcakes. Cupcakes are sold in boxes of 7. What is the least number of boxes of cupcakes that he needs to buy for the carnival?",
+  "answer": "125",
+  "unit": "boxes",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number 28 ok",
+   "'camival' -> 'carnival'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q29",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 29,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mr Lim had 260 more stamps than Mr Ang at first. After he gave away 100 stamps, he had twice as many stamps as Mr Ang. How many stamps did Mr Lim have at first?",
+  "answer": "420",
+  "unit": "stamps",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 28 (repeat), is 29",
+   "'slamps' -> 'stamps'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_HenryPark_EOY_Q30",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 30,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Trees are planted at an equal distance apart along a road. The distance between the 1st and the 4th tree is 24 m. Find the distance between the 3rd tree and the 15th tree.",
+  "answer": "96",
+  "unit": "m",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "row of trees, 1st to 4th marked 24 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

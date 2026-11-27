@@ -1,0 +1,1330 @@
+[
+ {
+  "id": "2022_P3_Rosyth_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "5 thousands and 3 tens written in numeral is ______.",
+  "options": {
+   "1": "5300",
+   "2": "5030",
+   "3": "5003",
+   "4": "5130"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following numbers is the digit 4 in the hundreds place?",
+  "options": {
+   "1": "1942",
+   "2": "2804",
+   "3": "3476",
+   "4": "4501"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Ruth bought 6 packets of stickers. Each packet contains 9 stickers.\nHow many stickers did Ruth have altogether?",
+  "options": {
+   "1": "15",
+   "2": "45",
+   "3": "48",
+   "4": "54"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The height of a classroom door is about ______.",
+  "options": {
+   "1": "2 cm",
+   "2": "2 m",
+   "3": "20 cm",
+   "4": "20 m"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'2cm' -> '2 cm' spacing"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the time shown on the clock below?",
+  "options": {
+   "1": "9 minutes past 10",
+   "2": "9 minutes to 10",
+   "3": "51 minutes past 10",
+   "4": "51 minutes to 10"
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock, hands near 10 and 2",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "unsure: key digit for Q5 partly hidden by watermark (reads 1); clock hands are hard to read",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following is the greatest number?",
+  "options": {
+   "1": "3914",
+   "2": "3491",
+   "3": "3941",
+   "4": "3149"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q6 number missing in OCR",
+   "option 2 OCR 3494 -> 3491"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the difference between 7900 and 1090?",
+  "options": {
+   "1": "6800",
+   "2": "6810",
+   "3": "6990",
+   "4": "8990"
+  },
+  "answer_key": "2",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the remainder when 732 is divided by 7?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "There are 35 students in a class. There are 5 students in each group. How many groups are there in the class?",
+  "options": {
+   "1": "5",
+   "2": "7",
+   "3": "30",
+   "4": "40"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Study the diagram carefully.\nHow much more water must be poured into the container for it to be filled with 500 mℓ of water?",
+  "options": {
+   "1": "150 mℓ",
+   "2": "230 mℓ",
+   "3": "270 mℓ",
+   "4": "350 mℓ"
+  },
+  "answer_key": "1",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale marked 250 and 500 mℓ, water level between",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok (level read ~350 mℓ, 150 more)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "640 is ______ less than 5800.",
+  "options": {
+   "1": "5140",
+   "2": "5160",
+   "3": "5260",
+   "4": "6440"
+  },
+  "answer_key": "2",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR dropped the blank in Q11 line"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The sum of 2 numbers is 360. The difference between the 2 numbers is 40.\nWhat is the value of the smaller number?",
+  "options": {
+   "1": "160",
+   "2": "200",
+   "3": "320",
+   "4": "400"
+  },
+  "answer_key": "1",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q12 number placed after the text in OCR"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Paul had 54 pencils. Weiming had 7 times as many pencils as Paul.\nHow many more pencils did Weiming have than Paul?",
+  "options": {
+   "1": "61",
+   "2": "324",
+   "3": "378",
+   "4": "432"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which one of the following fractions is equivalent to $\\frac{2}{3}$?",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{2}{6}$",
+   "3": "$\\frac{4}{6}$",
+   "4": "$\\frac{4}{9}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which one of the following fractions is smaller than $\\frac{1}{2}$?",
+  "options": {
+   "1": "$\\frac{2}{3}$",
+   "2": "$\\frac{3}{5}$",
+   "3": "$\\frac{5}{6}$",
+   "4": "$\\frac{3}{7}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the greatest 4-digit number that can be formed using all the digits below?\nEach digit can only be used once.\n5 2 3 7",
+  "answer": "7532",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "four digit cards 5, 2, 3, 7",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "4702 + 3266 =",
+  "answer": "7968",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "spacing"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "There were 5398 people at a carnival.\n4267 were adults and the rest were children.\nHow many children were at the carnival?",
+  "answer": "1131",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "10 m 2 cm = ______ cm",
+  "answer": "1002",
+  "unit": "cm",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of ＄3.30 − ＄0.80.",
+  "answer": "2.50",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> fullwidth '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing value in the box below?\n5200 = ? + 3855",
+  "answer": "1345",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing digit in the box?\n8 $\\times$ ? = 56",
+  "answer": "7",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Whats' -> 'What is'",
+   "box shown as \"?\""
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the product of 509 and 9.",
+  "answer": "4581",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Write the missing numerator and denominator.\n$1 = \\frac{(a)}{8} = \\frac{10}{(b)}$",
+  "answer": "(a) 8, (b) 10",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "8",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "10",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "equation read from image (OCR garbled)"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "solved: (a) 8, (b) 10; key says (b) 16, which does not fit 1 = 10/(b) (key error)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph shows the number of bottles four classes collected for a recycling project.\nWhat is the total number of bottles collected by the 4 classes?",
+  "answer": "196",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph, bottles collected by 3A-3D, axis to 80",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (bars read approx 68+52+34+44=198 from crop; key 196, bars not exactly readable, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of ice cream cones sold during the weekdays.\nWhich day has twice as many ice cream cones sold as on Tuesday?",
+  "answer": "Friday",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph, ice cream cones Mon-Fri",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (graph not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Devi started her swimming lesson at 10.30 a.m.\nHer lesson lasted for 1 h 15 min.\nWhat time did her swimming lesson end?",
+  "answer": "11.45",
+  "unit": "a.m.",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "solved: 11.45 a.m.; key says \"11.45 pm\" but the answer line prints a.m. (key typo)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Sulin took 1 h 25 min to cycle from her home to the park. Then she took another 45 min to cycle from the park to the library. What was the total time taken for Sulin to cycle from her home to the library?",
+  "answer": "2 h 10 min",
+  "unit": "h min",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "2 h 10 min",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number placed after text in OCR"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What are the missing digits represented by (a) and (b)?\n  4 9 3 (a)\n+ 3 4 (b) 8\n= 8 3 4 5",
+  "answer": "(a) 7, (b) 0",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "7",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "0",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical addition with two missing digits",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Lucy has 234 more beads than her sister.\nHow many beads must Lucy give to her sister so that both of them have the same number of beads?",
+  "answer": "117",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure below is made up of 6 identical rectangles.\nWhat fraction of the figure is shaded? Give your answer in its simplest form.",
+  "answer": "1/3",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "figure of 6 identical rectangles with some shaded",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the difference in mass between the two puppies?\nGive your answer in kilograms and grams.",
+  "answer": "1 kg 880 g",
+  "unit": "kg g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two weighing scales with Puppy A and Puppy B",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (scales not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Figure ABCD is made up of 3 identical rectangles. If the length of AD is 8 cm, what is the area of ABCD?",
+  "answer": "96",
+  "unit": "cm$^2$",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle ABCD split into 3 identical rectangles, AD = 8 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (96 consistent with 12 cm x 8 cm)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "In the grid below, draw a line parallel to AB through Point C."
+   },
+   {
+    "part": "b",
+    "text": "In the grid below, draw a line perpendicular to XY through Point Z."
+   }
+  ],
+  "answer": "drawing: (a) line through C parallel to AB; (b) line through Z perpendicular to XY",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "drawing",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "drawing",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "two grids with lines AB/point C and XY/point Z",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   25
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 17,
+  "section": "B",
+  "question_no": 35,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Study the following figure.\nHow many of the marked angles are obtuse angles?",
+  "answer": "4",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "figure with marked angles",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (figure not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 36,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Amanda prepared a few jugs of fruit punch for a party.\nAfter the guests drank 6 ℓ 533 mℓ of fruit punch, there was 2 ℓ 467 mℓ of fruit punch left. Each jug contained 3 ℓ of fruit punch.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the total volume of fruit punch prepared at the start of the party?"
+   },
+   {
+    "part": "b",
+    "text": "How many jugs of fruit punch did she prepare?"
+   }
+  ],
+  "answer": "(a) 9 ℓ (9000 mℓ), (b) 3",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "9",
+    "unit": "ℓ"
+   },
+   {
+    "part": "b",
+    "value": "3",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'l' -> 'ℓ', 'ml' -> 'mℓ'; OCR garbled amounts re-read from image"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q37",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 37,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Sarah spent ＄35.30 at a supermarket.\nBelle spent ＄7.65 less than her.\nHow much did both of them spend in all?",
+  "answer": "62.95",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q38",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 38,
+  "marks": 4,
+  "question_type": "long",
+  "question": "3 square cards of the same size are placed together to form a large rectangle shown below.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the length of $y$."
+   },
+   {
+    "part": "b",
+    "text": "Find the area of the shaded parts of the rectangle."
+   }
+  ],
+  "answer": "(a) 10 cm, (b) 50 cm$^2$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "10",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "50",
+    "unit": "cm$^2$"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle of 3 squares, 2 shaded, y spans 2 squares, total 15 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q39",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 39,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Ray and Samy had 168 cupcakes.\nAfter Ray had given 15 cupcakes to Samy, he had 2 times as many cupcakes as Samy.\nHow many cupcakes did Samy have at first?",
+  "answer": "41",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number placed before text in OCR"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Rosyth_EOY_Q40",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Rosyth",
+  "exam": "EOY",
+  "source": "(Rosyth) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Rosyth.pdf",
+  "source_pdf_page": 22,
+  "section": "C",
+  "question_no": 40,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mrs Tan has ＄244 to buy some apples to make some pies.\nThe apples are sold in packets of 8. Each packet costs ＄6.\nWhat is the maximum number of apples can she buy?",
+  "answer": "320",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (key working: 244 / 6 = 40 R 4; 40 x 8 = 320; key page handwritten)",
+  "confidence": "high"
+ }
+]

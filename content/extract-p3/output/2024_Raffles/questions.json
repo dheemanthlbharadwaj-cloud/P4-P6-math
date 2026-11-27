@@ -1,0 +1,947 @@
+[
+ {
+  "id": "2024_P3_Raffles_EOY_Q01",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The value of the digit 8 in 8241 is ______.",
+  "options": {
+   "1": "8",
+   "2": "80",
+   "3": "800",
+   "4": "8000"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q02",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number in the box?\n$\\frac{8}{12} = \\frac{\\square}{3}$",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   2,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q03",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What could be the mass of an apple?",
+  "options": {
+   "1": "10 g",
+   "2": "10 kg",
+   "3": "100 g",
+   "4": "100 kg"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "picture of an apple",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q04",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is 15 minutes after the time shown on the clock?",
+  "options": {
+   "1": "4.05 pm",
+   "2": "4.35 pm",
+   "3": "5.35 pm",
+   "4": "5.05 pm"
+  },
+  "answer_key": "4",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock showing 4.50",
+  "ocr_fixes": [
+   "question text recovered from image (OCR page-band had Q4/Q5 missing)"
+  ],
+  "checked_against_image": [
+   3,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q05",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In the figure, which angle is greater than a right angle?",
+  "options": {
+   "1": "$\\angle w$",
+   "2": "$\\angle x$",
+   "3": "$\\angle y$",
+   "4": "$\\angle z$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "quadrilateral with angles w, x, y, z marked",
+  "ocr_fixes": [
+   "Q5 recovered from image"
+  ],
+  "checked_against_image": [
+   3,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q06",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following numbers from the smallest to the greatest.\n8350 3580 5830",
+  "options": {
+   "1": "8350 3580 5830",
+   "2": "3580 8350 5830",
+   "3": "3580 5830 8350",
+   "4": "5830 3580 8350"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'§830' -> '5830'"
+  ],
+  "checked_against_image": [
+   4,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q07",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following fractions is the smallest?",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{2}{3}$",
+   "3": "$\\frac{3}{5}$",
+   "4": "$\\frac{4}{9}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options read from image"
+  ],
+  "checked_against_image": [
+   4,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q08",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Joan bought the book and the pen. She gave the cashier ＄50. How much change did she receive?\nBook ＄14.80\nPen ＄2.60",
+  "options": {
+   "1": "＄17.40",
+   "2": "＄32.60",
+   "3": "＄33.40",
+   "4": "＄35.20"
+  },
+  "answer_key": "2",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "picture of a book (＄14.80) and a pen (＄2.60)",
+  "ocr_fixes": [
+   "'$' -> '＄'",
+   "prices kept in text and figure"
+  ],
+  "checked_against_image": [
+   4,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q09",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How much more water is needed to fill the beaker to 500 mℓ?",
+  "options": {
+   "1": "130 mℓ",
+   "2": "160 mℓ",
+   "3": "320 mℓ",
+   "4": "340 mℓ"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale to 500 mℓ, water level about 160 mℓ",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'",
+   "Q9 recovered from image"
+  ],
+  "checked_against_image": [
+   5,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q10",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which two shapes shown in the grid have the same area?",
+  "options": {
+   "1": "A and C",
+   "2": "B and D",
+   "3": "A and B",
+   "4": "B and D"
+  },
+  "answer_key": "1",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "1 cm square grid with shapes A, B, C, D",
+  "ocr_fixes": [
+   "Q10 recovered from image",
+   "options (2) and (4) are both 'B and D' in the printed paper"
+  ],
+  "checked_against_image": [
+   5,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q11",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write eight thousand, five hundred and two in numerals.",
+  "answer": "8502",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q12",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n2 1 $\\square$ 7\n+ 4 5 3 6\n6 7 0 3",
+  "answer": "6",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q13",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the fraction represented by A on the number line?",
+  "answer": "$\\frac{7}{10}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "number line 0 to 1 in 10 equal parts with arrow A",
+  "ocr_fixes": [
+   "'Whatis' -> 'What is'"
+  ],
+  "checked_against_image": [
+   7,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q14",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the sum of $\\frac{1}{4}$ and $\\frac{3}{8}$.",
+  "answer": "$\\frac{5}{8}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   7,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q15",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Draw a line perpendicular to AB passing through point C.",
+  "answer": "a line through C perpendicular to AB (drawing; key shows the line on the grid)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line AB and point C",
+  "ocr_fixes": [
+   "Q15 recovered from image"
+  ],
+  "checked_against_image": [
+   7,
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q16",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There are 6 donuts in a box. Mrs Lee bought 8 boxes. How many donuts did she get?",
+  "answer": "48",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "picture of donuts",
+  "ocr_fixes": [
+   "OCR noise 'fey', 'Vw WY' removed"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q17",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Ali had 637 oranges. He packed them into bags of 7 oranges. How many bags of oranges did he pack?",
+  "answer": "91",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q18",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Raja bought 720 g of potatoes. Mrs Tan bought three times as much potatoes as Mrs Raja. How much potatoes did Mrs Tan buy?",
+  "answer": "2160",
+  "unit": "g",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q19",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The perimeter of a square is 36 cm.\nFind the area of the square.",
+  "answer": "81",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q20",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The height of three stacked paper cups is 20 cm. The height of two stacked paper cups is 16 cm. What is the height of 1 paper cup?",
+  "answer": "12",
+  "unit": "cm",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "stacks of 3 cups (20 cm), 2 cups (16 cm) and one cup (?)",
+  "ocr_fixes": [
+   "'Answer: 20 om 160m' noise removed"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q21",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 10,
+  "section": "C",
+  "question_no": 21,
+  "marks": 4,
+  "question_type": "long",
+  "question": "There were 4320 adults and 1695 children in a stadium.\n(a) How many fewer children than adults were there?\n(b) There were 840 boys. How many girls were there?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many fewer children than adults were there?"
+   },
+   {
+    "part": "b",
+    "text": "There were 840 boys. How many girls were there?"
+   }
+  ],
+  "answer": "2625; 855",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "2625",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "855",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q22",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 11,
+  "section": "C",
+  "question_no": 22,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The sum of 2 numbers is 86.\nThe difference between the 2 numbers is 14.\n(a) Find the smaller number.\n(b) Find the bigger number.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the smaller number."
+   },
+   {
+    "part": "b",
+    "text": "Find the bigger number."
+   }
+  ],
+  "answer": "36; 50",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "36",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "50",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Thesum' -> 'The sum'",
+   "'2 number' -> '2 numbers'"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q23",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 12,
+  "section": "C",
+  "question_no": 23,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The bar graph shows the number of children who visited the school library in one week. The number of children who visited the library on Friday is not shown.\nThe number of children who visited the library on Friday is the same as the total number of children who visited the library on Monday and Tuesday.\n(a) How many children visited the library on Friday?\n(b) There were equal number of boys and girls who visited the library on Friday. Complete the bar graph for the number of boys and girls for Friday.\n(c) Write ‘T’ for true and ‘F’ for false in the boxes.\n(i) There were 5 more girls than boys who visited the library on Wednesday.\n(ii) There were twice as many girls as boys who visited the library on Thursday.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many children visited the library on Friday?"
+   },
+   {
+    "part": "b",
+    "text": "There were equal number of boys and girls who visited the library on Friday. Complete the bar graph for the number of boys and girls for Friday."
+   },
+   {
+    "part": "c",
+    "text": "Write ‘T’ for true and ‘F’ for false in the boxes. (i) There were 5 more girls than boys who visited the library on Wednesday. (ii) There were twice as many girls as boys who visited the library on Thursday."
+   }
+  ],
+  "answer": "90; 45 boys and 45 girls (bars drawn); T, F",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "90",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "45 boys and 45 girls",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "T, F",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "double bar graph (boys, girls) Monday to Friday, Friday bars missing",
+  "ocr_fixes": [
+   "intro line order fixed (OCR put '23.' mid-sentence)"
+  ],
+  "checked_against_image": [
+   12,
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q24",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 24,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Sarah left her home for the library at 15 40. She took 15 minutes to walk to the bus-stop. She waited for 25 minutes for the bus.\nUse a timeline to help you find your answers.\n(a) What time did the bus arrive at the bus-stop?\n(b) Sarah reached the library at 16 45. She left the library at 18 30. How long was Sarah at the library?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What time did the bus arrive at the bus-stop?"
+   },
+   {
+    "part": "b",
+    "text": "Sarah reached the library at 16 45. She left the library at 18 30. How long was Sarah at the library?"
+   }
+  ],
+  "answer": "16 20; 1 h 45 min",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "16 20",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "1 h 45 min",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Was' -> 'was'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Raffles_EOY_Q25",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Irene and Peter used sticks to make squares and triangles. They used 4 sticks for each square and 3 sticks for each triangle.\n(a) Irene made 6 squares. She used the same number of sticks for the 6 squares to make some triangles. How many triangles did she make?\n(b) Peter made the same number of squares and triangles. He used 35 sticks altogether. How many squares did he make?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Irene made 6 squares. She used the same number of sticks for the 6 squares to make some triangles. How many triangles did she make?"
+   },
+   {
+    "part": "b",
+    "text": "Peter made the same number of squares and triangles. He used 35 sticks altogether. How many squares did he make?"
+   }
+  ],
+  "answer": "8; 5",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "8",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "5",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "a square and a triangle made of sticks",
+  "ocr_fixes": [
+   "'lrene' -> 'Irene'",
+   "brackets around the stick counts dropped (unconfirmed)"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

@@ -1,0 +1,1401 @@
+[
+ {
+  "id": "2022_P3_ACSJ_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 7408, the digit 0 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q1 text garbled 'digtOisinthe'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following has the largest value?",
+  "options": {
+   "1": "$36 \\div 6 = 6$",
+   "2": "$56 \\div 7 = 8$",
+   "3": "$48 \\div 8 = 6$",
+   "4": "$63 \\div 9 = 7$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options garbled, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which fraction is equivalent to $\\frac{5}{25}$?",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{2}{5}$",
+   "3": "$\\frac{3}{15}$",
+   "4": "$\\frac{4}{30}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q3 number missing in OCR; fractions read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the total number of perpendicular lines in all the letters below.",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "3",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "letters K W L Y on grid with right-angle marks",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the total of the values of the digit 4 in 4250 and 3420?",
+  "options": {
+   "1": "44",
+   "2": "440",
+   "3": "4040",
+   "4": "4400"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following fraction from the smallest to the greatest. $\\frac{3}{4}$, $\\frac{2}{3}$, $\\frac{5}{12}$",
+  "options": {
+   "1": "$\\frac{2}{3}$, $\\frac{3}{4}$, $\\frac{5}{12}$",
+   "2": "$\\frac{2}{3}$, $\\frac{5}{12}$, $\\frac{3}{4}$",
+   "3": "$\\frac{5}{12}$, $\\frac{2}{3}$, $\\frac{3}{4}$",
+   "4": "$\\frac{5}{12}$, $\\frac{3}{4}$, $\\frac{2}{3}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the total volume of the water in the 2 containers below?",
+  "options": {
+   "1": "2300 mℓ",
+   "2": "2600 mℓ",
+   "3": "3100 mℓ",
+   "4": "3400 mℓ"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two containers with litre scales, water levels",
+  "ocr_fixes": [
+   "ml -> mℓ",
+   "Q7 number missing in OCR"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok (about 2600 + 800)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Study the figure below. How many angles in the figure are smaller than right angle?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "7",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "polygon on grid with marked angles",
+  "ocr_fixes": [
+   "Q8 number missing in OCR"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Look at the figures below. Which of the following statement is true?",
+  "options": {
+   "1": "The area of Figure A is greater than Figure B.",
+   "2": "Figure A and Figure C have the same area.",
+   "3": "Figure A and Figure B have the same perimeter.",
+   "4": "Figure C has the greatest perimeter."
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "figures A, B, C on 1 cm grid",
+  "ocr_fixes": [
+   "Q9 number split from text"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Luke had 1092 stickers. He had 157 fewer stickers than Bobby. How many stickers do they have altogether?",
+  "options": {
+   "1": "1249",
+   "2": "2027",
+   "3": "2184",
+   "4": "2341"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'altog: ner' -> 'altogether'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arun ran 375 m up a hill and ran the same distance down the hill. He then ran 430 m before reaching the campsite. How far did he run altogether?",
+  "options": {
+   "1": "805 m",
+   "2": "1 km 180 m",
+   "3": "1 km 235 m",
+   "4": "1 km 610 m"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q11 text garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The graph below shows the amount of time Kumar spent on revising for his examination. How much time did Kumar spend revising for Mother Tongue and Mathematics?",
+  "options": {
+   "1": "80 min",
+   "2": "95 min",
+   "3": "120 min",
+   "4": "135 min"
+  },
+  "answer_key": "2",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of revision time by subject",
+  "ocr_fixes": [
+   "Q number read as 42"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Lewis worked from 9.50 a.m. to 5.30 p.m. on Monday. He had a lunchbreak from 12.30 p.m. to 1.20 p.m. How long did he work on Monday?",
+  "options": {
+   "1": "6 h 50 min",
+   "2": "7 h 30 min",
+   "3": "7 h 40 min",
+   "4": "8 h 20 min"
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 43",
+   "times read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Joey packed the cookies into 6 bags. Each bag has an equal number of cookies. There were 3 left after packing. The total number of cookies is between 50 and 55. How many cookies did Joey have?",
+  "options": {
+   "1": "51",
+   "2": "52",
+   "3": "53",
+   "4": "54"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "paper has handwritten strike-throughs of 'sweets' (twice); worded as cookies/cookies per the corrections"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Jackson has the amount of money shown below. He needs ＄9 to buy a toy. How much more money does he need?",
+  "options": {
+   "1": "＄4.30",
+   "2": "＄4.70",
+   "3": "＄4.90",
+   "4": "＄5.30"
+  },
+  "answer_key": "1",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "four ＄1 coins, a 50-cent coin and a 20-cent coin",
+  "ocr_fixes": [
+   "Q15 text missing in OCR",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The mass of a durian is 1080 g. The cubes on both sides of the pan are of equal mass. What is the mass of each cube?",
+  "options": {
+   "1": "216 g",
+   "2": "270 g",
+   "3": "360 g",
+   "4": "540 g"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "balance with cubes on left, durian and one cube on right",
+  "ocr_fixes": [
+   "Q number read as 46"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 9,
+  "section": "A",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Jonathan's watch showed 3.35 p.m. when he completed his homework. He took 1 h 45 min to complete his homework. His watch was 15 min faster than the actual time. What was the actual time when Jonathan started doing his homework?",
+  "options": {
+   "1": "1.35 p.m.",
+   "2": "2.05 p.m.",
+   "3": "5.05 p.m.",
+   "4": "5.35 p.m."
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 47"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 6 thousands and 45 ones in numerals.",
+  "answer": "6045",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "When 685 is divided by 7, the remainder is ______.",
+  "answer": "6",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of $\\frac{7}{12} + \\frac{1}{6}$.",
+  "answer": "$\\frac{9}{12}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q20 missing in OCR, read from image"
+  ],
+  "checked_against_image": [
+   11,
+   25
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 21,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the area of the rectangle below.",
+  "answer": "84",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 7 cm by 12 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the value in the box. $\\frac{2}{3} - \\frac{1}{9} = 1 - \\square$",
+  "answer": "$\\frac{4}{9}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Which two of the following fractions are greater than $\\frac{1}{2}$? $\\frac{5}{8}$, $\\frac{4}{9}$, $\\frac{3}{6}$, $\\frac{6}{11}$",
+  "answer": "$\\frac{5}{8}$ and $\\frac{6}{11}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Study the pattern below. What is the missing number? 7834, 7824, 7814, ______, 7794",
+  "answer": "7804",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'pattem' -> 'pattern'"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The diagram below shows a pineapple and a bunch of bananas on a weighing scale. The pineapple weighs 1800 g. What is the mass of the bunch of the bananas? Leave your answer in grams.",
+  "answer": "1500",
+  "unit": "g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "spring scale in kg with pointer near 3.3 kg",
+  "ocr_fixes": [
+   "Q25 missing in OCR"
+  ],
+  "checked_against_image": [
+   13,
+   25
+  ],
+  "answer_check": "ok (scale 3300 g - 1800 g)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Gavin and Jia Hao saved a total of ＄173.45. Gavin saved ＄86.90. How much did Jia Hao save?",
+  "answer": "86.55",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q26 missing in OCR",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of different types of fruits sold at a stall. How many more oranges than pears were sold?",
+  "answer": "24",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of apples, oranges, pears, mangoes",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Qian Wei had 94 sweets. Ravi had 24 fewer sweets than Qian Wei. Lena had 60 more sweets than Ravi. How many sweets did Lena have?",
+  "answer": "130",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 28:"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The travelling time between Town A and Town B is 2 hours and 43 minutes. A man started his journey at 11.45 a.m. from Town A to Town B. At what time did he arrive in Town B?",
+  "answer": "2.28",
+  "unit": "p.m.",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'14.45 a.m.' -> '11.45 a.m.' (image)",
+   "'Aman' -> 'A man'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A dress cost ＄84. It cost 3 times as much as a shirt. How much does the dress and shirt cost altogether?",
+  "answer": "112",
+  "unit": "＄",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "paper has handwritten correction 'The dress costs' -> 'It cost'",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) In the square grid below, which line is perpendicular to line AB?\n(b) Using the square grid, draw a line which is parallel to AB, passing through point G.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "In the square grid below, which line is perpendicular to line AB?"
+   },
+   {
+    "part": "b",
+    "text": "Using the square grid, draw a line which is parallel to AB, passing through point G."
+   }
+  ],
+  "answer": "AF; (line through G parallel to AB, drawn on the grid)",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "AF",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "line drawn through G parallel to AB (see key page 26)",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with lines AB, BC, DE, AF and point G",
+  "ocr_fixes": [
+   "Q31 text garbled in OCR"
+  ],
+  "checked_against_image": [
+   16,
+   25,
+   26
+  ],
+  "answer_check": "ok (a); (b) is a drawing, the key shows the line",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Miss Wong bought 8 similar packets of chocolates to give to 24 students. Each student received 6 pieces of chocolates. How many pieces of chocolates were there in each packet?",
+  "answer": "18",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 17,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Xu Jia and Say Jeong had a total score of 844 points at a Science competition. Xu Jia scored 126 points more than Say Jeong. What was Say Jeong's score?",
+  "answer": "359",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'points' inserted by hand on paper"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 17,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Lim had a rectangular piece of paper measuring 8 cm by 12 cm. He cut out a square of side 3 cm from the rectangular piece of paper as shown below. Find the perimeter of the remaining piece of paper after Mr Lim had cut out the square.",
+  "answer": "46",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "8 cm by 12 cm rectangle with a 3 cm square cut from the left edge",
+  "ocr_fixes": [
+   "handwritten correction 'on' -> 'from'"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 35,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Lim baked 173 muffins for a birthday party. There were 68 banana muffins and the rest were strawberry muffins. She packed all the strawberry muffins equally into boxes of 3. How many boxes of strawberry muffins were there?",
+  "answer": "35",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR garbled, read from image"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "In a game, Group A scored 650 points. Group B scored 280 points fewer than Group A. Group C scored 3 times as many points as Group B. What was the number of points scored by Group C?",
+  "answer": "1110",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR garbled, read from image"
+  ],
+  "checked_against_image": [
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q37",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 37,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Singh bought some highlighters. She received 6 pens free for every 60 highlighters bought. She received 48 pens. How many highlighters did she buy?",
+  "answer": "480",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR garbled, read from image"
+  ],
+  "checked_against_image": [
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q38",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 38,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Small and large packets of sweets were sold at a supermarket. A small packet of sweets cost ＄3 and a large packet cost ＄4. A total of ＄96 was collected from the sale of the small packets of sweets.\n(a) How many small packets of sweets were sold?\n(b) 15 more small packets of sweets were sold than the large packets of sweets. How much was collected from the sale of the large packets of sweets?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many small packets of sweets were sold?"
+   },
+   {
+    "part": "b",
+    "text": "15 more small packets of sweets were sold than the large packets of sweets. How much was collected from the sale of the large packets of sweets?"
+   }
+  ],
+  "answer": "32; 68",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "32",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "68",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄",
+   "marks (a) 1 + (b) 3"
+  ],
+  "checked_against_image": [
+   21,
+   26
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q39",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 22,
+  "section": "C",
+  "question_no": 39,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Peter had a total of 192 blueberry, chocolate and vanilla cupcakes. He had 3 times as many blueberry cupcakes as chocolates cupcakes. He had 38 more vanilla cupcakes than blueberry cupcakes.\n(a) Peter packed all the cupcakes into boxes to sell. Each box can hold 8 cupcakes. How many boxes of cupcakes he could sell at most?\n(b) How many chocolate cupcakes did Peter have?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Peter packed all the cupcakes into boxes to sell. Each box can hold 8 cupcakes. How many boxes of cupcakes he could sell at most?"
+   },
+   {
+    "part": "b",
+    "text": "How many chocolate cupcakes did Peter have?"
+   }
+  ],
+  "answer": "24; 22",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "24",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "22",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "marks (a) 1 + (b) 3",
+   "wording kept as printed ('chocolates cupcakes', 'he could sell')"
+  ],
+  "checked_against_image": [
+   22,
+   26
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_ACSJ_EOY_Q40",
+  "grade": "P3",
+  "year": "2022",
+  "school": "ACS (Junior)",
+  "exam": "EOY",
+  "source": "(ACS (Junior)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-ACSJ.pdf",
+  "source_pdf_page": 23,
+  "section": "C",
+  "question_no": 40,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The books in the library were placed on 30 shelves with an equal number of books on each shelf. 3 shelves were removed and the books on these shelves were placed on the remaining 27 shelves. In the end, the number of books on each remaining shelf increased by 5. How many books were there on each shelf at first?",
+  "answer": "45",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   23,
+   26
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

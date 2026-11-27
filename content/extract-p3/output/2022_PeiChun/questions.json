@@ -1,0 +1,1387 @@
+[
+ {
+  "id": "2022_P3_PeiChun_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 1,
+  "section": "A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "In 1809, which digit is in the thousands place?",
+  "options": {
+   "1": "1",
+   "2": "0",
+   "3": "8",
+   "4": "9"
+  },
+  "answer_key": "1",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q1/Q2 numbers missing in index (text read from page 1)"
+  ],
+  "checked_against_image": [
+   1
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 1,
+  "section": "A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following is the numbers arranged from the smallest to the greatest?",
+  "options": {
+   "1": "2930, 2390, 2093",
+   "2": "2390, 2930, 2093",
+   "3": "2930, 2093, 2390",
+   "4": "2093, 2390, 2930"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing in index"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the value of 8000 + 500 + 9.",
+  "options": {
+   "1": "859",
+   "2": "8059",
+   "3": "8509",
+   "4": "8590"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "trailing ',' read for '.'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following is most likely the length of a school bus?",
+  "options": {
+   "1": "50 cm",
+   "2": "15 m",
+   "3": "150 cm",
+   "4": "500 m"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'4,' -> '4.'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following figures has two marked right angles?",
+  "options": {
+   "1": "(figure 1)",
+   "2": "(figure 2)",
+   "3": "(figure 3)",
+   "4": "(figure 4)"
+  },
+  "answer_key": "4",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four figures with marked angles",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (key 4, figures not re-solved)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Given the three fractions: $\\frac{2}{3}$, $\\frac{1}{2}$, $\\frac{7}{9}$\nArrange them from the greatest to the smallest.",
+  "options": {
+   "1": "$\\frac{7}{9}$, $\\frac{2}{3}$, $\\frac{1}{2}$",
+   "2": "$\\frac{7}{9}$, $\\frac{1}{2}$, $\\frac{2}{3}$",
+   "3": "$\\frac{2}{3}$, $\\frac{1}{2}$, $\\frac{7}{9}$",
+   "4": "$\\frac{1}{2}$, $\\frac{2}{3}$, $\\frac{7}{9}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Tom wants to buy a water bottle which costs ＄10. The diagram below shows the amount of money he has in his wallet.\nHow much more money does he need to buy the water bottle?",
+  "options": {
+   "1": "＄4.80",
+   "2": "＄5.20",
+   "3": "＄5.70",
+   "4": "＄6.20"
+  },
+  "answer_key": "2",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "＄2 note, two ＄1 coins, 50c, two 5c, 20c (＄4.80)",
+  "ocr_fixes": [
+   "'Tam'->'Tom'",
+   "'casts'->'costs'",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Mr Hong sold 1231 eggs on Monday. He sold 256 fewer eggs on Tuesday than on Monday. How many eggs did he sell on Monday and Tuesday?",
+  "options": {
+   "1": "975",
+   "2": "1487",
+   "3": "2206",
+   "4": "2718"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The diagram below shows 2 identical apples and a pear on a weighing scale. The mass of the pear is 100 g.\nWhat is the mass of an apple?",
+  "options": {
+   "1": "120 g",
+   "2": "130 g",
+   "3": "180 g",
+   "4": "260 g"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "weighing scale with 2 apples and a pear, pointer past 300 g",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok (reading ~360 g, (360-100)/2=130)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Sally had 3 times as many marbles as John. Sally had 36 marbles. How many marbles did they have altogether?",
+  "options": {
+   "1": "12",
+   "2": "48",
+   "3": "108",
+   "4": "144"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n$\\frac{2}{3} = \\frac{\\square}{18}$",
+  "answer": "12",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 41"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Study the number pattern and fill in the missing number.\n8824, 8624, 8424, ?, 8024, 7824",
+  "answer": "8224",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express 5048 m in kilometres and metres.",
+  "answer": "5 km 48 m",
+  "answer_parts": [
+   {
+    "part": "km",
+    "value": "5",
+    "unit": "km"
+   },
+   {
+    "part": "m",
+    "value": "48",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of 40 $\\times$ 5.",
+  "answer": "200",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 44",
+   "'=' read for '$\\times$'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the quotient when 293 is divided by 4?",
+  "answer": "73",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (293 = 4 x 73 + 1)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Line GH is drawn in the square grid below. Draw a line parallel to GH passing through point P.",
+  "answer": "(drawn line through P parallel to GH, same slope)",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line GH and point P",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (key shows drawn line)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Look at the angles below and put a tick (✓) in the correct box that describes the angle.\nAngles | Acute angle | Right angle | Obtuse angle",
+  "answer": "Top: acute angle; Bottom: obtuse angle",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "two angles with a tick table",
+  "ocr_fixes": [
+   "'(“)' -> '(✓)'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the sum of 1903 and 3604?",
+  "answer": "5507",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Beaker A contains some water. How much water is in Beaker A?",
+  "answer": "150",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale to 500 mℓ",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What fraction of the figure below is shaded?",
+  "answer": "$\\frac{3}{10}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "2x5 grid with 3 shaded squares",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Use all the number cards below to form the greatest 4-digit number. Each card can only be used once.\n[0] [8] [1] [3]\n(b) Use all the number cards below to form the smallest 4-digit number divisible by 5. Each card can only be used once.\n[5] [2] [3] [7]",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Use all the number cards below to form the greatest 4-digit number. Each card can only be used once. (cards 0, 8, 1, 3)"
+   },
+   {
+    "part": "b",
+    "text": "Use all the number cards below to form the smallest 4-digit number divisible by 5. Each card can only be used once. (cards 5, 2, 3, 7)"
+   }
+  ],
+  "answer": "8310; 2375",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "8310",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "2375",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "number cards 0 8 1 3 and 5 2 3 7",
+  "ocr_fixes": [
+   "card digits read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The sum of two numbers is 95. The smaller number is 38. What is the greater number?",
+  "answer": "57",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows Cindy’s savings from January to March.\nHow much money did Cindy save from January to March?",
+  "answer": "125",
+  "unit": "＄",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph Jan 20, Feb 60, Mar 45",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mei Ling spent 45 min to complete her English homework and 58 min to complete her Science homework. How long did she spend to complete both of her homework? Express your answer in hours and minutes.",
+  "answer": "1 h 43 min",
+  "answer_parts": [
+   {
+    "part": "h",
+    "value": "1",
+    "unit": "h"
+   },
+   {
+    "part": "min",
+    "value": "43",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'hamework'->'homework'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Kent is 12 years old now. His uncle is 4 times as old as him. How old is his uncle?",
+  "answer": "48",
+  "unit": "years",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Find the value of $\\frac{2}{3} - \\frac{2}{9}$. Express your answer in the simplest form.\n(b) Find the value of $\\frac{1}{2} + \\frac{3}{8}$. Express your answer in the simplest form.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Find the value of $\\frac{2}{3} - \\frac{2}{9}$. Express your answer in the simplest form."
+   },
+   {
+    "part": "b",
+    "text": "Find the value of $\\frac{1}{2} + \\frac{3}{8}$. Express your answer in the simplest form."
+   }
+  ],
+  "answer": "$\\frac{4}{9}$; $\\frac{7}{8}$",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "$\\frac{4}{9}$",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "$\\frac{7}{8}$",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read via key working"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (key 4/9, 7/8; operands inferred from key working, not checked on page image)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of each type of bun sold by ABC Bakery. There is an ink blot covering part of the graph.\nABC bakery sold a total of 196 buns. How many cheese buns were sold?",
+  "answer": "64",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph Cheese(blotted), Floss 32, Coffee 44, Kaya 56",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Caili had 338 sweets. She packed them into as many bags of 9 sweets as she could. Some sweets were left unpacked. How many sweets were left unpacked?",
+  "answer": "5",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A toy cost 85¢ and a pencil case cost ＄5.70. What was the total cost of the toy and the pencil case?",
+  "answer": "6.55",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "On Saturday, 5304 people borrowed books from the library. 785 more people borrowed books on Saturday than on Sunday. How many people borrowed books on Sunday?",
+  "answer": "4519",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'an Sunday'->'on Sunday'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Tom bought 376 stickers. Keith had 5 times as many stickers as Tom. How many stickers did they have altogether?",
+  "answer": "2256",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 3%"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Johan had 3 times as many colour pencils as Ali. They had 64 colour pencils altogether. How many more colour pencils did Johan have than Ali?",
+  "answer": "32",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Lucy has 31 stamps less than Alan. They have 107 stamps altogether. How many stamps does Lucy have?",
+  "answer": "38",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "May Han had ＄5 more than Wei Ming. Wei Ming gave ＄6 to May Han. How much more money did May Han have than Wei Ming in the end?",
+  "answer": "17",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'34..'->'34.'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 35,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Han baked some muffins for a party. She packed the muffins into 35 boxes. In each box, there were 9 muffins. There were 7 muffins left in the oven. How many muffins did Mrs Han bake altogether?",
+  "answer": "322",
+  "unit": "muffins",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'aven'->'oven'",
+   "'alfogether'->'altogether'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Figure A, B, C and D are drawn in the 1-cm square grid shown below.\n(a) What is the perimeter of figure C?\n(b) Which 2 figures have the same perimeter?\n(c) What is the total area of figures A, B, C and D?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the perimeter of figure C?"
+   },
+   {
+    "part": "b",
+    "text": "Which 2 figures have the same perimeter?"
+   },
+   {
+    "part": "c",
+    "text": "What is the total area of figures A, B, C and D?"
+   }
+  ],
+  "answer": "12 cm; Figures A and D; 17 cm$^2$",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "12",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "A and D",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "17",
+    "unit": "cm$^2$"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "1-cm grid with figures A (S-shape), B (2x2), C (plus), D (T)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok (solved: C=12, A=D=10, area 4+4+5+4=17)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q37",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 37,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A bus travelled from bus stop A to bus stop B and then bus stop C. (A to B is 1925 m; A to C is 5 km.)\n(a) What is the distance from bus stop B to bus stop C?\n(b) What is the difference in distance travelled from bus stop A to B and the distance travelled from bus stop B to C?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the distance from bus stop B to bus stop C?"
+   },
+   {
+    "part": "b",
+    "text": "What is the difference in distance travelled from bus stop A to B and the distance travelled from bus stop B to C?"
+   }
+  ],
+  "answer": "3075 m; 1150 m",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "3075",
+    "unit": "m"
+   },
+   {
+    "part": "b",
+    "value": "1150",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bus route A-B-C with 1925 m, ? and 5 km labels",
+  "ocr_fixes": [
+   "'traveiled'->'travelled'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (solved: 5000-1925=3075; 3075-1925=1150); diagram labels read from OCR only",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q38",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 38,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A pencil cost ＄1.90 and a storybook cost ＄5.30. Emily bought 2 pencils and a storybook.\n(a) How much did Emily pay altogether?\n(b) Emily paid for the items using a ＄50 note. How much change did she receive?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How much did Emily pay altogether?"
+   },
+   {
+    "part": "b",
+    "text": "Emily paid for the items using a ＄50 note. How much change did she receive?"
+   }
+  ],
+  "answer": "9.10; 40.90",
+  "unit": "＄",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "9.10",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "40.90",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'cast'->'cost'"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "solved:(a) 9.10 differs from key 3.80 (key = 2 x 1.90 only, omits the storybook); (b) 40.90 agrees with key and confirms 9.10",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q39",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 39,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Michael started exercising at 1.45 p.m. He completed his exercise in 35 minutes.\n(a) At what time did he complete his exercise?\n(b) After completing his exercise, Michael watched a movie. The movie ended at 4 p.m. How long did the movie last? Give your answer in hour and minutes.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "At what time did he complete his exercise?"
+   },
+   {
+    "part": "b",
+    "text": "After completing his exercise, Michael watched a movie. The movie ended at 4 p.m. How long did the movie last? Give your answer in hour and minutes."
+   }
+  ],
+  "answer": "2.20 p.m.; 1 h 40 min",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "2.20 p.m.",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "1 h 40 min",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'comolete'->'complete'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_PeiChun_EOY_Q40",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 40,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A shop sold a cupcake for ＄3 and 3 cupcakes for ＄8.\n(a) Mr Lee bought 4 cupcakes. What was the least amount of money he paid?\n(b) Mrs Siva paid ＄51 for some cupcakes. What was the greatest number of cupcakes Mrs Siva bought?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Mr Lee bought 4 cupcakes. What was the least amount of money he paid?"
+   },
+   {
+    "part": "b",
+    "text": "Mrs Siva paid ＄51 for some cupcakes. What was the greatest number of cupcakes Mrs Siva bought?"
+   }
+  ],
+  "answer": "11; 19",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "11",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "19",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "price picture: 1 cupcake ＄3, 3 cupcakes ＄8",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (solved: 8+3=11; 6 sets of 3 = ＄48 -> 18, +1 for ＄3 = 19)",
+  "confidence": "high"
+ }
+]

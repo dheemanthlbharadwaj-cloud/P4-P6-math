@@ -1,0 +1,846 @@
+[
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 7482, the digit 8 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'in' -> 'In', 'the place' blank restored as ______"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "$3498 + 617 =$ ______",
+  "options": {
+   "1": "3005",
+   "2": "4015",
+   "3": "4115",
+   "4": "4215"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'2,' -> '2.'"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the product of 274 and 6.",
+  "options": {
+   "1": "1644",
+   "2": "1624",
+   "3": "1244",
+   "4": "1224"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option (4)/(1) mis-numbered by OCR"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The bar graph shows the number of storybooks read by students in Primary 3 classes in a week.\nHow many storybooks did the students in Class 3C read?",
+  "options": {
+   "1": "100",
+   "2": "110",
+   "3": "120",
+   "4": "130"
+  },
+  "answer_key": "2",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of storybooks read by 3A-3D",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number in the box?\n$\\frac{2}{5} = \\frac{\\boxed{\\ \\ }}{10}$",
+  "options": {
+   "1": "7",
+   "2": "5",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In the figure, how many of the marked angle(s) is/are right angles?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "6"
+  },
+  "answer_key": "1",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "arrow-shaped hexagon with 6 marked angles",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "unsure: key 1 accepted, angles too small to measure by eye",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the mass of the 2 boxes of detergent.",
+  "options": {
+   "1": "4 kg 40 g",
+   "2": "4 kg 80 g",
+   "3": "4 kg 400 g",
+   "4": "4 kg 800 g"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two detergent boxes on a dial weighing scale (0-8 kg)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok (pointer near 4.8 kg)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange these fractions from the greatest to the smallest.\n$\\frac{5}{9}$  $\\frac{2}{3}$  $\\frac{1}{7}$",
+  "options": {
+   "1": "$\\frac{1}{7}$, $\\frac{5}{9}$, $\\frac{2}{3}$",
+   "2": "$\\frac{2}{3}$, $\\frac{1}{7}$, $\\frac{5}{9}$",
+   "3": "$\\frac{5}{9}$, $\\frac{2}{3}$, $\\frac{1}{7}$",
+   "4": "$\\frac{2}{3}$, $\\frac{5}{9}$, $\\frac{1}{7}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Two similar rectangles are placed side by side. Find the area of one rectangle.",
+  "options": {
+   "1": "704 cm²",
+   "2": "352 cm²",
+   "3": "192 cm²",
+   "4": "104 cm²"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle strip 88 cm long, 8 cm high, split in two",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Ethan had 40 more game cards than Lucas at first.\nLucas then gave 10 of his game cards to Ethan.\nHow many more game cards did Ethan have than Lucas in the end?",
+  "options": {
+   "1": "50",
+   "2": "20",
+   "3": "30",
+   "4": "60"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'thenigave' -> 'then gave', 'Hoéwmiany' -> 'How many'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the smallest 4-digit even number that can be formed using all the digits given below?\n8  2  3  1",
+  "answer": "1238",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "four digit cards 8 2 3 1",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Study the pattern. What is the missing number?\n3545, 3505, ______, 3425, 3385, 3345",
+  "answer": "3465",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "blank restored"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the value of $108 \\div 4$",
+  "answer": "27",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'108 / 4' -> '$108 \\div 4$'"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows the number of buns sold by a bakery for 5 days.\nHow many buns were sold from Monday to Wednesday?",
+  "answer": "700",
+  "unit": "buns",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical bar graph of buns sold Mon-Fri (150,250,300,200,350)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The clock shows the time Jayden reached the park in the afternoon.\nWhat time did he reach the park? Write the time in 24-hour clock.",
+  "answer": "14:35",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock showing 2:35",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure is made up of 1-cm squares. Find the area of the figure.",
+  "answer": "14",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "shaded figure on 1-cm grid with whole squares and half squares",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the picture of a kitchen sink cabinet.\n(a) Name a pair of perpendicular lines.\n(b) Name a pair of parallel lines.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Name a pair of perpendicular lines."
+   },
+   {
+    "part": "b",
+    "text": "Name a pair of parallel lines."
+   }
+  ],
+  "answer": "AC ⊥ CG; BD // FH",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "AC ⊥ CG",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "BD // FH",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "kitchen sink cabinet with points A-H",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (other valid pairs possible)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ali and Tom shared a rectangular cake. Ali ate $\\frac{1}{12}$ of the cake and Tom ate $\\frac{1}{6}$ of it.\nWhat fraction of the cake did they eat altogether?\nExpress the answer in its simplest form.",
+  "answer": "$\\frac{1}{4}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Andres collected 3 times as many marbles as Beevi.\nThey collected 140 marbles altogether.\nHow many marbles did Beevi collect?",
+  "answer": "35",
+  "unit": "marbles",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'19,' -> '19.'"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Samantha spent 2 h 20 min reading a book.\nShe checked her watch when she stopped reading and it was 2.05 pm.\nHer watch was 10 minutes faster than the actual time.\nWhat was the actual time she started reading?",
+  "answer": "11.35 a.m.",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 21,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Siti received ＄36.40 from her father and ＄23.80 from her mother.\nShe bought a pair of shoes and had ＄18.20 left.\nHow much did she pay for the pair of shoes?",
+  "answer": "42.00",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 22,
+  "marks": 3,
+  "question_type": "long",
+  "question": "260 pupils were divided equally into groups of 4.\n2 pupils from each group were chosen as group leaders.\nHow many group leaders were there altogether?",
+  "answer": "130",
+  "unit": "group leaders",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 23,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Pupils in the Science Club collected 344 bottles for a recycling project.\nAfter packing some bottles equally into 8 bags, 16 bottles were left.\nHow many bottles were there in each bag?",
+  "answer": "41",
+  "unit": "bottles",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 24,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Wong used some flour to bake cookies and muffins.\nShe used 1200 g to bake the muffins.\nShe used 560 g less flour to bake the cookies than muffins.\nHow much flour did she use altogether?",
+  "answer": "1840",
+  "unit": "g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_MahaBodhi_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Maha Bodhi",
+  "exam": "EOY",
+  "source": "(Maha Bodhi) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-MahaBodhi.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Amelia had 325 marbles. 179 marbles were red and the rest were blue.\n(a) How many blue marbles did Amelia have?\n(b) Amelia's mother gave her 208 more red marbles.\nHow many red marbles did Amelia have in the end?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many blue marbles did Amelia have?"
+   },
+   {
+    "part": "b",
+    "text": "Amelia's mother gave her 208 more red marbles. How many red marbles did Amelia have in the end?"
+   }
+  ],
+  "answer": "146; 387",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "146",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "387",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number '25,'"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

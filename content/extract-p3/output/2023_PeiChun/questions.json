@@ -1,0 +1,1467 @@
+[
+ {
+  "id": "2023_P3_PeiChun_EOY_Q01",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the value of the digit 7 in 9075?",
+  "options": {
+   "1": "7",
+   "2": "70",
+   "3": "700",
+   "4": "7000"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'digi' -> 'digit'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q02",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Look at the number pattern below and find the missing number in the box. 4309, 4109, 3909, ?, 3509, 3309",
+  "options": {
+   "1": "3609",
+   "2": "3980",
+   "3": "3709",
+   "4": "3970"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'pattem' -> 'pattern'",
+   "boxes read from image",
+   "'3708','3870' options read as 3709, 3970 from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q03",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the following fractions in order. Begin with the greatest. $\\frac{1}{10}$, $\\frac{3}{5}$, $\\frac{1}{2}$",
+  "options": {
+   "1": "$\\frac{3}{5}$, $\\frac{1}{10}$, $\\frac{1}{2}$",
+   "2": "$\\frac{1}{10}$, $\\frac{1}{2}$, $\\frac{3}{5}$",
+   "3": "$\\frac{3}{5}$, $\\frac{1}{2}$, $\\frac{1}{10}$",
+   "4": "$\\frac{1}{2}$, $\\frac{1}{10}$, $\\frac{3}{5}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q04",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Tim had two beakers of water, Beaker A and Beaker B as shown in the diagram below. How much water was there in both beakers altogether?",
+  "options": {
+   "1": "300 mℓ",
+   "2": "400 mℓ",
+   "3": "500 mℓ",
+   "4": "1000 mℓ"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two 1 ℓ beakers, A mostly full, B low",
+  "ocr_fixes": [
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok (key 1000; scale reading not independently checked)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q05",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Look at the figure below. Which of the following is a pair of parallel lines?",
+  "options": {
+   "1": "AB and DC",
+   "2": "BC and CD",
+   "3": "AD and BC",
+   "4": "AD and DC"
+  },
+  "answer_key": "3",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "quadrilateral ABCD with AD and BC vertical",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q06",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figures below are drawn on a 1-cm grid. Which 2 figures have the same area?",
+  "options": {
+   "1": "A and D",
+   "2": "B and C",
+   "3": "C and D",
+   "4": "A and B"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "figures A, B, C, D on 1-cm grid",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok (B and C are both 7 cm²)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q07",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Kelly arrived in school at 7.10 a.m. She took 35 minutes to travel from home to school. At what time did she leave her home?",
+  "options": {
+   "1": "6.25 a.m.",
+   "2": "6.35 a.m.",
+   "3": "7.35 a.m.",
+   "4": "7.45 a.m."
+  },
+  "answer_key": "2",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'schoc!' -> 'school'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q08",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The difference between two numbers is 1718. The smaller number is 6147. What is the other number?",
+  "options": {
+   "1": "7964",
+   "2": "7865",
+   "3": "4429",
+   "4": "4330"
+  },
+  "answer_key": "2",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q8 number missing in OCR"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q09",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A sum of money was shared among 4 boys. Each boy received ＄200 and there was ＄38 left. What was the sum of money?",
+  "options": {
+   "1": "＄50",
+   "2": "＄88",
+   "3": "＄762",
+   "4": "＄838"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q9 number missing in OCR",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q10",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Cindy needs 175 cm of cloth to make a blouse. She needs 25 cm more cloth to make a dress. How much cloth does Cindy need to make 2 such dresses?",
+  "options": {
+   "1": "200 cm",
+   "2": "300 cm",
+   "3": "375 cm",
+   "4": "400 cm"
+  },
+  "answer_key": "4",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'em' -> 'cm'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q11",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 7 thousands, 9 hundreds and 4 ones in numerals.",
+  "answer": "7904",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 41"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q12",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the product of 369 and 8.",
+  "answer": "2952",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 42"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q13",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Express $\\frac{9}{12}$ in its simplest form.",
+  "answer": "$\\frac{3}{4}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 43",
+   "fraction read as '1p', corrected from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q14",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the mass of the bottle of cooking oil?",
+  "answer": "3; 400",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "kg",
+    "value": "3",
+    "unit": "kg"
+   },
+   {
+    "part": "g",
+    "value": "400",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "bottle of cooking oil on a kg dial scale, pointer between 3 and 4",
+  "ocr_fixes": [
+   "Q number read as 44"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok (3 kg 400 g)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q15",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "In the diagram below, how many of the marked angles are obtuse angles?",
+  "answer": "3",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "pentagon with 5 marked angles",
+  "ocr_fixes": [
+   "Q number read as 45",
+   "'obiuse' -> 'obtuse'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q16",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Jessica's piano lesson started at 9.45 a.m. Her lesson lasted for 1 h 20 min. At what time did her lesson end?",
+  "answer": "11.05",
+  "unit": "a.m.",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 46",
+   "'4h' -> '1 h' (image)"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q17",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Draw a line parallel to line AB passing through Point C.",
+  "answer": "(line drawn through C parallel to AB)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line AB and point C",
+  "ocr_fixes": [
+   "Q number read as 47"
+  ],
+  "checked_against_image": [
+   9,
+   23
+  ],
+  "answer_check": "ok (drawing, key shows the line)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q18",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Use all the following digits to form the greatest 4-digit odd number. Each digit can only be used once. Do not begin with the digit '0'. 8, 0, 9, 6",
+  "answer": "8609",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 48",
+   "digit cards read from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q19",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the value of $\\frac{1}{3} + \\frac{2}{6}$. Give your answer in the simplest form.",
+  "answer": "$\\frac{2}{3}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q19 number missing in OCR",
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q20",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The figure below is made up of 10 equal parts. How many more parts must be shaded so that $\\frac{3}{5}$ of the figure is shaded?",
+  "answer": "5",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "strip of 10 equal parts with 1 part shaded",
+  "ocr_fixes": [
+   "'70 equal parts' -> '10 equal parts'",
+   "Q number read as 20."
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok (6 needed, 1 shaded)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q21",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Annie has 3 fifty-cent coins and 4 five-dollar notes. How much money does she have altogether?",
+  "answer": "21.50",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q22",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How much farther was the distance between Town B and Town C than that between Town A and Town B?",
+  "answer": "490",
+  "unit": "m",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "route diagram: A to B 1560 m, B to C 2050 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q23",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A tennis racket cost ＄128. A pair of sports shoes cost ＄19.60 less than the tennis racket. How much did the pair of sports shoes cost?",
+  "answer": "108.40",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q24",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Wong used 135 g of flour to bake a cake. How much flour did Mrs Wong use to bake 5 such cakes?",
+  "answer": "675",
+  "unit": "g",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q25",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure shows the height of a boy. What is his height\n(a) in centimetres?\n(b) in metres and centimetres?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "in centimetres?"
+   },
+   {
+    "part": "b",
+    "text": "in metres and centimetres?"
+   }
+  ],
+  "answer": "160; 1 m 60 cm",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "160",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "1 m 60",
+    "unit": "cm"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "boy beside a height scale 100 cm to 200 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q26",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mandy packed 932 sweets into as many boxes of 9 as possible. How many sweets were left unpacked?",
+  "answer": "5",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q27",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Suri sold 243 apples. Mr Ng sold 3 times as many apples as Mr Suri. How many apples did Mr Ng sell?",
+  "answer": "729",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q28",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A pail with a capacity of 2 ℓ contains 1400 mℓ of water. 3 full jugs of water are needed to fill the pail completely. What is the capacity of a jug?",
+  "answer": "200",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'2 2' -> '2 ℓ'",
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q29",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ravi had 680 marbles at first. He gave away 8 marbles and packed the remaining marbles into packets of 4 marbles. How many packets of marbles did Ravi pack?",
+  "answer": "168",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q30",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of story books read by a group of pupils last week. How many pupils read more than 1 but fewer than 4 books last week?",
+  "answer": "26",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of pupils by number of story books read",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q31",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Janet gave 60 muffins to her classmates. 12 of her classmates took 1 muffin each. The rest of her classmates took 2 muffins each. How many of Janet's classmates took 2 muffins each?",
+  "answer": "24",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'7 muffin' -> '1 muffin'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q32",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A group of people was asked to choose their favourite choice of drinks. The bar graph below shows their choices. How many more people like fruit juice than soft drinks?",
+  "answer": "12",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of favourite drinks",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q33",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A van can carry up to 8 people. What is the smallest number of vans needed to carry 97 people?",
+  "answer": "13",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Avan' -> 'A van'"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q34",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Smith bought 6 oranges and 8 apples with some money. An orange cost twice as much as an apple. How many apples could Mr Smith buy with the same amount of money?",
+  "answer": "20",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q35",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 35,
+  "marks": 3,
+  "question_type": "long",
+  "question": "A shirt cost ＄65.30. Mrs Lee bought a bag that cost ＄24.80 more than the shirt.\n(a) What was the cost of the bag?\n(b) Mrs Lee gave the cashier a ＄100 note to pay for the bag. What was the change she received?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What was the cost of the bag?"
+   },
+   {
+    "part": "b",
+    "text": "Mrs Lee gave the cashier a ＄100 note to pay for the bag. What was the change she received?"
+   }
+  ],
+  "answer": "90.10; 9.90",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "90.10",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "9.90",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q35 number missing in OCR",
+   "$ -> ＄",
+   "marks (a) 1 + (b) 2"
+  ],
+  "checked_against_image": [
+   17,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q36",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Tan started washing and polishing her car at 5.00 p.m. She took 40 min to wash her car and 1 h 25 min to polish her car.\n(a) At what time did Mrs Tan complete washing and polishing her car?\n(b) How much more time did Mrs Tan take to polish than wash her car?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "At what time did Mrs Tan complete washing and polishing her car?"
+   },
+   {
+    "part": "b",
+    "text": "How much more time did Mrs Tan take to polish than wash her car?"
+   }
+  ],
+  "answer": "7.05 p.m.; 45 min",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "7.05",
+    "unit": "p.m."
+   },
+   {
+    "part": "b",
+    "value": "45",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "marks (a) 1 + (b) 2"
+  ],
+  "checked_against_image": [
+   18,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q37",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 37,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Jerry ran 1650 m. He ran 800 m more than Kenny.\n(a) What is the distance Kenny ran in metres?\n(b) What is the total distance ran by the two boys? Leave your answer in km and m.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the distance Kenny ran in metres?"
+   },
+   {
+    "part": "b",
+    "text": "What is the total distance ran by the two boys? Leave your answer in km and m."
+   }
+  ],
+  "answer": "850; 2 km 500 m",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "850",
+    "unit": "m"
+   },
+   {
+    "part": "b",
+    "value": "2 km 500",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "marks (a) 2 + (b) 2"
+  ],
+  "checked_against_image": [
+   19,
+   24
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q38",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 38,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Janice placed 3 rectangular cards of the same size together to form a large rectangle as shown below.\n(a) What is the perimeter of the large rectangle?\n(b) What is the area of the large rectangle?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the perimeter of the large rectangle?"
+   },
+   {
+    "part": "b",
+    "text": "What is the area of the large rectangle?"
+   }
+  ],
+  "answer": "20; 24",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "20",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "24",
+    "unit": "cm²"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "3 cards 2 cm by 4 cm placed side by side",
+  "ocr_fixes": [
+   "marks (a) 2 + (b) 2"
+  ],
+  "checked_against_image": [
+   20,
+   24
+  ],
+  "answer_check": "ok (6 cm by 4 cm)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q39",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 39,
+  "marks": 4,
+  "question_type": "long",
+  "question": "3480 people were at a football match. 1905 of them were adults and the rest were children. There were 4 times as many boys as girls at the football match.\n(a) How many children were at the football match?\n(b) How many girls were at the football match?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many children were at the football match?"
+   },
+   {
+    "part": "b",
+    "text": "How many girls were at the football match?"
+   }
+  ],
+  "answer": "1575; 315",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "1575",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "315",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "marks (a) 2 + (b) 2",
+   "key treats boys and girls as the children (1575 / 5 = 315)"
+  ],
+  "checked_against_image": [
+   21,
+   24
+  ],
+  "answer_check": "ok (key assumes the boys and girls are the children)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_PeiChun_EOY_Q40",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Pei Chun Public",
+  "exam": "EOY",
+  "source": "(Pei Chun Public) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-PeiChun.pdf",
+  "source_pdf_page": 22,
+  "section": "C",
+  "question_no": 40,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mrs Ong bought a total of 50 notebooks and scissors for ＄154. She paid ＄5 for each notebook and ＄2 for each pair of scissors.\n(a) How many pairs of scissors did she buy?\n(b) How many notebooks did she buy?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many pairs of scissors did she buy?"
+   },
+   {
+    "part": "b",
+    "text": "How many notebooks did she buy?"
+   }
+  ],
+  "answer": "32; 18",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "32",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "18",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "$ -> ＄",
+   "marks (a) 3 + (b) 1"
+  ],
+  "checked_against_image": [
+   22,
+   24
+  ],
+  "answer_check": "ok (key working has typo 250-154=95, should be 96)",
+  "confidence": "high"
+ }
+]

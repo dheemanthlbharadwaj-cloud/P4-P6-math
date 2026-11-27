@@ -1,0 +1,19 @@
+# 2023_PeiHwa (Pei Hwa Presbyterian, P3 Semestral Assessment 2023, one paper)
+
+- Questions: 25 (Section A Q1-10 MCQ: Q1-5 1m, Q6-10 2m; Section B Q11-20 short: Q11-15 1m, Q16-20 2m; Section C Q21-25 long, 4m each). The Section B instruction prints "Questions 14 to 15" but means 11 to 15.
+- Figures flagged: 9 (Q5, 9, 10, 12, 15, 19, 20, 23, 24).
+- Answer key: page 17 (cover reads 2023; the OCR read 2025 wrongly). Key and my solving agree except three items:
+  - Q6: key prints option 3, correct is option 2 (4/9, 1/2, 7/9). answer_key set to 2.
+  - Q14(b): key prints "<", but 5/6 = 10/12 > 7/12. Recorded ">".
+  - Q22(a): key says item "Lunch box" with cost 50; the item costing most is the bag at ＄50. Recorded Bag, ＄50. Total ＄108 agrees.
+- Q23(a): beaker A reading (~60 mℓ) is approximate on the image, key 860 mℓ used.
+- Q25: timelines are part of the working only; answers 12 45 and 2 h 20 min.
+- Pages opened: 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 17 (plus contact sheet).
+
+## Crop problems
+- Q5: grid broken by the cropper (lines whited), horizontal grid lines and line AB/EF/GH/IJ are largely missing; figure unusable.
+- Q9: leftover option text "＄62.10" at bottom of crop.
+- Q12: only the "? 6 2" top row cropped, the rest of the vertical subtraction missing.
+- Q19: "8 m" label cut off (only the arrow remains).
+- Q24: bars and gridlines damaged by whiting (bars cut by white lines), legend (Local/Foreign) missing.
+- Q15 and Q20 crops include the answer tables below the figure (harmless).

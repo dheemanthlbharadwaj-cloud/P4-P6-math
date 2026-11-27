@@ -1,0 +1,1003 @@
+[
+ {
+  "id": "2025_P3_StNicholas_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number in the box?\n2000 + 40 + 1 = $\\square$",
+  "options": {
+   "1": "241",
+   "2": "2041",
+   "3": "2401",
+   "4": "2410"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'5 ?' -> box"
+  ],
+  "checked_against_image": [
+   3,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which one of the following statements is true?",
+  "options": {
+   "1": "$\\frac{1}{4}$ < $\\frac{1}{7}$",
+   "2": "$\\frac{2}{5}$ < $\\frac{6}{10}$",
+   "3": "$\\frac{5}{8}$ > $\\frac{3}{4}$",
+   "4": "$\\frac{6}{9}$ > $\\frac{2}{3}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "statements garbled, read from image"
+  ],
+  "checked_against_image": [
+   3,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following shows an obtuse angle?",
+  "options": {
+   "1": "[figure]",
+   "2": "[figure]",
+   "3": "[figure]",
+   "4": "[figure]"
+  },
+  "answer_key": "4",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four angle diagrams (1)-(4), options are pictures",
+  "ocr_fixes": [
+   "Q number missing in OCR; options are figures"
+  ],
+  "checked_against_image": [
+   4,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Look at the figures below. Which figure has the greatest perimeter?",
+  "options": {
+   "1": "[figure]",
+   "2": "[figure]",
+   "3": "[figure]",
+   "4": "[figure]"
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "four figures with side lengths: (1) 9,5,5,9,5,5 cm (2) 15 by 3 cm rectangle (3) 15,15,18 cm triangle (4) regular pentagon 8 cm",
+  "ocr_fixes": [
+   "'Vyhich' -> 'Which'",
+   "'Look al' -> 'Look at'",
+   "options are figures"
+  ],
+  "checked_against_image": [
+   5,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "There are 53 Art Club members. Mr Bala gave 6 sheets of drawing paper to each of the Art Club members. He had 9 sheets of drawing paper left. How many sheets of drawing papers did Mr Bala have at first?",
+  "options": {
+   "1": "318",
+   "2": "327",
+   "3": "477",
+   "4": "483"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'gach' -> 'each'"
+  ],
+  "checked_against_image": [
+   6,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the value of $\\frac{1}{2}$ $-$ $\\frac{4}{12}$. Express the answer in its simplest form.",
+  "options": {
+   "1": "$\\frac{1}{4}$",
+   "2": "$\\frac{1}{6}$",
+   "3": "$\\frac{3}{10}$",
+   "4": "$\\frac{5}{14}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   6,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Siew Mei went to the supermarket. She was there for 1 h 50 min. She left the supermarket at 4:00 pm. What time did she reach the supermarket?",
+  "options": {
+   "1": "2:10 pm",
+   "2": "2:30 pm",
+   "3": "2:50 pm",
+   "4": "3:50 pm"
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR garbled, whole question read from image"
+  ],
+  "checked_against_image": [
+   7,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 8,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The bar graph shows the number of children who bought different flavours of ice-cream.\nHow many more children bought vanilla ice-cream than strawberry ice-cream?",
+  "answer": "7",
+  "unit": "children",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of ice-cream flavours (vanilla 35, chocolate 43, strawberry 28, banana 16)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n1352, 1382, $\\square$, 1442, 1472, 1502",
+  "answer": "1412",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'8.' -> '9.'",
+   "'?' -> box"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Fill in the blanks with “more” or “less”.\n(a) 6 $\\times$ 5 is ______ than 7 $\\times$ 5.\n(b) 9 $\\times$ 9 is ______ than 8 $\\times$ 9.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "6 $\\times$ 5 is ______ than 7 $\\times$ 5."
+   },
+   {
+    "part": "b",
+    "text": "9 $\\times$ 9 is ______ than 8 $\\times$ 9."
+   }
+  ],
+  "answer": "less; more",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "less",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "more",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'6x5is 5.' -> '6 × 5 is ______'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the sum of ＄7.65 and ＄99.55.",
+  "answer": "107.20",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'41.' -> '11.'",
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Jia Jia bought a wallet for ＄84. She gave the cashier 2 pieces of ＄50 notes. The cashier gave her the change in ＄2 notes. How many ＄2 notes did Jia Jia receive?",
+  "answer": "8",
+  "unit": "",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Measure Line XY shown below.\n(b) The table shows the volume of water in each container.\nWhich container has the same amount of water as Container F?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Measure Line XY shown below."
+   },
+   {
+    "part": "b",
+    "text": "The table shows the volume of water in each container. Which container has the same amount of water as Container F?"
+   }
+  ],
+  "answer": "6 cm; J",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "6",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "J",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "line XY to measure; table: F 3 ℓ 2 mℓ, G 3200 mℓ, H 3 ℓ 20 mℓ, J 3002 mℓ",
+  "ocr_fixes": [
+   "'73.' -> '13.'",
+   "table values read from image"
+  ],
+  "checked_against_image": [
+   11,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "short",
+  "question": "In the figure, which two lines are parallel to each other?",
+  "answer": "PQ and UT",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with points P, Q, R, S, T, U joined by lines",
+  "ocr_fixes": [
+   "'Ans: and' kept out"
+  ],
+  "checked_against_image": [
+   12,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The table shows the timings for the animal shows at a zoo theatre.\nFirst Show 10 45\nSecond Show 12 15\nMr Lee and his family wanted to watch the second show. They arrived at the zoo theatre 25 minutes after the first show started. How long did Mr Lee and his family wait for the second show to start?",
+  "answer": "1 h 5 min",
+  "unit": "h min",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1",
+    "unit": "h"
+   },
+   {
+    "part": "",
+    "value": "5",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "table of show times",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graphs show the number of T-shirts sold at two different shops. Study the two types of graphs.\n(a) Which shop sold fewer white T-shirts?\n(b) Find the total number of black T-shirts sold in Shop A and Shop B.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Which shop sold fewer white T-shirts?"
+   },
+   {
+    "part": "b",
+    "text": "Find the total number of black T-shirts sold in Shop A and Shop B."
+   }
+  ],
+  "answer": "Shop A; 68",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "Shop A",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "68",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph (Shop A) and picture graph, each star = 6 (Shop B)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the fractions from the greatest to the smallest.\n$\\frac{1}{2}$ , $\\frac{5}{6}$ , $\\frac{4}{9}$",
+  "answer": "$\\frac{5}{6}$, $\\frac{1}{2}$, $\\frac{4}{9}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   14,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Davi hung 12 identical shapes in a straight line. All the shapes were at an equal distance of 2 m apart from each other. What was the distance between the 1st and 12th shape?",
+  "answer": "22",
+  "unit": "m",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "row of hanging shapes, 2 m between neighbours, 1st to 12th",
+  "ocr_fixes": [
+   "'1% and 12\"' -> '1st and 12th'"
+  ],
+  "checked_against_image": [
+   14,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A shop was giving 3 free highlighters for every 4 boxes of pens bought. Zen bought some boxes of pens and received 12 free highlighters. What was the least number of boxes of pens Zen bought?\nSpecial Offer! Buy 4 boxes of pens, get 3 free highlighters.",
+  "answer": "16",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "Special Offer poster: buy 4 boxes of pens, get 3 free highlighters",
+  "ocr_fixes": [
+   "poster text kept in question"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 20,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Box A has a mass of 3 kg. It is 390 g lighter than Box B. Box C is 620 g heavier than Box B. What is the mass of Box C? Leave your answer in kilograms and grams.",
+  "answer": "4 kg 10 g",
+  "unit": "kg g",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "4",
+    "unit": "kg"
+   },
+   {
+    "part": "",
+    "value": "10",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Ahas' -> 'A has'"
+  ],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 21,
+  "marks": 3,
+  "question_type": "long",
+  "question": "John had ＄156. He wanted to buy a soccer ball which cost ＄79 and a jacket that cost ＄150. How much more money would John need to save in order to buy these two items?",
+  "answer": "73",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 22,
+  "marks": 3,
+  "question_type": "long",
+  "question": "The figure below is made up of 3 identical squares. The length of the square is 8 cm.\n(a) What is the area of one square?\n(b) What is the area of the figure?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the area of one square?"
+   },
+   {
+    "part": "b",
+    "text": "What is the area of the figure?"
+   }
+  ],
+  "answer": "64 cm²; 192 cm²",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "64",
+    "unit": "cm²"
+   },
+   {
+    "part": "b",
+    "value": "192",
+    "unit": "cm²"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "figure made of 3 identical squares, side 8 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 23,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Xiao Ming bought 7 boxes of fruit tarts for a party. Each box contained 24 fruit tarts. Then she unpacked all the fruit tarts and placed them equally on 4 trays.\n(a) How many fruit tarts did Xiao Ming buy?\n(b) How many fruit tarts were on each tray?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many fruit tarts did Xiao Ming buy?"
+   },
+   {
+    "part": "b",
+    "text": "How many fruit tarts were on each tray?"
+   }
+  ],
+  "answer": "168; 42",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "168",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "42",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Xlao' -> 'Xiao'",
+   "'[7]' read as [1] for part (a) (inferred)"
+  ],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 24,
+  "marks": 4,
+  "question_type": "long",
+  "question": "In the hall, there were 465 grey chairs and some blue chairs at first. Another 45 grey chairs were added. In the end, there were 5 times as many grey chairs as blue chairs.\n(a) How many blue chairs were there?\n(b) How many chairs were there altogether in the hall at first?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many blue chairs were there?"
+   },
+   {
+    "part": "b",
+    "text": "How many chairs were there altogether in the hall at first?"
+   }
+  ],
+  "answer": "102; 567",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "102",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "567",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'ai first' -> 'at first'",
+   "'chars' -> 'chairs'"
+  ],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StNicholas_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "CHIJ St. Nicholas Girls'",
+  "exam": "EOY",
+  "source": "(CHIJ St. Nicholas Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StNicholas.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Beth, Katie and Pamela had some cards. Beth had 69 fewer cards than Katie. Beth and Katie had a total of 277 cards. Pamela had as many cards as Beth.\n(a) How many cards did Pamela have?\n(b) Pamela gave 41 cards to Katie. How many more cards did Katie have than Pamela in the end?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many cards did Pamela have?"
+   },
+   {
+    "part": "b",
+    "text": "Pamela gave 41 cards to Katie. How many more cards did Katie have than Pamela in the end?"
+   }
+  ],
+  "answer": "104; 151",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "104",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "151",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

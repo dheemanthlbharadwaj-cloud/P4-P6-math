@@ -1,0 +1,1052 @@
+[
+ {
+  "id": "2023_P3_HenryPark_EOY_Q01",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Write nine thousand, two hundred and five in numbers.",
+  "options": {
+   "1": "925",
+   "2": "9025",
+   "3": "9205",
+   "4": "9250"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 'i.'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q02",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 7509, the digit 0 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q03",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "$\\frac{3}{4} = \\frac{9}{\\square}$\n\nWhat is the missing denominator?",
+  "options": {
+   "1": "8",
+   "2": "10",
+   "3": "12",
+   "4": "16"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction equation rebuilt from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q04",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which one of the following is the same as 5050 g?",
+  "options": {
+   "1": "5 kg 5 g",
+   "2": "5 kg 50 g",
+   "3": "5 kg 500 g",
+   "4": "50 kg 50 g"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options 1,3,4 garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q05",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Mrs Veerasamy brought her children to the swimming pool. They started swimming at 4:40 pm. They finished swimming at 6:05 pm. How long did they swim in the pool?",
+  "options": {
+   "1": "1 h 25 min",
+   "2": "1 h 35 min",
+   "3": "2 h 25 min",
+   "4": "2 h 35 min"
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q06",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 6308, the digit 3 stands for ______.",
+  "options": {
+   "1": "3",
+   "2": "30",
+   "3": "300",
+   "4": "3000"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 4 garbled in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q07",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The difference between two numbers is 168. The smaller number is 709. What is the greater number?",
+  "options": {
+   "1": "541",
+   "2": "661",
+   "3": "867",
+   "4": "877"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options misread (544, 664) corrected from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q08",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "$\\square + \\frac{1}{3} = \\frac{8}{9}$\n\nWhat is the missing fraction in the box?",
+  "options": {
+   "1": "$\\frac{3}{9}$",
+   "2": "$\\frac{5}{9}$",
+   "3": "$\\frac{6}{9}$",
+   "4": "$\\frac{7}{9}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions rebuilt from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q09",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Ahmad drew a figure in a square grid shown below. How many pairs of parallel lines are there in the figure?",
+  "answer": "2",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "figure drawn on a square grid",
+  "ocr_fixes": [
+   "'Ans:' and box text removed"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok (key 2; not independently verified from the grid)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q10",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Arrange the following numbers in order. Begin with the greatest number.\n\n6900, 9060, 6090, 6009",
+  "answer": "9060, 6900, 6090, 6009",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 19",
+   "'8060' read as 9060"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q11",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "9458 = ______ + 400 + 58\n\nWhat is the missing number?",
+  "answer": "9000",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 41"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q12",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the remainder when 899 is divided by 6?",
+  "answer": "5",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q13",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the difference between 9000 and 5826.",
+  "answer": "3174",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q14",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Mrs Rebecca spent 1 h 10 min baking cookies. She finished baking at 2:30 pm. What time did she start baking?",
+  "answer": "1.20",
+  "unit": "pm",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 44"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q15",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the total value of ＄15.95 and ＄4.15.",
+  "answer": "20.10",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' to '＄'",
+   "final '.' added"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q16",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "In the figure shown below, which 2 of the marked angles are acute angles?",
+  "answer": "C and A",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "∠C and ∠A",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "polygon with marked angles a to g",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok (key 'C and A'; marked angles are lower-case a-g in the figure, key uses capitals; read as c and a)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q17",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The bar graph shows the number of soft toys that five girls have.\n\nHow many more soft toys does Estelle have than Carine?",
+  "answer": "9",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph, Soft Toys Collection, five girls",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q18",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A bottle has a capacity of 2000 mℓ. It contains 1560 mℓ of water. How much more water is needed to fill up the bottle?",
+  "answer": "440",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'mi' to 'mℓ'",
+   "Q number 'Abottle' split"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q19",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What are the values of (a) and (b) in the number pattern below?\n\n7868, 7874, ______(a), 7886, ______(b), 7898, 7904, 7910",
+  "answer": "(a) 7880, (b) 7892",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "7880",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "7892",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 419"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q20",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the perimeter of the figure shown below.",
+  "answer": "44",
+  "unit": "m",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "L-shaped figure with sides 16 m, 6 m, 3 m, 3 m, 3 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q21",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure below is made up of 12 identical triangles.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What fraction of the figure is shaded?"
+   },
+   {
+    "part": "b",
+    "text": "How many more triangles must be shaded such that $\\frac{5}{6}$ of the figure is shaded?"
+   }
+  ],
+  "answer": "(a) $\\frac{5}{12}$, (b) 5",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "$\\frac{5}{12}$",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "5",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "chevron figure of 12 triangles, some shaded",
+  "ocr_fixes": [
+   "fraction rebuilt from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q22",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Frankie used 4 identical square tiles to form Figure A. The length of each tile is 8 cm. What is the area of Figure A?",
+  "answer": "256",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "Figure A: 2 by 2 squares, 8 cm sides",
+  "ocr_fixes": [
+   "'fength' to 'length'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q23",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Bala took 6 h 45 min to travel from Singapore to Genting Highlands. Mr Ng took 25 min more to travel the same distance. Mr Ng started travelling from Singapore at 15 00. What time did Mr Ng reach Genting Highlands? Give your answer in 24-hour clock.",
+  "answer": "2210",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'23,' to '23.'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (key '22 10')",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q24",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Sally bought a dress. She gave the cashier ＄50 and received ＄17.20 change. What was the cost of the dress?",
+  "answer": "32.80",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'24,' to '24.'",
+   "'$' to '＄'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q25",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows the number of roses and tulips a florist sold from Thursday to Sunday.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many more roses did the florist sell on Saturday than Sunday?"
+   },
+   {
+    "part": "b",
+    "text": "Which day did the florist sell the greatest total number of roses and tulips?"
+   }
+  ],
+  "answer": "(a) 50, (b) Thursday",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "50",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "Thursday",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "grouped bar graph, Roses and Tulips Sold, Thursday to Sunday",
+  "ocr_fixes": [
+   "'(bb)' to '(b)'"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q26",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Tan sold 9 bicycles and tricycles altogether. There were a total of 21 wheels on these bicycles and tricycles. How many tricycles did Mr Tan sell?",
+  "answer": "3",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "pictures of a tricycle and a bicycle",
+  "ocr_fixes": [
+   "'on the these' to 'on these'"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q27",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 27,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Emily, Fiona and Gail shared some sweets. Gail had 58 sweets. Gail had 46 more sweets than Fiona. Emily had 3 times as many sweets as Fiona.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many sweets did Fiona have? [1]"
+   },
+   {
+    "part": "b",
+    "text": "How many sweets did the 3 girls have in all? [3]"
+   }
+  ],
+  "answer": "(a) 12, (b) 106",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "12",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "106",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'{a}' to '(a)'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q28",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 28,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Vivian sold 785 cookies on Saturday. She sold 698 fewer cookies on Saturday than on Sunday. How many cookies did Vivian sell on both days? [3]",
+  "answer": "2268",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'688' read, image shows 698"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q29",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 29,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Peter competed in a 5-km marathon. After running 2 km 850 m, he walked for a while before running again to complete the last 800 m. What was the distance that Peter walked during the marathon? Give your answer in kilometres and metres. [3]",
+  "answer": "1 km 350 m",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1 km 350 m",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number printed as 28 again; read as 29"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (printed number repeats 28; key lists it as Q29)",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_HenryPark_EOY_Q30",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 30,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mr Goh paid ＄273 for 1 bag and 5 similar books. Each bag cost ＄93 more than each book. How much did he pay for each book? [3]",
+  "answer": "30",
+  "unit": "＄",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 30,"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

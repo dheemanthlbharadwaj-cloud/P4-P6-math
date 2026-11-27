@@ -1,0 +1,1426 @@
+[
+ {
+  "id": "2023_P3_MGS_EOY_Q01",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Two thousand, three hundred and seventy written as numerals is ______.",
+  "options": {
+   "1": "2037",
+   "2": "2307",
+   "3": "2317",
+   "4": "2370"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q1 key read as 4 ok"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q02",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "4059 is the same as ______.",
+  "options": {
+   "1": "400 + 50 + 9",
+   "2": "4000 + 50 + 9",
+   "3": "4000 + 500 + 9",
+   "4": "4000 + 5000 + 9"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q03",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 6258, the digit ______ is in the thousands place.",
+  "options": {
+   "1": "5",
+   "2": "2",
+   "3": "6",
+   "4": "8"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options (1)-(4) garbled, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q04",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "4337 + 2945 = ______",
+  "options": {
+   "1": "6272",
+   "2": "6282",
+   "3": "7282",
+   "4": "8272"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'A337' -> '4337'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q05",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "5501, 5101, 4701, ______, 3901, 3501\nWhat is the missing number in the pattern?",
+  "options": {
+   "1": "4501",
+   "2": "4301",
+   "3": "4201",
+   "4": "4101"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$501' -> '5501'",
+   "option 3 '4204' -> '4201'",
+   "option 4 '4401' -> '4101'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q06",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How many whole numbers between 30 and 50 can be divided exactly by 7?",
+  "options": {
+   "1": "1",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "3",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 1 read as 4 -> 1"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q07",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Write 6 km 24 m in metres.",
+  "options": {
+   "1": "624 m",
+   "2": "6024 m",
+   "3": "6204 m",
+   "4": "6240 m"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 1 number '4)' fixed"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q08",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Express $\\frac{8}{12}$ in its simplest form.",
+  "options": {
+   "1": "$\\frac{2}{3}$",
+   "2": "$\\frac{1}{3}$",
+   "3": "$\\frac{1}{4}$",
+   "4": "$\\frac{1}{6}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q09",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure is drawn on a square grid.\nHow many of the marked angles are obtuse angles?",
+  "options": {
+   "1": "5",
+   "2": "2",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "3",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "figure with 5 marked angles on square grid",
+  "ocr_fixes": [
+   "Q9 number missing in OCR"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "unsure: key says 3, not independently counted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q10",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "John started his dinner at the time shown on the clock below.\nThe clock was 30 minutes fast.\nWhat was the actual time?",
+  "options": {
+   "1": "15 30",
+   "2": "16 30",
+   "3": "17 30",
+   "4": "18 30"
+  },
+  "answer_key": "3",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "clock showing 6 o'clock",
+  "ocr_fixes": [
+   "Q10 number read as 10 ok"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q11",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure below is drawn in a square grid. AC is a straight line.\nWhich two lines are parallel to each other?",
+  "options": {
+   "1": "AB and BE",
+   "2": "AE and CD",
+   "3": "BC and ED",
+   "4": "BE and CD"
+  },
+  "answer_key": "4",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with points A,B,C,D,E and lines",
+  "ocr_fixes": [
+   "Q11 number read as 44",
+   "option 1 '(4)' -> '(1)'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q12",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "8 $\\times$ 6 = $\\square$ $\\div$ 2\nWhat is the missing number in the box?",
+  "options": {
+   "1": "24",
+   "2": "48",
+   "3": "50",
+   "4": "96"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "equation with box",
+  "ocr_fixes": [
+   "equation read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q13",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which one of the following statements is true?",
+  "options": {
+   "1": "$\\frac{1}{4}$ $>$ $\\frac{1}{2}$",
+   "2": "$\\frac{5}{6}$ $>$ $\\frac{1}{2}$",
+   "3": "$\\frac{3}{12}$ $<$ $\\frac{1}{4}$",
+   "4": "$\\frac{2}{3}$ $<$ $\\frac{1}{4}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q14",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "$\\frac{2}{8}$ + $\\frac{1}{12}$ = ______",
+  "options": {
+   "1": "$\\frac{1}{3}$",
+   "2": "$\\frac{1}{6}$",
+   "3": "$\\frac{3}{12}$",
+   "4": "$\\frac{3}{20}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "question and options read from image"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q15",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Mrs Lee bought a scarf and a blouse.\nShe had ＄5 left in her purse. How much money did she have at first?",
+  "options": {
+   "1": "＄25.80",
+   "2": "＄46.60",
+   "3": "＄51.60",
+   "4": "＄56.60"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "scarf ＄15.40 and blouse ＄36.20",
+  "ocr_fixes": [
+   "'$6 left' -> '＄5 left'",
+   "scarf price ＄15.40 read from image"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q16",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 8,
+  "section": "A",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The bar graph below shows the number of stickers that 4 girls have.\nHow many fewer stickers does Elly have than Betsy?",
+  "options": {
+   "1": "11",
+   "2": "12",
+   "3": "15",
+   "4": "16"
+  },
+  "answer_key": "2",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph of stickers (Elly, Cathy, Betsy, Sally)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q17",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "1000 more than ______ is 4729.",
+  "answer": "3729",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'4000 more than' -> '1000 more than'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q18",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Divide 472 by 8.",
+  "answer": "59",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q19",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Mr Lee slept at 23 25.\nGive the time he slept in 12-hour clock.\nInclude am or pm in your answer.",
+  "answer": "11:25 pm",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q20",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 3095 g in kilograms and grams.",
+  "answer": "3 kg 95 g",
+  "answer_parts": [
+   {
+    "part": "kg",
+    "value": "3",
+    "unit": "kg"
+   },
+   {
+    "part": "g",
+    "value": "95",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q21",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Leon cycled for 5 km from Point P to Point Q.\nThen he took a bus for 2800 m from Point Q to Point R.\nWhat was the total distance covered by him in kilometres and metres?",
+  "answer": "7 km 800 m",
+  "answer_parts": [
+   {
+    "part": "km",
+    "value": "7",
+    "unit": "km"
+   },
+   {
+    "part": "m",
+    "value": "800",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "route P to Q 5 km, Q to R 2800 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q22",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The shaded figure is made up of 1-cm squares.\nWhat is the area and perimeter of the shaded figure?",
+  "answer": "Area 11 cm$^2$, Perimeter 20 cm",
+  "answer_parts": [
+   {
+    "part": "area",
+    "value": "11",
+    "unit": "cm$^2$"
+   },
+   {
+    "part": "perimeter",
+    "value": "20",
+    "unit": "cm"
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "shaded squares on 3 by 5 grid, 1 cm squares",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q23",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the difference between $\\frac{5}{12}$ and $\\frac{1}{6}$?\nGive your answer in its simplest form.",
+  "answer": "$\\frac{1}{4}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q24",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the fractions in order, beginning with the greatest.\n$\\frac{1}{10}$, $\\frac{3}{5}$, $\\frac{2}{9}$, $\\frac{2}{4}$",
+  "answer": "$\\frac{3}{5}$, $\\frac{2}{4}$, $\\frac{2}{9}$, $\\frac{1}{10}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q25",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Using all the digits below, form the greatest 4-digit odd number with the digit 3 in the tens place.\n2 4 7 3",
+  "answer": "4237",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "four digit cards 2, 4, 7, 3",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q26",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There are 1374 adults in the concert hall.\nThere are 639 fewer children than adults.\nHow many children are there in the concert hall?",
+  "answer": "735",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q27",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A fruit seller packs 280 apples into bags of 6.\nHow many apples are left unpacked?",
+  "answer": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'2f' -> '27'",
+   "Q27 number missing in OCR"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q28",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A storybook costs ＄40.15. It costs ＄17.65 less than a dictionary.\nWhat is the cost of the dictionary?",
+  "answer": "57.80",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q29",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Compare the masses of the objects.\nHow much lighter is the bag of apples than the watermelon?",
+  "answer": "4 kg 750 g",
+  "answer_parts": [
+   {
+    "part": "kg",
+    "value": "4",
+    "unit": "kg"
+   },
+   {
+    "part": "g",
+    "value": "750",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "two weighing scales: watermelon 5 kg, bag of apples 250 g",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q30",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 16,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Fatimah and her family ate at a fast food restaurant.\nThe meal cost ＄33.25. She gave the cashier a ＄50 note.\nHow much change should she receive?",
+  "answer": "16.75",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q31",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 17,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Two containers of different sizes were filled with different amounts of water.\nJoan wanted to pour water from container A to container B so that container B would have 500 mℓ of water.\nWhat would be the volume of water left in container A?",
+  "answer": "650",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker A (800 mℓ) and jug B (350 mℓ) with scales",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q32",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 17,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What digit does each shape stand for?\n9 $\\diamond$ 2 $\\times$ 7 = 6 $\\heartsuit$ 24",
+  "answer": "diamond = 3, heart = 5",
+  "answer_parts": [
+   {
+    "part": "diamond",
+    "value": "3",
+    "unit": ""
+   },
+   {
+    "part": "heart",
+    "value": "5",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical multiplication 9?2 x 7 = 6?24 with shapes",
+  "ocr_fixes": [
+   "layout read from image"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q33",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 18,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "John placed some balloons at an equal distance from each other.\nThe distance between the 3rd and the 7th balloon is 92 cm.\nWhat is the distance between each balloon?",
+  "answer": "23",
+  "unit": "cm",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "3rd and 7th balloons 92 cm apart",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q34",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 19,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph shows the number of boys and girls at the school library from Monday to Friday last week. The scale on the vertical axis was torn off accidentally and could not be seen.\nBased on the information from the bar graph, tick (✓) True or False for the statements below.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "There are three times as many girls as boys at the school library on Friday."
+   },
+   {
+    "part": "b",
+    "text": "More boys than girls visited the school library from Monday to Friday."
+   }
+  ],
+  "answer": "a) True, b) False",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "True",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "False",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "double bar graph boys/girls Mon-Fri, scale torn off",
+  "ocr_fixes": [
+   "'b}' -> 'b)'"
+  ],
+  "checked_against_image": [
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q35",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 35,
+  "marks": 3,
+  "question_type": "long",
+  "question": "A train arrived at Gardens MRT station with 1359 passengers.\n247 passengers alighted from the train and 498 passengers boarded the train. How many passengers were there in the train when it left Gardens MRT station?",
+  "answer": "1610",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'passengets' -> 'passengers'"
+  ],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q36",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Tan started cleaning her house at 9.35 am.\nShe took 2 h 45 min to clean her house.\nThen she watched a television programme until 2 pm.\nHow long did she watch the television programme?",
+  "answer": "1 h 40 min",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "1",
+    "unit": "h"
+   },
+   {
+    "part": "",
+    "value": "40",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q37",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 22,
+  "section": "C",
+  "question_no": 37,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mr Rahim put up a fence around his rectangular garden.\nThe length of the garden is 10 m. Its breadth is 6 m.\nOne metre of fence cost ＄8.\nHow much did Mr Rahim pay for his fence?",
+  "answer": "256",
+  "unit": "＄",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 10 m by 6 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q38",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 22,
+  "section": "C",
+  "question_no": 38,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Soh had 13 packets of sweets. Each packet had the same number of sweets. She gave 12 pupils a packet each.\nFrom the remaining packet, she gave 7 sweets to each of the same pupils and there was no leftover.\nHow many sweets did each pupil get in the end?",
+  "answer": "91",
+  "unit": "sweets",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   22
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q39",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 23,
+  "section": "C",
+  "question_no": 39,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A box of 4 muffins cost ＄9. Mrs Lim has ＄120.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many boxes of muffins can she buy at most?"
+   },
+   {
+    "part": "b",
+    "text": "How many muffins can she buy altogether?"
+   }
+  ],
+  "answer": "a) 13 boxes, b) 52 muffins",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "13",
+    "unit": "boxes"
+   },
+   {
+    "part": "b",
+    "value": "52",
+    "unit": "muffins"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "muffins picture: 4 muffins for ＄9",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2023_P3_MGS_EOY_Q40",
+  "grade": "P3",
+  "year": "2023",
+  "school": "Methodist Girls'",
+  "exam": "EOY",
+  "source": "(Methodist Girls') (EOY) (2023)",
+  "source_pdf": "2023-P3-Maths-EOY-MGS.pdf",
+  "source_pdf_page": 24,
+  "section": "C",
+  "question_no": 40,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Ali and Samad had 80 marbles altogether.\nAfter Ali gave 7 marbles to Samad, Ali had 4 times as many marbles as Samad.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many marbles did Samad have in the end?"
+   },
+   {
+    "part": "b",
+    "text": "How many marbles did Samad have at first?"
+   }
+  ],
+  "answer": "a) 16, b) 9",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "16",
+    "unit": "marbles"
+   },
+   {
+    "part": "b",
+    "value": "9",
+    "unit": "marbles"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'All' -> 'Ali'"
+  ],
+  "checked_against_image": [
+   24
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

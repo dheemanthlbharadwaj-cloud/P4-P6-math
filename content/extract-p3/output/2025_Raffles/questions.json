@@ -1,0 +1,950 @@
+[
+ {
+  "id": "2025_P3_Raffles_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 7685 the digit ______ is in the tens place.",
+  "options": {
+   "1": "5",
+   "2": "6",
+   "3": "7",
+   "4": "8"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following fractions is the simplest form of $\\frac{6}{12}$?",
+  "options": {
+   "1": "$\\frac{1}{3}$",
+   "2": "$\\frac{1}{2}$",
+   "3": "$\\frac{3}{4}$",
+   "4": "$\\frac{1}{6}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 2,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Express 3320 g in kilograms and grams.",
+  "options": {
+   "1": "3 kg 2 g",
+   "2": "3 kg 32 g",
+   "3": "3 kg 320 g",
+   "4": "33 kg 20 g"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "2 hours = ______ minutes",
+  "options": {
+   "1": "20",
+   "2": "60",
+   "3": "120",
+   "4": "200"
+  },
+  "answer_key": "3",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number missing in OCR"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Name the acute angle in the figure.",
+  "options": {
+   "1": "$\\angle c$",
+   "2": "$\\angle d$",
+   "3": "$\\angle e$",
+   "4": "$\\angle f$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "figure with angles c, d, e, f",
+  "ocr_fixes": [
+   "Q number missing in OCR"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (figure not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the missing number in the number pattern?\n3680, 3830, 3730, 3880, ______, 3930, 3830",
+  "options": {
+   "1": "3730",
+   "2": "3780",
+   "3": "3830",
+   "4": "4030"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 8"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the missing number in the box?\n$\\frac{2}{3}$ $=$ $\\frac{6}{$\\square$}$",
+  "options": {
+   "1": "6",
+   "2": "9",
+   "3": "12",
+   "4": "15"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 7 order swapped with Q6; equation read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Sandy gave the cashier a ＄10 note and received ＄2.70 as change.\nWhich two items did she buy?\nSalad ＄7.90, Burger ＄4.80, Fries ＄3.10, Drink ＄2.50",
+  "options": {
+   "1": "Burger and salad",
+   "2": "Burger and drink",
+   "3": "Fries and salad",
+   "4": "Fries and drink"
+  },
+  "answer_key": "2",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "pictures of salad, burger, fries, drink with prices",
+  "ocr_fixes": [
+   "Q number missing in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Jessie prepared 1500 mℓ of fruit juice. She filled 3 glasses with 200 mℓ of fruit juice each. How much fruit juice had she left?",
+  "options": {
+   "1": "500 mℓ",
+   "2": "600 mℓ",
+   "3": "900 mℓ",
+   "4": "1300 mℓ"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which two shapes shown in the grid have the same area?",
+  "options": {
+   "1": "A and B",
+   "2": "B and C",
+   "3": "C and D",
+   "4": "D and A"
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "four shapes A-D on a 1 cm grid",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (shapes not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 3649 in words.",
+  "answer": "Three thousand six hundred and forty-nine",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 41"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n2615 + $\\square$ = 8510",
+  "answer": "5895",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'42.' -> '12.'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 6,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the fraction represented by A on the number line?",
+  "answer": "$\\frac{4}{7}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "number line with point A",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (number line not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the sum of $\\frac{2}{4}$ and $\\frac{3}{8}$.",
+  "answer": "$\\frac{7}{8}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, taken from the key working 2/4 + 3/8"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Kelvin travels from his house by bus to buy breakfast at the coffeeshop. How far is the coffeeshop from his house?",
+  "answer": "2350",
+  "unit": "m",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "route house to bus stop 300 m and bus stop to coffeeshop 2050 m",
+  "ocr_fixes": [
+   "'coffesshop' -> 'coffeeshop'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok (figure labels from OCR, key 300 + 2050)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Identify a line parallel to line AB.",
+  "answer": "EF",
+  "unit": "line",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "lines AB, CD, EF, GH",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok (figure not re-read, key trusted)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The difference between two numbers is 2635. The greater number is 3569.\nWhat is the smaller number?",
+  "answer": "934",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Is' -> 'is'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Divide 968 by 6.\nWhat is the remainder?",
+  "answer": "2",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Is' -> 'is'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "These figures are not drawn to scale.\nFind the area and perimeter of each figure.\nMake a comparison between the areas and perimeters of the figures.\nFigure G: 7 cm by 7 cm. Figure H: 4 cm by 10 cm.\nFigure G and Figure H have the same ______ but different ______.",
+  "answer": "G: area 49 cm$^2$, perimeter 28 cm; H: area 40 cm$^2$, perimeter 28 cm; same perimeter but different areas",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "G area",
+    "value": "49",
+    "unit": "cm$^2$"
+   },
+   {
+    "part": "G perimeter",
+    "value": "28",
+    "unit": "cm"
+   },
+   {
+    "part": "H area",
+    "value": "40",
+    "unit": "cm$^2$"
+   },
+   {
+    "part": "H perimeter",
+    "value": "28",
+    "unit": "cm"
+   },
+   {
+    "part": "same",
+    "value": "perimeter",
+    "unit": ""
+   },
+   {
+    "part": "different",
+    "value": "areas",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square G 7 cm and rectangle H 4 cm by 10 cm",
+  "ocr_fixes": [
+   "dimensions read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A kettle contains 900 mℓ of water. It contains 6 times as much water as a cup. A bottle contains 500 mℓ of water. How much more water does the bottle contain than the cup?",
+  "answer": "350",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'ml' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 10,
+  "section": "C",
+  "question_no": 21,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mary read 137 pages of her book on the first day. She read 34 fewer pages on the second day.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many pages did Mary read on the second day?"
+   },
+   {
+    "part": "b",
+    "text": "There were 424 pages in the book. Mary completed reading the book on the third day. How many pages did she read on the third day?"
+   }
+  ],
+  "answer": "(a) 103, (b) 184",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "103",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "184",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 11,
+  "section": "C",
+  "question_no": 22,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Doughnuts are sold at the price shown.\n1 for ＄2, 4 for ＄7",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Mei Ling bought 3 doughnuts. How much did she pay?"
+   },
+   {
+    "part": "b",
+    "text": "Raja bought 9 doughnuts. What was the least amount of money he paid?"
+   }
+  ],
+  "answer": "(a) ＄6, (b) ＄16",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "6",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "16",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "poster: 1 doughnut for $2, 4 for $7",
+  "ocr_fixes": [
+   "'DOUGHNOTS' poster text read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 12,
+  "section": "C",
+  "question_no": 23,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Michelle arrived at the cinema at 3:15 p.m. She waited for 25 minutes for the movie to start. The movie ended at 6 p.m.\n(Draw a timeline to show your working.)",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How long was the movie?"
+   },
+   {
+    "part": "b",
+    "text": "She took a bus home after the movie. The bus ride took 35 minutes. She reached home at 7:25 p.m. What time did she board the bus?"
+   }
+  ],
+  "answer": "(a) 2 h 20 min, (b) 6:50 p.m.",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "2 h 20 min",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "6:50",
+    "unit": "p.m."
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number placed after text in OCR"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "solved: (a) 2 h 20 min differs from key 2 hr 30 mins (3:15 + 25 min = 3:40, to 6:00 = 2 h 20 min); (b) 6:50 p.m. matches key",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 13,
+  "section": "C",
+  "question_no": 24,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The bar graph shows the number of items a charity collected over 4 days.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "5 more mugs than bottles were collected on ______."
+   },
+   {
+    "part": "b",
+    "text": "There were ______ fewer bottles collected on Tuesday than on Wednesday."
+   },
+   {
+    "part": "c",
+    "text": "The total number of items collected on Thursday was ______."
+   },
+   {
+    "part": "d",
+    "text": "The total number of mugs collected over the 4 days was ______."
+   }
+  ],
+  "answer": "(a) Monday, (b) 20, (c) 45, (d) 75",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "Monday",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "20",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "45",
+    "unit": ""
+   },
+   {
+    "part": "d",
+    "value": "75",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "double bar graph mugs and bottles Mon-Thu",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_Raffles_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "Raffles Girls'",
+  "exam": "EOY",
+  "source": "(Raffles Girls') (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-Raffles.pdf",
+  "source_pdf_page": 14,
+  "section": "C",
+  "question_no": 25,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Jane bought 112 pens for a party. She packed them equally into 8 boxes.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many pens were there in each box?"
+   },
+   {
+    "part": "b",
+    "text": "The 112 pens were a mix of blue, red and green. There were twice as many blue pens as red pens. There were 8 more green pens than red pens. How many red pens were there?"
+   }
+  ],
+  "answer": "(a) 14, (b) 26",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "14",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "26",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

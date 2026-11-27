@@ -1,0 +1,1084 @@
+[
+ {
+  "id": "2024_P3_Rulang_EOY_Q01",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 2,
+  "section": "Paper 1",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Arrange the numbers in decreasing order.\nWhich of the following is correct?",
+  "options": {
+   "1": "7968, 7896, 7986, 7689",
+   "2": "7896, 7968, 7689, 7986",
+   "3": "7986, 7968, 7896, 7689",
+   "4": "7689, 7896, 7968, 7986"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q02",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 2,
+  "section": "Paper 1",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "6 $\\times$ $\\square$ = 36\nWhat is the missing number in the box above?",
+  "options": {
+   "1": "5",
+   "2": "6",
+   "3": "3",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 1 '@) 5' -> '(1) 5'",
+   "'G3) 3' -> '(3) 3'"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q03",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 2,
+  "section": "Paper 1",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "5 groups of 9 = $\\square$\nWhat is the missing number in the box above?",
+  "options": {
+   "1": "14",
+   "2": "45",
+   "3": "54",
+   "4": "4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 3 'G3)' -> '(3)'"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q04",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 2,
+  "section": "Paper 1",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "322 $\\div$ 7 = $\\square$\nWhat is the missing number in the box above?",
+  "options": {
+   "1": "44",
+   "2": "45",
+   "3": "46",
+   "4": "47"
+  },
+  "answer_key": "3",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'322+7' -> '322 $\\div$ 7'"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q05",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 2,
+  "section": "Paper 1",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "906 is the product of 6 and $\\square$.\nWhat is the missing number in the box above?",
+  "options": {
+   "1": "146",
+   "2": "151",
+   "3": "912",
+   "4": "5436"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'GB)' -> '(3)'"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q06",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 3,
+  "section": "Paper 1",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "$\\frac{3}{5}$ $-$ $\\frac{3}{10}$ = $\\square$",
+  "options": {
+   "1": "$\\frac{2}{5}$",
+   "2": "$\\frac{4}{5}$",
+   "3": "$\\frac{3}{10}$",
+   "4": "$\\frac{6}{10}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image",
+   "Q6 text missing in OCR"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q07",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 3,
+  "section": "Paper 1",
+  "question_no": 7,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the sum of $\\frac{2}{3}$ and $\\frac{1}{6}$?",
+  "options": {
+   "1": "$\\frac{3}{9}$",
+   "2": "$\\frac{5}{6}$",
+   "3": "$\\frac{1}{6}$",
+   "4": "$\\frac{3}{6}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q08",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 3,
+  "section": "Paper 1",
+  "question_no": 8,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Write the time 14 30 in 12-hour clock.",
+  "options": {
+   "1": "2:30 am",
+   "2": "2:30 pm",
+   "3": "4:30 am",
+   "4": "4:30 pm"
+  },
+  "answer_key": "2",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'G3)' -> '(3)'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q09",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 3,
+  "section": "Paper 1",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the area of the rectangle below.",
+  "options": {
+   "1": "15 cm$^2$",
+   "2": "30 cm$^2$",
+   "3": "36 cm$^2$",
+   "4": "144 cm$^2$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 12 cm by 3 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q10",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 3,
+  "section": "Paper 1",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Find the perimeter of the figure below.",
+  "options": {
+   "1": "24 cm",
+   "2": "32 cm",
+   "3": "48 cm",
+   "4": "64 cm"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "L-shaped figure with sides 8, 4, 4, 4, 4, 8 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q11",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 4,
+  "section": "Paper 1",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write 8312 in words.",
+  "answer": "Eight thousand, three hundred and twelve",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q12",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 4,
+  "section": "Paper 1",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Multiply 8 by 9.\nWhat is the answer?",
+  "answer": "72",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'3' -> '8' (OCR), per image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q13",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 4,
+  "section": "Paper 1",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Divide 270 by 6.\nWhat is the answer?",
+  "answer": "45",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q14",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 4,
+  "section": "Paper 1",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the quotient when 317 is divided by 2.",
+  "answer": "158",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok (quotient 158 remainder 1)",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q15",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 5,
+  "section": "Paper 1",
+  "question_no": 15,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Arrange the fractions in order. Begin with the smallest fraction.\n$\\frac{2}{5}$, $\\frac{2}{3}$, $\\frac{5}{9}$",
+  "answer": "$\\frac{2}{5}$, $\\frac{5}{9}$, $\\frac{2}{3}$",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q16",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 5,
+  "section": "Paper 1",
+  "question_no": 16,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Mark all the obtuse angles inside the figure below.",
+  "answer": "3 obtuse angles marked (top left, bottom left, bottom)",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "five-sided figure, obtuse angles to be marked",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q17",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 5,
+  "section": "Paper 1",
+  "question_no": 17,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Which line is parallel to AB in the square grid below?",
+  "answer": "GH",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with lines AB, CD, EF, GH, IJ",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q18",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 6,
+  "section": "Paper 1",
+  "question_no": 18,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Draw a line which is perpendicular to Line XY and passes through point Z.",
+  "answer": "A line through Z perpendicular to XY (drawing)",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "line XY and point Z",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q19",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 6,
+  "section": "Paper 1",
+  "question_no": 19,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Find the area of the figure below.",
+  "answer": "10",
+  "unit": "cm$^2$",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "figure with half squares on 1-cm grid",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q20",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 6,
+  "section": "Paper 1",
+  "question_no": 20,
+  "marks": 1,
+  "question_type": "short",
+  "question": "What is the perimeter of the square below?",
+  "answer": "56",
+  "unit": "m",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square with side 14 m",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q21",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 8,
+  "section": "Paper 2",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Avril is thinking of a 4-digit number. The digit 4 is in the hundreds place. The value of the digit 1 is 10. The digit 2 stands for 2000. The digit in the ones place is 9. What is the number?",
+  "answer": "2419",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q22",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 8,
+  "section": "Paper 2",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Amy ate $\\frac{1}{5}$ of a cake. Nora ate $\\frac{1}{10}$ of the same cake. Who ate more cake, Amy or Nora?",
+  "answer": "Amy",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q23",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 8,
+  "section": "Paper 2",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ali jogged from 8:30 am to 9:20 am. He then walked until 9:45 am before jogging again until 10:00 am. How much time did he spend on jogging?",
+  "answer": "65",
+  "unit": "min",
+  "topic_primary": "Time",
+  "topics": [
+   "Time",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q24",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 9,
+  "section": "Paper 2",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph below shows the number of people at a musical.\nHow many more adults than children were at the musical?",
+  "answer": "70",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph: Boys 60, Girls 130, Men 90, Women 170",
+  "ocr_fixes": [
+   "'4,' -> '4.'"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q25",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 9,
+  "section": "Paper 2",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ray received ＄37.50 from his father. He received another ＄43.80 from his mother. He used the money to buy a bag and a pencil case. He had ＄23.30 left.\nEach statement below is either true, false or not possible to tell from the information given. For each statement, put a tick (✓) in the correct column.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Ray received a total of ＄81.30 from his parents."
+   },
+   {
+    "part": "b",
+    "text": "Ray paid ＄58 in total for the bag and the pencil case."
+   },
+   {
+    "part": "c",
+    "text": "Ray paid ＄14.20 less for the pencil case than the bag."
+   }
+  ],
+  "answer": "a) True, b) True, c) Not possible to tell",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "True",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "True",
+    "unit": ""
+   },
+   {
+    "part": "c",
+    "value": "Not possible to tell",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "True/False/Not possible to tell table",
+  "ocr_fixes": [
+   "'$' -> '＄'",
+   "'S' -> '＄' amounts"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q26",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 10,
+  "section": "Paper 2",
+  "question_no": 26,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Peter had 8 stickers. Kathy had 7 times as many stickers as Peter. Aunt Alice then gave them another 146 stickers.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many stickers did Kathy have at first?"
+   },
+   {
+    "part": "b",
+    "text": "How many stickers did Peter and Kathy have altogether in the end?"
+   }
+  ],
+  "answer": "a) 56, b) 210",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "56",
+    "unit": "stickers"
+   },
+   {
+    "part": "b",
+    "value": "210",
+    "unit": "stickers"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'stickers:' -> 'stickers.'"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q27",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 11,
+  "section": "Paper 2",
+  "question_no": 27,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Mary saved ＄32.50 last month. Mary's sister saved ＄9.70 less than the amount she saved.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How much money did her sister save last month?"
+   },
+   {
+    "part": "b",
+    "text": "How much money did Mary and her sister save altogether last month?"
+   }
+  ],
+  "answer": "a) ＄22.80, b) ＄55.30",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "22.80",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "55.30",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'savo' -> 'save'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q28",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 12,
+  "section": "Paper 2",
+  "question_no": 28,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The volume of water in a container was 4 ℓ. Qi An poured out 1250 mℓ of water into a bottle.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How much water was left in the container? Give your answer in millilitres."
+   },
+   {
+    "part": "b",
+    "text": "Qi An then poured 2325 mℓ of water into the container, making it completely full of water. What was the capacity of the container? Give your answer in litres and millilitres."
+   }
+  ],
+  "answer": "a) 2750 mℓ, b) 5 ℓ 75 mℓ",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "2750",
+    "unit": "mℓ"
+   },
+   {
+    "part": "b",
+    "value": "5 ℓ 75 mℓ",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q29",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 13,
+  "section": "Paper 2",
+  "question_no": 29,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Anita is 152 cm tall. Billy is 14 cm shorter than Anita.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How tall is Billy?"
+   },
+   {
+    "part": "b",
+    "text": "Caili is 12 cm taller than Billy. How tall is Caili?"
+   }
+  ],
+  "answer": "a) 138 cm, b) 150 cm",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "138",
+    "unit": "cm"
+   },
+   {
+    "part": "b",
+    "value": "150",
+    "unit": "cm"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2024_P3_Rulang_EOY_Q30",
+  "grade": "P3",
+  "year": "2024",
+  "school": "Rulang",
+  "exam": "EOY",
+  "source": "(Rulang) (EOY) (2024)",
+  "source_pdf": "2024-P3-Maths-EOY-Rulang.pdf",
+  "source_pdf_page": 14,
+  "section": "Paper 2",
+  "question_no": 30,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A bus left Bus Stop A with some passengers in it. When the bus reached Bus Stop B, 10 passengers alighted from it. When the bus reached Bus Stop C, 6 passengers boarded it. There were 30 passengers in the bus when it left Bus Stop C.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many passengers were in the bus when it left Bus Stop B?"
+   },
+   {
+    "part": "b",
+    "text": "How many passengers were in the bus when it left Bus Stop A?"
+   }
+  ],
+  "answer": "a) 24, b) 34",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "24",
+    "unit": "passengers"
+   },
+   {
+    "part": "b",
+    "value": "34",
+    "unit": "passengers"
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

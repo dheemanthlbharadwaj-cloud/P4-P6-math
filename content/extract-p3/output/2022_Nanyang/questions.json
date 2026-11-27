@@ -1,0 +1,1596 @@
+[
+ {
+  "id": "2022_P3_Nanyang_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the missing number in the equation below?\n$9836 = 9000 + \\boxed{?} + 30 + 6$",
+  "options": {
+   "1": "8",
+   "2": "80",
+   "3": "800",
+   "4": "8000"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "OCR read '+3076'; image shows '+ 30 + 6'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange these numbers from the smallest to the greatest.\n7231  7321  7213  7123",
+  "options": {
+   "1": "7123, 7321, 7213, 7231",
+   "2": "7231, 7213, 7321, 7123",
+   "3": "7312, 7231, 7213, 7123",
+   "4": "7123, 7213, 7231, 7321"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option (1) read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Find the sum of 5641 and 1346.",
+  "options": {
+   "1": "4295",
+   "2": "4305",
+   "3": "6987",
+   "4": "7087"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What number is 2285 less than 8050?",
+  "options": {
+   "1": "5765",
+   "2": "5865",
+   "3": "6235",
+   "4": "6875"
+  },
+  "answer_key": "1",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "question number 4 missing in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "$9 \\times 8$ has the same value as ______.",
+  "options": {
+   "1": "$8 \\times 8 \\times 8 \\times 8 \\times 8 \\times 8 \\times 8 \\times 8$",
+   "2": "$8 + 8 + 8 + 8 + 8 + 8 + 8 + 8 + 8$",
+   "3": "$9 \\times 9 \\times 9 \\times 9 \\times 9 \\times 9 \\times 9 \\times 9$",
+   "4": "$9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the product of 285 and 6?",
+  "options": {
+   "1": "1210",
+   "2": "1280",
+   "3": "1680",
+   "4": "1710"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "$835 \\div 8 = \\boxed{?}$\nWhat is the missing number in the box?",
+  "options": {
+   "1": "14",
+   "2": "14 R 3",
+   "3": "104",
+   "4": "104 R 3"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following is an equivalent fraction of $\\frac{6}{8}$?",
+  "options": {
+   "1": "$\\frac{3}{4}$",
+   "2": "$\\frac{4}{6}$",
+   "3": "$\\frac{3}{8}$",
+   "4": "$\\frac{8}{10}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Arrange the fractions in order, starting from the greatest to the smallest.\n$\\frac{3}{5}$, $\\frac{1}{4}$, $\\frac{7}{10}$, $\\frac{1}{2}$",
+  "options": {
+   "1": "$\\frac{3}{5}$, $\\frac{7}{10}$, $\\frac{1}{4}$, $\\frac{1}{2}$",
+   "2": "$\\frac{1}{4}$, $\\frac{1}{2}$, $\\frac{3}{5}$, $\\frac{7}{10}$",
+   "3": "$\\frac{7}{10}$, $\\frac{1}{2}$, $\\frac{3}{5}$, $\\frac{1}{4}$",
+   "4": "$\\frac{7}{10}$, $\\frac{3}{5}$, $\\frac{1}{2}$, $\\frac{1}{4}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following figure shows an angle that is greater than a right angle?",
+  "options": {
+   "1": "angle figure 1",
+   "2": "angle figure 2",
+   "3": "angle figure 3",
+   "4": "angle figure 4"
+  },
+  "answer_key": "2",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four marked angles, options (1)-(4) drawn as figures",
+  "ocr_fixes": [
+   "options are pictures; recorded as placeholders"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure below is drawn on a 1-cm square grid.\nFind the perimeter of the figure.",
+  "options": {
+   "1": "6 cm",
+   "2": "7 cm",
+   "3": "14 cm",
+   "4": "19 cm"
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "L-shaped shaded figure on 1-cm grid",
+  "ocr_fixes": [
+   "'77cm' -> '7 cm', '196m' -> '19 cm'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 7,
+  "section": "Booklet A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Lewis has 4 number cards.\nEach number can only be used once.\n5  9  4  8\nWhat is the greatest 4-digit odd number that he can form?",
+  "options": {
+   "1": "8549",
+   "2": "8954",
+   "3": "9845",
+   "4": "9854"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": true,
+  "figure_note": "four number cards 5 9 4 8",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 7,
+  "section": "Booklet A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Complete the number pattern below.\n______, 6046, 6446, 6846, 7246",
+  "options": {
+   "1": "5446",
+   "2": "5646",
+   "3": "6006",
+   "4": "6086"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 8,
+  "section": "Booklet A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "When a number is divided by 3, it gives a quotient of 231 with a remainder of 2.\nWhat is the number?",
+  "options": {
+   "1": "77",
+   "2": "115",
+   "3": "693",
+   "4": "695"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 8,
+  "section": "Booklet A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Ravi had 609 oranges.\nHe sold 357 oranges and packed the rest of the oranges equally into 7 boxes.\nHow many oranges were there in each box?",
+  "options": {
+   "1": "36",
+   "2": "51",
+   "3": "87",
+   "4": "138"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 8,
+  "section": "Booklet A",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The distance between Shina's home and her office is 4379 m.\nShe drives from her home to her office each morning.\nAfter work, she drives the same way home.\nWhat is the total distance she drives each day?",
+  "options": {
+   "1": "4 km 379 m",
+   "2": "8 km 758 m",
+   "3": "43 km 79 m",
+   "4": "87 km 58 m"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'8&km758m' -> '8 km 758 m'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 9,
+  "section": "Booklet A",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Look at the figure below.\nAF, BG, DH, CF, DG, EH and AE are straight lines.\nName a pair of parallel lines.",
+  "options": {
+   "1": "AB // AF",
+   "2": "GB // HD",
+   "3": "FC // HE",
+   "4": "GD // HE"
+  },
+  "answer_key": "4",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with points A-H and straight lines",
+  "ocr_fixes": [
+   "options garbled, read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok (GD // HE read from grid)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 10,
+  "section": "Booklet A",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure below is made of 3 identical rectangles.\nFind the perimeter of the figure.",
+  "options": {
+   "1": "16 cm",
+   "2": "20 cm",
+   "3": "24 cm",
+   "4": "36 cm"
+  },
+  "answer_key": "2",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "3 identical rectangles forming a rectangle, height 4 cm",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 10,
+  "section": "Booklet A",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "James and Liz had a total of ＄648.\nLiz had two times as much money as James.\nHow much money must Liz give to James so that each of them will have the same amount of money in the end?",
+  "options": {
+   "1": "＄108",
+   "2": "＄162",
+   "3": "＄216",
+   "4": "＄324"
+  },
+  "answer_key": "1",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 11,
+  "section": "Booklet A",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Cheryl is thinking of a 3-digit even number.\nWhen the number is divided by 3, there is no remainder.\nThe digit in the tens place is smaller than the digit in the hundreds place.\nWhat is this number?",
+  "options": {
+   "1": "254",
+   "2": "345",
+   "3": "639",
+   "4": "768"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 13,
+  "section": "Booklet B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mr Ang sold 2786 fishballs on Friday.\nHe sold 1375 fewer fishballs on Saturday than on Friday.\nHow many fishballs did he sell on both days?",
+  "answer": "4197",
+  "unit": "fishballs",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 13,
+  "section": "Booklet B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing numerator in the box?\n$\\frac{\\boxed{?}}{3} = \\frac{14}{21}$",
+  "answer": "2",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 13,
+  "section": "Booklet B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Write 2 hour 45 minutes in minutes.",
+  "answer": "165",
+  "unit": "min",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 14,
+  "section": "Booklet B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A line XY is drawn in the square grid below.\nDraw a line perpendicular to XY, passing through point Z.",
+  "answer": "(drawing) a line through Z perpendicular to XY",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "square grid with line XY and point Z",
+  "ocr_fixes": [
+   "'Aline' -> 'A line'"
+  ],
+  "checked_against_image": [
+   14,
+   29
+  ],
+  "answer_check": "ok (answer is a drawing; key shows the perpendicular drawn)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 14,
+  "section": "Booklet B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Ximin had 5 boxes of pencils.\nThere were 8 pencils in each box.\nShe gave all her pencils equally to 10 friends.\nHow many pencils did each friend get?",
+  "answer": "4",
+  "unit": "pencils",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 15,
+  "section": "Booklet B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A factory produces 198 loaves of bread every day.\nHow many loaves of bread will the factory produce in a week?",
+  "answer": "1386",
+  "unit": "loaves",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 15,
+  "section": "Booklet B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Hafiz has 859 sweets.\nHe packs 4 sweets into each bag.\nWhat is the smallest number of bags he will need to pack all the sweets?",
+  "answer": "215",
+  "unit": "bags",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 16,
+  "section": "Booklet B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Devi baked 285 cookies.\nShe gave away thrice as many cookies on Monday as on Tuesday.\nShe then had 21 cookies left.\nHow many cookies did she give away on Tuesday?",
+  "answer": "66",
+  "unit": "cookies",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 16,
+  "section": "Booklet B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What fraction of the figure below is shaded?\nGive your answer in its simplest form.",
+  "answer": "$\\frac{1}{3}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "three squares with shaded triangles",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok (key 4/12 = 1/3)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 17,
+  "section": "Booklet B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A set of fractions is shown below.\n$\\frac{2}{8}$, $\\frac{5}{6}$, $\\frac{3}{4}$, $\\frac{1}{12}$\nWhich 2 fractions will add up to 1 whole?",
+  "answer": "$\\frac{3}{4}$, $\\frac{2}{8}$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "$\\frac{3}{4}$",
+    "unit": ""
+   },
+   {
+    "part": "",
+    "value": "$\\frac{2}{8}$",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read with key"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 17,
+  "section": "Booklet B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Sandi had ＄34.60 in her purse at first.\nHer father gave her one ＄5 note and 4 twenty-cent coins.\nHow much money did she have in all?",
+  "answer": "40.40",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 18,
+  "section": "Booklet B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The weighing scales show the masses of Object A and Object B.\nWhat is the mass of Object B?",
+  "answer": "1200",
+  "unit": "g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two dial scales: A and B together, A alone",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   18,
+   29
+  ],
+  "answer_check": "unsure: dial readings (about 1.6 kg and 0.4 kg) roughly match key 1600-400",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 18,
+  "section": "Booklet B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Amelia and Jing Yi drank a total of 800 mℓ of apple juice.\nAmelia drank 156 mℓ of apple juice less than Jing Yi.\nHow much apple juice did Jing Yi drink?",
+  "answer": "478",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'mi' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok (key working 800-156=644, 644/2=322, 322+156=478)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 19,
+  "section": "Booklet B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Lim spent 3 h 35 min to paint a picture.\nShe finished painting at 3.18 p.m.\nWhat time did Mrs Lim start painting?\nGive your answer in a.m. or p.m.",
+  "answer": "11.43 a.m.",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 19,
+  "section": "Booklet B",
+  "question_no": 35,
+  "marks": 2,
+  "question_type": "short",
+  "question": "A rectangular paper, as shown below, is cut into 3 equal smaller pieces.\nWhat is the area of each smaller piece of paper?",
+  "answer": "45",
+  "unit": "cm²",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle 15 cm by 9 cm",
+  "ocr_fixes": [
+   "'Arectangular' -> 'A rectangular'"
+  ],
+  "checked_against_image": [
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 20,
+  "section": "Booklet B",
+  "question_no": 36,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph below shows the number of stamps Ahmad, Betty, Chong Ming and Devi each collected.\nThey collected 340 stamps altogether.\nComplete the bar graph to show the number of stamps Chong Ming collected.",
+  "answer": "90",
+  "unit": "stamps",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical bar graph (Ahmad 50, Betty 80, Chong Ming blank, Devi 120)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q37",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 20,
+  "section": "Booklet B",
+  "question_no": 37,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Joseph had 30 more stickers than Muthu at first.\nMuthu gave 50 stickers to Joseph.\nHow many more stickers did Joseph have than Muthu in the end?",
+  "answer": "130",
+  "unit": "stickers",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   20
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q38",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 21,
+  "section": "Booklet B",
+  "question_no": 38,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Agnes had ＄82.50 more than Oliver.\nMing Huat had ＄96.50 less than Agnes.\nHow much more money did Oliver have than Ming Huat?",
+  "answer": "14",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q39",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 21,
+  "section": "Booklet B",
+  "question_no": 39,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Beth had some money at first.\nAnn gave ＄18 to Beth.\nBeth spent ＄36.\nIn the end, Beth had ＄80.\nHow much money did Beth have at first?",
+  "answer": "98",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q40",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 22,
+  "section": "Booklet B",
+  "question_no": 40,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of cupcakes Mrs Menon sold for each flavour in a week.\nMrs Menon sold 20 more vanilla cupcakes more than walnut cupcakes.\nHow many cupcakes did she sell altogether?",
+  "answer": "70",
+  "unit": "cupcakes",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph without scale numbers: walnut 3, vanilla 7, chocolate 4 gridlines",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   22
+  ],
+  "answer_check": "ok (4 gridlines = 20, 1 line = 5, total 14 lines = 70)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q41",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 23,
+  "section": "Booklet B",
+  "question_no": 41,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A badminton racket and 4 similar soccer balls cost ＄185.\nThe cost of 2 such soccer balls is ＄38.\n(a) Mdm Lim paid ＄200 for the badminton racket and 4 such soccer balls. How much change would she receive?\n(b) How much is the cost of 4 such soccer balls?\n(c) Look at the statements below. Put a tick (✓) in the box if the statement is correct. Put a cross (×) in the box if the statement is wrong.\ni. Julia has ＄150. She needs ＄35 more to buy the badminton racket and 4 such soccer balls.\nii. The cost of 4 such soccer balls is less than the cost of the badminton racket.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Mdm Lim paid ＄200 for the badminton racket and 4 such soccer balls. How much change would she receive?"
+   },
+   {
+    "part": "b",
+    "text": "How much is the cost of 4 such soccer balls?"
+   },
+   {
+    "part": "c",
+    "text": "Look at the statements below. Put a tick (✓) in the box if the statement is correct. Put a cross (×) in the box if the statement is wrong. i. Julia has ＄150. She needs ＄35 more to buy the badminton racket and 4 such soccer balls. ii. The cost of 4 such soccer balls is less than the cost of the badminton racket."
+   }
+  ],
+  "answer": "15; 76; i ✓, ii ✓",
+  "unit": "＄",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "15",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "76",
+    "unit": "＄"
+   },
+   {
+    "part": "c",
+    "value": "i ✓, ii ✓",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   23,
+   30
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q42",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 24,
+  "section": "Booklet B",
+  "question_no": 42,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The opening hours of a clinic is as shown below.\nOpening Hours\nMonday to Sunday\n8.15 a.m. to 1.00 p.m.\n3.00 p.m. to 5.30 p.m.\n(a) How long is the clinic opened each day? Give your answer in hours and minutes.\n(b) George visited the clinic at 10.30 a.m. He spent 48 minutes at the clinic. What time did he leave the clinic? Give your answer in a.m. or p.m.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How long is the clinic opened each day? Give your answer in hours and minutes."
+   },
+   {
+    "part": "b",
+    "text": "George visited the clinic at 10.30 a.m. He spent 48 minutes at the clinic. What time did he leave the clinic? Give your answer in a.m. or p.m."
+   }
+  ],
+  "answer": "7 h 15 min; 11.18 a.m.",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "7",
+    "unit": "h"
+   },
+   {
+    "part": "a",
+    "value": "15",
+    "unit": "min"
+   },
+   {
+    "part": "b",
+    "value": "11.18 a.m.",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "opening hours box (text table)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   24
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q43",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 25,
+  "section": "Booklet B",
+  "question_no": 43,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The bar graph below shows the number of children who took part in a survey on their favourite fruits.\n(a) What was the total number of children who took part in the survey?\n(b) How many more children liked strawberry than apple?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What was the total number of children who took part in the survey?"
+   },
+   {
+    "part": "b",
+    "text": "How many more children liked strawberry than apple?"
+   }
+  ],
+  "answer": "96; 6",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "96",
+    "unit": "children"
+   },
+   {
+    "part": "b",
+    "value": "6",
+    "unit": "children"
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph: Banana 22, Strawberry 20, Apple 14, Orange 10, Mango 30",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   25
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q44",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 26,
+  "section": "Booklet B",
+  "question_no": 44,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The distance between Bakery A and Bakery C is 2940 m.\nThe distance between Bakery A and Bakery C is four times the distance between Bakery B and Bakery C.\n(a) What is the distance between Bakery B and Bakery C?\n(b) Halimah wants to walk from the library to the bakery. What is the shorter distance that she needs to walk from the library to the bakery?\n(Route diagram: Library to Park 1300 m, Park to Bakery 1904 m, Library to Cinema 2055 m, Cinema to Bakery 1103 m.)",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the distance between Bakery B and Bakery C?"
+   },
+   {
+    "part": "b",
+    "text": "Halimah wants to walk from the library to the bakery. What is the shorter distance that she needs to walk from the library to the bakery?"
+   }
+  ],
+  "answer": "735 m; 3158 m",
+  "unit": "m",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "735",
+    "unit": "m"
+   },
+   {
+    "part": "b",
+    "value": "3158",
+    "unit": "m"
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "route map Library-Park-Bakery and Library-Cinema-Bakery with distances",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   26,
+   30
+  ],
+  "answer_check": "ok (key working has typos 2005/1094; 2055+1103=3158 < 1300+1904=3204)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_Nanyang_EOY_Q45",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Nanyang",
+  "exam": "EOY",
+  "source": "(Nanyang) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-Nanyang.pdf",
+  "source_pdf_page": 27,
+  "section": "Booklet B",
+  "question_no": 45,
+  "marks": 4,
+  "question_type": "long",
+  "question": "There were 110 seats at a concert.\nThe seats were arranged in rows of 6 or rows of 8.\nThere were 15 rows altogether.\n(a) How many seats were arranged in rows of 8 at the concert?\n(b) A ticket to the concert cost ＄7. All the seats were filled and there were no empty seats. How much money was collected?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many seats were arranged in rows of 8 at the concert?"
+   },
+   {
+    "part": "b",
+    "text": "A ticket to the concert cost ＄7. All the seats were filled and there were no empty seats. How much money was collected?"
+   }
+  ],
+  "answer": "80; 770",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "80",
+    "unit": "seats"
+   },
+   {
+    "part": "b",
+    "value": "770",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   27,
+   30
+  ],
+  "answer_check": "ok (key writes 'Ans: 80 rows' but 10 rows of 8 = 80 seats; recorded 80 seats)",
+  "confidence": "high"
+ }
+]

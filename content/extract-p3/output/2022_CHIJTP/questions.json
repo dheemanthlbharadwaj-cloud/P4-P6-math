@@ -1,0 +1,1261 @@
+[
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the value of the digit ‘6’ in the number 6987?",
+  "options": {
+   "1": "6",
+   "2": "60",
+   "3": "600",
+   "4": "6000"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the missing number in this pattern?\n3744, 3344, 2944, ______, 2144",
+  "options": {
+   "1": "2544",
+   "2": "2744",
+   "3": "3344",
+   "4": "3544"
+  },
+  "answer_key": "1",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "blank read as 'a'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Mr Leong asked his pupils to convert 9 m 6 cm to cm. Which pupil wrote it correctly?",
+  "options": {
+   "1": "Alan: 96 cm",
+   "2": "Boon Huat: 906 cm",
+   "3": "Fadhila: 960 cm",
+   "4": "Zachery: 9006 cm"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'MrLeong' -> 'Mr Leong'",
+   "pupil table folded into options"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "5 threes + 2 threes = ______.",
+  "options": {
+   "1": "2 $\\times$ 3",
+   "2": "2 $\\times$ 5",
+   "3": "3 $\\times$ 3",
+   "4": "7 $\\times$ 3"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "question number missing in OCR (Q4)"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The bar graph below shows the number of books borrowed by 4 children in the month of December.\nWho borrowed the most number of books?",
+  "options": {
+   "1": "Amy",
+   "2": "Benny",
+   "3": "Claire",
+   "4": "Danny"
+  },
+  "answer_key": "3",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph, Amy 22, Benny 14, Claire 28, Danny 18",
+  "ocr_fixes": [
+   "Q5 number kept",
+   "graph OCR garbled, read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which 2 lines are perpendicular to line LO in the rectangle shown below?",
+  "options": {
+   "1": "ML and NO",
+   "2": "ML and MN",
+   "3": "MO and ML",
+   "4": "MN and NO"
+  },
+  "answer_key": "1",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle MNOL on grid with diagonal MO",
+  "ocr_fixes": [
+   "Q6 number missing in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What time does the clock show?",
+  "options": {
+   "1": "20 minutes to 10",
+   "2": "50 minutes past 10",
+   "3": "20 minutes to 11",
+   "4": "40 minutes past 11"
+  },
+  "answer_key": "3",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock, hour hand near 10-11, minute hand at 8",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the amount of money shown below?",
+  "options": {
+   "1": "＄15.55",
+   "2": "＄15.85",
+   "3": "＄16.55",
+   "4": "＄16.85"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "＄10 note, ＄5 note and coins 1, 50, 20, 10, 5 cents",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which fraction is equivalent to $\\frac{1}{2}$?",
+  "options": {
+   "1": "$\\frac{1}{12}$",
+   "2": "$\\frac{2}{4}$",
+   "3": "$\\frac{6}{8}$",
+   "4": "$\\frac{3}{4}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which one of the following will add up to an answer that is an odd number?",
+  "options": {
+   "1": "1333 + 2001",
+   "2": "1245 + 2321",
+   "3": "1719 + 2002",
+   "4": "1609 + 2131"
+  },
+  "answer_key": "3",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "4 thousands 27 hundreds = ______ thousands and 17 hundreds.",
+  "options": {
+   "1": "7",
+   "2": "6",
+   "3": "5",
+   "4": "4"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "How many of the marked angles inside the figure above are obtuse angles and acute angles?",
+  "options": {
+   "1": "3 obtuse angles, 3 acute angles",
+   "2": "4 obtuse angles, 3 acute angles",
+   "3": "4 obtuse angles, 2 acute angles",
+   "4": "5 obtuse angles, 2 acute angles"
+  },
+  "answer_key": "3",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "polygon on grid with 6 marked angles; question stem sits below the figure",
+  "ocr_fixes": [
+   "options table folded into text"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "There are 266 children going to the zoo. There are 7 buses and each bus can seat 35 children. How many children will not have a seat?",
+  "options": {
+   "1": "5",
+   "2": "21",
+   "3": "38",
+   "4": "245"
+  },
+  "answer_key": "2",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Mr Colman wants to travel from City A to City D. What is the distance of the shortest route that he should take?",
+  "options": {
+   "1": "2334 m",
+   "2": "2766 m",
+   "3": "4864 m",
+   "4": "5269 m"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "route map: A-B 2530 m, B-D 2 km 334 m, A-C 2 km 503 m, C-D 2766 m",
+  "ocr_fixes": [
+   "stem line order fixed"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Jack, Marcy, Tabby and Porsha have some stickers.\nJack has 15 more stickers than Marcy.\nMarcy has 28 fewer stickers than Tabby.\nPorsha has 10 more stickers than Jack.\nWho has the most stickers?",
+  "options": {
+   "1": "Jack",
+   "2": "Marcy",
+   "3": "Porsha",
+   "4": "Tabby"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing number in the box?\n2503 = 2000 + ______ + 3",
+  "answer": "500",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Convert 205 min into hours and minutes.",
+  "answer": "3 h 25 min",
+  "unit": "h min",
+  "answer_parts": [
+   {
+    "part": "h",
+    "value": "3",
+    "unit": "h"
+   },
+   {
+    "part": "min",
+    "value": "25",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following fractions from the greatest to the smallest.\n$\\frac{3}{5}$, $\\frac{1}{4}$, $\\frac{7}{10}$",
+  "answer": "$\\frac{7}{10}$, $\\frac{3}{5}$, $\\frac{1}{4}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image/key"
+  ],
+  "checked_against_image": [
+   8,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the amount of money Tara saved from her daily pocket money of ＄2 over five days.\nStudy the graph carefully and answer questions 19 and 20.\nHow much money did Tara save on Monday?",
+  "answer": "70",
+  "unit": "cents",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Money"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of pocket money saved (cents) Mon-Fri; shared with Q20",
+  "ocr_fixes": [
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the amount of money Tara saved from her daily pocket money of ＄2 over five days.\nStudy the graph carefully and answer questions 19 and 20.\nOn which day did Tara spend the most money?",
+  "answer": "Wednesday",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "same bar graph as Q19",
+  "ocr_fixes": [
+   "'Onwhich' -> 'On which'"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Study the figure below carefully.\n(a) Use a ruler to draw a line perpendicular to DE, passing through point F.\n(b) Name a line parallel to AG.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Use a ruler to draw a line perpendicular to DE, passing through point F."
+   },
+   {
+    "part": "b",
+    "text": "Name a line parallel to AG."
+   }
+  ],
+  "answer": "(a) line drawn through F perpendicular to DE; (b) DE",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "(line drawn through F perpendicular to DE)",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "DE",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "points A-G joined on a grid; part (a) is a drawing task",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10,
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "$\\frac{1}{3} + \\frac{3}{9} =$ ______\nGive your answer in the simplest form.",
+  "answer": "$\\frac{2}{3}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 29; fractions read from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How many tens are there in the quotient of 1560 $\\div$ 6?",
+  "answer": "260",
+  "unit": "tens",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'+' -> '$\\div$'"
+  ],
+  "checked_against_image": [
+   23
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "There are 3546 chocolate cupcakes. There are 1649 more chocolate than vanilla cupcakes. How many vanilla cupcakes are there?",
+  "answer": "1897",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The sum of two numbers is 300. The difference between the two numbers is 70. What is the smaller number?",
+  "answer": "115",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the mass of each ⬡ (hexagon)?",
+  "answer": "4",
+  "unit": "kg",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "two balance scales: 3 hexagons = 1 square; square + 3 hexagons = 24 kg pentagon",
+  "ocr_fixes": [
+   "hexagon symbol read as '( )'"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The capacity of a jug is 1200 mℓ. 3 bottles can fill the jug completely. 4 glasses of water can fill a bottle completely.\nWhat is the capacity of a glass?",
+  "answer": "100",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as a7",
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the number line below. What is the missing fraction?",
+  "answer": "$\\frac{5}{6}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "number line 0 to 1 with 6 equal parts, 1/2 marked, ? at fifth mark",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following in an increasing order, beginning from the smallest.\n7 ℓ 404 mℓ, 74 ℓ, 7074 mℓ, 7004 mℓ",
+  "answer": "7004 mℓ, 7074 mℓ, 7 ℓ 404 mℓ, 74 ℓ",
+  "unit": "",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "boxes read from image",
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Look at the number pattern carefully. What is the value of X?",
+  "answer": "18",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "X-shaped diagram, centre 72, arms 2-6-6, 8-9, 3-24, 2-2-X",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The opening hours of a clinic are shown below.\n9.00 a.m. to 12.30 p.m.\n2.15 p.m. to 5.15 p.m.\n6.30 p.m. to 9.45 p.m.\nHow long is the clinic open each day?",
+  "answer": "9 h 45 min",
+  "unit": "h min",
+  "answer_parts": [
+   {
+    "part": "h",
+    "value": "9",
+    "unit": "h"
+   },
+   {
+    "part": "min",
+    "value": "45",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "sign listing the three opening sessions",
+  "ocr_fixes": [
+   "'“9.00' stray quote removed"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 32,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Lee sewed 7 flowers on each dress. She had 69 flowers left after sewing 183 dresses. How many flowers did Mrs Lee have at first?",
+  "answer": "1350",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 33,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Ah Koon bakery sold curry puffs at the following prices.\n1 for ＄1.50\n3 for ＄4\nRita bought 13 curry puffs. What is the least amount that she had to pay?",
+  "answer": "17.50",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "price board: 1 curry puff ＄1.50, 3 for ＄4",
+  "ocr_fixes": [
+   "$ -> ＄",
+   "'pay' garbled",
+   "price list read from OCR"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 34,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Martha’s dance lesson starts at 5.35 p.m. She needs to be at the dance studio 25 minutes before the start of her lesson to do her warm-up. The journey from Martha’s house to the dance studio takes 45 minutes.\n(a) What time must Martha leave her house?\n(b) Martha’s dance lesson ended at 6.45 p.m. How long was her dance lesson? Give your answer in h and min.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What time must Martha leave her house?"
+   },
+   {
+    "part": "b",
+    "text": "Martha’s dance lesson ended at 6.45 p.m. How long was her dance lesson? Give your answer in h and min."
+   }
+  ],
+  "answer": "4.25 p.m.; 1 h 10 min",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "4.25 p.m.",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "1 h 10 min",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'6.45 pm' -> '6.45 p.m.'"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 35,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Sue collected 2075 seashells. Lina collected 779 seashells. Sue gave Lina some seashells so that they both have an equal number of seashells in the end. How many seashells did Lina have in the end?",
+  "answer": "1427",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "A shopkeeper has a total of 14 two-dollar and ten-dollar notes. He has ＄76 altogether. How many two-dollar notes does he have?",
+  "answer": "8",
+  "unit": "",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'36,' -> '36.'",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_CHIJTP_EOY_Q37",
+  "grade": "P3",
+  "year": "2022",
+  "school": "CHIJ (Toa Payoh)",
+  "exam": "EOY",
+  "source": "(CHIJ (Toa Payoh)) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-CHIJTP.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 37,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mr Ravi and Mr Goh had the same amount of flour in their bakery. Mr Ravi used 960 g of flour while Mr Goh used 2500 g of flour to bake some bread. In the end, Mr Ravi had 3 times as much flour left as Mr Goh. How much flour did each of them have at first? Give your answer in kilograms and grams.",
+  "answer": "3 kg 270 g",
+  "unit": "kg g",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "3",
+    "unit": "kg"
+   },
+   {
+    "part": "",
+    "value": "270",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

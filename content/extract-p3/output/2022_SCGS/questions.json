@@ -1,0 +1,1238 @@
+[
+ {
+  "id": "2022_P3_SCGS_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "In 1579 the digit 5 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Two thousand, one hundred and twelve written in numerals is ______.",
+  "options": {
+   "1": "2012",
+   "2": "2112",
+   "3": "2120",
+   "4": "2121"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 3,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the product of 24 and 8?",
+  "options": {
+   "1": "32",
+   "2": "162",
+   "3": "3",
+   "4": "192"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 3 read as '3 ;' -> '3'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 4,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "8941 is ______ less than 9041.",
+  "options": {
+   "1": "100",
+   "2": "190",
+   "3": "1000",
+   "4": "1900"
+  },
+  "answer_key": "1",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'8941is' -> '8941 is'"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 5,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which of the following fraction is $\\underline{\\text{not}}$ equivalent to $\\frac{1}{2}$?",
+  "options": {
+   "1": "$\\frac{2}{4}$",
+   "2": "$\\frac{3}{6}$",
+   "3": "$\\frac{4}{10}$",
+   "4": "$\\frac{6}{12}$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fraction and options garbled in OCR, read from image",
+   "Q5 and Q6 numbers missing in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Chloe takes 23 minutes to go home from school. She left school at 11.40 a.m. What time did Chloe get home?",
+  "options": {
+   "1": "11.17 a.m.",
+   "2": "11.17 p.m.",
+   "3": "12.03 a.m.",
+   "4": "12.03 p.m."
+  },
+  "answer_key": "4",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q6 number missing in OCR"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the missing number in the number pattern below?\n1265, 1280, 1295, ______, 1325",
+  "options": {
+   "1": "1300",
+   "2": "1310",
+   "3": "1315",
+   "4": "1320"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option (1) read as '(4)'",
+   "'(3) 1315 .' trailing dot removed"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The mass of a durian is 2 kg 250 g. The mass of a pear is 360 g. How much heavier is the mass of the durian than the mass of the pear?",
+  "options": {
+   "1": "1890 g",
+   "2": "2110 g",
+   "3": "2610 g",
+   "4": "5850 g"
+  },
+  "answer_key": "1",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options garbled ('1890','21109','2610g','5850'), read from image"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Which angle in the figure below is greater than a right angle?",
+  "options": {
+   "1": "$\\angle w$",
+   "2": "$\\angle x$",
+   "3": "$\\angle y$",
+   "4": "$\\angle z$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "quadrilateral with marked angles w, x, y, z",
+  "ocr_fixes": [
+   "options 'LW','ZX','ZY','LZ' -> angle symbols"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok: y looks obtuse, key accepted",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 10,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Mary took 1 hour 25 minutes to complete his homework. George took 40 minutes faster than Mary to complete his homework. How long did George take to complete his homework?",
+  "options": {
+   "1": "45 min",
+   "2": "85 min",
+   "3": "1 h 65 min",
+   "4": "2 h 05 min"
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 1 'A5 min' -> '45 min'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Dora had ＄49.90. Her mother gave her another ＄15. She spent ＄18.50. How much money had she left?",
+  "options": {
+   "1": "＄31.40",
+   "2": "＄33.50",
+   "3": "＄46.40",
+   "4": "＄64.40"
+  },
+  "answer_key": "3",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 41",
+   "$ -> ＄"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A fish tank contains 5 ℓ 70 mℓ of water. 2190 mℓ more water is needed to fill up the fish tank. What is the capacity of the fish tank?",
+  "options": {
+   "1": "2760 mℓ",
+   "2": "7260 mℓ",
+   "3": "7197 mℓ",
+   "4": "7890 mℓ"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'51 70 ml' -> '5 ℓ 70 mℓ'",
+   "ml -> mℓ"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A pizza was cut into equal pieces. Fred ate $\\frac{1}{2}$ of it and Joy ate $\\frac{1}{3}$ of it. What fraction of the pizza was eaten?",
+  "options": {
+   "1": "$\\frac{1}{5}$",
+   "2": "$\\frac{1}{6}$",
+   "3": "$\\frac{2}{5}$",
+   "4": "$\\frac{5}{6}$"
+  },
+  "answer_key": "4",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The clock below is 15 minutes faster. What is the actual time?",
+  "options": {
+   "1": "1.40 p.m.",
+   "2": "2.10 p.m.",
+   "3": "2.40 p.m.",
+   "4": "3.10 p.m."
+  },
+  "answer_key": "1",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "analogue clock showing about 1.55",
+  "ocr_fixes": [
+   "Q number read as 44"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok: clock read 1.55, minus 15 min = 1.40",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 7,
+  "section": "A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The table below shows the price of bus fares for different passengers.\nMrs Tan took her two elderly parents out with her 10 year-old son. Her elderly parents were both 65 years old. What was the total bus fare for the four passengers?",
+  "options": {
+   "1": "＄1.75",
+   "2": "＄2.35",
+   "3": "＄2.65",
+   "4": "＄3.55"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "table of bus fares: Adult ＄1.20, Senior citizen ＄0.90, Child ＄0.55",
+  "ocr_fixes": [
+   "'tock' -> 'took'",
+   "Q15 stem split around the table"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Write 3314 in words.",
+  "answer": "Three thousand, three hundred and fourteen",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following numbers from the greatest to the smallest.\n7216, 7261, 7126, 7162",
+  "answer": "7261, 7216, 7162, 7126",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the quotient when you divide 908 by 5?",
+  "answer": "181",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "3874 people visited Sentosa on Saturday. On Sunday, 1955 fewer people visited it than on Saturday. How many people visited Sentosa on Sunday?",
+  "answer": "1919",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following fractions from the greatest to the smallest.\n$\\frac{5}{9}$, $\\frac{5}{6}$, $\\frac{5}{7}$",
+  "answer": "$\\frac{5}{6}$, $\\frac{5}{7}$, $\\frac{5}{9}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled in OCR, read from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Lynn started her computer lesson at 8.30 a.m. It ended at 12.15 p.m. How long was her computer lesson?",
+  "answer": "3 h 45 min",
+  "unit": "",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'jesson' -> 'lesson'"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Tara bought 270 pens. She bought three times as many pens as Ray. How many pens did Ray buy?",
+  "answer": "90",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How many more squares must be shaded in the figure below so that $\\frac{4}{5}$ of the figure is shaded?",
+  "answer": "5",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "3 by 5 grid of squares, 7 shaded",
+  "ocr_fixes": [
+   "'Howmany' -> 'How many'",
+   "'Fs' -> $\\frac{4}{5}$"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How much more water is needed to fill the following beaker to 1000 mℓ?",
+  "answer": "200",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale (500 and 1000 mℓ marks), water at about 800 mℓ",
+  "ocr_fixes": [
+   "question text missing in OCR (Q24 flagged missing), read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok: level about 800 mℓ, key 200 accepted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The scale below shows the mass of 4 apples. What is the mass of 8 such apples?",
+  "answer": "680",
+  "unit": "g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "dial scale with 4 apples, pointer between 300 and 400 g",
+  "ocr_fixes": [
+   "'ihe' -> 'the'"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok: pointer about 340 g, key 680 accepted",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Meili was left with 90¢ after paying for 2 bars of chocolates and 1 bag of chips. How much money did she have at first?",
+  "answer": "6.20",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "price tags: chocolate bars 2 for ＄3.30, chips ＄2.00",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Name the pair of parallel lines?",
+  "answer": "AB // CD",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "",
+    "value": "AB // CD",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with line segments A-F-B, C-F, C-D, A-E",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Use a ruler and a set square to draw a line which is perpendicular to AB, and passing through Point W.",
+  "answer": "Drawing: a line through W perpendicular to AB (along the grid diagonal)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with line AB and point W",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok: drawing answer, key shows the line",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The picture graph below shows the number of medals won by some countries.\nWhat is the total number of medals won by Korea and Thailand?",
+  "answer": "64",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph 'Number of Medals Won': Singapore, Japan, Thailand, Korea, China",
+  "ocr_fixes": [
+   "margin noise removed"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Which country won twice as many medals as Singapore?",
+  "answer": "Japan",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "same bar graph as Q29",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok: Japan about 32 = 2 x 16, but China bar is also about 32; key says Japan",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 31,
+  "marks": 3,
+  "question_type": "long",
+  "question": "A total of 380 movie tickets were sold in two days. 90 fewer tickets were sold on the first day than on the second day. How many tickets were sold on the first day?",
+  "answer": "145",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 15,
+  "section": "C",
+  "question_no": 32,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Mrs Tan bought 500 g of flour. She used 12 g of flour for each cupcake. If she baked 9 cupcakes in all, how much flour had she left.",
+  "answer": "392",
+  "unit": "g",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'lf' -> 'If'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 33,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Huni bought 3 cookies for ＄5.00 and received 1 cookie for free. How much did she pay for 12 cookies?",
+  "answer": "15.00",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 34,
+  "marks": 4,
+  "question_type": "long",
+  "question": "A shopkeeper had some oranges. She threw away 13 rotten oranges. She packed the remaining 216 oranges equally into 8 boxes.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many oranges did the shopkeeper have at first?"
+   },
+   {
+    "part": "b",
+    "text": "How many oranges were there in each box?"
+   }
+  ],
+  "answer": "229; 27",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "229",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "27",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 35,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Lily went shopping and bought a dress, a bag and a watch. She paid ＄605 for a dress and a bag. The bag cost 4 times as much as the dress. The watch cost ＄19 more than the bag.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How much did Lily pay for the bag?"
+   },
+   {
+    "part": "b",
+    "text": "How much did she pay for the watch?"
+   }
+  ],
+  "answer": "484; 503",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "484",
+    "unit": "＄"
+   },
+   {
+    "part": "b",
+    "value": "503",
+    "unit": "＄"
+   }
+  ],
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'did’she' -> 'did she'"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_SCGS_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Singapore Chinese Girls' School",
+  "exam": "EOY",
+  "source": "(Singapore Chinese Girls' School) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-SCGS.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 36,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Carol had a square plot of land. She planted 7 trees on each side. A tree was planted at each corner. How many trees were there in total?",
+  "answer": "24",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "square labelled 'Plot of Land'",
+  "ocr_fixes": [
+   "'comer' -> 'corner'"
+  ],
+  "checked_against_image": [
+   19
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

@@ -1,0 +1,1405 @@
+[
+ {
+  "id": "2022_P3_HenryPark_EOY_Q01",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the value of digit 3 in 2305?",
+  "options": {
+   "1": "3",
+   "2": "30",
+   "3": "300",
+   "4": "3000"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "Q number read as 1 (OCR repeats)"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q02",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 3,
+  "section": "A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is an acute angle?",
+  "options": {
+   "1": "$\\angle a$",
+   "2": "$\\angle b$",
+   "3": "$\\angle c$",
+   "4": "$\\angle d$"
+  },
+  "answer_key": "3",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four angles a (right), b (obtuse), c (acute), d (reflex)",
+  "ocr_fixes": [
+   "options read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q03",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Which of the following is the same as 2 ℓ 40 mℓ?",
+  "options": {
+   "1": "240 mℓ",
+   "2": "2004 mℓ",
+   "3": "2040 mℓ",
+   "4": "2400 mℓ"
+  },
+  "answer_key": "3",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'mi' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q04",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 4,
+  "section": "A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Jia Le reached the swimming pool 5 minutes after the time shown below.\nAt what time did he reach the swimming pool?",
+  "options": {
+   "1": "6.50 a.m.",
+   "2": "7.00 a.m.",
+   "3": "11.30 a.m.",
+   "4": "11.40 a.m."
+  },
+  "answer_key": "2",
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "clock showing 6.55",
+  "ocr_fixes": [
+   "question split around figure in OCR, joined"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q05",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The figure below is made up of identical squares.\nWhat fraction of the figure is shaded?",
+  "options": {
+   "1": "$\\frac{1}{2}$",
+   "2": "$\\frac{1}{3}$",
+   "3": "$\\frac{3}{5}$",
+   "4": "$\\frac{3}{8}$"
+  },
+  "answer_key": "2",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": true,
+  "figure_note": "2 by 3 grid of squares, 2 whole squares' worth shaded",
+  "ocr_fixes": [
+   "options read from image"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok (key partly hidden; solved 2 of 6 squares shaded = 1/3, option 2)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q06",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 5,
+  "section": "A",
+  "question_no": 6,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The difference between two numbers is 54. The smaller number is 17. What is the sum of the two numbers?",
+  "options": {
+   "1": "37",
+   "2": "54",
+   "3": "71",
+   "4": "88"
+  },
+  "answer_key": "4",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option '54' misread as '84' in OCR; '71' read as '«71'"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "solved: 4 (key for Q6 hidden by watermark; 17 + 71 = 88)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q07",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 7,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "What is the missing number in the box?\n$\\square \\times 5 = 320 \\div 4$",
+  "options": {
+   "1": "16",
+   "2": "64",
+   "3": "80",
+   "4": "400"
+  },
+  "answer_key": "1",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "option 2 read from image (OCR 640)"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok (320/4 = 80, 80/5 = 16; key '1' visible)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q08",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 8,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Siti has 96 stickers. She has 57 fewer stickers than Carol. Brandon has three times as many stickers as Carol. How many stickers does Brandon have?",
+  "options": {
+   "1": "51",
+   "2": "117",
+   "3": "153",
+   "4": "459"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'«117' -> '117'"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q09",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 6,
+  "section": "A",
+  "question_no": 9,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The figure shown below is made up of 2 identical small rectangles. Find the perimeter of the figure.",
+  "options": {
+   "1": "9 cm",
+   "2": "18 cm",
+   "3": "26 cm",
+   "4": "31 cm"
+  },
+  "answer_key": "3",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle split into 2 small rectangles, 4 cm and 5 cm marked",
+  "ocr_fixes": [
+   "'4com','Tem' read as 4 cm, 5 cm from image"
+  ],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q10",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Write nine thousand and seven in numerals.",
+  "answer": "9007",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q11",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 11,
+  "marks": 1,
+  "question_type": "short",
+  "question": "There are some water in the two beakers shown below. What is the total volume of water in the two beakers? Give your answer in mℓ.",
+  "answer": "1400",
+  "unit": "mℓ",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two beakers with 1 ℓ marks, water levels",
+  "ocr_fixes": [
+   "'tt.' -> '11.'",
+   "'mi' -> 'mℓ'"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok (matches key 1400 mℓ; levels not independently measured)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q12",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 7,
+  "section": "B",
+  "question_no": 12,
+  "marks": 1,
+  "question_type": "short",
+  "question": "The opening hours of ABC Bakery is shown below. How long is the bakery opened each day? Give your answer in hours and minutes.\nABC Bakery\nOpens Daily from\n9.45 a.m. to 3.30 p.m.",
+  "answer": "5 h 45 min",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "h",
+    "value": "5",
+    "unit": "h"
+   },
+   {
+    "part": "min",
+    "value": "45",
+    "unit": "min"
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "sign: ABC Bakery opens daily 9.45 a.m. to 3.30 p.m.",
+  "ocr_fixes": [
+   "'5Sh45min' in key -> 5 h 45 min"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q13",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 13,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Jamie bought a storybook and a pen from a bookshop. How much did she spend altogether?",
+  "answer": "18.65",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "storybook ＄15.90 and pen ＄2.75",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q14",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 8,
+  "section": "B",
+  "question_no": 14,
+  "marks": 1,
+  "question_type": "short",
+  "question": "Look at the figure shown below. Name a line perpendicular to line AB.",
+  "answer": "GH",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with lines AB, CD, EF, GH",
+  "ocr_fixes": [
+   "'Line GH' in key"
+  ],
+  "checked_against_image": [
+   8
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q15",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the value of $\\frac{1}{5}$ + $\\frac{3}{10}$. Give your answer in its simplest form.",
+  "answer": "$\\frac{1}{2}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok (key printed as 'Q15 1/2', numbered Q15 twice; the second 'Q15 2142' is Q16)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q16",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the product of 306 and 7.",
+  "answer": "2142",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok (key mislabelled 'Q15')",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q17",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Use the digits 5, 0, 4, and 9 to form the smallest 4-digit even number.",
+  "answer": "4590",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q18",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 9,
+  "section": "B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the quotient when 305 is divided by 8 ?",
+  "answer": "38",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok (305 ÷ 8 = 38 R 1)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q19",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "(a) Express $\\frac{8}{12}$ in its simplest form.\n(b) Give an equivalent fraction of $\\frac{4}{9}$.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Express $\\frac{8}{12}$ in its simplest form."
+   },
+   {
+    "part": "b",
+    "text": "Give an equivalent fraction of $\\frac{4}{9}$."
+   }
+  ],
+  "answer": "$\\frac{2}{3}$; $\\frac{8}{18}$",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "$\\frac{2}{3}$",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "$\\frac{8}{18}$ (any equivalent fraction)",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q20",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 10,
+  "section": "B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Jerry used 4 identical square tiles to form a rectangle as shown below. Each side of the square tile is 3 cm.\nWhat is the area of the rectangle formed?",
+  "answer": "36",
+  "unit": "cm$^2$",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "rectangle of 4 square tiles in a row, 3 cm marked",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q21",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph below shows the number of shirts sold over 5 days.\nHow many more shirts were sold on Wednesday than on Tuesday?",
+  "answer": "16",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "vertical bar graph Mon-Fri, scale 0-44",
+  "ocr_fixes": [
+   "axis labels read from image"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok (Wed 40, Tue 24)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q22",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Complete the number pattern below.\n4756, 4759, 4758, 4761, ______, 4763, 4762",
+  "answer": "4760",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "spacing fixed"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q23",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 11,
+  "section": "B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "150 more than the product of 325 and 8 is ______.",
+  "answer": "2750",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'1450' -> '150' (image)"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q24",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Find the sum of 6491 and 1355. In your answer, what is the digit in the hundreds place?",
+  "answer": "8",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Addition and Subtraction",
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok (sum 7846)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q25",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "$\\square \\div 7 = 68$ R1\nFind the missing number in the box.",
+  "answer": "477",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'?12+7' -> '? ÷ 7 = 68 R1' (image)"
+  ],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q26",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 26,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Miss Chin baked 903 muffins. She sold some of the muffins and had 276 muffins left. How many muffins did she sell?",
+  "answer": "627",
+  "unit": "",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q27",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 12,
+  "section": "B",
+  "question_no": 27,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Oranges are sold in bags of 8 in a supermarket. Mrs Koh needs 485 oranges. What is the smallest number of bags of oranges Mrs Koh should buy?",
+  "answer": "61",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok (485 ÷ 8 = 60 R 5, so 61)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q28",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 28,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the following fractions from the smallest to the largest.\n$\\frac{5}{9}$, $\\frac{1}{3}$, $\\frac{5}{6}$",
+  "answer": "$\\frac{1}{3}$, $\\frac{5}{9}$, $\\frac{5}{6}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions read from image"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q29",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 29,
+  "marks": 2,
+  "question_type": "short",
+  "question": "$\\frac{11}{12} - \\frac{\\square}{3} = \\frac{1}{4}$\nWhat is the missing number in the box?",
+  "answer": "2",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "equation rebuilt from image: 11/12 - ?/3 = 1/4"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q30",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 13,
+  "section": "B",
+  "question_no": 30,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Hamid's house is 3 km away from a library and 1980 m away from a playground as shown below.\nWhat is the distance between the library and the playground?",
+  "answer": "1020",
+  "unit": "m",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction"
+  ],
+  "has_figure": true,
+  "figure_note": "line diagram: house, playground, library; 1980 m and ? marked",
+  "ocr_fixes": [
+   "OCR of diagram dropped"
+  ],
+  "checked_against_image": [
+   13
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q31",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 31,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The figure below is made up of three identical triangles and a square. Each side of the triangle has the same length. What is the perimeter of the figure?",
+  "answer": "49",
+  "unit": "cm",
+  "topic_primary": "Area and Perimeter",
+  "topics": [
+   "Area and Perimeter"
+  ],
+  "has_figure": true,
+  "figure_note": "square with triangles on three sides, 7 cm marked",
+  "ocr_fixes": [
+   "'77cm' -> '7 cm'"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q32",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 14,
+  "section": "B",
+  "question_no": 32,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Use a set-square to draw a line parallel to line AB in the grid below.",
+  "answer": "(drawing question: a line drawn parallel to AB on the grid)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with line AB",
+  "ocr_fixes": [
+   "'parattet' -> 'parallel'"
+  ],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok (drawing; key shows a parallel line)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q33",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 33,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The bar graph below shows the number of marks 4 girls scored in a test.\nWho scored twice the number of marks Geetha scored?",
+  "answer": "Kim",
+  "unit": "",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs",
+   "Multiplication and Division"
+  ],
+  "has_figure": true,
+  "figure_note": "horizontal bar graph Kim, Isabel, Halimah, Geetha, scale 0-100",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok (Geetha 44, Kim 88)",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q34",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 15,
+  "section": "B",
+  "question_no": 34,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Ang is 47 years old now. Kayla is 28 years younger than Mrs Ang. How old will Kayla be in 10 years' time?",
+  "answer": "29",
+  "unit": "years old",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'Hew old' -> 'How old'"
+  ],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q35",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 16,
+  "section": "C",
+  "question_no": 35,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Emma made 7 necklaces by using 84 beads for each necklace. She had 265 beads left after making the 7 necklaces.\n(a) How many beads did Emma use in total to make the necklaces?\n(b) How many beads did Emma have at first?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many beads did Emma use in total to make the necklaces? [2]"
+   },
+   {
+    "part": "b",
+    "text": "How many beads did Emma have at first? [2]"
+   }
+  ],
+  "answer": "(a) 588 (b) 853",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "588",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "853",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'did-Emma' -> 'did Emma'"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q36",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 17,
+  "section": "C",
+  "question_no": 36,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The mass of a box and 6 identical metal balls is 1 kg 92 g. The mass of the box is 120 g.\n(a) What is the mass of the 6 metal balls?\n(b) What is the mass of each metal ball?",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "What is the mass of the 6 metal balls? [2]"
+   },
+   {
+    "part": "b",
+    "text": "What is the mass of each metal ball? [2]"
+   }
+  ],
+  "answer": "(a) 972 g (b) 162 g",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "972",
+    "unit": "g"
+   },
+   {
+    "part": "b",
+    "value": "162",
+    "unit": "g"
+   }
+  ],
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'4 kg 92 g' -> '1 kg 92 g' (image)"
+  ],
+  "checked_against_image": [
+   17
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q37",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 18,
+  "section": "C",
+  "question_no": 37,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The table below shows the amount of time Mei spent on her homework last Saturday.\n(a) Mei finished her Mathematics and Science homework at 9.30 a.m. At what time did she start doing her Mathematics and Science homework?\n(b) How much time did she take in total to complete her English, Mathematics and Mother Tongue homework? Express your answer in hour(s) and minute(s).",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Mei finished her Mathematics and Science homework at 9.30 a.m. At what time did she start doing her Mathematics and Science homework? [2]"
+   },
+   {
+    "part": "b",
+    "text": "How much time did she take in total to complete her English, Mathematics and Mother Tongue homework? Express your answer in hour(s) and minute(s). [2]"
+   }
+  ],
+  "answer": "(a) 8.50 a.m. (b) 1 h 5 min",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "8.50 a.m.",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "1 h 5 min",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Time",
+  "topics": [
+   "Time"
+  ],
+  "has_figure": true,
+  "figure_note": "table: English 10 min, Mathematics 25 min, Science 15 min, Mother Tongue 30 min",
+  "ocr_fixes": [
+   "'hemework' -> 'homework'"
+  ],
+  "checked_against_image": [
+   18
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q38",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 19,
+  "section": "C",
+  "question_no": 38,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Wendy bought 3 similar T-shirts and 2 similar skirts for ＄50.20. 1 such T-shirt and 1 such skirt cost ＄20.20. How much did each T-shirt cost?",
+  "answer": "9.80",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'$' -> '＄'"
+  ],
+  "checked_against_image": [
+   19
+  ],
+  "answer_check": "ok (key: 50.20 - 2 x 20.20 = 9.80; key text OCR garbled but result 9.80)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q39",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 20,
+  "section": "C",
+  "question_no": 39,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Melody had 120 stamps more than Jeremy. After Melody gave 30 stamps to Jeremy, she had twice as many stamps as him. How many stamps did they have altogether?",
+  "answer": "180",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Addition and Subtraction",
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'720' -> '120' (image)",
+   "'raany' -> 'many'"
+  ],
+  "checked_against_image": [
+   20,
+   23
+  ],
+  "answer_check": "solved:180 differs from key 300 (key: 120-30=90, 3u=270, +30=300; but difference after transfer is 120-60=60 so Jeremy 60, Melody 120, total 180; check J=30, M=150)",
+  "confidence": "medium"
+ },
+ {
+  "id": "2022_P3_HenryPark_EOY_Q40",
+  "grade": "P3",
+  "year": "2022",
+  "school": "Henry Park",
+  "exam": "EOY",
+  "source": "(Henry Park) (EOY) (2022)",
+  "source_pdf": "2022-P3-Maths-EOY-HenryPark.pdf",
+  "source_pdf_page": 21,
+  "section": "C",
+  "question_no": 40,
+  "marks": 4,
+  "question_type": "long",
+  "question": "The total number of stickers five children have is the same as the total number of stickers two adults have. The five children and two adults have a total of 470 stickers.\n(a) How many stickers do the two adults have altogether?\n(b) Each of the five children has the same number of stickers. Find the number of stickers each child has.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "How many stickers do the two adults have altogether? [2]"
+   },
+   {
+    "part": "b",
+    "text": "Each of the five children has the same number of stickers. Find the number of stickers each child has. [2]"
+   }
+  ],
+  "answer": "(a) 235 (b) 47",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "235",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "47",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   21
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]

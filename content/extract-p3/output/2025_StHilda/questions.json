@@ -1,0 +1,937 @@
+[
+ {
+  "id": "2025_P3_StHilda_EOY_Q01",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 1,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "In 7321, the digit 3 is in the ______ place.",
+  "options": {
+   "1": "ones",
+   "2": "tens",
+   "3": "hundreds",
+   "4": "thousands"
+  },
+  "answer_key": "3",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q02",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 2,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "7 thousands and 3 tens is the same as ______.",
+  "options": {
+   "1": "7300",
+   "2": "7030",
+   "3": "730",
+   "4": "703"
+  },
+  "answer_key": "2",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q03",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 3,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing number? $\\square \\div 9 = 28$ R 5",
+  "options": {
+   "1": "224",
+   "2": "247",
+   "3": "252",
+   "4": "257"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'1+9=28R5' -> box ÷ 9 = 28 R 5 (read from image)"
+  ],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q04",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 2,
+  "section": "Booklet A",
+  "question_no": 4,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Ali had 20 marbles. Ben had 3 times as many marbles as Ali. How many marbles did they have altogether?",
+  "options": {
+   "1": "23",
+   "2": "40",
+   "3": "60",
+   "4": "80"
+  },
+  "answer_key": "4",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   2
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q05",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 5,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the value of 8 ten-cent coins and 3 twenty-cent coins?",
+  "options": {
+   "1": "＄1.10",
+   "2": "＄1.40",
+   "3": "＄1.90",
+   "4": "＄2.20"
+  },
+  "answer_key": "2",
+  "topic_primary": "Money",
+  "topics": [
+   "Money"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q06",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 6,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the amount of water shown in the container below?",
+  "options": {
+   "1": "210 mℓ",
+   "2": "250 mℓ",
+   "3": "310 mℓ",
+   "4": "350 mℓ"
+  },
+  "answer_key": "2",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "beaker with scale to 500 mℓ, water at 250 mℓ",
+  "ocr_fixes": [
+   "'210m' -> '210 mℓ' etc."
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q07",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 3,
+  "section": "Booklet A",
+  "question_no": 7,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "What is the missing fraction in the box? $\\frac{1}{4} + \\frac{3}{8} = \\square$",
+  "options": {
+   "1": "$\\frac{5}{8}$",
+   "2": "$\\frac{4}{12}$",
+   "3": "$\\frac{8}{12}$",
+   "4": "$\\frac{3}{32}$"
+  },
+  "answer_key": "1",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "fractions garbled, read from image"
+  ],
+  "checked_against_image": [
+   3
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q08",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 4,
+  "section": "Booklet A",
+  "question_no": 8,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Look at the marked angles in the figures below. Which of the following figures has only acute angles?",
+  "options": {
+   "1": "rectangle-like figure",
+   "2": "pentagon",
+   "3": "triangle",
+   "4": "diamond"
+  },
+  "answer_key": "3",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "four figures with marked angles (1) to (4)",
+  "ocr_fixes": [
+   "option figures have no text; labelled by shape"
+  ],
+  "checked_against_image": [
+   4
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q09",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 9,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "Name a pair of perpendicular lines in the figure below.",
+  "options": {
+   "1": "AB and AC",
+   "2": "AB and BC",
+   "3": "AB and CD",
+   "4": "AC and BC"
+  },
+  "answer_key": "2",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with lines AB, BC, CD and AC",
+  "ocr_fixes": [
+   "Q number read as 8"
+  ],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q10",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 5,
+  "section": "Booklet A",
+  "question_no": 10,
+  "marks": 1,
+  "question_type": "mcq",
+  "question": "The bar graph shows the number of children who like different flavours of ice-cream. What was the least popular ice-cream flavour?",
+  "options": {
+   "1": "Oreo",
+   "2": "Vanilla",
+   "3": "Chocolate",
+   "4": "Strawberry"
+  },
+  "answer_key": "4",
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph Ice-cream Flavours (Chocolate 16, Vanilla 10, Strawberry 5, Oreo 9)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   5
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q11",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 11,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "7681 = 7 thousands + 6 hundreds + ______ ones",
+  "options": {
+   "1": "1",
+   "2": "8",
+   "3": "80",
+   "4": "81"
+  },
+  "answer_key": "4",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q12",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 12,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "The difference between two numbers is 1937. The greater number is 7305. What is the smaller number?",
+  "options": {
+   "1": "5368",
+   "2": "5378",
+   "3": "6632",
+   "4": "9242"
+  },
+  "answer_key": "1",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q13",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 13,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "1207 people participated in a swimming competition. There were 659 adults and the rest were children. How many more adults than children participated in the swimming competition?",
+  "options": {
+   "1": "11",
+   "2": "111",
+   "3": "548",
+   "4": "1866"
+  },
+  "answer_key": "2",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q14",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 6,
+  "section": "Booklet A",
+  "question_no": 14,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "A T-shirt cost ＄25.20. A skirt cost ＄19.30. Sally had ＄15 left after paying for a T-shirt and a skirt. How much money did Sally have at first?",
+  "options": {
+   "1": "＄29.50",
+   "2": "＄34.30",
+   "3": "＄44.50",
+   "4": "＄59.50"
+  },
+  "answer_key": "4",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   6
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q15",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 7,
+  "section": "Booklet A",
+  "question_no": 15,
+  "marks": 2,
+  "question_type": "mcq",
+  "question": "Randal ran 1200 m on Saturday. He ran 101 m more on Saturday than on Sunday. How far did he run on Sunday?",
+  "options": {
+   "1": "1009 m",
+   "2": "1099 m",
+   "3": "1109 m",
+   "4": "1301 m"
+  },
+  "answer_key": "2",
+  "topic_primary": "Addition and Subtraction",
+  "topics": [
+   "Addition and Subtraction",
+   "Length, Mass and Volume"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "options (1089 m, 1108 m, 130im) read from image as 1099 m, 1109 m, 1301 m"
+  ],
+  "checked_against_image": [
+   7
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q16",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 9,
+  "section": "Booklet B",
+  "question_no": 16,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the numbers in decreasing order. 2838, 2888, 2883, 2833",
+  "answer": "2888, 2883, 2838, 2833",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers"
+  ],
+  "has_figure": false,
+  "figure_note": "four numbers in ovals (numbers given in question text)",
+  "ocr_fixes": [
+   "numbers read from image"
+  ],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q17",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 9,
+  "section": "Booklet B",
+  "question_no": 17,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Write the missing number in the number pattern below. 550, 610, 660, 720, 770, ?, 880, 940",
+  "answer": "830",
+  "unit": "",
+  "topic_primary": "Whole Numbers",
+  "topics": [
+   "Whole Numbers",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   9
+  ],
+  "answer_check": "ok (key 830; OCR of key read 826)",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q18",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 10,
+  "section": "Booklet B",
+  "question_no": 18,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The graph below shows the number of muffins Mrs Chin sold at her bakery from January to April. Write 'T' for true and 'F' for false in the boxes below.",
+  "question_parts": [
+   {
+    "part": "a",
+    "text": "Mrs Chin sold the least number of muffins in March."
+   },
+   {
+    "part": "b",
+    "text": "Mrs Chin sold the same number of muffins in January and April."
+   }
+  ],
+  "answer": "a F, b T",
+  "unit": "",
+  "answer_parts": [
+   {
+    "part": "a",
+    "value": "F",
+    "unit": ""
+   },
+   {
+    "part": "b",
+    "value": "T",
+    "unit": ""
+   }
+  ],
+  "topic_primary": "Bar Graphs",
+  "topics": [
+   "Bar Graphs"
+  ],
+  "has_figure": true,
+  "figure_note": "bar graph of muffins sold January to April (scale to 600)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q19",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 10,
+  "section": "Booklet B",
+  "question_no": 19,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Mrs Tan had 32 jellies. She packed the jellies equally into 7 boxes and had 4 jellies left. How many jellies were there in each box?",
+  "answer": "4",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   10
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q20",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 11,
+  "section": "Booklet B",
+  "question_no": 20,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Janice read a total of 315 pages of a book from Monday to Sunday. She read an equal number of pages each day. How many pages did she read from Friday to Sunday?",
+  "answer": "135",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "'io' -> 'to'"
+  ],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q21",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 11,
+  "section": "Booklet B",
+  "question_no": 21,
+  "marks": 2,
+  "question_type": "short",
+  "question": "What is the missing number in the box? $\\frac{4}{10} = \\frac{\\square}{5}$",
+  "answer": "2",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   11
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q22",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 12,
+  "section": "Booklet B",
+  "question_no": 22,
+  "marks": 2,
+  "question_type": "short",
+  "question": "The mass of bananas and grapes are shown below. How much heavier are the grapes than the bananas?",
+  "answer": "130",
+  "unit": "g",
+  "topic_primary": "Length, Mass and Volume",
+  "topics": [
+   "Length, Mass and Volume"
+  ],
+  "has_figure": true,
+  "figure_note": "two dial scales, grapes about 350 g and bananas about 220 g",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "medium"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q23",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 12,
+  "section": "Booklet B",
+  "question_no": 23,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Arrange the fractions from the greatest to the smallest. $\\frac{2}{3}$, $\\frac{3}{4}$, $\\frac{1}{8}$",
+  "answer": "$\\frac{3}{4}$, $\\frac{2}{3}$, $\\frac{1}{8}$",
+  "unit": "",
+  "topic_primary": "Fractions",
+  "topics": [
+   "Fractions"
+  ],
+  "has_figure": false,
+  "figure_note": "three fraction cards (fractions given in question text)",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q24",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 12,
+  "section": "Booklet B",
+  "question_no": 24,
+  "marks": 2,
+  "question_type": "short",
+  "question": "How many right angles are there in the figure below?",
+  "answer": "8",
+  "unit": "",
+  "topic_primary": "Angles",
+  "topics": [
+   "Angles"
+  ],
+  "has_figure": true,
+  "figure_note": "cross-shaped figure with marked angles",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   12
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q25",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 13,
+  "section": "Booklet B",
+  "question_no": 25,
+  "marks": 2,
+  "question_type": "short",
+  "question": "Draw a line parallel to AB in the grid below. Label the line CD.",
+  "answer": "(line CD drawn parallel to AB)",
+  "unit": "",
+  "topic_primary": "Perpendicular and Parallel Lines",
+  "topics": [
+   "Perpendicular and Parallel Lines"
+  ],
+  "has_figure": true,
+  "figure_note": "grid with line AB",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   13,
+   18
+  ],
+  "answer_check": "drawing question: no written answer, key shows CD parallel to AB",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q26",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 14,
+  "section": "Booklet B",
+  "question_no": 26,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Timmy has ＄100. He spends ＄29.90 on a pizza and ＄12.50 on a movie ticket. He saves the rest of the money. How much money does he save?",
+  "answer": "57.60",
+  "unit": "＄",
+  "topic_primary": "Money",
+  "topics": [
+   "Money",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   14
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q27",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 15,
+  "section": "Booklet B",
+  "question_no": 27,
+  "marks": 3,
+  "question_type": "long",
+  "question": "Charles has 144 stickers. Charles has 3 times as many stickers as Danny. Eugene has 2 times as many stickers as Danny. How many stickers does Eugene have?",
+  "answer": "96",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [],
+  "checked_against_image": [
+   15
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ },
+ {
+  "id": "2025_P3_StHilda_EOY_Q28",
+  "grade": "P3",
+  "year": "2025",
+  "school": "St. Hilda's",
+  "exam": "EOY",
+  "source": "(St. Hilda's) (EOY) (2025)",
+  "source_pdf": "2025-P3-Maths-EOY-StHilda.pdf",
+  "source_pdf_page": 16,
+  "section": "Booklet B",
+  "question_no": 28,
+  "marks": 4,
+  "question_type": "long",
+  "question": "Fiona had 4 times as many beads as Giny. They had 120 beads altogether. How many beads must Fiona give Giny so that they have the same number of beads?",
+  "answer": "36",
+  "unit": "",
+  "topic_primary": "Multiplication and Division",
+  "topics": [
+   "Multiplication and Division",
+   "Addition and Subtraction"
+  ],
+  "has_figure": false,
+  "figure_note": "",
+  "ocr_fixes": [
+   "name printed 'Giny', kept as printed"
+  ],
+  "checked_against_image": [
+   16
+  ],
+  "answer_check": "ok",
+  "confidence": "high"
+ }
+]
