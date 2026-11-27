@@ -12,3 +12,8 @@
 - Q27: leftover "(Go on to th" at the bottom.
 - Q31: leftover "Ans" line and "(Go on to th" at the bottom, extra blank area; A's left side label "6 m" cut.
 - Q40: figure 1 and the top of the bead figures cut off (starts mid-pattern); table is complete but last row crop ok.
+
+## Crop fix
+- Checked 12 crops; re-cropped manually Q09, Q10, Q11, Q22, Q27, Q28, Q31, Q32, Q40 (blank areas, leftover option/footer text, cut labels, Q40 now includes bead Figure 1 and the full table; the 'a) Complete the table' line whited out). Q14, Q15, Q16 kept.
+- figure_refs added: none. has_figure changes: none (Q08, Q21 checked, text only/decorative).
+- Still imperfect: none (Q22 '1 cm' label has a scan-faded leading character; Q32 faint dashed lines are in the original).

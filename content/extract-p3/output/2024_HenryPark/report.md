@@ -10,3 +10,8 @@
 - Q8: wrong crop: only the number line with stray digits 1, 3, 4, 7 (option fractions whited out), plus "(Go on to SECTION B)".
 - Q4, Q16, Q22: extra white space only (usable).
 - Q25: True/False table not included (not required).
+
+## Crop fix
+- Checked 10 crops; re-cropped manually Q04 (first beaker's left wall was cut), Q06 (the full word LOVE on its grid, letters no longer whited out), Q08 (number line only, stray digits and footer removed), Q22 (the '?' beside the rectangle was missing). Q13, Q14, Q16, Q17, Q25, Q26 kept.
+- figure_refs added: none. has_figure changes: none (Q23 watch time is given in the text).
+- Still imperfect: none.

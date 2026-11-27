@@ -935,7 +935,7 @@
   "topics": [
    "Addition and Subtraction"
   ],
-  "has_figure": true,
+  "has_figure": false,
   "figure_note": "vertical addition with two missing digits",
   "ocr_fixes": [],
   "checked_against_image": [
@@ -1066,7 +1066,7 @@
   "question_no": 34,
   "marks": 2,
   "question_type": "short",
-  "question": "",
+  "question": "(a) In the grid below, draw a line parallel to AB through Point C.\n(b) In the grid below, draw a line perpendicular to XY through Point Z.",
   "question_parts": [
    {
     "part": "a",
@@ -1097,7 +1097,9 @@
   ],
   "has_figure": true,
   "figure_note": "two grids with lines AB/point C and XY/point Z",
-  "ocr_fixes": [],
+  "ocr_fixes": [
+   "question text built from its parts (no common stem printed)"
+  ],
   "checked_against_image": [
    25
   ],

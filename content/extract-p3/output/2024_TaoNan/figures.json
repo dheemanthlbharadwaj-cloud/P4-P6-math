@@ -1,0 +1,145 @@
+{
+ "2024_P3_TaoNan_EOY_Q03": {
+  "bbox": [
+   511,
+   543,
+   1666,
+   815
+  ],
+  "size": [
+   1155,
+   272
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   412,
+   1643
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_TaoNan_EOY_Q05": {
+  "bbox": [
+   751,
+   555,
+   1249,
+   1348
+  ],
+  "size": [
+   498,
+   793
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   433,
+   2009
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_TaoNan_EOY_Q06": {
+  "bbox": [
+   530,
+   2210,
+   1150,
+   2620
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_TaoNan_EOY_Q09": {
+  "bbox": [
+   484,
+   735,
+   2132,
+   1842
+  ],
+  "size": [
+   1648,
+   1107
+  ],
+  "whited_words": [],
+  "ink_regions": 15,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   484,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_TaoNan_EOY_Q10": {
+  "bbox": [
+   440,
+   595,
+   1850,
+   1790
+  ],
+  "page": 7,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_TaoNan_EOY_Q14": {
+  "bbox": [
+   510,
+   666,
+   1572,
+   1593
+  ],
+  "size": [
+   1062,
+   927
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   454,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_TaoNan_EOY_Q17": {
+  "bbox": [
+   621,
+   1842,
+   1246,
+   2454
+  ],
+  "size": [
+   625,
+   612
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1539,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_TaoNan_EOY_Q20": {
+  "bbox": [
+   460,
+   895,
+   2130,
+   1990
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ }
+}

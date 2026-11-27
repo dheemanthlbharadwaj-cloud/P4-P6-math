@@ -14,3 +14,8 @@
 - Q28: lines/points A-F partly erased by white-out, labels clipped.
 - Q34: wrong picture: crop shows only a lamp-post strip with "Working"; question text also left in the crop region.
 - Q8: fine (extra white space only).
+
+## Crop fix
+- Checked 16 crops. Fixed 7 by manual crop: Q10 (was missing), Q17 (whole vertical subtraction), Q25 (stray text removed), Q27 and Q28 (no white-out; full grid, rectangle A, square B, points A-F), Q34 (lamp-post road figure, was the wrong region), Q24 (left stick was clipped).
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: none (Q8 has some empty margin only; Q30 bar graph is torn in the original).

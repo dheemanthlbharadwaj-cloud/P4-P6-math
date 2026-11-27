@@ -8,3 +8,8 @@
 - Q30: leftover text "o pupils last week." above the graph.
 - Q38: crop includes a large blank area and the "(b) ___ [2]" answer line below the small figure.
 - Q4, Q15, Q17, Q6: extra white margin only; figures complete.
+
+## Crop fix
+- Checked 12 figures. Fixed 6: Q30 (leftover text removed), Q38 (blank area and answer line removed), Q4, Q6, Q15, Q17 (excess white margin trimmed).
+- figure_refs added: none. has_figure changes: none (other questions are fully in the text).
+- Still imperfect: none (scan speckle only).

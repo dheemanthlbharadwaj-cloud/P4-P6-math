@@ -1,0 +1,200 @@
+{
+ "2023_P3_StJoseph_EOY_Q03": {
+  "bbox": [
+   460,
+   2100,
+   1000,
+   2470
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q07": {
+  "bbox": [
+   790,
+   2554,
+   1249,
+   3065
+  ],
+  "size": [
+   459,
+   511
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   2412,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_StJoseph_EOY_Q12": {
+  "bbox": [
+   710,
+   744,
+   1408,
+   1063
+  ],
+  "size": [
+   698,
+   319
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   483,
+   1547
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StJoseph_EOY_Q14": {
+  "bbox": [
+   945,
+   2442,
+   1550,
+   2702
+  ],
+  "size": [
+   605,
+   260
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   2239,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_StJoseph_EOY_Q15": {
+  "bbox": [
+   820,
+   690,
+   1540,
+   1110
+  ],
+  "page": 7,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q16": {
+  "bbox": [
+   514,
+   932,
+   1302,
+   1238
+  ],
+  "size": [
+   788,
+   306
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   797,
+   1603
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_StJoseph_EOY_Q21": {
+  "bbox": [
+   720,
+   2230,
+   1380,
+   2720
+  ],
+  "page": 9,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q25": {
+  "bbox": [
+   598,
+   610,
+   1695,
+   1100
+  ],
+  "size": [
+   1097,
+   490
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   435,
+   1559
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_StJoseph_EOY_Q26": {
+  "bbox": [
+   440,
+   1905,
+   2000,
+   2510
+  ],
+  "page": 11,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q27": {
+  "bbox": [
+   420,
+   690,
+   1040,
+   1250
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q30": {
+  "bbox": [
+   640,
+   660,
+   1130,
+   1010
+  ],
+  "page": 13,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q31": {
+  "bbox": [
+   370,
+   1610,
+   1170,
+   2460
+  ],
+  "page": 13,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StJoseph_EOY_Q32": {
+  "bbox": [
+   360,
+   780,
+   1970,
+   1560
+  ],
+  "page": 14,
+  "manual": true,
+  "whited": []
+ }
+}

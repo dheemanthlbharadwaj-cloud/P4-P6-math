@@ -1,0 +1,263 @@
+{
+ "2025_P3_HenryPark_EOY_Q04": {
+  "bbox": [
+   677,
+   737,
+   1051,
+   1202
+  ],
+  "size": [
+   374,
+   465
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   589,
+   1768
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_HenryPark_EOY_Q06": {
+  "bbox": [
+   622,
+   648,
+   1333,
+   1744
+  ],
+  "size": [
+   711,
+   1096
+  ],
+  "whited_words": [],
+  "ink_regions": 8,
+  "column_x": null,
+  "picture_options": true,
+  "page": 4,
+  "band": [
+   531,
+   1911
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_HenryPark_EOY_Q08": {
+  "bbox": [
+   666,
+   759,
+   1163,
+   1168
+  ],
+  "size": [
+   497,
+   409
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   583,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_HenryPark_EOY_Q13": {
+  "bbox": [
+   769,
+   1301,
+   1648,
+   2194
+  ],
+  "size": [
+   879,
+   893
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2023,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1231,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q15": {
+  "bbox": [
+   1348,
+   1094,
+   1988,
+   1449
+  ],
+  "size": [
+   640,
+   355
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": 2007,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   959,
+   1733
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q16": {
+  "bbox": [
+   971,
+   1859,
+   1680,
+   2497
+  ],
+  "size": [
+   709,
+   638
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2007,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1733,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q17": {
+  "bbox": [
+   675,
+   783,
+   1864,
+   1541
+  ],
+  "size": [
+   1189,
+   758
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": 2019,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   566,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q22": {
+  "bbox": [
+   660,
+   684,
+   1546,
+   1188
+  ],
+  "size": [
+   886,
+   504
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2045,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   557,
+   1898
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q24": {
+  "bbox": [
+   626,
+   725,
+   1914,
+   2059
+  ],
+  "size": [
+   1288,
+   1334
+  ],
+  "whited_words": [
+   "Each",
+   "statement",
+   "is",
+   "elther",
+   "true",
+   "or",
+   "false",
+   "from",
+   "the",
+   "Information",
+   "given.",
+   "Put",
+   "a",
+   "(\u201c)}",
+   "to",
+   "indicate",
+   "your",
+   "answer."
+  ],
+  "ink_regions": 5,
+  "column_x": 2024,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   592,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q25": {
+  "bbox": [
+   679,
+   684,
+   1635,
+   1206
+  ],
+  "size": [
+   956,
+   522
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 2022,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   590,
+   1945
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_HenryPark_EOY_Q30": {
+  "bbox": [
+   629,
+   810,
+   1945,
+   1218
+  ],
+  "size": [
+   1316,
+   408
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 2037,
+  "picture_options": false,
+  "page": 18,
+  "band": [
+   564,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

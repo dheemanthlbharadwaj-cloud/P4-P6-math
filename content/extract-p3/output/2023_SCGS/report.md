@@ -16,3 +16,6 @@
 - Q19: crop includes a long blank area, answer line and page-number fragment below the shelves.
 - Q20: the 20c and 10c coins on the right are cut off (only the 1 dollar coin and part of the next coin remain).
 - Q22: crop also includes the True/False table (question text), not only the graph.
+
+## Crop fix
+- Checked 10 crops; fixed 5 (Q5 with both 1 cm labels, Q10 figure only, Q19 shelves only, Q20 all notes and coins, Q22 graph only). No figure_refs, no has_figure changes. Scans are speckled (scan quality only).

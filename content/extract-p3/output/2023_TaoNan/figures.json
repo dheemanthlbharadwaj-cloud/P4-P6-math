@@ -1,0 +1,196 @@
+{
+ "2023_P3_TaoNan_EOY_Q02": {
+  "bbox": [
+   659,
+   1741,
+   1449,
+   2300
+  ],
+  "size": [
+   790,
+   559
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   1622,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_TaoNan_EOY_Q05": {
+  "bbox": [
+   620,
+   2175,
+   1490,
+   2600
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q06": {
+  "bbox": [
+   560,
+   565,
+   2230,
+   1215
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q07": {
+  "bbox": [
+   520,
+   1710,
+   1741,
+   2675
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": [
+   [
+    520,
+    1700,
+    1450,
+    1722
+   ]
+  ]
+ },
+ "2023_P3_TaoNan_EOY_Q08": {
+  "bbox": [
+   630,
+   640,
+   1225,
+   1860
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q09": {
+  "bbox": [
+   587,
+   995,
+   1661,
+   1385
+  ],
+  "size": [
+   1074,
+   390
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   833,
+   1783
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_TaoNan_EOY_Q10": {
+  "bbox": [
+   500,
+   1880,
+   1540,
+   2650
+  ],
+  "page": 7,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q14": {
+  "bbox": [
+   570,
+   765,
+   2125,
+   1870
+  ],
+  "page": 9,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q15": {
+  "bbox": [
+   600,
+   895,
+   1985,
+   1055
+  ],
+  "page": 10,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q16": {
+  "bbox": [
+   460,
+   1980,
+   2190,
+   2700
+  ],
+  "page": 10,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q21": {
+  "bbox": [
+   580,
+   640,
+   2160,
+   880
+  ],
+  "page": 14,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_TaoNan_EOY_Q23": {
+  "bbox": [
+   623,
+   880,
+   1961,
+   2198
+  ],
+  "size": [
+   1338,
+   1318
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 16,
+  "band": [
+   483,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_TaoNan_EOY_Q24": {
+  "bbox": [
+   517,
+   806,
+   1538,
+   1443
+  ],
+  "size": [
+   1021,
+   637
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   487,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

@@ -10,3 +10,8 @@
 - Q9: point T is not in the crop (not visible on the page image either, apart from R and S).
 - Q10, Q14, Q15, Q16: crops include blank answer boxes.
 - Q13 has_figure set to false (tick table only), stale crop removed.
+
+## Crop fix
+- Checked 13 crops. Fixed 9 manually: Q05, Q06, Q07 (leftover option text removed), Q08 (option labels (1)-(4) added), Q10, Q14 (tight to graph, answer box removed), Q15, Q16 (answer boxes removed), Q21 (now the shape row; earlier crop was blank). Q02, Q09, Q23, Q24 kept.
+- No figure_refs. No has_figure changes (Q13's tick table is an answer grid, text-only).
+- Still imperfect: Q09 point T is not printed on the scan (only R and S).

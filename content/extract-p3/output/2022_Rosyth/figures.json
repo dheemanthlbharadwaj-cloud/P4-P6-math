@@ -1,0 +1,228 @@
+{
+ "2022_P3_Rosyth_EOY_Q05": {
+  "bbox": [
+   638,
+   1055,
+   1267,
+   1683
+  ],
+  "size": [
+   629,
+   628
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   941,
+   2388
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Rosyth_EOY_Q10": {
+  "bbox": [
+   785,
+   444,
+   1424,
+   965
+  ],
+  "size": [
+   639,
+   521
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   264,
+   1755
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Rosyth_EOY_Q16": {
+  "bbox": [
+   393,
+   1155,
+   1307,
+   1379
+  ],
+  "size": [
+   914,
+   224
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": 2030,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   919,
+   1754
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Rosyth_EOY_Q25": {
+  "bbox": [
+   245,
+   580,
+   1960,
+   1895
+  ],
+  "page": 11,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_Rosyth_EOY_Q26": {
+  "bbox": [
+   185,
+   585,
+   1942,
+   1524
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_Rosyth_EOY_Q29": {
+  "bbox": null,
+  "note": "no drawing found in band",
+  "page": 13,
+  "band": [
+   1833,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_Rosyth_EOY_Q31": {
+  "bbox": [
+   377,
+   2045,
+   1267,
+   2398
+  ],
+  "size": [
+   890,
+   353
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2004,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   1784,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_Rosyth_EOY_Q32": {
+  "bbox": [
+   524,
+   538,
+   1606,
+   1449
+  ],
+  "size": [
+   1082,
+   911
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 2031,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   357,
+   1984
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_Rosyth_EOY_Q33": {
+  "bbox": [
+   498,
+   2190,
+   1088,
+   2512
+  ],
+  "size": [
+   590,
+   322
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2031,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   1984,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_Rosyth_EOY_Q34": {
+  "bbox": [
+   390,
+   495,
+   1805,
+   2900
+  ],
+  "page": 16,
+  "manual": true,
+  "whited": [
+   [
+    380,
+    1690,
+    1815,
+    1850
+   ]
+  ]
+ },
+ "2022_P3_Rosyth_EOY_Q35": {
+  "bbox": [
+   639,
+   496,
+   1395,
+   1164
+  ],
+  "size": [
+   756,
+   668
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2034,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   362,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_Rosyth_EOY_Q38": {
+  "bbox": [
+   573,
+   688,
+   1307,
+   1138
+  ],
+  "size": [
+   734,
+   450
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 2010,
+  "picture_options": false,
+  "page": 20,
+  "band": [
+   353,
+   3508
+  ],
+  "band_from": "text"
+ }
+}

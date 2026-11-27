@@ -17,3 +17,8 @@
 - Q19: "8 m" label cut off (only the arrow remains).
 - Q24: bars and gridlines damaged by whiting (bars cut by white lines), legend (Local/Foreign) missing.
 - Q15 and Q20 crops include the answer tables below the figure (harmless).
+
+## Crop fix
+- Checked 9 crops. Fixed 7 by manual crop: Q5 (full grid, no white-out), Q9 (stray option text removed), Q12 (whole vertical subtraction), Q19 ("8 m" label restored), Q24 (bars and Local/Foreign legend intact), Q15 and Q20 (answer/statement tables below the figure removed; the statements are in the question text).
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: none.

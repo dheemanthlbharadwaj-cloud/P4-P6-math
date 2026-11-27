@@ -11,3 +11,7 @@
 - Q17: crop includes the empty answer boxes ("Ans: [ ] // [ ]") and is slightly cut at the right edge of the grid.
 - Q18: crop includes the printed page number "12" and a large blank area under the cards.
 - Q6, Q8, Q11, Q15: extra white space only (usable).
+
+## Crop fix
+- Checked 10 crops; fixed 3 (Q17 grid only, without answer boxes, full right edge; Q18 digit cards only; Q20 both number lines with 0, 1, A, B labels, re-cropped from the page; earlier report said it was damaged, the page itself is intact). Q6, Q8, Q11, Q15 re-checked: only the sheet padding is white, crops are tight. No figure_refs, no has_figure changes (Q13, Q22, Q23 are answerable from text).
+- Nothing still imperfect.

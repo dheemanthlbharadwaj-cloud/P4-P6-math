@@ -1,0 +1,246 @@
+{
+ "2025_P3_NanHua_EOY_Q02": {
+  "bbox": [
+   806,
+   1800,
+   1430,
+   2262
+  ],
+  "size": [
+   624,
+   462
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 2,
+  "band": [
+   1674,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q05": {
+  "bbox": [
+   676,
+   653,
+   2074,
+   1401
+  ],
+  "size": [
+   1398,
+   748
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   507,
+   2003
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q09": {
+  "bbox": [
+   470,
+   760,
+   2195,
+   1605
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_NanHua_EOY_Q12": {
+  "bbox": [
+   595,
+   1560,
+   1047,
+   2316
+  ],
+  "size": [
+   452,
+   756
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2130,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1494,
+   2397
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q15": {
+  "bbox": [
+   546,
+   1308,
+   1403,
+   1548
+  ],
+  "size": [
+   857,
+   240
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2173,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1086,
+   1911
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q17": {
+  "bbox": [
+   552,
+   651,
+   1603,
+   1572
+  ],
+  "size": [
+   1051,
+   921
+  ],
+  "whited_words": [
+   "[missed text]"
+  ],
+  "ink_regions": 1,
+  "column_x": 2116,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   568,
+   1823
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q19": {
+  "bbox": [
+   1394,
+   675,
+   2075,
+   1010
+  ],
+  "size": [
+   681,
+   335
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 2168,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   530,
+   1683
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q20": {
+  "bbox": [
+   825,
+   1830,
+   1900,
+   2170
+  ],
+  "page": 10,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_NanHua_EOY_Q21": {
+  "bbox": [
+   524,
+   647,
+   2029,
+   1792
+  ],
+  "size": [
+   1505,
+   1145
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": 2111,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   540,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q22": {
+  "bbox": [
+   1419,
+   743,
+   2095,
+   1156
+  ],
+  "size": [
+   676,
+   413
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 2153,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   521,
+   1700
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q24": {
+  "bbox": [
+   669,
+   777,
+   1896,
+   1053
+  ],
+  "size": [
+   1227,
+   276
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2122,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   542,
+   1683
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_NanHua_EOY_Q26": {
+  "bbox": [
+   552,
+   1041,
+   2028,
+   1741
+  ],
+  "size": [
+   1476,
+   700
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 2124,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   784,
+   3508
+  ],
+  "band_from": "text"
+ }
+}

@@ -20,3 +20,8 @@
 - Q24: includes leftover text "is the area of the paper?", footer, page number and mark box; very tall.
 - Q25: includes answer-line fragments, "Ans: (b)", footer and mark box; very tall.
 - Q20: top of crop cuts through the string line slightly (balloon figure otherwise complete).
+
+## Crop fix
+- Checked 12 crops. Fixed 9 by manual crop: Q3, Q7, Q15 (full grid, no white-out, footer and answer lines removed), Q9, Q20 (string line complete), Q21, Q22, Q24, Q25 (footers, page numbers, mark boxes, answer lines and question text removed, trimmed to the figure). Q5, Q16, Q18 kept as they were.
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: none (scan is faint and noisy, as in the original).

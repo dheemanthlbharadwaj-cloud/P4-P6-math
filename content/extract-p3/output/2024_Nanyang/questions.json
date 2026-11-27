@@ -501,7 +501,7 @@
   "question_no": 15,
   "marks": 2,
   "question_type": "short",
-  "question": "",
+  "question": "(a) Find the sum of 560 and 1320.\n(b) 8001 − ______ = 2417",
   "question_parts": [
    {
     "part": "a",
@@ -534,7 +534,8 @@
   "figure_note": "",
   "ocr_fixes": [
    "'8001 —' -> '8001 −'",
-   "no common stem printed; parts only"
+   "no common stem printed; parts only",
+   "question text built from its parts (no common stem printed)"
   ],
   "checked_against_image": [
    9,
@@ -556,7 +557,7 @@
   "question_no": 16,
   "marks": 2,
   "question_type": "short",
-  "question": "",
+  "question": "(a) Michelle bought 5 trays of eggs. Each tray had 8 eggs. How many eggs did Michelle buy altogether?\n(b) Michelle used 4 eggs to bake each cake. How many cakes could she bake with all the eggs that she bought?",
   "question_parts": [
    {
     "part": "a",
@@ -588,7 +589,8 @@
   "has_figure": false,
   "figure_note": "",
   "ocr_fixes": [
-   "no common stem printed; parts only"
+   "no common stem printed; parts only",
+   "question text built from its parts (no common stem printed)"
   ],
   "checked_against_image": [
    10,

@@ -15,3 +15,8 @@
 - Q10: bar model crop is small and includes page footer "A-5" with blank space.
 - Q13: crop includes the question line "The rectangle below is made up of 5 identical squares."
 - Q4: coin faces partly whited (20 and 10 coin numbers erased).
+
+## Crop fix
+- Checked 12 crops; re-cropped manually 5 (plus Q4 redone): Q23 (letters complete on grid), Q28 (rectangle with 6 m and 5 m only), Q10 (bar model with Ali/Bella labels, footer removed), Q13 (question line removed), Q4 (coin numbers no longer whited out).
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: scan noise only (speckled notes/coins in Q4, faint scale labels in Q15).

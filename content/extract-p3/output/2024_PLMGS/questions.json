@@ -1,1035 +1,1035 @@
 [
- {
-  "id": "2024_P3_PLMGS_EOY_Q01",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "In 5906, what does the digit 9 stand for?",
-  "options": {
-   "1": "9",
-   "2": "90",
-   "3": "900",
-   "4": "9000"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q01",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "In 5906, what does the digit 9 stand for?",
+    "options": {
+      "1": "9",
+      "2": "90",
+      "3": "900",
+      "4": "9000"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as '1<'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as '1<'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q02",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Express 8 km 60 m in metres.",
-  "options": {
-   "1": "806 m",
-   "2": "860 m",
-   "3": "8060 m",
-   "4": "8600 m"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q02",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Express 8 km 60 m in metres.",
+    "options": {
+      "1": "806 m",
+      "2": "860 m",
+      "3": "8060 m",
+      "4": "8600 m"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q03",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "How many of the marked angles are right angles?",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q03",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "How many of the marked angles are right angles?",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "2",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "polygon with five marked angles",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "medium"
   },
-  "answer_key": "2",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "polygon with five marked angles",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q04",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "The bar graph below shows the favourite sports of a group of children. Which is the most popular sport?",
-  "options": {
-   "1": "Soccer",
-   "2": "Netball",
-   "3": "Table Tennis",
-   "4": "Floorball"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q04",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "The bar graph below shows the favourite sports of a group of children. Which is the most popular sport?",
+    "options": {
+      "1": "Soccer",
+      "2": "Netball",
+      "3": "Table Tennis",
+      "4": "Floorball"
+    },
+    "answer_key": "4",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph Favourite Sports (Soccer, Netball, Table Tennis, Floorball)",
+    "ocr_fixes": [
+      "axis label '45' -> '15'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph Favourite Sports (Soccer, Netball, Table Tennis, Floorball)",
-  "ocr_fixes": [
-   "axis label '45' -> '15'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q05",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Mrs Tee left the supermarket at the time shown below. She reached home 20 minutes later. At what time did she reach home?",
-  "options": {
-   "1": "14 35",
-   "2": "14 55",
-   "3": "15 35",
-   "4": "15 55"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q05",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Mrs Tee left the supermarket at the time shown below. She reached home 20 minutes later. At what time did she reach home?",
+    "options": {
+      "1": "14 35",
+      "2": "14 55",
+      "3": "15 35",
+      "4": "15 55"
+    },
+    "answer_key": "2",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "analogue clock showing 2:35",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "analogue clock showing 2:35",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q06",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the missing number in the number pattern below? 2076, 2086, 2096, ?, 2116, 2126",
-  "options": {
-   "1": "2006",
-   "2": "2016",
-   "3": "2106",
-   "4": "2196"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q06",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the missing number in the number pattern below? 2076, 2086, 2096, ?, 2116, 2126",
+    "options": {
+      "1": "2006",
+      "2": "2016",
+      "3": "2106",
+      "4": "2196"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "six number cards with one hidden by ?",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "six number cards with one hidden by ?",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q07",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following figures does not show $\\frac{1}{4}$ of the figure shaded?",
-  "options": {
-   "1": "Figure 1",
-   "2": "Figure 2",
-   "3": "Figure 3",
-   "4": "Figure 4"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q07",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following figures does not show $\\frac{1}{4}$ of the figure shaded?",
+    "options": {
+      "1": "Figure 1",
+      "2": "Figure 2",
+      "3": "Figure 3",
+      "4": "Figure 4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "four shaded figures (square, 3x4 grid, 2x4 grid, hexagon)",
+    "ocr_fixes": [
+      "fraction read as '4', options are figures"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "four shaded figures (square, 3x4 grid, 2x4 grid, hexagon)",
-  "ocr_fixes": [
-   "fraction read as '4', options are figures"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q08",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Randal has 114 pies. He wants to pack 9 pies into each box. What is the least number of boxes Randal needs to pack all the pies?",
-  "options": {
-   "1": "19",
-   "2": "18",
-   "3": "13",
-   "4": "12"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q08",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Randal has 114 pies. He wants to pack 9 pies into each box. What is the least number of boxes Randal needs to pack all the pies?",
+    "options": {
+      "1": "19",
+      "2": "18",
+      "3": "13",
+      "4": "12"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q09",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mrs Ling took 35 min to walk from her house to the swimming pool. She arrived at the swimming pool at 3:45 pm. What time did Mrs Ling leave her house?",
-  "options": {
-   "1": "3:00 pm",
-   "2": "3:10 pm",
-   "3": "4:15 pm",
-   "4": "4:20 pm"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q09",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mrs Ling took 35 min to walk from her house to the swimming pool. She arrived at the swimming pool at 3:45 pm. What time did Mrs Ling leave her house?",
+    "options": {
+      "1": "3:00 pm",
+      "2": "3:10 pm",
+      "3": "4:15 pm",
+      "4": "4:20 pm"
+    },
+    "answer_key": "2",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "picture of house and swimming pool",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "medium"
   },
-  "answer_key": "2",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "picture of house and swimming pool",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q10",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Alex and Faye had some files each. Alex had 34 files. After Faye had given away 40 files, she had 18 files fewer than Alex. What was the number of files Faye had at first?",
-  "options": {
-   "1": "58",
-   "2": "56",
-   "3": "52",
-   "4": "50"
+  {
+    "id": "2024_P3_PLMGS_EOY_Q10",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Alex and Faye had some files each. Alex had 34 files. After Faye had given away 40 files, she had 18 files fewer than Alex. What was the number of files Faye had at first?",
+    "options": {
+      "1": "58",
+      "2": "56",
+      "3": "52",
+      "4": "50"
+    },
+    "answer_key": "2",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q11",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 11,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Write eight thousand, three hundred and fifty-six in numerals. Using all four digits, form the greatest 4-digit even number. 1 8 3 2",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Write eight thousand, three hundred and fifty-six in numerals."
-   },
-   {
-    "part": "b",
-    "text": "Using all four digits, form the greatest 4-digit even number. 1 8 3 2"
-   }
-  ],
-  "answer": "a 8356, b 8312",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "8356",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "8312",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "four digit cards 1, 8, 3, 2 (digits given in part b)",
-  "ocr_fixes": [
-   "'11,8)' -> digit cards 1 8 3 2 read from image",
-   "'Write,eight' -> 'Write eight'"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q12",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 12,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Study the diagram below. What is the mass of the watermelon? Give your answer in grams.",
-  "answer": "3700",
-  "unit": "g",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "watermelon on dial scale, pointer between 3 and 4 kg",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q13",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 13,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing number in the box? $\\frac{4}{5} = \\frac{\\square}{30}$",
-  "answer": "24",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q14",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 14,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Doreen started her art lesson at 12 30. Her art lesson lasted for 1 h 15 min. What time did her art lesson end?",
-  "answer": "13 45",
-  "unit": "",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "time line 12 30 to ? and decorative picture (times given in question text)",
-  "ocr_fixes": [
-   "'12. 30' -> '12 30'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q15",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 15,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Name the three obtuse angles in the figure below.",
-  "answer": "a, d and e",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "1",
-    "value": "a",
-    "unit": ""
-   },
-   {
-    "part": "2",
-    "value": "d",
-    "unit": ""
-   },
-   {
-    "part": "3",
-    "value": "e",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "pentagon with marked angles a, b, c, d, e",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q16",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "A fan costs ＄23.10. A toy car costs ＄10.80 less than the fan. How much does the toy car cost?",
-  "answer": "12.30",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'46.' -> '16.'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q17",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "short",
-  "question": "At a carnival, there were 1527 boys and 2315 girls. How many children were there altogether at the carnival?",
-  "answer": "3842",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Atacamival' -> 'At a carnival'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q18",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What do the digits A and B represent? 458 × A = 1B32",
-  "answer": "A = 4, B = 8",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "A",
-    "value": "4",
-    "unit": ""
-   },
-   {
-    "part": "B",
-    "value": "8",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "vertical multiplication (given in question text)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q19",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph below shows the number of Primary 3 students who wear spectacles.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Which class has fewer girls than boys who wear spectacles?"
-   },
-   {
-    "part": "b",
-    "text": "Which class has twice as many girls as boys who wear spectacles?"
-   }
-  ],
-  "answer": "a Class 3B, b Class 3C",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "3B",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "3C",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "double bar graph, girls and boys, Class 3A/3B/3C",
-  "ocr_fixes": [
-   "'Wears' kept as printed in graph title"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q20",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 20,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Identify a pair of parallel lines for the figure below. In the grid, draw a line perpendicular to AB and passing through Z.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Identify a pair of parallel lines for the figure below."
-   },
-   {
-    "part": "b",
-    "text": "In the grid, draw a line perpendicular to AB and passing through Z."
-   }
-  ],
-  "answer": "a JQ // KL, b (line drawn on grid)",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "JQ // KL",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "(drawing, no written answer)",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "arrow-shaped figure J K P Q M O, and grid with line AB and point Z",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12,
-   19
-  ],
-  "answer_check": "unsure: key reads 'JQ // KL' but no point L is labelled in the printed figure (K is the top-right corner, the lower end of the right vertical line is unlabelled); JK // PQ is also parallel",
-  "confidence": "low"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q21",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Ronald spent ＄12.75 on Monday and ＄4.65 on Tuesday. He had ＄36.70 left in his wallet at the end of Tuesday. How much money did Ronald have at first on Monday?",
-  "answer": "54.10",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q22",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Larry and Megan shared a piece of ribbon. Larry used $\\frac{1}{4}$ of the ribbon. Megan used $\\frac{5}{12}$ of the same ribbon. What fraction of the piece of ribbon did they use altogether? Express your answer in its simplest form.",
-  "answer": "$\\frac{2}{3}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q23",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 14,
-  "section": "C",
-  "question_no": 23,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Avery, Betty and Caylee made some cookies. Betty made 521 cookies. Avery made 380 more cookies than Betty. Caylee made 671 fewer cookies than Avery.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many cookies did Avery make?"
-   },
-   {
-    "part": "b",
-    "text": "How many cookies did Caylee make?"
-   }
-  ],
-  "answer": "a 901, b 230",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "901",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "230",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'fewer-cookies' -> 'fewer cookies'"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q24",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 15,
-  "section": "C",
-  "question_no": 24,
-  "marks": 3,
-  "question_type": "long",
-  "question": "There are a total of 815 tables in Hall X, Hall Y and Hall Z. There are 7 fewer tables in Hall X than Hall Y. There are 4 times as many tables in Hall Z than Hall Y. How many tables are there in Hall Y?",
-  "answer": "137",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Hall ¥' -> 'Hall Y'"
-  ],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q25",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 16,
-  "section": "C",
-  "question_no": 25,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mrs Chan poured some soup from a pot into 8 similar bowls. Each bowl had a capacity of 260 mℓ. She had 1 ℓ 70 mℓ of soup left in the pot. How much soup did Mrs Chan have in the pot at first? Give your answer in litres and millilitres.",
-  "answer": "3 ℓ 150 mℓ",
-  "unit": "",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Soup' -> 'soup'",
-   "'1£ 70 mé' -> '1 ℓ 70 mℓ'"
-  ],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q26",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 17,
-  "section": "C",
-  "question_no": 26,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Jasmine draws a figure as shown below. It is made up of 2 identical square A and 1 square B. The length of square B is 3 cm.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What is the perimeter of square B?"
-   },
-   {
-    "part": "b",
-    "text": "What is the area of 1 square A?"
-   }
-  ],
-  "answer": "a 12 cm, b 81 cm²",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "12",
-    "unit": "cm"
-   },
-   {
-    "part": "b",
-    "value": "81",
-    "unit": "cm²"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "two squares A and small square B stepped, total height 21 cm, B side 3 cm",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_PLMGS_EOY_Q27",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Paya Lebar Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
-  "source_pdf_page": 18,
-  "section": "C",
-  "question_no": 27,
-  "marks": 4,
-  "question_type": "long",
-  "question": "A shop sells keychains at the prices shown. 1 keychain costs ＄5. 1 box of 4 keychains costs ＄13. Special Offer: Buy 2 boxes of keychains, get 1 keychain free!",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Sally bought only 3 keychains. How much did she pay for them?"
-   },
-   {
-    "part": "b",
-    "text": "Eryn wants to buy 14 keychains. What is the least amount of money she needs to buy them?"
-   }
-  ],
-  "answer": "a ＄15, b ＄44",
-  "unit": "＄",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "15",
-    "unit": "＄"
-   },
-   {
-    "part": "b",
-    "value": "44",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "price notice with keychain pictures",
-  "ocr_fixes": [
-   "'selis' -> 'sells'"
-  ],
-  "checked_against_image": [
-   18,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2024_P3_PLMGS_EOY_Q11",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 11,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Write eight thousand, three hundred and fifty-six in numerals. Using all four digits, form the greatest 4-digit even number. 1 8 3 2",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Write eight thousand, three hundred and fifty-six in numerals."
+      },
+      {
+        "part": "b",
+        "text": "Using all four digits, form the greatest 4-digit even number. 1 8 3 2"
+      }
+    ],
+    "answer": "a 8356, b 8312",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "8356",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "8312",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "four digit cards 1, 8, 3, 2 (digits given in part b)",
+    "ocr_fixes": [
+      "'11,8)' -> digit cards 1 8 3 2 read from image",
+      "'Write,eight' -> 'Write eight'"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q12",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 12,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Study the diagram below. What is the mass of the watermelon? Give your answer in grams.",
+    "answer": "3700",
+    "unit": "g",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "watermelon on dial scale, pointer between 3 and 4 kg",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q13",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 13,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing number in the box? $\\frac{4}{5} = \\frac{\\square}{30}$",
+    "answer": "24",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q14",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 14,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Doreen started her art lesson at 12 30. Her art lesson lasted for 1 h 15 min. What time did her art lesson end?",
+    "answer": "13 45",
+    "unit": "",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "time line 12 30 to ? and decorative picture (times given in question text)",
+    "ocr_fixes": [
+      "'12. 30' -> '12 30'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q15",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 15,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Name the three obtuse angles in the figure below.",
+    "answer": "a, d and e",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "1",
+        "value": "a",
+        "unit": ""
+      },
+      {
+        "part": "2",
+        "value": "d",
+        "unit": ""
+      },
+      {
+        "part": "3",
+        "value": "e",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "pentagon with marked angles a, b, c, d, e",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q16",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "A fan costs ＄23.10. A toy car costs ＄10.80 less than the fan. How much does the toy car cost?",
+    "answer": "12.30",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'46.' -> '16.'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q17",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "short",
+    "question": "At a carnival, there were 1527 boys and 2315 girls. How many children were there altogether at the carnival?",
+    "answer": "3842",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Atacamival' -> 'At a carnival'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q18",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What do the digits A and B represent? 458 × A = 1B32",
+    "answer": "A = 4, B = 8",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "A",
+        "value": "4",
+        "unit": ""
+      },
+      {
+        "part": "B",
+        "value": "8",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "vertical multiplication (given in question text)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q19",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph below shows the number of Primary 3 students who wear spectacles.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Which class has fewer girls than boys who wear spectacles?"
+      },
+      {
+        "part": "b",
+        "text": "Which class has twice as many girls as boys who wear spectacles?"
+      }
+    ],
+    "answer": "a Class 3B, b Class 3C",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "3B",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "3C",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "double bar graph, girls and boys, Class 3A/3B/3C",
+    "ocr_fixes": [
+      "'Wears' kept as printed in graph title"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q20",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 20,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Identify a pair of parallel lines for the figure below. In the grid, draw a line perpendicular to AB and passing through Z.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Identify a pair of parallel lines for the figure below."
+      },
+      {
+        "part": "b",
+        "text": "In the grid, draw a line perpendicular to AB and passing through Z."
+      }
+    ],
+    "answer": "a JQ // KL, b (line drawn on grid)",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "JQ // KL",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "(drawing, no written answer)",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "arrow-shaped figure J K P Q M O, and grid with line AB and point Z",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12,
+      19
+    ],
+    "answer_check": "unsure: key reads 'JQ // KL' but no point L is labelled in the printed figure (K is the top-right corner, the lower end of the right vertical line is unlabelled); JK // PQ is also parallel",
+    "confidence": "low"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q21",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Ronald spent ＄12.75 on Monday and ＄4.65 on Tuesday. He had ＄36.70 left in his wallet at the end of Tuesday. How much money did Ronald have at first on Monday?",
+    "answer": "54.10",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q22",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Larry and Megan shared a piece of ribbon. Larry used $\\frac{1}{4}$ of the ribbon. Megan used $\\frac{5}{12}$ of the same ribbon. What fraction of the piece of ribbon did they use altogether? Express your answer in its simplest form.",
+    "answer": "$\\frac{2}{3}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q23",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 14,
+    "section": "C",
+    "question_no": 23,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Avery, Betty and Caylee made some cookies. Betty made 521 cookies. Avery made 380 more cookies than Betty. Caylee made 671 fewer cookies than Avery.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many cookies did Avery make?"
+      },
+      {
+        "part": "b",
+        "text": "How many cookies did Caylee make?"
+      }
+    ],
+    "answer": "a 901, b 230",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "901",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "230",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'fewer-cookies' -> 'fewer cookies'"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q24",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 15,
+    "section": "C",
+    "question_no": 24,
+    "marks": 3,
+    "question_type": "long",
+    "question": "There are a total of 815 tables in Hall X, Hall Y and Hall Z. There are 7 fewer tables in Hall X than Hall Y. There are 4 times as many tables in Hall Z than Hall Y. How many tables are there in Hall Y?",
+    "answer": "137",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Hall ¥' -> 'Hall Y'"
+    ],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q25",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 16,
+    "section": "C",
+    "question_no": 25,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mrs Chan poured some soup from a pot into 8 similar bowls. Each bowl had a capacity of 260 mℓ. She had 1 ℓ 70 mℓ of soup left in the pot. How much soup did Mrs Chan have in the pot at first? Give your answer in litres and millilitres.",
+    "answer": "3 ℓ 150 mℓ",
+    "unit": "",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Soup' -> 'soup'",
+      "'1£ 70 mé' -> '1 ℓ 70 mℓ'"
+    ],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q26",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 17,
+    "section": "C",
+    "question_no": 26,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Jasmine draws a figure as shown below. It is made up of 2 identical square A and 1 square B. The length of square B is 3 cm.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What is the perimeter of square B?"
+      },
+      {
+        "part": "b",
+        "text": "What is the area of 1 square A?"
+      }
+    ],
+    "answer": "a 12 cm, b 81 cm²",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "12",
+        "unit": "cm"
+      },
+      {
+        "part": "b",
+        "value": "81",
+        "unit": "cm²"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "two squares A and small square B stepped, total height 21 cm, B side 3 cm",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_PLMGS_EOY_Q27",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Paya Lebar Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Paya Lebar Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-PLMGS.pdf",
+    "source_pdf_page": 18,
+    "section": "C",
+    "question_no": 27,
+    "marks": 4,
+    "question_type": "long",
+    "question": "A shop sells keychains at the prices shown. 1 keychain costs ＄5. 1 box of 4 keychains costs ＄13. Special Offer: Buy 2 boxes of keychains, get 1 keychain free!",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Sally bought only 3 keychains. How much did she pay for them?"
+      },
+      {
+        "part": "b",
+        "text": "Eryn wants to buy 14 keychains. What is the least amount of money she needs to buy them?"
+      }
+    ],
+    "answer": "a ＄15, b ＄44",
+    "unit": "＄",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "15",
+        "unit": "＄"
+      },
+      {
+        "part": "b",
+        "value": "44",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "price notice with keychain pictures",
+    "ocr_fixes": [
+      "'selis' -> 'sells'"
+    ],
+    "checked_against_image": [
+      18,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

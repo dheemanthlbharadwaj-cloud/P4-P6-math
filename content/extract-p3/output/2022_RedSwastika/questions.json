@@ -1,1571 +1,1573 @@
 [
- {
-  "id": "2022_P3_RedSwastika_EOY_Q01",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 1,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which digit in 9876 is in the thousands place?",
-  "options": {
-   "1": "6",
-   "2": "7",
-   "3": "8",
-   "4": "9"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q01",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 1,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which digit in 9876 is in the thousands place?",
+    "options": {
+      "1": "6",
+      "2": "7",
+      "3": "8",
+      "4": "9"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q02",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 2,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following is the same as 5021?",
-  "options": {
-   "1": "50 + 20 + 1",
-   "2": "500 + 20 + 1",
-   "3": "5000 + 20 + 1",
-   "4": "5000 + 200 + 1"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q02",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 2,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following is the same as 5021?",
+    "options": {
+      "1": "50 + 20 + 1",
+      "2": "500 + 20 + 1",
+      "3": "5000 + 20 + 1",
+      "4": "5000 + 200 + 1"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option 4 'S000-+ 200 + 1' -> '5000 + 200 + 1'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option 4 'S000-+ 200 + 1' -> '5000 + 200 + 1'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q03",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 3,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "In the number line below, what is the value of X?",
-  "options": {
-   "1": "1022",
-   "2": "1024",
-   "3": "1030",
-   "4": "1040"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q03",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 3,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "In the number line below, what is the value of X?",
+    "options": {
+      "1": "1022",
+      "2": "1024",
+      "3": "1030",
+      "4": "1040"
+    },
+    "answer_key": "2",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "number line, 1010 at first tick, 1020 at 5th tick, X at 7th tick",
+    "ocr_fixes": [
+      "garbled number line text; read from image"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "number line, 1010 at first tick, 1020 at 5th tick, X at 7th tick",
-  "ocr_fixes": [
-   "garbled number line text; read from image"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q04",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 4,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following is an odd number?",
-  "options": {
-   "1": "2641",
-   "2": "3156",
-   "3": "5792",
-   "4": "6394"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q04",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 4,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following is an odd number?",
+    "options": {
+      "1": "2641",
+      "2": "3156",
+      "3": "5792",
+      "4": "6394"
+    },
+    "answer_key": "1",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q05",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the value of 1000 - 89.",
-  "options": {
-   "1": "911",
-   "2": "989",
-   "3": "1089",
-   "4": "1911"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q05",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the value of 1000 - 89.",
+    "options": {
+      "1": "911",
+      "2": "989",
+      "3": "1089",
+      "4": "1911"
+    },
+    "answer_key": "1",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q06",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the missing number in the number pattern?",
-  "options": {
-   "1": "12",
-   "2": "14",
-   "3": "34",
-   "4": "44"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q06",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the missing number in the number pattern?",
+    "options": {
+      "1": "12",
+      "2": "14",
+      "3": "34",
+      "4": "44"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "strip of numbers 82, 70, 58, 46, ?, 22",
+    "ocr_fixes": [
+      "Q number missing in OCR (6)",
+      "pattern strip read from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "strip of numbers 82, 70, 58, 46, ?, 22",
-  "ocr_fixes": [
-   "Q number missing in OCR (6)",
-   "pattern strip read from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q07",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following is the smallest number that can be divided by 5 with no remainder?",
-  "options": {
-   "1": "5503",
-   "2": "3530",
-   "3": "3350",
-   "4": "2051"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q07",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following is the smallest number that can be divided by 5 with no remainder?",
+    "options": {
+      "1": "5503",
+      "2": "3530",
+      "3": "3350",
+      "4": "2051"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR (7)",
+      "'th' -> 'the'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR (7)",
-   "'th' -> 'the'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q08",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The diagram shows Jimmy's bookshelf. Which of the following could be the height of Jimmy's bookshelf?",
-  "options": {
-   "1": "1 cm",
-   "2": "5 cm",
-   "3": "1 m",
-   "4": "5 m"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q08",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The diagram shows Jimmy's bookshelf. Which of the following could be the height of Jimmy's bookshelf?",
+    "options": {
+      "1": "1 cm",
+      "2": "5 cm",
+      "3": "1 m",
+      "4": "5 m"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "bookshelf with height arrow beside a boy",
+    "ocr_fixes": [
+      "Q number missing in OCR (8)",
+      "option units garbled, read from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "solved: no key (estimate)",
+    "confidence": "medium"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "bookshelf with height arrow beside a boy",
-  "ocr_fixes": [
-   "Q number missing in OCR (8)",
-   "option units garbled, read from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "solved: no key (estimate)",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q09",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Express 135 minutes in hours and minutes.",
-  "options": {
-   "1": "1 h 35 min",
-   "2": "2 h 15 min",
-   "3": "2 h 25 min",
-   "4": "3 h 15 min"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q09",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Express 135 minutes in hours and minutes.",
+    "options": {
+      "1": "1 h 35 min",
+      "2": "2 h 15 min",
+      "3": "2 h 25 min",
+      "4": "3 h 15 min"
+    },
+    "answer_key": "2",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR (9)",
+      "option 2 '2h)5 min' -> '2 h 15 min'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR (9)",
-   "option 2 '2h)5 min' -> '2 h 15 min'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q10",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the perimeter of the rectangle shown below.",
-  "options": {
-   "1": "17 cm",
-   "2": "34 cm",
-   "3": "64 cm",
-   "4": "72 cm"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q10",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the perimeter of the rectangle shown below.",
+    "options": {
+      "1": "17 cm",
+      "2": "34 cm",
+      "3": "64 cm",
+      "4": "72 cm"
+    },
+    "answer_key": "2",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle 9 cm by 8 cm",
+    "ocr_fixes": [
+      "option units 'am' -> 'cm'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle 9 cm by 8 cm",
-  "ocr_fixes": [
-   "option units 'am' -> 'cm'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q11",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 5,
-  "section": "Booklet A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the letters contains both parallel and perpendicular lines?",
-  "options": {
-   "1": "T",
-   "2": "E",
-   "3": "A",
-   "4": "M"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q11",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 5,
+    "section": "Booklet A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the letters contains both parallel and perpendicular lines?",
+    "options": {
+      "1": "T",
+      "2": "E",
+      "3": "A",
+      "4": "M"
+    },
+    "answer_key": "2",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "letters T E A M drawn on a grid",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "letters T E A M drawn on a grid",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q12",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 5,
-  "section": "Booklet A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following fractions is closest to $\\frac{1}{2}$?",
-  "options": {
-   "1": "$\\frac{1}{8}$",
-   "2": "$\\frac{2}{8}$",
-   "3": "$\\frac{3}{8}$",
-   "4": "$\\frac{6}{8}$"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q12",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 5,
+    "section": "Booklet A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following fractions is closest to $\\frac{1}{2}$?",
+    "options": {
+      "1": "$\\frac{1}{8}$",
+      "2": "$\\frac{2}{8}$",
+      "3": "$\\frac{3}{8}$",
+      "4": "$\\frac{6}{8}$"
+    },
+    "answer_key": "3",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q13",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 5,
-  "section": "Booklet A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mother cut a pizza into four equal pieces. She then cut one of the four pieces equally and gave one smaller piece to each of her two children. What fraction of the pizza did each child get?",
-  "options": {
-   "1": "$\\frac{1}{2}$",
-   "2": "$\\frac{1}{4}$",
-   "3": "$\\frac{1}{5}$",
-   "4": "$\\frac{1}{8}$"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q13",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 5,
+    "section": "Booklet A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mother cut a pizza into four equal pieces. She then cut one of the four pieces equally and gave one smaller piece to each of her two children. What fraction of the pizza did each child get?",
+    "options": {
+      "1": "$\\frac{1}{2}$",
+      "2": "$\\frac{1}{4}$",
+      "3": "$\\frac{1}{5}$",
+      "4": "$\\frac{1}{8}$"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "pizza cut in four, one quarter cut in half",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "pizza cut in four, one quarter cut in half",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q14",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 6,
-  "section": "Booklet A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Penny bought 6 pears. How much did Penny spend?\n(Prices: 2 pears for ＄1.50; 3 apples for ＄1.)",
-  "options": {
-   "1": "＄2.00",
-   "2": "＄3.00",
-   "3": "＄4.50",
-   "4": "＄9.00"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q14",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 6,
+    "section": "Booklet A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Penny bought 6 pears. How much did Penny spend?\n(Prices: 2 pears for ＄1.50; 3 apples for ＄1.)",
+    "options": {
+      "1": "＄2.00",
+      "2": "＄3.00",
+      "3": "＄4.50",
+      "4": "＄9.00"
+    },
+    "answer_key": "3",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "price board: 2 pears for ＄1.50, 3 apples for ＄1",
+    "ocr_fixes": [
+      "shared figure intro folded in as price line"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "price board: 2 pears for ＄1.50, 3 apples for ＄1",
-  "ocr_fixes": [
-   "shared figure intro folded in as price line"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q15",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 6,
-  "section": "Booklet A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mrs Sim bought 4 pears and 9 apples. How much did Mrs Sim pay for the fruits?\n(Prices: 2 pears for ＄1.50; 3 apples for ＄1.)",
-  "options": {
-   "1": "＄2.50",
-   "2": "＄6.00",
-   "3": "＄7.50",
-   "4": "＄15.00"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q15",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 6,
+    "section": "Booklet A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mrs Sim bought 4 pears and 9 apples. How much did Mrs Sim pay for the fruits?\n(Prices: 2 pears for ＄1.50; 3 apples for ＄1.)",
+    "options": {
+      "1": "＄2.50",
+      "2": "＄6.00",
+      "3": "＄7.50",
+      "4": "＄15.00"
+    },
+    "answer_key": "2",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "price board: 2 pears for ＄1.50, 3 apples for ＄1",
+    "ocr_fixes": [
+      "shared figure intro folded in as price line"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high",
+    "figure_ref": "2022_P3_RedSwastika_EOY_Q14"
   },
-  "answer_key": "2",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "price board: 2 pears for ＄1.50, 3 apples for ＄1",
-  "ocr_fixes": [
-   "shared figure intro folded in as price line"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q16",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 6,
-  "section": "Booklet A",
-  "question_no": 16,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "75 children wanted to take a boat ride at the River Safari together. Each boat can carry at most 6 children. What is the least number of boats needed for the 75 children?",
-  "options": {
-   "1": "12",
-   "2": "13",
-   "3": "14",
-   "4": "15"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q16",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 6,
+    "section": "Booklet A",
+    "question_no": 16,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "75 children wanted to take a boat ride at the River Safari together. Each boat can carry at most 6 children. What is the least number of boats needed for the 75 children?",
+    "options": {
+      "1": "12",
+      "2": "13",
+      "3": "14",
+      "4": "15"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q17",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 6,
-  "section": "Booklet A",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Danny and William collected 60 stickers altogether. William collected 10 stickers more than Danny. How many stickers did Danny collect?",
-  "options": {
-   "1": "25",
-   "2": "30",
-   "3": "35",
-   "4": "50"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q17",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 6,
+    "section": "Booklet A",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Danny and William collected 60 stickers altogether. William collected 10 stickers more than Danny. How many stickers did Danny collect?",
+    "options": {
+      "1": "25",
+      "2": "30",
+      "3": "35",
+      "4": "50"
+    },
+    "answer_key": "1",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q18",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 7,
-  "section": "Booklet A",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Two numbers, P and Q add up to 200. P is a 2-digit number while Q is a 3-digit number. What is the smallest possible value of Q?",
-  "options": {
-   "1": "100",
-   "2": "101",
-   "3": "110",
-   "4": "190"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q18",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 7,
+    "section": "Booklet A",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Two numbers, P and Q add up to 200. P is a 2-digit number while Q is a 3-digit number. What is the smallest possible value of Q?",
+    "options": {
+      "1": "100",
+      "2": "101",
+      "3": "110",
+      "4": "190"
+    },
+    "answer_key": "2",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q19",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 7,
-  "section": "Booklet A",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A bag of sugar weighs 2 kg. It is repacked equally into 4 bags. What is the mass of each bag of sugar in grams?",
-  "options": {
-   "1": "25 g",
-   "2": "50 g",
-   "3": "250 g",
-   "4": "500 g"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q19",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 7,
+    "section": "Booklet A",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A bag of sugar weighs 2 kg. It is repacked equally into 4 bags. What is the mass of each bag of sugar in grams?",
+    "options": {
+      "1": "25 g",
+      "2": "50 g",
+      "3": "250 g",
+      "4": "500 g"
+    },
+    "answer_key": "4",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number split from text"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number split from text"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q20",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 7,
-  "section": "Booklet A",
-  "question_no": 20,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A repeated pattern is formed using the numbers 1 and 0. The first 12 numbers are shown below.\n1 1 0 1 0 1 1 0 1 0 1 1 ...\nWhat is the sum of the first 50 numbers?",
-  "options": {
-   "1": "5",
-   "2": "25",
-   "3": "30",
-   "4": "50"
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q20",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 7,
+    "section": "Booklet A",
+    "question_no": 20,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A repeated pattern is formed using the numbers 1 and 0. The first 12 numbers are shown below.\n1 1 0 1 0 1 1 0 1 0 1 1 ...\nWhat is the sum of the first 50 numbers?",
+    "options": {
+      "1": "5",
+      "2": "25",
+      "3": "30",
+      "4": "50"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "strip of the first 12 numbers 1 1 0 1 0 1 1 0 1 0 1 1",
+    "ocr_fixes": [
+      "pattern strip garbled, read from image"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "strip of the first 12 numbers 1 1 0 1 0 1 1 0 1 0 1 1",
-  "ocr_fixes": [
-   "pattern strip garbled, read from image"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q21",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 9,
-  "section": "Booklet B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Write the number that is represented by the diagram below.",
-  "answer": "8008",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "8 discs of 1000 and 8 discs of 1",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q22",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 9,
-  "section": "Booklet B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the product of 312 and 6.",
-  "answer": "1872",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'342' -> '312' (image)"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q23",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 9,
-  "section": "Booklet B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the value of 4256 + 3352.",
-  "answer": "7608",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q24",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 10,
-  "section": "Booklet B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Circle the correct answer in the brackets.\nThere are only (acute / right / obtuse) angles found in the diagram below.",
-  "answer": "obtuse",
-  "unit": "",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "regular octagon",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q25",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 10,
-  "section": "Booklet B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph below shows the number of books read by 40 students in Class 3K. Part of the graph is covered by ink.\nEach of the statements below is either true or false based on the information given. For each statement, put a tick (✓) to indicate your answer.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "There was 1 more student who borrowed 4 books than those who borrowed 2 books."
-   },
-   {
-    "part": "b",
-    "text": "Eight students borrowed 3 books."
-   }
-  ],
-  "answer": "False; True",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "False",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "True",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph of books borrowed (0:5, 1:4, 2:12, 3 inked, 4:11) and true/false table",
-  "ocr_fixes": [
-   "graph and table read from image"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q26",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 11,
-  "section": "Booklet B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Use all the digits 1, 5, 6 and 9 to form the smallest number between 5000 and 6000.",
-  "answer": "5169",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q27",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 11,
-  "section": "Booklet B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Write the greatest 4-digit even number.",
-  "answer": "9998",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number split ('2','7') in OCR"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q28",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 11,
-  "section": "Booklet B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Becky buys 6 bags of balloons for a party. There are 40 balloons in a bag. How many bunches of balloons does she get if she ties 3 balloons in a bunch?",
-  "answer": "80",
-  "unit": "bunches",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "line breaks in OCR joined"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q29",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 12,
-  "section": "Booklet B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Jamie bought a laptop during a sale. The cost of the laptop before the sale was ＄1699. How much change did Jamie receive if she paid the cashier ＄1500?\n(The laptop is marked: sale, ＄200 cheaper!)",
-  "answer": "1",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "laptop picture with 'sale ＄200 cheaper!'",
-  "ocr_fixes": [
-   "'＄200 cheaper!' label from picture added as a line"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q30",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 12,
-  "section": "Booklet B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Daphne exchanged ＄5 for 10 coins. All the coins had the same value. What was the value of each coin in cents?",
-  "answer": "50",
-  "unit": "¢",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q31",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 12,
-  "section": "Booklet B",
-  "question_no": 31,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The length of one piece of rope is 78 cm. What is the length of 8 such ropes? Give your answer in m and cm.",
-  "answer": "6 m 24 cm",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "6",
-    "unit": "m"
-   },
-   {
-    "part": "",
-    "value": "24",
-    "unit": "cm"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q32",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 13,
-  "section": "Booklet B",
-  "question_no": 32,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A fruitseller sold some fruits at a store on a weekday. Graph 1 shows the number of fruits that were sold on that day. Graph 2 shows the number of fruits left unsold at the end of the day.\nThe shopkeeper sold ________ more apples than oranges.",
-  "answer": "12",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "Graph 1 bars (pears 22, oranges 16, apples 28) and Graph 2 bars",
-  "ocr_fixes": [
-   "graph read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q33",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 13,
-  "section": "Booklet B",
-  "question_no": 33,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A fruitseller sold some fruits at a store on a weekday. Graph 1 shows the number of fruits that were sold on that day. Graph 2 shows the number of fruits left unsold at the end of the day.\nThe shopkeeper had a total of ________ pears at the store at first.",
-  "answer": "26",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "Graph 1 bars (pears 22) and Graph 2 bars (pears 4)",
-  "ocr_fixes": [
-   "graph read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q34",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 14,
-  "section": "Booklet B",
-  "question_no": 34,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Ling wrote 3 compositions in 2 hours. She took the same amount of time to write the first 2 compositions but took 30 minutes longer to write the third composition than the first. How many minutes did she take to write the first composition?",
-  "answer": "30",
-  "unit": "min",
-  "topic_primary": "Time",
-  "topics": [
-   "Time",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q35",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 14,
-  "section": "Booklet B",
-  "question_no": 35,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A bottle can hold 1050 mℓ of water. A cup can hold 900 mℓ less water than the bottle. How much water can the cup hold?",
-  "answer": "150",
-  "unit": "mℓ",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'ml' -> 'mℓ'"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q36",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 14,
-  "section": "Booklet B",
-  "question_no": 36,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Figure A is a 4-sided figure with 4 equal sides. Figure B is formed by putting two of Figure A together. Find the perimeter of Figure B.",
-  "answer": "30",
-  "unit": "cm",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "Figure A rhombus with side 5 cm; Figure B two rhombuses joined",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q37",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 15,
-  "section": "Booklet B",
-  "question_no": 37,
-  "marks": 2,
-  "question_type": "short",
-  "question": "By joining dots on the grid with 2 straight lines, draw a triangle with one obtuse angle and two acute angles in the space below.",
-  "answer": "(drawing: a triangle with one obtuse angle)",
-  "unit": "",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "dot grid with one base line already drawn",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "solved: no key (drawing)",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q38",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 15,
-  "section": "Booklet B",
-  "question_no": 38,
-  "marks": 2,
-  "question_type": "short",
-  "question": "In the number line below, A represents $\\frac{4}{9}$, C represents $\\frac{2}{3}$ and B is exactly between A and C. What fraction does B represent?",
-  "answer": "$\\frac{5}{9}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "number line with A=4/9, B, C=2/3",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q39",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 15,
-  "section": "Booklet B",
-  "question_no": 39,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the difference between the smallest and greatest fractions below.\n$\\frac{3}{4}$, $\\frac{1}{2}$, $\\frac{7}{8}$",
-  "answer": "$\\frac{3}{8}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q40",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 16,
-  "section": "Booklet B",
-  "question_no": 40,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mother bought a pizza and sliced it into 12 equal pieces for a party. Iris took 3 pieces of the pizza. What fraction of the pizza did Iris take? Express your answer as a fraction in its simplest form.",
-  "answer": "$\\frac{1}{4}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number on separate line"
-  ],
-  "checked_against_image": [],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q41",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 17,
-  "section": "Booklet B",
-  "question_no": 41,
-  "marks": 4,
-  "question_type": "long",
-  "question": "There were 68 tables and 3 times as many chairs in a storeroom.\n(a) How many chairs were there in the storeroom?\n(b) How many tables and chairs were there altogether?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many chairs were there in the storeroom?"
-   },
-   {
-    "part": "b",
-    "text": "How many tables and chairs were there altogether?"
-   }
-  ],
-  "answer": "204; 272",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "204",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "272",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q42",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 18,
-  "section": "Booklet B",
-  "question_no": 42,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Ben and Jerry bought some egg tarts from a bakery. Ben bought 6 more egg tarts and paid ＄12 more than Jerry. How many egg tarts did Jerry buy if he paid a total of ＄98?",
-  "answer": "49",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction",
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   18
-  ],
-  "answer_check": "solved:49 (read 'he' as Jerry; if 98 is the pair's total no whole answer)",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q43",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 19,
-  "section": "Booklet B",
-  "question_no": 43,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The figure shows the opening hours of a dental clinic.\nOpening hours: Morning 8.00 a.m. to 12.00 p.m.; Afternoon 1.30 p.m. to 5.00 p.m.; Evening 7.30 p.m. to 9.30 p.m.\n(a) How long is the dental clinic open in the afternoon?\n(b) Nikki visited the dentist last evening. She spent 1 h 15 min in the clinic and left the clinic at 9.30 p.m. What time did she reach the clinic?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How long is the dental clinic open in the afternoon?"
-   },
-   {
-    "part": "b",
-    "text": "Nikki visited the dentist last evening. She spent 1 h 15 min in the clinic and left the clinic at 9.30 p.m. What time did she reach the clinic?"
-   }
-  ],
-  "answer": "3 h 30 min; 8.15 p.m.",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "3 h 30 min",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "8.15 p.m.",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "table of opening hours",
-  "ocr_fixes": [
-   "'Clinic' capital, line breaks joined"
-  ],
-  "checked_against_image": [],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q44",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 20,
-  "section": "Booklet B",
-  "question_no": 44,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Jack and Ken have some toy cars. After Jack gives 20 toy cars to Ken, he has 23 toy cars more than Ken. How many more toy cars does Jack have than Ken at first?",
-  "answer": "63",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number on separate line"
-  ],
-  "checked_against_image": [],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_RedSwastika_EOY_Q45",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Red Swastika",
-  "exam": "EOY",
-  "source": "(Red Swastika) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
-  "source_pdf_page": 21,
-  "section": "Booklet B",
-  "question_no": 45,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Figure 1 shows a square divided into two smaller squares W and Y and two rectangles X and Z. The length of Square W is 7 cm and the length of Square Y is 4 cm.\n(a) What is the area of Rectangle Z?\n(b) What is the perimeter of Figure 1?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What is the area of Rectangle Z?"
-   },
-   {
-    "part": "b",
-    "text": "What is the perimeter of Figure 1?"
-   }
-  ],
-  "answer": "28; 44",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "28",
-    "unit": "cm²"
-   },
-   {
-    "part": "b",
-    "value": "44",
-    "unit": "cm"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "square split into W (7 cm), X, Z, Y (4 cm)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   21
-  ],
-  "answer_check": "solved: no key",
-  "confidence": "high"
- }
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q21",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 9,
+    "section": "Booklet B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Write the number that is represented by the diagram below.",
+    "answer": "8008",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "8 discs of 1000 and 8 discs of 1",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q22",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 9,
+    "section": "Booklet B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the product of 312 and 6.",
+    "answer": "1872",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'342' -> '312' (image)"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q23",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 9,
+    "section": "Booklet B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the value of 4256 + 3352.",
+    "answer": "7608",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q24",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 10,
+    "section": "Booklet B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Circle the correct answer in the brackets.\nThere are only (acute / right / obtuse) angles found in the diagram below.",
+    "answer": "obtuse",
+    "unit": "",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "regular octagon",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q25",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 10,
+    "section": "Booklet B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph below shows the number of books read by 40 students in Class 3K. Part of the graph is covered by ink.\nEach of the statements below is either true or false based on the information given. For each statement, put a tick (✓) to indicate your answer.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "There was 1 more student who borrowed 4 books than those who borrowed 2 books."
+      },
+      {
+        "part": "b",
+        "text": "Eight students borrowed 3 books."
+      }
+    ],
+    "answer": "False; True",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "False",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "True",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph of books borrowed (0:5, 1:4, 2:12, 3 inked, 4:11) and true/false table",
+    "ocr_fixes": [
+      "graph and table read from image"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q26",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 11,
+    "section": "Booklet B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Use all the digits 1, 5, 6 and 9 to form the smallest number between 5000 and 6000.",
+    "answer": "5169",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q27",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 11,
+    "section": "Booklet B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Write the greatest 4-digit even number.",
+    "answer": "9998",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number split ('2','7') in OCR"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q28",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 11,
+    "section": "Booklet B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Becky buys 6 bags of balloons for a party. There are 40 balloons in a bag. How many bunches of balloons does she get if she ties 3 balloons in a bunch?",
+    "answer": "80",
+    "unit": "bunches",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "line breaks in OCR joined"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q29",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 12,
+    "section": "Booklet B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Jamie bought a laptop during a sale. The cost of the laptop before the sale was ＄1699. How much change did Jamie receive if she paid the cashier ＄1500?\n(The laptop is marked: sale, ＄200 cheaper!)",
+    "answer": "1",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "laptop picture with 'sale ＄200 cheaper!'",
+    "ocr_fixes": [
+      "'＄200 cheaper!' label from picture added as a line"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q30",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 12,
+    "section": "Booklet B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Daphne exchanged ＄5 for 10 coins. All the coins had the same value. What was the value of each coin in cents?",
+    "answer": "50",
+    "unit": "¢",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q31",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 12,
+    "section": "Booklet B",
+    "question_no": 31,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The length of one piece of rope is 78 cm. What is the length of 8 such ropes? Give your answer in m and cm.",
+    "answer": "6 m 24 cm",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "6",
+        "unit": "m"
+      },
+      {
+        "part": "",
+        "value": "24",
+        "unit": "cm"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q32",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 13,
+    "section": "Booklet B",
+    "question_no": 32,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A fruitseller sold some fruits at a store on a weekday. Graph 1 shows the number of fruits that were sold on that day. Graph 2 shows the number of fruits left unsold at the end of the day.\nThe shopkeeper sold ________ more apples than oranges.",
+    "answer": "12",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "Graph 1 bars (pears 22, oranges 16, apples 28) and Graph 2 bars",
+    "ocr_fixes": [
+      "graph read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q33",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 13,
+    "section": "Booklet B",
+    "question_no": 33,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A fruitseller sold some fruits at a store on a weekday. Graph 1 shows the number of fruits that were sold on that day. Graph 2 shows the number of fruits left unsold at the end of the day.\nThe shopkeeper had a total of ________ pears at the store at first.",
+    "answer": "26",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "Graph 1 bars (pears 22) and Graph 2 bars (pears 4)",
+    "ocr_fixes": [
+      "graph read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "medium",
+    "figure_ref": "2022_P3_RedSwastika_EOY_Q32"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q34",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 14,
+    "section": "Booklet B",
+    "question_no": 34,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Ling wrote 3 compositions in 2 hours. She took the same amount of time to write the first 2 compositions but took 30 minutes longer to write the third composition than the first. How many minutes did she take to write the first composition?",
+    "answer": "30",
+    "unit": "min",
+    "topic_primary": "Time",
+    "topics": [
+      "Time",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q35",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 14,
+    "section": "Booklet B",
+    "question_no": 35,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A bottle can hold 1050 mℓ of water. A cup can hold 900 mℓ less water than the bottle. How much water can the cup hold?",
+    "answer": "150",
+    "unit": "mℓ",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'ml' -> 'mℓ'"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q36",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 14,
+    "section": "Booklet B",
+    "question_no": 36,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Figure A is a 4-sided figure with 4 equal sides. Figure B is formed by putting two of Figure A together. Find the perimeter of Figure B.",
+    "answer": "30",
+    "unit": "cm",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "Figure A rhombus with side 5 cm; Figure B two rhombuses joined",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q37",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 15,
+    "section": "Booklet B",
+    "question_no": 37,
+    "marks": 2,
+    "question_type": "short",
+    "question": "By joining dots on the grid with 2 straight lines, draw a triangle with one obtuse angle and two acute angles in the space below.",
+    "answer": "(drawing: a triangle with one obtuse angle)",
+    "unit": "",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "dot grid with one base line already drawn",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "solved: no key (drawing)",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q38",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 15,
+    "section": "Booklet B",
+    "question_no": 38,
+    "marks": 2,
+    "question_type": "short",
+    "question": "In the number line below, A represents $\\frac{4}{9}$, C represents $\\frac{2}{3}$ and B is exactly between A and C. What fraction does B represent?",
+    "answer": "$\\frac{5}{9}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "number line with A=4/9, B, C=2/3",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q39",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 15,
+    "section": "Booklet B",
+    "question_no": 39,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the difference between the smallest and greatest fractions below.\n$\\frac{3}{4}$, $\\frac{1}{2}$, $\\frac{7}{8}$",
+    "answer": "$\\frac{3}{8}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q40",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 16,
+    "section": "Booklet B",
+    "question_no": 40,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mother bought a pizza and sliced it into 12 equal pieces for a party. Iris took 3 pieces of the pizza. What fraction of the pizza did Iris take? Express your answer as a fraction in its simplest form.",
+    "answer": "$\\frac{1}{4}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number on separate line"
+    ],
+    "checked_against_image": [],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q41",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 17,
+    "section": "Booklet B",
+    "question_no": 41,
+    "marks": 4,
+    "question_type": "long",
+    "question": "There were 68 tables and 3 times as many chairs in a storeroom.\n(a) How many chairs were there in the storeroom?\n(b) How many tables and chairs were there altogether?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many chairs were there in the storeroom?"
+      },
+      {
+        "part": "b",
+        "text": "How many tables and chairs were there altogether?"
+      }
+    ],
+    "answer": "204; 272",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "204",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "272",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q42",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 18,
+    "section": "Booklet B",
+    "question_no": 42,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Ben and Jerry bought some egg tarts from a bakery. Ben bought 6 more egg tarts and paid ＄12 more than Jerry. How many egg tarts did Jerry buy if he paid a total of ＄98?",
+    "answer": "49",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction",
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      18
+    ],
+    "answer_check": "solved:49 (read 'he' as Jerry; if 98 is the pair's total no whole answer)",
+    "confidence": "medium"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q43",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 19,
+    "section": "Booklet B",
+    "question_no": 43,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The figure shows the opening hours of a dental clinic.\nOpening hours: Morning 8.00 a.m. to 12.00 p.m.; Afternoon 1.30 p.m. to 5.00 p.m.; Evening 7.30 p.m. to 9.30 p.m.\n(a) How long is the dental clinic open in the afternoon?\n(b) Nikki visited the dentist last evening. She spent 1 h 15 min in the clinic and left the clinic at 9.30 p.m. What time did she reach the clinic?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How long is the dental clinic open in the afternoon?"
+      },
+      {
+        "part": "b",
+        "text": "Nikki visited the dentist last evening. She spent 1 h 15 min in the clinic and left the clinic at 9.30 p.m. What time did she reach the clinic?"
+      }
+    ],
+    "answer": "3 h 30 min; 8.15 p.m.",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "3 h 30 min",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "8.15 p.m.",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "table of opening hours",
+    "ocr_fixes": [
+      "'Clinic' capital, line breaks joined"
+    ],
+    "checked_against_image": [],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q44",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 20,
+    "section": "Booklet B",
+    "question_no": 44,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Jack and Ken have some toy cars. After Jack gives 20 toy cars to Ken, he has 23 toy cars more than Ken. How many more toy cars does Jack have than Ken at first?",
+    "answer": "63",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number on separate line"
+    ],
+    "checked_against_image": [],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_RedSwastika_EOY_Q45",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Red Swastika",
+    "exam": "EOY",
+    "source": "(Red Swastika) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-RedSwastika.pdf",
+    "source_pdf_page": 21,
+    "section": "Booklet B",
+    "question_no": 45,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Figure 1 shows a square divided into two smaller squares W and Y and two rectangles X and Z. The length of Square W is 7 cm and the length of Square Y is 4 cm.\n(a) What is the area of Rectangle Z?\n(b) What is the perimeter of Figure 1?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What is the area of Rectangle Z?"
+      },
+      {
+        "part": "b",
+        "text": "What is the perimeter of Figure 1?"
+      }
+    ],
+    "answer": "28; 44",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "28",
+        "unit": "cm²"
+      },
+      {
+        "part": "b",
+        "value": "44",
+        "unit": "cm"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "square split into W (7 cm), X, Z, Y (4 cm)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      21
+    ],
+    "answer_check": "solved: no key",
+    "confidence": "high"
+  }
 ]

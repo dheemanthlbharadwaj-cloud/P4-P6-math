@@ -1,0 +1,182 @@
+{
+ "2024_P3_HenryPark_EOY_Q04": {
+  "bbox": [
+   360,
+   1620,
+   2080,
+   2155
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_HenryPark_EOY_Q06": {
+  "bbox": [
+   470,
+   1345,
+   2160,
+   1900
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_HenryPark_EOY_Q08": {
+  "bbox": [
+   690,
+   1570,
+   1750,
+   1795
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_HenryPark_EOY_Q13": {
+  "bbox": [
+   940,
+   1142,
+   1579,
+   1743
+  ],
+  "size": [
+   639,
+   601
+  ],
+  "whited_words": [
+   "shaded",
+   "figure",
+   "below."
+  ],
+  "ink_regions": 1,
+  "column_x": 1967,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1096,
+   2072
+  ],
+  "band_from": "index"
+ },
+ "2024_P3_HenryPark_EOY_Q14": {
+  "bbox": [
+   973,
+   2209,
+   1434,
+   2665
+  ],
+  "size": [
+   461,
+   456
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1967,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   2072,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2024_P3_HenryPark_EOY_Q16": {
+  "bbox": [
+   599,
+   1701,
+   2017,
+   2417
+  ],
+  "size": [
+   1418,
+   716
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2075,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1511,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_HenryPark_EOY_Q17": {
+  "bbox": [
+   487,
+   640,
+   1988,
+   1660
+  ],
+  "size": [
+   1501,
+   1020
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 1995,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   417,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_HenryPark_EOY_Q22": {
+  "bbox": [
+   720,
+   810,
+   1880,
+   1170
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_HenryPark_EOY_Q25": {
+  "bbox": [
+   479,
+   1354,
+   1863,
+   2328
+  ],
+  "size": [
+   1384,
+   974
+  ],
+  "whited_words": [],
+  "ink_regions": 9,
+  "column_x": 1986,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   1205,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2024_P3_HenryPark_EOY_Q26": {
+  "bbox": [
+   582,
+   735,
+   1379,
+   1207
+  ],
+  "size": [
+   797,
+   472
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1921,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   455,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

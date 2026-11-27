@@ -12,3 +12,7 @@
 - Q24: no crop (index put Q24 on the wrong band); the beaker is only inside the Q23 crop.
 - Q29: no crop (bar graph above the question not captured).
 - Q30: wrong crop ("End of Section B" footer); the real bar graph (page 14, shared by Q29 and Q30) is missing.
+
+## Crop fix
+- Checked 11 crops; fixed 5 (Q14 without question sentence, Q15 table only, Q23 grid only, Q24 beaker as its own crop, Q29 picture graph newly cropped from p14). Q30 crop (footer) removed; figure_ref Q30 -> Q29. No has_figure changes (all other questions are text-only).
+- Still imperfect: Q36 plot is heavily speckled scan noise (scan quality only).

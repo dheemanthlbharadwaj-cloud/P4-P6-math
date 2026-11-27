@@ -1,0 +1,223 @@
+{
+ "2025_P3_MahaBodhi_EOY_Q04": {
+  "bbox": [
+   460,
+   605,
+   2140,
+   1975
+  ],
+  "size": [
+   593,
+   369
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   2413,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q06": {
+  "bbox": [
+   874,
+   1698,
+   1447,
+   2136
+  ],
+  "size": [
+   574,
+   439
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1479,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q07": {
+  "bbox": [
+   941,
+   523,
+   1505,
+   1460
+  ],
+  "size": [
+   565,
+   938
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   434,
+   1945
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q09": {
+  "bbox": [
+   1279,
+   584,
+   2230,
+   867
+  ],
+  "size": [
+   952,
+   284
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   440,
+   1563
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q11": {
+  "bbox": [
+   842,
+   1058,
+   1656,
+   1323
+  ],
+  "size": [
+   815,
+   265
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   829,
+   2009
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q14": {
+  "bbox": [
+   540,
+   1355,
+   2150,
+   2225
+  ],
+  "size": [
+   1690,
+   1759
+  ],
+  "whited_words": [
+   "How",
+   "many"
+  ],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   1206,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q15": {
+  "bbox": [
+   971,
+   695,
+   1456,
+   1206
+  ],
+  "size": [
+   486,
+   512
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   422,
+   1572
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q16": {
+  "bbox": [
+   722,
+   1681,
+   1559,
+   2502
+  ],
+  "size": [
+   838,
+   822
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1572,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_MahaBodhi_EOY_Q17": {
+  "bbox": [
+   580,
+   540,
+   1550,
+   1235
+  ],
+  "size": [
+   965,
+   659
+  ],
+  "whited_words": [
+   "|"
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   441,
+   2159
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ }
+}

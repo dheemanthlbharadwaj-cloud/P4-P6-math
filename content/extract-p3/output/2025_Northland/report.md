@@ -10,3 +10,6 @@
 - Q9: crop includes leftover option text "AB and DE" below the grid.
 - Q10: crop starts with leftover text fragment "school dai y." above the graph title.
 - Q4: fine (barb marks included); crop box has large empty area below only in the sheet layout.
+
+## Crop fix
+- Checked 4 figure questions plus the rest. Re-cropped manually: Q9 (removed option text below grid), Q10 (removed text fragment above title), Q15 (new: 9 cm by 3 cm rectangle). Q4 unchanged (correct). figure_ref: none. has_figure changes: none (Q14 equation with boxes is in the question text, left off). Still imperfect: none (scan is speckled, figures complete).

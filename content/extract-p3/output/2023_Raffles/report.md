@@ -8,3 +8,8 @@
 ## Crop problems
 - Q40: crop is wrong (very tall band with Fig 1/Fig 2 tiny at top, includes footer text "Please check your work carefully").
 - Q27: axis number row overlaps with a stray smudge near 50 (minor).
+
+## Crop fix
+- Checked 13 figures. Fixed: Q40 (Fig 1 and Fig 2 only, footer and blank area removed). Margins trimmed: Q12, Q13, Q14, Q15, Q16, Q18, Q34, Q38, Q39.
+- figure_refs added: none. has_figure changes: none (other questions are fully in the text).
+- Still imperfect: Q27 has a faint smudge near the 50 label on the axis (scan quality).

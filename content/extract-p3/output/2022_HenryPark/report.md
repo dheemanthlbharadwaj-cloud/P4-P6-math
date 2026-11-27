@@ -14,3 +14,7 @@
 
 ## Crop problems
 - None serious. Q33 crop includes faint handwritten pencil marks (44, 88) on the graph; Q32 crop includes the pencil mark near A.
+
+## Crop fix
+- Checked 15 crops: all contain the whole figure and labels, no question text. No crops fixed, no figure_refs, no has_figure changes.
+- Still imperfect: Q33 faint pencil marks (44, 88) on the graph (scan), Q32 pencil mark near A.

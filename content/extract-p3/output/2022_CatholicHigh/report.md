@@ -15,3 +15,8 @@
 - Q34: bar graph hatched/whited in places; leftover "Monday so" below; chart is readable.
 - Q35: figure crop is tiny and includes the whole statement table with truncated text ("same" missing "perimeter").
 - Q39: pins drawn but crop is short and cut off the "1st/2nd" pin ticks only partly (no labels for 2nd pin).
+
+## Crop fix
+- Checked 14 crops; re-cropped manually: Q14, Q15, Q21, Q24, Q30, Q32, Q34, Q35, Q39, Q40 (Q40 keeps the counters and the table, with the sentence between them whited out). Kept: Q08, Q17, Q31, Q33.
+- figure_refs added: none. has_figure changes: none (Q13, Q22, Q23 have everything in the text).
+- Still imperfect: Q35 has faint show-through text from the scan behind the top of the grid (cannot be removed without touching the '1 cm' labels); Q30 has a faint white smudge on the line AB (scan quality).

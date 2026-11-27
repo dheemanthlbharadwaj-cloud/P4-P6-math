@@ -9,3 +9,8 @@
 
 ## Crop problems
 - None serious. Q5 crop also contains the small "Each [ ] has an area of 1 square unit" square legend (acceptable); Q13, Q18 crops have blank space below.
+
+## Crop fix
+- Checked all 8 crops on the contact sheet; all pass (whole figure, labels intact, no question text). No changes needed.
+- figure_refs added: none. has_figure changes: none (Q14-Q16 parts are text only).
+- Still imperfect: none (Q5 crop keeps the small unit-square legend; Q13, Q18 have blank margin below).

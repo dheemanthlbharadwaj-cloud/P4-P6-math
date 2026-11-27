@@ -1,0 +1,255 @@
+{
+ "2022_P3_Nanyang_EOY_Q10": {
+  "bbox": [
+   500,
+   560,
+   2060,
+   1550
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_Nanyang_EOY_Q11": {
+  "bbox": [
+   804,
+   1809,
+   1675,
+   2483
+  ],
+  "size": [
+   871,
+   674
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   1703,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q12": {
+  "bbox": [
+   590,
+   540,
+   1720,
+   870
+  ],
+  "page": 7,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_Nanyang_EOY_Q17": {
+  "bbox": [
+   550,
+   590,
+   2090,
+   1330
+  ],
+  "page": 9,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_Nanyang_EOY_Q18": {
+  "bbox": [
+   621,
+   593,
+   1429,
+   1030
+  ],
+  "size": [
+   808,
+   437
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   406,
+   1782
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q24": {
+  "bbox": [
+   631,
+   594,
+   1945,
+   1862
+  ],
+  "size": [
+   1314,
+   1268
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1967,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   332,
+   2070
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q29": {
+  "bbox": [
+   680,
+   1965,
+   1759,
+   2353
+  ],
+  "size": [
+   1079,
+   388
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 16,
+  "band": [
+   1842,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q32": {
+  "bbox": [
+   591,
+   659,
+   1883,
+   1426
+  ],
+  "size": [
+   1292,
+   767
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 18,
+  "band": [
+   389,
+   2174
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q35": {
+  "bbox": [
+   1459,
+   1772,
+   1984,
+   2457
+  ],
+  "size": [
+   525,
+   685
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 19,
+  "band": [
+   1601,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q36": {
+  "bbox": [
+   346,
+   825,
+   1951,
+   1646
+  ],
+  "size": [
+   1605,
+   821
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 20,
+  "band": [
+   332,
+   2154
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q40": {
+  "bbox": [
+   620,
+   500,
+   1930,
+   1340
+  ],
+  "page": 22,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_Nanyang_EOY_Q42": {
+  "bbox": [
+   892,
+   478,
+   1538,
+   850
+  ],
+  "size": [
+   646,
+   372
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 24,
+  "band": [
+   324,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q43": {
+  "bbox": [
+   741,
+   512,
+   1889,
+   1543
+  ],
+  "size": [
+   1148,
+   1031
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 25,
+  "band": [
+   352,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_Nanyang_EOY_Q44": {
+  "bbox": [
+   580,
+   1535,
+   2050,
+   2200
+  ],
+  "page": 26,
+  "manual": true,
+  "whited": []
+ }
+}

@@ -14,3 +14,8 @@
 - Q37: leftover text fragments and next question text at the bottom, answer box.
 - Q39: only the muffin icon cropped (fine, small).
 - Q12: box equation only (acceptable).
+
+## Crop fix
+- Checked 16 crops; re-cropped manually Q21, Q22, Q25, Q31, Q32, Q33, Q34, Q37, Q39 (leftover question text, answer lines, footer and blank areas removed; Q32 now shows the full vertical multiplication; Q33 and Q37 no longer include page furniture; Q34 graph only, the True/False statement table is not part of the figure). Q09, Q10, Q11, Q12, Q15, Q16, Q29 kept.
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: none (page is a low-quality scan).

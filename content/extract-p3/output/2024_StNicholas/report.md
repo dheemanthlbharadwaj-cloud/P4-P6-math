@@ -26,3 +26,7 @@ Paper: CHIJ St Nicholas Girls' School (Primary) P3 2024 End-Year Assessment (SA2
 - Q22: figure is small, crop includes the whole rest of the page (answer space, page number, MARKS box).
 - Q23: figure small with a whole page of blank below; table is mostly blanked out; stray marks.
 - Q03, Q13, Q14: OK (Q14 shown enlarged; labels intact).
+
+## Crop fix
+- Checked 9 crops. Fixed 6 manually: Q04, Q09 (page number, MARKS box, question line removed), Q16 (y-axis label "Pupils" restored), Q18 (cans and packets intact, no page furniture), Q22, Q23 (figures plus the table; the "Study Figures..." line whited out). Q03, Q13, Q14 kept. No figure_refs, no has_figure changes.
+- Still imperfect: scan noise only.

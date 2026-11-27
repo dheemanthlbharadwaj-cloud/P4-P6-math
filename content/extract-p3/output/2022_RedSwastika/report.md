@@ -14,3 +14,9 @@
 - Q37: only the pre-drawn line, the dot grid is missing.
 - Q38: label '4/9' and point A cut off at left.
 - Q43: crop is the whole page (leftover question text, answer lines); Q45: same.
+
+## Crop fix
+- Checked 16 figures + 3 missing. New crops: Q3 (number line), Q14 (price board), Q32 (Graph 1 and Graph 2). Re-cropped: Q25 (top and axis label restored, true/false table removed), Q36, Q37 (full dot grid), Q38 (4/9 and A restored), Q43, Q45, Q11 (grid completed). Margins trimmed: Q6, Q8, Q10, Q13, Q20, Q21, Q24, Q29.
+- figure_refs added: Q15 -> Q14 (price board), Q33 -> Q32 (graphs); Q33's wrong own crop removed.
+- has_figure changes: none (Q3, Q14, Q15, Q32 were already on).
+- Still imperfect: none (scan speckle only).

@@ -12,3 +12,7 @@
 - Q27: crop is cut at the bottom (result line 8407 missing) and shows a leftover fragment of Q28 text ("difference between 11").
 - Q29: crop shows First, Second, Third, Last posts but only two of the 70 m labels (the third is outside the crop); dots between posts partly visible.
 - Q24: crop includes the table headers but cuts the table off before the bottom border (shape itself is complete).
+
+## Crop fix
+- Checked 13 crops; fixed 2 (Q24 full table border, Q27 whole sum without Q28 fragment). Q29 re-checked: complete (printed figure has only two 70 m labels).
+- figure_ref added: Q34 -> Q33 (has_figure turned on). No other has_figure changes. Nothing still imperfect.

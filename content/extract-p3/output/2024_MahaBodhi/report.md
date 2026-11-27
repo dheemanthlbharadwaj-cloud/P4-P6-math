@@ -12,3 +12,8 @@
 ## Crop problems
 - Q6: crop is wrong, it holds the angle figure plus the watermelon/mango scales (Q7's picture), because Q7's number was lost in OCR and the band merged.
 - Q7: crop is wrong, only the footer "A-3" (no scales picture).
+
+## Crop fix
+- Fixed (manual): Q06 (angle figure only), Q07 (watermelon and mango scales only, replacing the "A-3" footer crop).
+- Checked and kept: Q04, Q08, Q09, Q14, Q16, Q17.
+- figure_refs added: none. has_figure changes: none. Still imperfect: none.

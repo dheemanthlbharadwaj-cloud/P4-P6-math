@@ -12,3 +12,9 @@
 - Q36: crop is a tall mostly blank strip with the two offers tiny, plus page code.
 - Q15: stray smiley at bottom right (from the question text).
 - Q26: grid lines look whited out/broken but bars and labels are readable.
+
+## Crop fix
+- Fixed (manual): Q04 (option labels (1)-(4) included), Q15 (stray smiley from question text removed), Q24 (trimmed, page code removed), Q26 (axis title "Day of the Week" no longer cut), Q36 (trimmed to the two offers, page code removed), Q37 (question text "the area of 1 tile." removed).
+- Checked and kept: Q02, Q08, Q09, Q10, Q12, Q13, Q16, Q22, Q27, Q28.
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: Q22 (notes are a speckled low-quality scan) and Q26 (grid lines are faint/dashed in the scan itself); both complete and readable.

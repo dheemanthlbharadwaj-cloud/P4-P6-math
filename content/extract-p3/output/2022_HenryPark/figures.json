@@ -1,0 +1,341 @@
+{
+ "2022_P3_HenryPark_EOY_Q02": {
+  "bbox": [
+   372,
+   1451,
+   1997,
+   1983
+  ],
+  "size": [
+   1625,
+   532
+  ],
+  "whited_words": [
+   "Which",
+   "of",
+   "the",
+   "following",
+   "is",
+   "an",
+   "acute",
+   "angle?"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   875,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q04": {
+  "bbox": [
+   883,
+   1489,
+   1358,
+   1963
+  ],
+  "size": [
+   475,
+   474
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1315,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_HenryPark_EOY_Q05": {
+  "bbox": [
+   737,
+   388,
+   1467,
+   890
+  ],
+  "size": [
+   730,
+   502
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   278,
+   1906
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q09": {
+  "bbox": [
+   785,
+   2088,
+   1307,
+   2428
+  ],
+  "size": [
+   522,
+   340
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   1929,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_HenryPark_EOY_Q11": {
+  "bbox": [
+   521,
+   1411,
+   1066,
+   1798
+  ],
+  "size": [
+   545,
+   387
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1133,
+   2199
+  ],
+  "band_from": "text"
+ },
+ "2022_P3_HenryPark_EOY_Q12": {
+  "bbox": [
+   403,
+   2366,
+   1086,
+   2696
+  ],
+  "size": [
+   683,
+   330
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   2199,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q13": {
+  "bbox": [
+   427,
+   385,
+   1626,
+   961
+  ],
+  "size": [
+   1199,
+   576
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   238,
+   1302
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q14": {
+  "bbox": [
+   465,
+   1457,
+   1763,
+   2637
+  ],
+  "size": [
+   1298,
+   1180
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1302,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q20": {
+  "bbox": [
+   486,
+   1543,
+   1915,
+   2015
+  ],
+  "size": [
+   1429,
+   472
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1351,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q21": {
+  "bbox": [
+   341,
+   384,
+   1802,
+   1180
+  ],
+  "size": [
+   1461,
+   796
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   203,
+   1750
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q30": {
+  "bbox": [
+   332,
+   1958,
+   2042,
+   2300
+  ],
+  "size": [
+   1710,
+   342
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   1759,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q31": {
+  "bbox": [
+   644,
+   459,
+   1299,
+   1032
+  ],
+  "size": [
+   655,
+   573
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   260,
+   1627
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q32": {
+  "bbox": [
+   384,
+   1710,
+   1687,
+   2892
+  ],
+  "size": [
+   1303,
+   1182
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   1627,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q33": {
+  "bbox": [
+   428,
+   297,
+   2147,
+   1016
+  ],
+  "size": [
+   1719,
+   719
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   213,
+   1906
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_HenryPark_EOY_Q37": {
+  "bbox": [
+   572,
+   409,
+   1802,
+   744
+  ],
+  "size": [
+   1230,
+   335
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 18,
+  "band": [
+   251,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

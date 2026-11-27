@@ -9,3 +9,9 @@
 - Q37: "5 km" label of the lower arrow is missing from the crop.
 - Q40: crop shows only the "3 cupcakes for $8" picture; the "1 cupcake for $3" part is missing.
 - Q21: crop is tall with a large blank gap between the two card rows (harmless).
+
+## Crop fix
+- Fixed (manual): Q05 (option labels (1)-(4) now included), Q27 (bun-type row labels now included), Q37 ("5 km" label restored).
+- Q40: checked; the printed picture only shows "3 cupcakes for $8" (the $3 price is in the question text), so the crop is complete.
+- Q21 left as is (two card rows with question text between them whited out; harmless gap).
+- figure_refs added: none. has_figure changes: none. Still imperfect: none.

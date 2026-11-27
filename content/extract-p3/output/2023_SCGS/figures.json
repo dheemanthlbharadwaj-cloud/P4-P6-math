@@ -1,0 +1,252 @@
+{
+ "2023_P3_SCGS_EOY_Q03": {
+  "bbox": [
+   621,
+   2235,
+   1026,
+   2729
+  ],
+  "size": [
+   405,
+   494
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   1072,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_SCGS_EOY_Q05": {
+  "bbox": [
+   720,
+   1555,
+   2420,
+   2685
+  ],
+  "size": [
+   1468,
+   1033
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1305,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_SCGS_EOY_Q08": {
+  "bbox": [
+   1454,
+   1995,
+   1778,
+   2337
+  ],
+  "size": [
+   324,
+   342
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1913,
+   2550
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_SCGS_EOY_Q10": {
+  "bbox": [
+   850,
+   500,
+   1630,
+   1260
+  ],
+  "size": [
+   940,
+   1647
+  ],
+  "whited_words": [
+   "AB//",
+   "BE",
+   "AB/IFD"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   407,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_SCGS_EOY_Q15": {
+  "bbox": [
+   922,
+   691,
+   1697,
+   1380
+  ],
+  "size": [
+   775,
+   689
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2191,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   493,
+   2093
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_SCGS_EOY_Q19": {
+  "bbox": [
+   1230,
+   2310,
+   1960,
+   2935
+  ],
+  "size": [
+   1087,
+   982
+  ],
+  "whited_words": [
+   "Ans:"
+  ],
+  "ink_regions": 3,
+  "column_x": 2172,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   2022,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_SCGS_EOY_Q20": {
+  "bbox": [
+   580,
+   650,
+   1990,
+   1295
+  ],
+  "size": [
+   1196,
+   636
+  ],
+  "whited_words": [
+   "()",
+   "()",
+   "()",
+   "()"
+  ],
+  "ink_regions": 4,
+  "column_x": 2142,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   408,
+   1935
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_SCGS_EOY_Q22": {
+  "bbox": [
+   490,
+   535,
+   2100,
+   1445
+  ],
+  "size": [
+   1567,
+   2024
+  ],
+  "whited_words": [
+   "Put",
+   "a",
+   "tick",
+   "(V)",
+   "in",
+   "the",
+   "correct",
+   "box."
+  ],
+  "ink_regions": 4,
+  "column_x": 2148,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   420,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_SCGS_EOY_Q25": {
+  "bbox": [
+   734,
+   666,
+   1888,
+   989
+  ],
+  "size": [
+   1154,
+   323
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2142,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   421,
+   1563
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_SCGS_EOY_Q26": {
+  "bbox": [
+   603,
+   1735,
+   1350,
+   2553
+  ],
+  "size": [
+   747,
+   818
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": 2142,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   1563,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

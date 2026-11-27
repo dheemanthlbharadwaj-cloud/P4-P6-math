@@ -1058,14 +1058,15 @@
    "Bar Graphs",
    "Addition and Subtraction"
   ],
-  "has_figure": false,
+  "has_figure": true,
   "figure_note": "uses the bar graph of Q33 (printed above Q33)",
   "ocr_fixes": [],
   "checked_against_image": [
    19
   ],
   "answer_check": "ok",
-  "confidence": "high"
+  "confidence": "high",
+  "figure_ref": "2022_P3_ACSP_EOY_Q33"
  },
  {
   "id": "2022_P3_ACSP_EOY_Q35",

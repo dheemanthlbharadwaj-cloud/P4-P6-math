@@ -1,0 +1,272 @@
+{
+ "2022_P3_SCGS_EOY_Q09": {
+  "bbox": [
+   675,
+   351,
+   1318,
+   846
+  ],
+  "size": [
+   643,
+   495
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   253,
+   1317
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_SCGS_EOY_Q14": {
+  "bbox": [
+   660,
+   1430,
+   1420,
+   2135
+  ],
+  "size": [
+   1230,
+   878
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   1271,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_SCGS_EOY_Q15": {
+  "bbox": [
+   600,
+   390,
+   1820,
+   915
+  ],
+  "size": [
+   1216,
+   1473
+  ],
+  "whited_words": [
+   "tock",
+   "her",
+   "two",
+   "elderly",
+   "parents",
+   "out",
+   "with",
+   "her",
+   "10",
+   "year-old",
+   "son.",
+   "were",
+   "both",
+   "65",
+   "years",
+   "old.",
+   "What",
+   "was",
+   "the",
+   "total",
+   "bus",
+   "fare",
+   "for",
+   "the",
+   "$1.75",
+   "$2.35",
+   "$2.65",
+   "$3.55",
+   "passengers?"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   249,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_SCGS_EOY_Q23": {
+  "bbox": [
+   610,
+   1420,
+   1450,
+   1930
+  ],
+  "size": [
+   1020,
+   1632
+  ],
+  "whited_words": [
+   "[missed text]"
+  ],
+  "ink_regions": 2,
+  "column_x": 2110,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   1185,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_SCGS_EOY_Q24": {
+  "bbox": [
+   430,
+   2470,
+   870,
+   3050
+  ],
+  "note": "no drawing found in band",
+  "page": 11,
+  "band": [
+   0,
+   285
+  ],
+  "band_from": "none",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_SCGS_EOY_Q25": {
+  "bbox": [
+   1265,
+   535,
+   1845,
+   1372
+  ],
+  "size": [
+   580,
+   837
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2081,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   301,
+   1818
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_SCGS_EOY_Q26": {
+  "bbox": [
+   526,
+   1984,
+   1773,
+   2479
+  ],
+  "size": [
+   1247,
+   495
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2081,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   1818,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_SCGS_EOY_Q27": {
+  "bbox": [
+   693,
+   435,
+   1696,
+   1122
+  ],
+  "size": [
+   1003,
+   687
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2088,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   283,
+   1610
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_SCGS_EOY_Q28": {
+  "bbox": [
+   785,
+   1818,
+   1793,
+   2831
+  ],
+  "size": [
+   1008,
+   1013
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2088,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   1610,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_SCGS_EOY_Q29": {
+  "bbox": [
+   260,
+   530,
+   2056,
+   1600
+  ],
+  "note": "no drawing found in band",
+  "page": 14,
+  "band": [
+   1704,
+   2454
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_SCGS_EOY_Q36": {
+  "bbox": [
+   1209,
+   639,
+   1869,
+   1286
+  ],
+  "size": [
+   660,
+   647
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2084,
+  "picture_options": false,
+  "page": 19,
+  "band": [
+   273,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

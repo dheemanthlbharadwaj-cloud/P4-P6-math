@@ -11,3 +11,9 @@
 - Q25: wrong picture, only "Please check your work carefully"; the square and triangle figure on page 14 is missing.
 - Q10, Q13, Q15, Q16, Q20, Q23: ok.
 - Flags changed: has_figure set false for Q2 and Q12 (equations in text); stale crops deleted.
+
+## Crop fix
+- Checked 12 figures (Q03, 04, 05, 08, 09, 10, 13, 15, 16, 20, 23, 25). Good crops kept: Q09, 10, 13, 15, 16, 20, 23.
+- Fixed by hand: Q03 (option text "100 kg" removed), Q04 and Q05 (new crops, the clock and the angle figure were missing), Q08 (book and pen with names and prices, "$14.80" and "$2.60"), Q25 (the square and triangle with labels replaces the wrong crop).
+- figure_refs added: none. has_figure changes: none (Q2 and Q12 stay false, their content is in the text).
+- Still imperfect: Q15 has no letter A in the scan itself (the point is unlabelled on the paper).

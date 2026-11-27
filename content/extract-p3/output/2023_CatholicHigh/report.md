@@ -15,3 +15,9 @@
 - Q33: ok but very small with large blank area and "Ans: cm".
 - Q40: ok with leftover "END OF PAPER".
 - Flags changed: has_figure set false for Q9, Q21, Q25 (equations / vertical sum are in the text); stale crops for Q9 and Q21 deleted.
+
+## Crop fix
+- Checked 9 crops; re-cropped manually: Q08, Q13, Q20, Q27 (the bar graph above the question text, now captured with title, axis and labels), Q31, Q33, Q40. Kept Q11.
+- figure_refs added: Q28 -> Q27 (shared bar graph; the empty Q28 crop was deleted).
+- has_figure changes: none (Q09, Q21, Q25 stay off, their sums are in the text).
+- Still imperfect: scan is speckled/dotted (scan quality only).

@@ -1,0 +1,358 @@
+{
+ "2023_P3_Raffles_EOY_Q12": {
+  "bbox": [
+   636,
+   679,
+   2156,
+   1583
+  ],
+  "size": [
+   1561,
+   905
+  ],
+  "whited_words": [
+   "()",
+   "()",
+   "()"
+  ],
+  "ink_regions": 7,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   512,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q13": {
+  "bbox": [
+   642,
+   746,
+   1283,
+   1505
+  ],
+  "size": [
+   642,
+   760
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   476,
+   2197
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q14": {
+  "bbox": [
+   916,
+   2409,
+   1570,
+   2814
+  ],
+  "size": [
+   654,
+   405
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   2197,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q15": {
+  "bbox": [
+   709,
+   644,
+   1232,
+   1183
+  ],
+  "size": [
+   524,
+   540
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   503,
+   1739
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q16": {
+  "bbox": [
+   602,
+   1876,
+   1304,
+   2589
+  ],
+  "size": [
+   703,
+   713
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   1739,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q18": {
+  "bbox": [
+   734,
+   1892,
+   1381,
+   2945
+  ],
+  "size": [
+   648,
+   1056
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1755,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q27": {
+  "bbox": [
+   659,
+   1651,
+   1866,
+   2455
+  ],
+  "size": [
+   1207,
+   804
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   1483,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_Raffles_EOY_Q28": {
+  "bbox": [
+   666,
+   700,
+   1580,
+   1504
+  ],
+  "size": [
+   914,
+   804
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   474,
+   2142
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_Raffles_EOY_Q34": {
+  "bbox": [
+   632,
+   781,
+   2098,
+   1559
+  ],
+  "size": [
+   1467,
+   780
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   500,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q37": {
+  "bbox": [
+   578,
+   637,
+   2175,
+   2093
+  ],
+  "size": [
+   1597,
+   1456
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 20,
+  "band": [
+   478,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_Raffles_EOY_Q38": {
+  "bbox": [
+   615,
+   634,
+   1474,
+   1434
+  ],
+  "size": [
+   860,
+   801
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 21,
+  "band": [
+   509,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q39": {
+  "bbox": [
+   627,
+   669,
+   2226,
+   1425
+  ],
+  "size": [
+   1599,
+   757
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 22,
+  "band": [
+   463,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_Raffles_EOY_Q40": {
+  "bbox": [
+   590,
+   625,
+   1790,
+   1005
+  ],
+  "size": [
+   1187,
+   2556
+  ],
+  "whited_words": [
+   "a)",
+   "Adi",
+   "used",
+   "his",
+   "wire",
+   "to",
+   "form",
+   "a",
+   "rectangle",
+   "as",
+   "shown",
+   "In",
+   "Fig",
+   "1.",
+   "Find",
+   "the",
+   "length",
+   "of",
+   "the",
+   "rectangle.",
+   "b)",
+   "Cheryl",
+   "used",
+   "her",
+   "wire",
+   "to",
+   "form",
+   "a",
+   "square",
+   "as",
+   "shown",
+   "in",
+   "Fig",
+   "Find",
+   "the",
+   "area",
+   "of",
+   "the",
+   "square.",
+   "Answer:",
+   "a)",
+   "-End",
+   "of",
+   "Paper-",
+   "b)"
+  ],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 23,
+  "band": [
+   495,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ }
+}

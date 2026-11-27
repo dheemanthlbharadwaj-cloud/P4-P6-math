@@ -1,0 +1,177 @@
+{
+ "2024_P3_Rulang_EOY_Q09": {
+  "bbox": [
+   1350,
+   2025,
+   2030,
+   2395
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Rulang_EOY_Q10": {
+  "bbox": [
+   1320,
+   2490,
+   1970,
+   3010
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": [
+   [
+    1650,
+    2524,
+    1690,
+    2578
+   ]
+  ]
+ },
+ "2024_P3_Rulang_EOY_Q16": {
+  "bbox": [
+   487,
+   1243,
+   1027,
+   1797
+  ],
+  "size": [
+   540,
+   554
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1063,
+   2054
+  ],
+  "band_from": "text",
+  "manual": false,
+  "whited": []
+ },
+ "2024_P3_Rulang_EOY_Q17": {
+  "bbox": [
+   463,
+   2114,
+   1155,
+   2702
+  ],
+  "size": [
+   692,
+   588
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   2054,
+   3508
+  ],
+  "band_from": "text",
+  "manual": false,
+  "whited": []
+ },
+ "2024_P3_Rulang_EOY_Q18": {
+  "bbox": [
+   650,
+   480,
+   1730,
+   980
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Rulang_EOY_Q19": {
+  "bbox": [
+   485,
+   1221,
+   1196,
+   1978
+  ],
+  "size": [
+   711,
+   757
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   1137,
+   2215
+  ],
+  "band_from": "index",
+  "manual": false,
+  "whited": []
+ },
+ "2024_P3_Rulang_EOY_Q20": {
+  "bbox": [
+   487,
+   2278,
+   944,
+   2679
+  ],
+  "size": [
+   457,
+   401
+  ],
+  "whited_words": [
+   ">"
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   2215,
+   3508
+  ],
+  "band_from": "index",
+  "manual": false,
+  "whited": [
+   ">"
+  ]
+ },
+ "2024_P3_Rulang_EOY_Q24": {
+  "bbox": [
+   495,
+   426,
+   2143,
+   1278
+  ],
+  "size": [
+   1648,
+   852
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   286,
+   2018
+  ],
+  "band_from": "text",
+  "manual": false,
+  "whited": []
+ },
+ "2024_P3_Rulang_EOY_Q25": {
+  "bbox": [
+   460,
+   2345,
+   2190,
+   2940
+  ],
+  "page": 9,
+  "manual": true,
+  "whited": []
+ }
+}

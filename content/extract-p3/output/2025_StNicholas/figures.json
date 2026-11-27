@@ -1,0 +1,123 @@
+{
+ "2025_P3_StNicholas_EOY_Q03": {
+  "bbox": [
+   470,
+   480,
+   1280,
+   2900
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q04": {
+  "bbox": [
+   630,
+   500,
+   1520,
+   2910
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q08": {
+  "bbox": [
+   490,
+   975,
+   2130,
+   2165
+  ],
+  "page": 8,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q13": {
+  "bbox": [
+   625,
+   640,
+   1795,
+   2440
+  ],
+  "page": 11,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q14": {
+  "bbox": [
+   856,
+   522,
+   1554,
+   1241
+  ],
+  "size": [
+   698,
+   719
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2194,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   330,
+   1717
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_StNicholas_EOY_Q15": {
+  "bbox": [
+   830,
+   1860,
+   1890,
+   2205
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q16": {
+  "bbox": [
+   490,
+   570,
+   2150,
+   2320
+  ],
+  "page": 13,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q18": {
+  "bbox": [
+   570,
+   1870,
+   2100,
+   2300
+  ],
+  "page": 14,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q19": {
+  "bbox": [
+   550,
+   625,
+   2130,
+   1435
+  ],
+  "page": 15,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StNicholas_EOY_Q22": {
+  "bbox": [
+   890,
+   680,
+   1470,
+   1090
+  ],
+  "page": 18,
+  "manual": true,
+  "whited": []
+ }
+}

@@ -1,0 +1,211 @@
+{
+ "2024_P3_Raffles_EOY_Q03": {
+  "bbox": [
+   510,
+   2300,
+   790,
+   2605
+  ],
+  "page": 2,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Raffles_EOY_Q04": {
+  "bbox": [
+   570,
+   550,
+   1040,
+   1045
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Raffles_EOY_Q05": {
+  "bbox": [
+   505,
+   1620,
+   1260,
+   2185
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Raffles_EOY_Q08": {
+  "bbox": [
+   860,
+   2330,
+   1820,
+   2665
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Raffles_EOY_Q09": {
+  "bbox": [
+   514,
+   662,
+   1015,
+   1238
+  ],
+  "size": [
+   501,
+   576
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   502,
+   1702
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Raffles_EOY_Q10": {
+  "bbox": [
+   503,
+   1829,
+   1967,
+   2665
+  ],
+  "size": [
+   1464,
+   836
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1702,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Raffles_EOY_Q13": {
+  "bbox": [
+   554,
+   541,
+   1611,
+   775
+  ],
+  "size": [
+   1057,
+   234
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   423,
+   1427
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Raffles_EOY_Q15": {
+  "bbox": [
+   436,
+   2305,
+   1453,
+   3076
+  ],
+  "size": [
+   1017,
+   771
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   2091,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Raffles_EOY_Q16": {
+  "bbox": [
+   1495,
+   430,
+   2110,
+   752
+  ],
+  "size": [
+   615,
+   322
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   363,
+   1206
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Raffles_EOY_Q20": {
+  "bbox": [
+   496,
+   1532,
+   2065,
+   2097
+  ],
+  "size": [
+   1569,
+   565
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   1156,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Raffles_EOY_Q23": {
+  "bbox": [
+   534,
+   660,
+   2153,
+   1679
+  ],
+  "size": [
+   1619,
+   1019
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   374,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2024_P3_Raffles_EOY_Q25": {
+  "bbox": [
+   730,
+   570,
+   1630,
+   965
+  ],
+  "page": 14,
+  "manual": true,
+  "whited": []
+ }
+}

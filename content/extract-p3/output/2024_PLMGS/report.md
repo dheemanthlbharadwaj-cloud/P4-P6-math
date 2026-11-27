@@ -16,3 +16,9 @@
 - Q14 and Q18 set has_figure false (Q14 picture is decorative, times in text; Q18 crop was whited out, sum in text).
 - Q20: crop contains both the arrow figure and the AB/Z grid (acceptable).
 - Low-confidence: 1 (Q20); medium: Q3.
+
+## Crop fix
+- Checked 13 figures + Q14. Fixed: Q19 (graph only), Q26 (figure only), Q27 (full price notice, top lines restored), Q12 (stray "Ans:" removed), Q14 (new crop of the 12 30 to ? time line). Margins trimmed: Q3, Q4, Q5, Q6, Q7, Q9, Q11, Q15, Q20.
+- figure_refs added: none.
+- has_figure changes: Q14 turned back on (the time line is a figure). Q18 stays off (the multiplication is written in the question text).
+- Still imperfect: Q20 holds both the arrow figure and the AB/Z grid in one crop, with a gap between them (both are needed by the question).

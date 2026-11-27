@@ -14,3 +14,8 @@
 - Q23: leftover answer box and "Sub-Total".
 - Q24: graph cut, Mango and Chocolate labels missing; answer boxes included.
 - Q25: wrong picture (only answer box; the graph is the Q24 crop).
+
+## Crop fix
+- Checked 10 crops; re-cropped manually 6: Q7 (question text removed), Q18 (answer box removed), Q20 (square with 9 cm only), Q22 (egg offer box only), Q23 (map only, no answer box or Sub-Total), Q24 (whole graph with title, all three flavour labels, axis and legend; answer boxes removed).
+- figure_refs added: Q25 -> Q24 (its own wrong crop, which was only an answer box, deleted and removed from figures.json). has_figure changes: none.
+- Still imperfect: Q19 - the scanned page already has a pencilled line through C (the previous owner's answer); it was left in because whiting it would damage the grid lines. Scan noise only otherwise.

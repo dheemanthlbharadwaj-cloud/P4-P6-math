@@ -1,0 +1,145 @@
+{
+ "2023_P3_HenryPark_EOY_Q09": {
+  "bbox": [
+   541,
+   1030,
+   1128,
+   1606
+  ],
+  "size": [
+   587,
+   576
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2081,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   883,
+   1993
+  ],
+  "band_from": "index"
+ },
+ "2023_P3_HenryPark_EOY_Q16": {
+  "bbox": [
+   557,
+   1450,
+   1708,
+   2473
+  ],
+  "size": [
+   1151,
+   1023
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2060,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1262,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_HenryPark_EOY_Q17": {
+  "bbox": [
+   560,
+   725,
+   2035,
+   1545
+  ],
+  "page": 9,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_HenryPark_EOY_Q20": {
+  "bbox": [
+   551,
+   2131,
+   984,
+   2754
+  ],
+  "size": [
+   433,
+   623
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2064,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   2065,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_HenryPark_EOY_Q21": {
+  "bbox": [
+   679,
+   658,
+   1343,
+   1117
+  ],
+  "size": [
+   664,
+   459
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2038,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   558,
+   2011
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_HenryPark_EOY_Q22": {
+  "bbox": [
+   537,
+   2124,
+   913,
+   2557
+  ],
+  "size": [
+   376,
+   433
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 2038,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   2011,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_HenryPark_EOY_Q25": {
+  "bbox": [
+   540,
+   755,
+   2040,
+   1625
+  ],
+  "page": 13,
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_HenryPark_EOY_Q26": {
+  "bbox": [
+   560,
+   825,
+   2010,
+   1415
+  ],
+  "page": 14,
+  "manual": true,
+  "whited": []
+ }
+}

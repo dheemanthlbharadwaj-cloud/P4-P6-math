@@ -732,7 +732,7 @@
   "marks": 1,
   "question_type": "short",
   "question": "Mark the right angles inside the figure given below.",
-  "answer": "",
+  "answer": "drawing: mark the right angles inside the figure",
   "unit": "",
   "answer_parts": [],
   "topic_primary": "Angles",
@@ -1220,7 +1220,8 @@
    14
   ],
   "answer_check": "ok",
-  "confidence": "high"
+  "confidence": "high",
+  "figure_ref": "2023_P3_StJoseph_EOY_Q32"
  },
  {
   "id": "2023_P3_StJoseph_EOY_Q34",

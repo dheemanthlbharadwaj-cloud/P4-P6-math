@@ -1,0 +1,186 @@
+{
+ "2024_P3_Nanyang_EOY_Q05": {
+  "bbox": [
+   718,
+   349,
+   1842,
+   1178
+  ],
+  "size": [
+   1124,
+   829
+  ],
+  "whited_words": [
+   "has",
+   "an",
+   "area",
+   "of",
+   "1",
+   "square",
+   "unit."
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   365,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q08": {
+  "bbox": [
+   842,
+   1985,
+   1891,
+   2773
+  ],
+  "size": [
+   1049,
+   788
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   1852,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q09": {
+  "bbox": [
+   967,
+   553,
+   1492,
+   963
+  ],
+  "size": [
+   525,
+   410
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   380,
+   1650
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q13": {
+  "bbox": [
+   589,
+   1368,
+   2108,
+   2063
+  ],
+  "size": [
+   1519,
+   695
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1163,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q17": {
+  "bbox": [
+   637,
+   1724,
+   2080,
+   2497
+  ],
+  "size": [
+   1443,
+   773
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1583,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q18": {
+  "bbox": [
+   663,
+   605,
+   1965,
+   875
+  ],
+  "size": [
+   1302,
+   270
+  ],
+  "whited_words": [],
+  "ink_regions": 9,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   431,
+   2174
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q20": {
+  "bbox": [
+   701,
+   508,
+   1718,
+   959
+  ],
+  "size": [
+   1017,
+   451
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   406,
+   1656
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Nanyang_EOY_Q24": {
+  "bbox": [
+   458,
+   932,
+   2080,
+   1965
+  ],
+  "size": [
+   1622,
+   1033
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   752,
+   3508
+  ],
+  "band_from": "text"
+ }
+}

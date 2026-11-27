@@ -1,0 +1,185 @@
+{
+ "2025_P3_Rosyth_EOY_Q08": {
+  "bbox": [
+   910,
+   620,
+   1385,
+   1085
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Rosyth_EOY_Q09": {
+  "bbox": [
+   649,
+   982,
+   1522,
+   1163
+  ],
+  "size": [
+   873,
+   181
+  ],
+  "whited_words": [],
+  "ink_regions": 7,
+  "column_x": 2112,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   859,
+   1513
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Rosyth_EOY_Q12": {
+  "bbox": [
+   690,
+   490,
+   1740,
+   1040
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Rosyth_EOY_Q13": {
+  "bbox": [
+   585,
+   1910,
+   2085,
+   2410
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Rosyth_EOY_Q14": {
+  "bbox": [
+   634,
+   563,
+   1965,
+   1353
+  ],
+  "size": [
+   1331,
+   790
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": 2111,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   401,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Rosyth_EOY_Q15": {
+  "bbox": [
+   615,
+   600,
+   1970,
+   1970
+  ],
+  "page": 8,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Rosyth_EOY_Q18": {
+  "bbox": [
+   1175,
+   2188,
+   1937,
+   2642
+  ],
+  "size": [
+   762,
+   454
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2019,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   2061,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Rosyth_EOY_Q21": {
+  "bbox": [
+   795,
+   2192,
+   1996,
+   2777
+  ],
+  "size": [
+   1201,
+   585
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 2178,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   2067,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Rosyth_EOY_Q22": {
+  "bbox": [
+   495,
+   515,
+   2030,
+   1150
+  ],
+  "page": 11,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Rosyth_EOY_Q23": {
+  "bbox": [
+   470,
+   1090,
+   2120,
+   2380
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": [
+   [
+    470,
+    1450,
+    2120,
+    1985
+   ]
+  ]
+ },
+ "2025_P3_Rosyth_EOY_Q24": {
+  "bbox": [
+   680,
+   572,
+   1508,
+   873
+  ],
+  "size": [
+   828,
+   301
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2032,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   396,
+   3508
+  ],
+  "band_from": "index"
+ }
+}

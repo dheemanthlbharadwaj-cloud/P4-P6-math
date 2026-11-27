@@ -15,3 +15,8 @@
 - Q19: only the poster top (boxes of pens and highlighters), some artwork cut at the right.
 - Q22: figure of 3 squares is small, with large blank area and page number.
 - Q14: ok.
+
+## Crop fix
+- Checked 10 crops; re-cropped manually 9 (Q14 kept): Q3 (all four angle options (1)-(4) with labels, was cut off), Q4 (four shapes with labels, page number/MARKS removed), Q8 (graph with title, axes and labels), Q13 (line XY and the container table stacked into one composite; bbox in figures.json is the union), Q15 (show-time table only), Q16 (both graphs), Q18 (star line with 2 m markers), Q19 (whole Special Offer poster), Q22 (three squares with 8 cm).
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: Q14 has a few broken grid segments at the top from the scan; Q3 has faint dotted scan noise lines between the options.

@@ -1,0 +1,194 @@
+{
+ "2024_P3_StHilda_EOY_Q06": {
+  "bbox": [
+   750,
+   1010,
+   1760,
+   1635
+  ],
+  "size": [
+   1099,
+   869
+  ],
+  "whited_words": [
+   " Whatis",
+   "the",
+   "total",
+   "water",
+   "in",
+   "the",
+   "two",
+   "beakers",
+   "shown",
+   "below?"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   901,
+   2091
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_StHilda_EOY_Q08": {
+  "bbox": [
+   800,
+   570,
+   1670,
+   910
+  ],
+  "size": [
+   1047,
+   454
+  ],
+  "whited_words": [
+   "figure",
+   "angles",
+   "figure.",
+   "How"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   396,
+   1349
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_StHilda_EOY_Q09": {
+  "bbox": [
+   741,
+   1450,
+   1624,
+   2148
+  ],
+  "size": [
+   883,
+   698
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1349,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_StHilda_EOY_Q10": {
+  "bbox": [
+   310,
+   575,
+   2110,
+   1525
+  ],
+  "size": [
+   1536,
+   892
+  ],
+  "whited_words": [
+   "Time",
+   "taken",
+   "to",
+   "complete",
+   "the",
+   "100-m",
+   "race",
+   "Students"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   393,
+   2143
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_StHilda_EOY_Q22": {
+  "bbox": [
+   1440,
+   640,
+   2080,
+   905
+  ],
+  "size": [
+   842,
+   543
+  ],
+  "whited_words": [
+   "Ans:",
+   "km"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   392,
+   1395
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_StHilda_EOY_Q24": {
+  "bbox": [
+   939,
+   552,
+   1555,
+   1128
+  ],
+  "size": [
+   616,
+   576
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1989,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   385,
+   1500
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_StHilda_EOY_Q25": {
+  "bbox": [
+   385,
+   1635,
+   2015,
+   2910
+  ],
+  "size": [
+   677,
+   1246
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1989,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   1500,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ }
+}

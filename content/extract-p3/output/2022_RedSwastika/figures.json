@@ -1,0 +1,532 @@
+{
+ "2022_P3_RedSwastika_EOY_Q03": {
+  "bbox": [
+   495,
+   1540,
+   2015,
+   1715
+  ],
+  "note": "no drawing found in band",
+  "page": 3,
+  "band": [
+   1407,
+   2109
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q06": {
+  "bbox": [
+   599,
+   387,
+   1932,
+   455
+  ],
+  "size": [
+   1335,
+   95
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   277,
+   836
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q08": {
+  "bbox": [
+   1260,
+   1483,
+   1944,
+   1838
+  ],
+  "size": [
+   685,
+   356
+  ],
+  "whited_words": [
+   "height"
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1347,
+   1887
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q10": {
+  "bbox": [
+   732,
+   2463,
+   1252,
+   2772
+  ],
+  "size": [
+   521,
+   310
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   2349,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q11": {
+  "bbox": [
+   490,
+   365,
+   1830,
+   715
+  ],
+  "size": [
+   1273,
+   285
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   246,
+   1106
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q13": {
+  "bbox": [
+   1449,
+   2047,
+   1992,
+   2594
+  ],
+  "size": [
+   544,
+   548
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1819,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q14": {
+  "bbox": [
+   500,
+   455,
+   2005,
+   805
+  ],
+  "note": "no drawing found in band",
+  "page": 6,
+  "band": [
+   960,
+   1419
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q15": {
+  "bbox": null,
+  "note": "no drawing found in band",
+  "page": 6,
+  "band": [
+   1419,
+   1930
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_RedSwastika_EOY_Q20": {
+  "bbox": [
+   475,
+   1488,
+   1844,
+   1652
+  ],
+  "size": [
+   1371,
+   167
+  ],
+  "whited_words": [
+   "4st"
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1327,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q21": {
+  "bbox": [
+   573,
+   647,
+   1441,
+   1244
+  ],
+  "size": [
+   869,
+   598
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   530,
+   1594
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q24": {
+  "bbox": [
+   960,
+   547,
+   1390,
+   971
+  ],
+  "size": [
+   431,
+   425
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   283,
+   1167
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q25": {
+  "bbox": [
+   420,
+   1325,
+   2090,
+   2370
+  ],
+  "size": [
+   1583,
+   1504
+  ],
+  "whited_words": [
+   "Number",
+   "of",
+   "books",
+   "Each",
+   "of",
+   "the",
+   "statements",
+   "below",
+   "is",
+   "either",
+   "true",
+   "or",
+   "false",
+   "based",
+   "on",
+   "the",
+   "information",
+   "given.",
+   "For",
+   "each",
+   "statement,",
+   "put",
+   "a",
+   "tick",
+   "(\u201c)",
+   "to",
+   "indicate",
+   "your",
+   "answer."
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1167,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q29": {
+  "bbox": [
+   1364,
+   535,
+   2056,
+   1028
+  ],
+  "size": [
+   693,
+   494
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   321,
+   1324
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q32": {
+  "bbox": [
+   230,
+   590,
+   2040,
+   1235
+  ],
+  "note": "no drawing found in band",
+  "page": 13,
+  "band": [
+   1306,
+   2082
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q36": {
+  "bbox": [
+   540,
+   2185,
+   1970,
+   2580
+  ],
+  "size": [
+   1607,
+   1072
+  ],
+  "whited_words": [
+   "Figure",
+   "A",
+   "Figure",
+   "B",
+   "Ans:",
+   "cm"
+  ],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   2023,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q37": {
+  "bbox": [
+   460,
+   400,
+   2030,
+   1205
+  ],
+  "size": [
+   635,
+   61
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   227,
+   1370
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q38": {
+  "bbox": [
+   550,
+   1575,
+   1770,
+   1835
+  ],
+  "size": [
+   1109,
+   204
+  ],
+  "whited_words": [
+   "A",
+   "B",
+   "\u2014\u2014@\u2014"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   1370,
+   2326
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q43": {
+  "bbox": [
+   630,
+   400,
+   1770,
+   1135
+  ],
+  "size": [
+   1532,
+   2963
+  ],
+  "whited_words": [
+   "(a)",
+   "How",
+   "long",
+   "is",
+   "the",
+   "dental",
+   "clinic",
+   "open",
+   "in",
+   "the",
+   "afternoon?",
+   "(b)",
+   "Nikki",
+   "visited",
+   "the",
+   "dentist",
+   "las",
+   "t",
+   "evening.",
+   "She",
+   "spent",
+   "1h",
+   "15",
+   "min",
+   "in",
+   "the",
+   "clinic?",
+   "Clinic",
+   "and",
+   "left",
+   "the",
+   "clinic",
+   "at",
+   "9.30",
+   "p.m.",
+   "What",
+   "time",
+   "did",
+   "she",
+   "reach",
+   "the",
+   "Ans:",
+   "(a)",
+   "[2]"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 19,
+  "band": [
+   237,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_RedSwastika_EOY_Q45": {
+  "bbox": [
+   850,
+   500,
+   1600,
+   1255
+  ],
+  "size": [
+   1556,
+   2786
+  ],
+  "whited_words": [
+   "(a)",
+   "What",
+   "is",
+   "the",
+   "area",
+   "of",
+   "Rectangle",
+   "Z?",
+   "(b)",
+   "Whatis",
+   "the",
+   "perimeter",
+   "of",
+   "Figure",
+   "1?",
+   "Ans:",
+   "(a)",
+   "[2]"
+  ],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 21,
+  "band": [
+   243,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ }
+}

@@ -14,3 +14,10 @@
 3, 4, 6, 7, 10, 13, 18, 20, 24, 25
 ## Crop problems
 - None seen. Q34 crop holds both grids, wide but complete.
+
+## Crop fix
+- Checked 12 figure questions (Q05, 10, 16, 25, 26, 29, 31, 32, 33, 34, 35, 38). Good automatic crops kept (Q05, 10, 16, 31, 32, 33, 35, 38).
+- Fixed by hand: Q25 (y-axis title "Number of bottles collected" was cut), Q26 (scan frame lines and edge trimmed), Q34 (grid left edges were cut; question line "(b) In the grid below..." between the two grids whited out).
+- figure_refs added: none.
+- has_figure changes: Q29 true to false (the vertical sum is written out in the question text; there was no crop).
+- Still imperfect: nothing beyond scan quality.

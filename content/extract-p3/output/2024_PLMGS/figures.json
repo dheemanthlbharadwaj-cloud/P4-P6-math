@@ -1,0 +1,416 @@
+{
+ "2024_P3_PLMGS_EOY_Q03": {
+  "bbox": [
+   949,
+   1858,
+   1484,
+   2256
+  ],
+  "size": [
+   536,
+   399
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   1733,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q04": {
+  "bbox": [
+   591,
+   626,
+   1902,
+   1448
+  ],
+  "size": [
+   1312,
+   831
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   528,
+   1974
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q05": {
+  "bbox": [
+   909,
+   2198,
+   1384,
+   2680
+  ],
+  "size": [
+   476,
+   483
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1974,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q06": {
+  "bbox": [
+   481,
+   673,
+   2080,
+   880
+  ],
+  "size": [
+   1600,
+   207
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   538,
+   1303
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q07": {
+  "bbox": [
+   705,
+   1474,
+   1797,
+   2295
+  ],
+  "size": [
+   1093,
+   822
+  ],
+  "whited_words": [
+   "(2)",
+   "(4)"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1303,
+   2431
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q09": {
+  "bbox": [
+   687,
+   820,
+   1935,
+   1205
+  ],
+  "size": [
+   1249,
+   386
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   532,
+   1637
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q11": {
+  "bbox": [
+   736,
+   1249,
+   1714,
+   1494
+  ],
+  "size": [
+   979,
+   260
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1951,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   812,
+   1913
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q12": {
+  "bbox": [
+   920,
+   2100,
+   1510,
+   2790
+  ],
+  "size": [
+   582,
+   854
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 1951,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1913,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q15": {
+  "bbox": [
+   863,
+   2483,
+   1752,
+   2992
+  ],
+  "size": [
+   890,
+   510
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2212,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   2313,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q19": {
+  "bbox": [
+   510,
+   725,
+   1855,
+   1465
+  ],
+  "size": [
+   1659,
+   2434
+  ],
+  "whited_words": [],
+  "ink_regions": 8,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   554,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q20": {
+  "bbox": [
+   722,
+   749,
+   1974,
+   2698
+  ],
+  "size": [
+   1253,
+   1950
+  ],
+  "whited_words": [
+   "In",
+   "the",
+   "grid,",
+   "draw",
+   "a",
+   "line",
+   "perpendicular",
+   "to",
+   "AB",
+   "and",
+   "passing",
+   "through",
+   "Ans(a):",
+   "//\u2014"
+  ],
+  "ink_regions": 2,
+  "column_x": 2111,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   594,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q26": {
+  "bbox": [
+   680,
+   775,
+   1620,
+   1455
+  ],
+  "size": [
+   1487,
+   2445
+  ],
+  "whited_words": [
+   "Jasmine",
+   "draws",
+   "a",
+   "figure",
+   "as",
+   "shown",
+   "below.",
+   "made",
+   "up",
+   "of",
+   "2",
+   "identical",
+   "square",
+   "A",
+   "and",
+   "1",
+   "square",
+   "B.",
+   "length",
+   "of",
+   "square",
+   "B",
+   "is",
+   "3.",
+   "cm.",
+   "What",
+   "is",
+   "the",
+   "perimeter",
+   "of",
+   "square",
+   "B?",
+   "Whatis",
+   "the",
+   "area",
+   "of",
+   "1",
+   "square",
+   "A?",
+   "Ans:",
+   "(a)",
+   "[1]",
+   "Ans:",
+   "(b),",
+   "(3]"
+  ],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   555,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q27": {
+  "bbox": [
+   590,
+   610,
+   1835,
+   1335
+  ],
+  "size": [
+   1556,
+   777
+  ],
+  "whited_words": [
+   "Ashop",
+   "keychains",
+   "at",
+   "the",
+   "prices",
+   "shown.",
+   "Do",
+   "not",
+   "|",
+   "i",
+   "keychain",
+   "costs",
+   "$5.",
+   "|",
+   "1",
+   "box",
+   "of",
+   "4",
+   "keychains",
+   "costs",
+   "$13.",
+   "free!",
+   "|",
+   "|",
+   ":",
+   ";"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 18,
+  "band": [
+   515,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_PLMGS_EOY_Q14": {
+  "bbox": [
+   650,
+   1620,
+   1790,
+   1800
+  ],
+  "page": 9,
+  "manual": true,
+  "whited": []
+ }
+}

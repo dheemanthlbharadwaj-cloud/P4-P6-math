@@ -1,0 +1,385 @@
+{
+ "2023_P3_StNicholas_EOY_Q08": {
+  "bbox": [
+   698,
+   1765,
+   1512,
+   2346
+  ],
+  "size": [
+   814,
+   581
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1568,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q09": {
+  "bbox": [
+   743,
+   546,
+   1208,
+   945
+  ],
+  "size": [
+   465,
+   399
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   359,
+   1553
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q12": {
+  "bbox": [
+   457,
+   696,
+   1632,
+   996
+  ],
+  "size": [
+   1175,
+   300
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   461,
+   1818
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q14": {
+  "bbox": [
+   277,
+   775,
+   1720,
+   1676
+  ],
+  "size": [
+   1443,
+   901
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   552,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q15": {
+  "bbox": [
+   395,
+   685,
+   1575,
+   1115
+  ],
+  "size": [
+   1185,
+   612
+  ],
+  "whited_words": [
+   "The",
+   "figure",
+   "below",
+   "is",
+   "made",
+   "up",
+   "of",
+   "24",
+   "rectangles.",
+   "How",
+   "many",
+   "more.",
+   "rectangles",
+   "shaded"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   440,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StNicholas_EOY_Q19": {
+  "bbox": [
+   572,
+   767,
+   1082,
+   1625
+  ],
+  "size": [
+   510,
+   858
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1888,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   586,
+   2434
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q21": {
+  "bbox": [
+   683,
+   2647,
+   1525,
+   2810
+  ],
+  "size": [
+   842,
+   163
+  ],
+  "whited_words": [],
+  "ink_regions": 6,
+  "column_x": 1888,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   2434,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q22": {
+  "bbox": [
+   459,
+   678,
+   1395,
+   1261
+  ],
+  "size": [
+   936,
+   583
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1888,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   452,
+   1833
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q26": {
+  "bbox": [
+   190,
+   770,
+   1840,
+   1905
+  ],
+  "size": [
+   1887,
+   2520
+  ],
+  "whited_words": [
+   "Use",
+   "the",
+   "bar",
+   "graph!",
+   "The",
+   "bar",
+   "graph.",
+   "shows.",
+   "space",
+   "Primary",
+   "Fun:",
+   "Day.",
+   "26.",
+   "Station",
+   "D",
+   "has"
+  ],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   440,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StNicholas_EOY_Q28": {
+  "bbox": [
+   280,
+   1425,
+   1735,
+   2495
+  ],
+  "size": [
+   1354,
+   1035
+  ],
+  "whited_words": [
+   "Tem"
+  ],
+  "ink_regions": 1,
+  "column_x": 1883,
+  "picture_options": false,
+  "page": 16,
+  "band": [
+   1313,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StNicholas_EOY_Q29": {
+  "bbox": [
+   670,
+   775,
+   1460,
+   1375
+  ],
+  "size": [
+   1435,
+   1318
+  ],
+  "whited_words": [
+   "Each",
+   "statement",
+   "below",
+   "is",
+   "either",
+   "true",
+   "or",
+   "false",
+   "from",
+   "the",
+   "information",
+   "given.",
+   "For",
+   "each",
+   "statement,",
+   "put",
+   "a",
+   "tick",
+   "(\u201c)",
+   "in",
+   "the",
+   "conect",
+   "column."
+  ],
+  "ink_regions": 6,
+  "column_x": 1900,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   584,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_StNicholas_EOY_Q34": {
+  "bbox": [
+   553,
+   1020,
+   1874,
+   1655
+  ],
+  "size": [
+   1321,
+   635
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 1983,
+  "picture_options": false,
+  "page": 24,
+  "band": [
+   589,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_StNicholas_EOY_Q36": {
+  "bbox": [
+   360,
+   760,
+   1820,
+   1485
+  ],
+  "size": [
+   1420,
+   735
+  ],
+  "whited_words": [
+   "Figure",
+   "1",
+   "Figure",
+   "2",
+   "Figue3",
+   "Figure",
+   "4",
+   "The",
+   "table",
+   "below",
+   "shows",
+   "the",
+   "number",
+   "of",
+   "sticks",
+   "used",
+   "for",
+   "the",
+   "first",
+   "four",
+   "figures."
+  ],
+  "ink_regions": 5,
+  "column_x": 1895,
+  "picture_options": false,
+  "page": 26,
+  "band": [
+   562,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": [
+   [
+    395,
+    1180,
+    1765,
+    1245
+   ]
+  ]
+ }
+}

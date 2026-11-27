@@ -5,3 +5,9 @@
 - Doubts: Q20 beaker water levels not legible in the scan, answer 1 L from key (low). Q8 bar values read as 180+100+80+120. Q15 answer is a drawing. Q25 pens per packet read as 6 plus 2 free.
 - Pages opened: 2,3,4,5,6,7,8,9,10,12,13,14 (not 11).
 - Crop problems: Q19 (only the digit 8 cropped; 6, 0, 5 missing); Q3 (option labels (1)-(4) missing from the crop); Q20 (beakers' water levels illegible in the scan, crop otherwise complete).
+
+## Crop fix
+- Fixed (manual): Q18 (pen box left edge was cut), Q03 (all four angles with their (1)-(4) option labels), Q19 (all four digit cards 6, 0, 5, 8).
+- Checked and kept: Q05, Q06, Q08, Q09, Q10, Q13, Q15, Q20, Q24, Q25.
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: Q20 (water levels in the two beakers are speckled/illegible in the scan itself; crop is complete).

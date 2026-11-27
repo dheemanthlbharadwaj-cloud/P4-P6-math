@@ -1,0 +1,167 @@
+{
+ "2025_P3_ACSP_EOY_Q05": {
+  "bbox": [
+   700,
+   480,
+   1990,
+   1110
+  ],
+  "size": [
+   1290,
+   630
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   371,
+   1879
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_ACSP_EOY_Q08": {
+  "bbox": [
+   590,
+   1535,
+   2010,
+   2440
+  ],
+  "size": [
+   1420,
+   905
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1339,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_ACSP_EOY_Q09": {
+  "bbox": [
+   820,
+   535,
+   1625,
+   1045
+  ],
+  "size": [
+   805,
+   510
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   378,
+   1718
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_ACSP_EOY_Q14": {
+  "bbox": [
+   560,
+   1450,
+   2210,
+   3075
+  ],
+  "size": [
+   1650,
+   1625
+  ],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   1344,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": [],
+  "parts": [
+   [
+    560,
+    1450,
+    2210,
+    2390
+   ],
+   [
+    560,
+    2590,
+    2210,
+    3075
+   ]
+  ]
+ },
+ "2025_P3_ACSP_EOY_Q15": {
+  "bbox": [
+   564,
+   501,
+   1920,
+   1537
+  ],
+  "size": [
+   1356,
+   1036
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   353,
+   1647
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_ACSP_EOY_Q25": {
+  "bbox": [
+   1000,
+   540,
+   1740,
+   2350
+  ],
+  "size": [
+   740,
+   1810
+  ],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   401,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": [],
+  "parts": [
+   [
+    1000,
+    540,
+    1740,
+    850
+   ],
+   [
+    1000,
+    1985,
+    1740,
+    2350
+   ]
+  ]
+ }
+}

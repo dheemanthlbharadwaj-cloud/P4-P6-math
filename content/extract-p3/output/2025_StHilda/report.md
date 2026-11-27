@@ -12,3 +12,8 @@
 - Q25: grid crop has most horizontal gridlines missing / grid cut (A and B visible).
 - Q8, Q18, Q22, Q24 look correct.
 - Low-confidence: 0 (Q18, Q22 medium).
+
+## Crop fix
+- Checked 8 crops; re-cropped all 8 manually: Q06 (leftover option text removed), Q08 (now includes the (1)-(4) labels of the picture options), Q09 (option text removed), Q10 (stray 'ice-cream.' removed, y-axis title kept), Q18 (statement table excluded), Q22 (answer box removed), Q24 (answer box removed), Q25 (full grid with all gridlines, A and B).
+- figure_refs added: none. has_figure changes: none (Q16 and Q23 numbers are given in the question text).
+- Still imperfect: none (scan is faint in places).

@@ -4,3 +4,6 @@
 - Doubts: Q8 operator printed small, read as + (gives key answer 1/4). Q19 and Q22 split of marks between parts not printed (question marks 2 each). Q22 answer from key, grid not verified.
 - Pages opened: 3,5,6,7,8,9,11,12,13,14,17,18 (not 4,10,15,16; text only).
 - Crop problems: Q22 (square-grid figure badly broken, most grid lines and shape lines whited out); Q19 (labels 1st/5th/last stick and the text "?" removed except "?"; only partly usable); Q12 (fine but noisy scan).
+
+## Crop fix
+- Checked 11 crops; fixed 2 (Q22 square grid re-cropped with all grid and shape lines and letters, nothing whited; Q19 with 1st/5th/last stick labels and ?). No figure_refs, no has_figure changes. Still imperfect: Q12 noisy scan (scan quality only).

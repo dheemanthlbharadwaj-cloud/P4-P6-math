@@ -1001,7 +1001,8 @@
    14
   ],
   "answer_check": "ok: Japan about 32 = 2 x 16, but China bar is also about 32; key says Japan",
-  "confidence": "medium"
+  "confidence": "medium",
+  "figure_ref": "2022_P3_SCGS_EOY_Q29"
  },
  {
   "id": "2022_P3_SCGS_EOY_Q31",

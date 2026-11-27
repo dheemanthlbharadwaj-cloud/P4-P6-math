@@ -1,1027 +1,1028 @@
 [
- {
-  "id": "2025_P3_ACSJ_EOY_Q01",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "In 4519, the value of the digit 5 is ______.",
-  "options": {
-   "1": "5",
-   "2": "50",
-   "3": "500",
-   "4": "5000"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q01",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "In 4519, the value of the digit 5 is ______.",
+    "options": {
+      "1": "5",
+      "2": "50",
+      "3": "500",
+      "4": "5000"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q1/Q2 numbers missing in OCR, stem read from image"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q1/Q2 numbers missing in OCR, stem read from image"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q02",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Which of the following leaves no remainder when divided by 4?",
-  "options": {
-   "1": "14",
-   "2": "46",
-   "3": "58",
-   "4": "72"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q02",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Which of the following leaves no remainder when divided by 4?",
+    "options": {
+      "1": "14",
+      "2": "46",
+      "3": "58",
+      "4": "72"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q03",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Arrange the following fraction from the smallest to the greatest.\n$\\frac{3}{5}$, $\\frac{7}{10}$, $\\frac{1}{7}$",
-  "options": {
-   "1": "$\\frac{1}{7}$, $\\frac{3}{5}$, $\\frac{7}{10}$",
-   "2": "$\\frac{1}{7}$, $\\frac{7}{10}$, $\\frac{3}{5}$",
-   "3": "$\\frac{7}{10}$, $\\frac{3}{5}$, $\\frac{1}{7}$",
-   "4": "$\\frac{7}{10}$, $\\frac{1}{7}$, $\\frac{3}{5}$"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q03",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Arrange the following fraction from the smallest to the greatest.\n$\\frac{3}{5}$, $\\frac{7}{10}$, $\\frac{1}{7}$",
+    "options": {
+      "1": "$\\frac{1}{7}$, $\\frac{3}{5}$, $\\frac{7}{10}$",
+      "2": "$\\frac{1}{7}$, $\\frac{7}{10}$, $\\frac{3}{5}$",
+      "3": "$\\frac{7}{10}$, $\\frac{3}{5}$, $\\frac{1}{7}$",
+      "4": "$\\frac{7}{10}$, $\\frac{1}{7}$, $\\frac{3}{5}$"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled in OCR, read from image",
+      "'fraction' kept as printed"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled in OCR, read from image",
-   "'fraction' kept as printed"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q04",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Wai Mun boarded a train in Singapore at 11 40 and reached Malacca 3 h 30 min later. What time did he reach Malacca?",
-  "options": {
-   "1": "13 50",
-   "2": "14 10",
-   "3": "14 50",
-   "4": "15 10"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q04",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Wai Mun boarded a train in Singapore at 11 40 and reached Malacca 3 h 30 min later. What time did he reach Malacca?",
+    "options": {
+      "1": "13 50",
+      "2": "14 10",
+      "3": "14 50",
+      "4": "15 10"
+    },
+    "answer_key": "4",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q05",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Which one of the following statements is true?",
-  "options": {
-   "1": "DE $\\perp$ FG",
-   "2": "AC $\\parallel$ FG",
-   "3": "BC $\\perp$ DE",
-   "4": "AB $\\parallel$ DE"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q05",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Which one of the following statements is true?",
+    "options": {
+      "1": "DE $\\perp$ FG",
+      "2": "AC $\\parallel$ FG",
+      "3": "BC $\\perp$ DE",
+      "4": "AB $\\parallel$ DE"
+    },
+    "answer_key": "2",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with lines AB, AC, BC, FG and DE",
+    "ocr_fixes": [
+      "Q5 number missing; symbols read from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with lines AB, AC, BC, FG and DE",
-  "ocr_fixes": [
-   "Q5 number missing; symbols read from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q06",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Raj collected 312 stickers. He collected 107 stickers fewer than Mary. How many stickers did they collect altogether?",
-  "options": {
-   "1": "205",
-   "2": "419",
-   "3": "517",
-   "4": "731"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q06",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Raj collected 312 stickers. He collected 107 stickers fewer than Mary. How many stickers did they collect altogether?",
+    "options": {
+      "1": "205",
+      "2": "419",
+      "3": "517",
+      "4": "731"
+    },
+    "answer_key": "4",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q6 missing in OCR"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q6 missing in OCR"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q07",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the difference in the volume of water between Container A and Container B?",
-  "options": {
-   "1": "480 mℓ",
-   "2": "1400 mℓ",
-   "3": "1500 mℓ",
-   "4": "2900 mℓ"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q07",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the difference in the volume of water between Container A and Container B?",
+    "options": {
+      "1": "480 mℓ",
+      "2": "1400 mℓ",
+      "3": "1500 mℓ",
+      "4": "2900 mℓ"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "Container A water near 2 ℓ (scale to 3 ℓ); Container B water near 500 mℓ (scale to 1 ℓ)",
+    "ocr_fixes": [
+      "'me' -> 'mℓ'"
+    ],
+    "checked_against_image": [
+      5,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "medium"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "Container A water near 2 ℓ (scale to 3 ℓ); Container B water near 500 mℓ (scale to 1 ℓ)",
-  "ocr_fixes": [
-   "'me' -> 'mℓ'"
-  ],
-  "checked_against_image": [
-   5,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q08",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mr Tan bought a pair of trousers for ＄73.40. He gave the cashier two ＄50 notes. How much change did he receive?",
-  "options": {
-   "1": "＄23.40",
-   "2": "＄26.60",
-   "3": "＄123.40",
-   "4": "＄173.40"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q08",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mr Tan bought a pair of trousers for ＄73.40. He gave the cashier two ＄50 notes. How much change did he receive?",
+    "options": {
+      "1": "＄23.40",
+      "2": "＄26.60",
+      "3": "＄123.40",
+      "4": "＄173.40"
+    },
+    "answer_key": "2",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> ＄",
+      "option 3 OCR read $423.40, image $123.40"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> ＄",
-   "option 3 OCR read $423.40, image $123.40"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q09",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The figure below is made up of 4 identical rectangles. What is the perimeter of the figure?",
-  "options": {
-   "1": "60 cm",
-   "2": "70 cm",
-   "3": "75 cm",
-   "4": "90 cm"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q09",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The figure below is made up of 4 identical rectangles. What is the perimeter of the figure?",
+    "options": {
+      "1": "60 cm",
+      "2": "70 cm",
+      "3": "75 cm",
+      "4": "90 cm"
+    },
+    "answer_key": "2",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "3 upright rectangles above 1 flat rectangle, total width 15 cm",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "3 upright rectangles above 1 flat rectangle, total width 15 cm",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q10",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mrs Lim had some money. She gave ＄758 to her son. She received ＄1479 from her husband. In the end, she had ＄1921. How much money did she have at first?",
-  "options": {
-   "1": "＄4510",
-   "2": "＄2624",
-   "3": "＄1200",
-   "4": "＄316"
+  {
+    "id": "2025_P3_ACSJ_EOY_Q10",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mrs Lim had some money. She gave ＄758 to her son. She received ＄1479 from her husband. In the end, she had ＄1921. How much money did she have at first?",
+    "options": {
+      "1": "＄4510",
+      "2": "＄2624",
+      "3": "＄1200",
+      "4": "＄316"
+    },
+    "answer_key": "3",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'$4924' -> '＄1921' (OCR wrong)",
+      "$ -> ＄"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'$4924' -> '＄1921' (OCR wrong)",
-   "$ -> ＄"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q11",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 11,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Write 9 thousands and 34 ones in numerals.",
-  "answer": "9034",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'i' -> '11.'"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q12",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 12,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the sum of the values of the digit 6 in 6204 and 2761.",
-  "answer": "6060",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q12 number read as '12.'"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q13",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 13,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Multiply 106 by 5.",
-  "answer": "530",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'by 4' -> 'by 5' (image)",
-   "Q number read as 43"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q14",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 14,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Write 2 kilograms 25 grams in grams.",
-  "answer": "2025",
-  "unit": "g",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q15",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 15,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Ming wanted to buy a board game for ＄82.40. He had ＄27.80. How much more money would he need to buy the board game?",
-  "answer": "54.60",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q16",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the value of $\\frac{2}{5} - \\frac{3}{10}$.",
-  "answer": "$\\frac{1}{10}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q17",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 17,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Mr Tan started baking lemon tarts at 14 35. He finished baking at 16 20. How long did Mr Tan take to bake the lemon tarts?",
-  "answer": "1 h 45 min",
-  "unit": "h min",
-  "answer_parts": [
-   {
-    "part": "h",
-    "value": "1",
-    "unit": "h"
-   },
-   {
-    "part": "min",
-    "value": "45",
-    "unit": "min"
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 7; 'lernon' -> 'lemon'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q18",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 18,
-  "marks": 1,
-  "question_type": "short",
-  "question": "How many marked angles in the figure below are obtuse angles?",
-  "answer": "2",
-  "unit": "",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "five-sided figure with 5 marked angles",
-  "ocr_fixes": [
-   "Q number read as 48"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q19",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 19,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Draw a line parallel to the line AB passing through point C.",
-  "answer": "(line drawn through C parallel to AB)",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with line AB and point C; drawing task",
-  "ocr_fixes": [
-   "Q number read as 1s."
-  ],
-  "checked_against_image": [
-   10,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q20",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 20,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the area of the square below.",
-  "answer": "81",
-  "unit": "cm²",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "square with side 9 cm",
-  "ocr_fixes": [
-   "Q20 missing in OCR"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q21",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The difference between 2 numbers is 154.\nThe sum of the 2 numbers is 1142. What is the smaller number?",
-  "answer": "494",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 26"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q22",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Jenny bought 48 eggs. Each tray of 6 eggs cost ＄3.\nFor every tray of 6 eggs bought, she would get 2 more eggs free.\nWhat was the amount of money Jenny spent on the eggs?",
-  "answer": "18",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "egg tray picture: Buy 6 eggs, get 2 more eggs free",
-  "ocr_fixes": [
-   "$ -> ＄",
-   "'eqgs' -> 'eggs'",
-   "second sentence read from image"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q23",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Study the map and answer the question.\nSiti walked from her house to the market using the shorter route. What was the shorter distance that she walked? Give your answer in kilometres and metres.",
-  "answer": "1 km 660 m",
-  "unit": "km m",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "1",
-    "unit": "km"
-   },
-   {
-    "part": "",
-    "value": "660",
-    "unit": "m"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "map: library 780 m house 840 m school 820 m market 910 m library",
-  "ocr_fixes": [
-   "map labels read from image"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q24",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph below shows the number of cakes sold on Saturday and Sunday.\nStudy the graph carefully and answer questions 24 and 25.\na) Which cake was the most popular over the two days?\nb) How many slices of the most popular cake was sold?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Which cake was the most popular over the two days?"
-   },
-   {
-    "part": "b",
-    "text": "How many slices of the most popular cake was sold?"
-   }
-  ],
-  "answer": "Mango; 62",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "Mango",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "62",
-    "unit": "slices"
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "double bar graph strawberry/mango/chocolate, Saturday and Sunday",
-  "ocr_fixes": [
-   "graph read from image: mango Sat 32, Sun 30"
-  ],
-  "checked_against_image": [
-   13,
-   19
-  ],
-  "answer_check": "solved: 62 differs from key 58 (key '30 + 28')",
-  "confidence": "medium"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q25",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Each slice of cake costs ＄6. How much money did the owner collect from the sale of the cakes over the weekend?",
-  "answer": "918",
-  "unit": "＄",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Money"
-  ],
-  "has_figure": true,
-  "figure_note": "same bar graph as Q24",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [
-   13,
-   19
-  ],
-  "answer_check": "solved: 918 differs from key 876 (key reads slices 35+58+53=146; graph gives 39+62+52=153)",
-  "confidence": "medium"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q26",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 14,
-  "section": "C",
-  "question_no": 26,
-  "marks": 3,
-  "question_type": "long",
-  "question": "There were 2560 visitors in Bird Paradise.\nThere were 1756 adults and the rest of the visitors were children.\nAmong the children, there were 358 boys. How many girls were there in Bird Paradise?",
-  "answer": "446",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q27",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 15,
-  "section": "C",
-  "question_no": 27,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mr Samad bought some bags of flour for his restaurant.\nHe used 16 bags of flour each day from Monday to Friday and 22 bags of flour each day Saturday and Sunday. He had 120 bags of flour left. How many bags of flour did he buy at first?",
-  "answer": "244",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'first’?' -> 'first?'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q28",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 16,
-  "section": "C",
-  "question_no": 28,
-  "marks": 3,
-  "question_type": "long",
-  "question": "4 whistles and 5 caps cost ＄55.\n4 whistles and 2 caps cost ＄34.\nWhat is the cost of 4 caps?",
-  "answer": "28",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q29",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 17,
-  "section": "C",
-  "question_no": 29,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Ali, Charles and Sam weigh a total of 140 kg.\nAli weighs 3 times as heavy as Charles.\nSam is 15 kg lighter than Charles. How much does Charles weigh?",
-  "answer": "31",
-  "unit": "kg",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Ati' -> 'Ali'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2025_P3_ACSJ_EOY_Q30",
-  "grade": "P3",
-  "year": "2025",
-  "school": "ACS (Junior)",
-  "exam": "EOY",
-  "source": "(ACS (Junior)) (EOY) (2025)",
-  "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
-  "source_pdf_page": 18,
-  "section": "C",
-  "question_no": 30,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Rosie and Tricia had an equal number of cookies at first. After Rosie bought another 13 cookies and Tricia gave away 5 cookies to her brother, Rosie had three times as many cookies as Tricia. How many cookies did each of them have at first?",
-  "answer": "14",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'cockies' -> 'cookies'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2025_P3_ACSJ_EOY_Q11",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 11,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Write 9 thousands and 34 ones in numerals.",
+    "answer": "9034",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'i' -> '11.'"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q12",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 12,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the sum of the values of the digit 6 in 6204 and 2761.",
+    "answer": "6060",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q12 number read as '12.'"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q13",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 13,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Multiply 106 by 5.",
+    "answer": "530",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'by 4' -> 'by 5' (image)",
+      "Q number read as 43"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q14",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 14,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Write 2 kilograms 25 grams in grams.",
+    "answer": "2025",
+    "unit": "g",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q15",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 15,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Ming wanted to buy a board game for ＄82.40. He had ＄27.80. How much more money would he need to buy the board game?",
+    "answer": "54.60",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q16",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the value of $\\frac{2}{5} - \\frac{3}{10}$.",
+    "answer": "$\\frac{1}{10}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q17",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 17,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Mr Tan started baking lemon tarts at 14 35. He finished baking at 16 20. How long did Mr Tan take to bake the lemon tarts?",
+    "answer": "1 h 45 min",
+    "unit": "h min",
+    "answer_parts": [
+      {
+        "part": "h",
+        "value": "1",
+        "unit": "h"
+      },
+      {
+        "part": "min",
+        "value": "45",
+        "unit": "min"
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 7; 'lernon' -> 'lemon'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q18",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 18,
+    "marks": 1,
+    "question_type": "short",
+    "question": "How many marked angles in the figure below are obtuse angles?",
+    "answer": "2",
+    "unit": "",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "five-sided figure with 5 marked angles",
+    "ocr_fixes": [
+      "Q number read as 48"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "medium"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q19",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 19,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Draw a line parallel to the line AB passing through point C.",
+    "answer": "(line drawn through C parallel to AB)",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with line AB and point C; drawing task",
+    "ocr_fixes": [
+      "Q number read as 1s."
+    ],
+    "checked_against_image": [
+      10,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q20",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 20,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the area of the square below.",
+    "answer": "81",
+    "unit": "cm²",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "square with side 9 cm",
+    "ocr_fixes": [
+      "Q20 missing in OCR"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q21",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The difference between 2 numbers is 154.\nThe sum of the 2 numbers is 1142. What is the smaller number?",
+    "answer": "494",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 26"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q22",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Jenny bought 48 eggs. Each tray of 6 eggs cost ＄3.\nFor every tray of 6 eggs bought, she would get 2 more eggs free.\nWhat was the amount of money Jenny spent on the eggs?",
+    "answer": "18",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "egg tray picture: Buy 6 eggs, get 2 more eggs free",
+    "ocr_fixes": [
+      "$ -> ＄",
+      "'eqgs' -> 'eggs'",
+      "second sentence read from image"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q23",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Study the map and answer the question.\nSiti walked from her house to the market using the shorter route. What was the shorter distance that she walked? Give your answer in kilometres and metres.",
+    "answer": "1 km 660 m",
+    "unit": "km m",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "1",
+        "unit": "km"
+      },
+      {
+        "part": "",
+        "value": "660",
+        "unit": "m"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "map: library 780 m house 840 m school 820 m market 910 m library",
+    "ocr_fixes": [
+      "map labels read from image"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q24",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph below shows the number of cakes sold on Saturday and Sunday.\nStudy the graph carefully and answer questions 24 and 25.\na) Which cake was the most popular over the two days?\nb) How many slices of the most popular cake was sold?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Which cake was the most popular over the two days?"
+      },
+      {
+        "part": "b",
+        "text": "How many slices of the most popular cake was sold?"
+      }
+    ],
+    "answer": "Mango; 62",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "Mango",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "62",
+        "unit": "slices"
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "double bar graph strawberry/mango/chocolate, Saturday and Sunday",
+    "ocr_fixes": [
+      "graph read from image: mango Sat 32, Sun 30"
+    ],
+    "checked_against_image": [
+      13,
+      19
+    ],
+    "answer_check": "solved: 62 differs from key 58 (key '30 + 28')",
+    "confidence": "medium"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q25",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Each slice of cake costs ＄6. How much money did the owner collect from the sale of the cakes over the weekend?",
+    "answer": "918",
+    "unit": "＄",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Money"
+    ],
+    "has_figure": true,
+    "figure_note": "same bar graph as Q24",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [
+      13,
+      19
+    ],
+    "answer_check": "solved: 918 differs from key 876 (key reads slices 35+58+53=146; graph gives 39+62+52=153)",
+    "confidence": "medium",
+    "figure_ref": "2025_P3_ACSJ_EOY_Q24"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q26",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 14,
+    "section": "C",
+    "question_no": 26,
+    "marks": 3,
+    "question_type": "long",
+    "question": "There were 2560 visitors in Bird Paradise.\nThere were 1756 adults and the rest of the visitors were children.\nAmong the children, there were 358 boys. How many girls were there in Bird Paradise?",
+    "answer": "446",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q27",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 15,
+    "section": "C",
+    "question_no": 27,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mr Samad bought some bags of flour for his restaurant.\nHe used 16 bags of flour each day from Monday to Friday and 22 bags of flour each day Saturday and Sunday. He had 120 bags of flour left. How many bags of flour did he buy at first?",
+    "answer": "244",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'first’?' -> 'first?'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q28",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 16,
+    "section": "C",
+    "question_no": 28,
+    "marks": 3,
+    "question_type": "long",
+    "question": "4 whistles and 5 caps cost ＄55.\n4 whistles and 2 caps cost ＄34.\nWhat is the cost of 4 caps?",
+    "answer": "28",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q29",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 17,
+    "section": "C",
+    "question_no": 29,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Ali, Charles and Sam weigh a total of 140 kg.\nAli weighs 3 times as heavy as Charles.\nSam is 15 kg lighter than Charles. How much does Charles weigh?",
+    "answer": "31",
+    "unit": "kg",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Ati' -> 'Ali'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2025_P3_ACSJ_EOY_Q30",
+    "grade": "P3",
+    "year": "2025",
+    "school": "ACS (Junior)",
+    "exam": "EOY",
+    "source": "(ACS (Junior)) (EOY) (2025)",
+    "source_pdf": "2025-P3-Maths-EOY-ACSJ.pdf",
+    "source_pdf_page": 18,
+    "section": "C",
+    "question_no": 30,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Rosie and Tricia had an equal number of cookies at first. After Rosie bought another 13 cookies and Tricia gave away 5 cookies to her brother, Rosie had three times as many cookies as Tricia. How many cookies did each of them have at first?",
+    "answer": "14",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'cockies' -> 'cookies'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

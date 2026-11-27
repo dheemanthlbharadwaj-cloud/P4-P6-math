@@ -1,0 +1,90 @@
+{
+ "2025_P3_StHilda_EOY_Q06": {
+  "bbox": [
+   890,
+   995,
+   1430,
+   1610
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q08": {
+  "bbox": [
+   610,
+   630,
+   1380,
+   2735
+  ],
+  "page": 4,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q09": {
+  "bbox": [
+   800,
+   510,
+   1670,
+   1205
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q10": {
+  "bbox": [
+   460,
+   1690,
+   2125,
+   2535
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q18": {
+  "bbox": [
+   350,
+   575,
+   2080,
+   1431
+  ],
+  "page": 10,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q22": {
+  "bbox": [
+   780,
+   555,
+   1710,
+   1195
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q24": {
+  "bbox": [
+   965,
+   2325,
+   1430,
+   2740
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_StHilda_EOY_Q25": {
+  "bbox": [
+   540,
+   608,
+   2112,
+   1868
+  ],
+  "page": 13,
+  "manual": true,
+  "whited": []
+ }
+}

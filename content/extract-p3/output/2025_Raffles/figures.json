@@ -1,0 +1,318 @@
+{
+ "2025_P3_Raffles_EOY_Q05": {
+  "bbox": [
+   855,
+   1172,
+   1612,
+   1819
+  ],
+  "size": [
+   757,
+   647
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   1021,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_Raffles_EOY_Q08": {
+  "bbox": [
+   600,
+   2150,
+   1990,
+   2640
+  ],
+  "size": [
+   847,
+   80
+  ],
+  "whited_words": [
+   "3680,"
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   335,
+   1199
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Raffles_EOY_Q10": {
+  "bbox": [
+   640,
+   1205,
+   2345,
+   2235
+  ],
+  "size": [
+   1614,
+   1025
+  ],
+  "whited_words": [],
+  "ink_regions": 7,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   1119,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Raffles_EOY_Q13": {
+  "bbox": [
+   600,
+   2235,
+   1960,
+   2495
+  ],
+  "size": [
+   1647,
+   1161
+  ],
+  "whited_words": [
+   "Answer",
+   "Pg",
+   "6",
+   "of",
+   "14"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   2018,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Raffles_EOY_Q15": {
+  "bbox": [
+   590,
+   1415,
+   2180,
+   2085
+  ],
+  "size": [
+   1587,
+   2006
+  ],
+  "whited_words": [
+   "Answer:",
+   "m",
+   "Pg",
+   "7",
+   "of",
+   "14"
+  ],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1235,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Raffles_EOY_Q16": {
+  "bbox": [
+   574,
+   430,
+   1594,
+   1249
+  ],
+  "size": [
+   1020,
+   819
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   326,
+   1586
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Raffles_EOY_Q19": {
+  "bbox": [
+   590,
+   640,
+   1910,
+   1440
+  ],
+  "size": [
+   1349,
+   1032
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   361,
+   2140
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": [
+   [
+    590,
+    1295,
+    1150,
+    1440
+   ]
+  ]
+ },
+ "2025_P3_Raffles_EOY_Q22": {
+  "bbox": [
+   925,
+   470,
+   1605,
+   1465
+  ],
+  "size": [
+   1318,
+   2993
+  ],
+  "whited_words": [
+   "bought",
+   "3",
+   "doughnuts.",
+   "How",
+   "much",
+   "did",
+   "she",
+   "pay?",
+   "Answer.",
+   "(a)",
+   "(1)",
+   "bought",
+   "9",
+   "doughnuts.",
+   "What",
+   "was",
+   "the",
+   "least",
+   "amount",
+   "of",
+   "money",
+   "he",
+   "Answer:",
+   "(b)",
+   "B]",
+   "Pg",
+   "11",
+   "of",
+   "14"
+  ],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   346,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Raffles_EOY_Q24": {
+  "bbox": [
+   560,
+   640,
+   2200,
+   1430
+  ],
+  "size": [
+   1644,
+   2785
+  ],
+  "whited_words": [
+   "(a)",
+   "5",
+   "more",
+   "mugs",
+   "than",
+   "bottles",
+   "were",
+   "collected",
+   "on",
+   ".",
+   "fi]",
+   "(b)",
+   "There",
+   "were",
+   "fewer",
+   "bottles",
+   "collected",
+   "on",
+   "Tuesday",
+   "than",
+   "on",
+   "(c)",
+   "The",
+   "total",
+   "number",
+   "of",
+   "items",
+   "collected",
+   "on",
+   "Thursday",
+   "was_",
+   "SCA)",
+   "(d)",
+   "The",
+   "total",
+   "number",
+   "of",
+   "mugs",
+   "collected",
+   "over",
+   "the",
+   "4",
+   "days",
+   "was",
+   "Pg",
+   "13",
+   "of",
+   "14",
+   "Wednesday.",
+   ".",
+   "."
+  ],
+  "ink_regions": 6,
+  "column_x": null,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   363,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ }
+}

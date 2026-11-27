@@ -14,3 +14,8 @@
 - Q30: crop is only the "?" box; the statement table is not cropped.
 - Q42: movie-timings table cut at the bottom (2.45 p.m. row clipped).
 - Q45: no crop made (Figure 1 square and Figure 2 triangle missing).
+
+## Crop fix
+- Checked 17 crops. Fixed 3 by manual crop: Q30 (statement table, was only the "?" box), Q42 (table bottom row no longer clipped), Q45 (Figure 1 square and Figure 2 triangle, were missing).
+- figure_refs added: none. has_figure changes: none (Q44 has no picture).
+- Still imperfect: none.

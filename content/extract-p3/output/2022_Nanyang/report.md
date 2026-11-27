@@ -13,3 +13,8 @@
 - Q44: leftover question text "to the bakery?" at the top of the crop.
 - Q10: option label "(1)" and "(2)" partly missing; crop is otherwise complete.
 - Q35: crop OK (labels 9 cm and 15 cm present) but a margin of blank page below.
+
+## Crop fix
+- Checked 13 crops; re-cropped manually 5: Q12 (number cards, was missing), Q17 (washed out + leftover option text), Q10 (option labels (1)-(4) restored), Q40 (top gridline and chart title kept), Q44 (leftover question text removed).
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: scan noise only (speckled bars in Q40, Q11, Q29).

@@ -1,0 +1,174 @@
+{
+ "2022_P3_MGS_EOY_Q09": {
+  "bbox": [
+   410,
+   2170,
+   1900,
+   2480
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q10": {
+  "bbox": [
+   950,
+   565,
+   1440,
+   1055
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q11": {
+  "bbox": [
+   400,
+   1810,
+   2010,
+   2590
+  ],
+  "page": 6,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q14": {
+  "bbox": [
+   817,
+   627,
+   1561,
+   1381
+  ],
+  "size": [
+   744,
+   754
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   433,
+   1909
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_MGS_EOY_Q15": {
+  "bbox": [
+   671,
+   2077,
+   1861,
+   2626
+  ],
+  "size": [
+   1190,
+   549
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   1909,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_MGS_EOY_Q16": {
+  "bbox": [
+   398,
+   654,
+   2196,
+   1628
+  ],
+  "size": [
+   1798,
+   974
+  ],
+  "whited_words": [],
+  "ink_regions": 7,
+  "column_x": 2224,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   496,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_MGS_EOY_Q22": {
+  "bbox": [
+   420,
+   1775,
+   1620,
+   2375
+  ],
+  "page": 13,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q27": {
+  "bbox": [
+   1350,
+   2320,
+   1925,
+   2795
+  ],
+  "page": 15,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q28": {
+  "bbox": [
+   310,
+   575,
+   1890,
+   1065
+  ],
+  "page": 16,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q31": {
+  "bbox": [
+   140,
+   1675,
+   2000,
+   2210
+  ],
+  "page": 17,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q32": {
+  "bbox": [
+   280,
+   540,
+   1870,
+   1610
+  ],
+  "page": 18,
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_MGS_EOY_Q40": {
+  "bbox": [
+   340,
+   560,
+   1830,
+   1735
+  ],
+  "page": 24,
+  "manual": true,
+  "whited": [
+   [
+    340,
+    1115,
+    1350,
+    1172
+   ]
+  ]
+ }
+}

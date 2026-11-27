@@ -1,0 +1,267 @@
+{
+ "2023_P3_CatholicHigh_EOY_Q08": {
+  "bbox": [
+   540,
+   740,
+   1590,
+   1305
+  ],
+  "size": [
+   1042,
+   1122
+  ],
+  "whited_words": [
+   "(i)",
+   "DF",
+   "and",
+   "BA.",
+   "(2)",
+   "DF",
+   "and",
+   "AE.",
+   "(3)",
+   "GFand",
+   "AE",
+   "(4)",
+   "CH",
+   "and",
+   "BA,",
+   "7",
+   "|"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   574,
+   1914
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_CatholicHigh_EOY_Q11": {
+  "bbox": [
+   756,
+   1409,
+   1492,
+   1859
+  ],
+  "size": [
+   736,
+   450
+  ],
+  "whited_words": [
+   "figure"
+  ],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   1336,
+   2324
+  ],
+  "band_from": "text"
+ },
+ "2023_P3_CatholicHigh_EOY_Q13": {
+  "bbox": [
+   680,
+   692,
+   1690,
+   1215
+  ],
+  "size": [
+   1135,
+   700
+  ],
+  "whited_words": [
+   "3)"
+  ],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   566,
+   1960
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_CatholicHigh_EOY_Q20": {
+  "bbox": [
+   570,
+   1540,
+   1460,
+   2010
+  ],
+  "size": [
+   752,
+   474
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 1909,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   1426,
+   2263
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_CatholicHigh_EOY_Q27": {
+  "bbox": [
+   380,
+   725,
+   1868,
+   1595
+  ],
+  "size": [
+   281,
+   703
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   1653,
+   2325
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_CatholicHigh_EOY_Q31": {
+  "bbox": [
+   620,
+   2120,
+   1130,
+   3000
+  ],
+  "size": [
+   1369,
+   1055
+  ],
+  "whited_words": [
+   "Ans:",
+   "kg:",
+   "-__g"
+  ],
+  "ink_regions": 3,
+  "column_x": 1922,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   2025,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_CatholicHigh_EOY_Q33": {
+  "bbox": [
+   570,
+   1720,
+   1050,
+   2195
+  ],
+  "size": [
+   1317,
+   1712
+  ],
+  "whited_words": [
+   "13:",
+   "(Go",
+   "on",
+   "to",
+   "the",
+   "next",
+   "page}"
+  ],
+  "ink_regions": 4,
+  "column_x": 1892,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   1533,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2023_P3_CatholicHigh_EOY_Q40": {
+  "bbox": [
+   460,
+   790,
+   1820,
+   1860
+  ],
+  "size": [
+   1381,
+   2179
+  ],
+  "whited_words": [
+   "a)",
+   "Fill",
+   "in",
+   "the",
+   "missing.",
+   "number",
+   "of",
+   "rectangles",
+   "for",
+   "Pattern",
+   "4.",
+   "b)}",
+   "Filin",
+   "the",
+   "missing",
+   "number",
+   "of",
+   "dots",
+   "for",
+   "Pattern",
+   "4.",
+   "cy",
+   "How",
+   "many",
+   "dots",
+   "are",
+   "needed!",
+   "for",
+   "Pattern,",
+   "10?",
+   "Ans:",
+   "e}__",
+   "2]"
+  ],
+  "ink_regions": 8,
+  "column_x": 1897,
+  "picture_options": false,
+  "page": 21,
+  "band": [
+   561,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": [
+   [
+    1770,
+    1790,
+    1820,
+    1860
+   ]
+  ]
+ }
+}

@@ -12,3 +12,8 @@
 - Q22: title "Tickets sold for a Carnival" is outside the crop; bars are present (no numbered axis in the original).
 - Q25: both grids in one crop with an empty gap between; footer text cropped out fine; check whether part (b) grid is complete (looks complete).
 - Q19: bottom label B slightly cut.
+
+## Crop fix
+- Checked 8 crops; re-cropped manually 6: Q13 (cards only), Q16 (complete number line with 0, axis, ?, 8/10), Q21 (garden only, footer and empty area removed), Q22 (title "Tickets sold for a Carnival" added), Q19 (label B and grid bottom complete), Q25 (the two grids stacked into one composite image with the part (a)/(b) text removed; bbox in figures.json is the union of both source boxes).
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: none (scan noise only).

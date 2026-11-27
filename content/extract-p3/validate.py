@@ -12,10 +12,11 @@ from difflib import SequenceMatcher
 TOPICS = {"Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Money", "Length, Mass and Volume",
           "Time", "Fractions", "Area and Perimeter", "Angles", "Perpendicular and Parallel Lines", "Bar Graphs"}
 work = sys.argv[1]
+DROPPED = set(json.load(open(os.path.join(work, "..", "duplicates.json")))["dropped"]) if os.path.exists(os.path.join(work, "..", "duplicates.json")) else set()
 problems, papers = {}, {}
 for folder in sorted(os.listdir(work)):
     qf = os.path.join(work, folder, "questions.json")
-    if not re.match(r"^\d{4}_", folder) or not os.path.isdir(os.path.join(work, folder)):
+    if not re.match(r"^\d{4}_", folder) or not os.path.isdir(os.path.join(work, folder)) or folder in DROPPED:
         continue
     if not os.path.exists(qf):
         problems[folder] = ["NOT STRUCTURED"]; continue
@@ -40,8 +41,12 @@ for folder in sorted(os.listdir(work)):
             p.append(f"{q.get('id')}: no answer")
         shown = {k: q.get(k) for k in ("question", "question_parts", "options", "answer", "answer_parts", "unit")}
         blob = json.dumps(shown, ensure_ascii=False)  # only what students see (not ocr_fixes notes)
-        if re.search(r"(?<![\\＄])\$(?=\s?\d)", blob): p.append(f"{q.get('id')}: plain $ before a number (use ＄)")
-        if q.get("has_figure") and not os.path.exists(os.path.join(work, folder, "figures", f"{q.get('id')}.png")):
+        # every student-visible string must have balanced $...$ maths (money uses ＄, so a lone $ is a broken formula)
+        strings = [q.get("question") or "", q.get("answer") or ""] + [x.get("text", "") for x in q.get("question_parts") or []] \
+            + [str(v) for v in (q.get("options") or {}).values()]
+        if any(len(re.findall(r"(?<!\\)\$", t)) % 2 for t in strings): p.append(f"{q.get('id')}: unbalanced $ (broken maths)")
+        fid = q.get("figure_ref") or q.get("id")  # questions sharing a printed figure point at the first one's crop
+        if q.get("has_figure") and not os.path.exists(os.path.join(work, folder, "figures", f"{fid}.png")):
             p.append(f"{q.get('id')}: figure missing")
     ints = [n for n in nums if isinstance(n, int)]
     if len(set(ints)) != len(nums): p.append("duplicate/invalid question numbers")

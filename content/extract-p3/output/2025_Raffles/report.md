@@ -13,3 +13,8 @@
 - Q22: crop includes the whole page below the poster (large blank area, answer boxes).
 - Q24: crop includes lots of blank space and the "[1]" marks below the graph.
 - Q15: crop also includes the library leg (700 m) which is part of the picture; fine.
+
+## Crop fix
+- Checked 9 crops; re-cropped manually: Q08 (the food and price picture, replacing the wrong number-pattern strip), Q10 (left edge of the grid was cut), Q13 (mark box removed), Q15 (mark box and blank page removed), Q19 (Area/Perimeter answer boxes under figure G whited out; H's boxes lie below the crop), Q22 (poster only), Q24 (graph with legend only). Kept: Q05, Q16.
+- figure_refs added: none. has_figure changes: none (Q02, Q06 are text only).
+- Still imperfect: none.

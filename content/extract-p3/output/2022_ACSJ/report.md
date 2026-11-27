@@ -29,3 +29,9 @@ Paper: ACS (Junior) P3 Semestral Assessment 2 (2022), PDF 2022-P3-Maths-EOY-ACSJ
 - Q27: y-axis numbers cut at left edge, leftover question line at bottom.
 - Q31: leftover question text at top, grid lines partly whited out, figure cut off at bottom (F, E labels damaged).
 - Q04: OK (extra blank space below only). Q12: OK.
+
+## Crop fix
+- Checked 12 figures (Q04, 07, 08, 09, 12, 15, 16, 21, 25, 27, 31, 34). Q12 kept as is.
+- Fixed by hand: Q04 (trimmed blank space), Q07 (Q8 content removed), Q08 and Q15 and Q34 (new crops), Q09 (option text removed), Q16 (option text removed, question line whited out), Q21 (answer box removed), Q25 (question text, answer and sub-total boxes removed), Q27 (y-axis title and numbers restored, question line removed), Q31 (question text removed, grid intact, bottom row and E/F labels complete).
+- figure_refs added: none. has_figure changes: none (Q08, Q15, Q34 were already true).
+- Still imperfect: scan noise only; Q25 has a handwritten "3300" on the scale (on the figure, left).

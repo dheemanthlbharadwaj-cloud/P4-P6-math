@@ -1,0 +1,280 @@
+{
+ "2025_P3_Nanyang_EOY_Q05": {
+  "bbox": [
+   740,
+   706,
+   1918,
+   1552
+  ],
+  "size": [
+   1178,
+   846
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   481,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Nanyang_EOY_Q06": {
+  "bbox": [
+   939,
+   942,
+   1498,
+   1239
+  ],
+  "size": [
+   559,
+   297
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   800,
+   1909
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Nanyang_EOY_Q08": {
+  "bbox": [
+   568,
+   2383,
+   2078,
+   2838
+  ],
+  "size": [
+   1510,
+   455
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   2293,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Nanyang_EOY_Q09": {
+  "bbox": [
+   812,
+   605,
+   1875,
+   1453
+  ],
+  "size": [
+   1063,
+   848
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   426,
+   1906
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_Nanyang_EOY_Q11": {
+  "bbox": [
+   999,
+   480,
+   1707,
+   1257
+  ],
+  "size": [
+   708,
+   777
+  ],
+  "whited_words": [
+   "finished",
+   "crossing",
+   "the",
+   "road,",
+   "her",
+   "watch",
+   "then",
+   "seconds",
+   "did",
+   "she",
+   "take",
+   "to",
+   "cross",
+   "that",
+   "road?"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   392,
+   1955
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Nanyang_EOY_Q15": {
+  "bbox": [
+   783,
+   551,
+   1793,
+   707
+  ],
+  "size": [
+   1010,
+   156
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   437,
+   1771
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_Nanyang_EOY_Q17": {
+  "bbox": [
+   650,
+   625,
+   1340,
+   1485
+  ],
+  "size": [
+   1333,
+   921
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   441,
+   1614
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Nanyang_EOY_Q18": {
+  "bbox": [
+   930,
+   1710,
+   1750,
+   1865
+  ],
+  "size": [
+   812,
+   1425
+  ],
+  "whited_words": [
+   "the",
+   "smallest",
+   "4-digit",
+   "even",
+   "number",
+   "that",
+   "she",
+   "can",
+   "digit",
+   "can",
+   "only",
+   "be",
+   "used",
+   "once.",
+   "Ans:",
+   "(a)",
+   "the",
+   "greatest",
+   "4-digit",
+   "odd",
+   "number",
+   "that",
+   "she",
+   "can",
+   "digit",
+   "can",
+   "only",
+   "be",
+   "used",
+   "once.",
+   "Ans:",
+   "(b)"
+  ],
+  "ink_regions": 5,
+  "column_x": null,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   1614,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Nanyang_EOY_Q20": {
+  "bbox": [
+   680,
+   1530,
+   2110,
+   2060
+  ],
+  "size": [
+   1413,
+   514
+  ],
+  "whited_words": [
+   "0",
+   "rrr?"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   1422,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_Nanyang_EOY_Q24": {
+  "bbox": [
+   664,
+   899,
+   2116,
+   1809
+  ],
+  "size": [
+   1452,
+   910
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   727,
+   3508
+  ],
+  "band_from": "text"
+ }
+}

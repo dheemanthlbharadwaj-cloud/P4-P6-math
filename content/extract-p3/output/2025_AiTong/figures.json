@@ -1,0 +1,172 @@
+{
+ "2025_P3_AiTong_EOY_Q03": {
+  "bbox": [
+   550,
+   1885,
+   1230,
+   2520
+  ],
+  "page": 3,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q05": {
+  "bbox": [
+   695,
+   1322,
+   1463,
+   2049
+  ],
+  "size": [
+   768,
+   727
+  ],
+  "whited_words": [
+   "250",
+   "mt",
+   "800",
+   "mt"
+  ],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 4,
+  "band": [
+   1225,
+   2371
+  ],
+  "band_from": "index"
+ },
+ "2025_P3_AiTong_EOY_Q07": {
+  "bbox": [
+   595,
+   480,
+   1370,
+   915
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q09": {
+  "bbox": [
+   1540,
+   2295,
+   2030,
+   2680
+  ],
+  "page": 5,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q15": {
+  "bbox": [
+   535,
+   1390,
+   2065,
+   2385
+  ],
+  "page": 8,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q16": {
+  "bbox": [
+   416,
+   505,
+   2104,
+   1424
+  ],
+  "size": [
+   1688,
+   919
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": null,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   324,
+   2101
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_AiTong_EOY_Q18": {
+  "bbox": [
+   781,
+   465,
+   1738,
+   1307
+  ],
+  "size": [
+   957,
+   842
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 10,
+  "band": [
+   384,
+   1739
+  ],
+  "band_from": "text"
+ },
+ "2025_P3_AiTong_EOY_Q20": {
+  "bbox": [
+   385,
+   500,
+   2160,
+   990
+  ],
+  "page": 11,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q21": {
+  "bbox": [
+   1595,
+   1740,
+   2100,
+   2195
+  ],
+  "page": 11,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q22": {
+  "bbox": [
+   640,
+   820,
+   1800,
+   1725
+  ],
+  "page": 12,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q24": {
+  "bbox": [
+   690,
+   565,
+   1935,
+   1262
+  ],
+  "page": 14,
+  "manual": true,
+  "whited": []
+ },
+ "2025_P3_AiTong_EOY_Q25": {
+  "bbox": [
+   745,
+   420,
+   1585,
+   870
+  ],
+  "page": 15,
+  "manual": true,
+  "whited": []
+ }
+}

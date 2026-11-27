@@ -1,0 +1,273 @@
+{
+ "2024_P3_Rosyth_EOY_Q03": {
+  "bbox": [
+   561,
+   2029,
+   1993,
+   2169
+  ],
+  "size": [
+   1432,
+   140
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": null,
+  "picture_options": false,
+  "page": 3,
+  "band": [
+   1935,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q09": {
+  "bbox": [
+   552,
+   1164,
+   1480,
+   1375
+  ],
+  "size": [
+   928,
+   211
+  ],
+  "whited_words": [],
+  "ink_regions": 8,
+  "column_x": 2050,
+  "picture_options": false,
+  "page": 6,
+  "band": [
+   927,
+   1614
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q12": {
+  "bbox": [
+   531,
+   672,
+   1875,
+   1193
+  ],
+  "size": [
+   1344,
+   521
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 2054,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   518,
+   1510
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q13": {
+  "bbox": [
+   616,
+   1730,
+   1800,
+   2161
+  ],
+  "size": [
+   1184,
+   431
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2054,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1510,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q14": {
+  "bbox": [
+   535,
+   596,
+   1931,
+   1395
+  ],
+  "size": [
+   1396,
+   799
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": 2054,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   429,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q15": {
+  "bbox": [
+   527,
+   624,
+   1865,
+   1852
+  ],
+  "size": [
+   1338,
+   1228
+  ],
+  "whited_words": [
+   "mam.",
+   "pot"
+  ],
+  "ink_regions": 3,
+  "column_x": 2078,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   484,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q19": {
+  "bbox": [
+   540,
+   640,
+   2010,
+   885
+  ],
+  "size": [
+   1361,
+   198
+  ],
+  "whited_words": [
+   "fst",
+   "5th",
+   "last",
+   "stick"
+  ],
+  "ink_regions": 1,
+  "column_x": 2048,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   516,
+   2404
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Rosyth_EOY_Q21": {
+  "bbox": [
+   523,
+   480,
+   1860,
+   1246
+  ],
+  "size": [
+   1337,
+   766
+  ],
+  "whited_words": [
+   "\u2014_",
+   "In",
+   "the",
+   "figure,",
+   "how",
+   "many",
+   "of",
+   "the",
+   "marked",
+   "angles",
+   "are",
+   "greater",
+   "than",
+   "a",
+   "right",
+   "[missed text]"
+  ],
+  "ink_regions": 1,
+  "column_x": 2040,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   431,
+   1571
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q22": {
+  "bbox": [
+   530,
+   1675,
+   2038,
+   2325
+  ],
+  "size": [
+   1168,
+   650
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2040,
+  "picture_options": false,
+  "page": 12,
+  "band": [
+   1571,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2024_P3_Rosyth_EOY_Q23": {
+  "bbox": [
+   543,
+   1052,
+   1904,
+   1504
+  ],
+  "size": [
+   1361,
+   452
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": 2049,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   865,
+   3508
+  ],
+  "band_from": "text"
+ },
+ "2024_P3_Rosyth_EOY_Q24": {
+  "bbox": [
+   511,
+   666,
+   1962,
+   1258
+  ],
+  "size": [
+   1451,
+   592
+  ],
+  "whited_words": [],
+  "ink_regions": 4,
+  "column_x": 2033,
+  "picture_options": false,
+  "page": 14,
+  "band": [
+   460,
+   3508
+  ],
+  "band_from": "text"
+ }
+}

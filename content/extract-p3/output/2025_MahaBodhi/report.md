@@ -10,3 +10,8 @@
 - Q09: rectangle strip is washed out (faded, labels 88 cm and 8 cm visible).
 - Q14: crop includes leftover question text ("buns were sold from Monday to Wednesday?"), Ans line and page footer.
 - Q17: figure cut off at the bottom (labels G, H, D and base missing).
+
+## Crop fix
+- Checked 9 figures. Fixed: Q4 (bar graph from page 3, was a blank footer area), Q14 (graph only, question text, Ans line and footer removed), Q17 (full cabinet with G, H, D and the base). Margins trimmed: Q6, Q7, Q9, Q11, Q15, Q16.
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: Q9 strip is faint in the scan (labels 88 cm and 8 cm are clear); scan quality only.

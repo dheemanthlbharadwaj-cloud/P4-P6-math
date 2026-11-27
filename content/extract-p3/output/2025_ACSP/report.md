@@ -9,3 +9,9 @@
 - Q09: top vertical edge of the arrow head is partly erased (whited out), so the arrow outline has a gap.
 - Q14: True/False statement table is not in the crop (graph only).
 - Q25: crop includes leftover text "What was the area of the square?" between the rectangle and the square; the "(a)"/"(b)" labels are gone.
+
+## Crop fix
+- Fixed (manual): Q05 (whole vertical subtraction), Q08 (chart title restored), Q09 (no whiting, arrow outline intact), Q14 (graph plus the True/False statement table, stacked as two parts with the instruction text between them left out; figures.json "parts" lists both boxes), Q25 (rectangle with 13 cm / 5 cm and the square, stacked as two parts with the question text between them removed; figures.json "parts" lists both boxes).
+- Checked and kept: Q15.
+- figure_refs added: none. has_figure changes: none.
+- Still imperfect: none; scans are noisy but complete.

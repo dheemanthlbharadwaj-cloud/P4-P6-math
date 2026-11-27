@@ -14,3 +14,6 @@
 - Q22: grid crop includes a tiny stray mark top-right; fine.
 - Q3, Q7, Q16, Q17, Q22, Q23, Q24, Q29, Q33, Q36, Q38, Q39 crops look correct.
 - Low-confidence: 0 (Q3 medium).
+
+## Crop fix
+- Checked 12 existing crops plus all other questions: all 12 crops are complete and clean (Q22 has a tiny stray scan mark, left). Fixed: none re-cropped. figure_ref: Q34 -> Q33 (shared bar graph; has_figure turned on). Left off: Q27 (vertical subtraction written out in question text), Q12 (digit cards in text). Still imperfect: none.

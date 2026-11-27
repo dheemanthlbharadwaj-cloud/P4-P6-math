@@ -11,3 +11,8 @@
 - Q28: top-left of the grid cut (the "1 cm" scale labels are partly missing).
 - Q36: figure labels ("Figure 1" to "Figure 4") missing under the stick figures; large blank gap between figures and table.
 - Q21: crop is the letters HAMLET only (fine); Q29 crop includes apple picture and the True/False table (fine).
+
+## Crop fix
+- Checked 13 crops; re-cropped manually: Q15 (leftover question text removed), Q26 (the real bar graph, title and axes, instead of the whole page), Q28 (grid with the '1 cm' scale labels), Q29 (apple picture only; the statements are in the question text), Q36 (stick figures with 'Figure 1' to 'Figure 4' labels and the table; the sentence between them whited out, so a gap remains). Kept: Q08, Q09, Q12, Q14, Q19, Q21, Q22, Q34.
+- figure_refs added: none. has_figure changes: none (Q07, Q17 are text only).
+- Still imperfect: Q36 has a blank gap where the whited sentence was; scan is speckled.

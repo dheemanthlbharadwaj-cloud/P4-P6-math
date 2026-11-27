@@ -10,3 +10,8 @@
 - Q8: leftover question text "many of the angles are acute angles?".
 - Q10: y-axis label cut ("conds)").
 - Q22: leftover "start" is fine, but crop includes the answer box and "m" label.
+
+## Crop fix
+- Checked 7 crops; re-cropped manually: Q06, Q08, Q10 (y-axis title 'Time (seconds)' now complete), Q22, Q25 (whole 9-column grid with A, B, X). Kept: Q09, Q24.
+- figure_refs added: none. has_figure changes: none (Q17 is text only).
+- Still imperfect: none.

@@ -1,0 +1,444 @@
+{
+ "2022_P3_CatholicHigh_EOY_Q08": {
+  "bbox": [
+   995,
+   517,
+   1525,
+   1526
+  ],
+  "size": [
+   530,
+   1009
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 5,
+  "band": [
+   300,
+   2241
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_CatholicHigh_EOY_Q14": {
+  "bbox": [
+   570,
+   1585,
+   2070,
+   2345
+  ],
+  "size": [
+   1476,
+   725
+  ],
+  "whited_words": [],
+  "ink_regions": 3,
+  "column_x": null,
+  "picture_options": false,
+  "page": 7,
+  "band": [
+   1425,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q15": {
+  "bbox": [
+   940,
+   565,
+   1810,
+   910
+  ],
+  "size": [
+   827,
+   890
+  ],
+  "whited_words": [],
+  "ink_regions": 2,
+  "column_x": null,
+  "picture_options": false,
+  "page": 8,
+  "band": [
+   353,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q17": {
+  "bbox": [
+   913,
+   1960,
+   1515,
+   2567
+  ],
+  "size": [
+   602,
+   607
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2033,
+  "picture_options": false,
+  "page": 9,
+  "band": [
+   1822,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_CatholicHigh_EOY_Q21": {
+  "bbox": [
+   650,
+   565,
+   1800,
+   790
+  ],
+  "size": [
+   1348,
+   1023
+  ],
+  "whited_words": [],
+  "ink_regions": 5,
+  "column_x": 2031,
+  "picture_options": false,
+  "page": 11,
+  "band": [
+   353,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q24": {
+  "bbox": [
+   680,
+   555,
+   1800,
+   820
+  ],
+  "size": [
+   1220,
+   846
+  ],
+  "whited_words": [
+   "Ans:",
+   "92",
+   "*",
+   "4"
+  ],
+  "ink_regions": 4,
+  "column_x": 2029,
+  "picture_options": false,
+  "page": 13,
+  "band": [
+   300,
+   2088
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q30": {
+  "bbox": [
+   575,
+   590,
+   1270,
+   1275
+  ],
+  "size": [
+   1304,
+   851
+  ],
+  "whited_words": [
+   "Line",
+   "AB",
+   "is",
+   "drawn",
+   "in'a",
+   "squar\u00e9",
+   "Grid.",
+   "oe",
+   "Draw"
+  ],
+  "ink_regions": 2,
+  "column_x": 2040,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   396,
+   1647
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q31": {
+  "bbox": [
+   561,
+   1868,
+   1459,
+   2585
+  ],
+  "size": [
+   898,
+   717
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2040,
+  "picture_options": false,
+  "page": 15,
+  "band": [
+   1647,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_CatholicHigh_EOY_Q32": {
+  "bbox": [
+   600,
+   570,
+   1960,
+   725
+  ],
+  "size": [
+   1520,
+   534
+  ],
+  "whited_words": [
+   "..Carl",
+   "arranged",
+   "some",
+   "black-and-white",
+   "beads",
+   "in",
+   "pattern",
+   ".",
+   "shown",
+   "below,",
+   "He-arranged",
+   "a",
+   "total",
+   "of",
+   "72",
+   "How-many",
+   "black",
+   "beads",
+   "did",
+   "he",
+   "use?"
+  ],
+  "ink_regions": 4,
+  "column_x": 2061,
+  "picture_options": false,
+  "page": 16,
+  "band": [
+   311,
+   1661
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q33": {
+  "bbox": [
+   1016,
+   1887,
+   1629,
+   2515
+  ],
+  "size": [
+   613,
+   628
+  ],
+  "whited_words": [],
+  "ink_regions": 1,
+  "column_x": 2061,
+  "picture_options": false,
+  "page": 16,
+  "band": [
+   1661,
+   3508
+  ],
+  "band_from": "index"
+ },
+ "2022_P3_CatholicHigh_EOY_Q34": {
+  "bbox": [
+   520,
+   495,
+   2000,
+   1580
+  ],
+  "size": [
+   1427,
+   1241
+  ],
+  "whited_words": [
+   "~",
+   "How",
+   "many",
+   "more",
+   "tickets",
+   "must",
+   "be",
+   "sold",
+   "on",
+   "that",
+   "the"
+  ],
+  "ink_regions": 4,
+  "column_x": 2035,
+  "picture_options": false,
+  "page": 17,
+  "band": [
+   312,
+   3508
+  ],
+  "band_from": "text",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q35": {
+  "bbox": [
+   570,
+   465,
+   1930,
+   1190
+  ],
+  "size": [
+   1482,
+   2513
+  ],
+  "whited_words": [
+   "Each",
+   "statement",
+   "below",
+   "is",
+   "either",
+   "true,",
+   "false",
+   "or",
+   "not",
+   "possible",
+   "to",
+   "tell",
+   "from",
+   "the",
+   "information",
+   "given.",
+   "For",
+   "each",
+   "statement,",
+   "put",
+   "a",
+   "tick",
+   "(\u201c)",
+   "in",
+   "the",
+   "correct",
+   "column.",
+   "to",
+   "tell",
+   "perimeter."
+  ],
+  "ink_regions": 4,
+  "column_x": 2054,
+  "picture_options": false,
+  "page": 18,
+  "band": [
+   300,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q39": {
+  "bbox": [
+   440,
+   765,
+   2000,
+   1300
+  ],
+  "size": [
+   1559,
+   382
+  ],
+  "whited_words": [
+   "40",
+   "cm",
+   "2rd"
+  ],
+  "ink_regions": 3,
+  "column_x": 2057,
+  "picture_options": false,
+  "page": 22,
+  "band": [
+   287,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": []
+ },
+ "2022_P3_CatholicHigh_EOY_Q40": {
+  "bbox": [
+   580,
+   465,
+   2000,
+   1470
+  ],
+  "size": [
+   1391,
+   1016
+  ],
+  "whited_words": [
+   "@",
+   "@",
+   "Figure",
+   "1",
+   "Figure",
+   "2",
+   "Figure",
+   "3",
+   "The",
+   "table",
+   "shows",
+   "the",
+   "number",
+   "of",
+   "black",
+   "and",
+   "white",
+   "counters",
+   "used",
+   "for",
+   "each",
+   "figure."
+  ],
+  "ink_regions": 3,
+  "column_x": 2032,
+  "picture_options": false,
+  "page": 23,
+  "band": [
+   304,
+   3508
+  ],
+  "band_from": "index",
+  "manual": true,
+  "whited": [
+   [
+    570,
+    830,
+    2010,
+    985
+   ]
+  ]
+ }
+}

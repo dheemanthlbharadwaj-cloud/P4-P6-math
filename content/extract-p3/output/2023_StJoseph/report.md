@@ -14,3 +14,6 @@
 - Q27: mango basket is cropped tight, the top of the mangoes is slightly cut.
 - Q30: leftover question-31 text fragment at the bottom.
 - Q31: figure cropped incompletely (balance scales partly cut, stray mark box and the top "?" circle fragment).
+
+## Crop fix
+- Checked 14 figure questions. Re-cropped manually: Q3 (new, vertical subtraction layout), Q15 (removed option text), Q21 (removed page number and mark box), Q26 (full number line with arrows and Start), Q27 (whole basket and caption), Q30 (removed Q31 text), Q31 (both balance scales complete), Q32 (new, CCA bar graph from above the question text). figure_ref: Q33 -> Q32 (old wrong Q33 crop deleted). has_figure changes: none. Q7, Q12, Q14, Q16, Q25 unchanged (already correct). Still imperfect: Q31 question stem has the rectangle and circle icons inline in the text (not in the crop); the scales show them. Scan is noisy but all figure content is clear.

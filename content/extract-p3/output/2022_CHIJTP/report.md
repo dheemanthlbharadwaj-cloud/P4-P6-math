@@ -9,3 +9,6 @@
 - Q12: crop includes the answer-options table below the figure.
 - Q19, Q20: no crop made (shared bar graph on page 9 missing).
 - Q8: coin labels at right edge slightly tight but present.
+
+## Crop fix
+- Checked 14 figure questions. Re-cropped manually: Q6 (removed leftover option text), Q12 (removed answer table), Q8 (wider margin), Q19 (new crop of the bar graph on page 9). figure_ref: Q20 -> Q19. has_figure changes: none. Still imperfect: none (Q8 keeps handwritten marks from the scan).

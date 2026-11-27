@@ -13,3 +13,7 @@
 - Q15: crop includes the line "Find the total number of students..." under the legend.
 - Q22: crop is cut on the left, top and bottom (grid rows incomplete, ragged edges); figure not usable as is.
 - Q23: crop starts mid-sentence ("rs and a teddy"), includes the "What is the mass of the teddy bear?" line, and the left scale in part (b) is cut off at the left.
+
+## Crop fix
+- Checked 11 crops. Fixed 6 manually: Q08 (options removed), Q12 (stray "altogether?" removed, "Pencil case" label whole), Q13 (arrow end whole), Q15 (line under legend removed), Q22 (whole grid), Q23 (both (a) and (b) scales whole; the text, answer line and answer box between them whited out, leaving a blank gap). Q09, Q14, Q18, Q21, Q24 kept. No figure_refs, no has_figure changes (Q10 is text only).
+- Still imperfect: Q23 has a blank gap between the (a) and (b) diagrams (only way to keep one crop without the in-between text).
