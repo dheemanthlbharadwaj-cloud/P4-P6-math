@@ -17,3 +17,8 @@
 - Fixed by hand: Q03 (option text "100 kg" removed), Q04 and Q05 (new crops, the clock and the angle figure were missing), Q08 (book and pen with names and prices, "$14.80" and "$2.60"), Q25 (the square and triangle with labels replaces the wrong crop).
 - figure_refs added: none. has_figure changes: none (Q2 and Q12 stay false, their content is in the text).
 - Still imperfect: Q15 has no letter A in the scan itself (the point is unlabelled on the paper).
+
+
+## Answer review
+
+- **2024_P3_Raffles_EOY_Q16**: final answer '48' (was '48'). Question text confirmed from page (6 donuts per box, 8 boxes). Matches key.

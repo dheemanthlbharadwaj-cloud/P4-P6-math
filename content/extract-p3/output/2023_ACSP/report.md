@@ -17,3 +17,6 @@
 
 ## Crop fix
 - Checked 12 existing crops plus all other questions: all 12 crops are complete and clean (Q22 has a tiny stray scan mark, left). Fixed: none re-cropped. figure_ref: Q34 -> Q33 (shared bar graph; has_figure turned on). Left off: Q27 (vertical subtraction written out in question text), Q12 (digit cards in text). Still imperfect: none.
+
+## Answer review
+- Q3: final unchanged; beakers read about 200 + 400 + 350 + 100 = 1050 ml = 1 l 50 ml; key 3 (page 25) agrees

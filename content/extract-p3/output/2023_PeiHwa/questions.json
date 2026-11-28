@@ -1,1002 +1,1002 @@
 [
- {
-  "id": "2023_P3_PeiHwa_EOY_Q01",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "What is the value of the digit 5 in 5609?",
-  "options": {
-   "1": "5",
-   "2": "50",
-   "3": "500",
-   "4": "5000"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q01",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "What is the value of the digit 5 in 5609?",
+    "options": {
+      "1": "5",
+      "2": "50",
+      "3": "500",
+      "4": "5000"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'56097' -> '5609?' (question mark read as 7)"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'56097' -> '5609?' (question mark read as 7)"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q02",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Which of the following is six thousand and fifty in numerals?",
-  "options": {
-   "1": "6550",
-   "2": "6500",
-   "3": "6050",
-   "4": "6005"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q02",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Which of the following is six thousand and fifty in numerals?",
+    "options": {
+      "1": "6550",
+      "2": "6500",
+      "3": "6050",
+      "4": "6005"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q03",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "What is the missing number in the box?\n$\\frac{12}{15} = \\frac{\\square}{5}$",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q03",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "What is the missing number in the box?\n$\\frac{12}{15} = \\frac{\\square}{5}$",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction garbled in OCR, read from image",
+      "option (1) read as (4)"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction garbled in OCR, read from image",
-   "option (1) read as (4)"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q04",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Which of the following is the same as 6 km 20 m?",
-  "options": {
-   "1": "602 m",
-   "2": "620 m",
-   "3": "6020 m",
-   "4": "6200 m"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q04",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Which of the following is the same as 6 km 20 m?",
+    "options": {
+      "1": "602 m",
+      "2": "620 m",
+      "3": "6020 m",
+      "4": "6200 m"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q05",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "In the figure, which line is perpendicular to AB?",
-  "options": {
-   "1": "CD",
-   "2": "EF",
-   "3": "GH",
-   "4": "IJ"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q05",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "In the figure, which line is perpendicular to AB?",
+    "options": {
+      "1": "CD",
+      "2": "EF",
+      "3": "GH",
+      "4": "IJ"
+    },
+    "answer_key": "4",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "line segments AB, CD, EF, GH, IJ on a square grid",
+    "ocr_fixes": [
+      "Q number missing; options garbled, read from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "line segments AB, CD, EF, GH, IJ on a square grid",
-  "ocr_fixes": [
-   "Q number missing; options garbled, read from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q06",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Arrange the fractions in order from the smallest to the greatest.\n$\\frac{7}{9}$, $\\frac{1}{2}$, $\\frac{4}{9}$",
-  "options": {
-   "1": "$\\frac{7}{9}$, $\\frac{4}{9}$, $\\frac{1}{2}$",
-   "2": "$\\frac{4}{9}$, $\\frac{1}{2}$, $\\frac{7}{9}$",
-   "3": "$\\frac{4}{9}$, $\\frac{7}{9}$, $\\frac{1}{2}$",
-   "4": "$\\frac{1}{2}$, $\\frac{7}{9}$, $\\frac{4}{9}$"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q06",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Arrange the fractions in order from the smallest to the greatest.\n$\\frac{7}{9}$, $\\frac{1}{2}$, $\\frac{4}{9}$",
+    "options": {
+      "1": "$\\frac{7}{9}$, $\\frac{4}{9}$, $\\frac{1}{2}$",
+      "2": "$\\frac{4}{9}$, $\\frac{1}{2}$, $\\frac{7}{9}$",
+      "3": "$\\frac{4}{9}$, $\\frac{7}{9}$, $\\frac{1}{2}$",
+      "4": "$\\frac{1}{2}$, $\\frac{7}{9}$, $\\frac{4}{9}$"
+    },
+    "answer_key": "2",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "reviewed: key says 3, correct is option 2 (4/9, 1/2, 7/9) because 4/9 < 1/2 < 7/9; option 3 puts 7/9 before 1/2 (options re-read from page image)",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "solved:2 differs from key (key page prints 3, but 4/9 < 1/2 < 7/9 is option 2); answer_key set to 2",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q07",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Jason has 300 stickers. Mabel has 50 fewer stickers than Jason. How many stickers do they have altogether?",
-  "options": {
-   "1": "250",
-   "2": "350",
-   "3": "550",
-   "4": "650"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q07",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Jason has 300 stickers. Mabel has 50 fewer stickers than Jason. How many stickers do they have altogether?",
+    "options": {
+      "1": "250",
+      "2": "350",
+      "3": "550",
+      "4": "650"
+    },
+    "answer_key": "3",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'tow' -> 'How'",
+      "'560'' -> '550'"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'tow' -> 'How'",
-   "'560'' -> '550'"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q08",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Jordan had 100 cards. He gave some cards to 10 friends. Each friend received 6 cards. How many cards did he have left in the end?",
-  "options": {
-   "1": "84",
-   "2": "60",
-   "3": "40",
-   "4": "16"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q08",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Jordan had 100 cards. He gave some cards to 10 friends. Each friend received 6 cards. How many cards did he have left in the end?",
+    "options": {
+      "1": "84",
+      "2": "60",
+      "3": "40",
+      "4": "16"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q09",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Candice was given ＄100 to buy a book and a recorder. How much change would Candice receive?",
-  "options": {
-   "1": "＄44.90",
-   "2": "＄55.10",
-   "3": "＄62.10",
-   "4": "＄82.80"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q09",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Candice was given ＄100 to buy a book and a recorder. How much change would Candice receive?",
+    "options": {
+      "1": "＄44.90",
+      "2": "＄55.10",
+      "3": "＄62.10",
+      "4": "＄82.80"
+    },
+    "answer_key": "1",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "book ＄17.20 and recorder ＄37.90",
+    "ocr_fixes": [
+      "'$' -> '＄'",
+      "prices read from image (OCR had $47.20, ＄44.80)",
+      "option 1 read as ＄44.80, image says ＄44.90"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "book ＄17.20 and recorder ＄37.90",
-  "ocr_fixes": [
-   "'$' -> '＄'",
-   "prices read from image (OCR had $47.20, ＄44.80)",
-   "option 1 read as ＄44.80, image says ＄44.90"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q10",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The figure below is drawn on 1-cm square grid. The perimeter of Figure A is ______ cm.",
-  "options": {
-   "1": "12 cm",
-   "2": "13 cm",
-   "3": "18 cm",
-   "4": "20 cm"
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q10",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The figure below is drawn on 1-cm square grid. The perimeter of Figure A is ______ cm.",
+    "options": {
+      "1": "12 cm",
+      "2": "13 cm",
+      "3": "18 cm",
+      "4": "20 cm"
+    },
+    "answer_key": "4",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "shaded figure A on a 1-cm square grid",
+    "ocr_fixes": [
+      "'d-cm' -> '1-cm'"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "shaded figure A on a 1-cm square grid",
-  "ocr_fixes": [
-   "'d-cm' -> '1-cm'"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q11",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 7,
-  "section": "B",
-  "question_no": 11,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing number in the pattern?\n3, 6, 10, 13, $\\square$, 20, 24",
-  "answer": "17",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'42.' -> numbering fixed; sequence read from image"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q12",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 7,
-  "section": "B",
-  "question_no": 12,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing number in the box?\n  8 $\\square$ 6 2\n− 4 3 7 3\n  3 6 8 9",
-  "answer": "0",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "vertical subtraction 8?62 − 4373 = 3689",
-  "ocr_fixes": [
-   "Q number read as 42",
-   "layout read from image"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q13",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 7,
-  "section": "B",
-  "question_no": 13,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the remainder when 597 $\\div$ 6.",
-  "answer": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 43",
-   "'+' -> '$\\div$'"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q14",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 14,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Compare the numbers using '<', '>' or '='.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "$9 \\times 6$ ○ $9 \\times 7$"
-   },
-   {
-    "part": "b",
-    "text": "$\\frac{5}{6}$ ○ $\\frac{7}{12}$"
-   }
-  ],
-  "answer": "(a) <, (b) >",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "<",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": ">",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 45",
-   "parts read from image"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "solved: b is > (5/6 = 10/12 > 7/12) differs from key (key page prints '<' for b)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q15",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 15,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Three angles are drawn on the square grid. Identify if the angle is an acute angle, a right angle or an obtuse angle. Write your answer in the table below.",
-  "answer": "a: acute, c: right, b: obtuse",
-  "answer_parts": [
-   {
-    "part": "acute",
-    "value": "a",
-    "unit": ""
-   },
-   {
-    "part": "right",
-    "value": "c",
-    "unit": ""
-   },
-   {
-    "part": "obtuse",
-    "value": "b",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "angles a, b, c on a square grid with an answer table (acute, right, obtuse)",
-  "ocr_fixes": [
-   "Q number read as 45"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q16",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 16,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the sum of $\\frac{1}{2}$ and $\\frac{1}{6}$. Express your answer in its simplest form.",
-  "answer": "$\\frac{2}{3}$",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 46; fractions read from image"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q17",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Peter had 40 marbles. After he gave 7 marbles to Monica, they had the same number of marbles. How many marbles did Monica have at first?",
-  "answer": "26",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q18",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mr Lee had some oranges. He placed 9 oranges into each box and had 165 boxes of oranges. There were 3 oranges left unpacked. How many oranges did Mr Lee have at first?",
-  "answer": "1488",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'165 boxes:of' spacing"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q19",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The length of the rectangular field is 8 m. Its length is twice of its breadth. What is the area of the rectangular field?",
-  "answer": "32",
-  "unit": "m²",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle with length 8 m marked",
-  "ocr_fixes": [
-   "Q number read as 49",
-   "'Thelength df' -> 'The length of'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q20",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 20,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The graph below shows the number of cups of orange juice sold over 5 days. The number of cups of orange juice sold is not shown. Each statement below is either true or false. For each statement, put a tick (✓) to indicate your answer.",
-  "question_parts": [
-   {
-    "part": "1",
-    "text": "Monday has the least number of cups of orange juice sold."
-   },
-   {
-    "part": "2",
-    "text": "The number of cups of orange juice sold on Thursday is more than the number of cups of orange juice sold on Wednesday."
-   },
-   {
-    "part": "3",
-    "text": "The number of cups of orange juice sold on Tuesday is twice the number of cups of orange juice sold on Friday."
-   }
-  ],
-  "answer": "False, True, False",
-  "answer_parts": [
-   {
-    "part": "1",
-    "value": "False",
-    "unit": ""
-   },
-   {
-    "part": "2",
-    "value": "True",
-    "unit": ""
-   },
-   {
-    "part": "3",
-    "value": "False",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "horizontal bar graph Monday to Friday without numbers, plus a true/false statement table",
-  "ocr_fixes": [
-   "'is not shown' kept as printed"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q21",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 11,
-  "section": "C",
-  "question_no": 21,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The sum of 2 numbers is 78. The difference between the 2 numbers is 16.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Find the smaller number."
-   },
-   {
-    "part": "b",
-    "text": "Find the bigger number."
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "31",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "47",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q22",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 12,
-  "section": "C",
-  "question_no": 22,
-  "marks": 4,
-  "question_type": "long",
-  "question": "A lunch box cost ＄25. A water bottle cost ＄8 more than a lunch box. A bag cost twice as much as a lunch box.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Which item cost the most? How much did that item cost?"
-   },
-   {
-    "part": "b",
-    "text": "What was the total cost of the 3 items?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "Bag, 50",
-    "unit": "＄"
-   },
-   {
-    "part": "b",
-    "value": "108",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'$' -> '＄'",
-   "'bottie' -> 'bottle'"
-  ],
-  "checked_against_image": [
-   12,
-   17
-  ],
-  "answer_check": "solved: item that costs most is the bag (＄50), key page says 'Lunch box' with cost ＄50 (a slip); b = ＄108 agrees",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q23",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 13,
-  "section": "C",
-  "question_no": 23,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Gerard had some water in the two beakers.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What was the total amount of water in the two beakers?"
-   },
-   {
-    "part": "b",
-    "text": "He needed 3 ℓ of water to make some juice. How much more water did he need to make the juice? Give your answer in litres and millilitres."
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "860",
-    "unit": "mℓ"
-   },
-   {
-    "part": "b",
-    "value": "2 ℓ 140 mℓ",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "Beaker A (scale to 100 mℓ) and Beaker B (scale to 1000 mℓ) with water",
-  "ocr_fixes": [
-   "'3 @' -> '3 ℓ'"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok (A about 60 mℓ + B 800 mℓ = 860 mℓ per key; scale reading not exact)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q24",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 14,
-  "section": "C",
-  "question_no": 24,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The bar graph represents the number of local and foreign stamps collected by Adam, Ben, Charlie and David.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Who had the least number of local and foreign stamps in total?"
-   },
-   {
-    "part": "b",
-    "text": "Who had twice as many foreign stamps as Ben?"
-   },
-   {
-    "part": "c",
-    "text": "Charlie sold some local stamps to Adam. In the end, both of them had the same number of local stamps. Charlie sold each stamp at ＄2. How much did Adam pay for the stamps?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "Adam",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "David",
-    "unit": ""
-   },
-   {
-    "part": "c",
-    "value": "20",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction",
-   "Money"
-  ],
-  "has_figure": true,
-  "figure_note": "double bar graph of local and foreign stamps for four boys",
-  "ocr_fixes": [
-   "'least-number' spacing",
-   "'$2' -> '＄2'"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_PeiHwa_EOY_Q25",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Pei Hwa Presbyterian",
-  "exam": "EOY",
-  "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
-  "source_pdf_page": 15,
-  "section": "C",
-  "question_no": 25,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Melody arrived at the bus-stop. She waited 35 min for the bus. She boarded the bus at 13 20 to go to a shopping mall.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What time did Melody arrive at the bus-stop? Draw a timeline to represent the situation."
-   },
-   {
-    "part": "b",
-    "text": "Melody reached the shopping mall at 13 55. She left the shopping mall at 16 15. How long was she at the shopping mall? Draw a timeline to represent the situation."
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "12 45",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "2 h 20 min",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Working' column label removed"
-  ],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q11",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 7,
+    "section": "B",
+    "question_no": 11,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing number in the pattern?\n3, 6, 10, 13, $\\square$, 20, 24",
+    "answer": "17",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'42.' -> numbering fixed; sequence read from image"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q12",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 7,
+    "section": "B",
+    "question_no": 12,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing number in the box?\n  8 $\\square$ 6 2\n− 4 3 7 3\n  3 6 8 9",
+    "answer": "0",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "vertical subtraction 8?62 − 4373 = 3689",
+    "ocr_fixes": [
+      "Q number read as 42",
+      "layout read from image"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q13",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 7,
+    "section": "B",
+    "question_no": 13,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the remainder when 597 $\\div$ 6.",
+    "answer": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 43",
+      "'+' -> '$\\div$'"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q14",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 14,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Compare the numbers using '<', '>' or '='.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "$9 \\times 6$ ○ $9 \\times 7$"
+      },
+      {
+        "part": "b",
+        "text": "$\\frac{5}{6}$ ○ $\\frac{7}{12}$"
+      }
+    ],
+    "answer": "(a) <, (b) >",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "<",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": ">",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 45",
+      "parts read from image"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "reviewed: key says (b) <, correct is > because 5/6 = 10/12 > 7/12; (a) 9x6 < 9x7",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q15",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 15,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Three angles are drawn on the square grid. Identify if the angle is an acute angle, a right angle or an obtuse angle. Write your answer in the table below.",
+    "answer": "a: acute, c: right, b: obtuse",
+    "answer_parts": [
+      {
+        "part": "acute",
+        "value": "a",
+        "unit": ""
+      },
+      {
+        "part": "right",
+        "value": "c",
+        "unit": ""
+      },
+      {
+        "part": "obtuse",
+        "value": "b",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "angles a, b, c on a square grid with an answer table (acute, right, obtuse)",
+    "ocr_fixes": [
+      "Q number read as 45"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q16",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 16,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the sum of $\\frac{1}{2}$ and $\\frac{1}{6}$. Express your answer in its simplest form.",
+    "answer": "$\\frac{2}{3}$",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 46; fractions read from image"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q17",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Peter had 40 marbles. After he gave 7 marbles to Monica, they had the same number of marbles. How many marbles did Monica have at first?",
+    "answer": "26",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q18",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mr Lee had some oranges. He placed 9 oranges into each box and had 165 boxes of oranges. There were 3 oranges left unpacked. How many oranges did Mr Lee have at first?",
+    "answer": "1488",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'165 boxes:of' spacing"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q19",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The length of the rectangular field is 8 m. Its length is twice of its breadth. What is the area of the rectangular field?",
+    "answer": "32",
+    "unit": "m²",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle with length 8 m marked",
+    "ocr_fixes": [
+      "Q number read as 49",
+      "'Thelength df' -> 'The length of'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q20",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 20,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The graph below shows the number of cups of orange juice sold over 5 days. The number of cups of orange juice sold is not shown. Each statement below is either true or false. For each statement, put a tick (✓) to indicate your answer.",
+    "question_parts": [
+      {
+        "part": "1",
+        "text": "Monday has the least number of cups of orange juice sold."
+      },
+      {
+        "part": "2",
+        "text": "The number of cups of orange juice sold on Thursday is more than the number of cups of orange juice sold on Wednesday."
+      },
+      {
+        "part": "3",
+        "text": "The number of cups of orange juice sold on Tuesday is twice the number of cups of orange juice sold on Friday."
+      }
+    ],
+    "answer": "False, True, False",
+    "answer_parts": [
+      {
+        "part": "1",
+        "value": "False",
+        "unit": ""
+      },
+      {
+        "part": "2",
+        "value": "True",
+        "unit": ""
+      },
+      {
+        "part": "3",
+        "value": "False",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "horizontal bar graph Monday to Friday without numbers, plus a true/false statement table",
+    "ocr_fixes": [
+      "'is not shown' kept as printed"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q21",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 11,
+    "section": "C",
+    "question_no": 21,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The sum of 2 numbers is 78. The difference between the 2 numbers is 16.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Find the smaller number."
+      },
+      {
+        "part": "b",
+        "text": "Find the bigger number."
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "31",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "47",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q22",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 12,
+    "section": "C",
+    "question_no": 22,
+    "marks": 4,
+    "question_type": "long",
+    "question": "A lunch box cost ＄25. A water bottle cost ＄8 more than a lunch box. A bag cost twice as much as a lunch box.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Which item cost the most? How much did that item cost?"
+      },
+      {
+        "part": "b",
+        "text": "What was the total cost of the 3 items?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "Bag, 50",
+        "unit": "＄"
+      },
+      {
+        "part": "b",
+        "value": "108",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'$' -> '＄'",
+      "'bottie' -> 'bottle'"
+    ],
+    "checked_against_image": [
+      12,
+      17
+    ],
+    "answer_check": "reviewed: key text says Lunch box $50 but the bag ($50) costs the most (lunch box 25, bottle 33, bag 50); b = 25+33+50 = 108",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q23",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 13,
+    "section": "C",
+    "question_no": 23,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Gerard had some water in the two beakers.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What was the total amount of water in the two beakers?"
+      },
+      {
+        "part": "b",
+        "text": "He needed 3 ℓ of water to make some juice. How much more water did he need to make the juice? Give your answer in litres and millilitres."
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "860",
+        "unit": "mℓ"
+      },
+      {
+        "part": "b",
+        "value": "2 ℓ 140 mℓ",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "Beaker A (scale to 100 mℓ) and Beaker B (scale to 1000 mℓ) with water",
+    "ocr_fixes": [
+      "'3 @' -> '3 ℓ'"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok (reviewed): beaker A 60 mL, beaker B ~800 mL (surface just under 800 mark) = 860 mL; 3000 - 860 = 2140 mL = 2 L 140 mL",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q24",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 14,
+    "section": "C",
+    "question_no": 24,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The bar graph represents the number of local and foreign stamps collected by Adam, Ben, Charlie and David.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Who had the least number of local and foreign stamps in total?"
+      },
+      {
+        "part": "b",
+        "text": "Who had twice as many foreign stamps as Ben?"
+      },
+      {
+        "part": "c",
+        "text": "Charlie sold some local stamps to Adam. In the end, both of them had the same number of local stamps. Charlie sold each stamp at ＄2. How much did Adam pay for the stamps?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "Adam",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "David",
+        "unit": ""
+      },
+      {
+        "part": "c",
+        "value": "20",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction",
+      "Money"
+    ],
+    "has_figure": true,
+    "figure_note": "double bar graph of local and foreign stamps for four boys",
+    "ocr_fixes": [
+      "'least-number' spacing",
+      "'$2' -> '＄2'"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_PeiHwa_EOY_Q25",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Pei Hwa Presbyterian",
+    "exam": "EOY",
+    "source": "(Pei Hwa Presbyterian) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-PeiHwa.pdf",
+    "source_pdf_page": 15,
+    "section": "C",
+    "question_no": 25,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Melody arrived at the bus-stop. She waited 35 min for the bus. She boarded the bus at 13 20 to go to a shopping mall.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What time did Melody arrive at the bus-stop? Draw a timeline to represent the situation."
+      },
+      {
+        "part": "b",
+        "text": "Melody reached the shopping mall at 13 55. She left the shopping mall at 16 15. How long was she at the shopping mall? Draw a timeline to represent the situation."
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "12 45",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "2 h 20 min",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Working' column label removed"
+    ],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

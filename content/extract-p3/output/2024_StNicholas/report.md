@@ -30,3 +30,8 @@ Paper: CHIJ St Nicholas Girls' School (Primary) P3 2024 End-Year Assessment (SA2
 ## Crop fix
 - Checked 9 crops. Fixed 6 manually: Q04, Q09 (page number, MARKS box, question line removed), Q16 (y-axis label "Pupils" restored), Q18 (cans and packets intact, no page furniture), Q22, Q23 (figures plus the table; the "Study Figures..." line whited out). Q03, Q13, Q14 kept. No figure_refs, no has_figure changes.
 - Still imperfect: scan noise only.
+
+
+## Answer review
+- Q13: drawing; key shows a parallel line with arrowheads.
+- Q14: 260 x 6 = 1560 mℓ; key agrees.

@@ -551,8 +551,8 @@
    "OCR noise 'fey', 'Vw WY' removed"
   ],
   "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 8 x 6 = 48; matches key",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Raffles_EOY_Q17",

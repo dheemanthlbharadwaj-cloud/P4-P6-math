@@ -503,8 +503,8 @@
   "checked_against_image": [
    6
   ],
-  "answer_check": "ok: clock read 1.55, minus 15 min = 1.40",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): clock reads 1.55 (hour hand just before 2, minute hand on 11); 1.55 - 15 min = 1.40 p.m.; key 1",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_SCGS_EOY_Q15",
@@ -812,8 +812,8 @@
   "checked_against_image": [
    11
   ],
-  "answer_check": "ok: level about 800 mℓ, key 200 accepted",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): scale 100 mℓ per tick, level at 800 mℓ; 1000-800 = 200 mℓ; key 200 mℓ",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_SCGS_EOY_Q25",
@@ -844,8 +844,8 @@
   "checked_against_image": [
    12
   ],
-  "answer_check": "ok: pointer about 340 g, key 680 accepted",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): dial full circle = 600 g, pointer about 340 g; 340x2 = 680 g; key 680 g",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_SCGS_EOY_Q26",
@@ -927,7 +927,7 @@
   "marks": 2,
   "question_type": "short",
   "question": "Use a ruler and a set square to draw a line which is perpendicular to AB, and passing through Point W.",
-  "answer": "Drawing: a line through W perpendicular to AB (along the grid diagonal)",
+  "answer": "Line through W perpendicular to AB: AB goes 3 squares right and 3 up from A to B, so the perpendicular goes 1 square down and 1 right at each step from W, through grid points 1, 2 and 3 squares diagonally down-right of W (crossing AB halfway between A and B)",
   "unit": "",
   "topic_primary": "Perpendicular and Parallel Lines",
   "topics": [
@@ -939,8 +939,9 @@
   "checked_against_image": [
    13
   ],
-  "answer_check": "ok: drawing answer, key shows the line",
-  "confidence": "medium"
+  "answer_check": "reviewed: drawing, key shows the X shape (line from W down-right crossing AB)",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2022_P3_SCGS_EOY_Q29",
@@ -988,7 +989,7 @@
   "marks": 2,
   "question_type": "short",
   "question": "Which country won twice as many medals as Singapore?",
-  "answer": "Japan",
+  "answer": "Japan and China",
   "unit": "",
   "topic_primary": "Bar Graphs",
   "topics": [
@@ -1000,8 +1001,8 @@
   "checked_against_image": [
    14
   ],
-  "answer_check": "ok: Japan about 32 = 2 x 16, but China bar is also about 32; key says Japan",
-  "confidence": "medium",
+  "answer_check": "reviewed: key says Japan; the graph shows Japan 32 and China 32, both twice Singapore's 16, so both are correct",
+  "confidence": "high",
   "figure_ref": "2022_P3_SCGS_EOY_Q29"
  },
  {

@@ -633,8 +633,8 @@
   "checked_against_image": [
    10
   ],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): Jan about 450, Feb 400, Mar 540, Apr about 450; (a) least is February so False; (b) Jan = Apr so True; key F, T",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_StHilda_EOY_Q19",
@@ -752,8 +752,8 @@
   "checked_against_image": [
    12
   ],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): dial full circle = 500 g, grapes about 350 g, bananas about 220 g; difference 130 g; key 130 g",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_StHilda_EOY_Q23",

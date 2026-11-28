@@ -19,3 +19,11 @@
 - Checked 7 figures; created the two missing crops manually (Q06 vertical subtraction with the smiley, Q10 octagon on its 1 cm grid with both 1 cm labels) and re-cropped Q20 (Office label and desk were cut at the left). Q03, Q05, Q09, Q14, Q17 kept.
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: Q14 shows faint scan marks (compass arcs, a short pencil stroke) that are part of the printed page inside the grid.
+
+
+## Answer review
+
+- Q03: 5; unchanged.
+- Q05: 2 kg 600 g (option 4); unchanged.
+- Q09: key 4 vs correct 2 (3L); answer_key stays 2, confidence high (bars measured).
+- Q14: drawing answer text made precise, answer_type drawing.

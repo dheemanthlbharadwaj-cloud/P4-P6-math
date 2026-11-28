@@ -22,3 +22,10 @@
 - figure_refs added: none.
 - has_figure changes: Q14 turned back on (the time line is a figure). Q18 stays off (the multiplication is written in the question text).
 - Still imperfect: Q20 holds both the arrow figure and the AB/Z grid in one crop, with a gap between them (both are needed by the question).
+
+
+## Answer review
+
+- **2024_P3_PLMGS_EOY_Q03**: final answer '2' (was '2'). Hand-drawn figure; top peak is the second near-right angle. Matches key.
+- **2024_P3_PLMGS_EOY_Q09**: final answer '2' (was '2'). Matches key (option 2).
+- **2024_P3_PLMGS_EOY_Q20**: final answer '(a) JQ // KM (also JK // PQ); (b) drawing: a line through Z perpendicular to AB, i.e. a diagonal sloping down to the right at 45 degrees (AB slopes up to the right), passing through grid points Z, one square right and one down of Z, and one square left and one up of Z, running from the top edge (2 squares right of the left edge) to the bottom-right corner of the grid' (was 'a JQ // KL, b (line drawn on grid)'). Key's KL is a misread of KM; part (b) is a drawing, described precisely.

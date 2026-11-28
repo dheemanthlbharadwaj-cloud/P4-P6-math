@@ -1,1410 +1,1411 @@
 [
- {
-  "id": "2023_P3_Rosyth_EOY_Q01",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "In 8371, the digit 3 is in the ______ place.",
-  "options": {
-   "1": "ones",
-   "2": "tens",
-   "3": "hundreds",
-   "4": "thousands"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q01",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "In 8371, the digit 3 is in the ______ place.",
+    "options": {
+      "1": "ones",
+      "2": "tens",
+      "3": "hundreds",
+      "4": "thousands"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "OCR read 8377 -> 8371"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "OCR read 8377 -> 8371"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q02",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Find the product of 7 and 8.",
-  "options": {
-   "1": "1",
-   "2": "15",
-   "3": "54",
-   "4": "56"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q02",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Find the product of 7 and 8.",
+    "options": {
+      "1": "1",
+      "2": "15",
+      "3": "54",
+      "4": "56"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q03",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "3 km 5 m is the same as ______ m.",
-  "options": {
-   "1": "35",
-   "2": "305",
-   "3": "3005",
-   "4": "3500"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q03",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "3 km 5 m is the same as ______ m.",
+    "options": {
+      "1": "35",
+      "2": "305",
+      "3": "3005",
+      "4": "3500"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q04",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "105 cents is the same as ______.",
-  "options": {
-   "1": "＄1.05",
-   "2": "＄1.50",
-   "3": "＄10.50",
-   "4": "＄105.00"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q04",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "105 cents is the same as ______.",
+    "options": {
+      "1": "＄1.05",
+      "2": "＄1.50",
+      "3": "＄10.50",
+      "4": "＄105.00"
+    },
+    "answer_key": "1",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "OCR '405 cents' -> '105 cents'",
+      "$ -> fullwidth"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "OCR '405 cents' -> '105 cents'",
-   "$ -> fullwidth"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q05",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "The perimeter of the figure below is ______ cm.",
-  "options": {
-   "1": "7",
-   "2": "8",
-   "3": "13",
-   "4": "14"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q05",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "The perimeter of the figure below is ______ cm.",
+    "options": {
+      "1": "7",
+      "2": "8",
+      "3": "13",
+      "4": "14"
+    },
+    "answer_key": "4",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "shape drawn on 1 cm grid",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "shape drawn on 1 cm grid",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q06",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "6 tens + 9 hundreds = ______",
-  "options": {
-   "1": "69",
-   "2": "690",
-   "3": "906",
-   "4": "960"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q06",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "6 tens + 9 hundreds = ______",
+    "options": {
+      "1": "69",
+      "2": "690",
+      "3": "906",
+      "4": "960"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q07",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "300 more than 57 tens is ______.",
-  "options": {
-   "1": "243",
-   "2": "270",
-   "3": "357",
-   "4": "870"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q07",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "300 more than 57 tens is ______.",
+    "options": {
+      "1": "243",
+      "2": "270",
+      "3": "357",
+      "4": "870"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "OCR '57 fens' -> '57 tens'",
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "reviewed: key says 3 (357), correct is 4 (870) because 57 tens = 570 and 570 + 300 = 870",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "OCR '57 fens' -> '57 tens'",
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "solved:870 (option 4) differs from key 3 (357)",
-  "confidence": "low"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q08",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the difference between 3600 and 184.",
-  "options": {
-   "1": "3416",
-   "2": "3426",
-   "3": "3516",
-   "4": "3584"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q08",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the difference between 3600 and 184.",
+    "options": {
+      "1": "3416",
+      "2": "3426",
+      "3": "3516",
+      "4": "3584"
+    },
+    "answer_key": "1",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option 3 '3816' -> '3516' (from image)",
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option 3 '3816' -> '3516' (from image)",
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q09",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The sum of two numbers is 5211. The smaller number is 1979. Find the greater number.",
-  "options": {
-   "1": "3232",
-   "2": "3332",
-   "3": "4768",
-   "4": "7190"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q09",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The sum of two numbers is 5211. The smaller number is 1979. Find the greater number.",
+    "options": {
+      "1": "3232",
+      "2": "3332",
+      "3": "4768",
+      "4": "7190"
+    },
+    "answer_key": "1",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'5214-1' -> '5211'",
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'5214-1' -> '5211'",
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q10",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the quotient when 525 is divided by 5?",
-  "options": {
-   "1": "15",
-   "2": "105",
-   "3": "125",
-   "4": "150"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q10",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the quotient when 525 is divided by 5?",
+    "options": {
+      "1": "15",
+      "2": "105",
+      "3": "125",
+      "4": "150"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q11",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many threes are there in 233?",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "76",
-   "4": "77"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q11",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many threes are there in 233?",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "76",
+      "4": "77"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as '1'"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as '1'"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q12",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Dan has 4 boxes of balloons. There are 8 balloons in each box. He uses 12 balloons for a party. How many balloons has he left?",
-  "options": {
-   "1": "12",
-   "2": "20",
-   "3": "32",
-   "4": "44"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q12",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Dan has 4 boxes of balloons. There are 8 balloons in each box. He uses 12 balloons for a party. How many balloons has he left?",
+    "options": {
+      "1": "12",
+      "2": "20",
+      "3": "32",
+      "4": "44"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option labels (4)/3) repaired"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option labels (4)/3) repaired"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q13",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following figures is not equivalent to $\\frac{1}{4}$?",
-  "options": {
-   "1": "square of 4 equal parts, 1 shaded",
-   "2": "rectangle of 8 equal parts, 2 shaded",
-   "3": "square cut by both diagonals into 4 triangles, 1 shaded",
-   "4": "square cut into 8 triangles, 1 shaded"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q13",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following figures is not equivalent to $\\frac{1}{4}$?",
+    "options": {
+      "1": "square of 4 equal parts, 1 shaded",
+      "2": "rectangle of 8 equal parts, 2 shaded",
+      "3": "square cut by both diagonals into 4 triangles, 1 shaded",
+      "4": "square cut into 8 triangles, 1 shaded"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "four fraction diagrams as the options",
+    "ocr_fixes": [
+      "fraction and figure options read from image; options described in words"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "four fraction diagrams as the options",
-  "ocr_fixes": [
-   "fraction and figure options read from image; options described in words"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q14",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A pizza was cut into 6 equal pieces. Alice ate $\\frac{2}{3}$ of the pizza and Carol ate $\\frac{1}{6}$ of it. What fraction of the pizza was eaten?",
-  "options": {
-   "1": "$\\frac{1}{6}$",
-   "2": "$\\frac{5}{6}$",
-   "3": "$\\frac{3}{9}$",
-   "4": "$\\frac{5}{12}$"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q14",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A pizza was cut into 6 equal pieces. Alice ate $\\frac{2}{3}$ of the pizza and Carol ate $\\frac{1}{6}$ of it. What fraction of the pizza was eaten?",
+    "options": {
+      "1": "$\\frac{1}{6}$",
+      "2": "$\\frac{5}{6}$",
+      "3": "$\\frac{3}{9}$",
+      "4": "$\\frac{5}{12}$"
+    },
+    "answer_key": "2",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image",
+      "Q number read as '44'"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image",
-   "Q number read as '44'"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q15",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the mass of the object below?",
-  "options": {
-   "1": "1 kg 15 g",
-   "2": "1 kg 30 g",
-   "3": "1 kg 150 g",
-   "4": "1 kg 300 g"
+  {
+    "id": "2023_P3_Rosyth_EOY_Q15",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the mass of the object below?",
+    "options": {
+      "1": "1 kg 15 g",
+      "2": "1 kg 30 g",
+      "3": "1 kg 150 g",
+      "4": "1 kg 300 g"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "dial scale, pointer just past 1 kg",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok (reviewed): dial is 1 kg per half turn, pointer 3 ticks (50 g each) past 1 kg = 1 kg 150 g",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "dial scale, pointer just past 1 kg",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok (key; pointer reading not independently confirmed)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q16",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Write four thousand and fifteen in numeral.",
-  "answer": "4015",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q17",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 17,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing number?\n7130, ______, 6730, 6530, 6330",
-  "answer": "6930",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q18",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 18,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the volume of water in the beaker?",
-  "answer": "700",
-  "unit": "mℓ",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "beaker with scale, water level near the 700 mark",
-  "ocr_fixes": [
-   "Q number read as 48"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok (key; scale not independently read)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q19",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 19,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the sum of ＄25.50 and ＄7.",
-  "answer": "32.50",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'fPonot write' noise removed"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q20",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 20,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the area of square X.",
-  "answer": "49",
-  "unit": "m$^2$",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "square X with side 7 m",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q21",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the sum of 4316 and 2784.",
-  "answer": "7100",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q22",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "54 less than 67 hundreds is ______",
-  "answer": "6646",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q23",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the value of (a) and (b).\nNumber of tricycles: 1, 2, 5, 7, 8, 10\nNumber of wheels: 3, 6, (a), 21, (b), 30",
-  "answer": "(a) 15 (b) 24",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "15",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "24",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "table of tricycles and wheels",
-  "ocr_fixes": [
-   "table read from image"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q24",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Arrange the following fractions in order. Begin with the smallest.\n$\\frac{3}{5}$, $\\frac{4}{10}$, $\\frac{1}{2}$",
-  "answer": "$\\frac{4}{10}$, $\\frac{1}{2}$, $\\frac{3}{5}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q25",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing number in the box?\n$\\frac{1}{2}$ = $\\frac{?}{6}$",
-  "answer": "3",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction read from image"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q26",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "2 boys cut a cake into 4 pieces. Eugene ate $\\frac{1}{4}$ of it. Michael ate $\\frac{1}{2}$ of it. How many pieces of the cake were left?",
-  "answer": "1",
-  "unit": "piece",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number '2?' etc; fractions read from image"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q27",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "3 children shared a bar of chocolate. Edwin ate $\\frac{5}{12}$ of it, Rayner ate $\\frac{1}{4}$ of it and Vincent ate the rest. What fraction of the chocolate did Vincent eat? Leave your answer in the simplest form.",
-  "answer": "$\\frac{1}{3}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as '2?'"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q28",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "(a) 4 m 50 cm = ______ cm\n(b) 3 ℓ 86 mℓ = ______ mℓ",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "4 m 50 cm = ______ cm"
-   },
-   {
-    "part": "b",
-    "text": "3 ℓ 86 mℓ = ______ mℓ"
-   }
-  ],
-  "answer": "(a) 450 (b) 3086",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "450",
-    "unit": "cm"
-   },
-   {
-    "part": "b",
-    "value": "3086",
-    "unit": "mℓ"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'3786 m' -> '3 ℓ 86 mℓ'"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q29",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the area of Figure Y.",
-  "answer": "13",
-  "unit": "cm$^2$",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "shaded polygon on 1 cm grid",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok (key; not independently re-derived from the grid)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q30",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Study the figure.\n(a) Name a line parallel to AB.\n(b) Name a line perpendicular to CD.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Name a line parallel to AB."
-   },
-   {
-    "part": "b",
-    "text": "Name a line perpendicular to CD."
-   }
-  ],
-  "answer": "(a) EF (b) GH",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "EF",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "GH",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with lines AB, CD, EF, GH, IJ",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q31",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 31,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Draw a line parallel to KL that passes through point M.",
-  "answer": "(draw a line through M parallel to KL)",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with line KL and point M",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok (drawing answer; key page shows the line)",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q32",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 32,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the number of right angles in Figure Z.",
-  "answer": "3",
-  "unit": "",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "irregular polygon labelled Z",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok (key; count not independently verified from the figure)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q33",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 33,
-  "marks": 2,
-  "question_type": "short",
-  "question": "In the figure below, find the number of:\n(a) acute angles\n(b) obtuse angles",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "acute angles"
-   },
-   {
-    "part": "b",
-    "text": "obtuse angles"
-   }
-  ],
-  "answer": "(a) 2 (b) 3",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "2",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "3",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "pentagon-like figure",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q34",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 34,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The table below shows the number of beads collected by four children. The children collected a total of 360 beads altogether. How many beads does each circle stand for?",
-  "answer": "40",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "picture table: Fiona 3, Gina 2, Haile 3, Irene 1 circles",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q35",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 35,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The graph below shows the number of books read by children in a class. The number of Chinese books read by the children was the same as the total number of Malay and Tamil books read by the children. Draw the bar for the number of Tamil books the children read.",
-  "answer": "(bar of length 14 for Tamil)",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "horizontal bar graph Chinese, Malay, Tamil (Tamil bar to draw)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok (drawing answer; Chinese 30 - Malay 16 = 14 read from graph, key shows a bar)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q36",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 16,
-  "section": "C",
-  "question_no": 36,
-  "marks": 4,
-  "question_type": "long",
-  "question": "At a school carnival, Nigel sold 1843 cookies. He sold 379 cookies fewer than Pauline.\n(a) How many cookies did Pauline sell?\n(b) How many cookies did they sell altogether?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many cookies did Pauline sell?"
-   },
-   {
-    "part": "b",
-    "text": "How many cookies did they sell altogether?"
-   }
-  ],
-  "answer": "(a) 2222 (b) 4065",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "2222",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "4065",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'36.-' noise"
-  ],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q37",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 17,
-  "section": "C",
-  "question_no": 37,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The school bookshop gives away 2 erasers for every 8 pencils bought. Mateen bought 96 pencils. How many erasers did he get?",
-  "answer": "24",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q38",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 18,
-  "section": "C",
-  "question_no": 38,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Faizah is at home. She wants to go to the library.\n(a) What is the distance Faizah needs to travel if she chooses Route P?\n(b) What is the difference in distance between Route P and Route Q?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What is the distance Faizah needs to travel if she chooses Route P?"
-   },
-   {
-    "part": "b",
-    "text": "What is the difference in distance between Route P and Route Q?"
-   }
-  ],
-  "answer": "(a) 3438 m (b) 412 m",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "3438",
-    "unit": "m"
-   },
-   {
-    "part": "b",
-    "value": "412",
-    "unit": "m"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "map: Home-School 1370 m, School-Library 2068 m (Route P), Home-Library 3850 m (Route Q)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   18
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q39",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 19,
-  "section": "C",
-  "question_no": 39,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Raja works at a hawker stall in a market. His earnings per day are shown in the table below. How much does he earn from Monday to Friday?\nEarning per day\nMonday to Thursday: ＄167\nFriday to Sunday: ＄235",
-  "answer": "903",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "table of earnings per day",
-  "ocr_fixes": [
-   "Q number printed/read as 36 (is 39)"
-  ],
-  "checked_against_image": [
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Rosyth_EOY_Q40",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Rosyth",
-  "exam": "EOY",
-  "source": "(Rosyth) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
-  "source_pdf_page": 20,
-  "section": "C",
-  "question_no": 40,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The length of a field is 2 times its breadth. The perimeter of the field is 108 m. What is the length of the field?",
-  "answer": "36",
-  "unit": "m",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2023_P3_Rosyth_EOY_Q16",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Write four thousand and fifteen in numeral.",
+    "answer": "4015",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q17",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 17,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing number?\n7130, ______, 6730, 6530, 6330",
+    "answer": "6930",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q18",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 18,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the volume of water in the beaker?",
+    "answer": "700",
+    "unit": "mℓ",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "beaker with scale, water level near the 700 mark",
+    "ocr_fixes": [
+      "Q number read as 48"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok (reviewed): 1 ℓ at top, 100 mℓ per tick, water level at the 700 mℓ tick",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q19",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 19,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the sum of ＄25.50 and ＄7.",
+    "answer": "32.50",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'fPonot write' noise removed"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q20",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 20,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the area of square X.",
+    "answer": "49",
+    "unit": "m$^2$",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "square X with side 7 m",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q21",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the sum of 4316 and 2784.",
+    "answer": "7100",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q22",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "54 less than 67 hundreds is ______",
+    "answer": "6646",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q23",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the value of (a) and (b).\nNumber of tricycles: 1, 2, 5, 7, 8, 10\nNumber of wheels: 3, 6, (a), 21, (b), 30",
+    "answer": "(a) 15 (b) 24",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "15",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "24",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "table of tricycles and wheels",
+    "ocr_fixes": [
+      "table read from image"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q24",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Arrange the following fractions in order. Begin with the smallest.\n$\\frac{3}{5}$, $\\frac{4}{10}$, $\\frac{1}{2}$",
+    "answer": "$\\frac{4}{10}$, $\\frac{1}{2}$, $\\frac{3}{5}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q25",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing number in the box?\n$\\frac{1}{2}$ = $\\frac{?}{6}$",
+    "answer": "3",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction read from image"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q26",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "2 boys cut a cake into 4 pieces. Eugene ate $\\frac{1}{4}$ of it. Michael ate $\\frac{1}{2}$ of it. How many pieces of the cake were left?",
+    "answer": "1",
+    "unit": "piece",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number '2?' etc; fractions read from image"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q27",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "3 children shared a bar of chocolate. Edwin ate $\\frac{5}{12}$ of it, Rayner ate $\\frac{1}{4}$ of it and Vincent ate the rest. What fraction of the chocolate did Vincent eat? Leave your answer in the simplest form.",
+    "answer": "$\\frac{1}{3}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as '2?'"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q28",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "(a) 4 m 50 cm = ______ cm\n(b) 3 ℓ 86 mℓ = ______ mℓ",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "4 m 50 cm = ______ cm"
+      },
+      {
+        "part": "b",
+        "text": "3 ℓ 86 mℓ = ______ mℓ"
+      }
+    ],
+    "answer": "(a) 450 (b) 3086",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "450",
+        "unit": "cm"
+      },
+      {
+        "part": "b",
+        "value": "3086",
+        "unit": "mℓ"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'3786 m' -> '3 ℓ 86 mℓ'"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q29",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the area of Figure Y.",
+    "answer": "13",
+    "unit": "cm$^2$",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "shaded polygon on 1 cm grid",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok (reviewed): shoelace on grid points gives 13 cm2",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q30",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Study the figure.\n(a) Name a line parallel to AB.\n(b) Name a line perpendicular to CD.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Name a line parallel to AB."
+      },
+      {
+        "part": "b",
+        "text": "Name a line perpendicular to CD."
+      }
+    ],
+    "answer": "(a) EF (b) GH",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "EF",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "GH",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with lines AB, CD, EF, GH, IJ",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q31",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 31,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Draw a line parallel to KL that passes through point M.",
+    "answer": "(draw a line through M parallel to KL)",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with line KL and point M",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok (drawing answer; key page shows the line)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q32",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 32,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the number of right angles in Figure Z.",
+    "answer": "3",
+    "unit": "",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "irregular polygon labelled Z",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok (reviewed): 3 interior right angles (the two reflex 270 degree corners are not right angles)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q33",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 33,
+    "marks": 2,
+    "question_type": "short",
+    "question": "In the figure below, find the number of:\n(a) acute angles\n(b) obtuse angles",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "acute angles"
+      },
+      {
+        "part": "b",
+        "text": "obtuse angles"
+      }
+    ],
+    "answer": "(a) 2 (b) 3",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "2",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "3",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "pentagon-like figure",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q34",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 34,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The table below shows the number of beads collected by four children. The children collected a total of 360 beads altogether. How many beads does each circle stand for?",
+    "answer": "40",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "picture table: Fiona 3, Gina 2, Haile 3, Irene 1 circles",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q35",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 35,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The graph below shows the number of books read by children in a class. The number of Chinese books read by the children was the same as the total number of Malay and Tamil books read by the children. Draw the bar for the number of Tamil books the children read.",
+    "answer": "Draw the Tamil bar ending at 14 on the number-of-books axis (Chinese 30 minus Malay 16)",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "horizontal bar graph Chinese, Malay, Tamil (Tamil bar to draw)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok (reviewed): Chinese 30, Malay 16, so Tamil 30 - 16 = 14",
+    "confidence": "high",
+    "answer_type": "drawing"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q36",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 16,
+    "section": "C",
+    "question_no": 36,
+    "marks": 4,
+    "question_type": "long",
+    "question": "At a school carnival, Nigel sold 1843 cookies. He sold 379 cookies fewer than Pauline.\n(a) How many cookies did Pauline sell?\n(b) How many cookies did they sell altogether?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many cookies did Pauline sell?"
+      },
+      {
+        "part": "b",
+        "text": "How many cookies did they sell altogether?"
+      }
+    ],
+    "answer": "(a) 2222 (b) 4065",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "2222",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "4065",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'36.-' noise"
+    ],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q37",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 17,
+    "section": "C",
+    "question_no": 37,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The school bookshop gives away 2 erasers for every 8 pencils bought. Mateen bought 96 pencils. How many erasers did he get?",
+    "answer": "24",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q38",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 18,
+    "section": "C",
+    "question_no": 38,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Faizah is at home. She wants to go to the library.\n(a) What is the distance Faizah needs to travel if she chooses Route P?\n(b) What is the difference in distance between Route P and Route Q?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What is the distance Faizah needs to travel if she chooses Route P?"
+      },
+      {
+        "part": "b",
+        "text": "What is the difference in distance between Route P and Route Q?"
+      }
+    ],
+    "answer": "(a) 3438 m (b) 412 m",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "3438",
+        "unit": "m"
+      },
+      {
+        "part": "b",
+        "value": "412",
+        "unit": "m"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "map: Home-School 1370 m, School-Library 2068 m (Route P), Home-Library 3850 m (Route Q)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      18
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q39",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 19,
+    "section": "C",
+    "question_no": 39,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Raja works at a hawker stall in a market. His earnings per day are shown in the table below. How much does he earn from Monday to Friday?\nEarning per day\nMonday to Thursday: ＄167\nFriday to Sunday: ＄235",
+    "answer": "903",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "table of earnings per day",
+    "ocr_fixes": [
+      "Q number printed/read as 36 (is 39)"
+    ],
+    "checked_against_image": [
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Rosyth_EOY_Q40",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Rosyth",
+    "exam": "EOY",
+    "source": "(Rosyth) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Rosyth.pdf",
+    "source_pdf_page": 20,
+    "section": "C",
+    "question_no": 40,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The length of a field is 2 times its breadth. The perimeter of the field is 108 m. What is the length of the field?",
+    "answer": "36",
+    "unit": "m",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

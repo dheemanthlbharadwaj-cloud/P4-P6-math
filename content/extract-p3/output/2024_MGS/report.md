@@ -17,3 +17,8 @@
 - Checked 8 crops; re-cropped manually 6: Q13 (cards only), Q16 (complete number line with 0, axis, ?, 8/10), Q21 (garden only, footer and empty area removed), Q22 (title "Tickets sold for a Carnival" added), Q19 (label B and grid bottom complete), Q25 (the two grids stacked into one composite image with the part (a)/(b) text removed; bbox in figures.json is the union of both source boxes).
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: none (scan noise only).
+
+## Answer review
+
+- 2024_P3_MGS_EOY_Q05: final answer 3; unchanged. ok (reviewed): measured angles ~57, 110, 105, 144, 73, 89 deg; three acute (top-left, notch bottom, bottom-left); key option 3 = "3"
+- 2024_P3_MGS_EOY_Q25: final answer 20; 24; key kept; part b is a drawing (2 by 10 rectangle); still medium. ok (reviewed): key 20 cm2 and 24 cm kept (a 2 cm by 10 cm rectangle has area 20 and perimeter 24, consistent). The shading is not visible in the scan so the shaded area was not recounted

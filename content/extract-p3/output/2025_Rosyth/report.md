@@ -17,3 +17,12 @@
 ## Crop fix
 - Checked 11 crops. Fixed 6 manually: Q08 (options removed), Q12 (stray "altogether?" removed, "Pencil case" label whole), Q13 (arrow end whole), Q15 (line under legend removed), Q22 (whole grid), Q23 (both (a) and (b) scales whole; the text, answer line and answer box between them whited out, leaving a blank gap). Q09, Q14, Q18, Q21, Q24 kept. No figure_refs, no has_figure changes (Q10 is text only).
 - Still imperfect: Q23 has a blank gap between the (a) and (b) diagrams (only way to keep one crop without the in-between text).
+
+## Answer review
+
+- 2025_P3_Rosyth_EOY_Q08: final answer 1; unchanged. ok (reviewed): 3 of the 4 triangles in one square are shaded = 3/4 of 1/3 of the figure = 1/4; key 1
+- 2025_P3_Rosyth_EOY_Q18: final answer 15; unchanged. ok (reviewed): tag reads 3 mangoes for $7; 35 / 7 = 5 sets, 5 x 3 = 15
+- 2025_P3_Rosyth_EOY_Q21: final answer a and e; unchanged. ok (reviewed): measured a ~78 deg, e ~53 deg acute; b, c, d, f obtuse (f ~126 deg); key a and e
+- 2025_P3_Rosyth_EOY_Q22: final answer BE ⊥ ED; AG // BF; unchanged. ok (reviewed): BE and ED meet at a right angle (dot product ~0); AG and BF have equal slope; key accepted
+- 2025_P3_Rosyth_EOY_Q23: final answer 20; 540; unchanged. ok (reviewed): 10 balls = 140 g + 3 balls so 7 balls = 140 g, ball = 20 g; 9 balls = 1 car = 180 g; bear = 3 cars = 540 g
+- 2025_P3_Rosyth_EOY_Q24: final answer 3; 36; unchanged. ok (reviewed): 12 cm / 4 = 3 cm; area = 12 x 3 = 36 cm2 (key page 17)

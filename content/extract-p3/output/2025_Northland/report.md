@@ -13,3 +13,16 @@
 
 ## Crop fix
 - Checked 4 figure questions plus the rest. Re-cropped manually: Q9 (removed option text below grid), Q10 (removed text fragment above title), Q15 (new: 9 cm by 3 cm rectangle). Q4 unchanged (correct). figure_ref: none. has_figure changes: none (Q14 equation with boxes is in the question text, left off). Still imperfect: none (scan is speckled, figures complete).
+
+## Answer review
+Reviewed Q1-Q10 (no key in paper; solved from page images 2-5). No answers changed; all confirmed, confidence high.
+- Q1: 8
+- Q2: 2.75
+- Q3: 3951 (+700 each step)
+- Q4: 3 acute: arrow tip plus the two barb corners
+- Q5: 5050 g
+- Q6: 4621-2809=1812
+- Q7: 454/6=75 R4
+- Q8: 4/7 > 3/6 > 5/12
+- Q9: BC and GF are both horizontal grid lines
+- Q10: walk 80, train about 48 (bar 7 units above the 40 line), 80-48=32

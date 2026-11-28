@@ -11,3 +11,12 @@
 - Checked and kept: Q05, Q06, Q08, Q09, Q10, Q13, Q15, Q20, Q24, Q25.
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: Q20 (water levels in the two beakers are speckled/illegible in the scan itself; crop is complete).
+
+
+## Answer review
+
+- **2025_P3_TaoNan_EOY_Q08**: final answer '4' (was '4'). Matches key (option 4, $960).
+- **2025_P3_TaoNan_EOY_Q10**: final answer '1' (was '1'). Question as printed says 2 slices of pie; key option 2 is wrong. Option 1 stays.
+- **2025_P3_TaoNan_EOY_Q19**: final answer '6085' (was '6085'). Key typo 0685; answer 6085 stays.
+- **2025_P3_TaoNan_EOY_Q20**: final answer '1 ℓ 0 mℓ' (was '1 ℓ 0 mℓ'). Both beakers taken as 500 mL from the key; scan too faint to confirm the right beaker.
+- **2025_P3_TaoNan_EOY_Q25**: final answer '(a) ＄54, (b) 40' (was '(a) ＄54, (b) 40'). Both parts agree with key.

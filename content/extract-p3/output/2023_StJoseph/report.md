@@ -17,3 +17,9 @@
 
 ## Crop fix
 - Checked 14 figure questions. Re-cropped manually: Q3 (new, vertical subtraction layout), Q15 (removed option text), Q21 (removed page number and mark box), Q26 (full number line with arrows and Start), Q27 (whole basket and caption), Q30 (removed Q31 text), Q31 (both balance scales complete), Q32 (new, CCA bar graph from above the question text). figure_ref: Q33 -> Q32 (old wrong Q33 crop deleted). has_figure changes: none. Q7, Q12, Q14, Q16, Q25 unchanged (already correct). Still imperfect: Q31 question stem has the rectangle and circle icons inline in the text (not in the crop); the scales show them. Scan is noisy but all figure content is clear.
+
+## Answer review
+
+- 2023_P3_StJoseph_EOY_Q07: final '2' (was '2'); confidence high. 11-vertex zigzag: acute angles ~35, 47, 53, 41, 56, 54 -> 6
+- 2023_P3_StJoseph_EOY_Q21: final '2 right angles: at the top-left corner (where the top edge meets the left vertical edge) and at the bottom corner on the right of the base (base meets the short vertical edge going up). The corner where that vertical meets the step is a 270 deg (reflex) angle, not a right angle.' (was 'drawing: mark the right angles inside the figure'); confidence medium. drawing answer written as text
+- 2023_P3_StJoseph_EOY_Q36: final '$\\frac{1}{4}$' (was '$\\frac{1}{4}$'); confidence high. 1/3+1/6+1/4 of his money = 4/12+2/12+3/12 = 9/12; left 3/12 = 1/4 (key agrees; "it" = his money)

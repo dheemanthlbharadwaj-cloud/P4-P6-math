@@ -98,8 +98,8 @@
   "checked_against_image": [
    3
   ],
-  "answer_check": "ok per key (marked angles not independently recounted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 8 marked angles, 3 reflex (notch and two at the arrow head base) and 5 acute; key 1 (5)",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_TaoNan_EOY_Q04",
@@ -168,8 +168,8 @@
   "checked_against_image": [
    4
   ],
-  "answer_check": "ok per key (dial pointer between 2 kg and 3 kg, read about 2 kg 600 g)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): dial 0 top, 1 right, 2 bottom, 3 left; pointer about 2.6 kg past 2 kg, nearest option 2 kg 600 g; key 4",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_TaoNan_EOY_Q06",
@@ -310,8 +310,8 @@
    6,
    19
   ],
-  "answer_check": "solved:2 differs from key (key page prints 4): 3K 12+5=17, 3L 9+13=22, 3M 4+17=21, 3N 13+8=21, so 3L; answer_key set to 2",
-  "confidence": "medium"
+  "answer_check": "reviewed: key says 4 (3N), correct is 2 (3L): bars read 3K 12+5=17, 3L 9+13=22, 3M 4+17=21, 3N 13+8=21, so 3L is highest; key is wrong",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_TaoNan_EOY_Q10",
@@ -448,7 +448,7 @@
   "marks": 1,
   "question_type": "short",
   "question": "Draw a line parallel to line AB that passes through point C. Use a pencil to draw your line.",
-  "answer": "A line through C parallel to AB (drawn on the grid)",
+  "answer": "drawing: a line through C parallel to AB; AB rises 1 square for every 4 squares across (A to B: 8 across, 2 up), so the line through C rises 1 square for every 4 across (e.g. passes the grid points 4 squares left of C and 1 square lower, and 4 squares right of C and 1 square higher)",
   "topic_primary": "Perpendicular and Parallel Lines",
   "topics": [
    "Perpendicular and Parallel Lines"
@@ -460,8 +460,9 @@
    9,
    19
   ],
-  "answer_check": "ok (drawing question; key shows the line through C parallel to AB)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): drawing, matches the key diagram",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2024_P3_TaoNan_EOY_Q15",

@@ -32,8 +32,8 @@
   "checked_against_image": [
    2
   ],
-  "answer_check": "solved:1 differs from key 3 (key says 100; digit 0 sits in the hundreds place so its value is 0, key looks like a place-value slip)",
-  "confidence": "low"
+  "answer_check": "reviewed: key says 3 (100), correct is 1 (0) because in 8047 the digit 0 is in the hundreds place but its value is 0 (0 x 100 = 0); the question as printed asks the value of the digit 0",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_StHilda_EOY_Q02",
@@ -212,8 +212,8 @@
   "checked_against_image": [
    3
   ],
-  "answer_check": "ok (key accepted; readings about 350 + 30)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): left beaker 350 mℓ (midway between 300 and 400), right beaker 30 mℓ; total 380 mℓ; key 3",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_StHilda_EOY_Q07",
@@ -817,8 +817,8 @@
   "checked_against_image": [
    11
   ],
-  "answer_check": "ok (key accepted; one angle is reflex)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): top-left and bottom-left are acute, right tip is 90 degrees, top-right, bottom-right and the inner reflex angle are greater than 90 degrees = 3; key 3",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_StHilda_EOY_Q25",
@@ -834,7 +834,7 @@
   "marks": 2,
   "question_type": "short",
   "question": "Draw a line perpendicular to AB that passes through Point X.",
-  "answer": "Line through X perpendicular to AB (drawn on the grid)",
+  "answer": "Line through X perpendicular to AB: AB goes 3 squares right and 3 down from A to B, so the perpendicular goes 1 right and 1 up at each step from X, through grid points 1, 2, 3 diagonally up-right of X (meeting AB at the grid point 2 squares along from A)",
   "unit": "",
   "topic_primary": "Perpendicular and Parallel Lines",
   "topics": [
@@ -846,8 +846,9 @@
   "checked_against_image": [
    11
   ],
-  "answer_check": "ok (drawing; no numerical answer, key shows a drawn line)",
-  "confidence": "medium"
+  "answer_check": "reviewed: drawing, key shows line through X up-right meeting AB",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2024_P3_StHilda_EOY_Q26",

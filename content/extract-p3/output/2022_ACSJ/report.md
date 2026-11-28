@@ -35,3 +35,10 @@ Paper: ACS (Junior) P3 Semestral Assessment 2 (2022), PDF 2022-P3-Maths-EOY-ACSJ
 - Fixed by hand: Q04 (trimmed blank space), Q07 (Q8 content removed), Q08 and Q15 and Q34 (new crops), Q09 (option text removed), Q16 (option text removed, question line whited out), Q21 (answer box removed), Q25 (question text, answer and sub-total boxes removed), Q27 (y-axis title and numbers restored, question line removed), Q31 (question text removed, grid intact, bottom row and E/F labels complete).
 - figure_refs added: none. has_figure changes: none (Q08, Q15, Q34 were already true).
 - Still imperfect: scan noise only; Q25 has a handwritten "3300" on the scale (on the figure, left).
+
+
+## Answer review
+- Q07: 2600 + 800 = 3400 mℓ; key 4 agrees.
+- Q08: two angles smaller than a right angle; key 2 agrees.
+- Q25: 3300 - 1800 = 1500 g; key agrees.
+- Q31: (a) AF; (b) drawing.

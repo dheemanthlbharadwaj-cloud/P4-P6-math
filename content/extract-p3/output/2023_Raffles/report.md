@@ -13,3 +13,11 @@
 - Checked 13 figures. Fixed: Q40 (Fig 1 and Fig 2 only, footer and blank area removed). Margins trimmed: Q12, Q13, Q14, Q15, Q16, Q18, Q34, Q38, Q39.
 - figure_refs added: none. has_figure changes: none (other questions are fully in the text).
 - Still imperfect: Q27 has a faint smudge near the 50 label on the axis (scan quality).
+
+## Answer review
+Reviewed Q13, Q16, Q18, Q27, Q37 against page images and key (page 25). No answers changed; confidence set to high.
+- Q13: water level about 230 ml, 500-230=270 ml, key 3
+- Q16: with X at origin XY=(4,2) in grid squares: XB=(2,-4) gives dot 0 so B is exactly a right angle; A=(-1,-3) is obtuse; C, D acute; key 1 (A)
+- Q18: pointer is 3 small ticks past 2 kg (about 34 degrees at 10 degrees a tick, 100 g each): 2300 g, key 2300
+- Q27: Justin 54, Muthu 40, difference 14, key 14
+- Q37: (a) Mon and Thu girls>boys =2; (b) Tue 110+45=155, Fri 120+50=170 (scan skew checked), total 325; key agrees

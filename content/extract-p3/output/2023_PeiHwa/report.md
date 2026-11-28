@@ -22,3 +22,10 @@
 - Checked 9 crops. Fixed 7 by manual crop: Q5 (full grid, no white-out), Q9 (stray option text removed), Q12 (whole vertical subtraction), Q19 ("8 m" label restored), Q24 (bars and Local/Foreign legend intact), Q15 and Q20 (answer/statement tables below the figure removed; the statements are in the question text).
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: none.
+
+## Answer review
+
+- 2023_P3_PeiHwa_EOY_Q06: final answer 2; answer_key 2 kept; key wrong (3). reviewed: key says 3, correct is option 2 (4/9, 1/2, 7/9) because 4/9 < 1/2 < 7/9; option 3 puts 7/9 before 1/2 (options re-read from page image)
+- 2023_P3_PeiHwa_EOY_Q14: final answer (a) <, (b) >; (a) <, (b) > kept; key wrong for b. reviewed: key says (b) <, correct is > because 5/6 = 10/12 > 7/12; (a) 9x6 < 9x7
+- 2023_P3_PeiHwa_EOY_Q22: final answer None; Bag, 50; 108 kept; key slip. reviewed: key text says Lunch box $50 but the bag ($50) costs the most (lunch box 25, bottle 33, bag 50); b = 25+33+50 = 108
+- 2023_P3_PeiHwa_EOY_Q23: final answer None; unchanged. ok (reviewed): beaker A 60 mL, beaker B ~800 mL (surface just under 800 mark) = 860 mL; 3000 - 860 = 2140 mL = 2 L 140 mL

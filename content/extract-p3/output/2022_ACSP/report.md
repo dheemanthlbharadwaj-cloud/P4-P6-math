@@ -16,3 +16,9 @@
 ## Crop fix
 - Checked 13 crops; fixed 2 (Q24 full table border, Q27 whole sum without Q28 fragment). Q29 re-checked: complete (printed figure has only two 70 m labels).
 - figure_ref added: Q34 -> Q33 (has_figure turned on). No other has_figure changes. Nothing still imperfect.
+
+
+## Answer review
+- Q09: 1000 + 100 + 30 mℓ; key 2 agrees.
+- Q14: 835+140=975; key page has no Q14 entry.
+- Q33: re-read graph: running 5 least; 9+12=21; key agrees.

@@ -283,8 +283,8 @@
   "checked_against_image": [
    4
   ],
-  "answer_check": "ok (key 4; bar heights read as 180+100+80+120=480 cones)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): bars read 180, 100, 80, 120 = 480 cones x $2 = $960; matches key 4",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_TaoNan_EOY_Q09",
@@ -357,8 +357,8 @@
   "checked_against_image": [
    5
   ],
-  "answer_check": "solved:1 (＄50 - ＄27.15 - 2 x ＄1.40 = ＄20.05) differs from key 2 (＄21.45 = one slice only)",
-  "confidence": "medium"
+  "answer_check": "reviewed: key says 2 ($21.45, which is only one slice of pie), correct is 1 ($20.05) because $50 - $27.15 - 2 x $1.40 = $20.05",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_TaoNan_EOY_Q11",
@@ -628,7 +628,7 @@
   "checked_against_image": [
    8
   ],
-  "answer_check": "solved:6085 differs from key 0685 (key prints a leading 0, a typo; 6085 is the smallest 4-digit odd number)",
+  "answer_check": "reviewed: key prints 0685 (not a 4-digit number); correct is 6085: last digit must be 5 (only odd digit), remaining 6, 0, 8 smallest without leading 0 is 608",
   "confidence": "high"
  },
  {
@@ -672,8 +672,8 @@
   "checked_against_image": [
    8
   ],
-  "answer_check": "unsure: water levels in the two beakers are not legible in the scan; answer from key (2 ℓ - 500 mℓ - 500 mℓ = 1 ℓ)",
-  "confidence": "low"
+  "answer_check": "ok (reviewed): key 2 L - 500 ml - 500 ml = 1 L; water shading is washed out in the scan (left beaker looks filled to the 500 ml mark, right beaker's level not legible), so key is trusted",
+  "confidence": "medium"
  },
  {
   "id": "2025_P3_TaoNan_EOY_Q21",
@@ -932,7 +932,7 @@
   "checked_against_image": [
    13
   ],
-  "answer_check": "ok (key (b): 46 ÷ 9 = 5 R 1, 5 x 8 = 40 pens)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): a packet gives 6 + 2 = 8 pens for $9; (a) 48 / 8 = 6 packets = $54; (b) 46 / 9 = 5 R 1, 5 x 8 = 40 pens",
+  "confidence": "high"
  }
 ]

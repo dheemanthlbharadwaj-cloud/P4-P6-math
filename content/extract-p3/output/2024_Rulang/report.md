@@ -12,3 +12,10 @@
 
 ## Crop fix
 - Checked 9 figure questions plus the rest. Re-cropped manually: Q9 (added the 12 cm label), Q10 (all four labels and top edge; one stray scribble whited), Q18 (point Z added), Q25 (new: the True/False/Not possible to tell table). figure_ref: none. has_figure changes: none. Q16, Q17, Q19, Q20, Q24 unchanged (correct). Still imperfect: none.
+
+
+## Answer review
+
+- Q03: 45 (option 2); unchanged.
+- Q16: 3 obtuse angles (top-left, bottom-left, bottom); unchanged, answer_type drawing.
+- Q18: drawing answer text made precise, answer_type drawing.

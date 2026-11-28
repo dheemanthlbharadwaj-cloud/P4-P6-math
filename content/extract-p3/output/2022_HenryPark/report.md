@@ -18,3 +18,12 @@
 ## Crop fix
 - Checked 15 crops: all contain the whole figure and labels, no question text. No crops fixed, no figure_refs, no has_figure changes.
 - Still imperfect: Q33 faint pencil marks (44, 88) on the graph (scan), Q32 pencil mark near A.
+
+
+## Answer review
+
+- **2022_P3_HenryPark_EOY_Q05**: final answer '2' (was '2'). Shaded: two half-squares (top-left and bottom-right triangles) plus one whole square = 2 of 6 squares = 1/3 (option 2). Key entry partly hidden by watermark but consistent.
+- **2022_P3_HenryPark_EOY_Q06**: final answer '4' (was '4'). Larger number 71, sum 88 (option 4).
+- **2022_P3_HenryPark_EOY_Q11**: final answer '1400' (was '1400'). Matches key 1400 ml.
+- **2022_P3_HenryPark_EOY_Q38**: final answer '9.80' (was '9.80'). Matches key.
+- **2022_P3_HenryPark_EOY_Q39**: final answer '180' (was '180'). Key ignores that Jeremy gains the 30 stamps, so it is wrong; 180 is right.

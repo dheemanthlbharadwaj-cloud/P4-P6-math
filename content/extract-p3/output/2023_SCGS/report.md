@@ -19,3 +19,8 @@
 
 ## Crop fix
 - Checked 10 crops; fixed 5 (Q5 with both 1 cm labels, Q10 figure only, Q19 shelves only, Q20 all notes and coins, Q22 graph only). No figure_refs, no has_figure changes. Scans are speckled (scan quality only).
+
+## Answer review
+
+- 2023_P3_SCGS_EOY_Q22: final '(a) True (b) True' (was '(a) True (b) True'); confidence high. Transformers boys 3; Iron Man boys 6 (twice); Thor 7+1 = 8, Iron Man 6+2 = 8; both True; key agrees
+- 2023_P3_SCGS_EOY_Q27: final '(a) 24 (b) 89' (was '(a) 24 (b) 89'); confidence high. Alfred first 65+12 = 77 = Bala first; Bala end 89; difference 24; key agrees

@@ -17,3 +17,8 @@
 - Checked 8 crops; re-cropped all 8 manually: Q06 (leftover option text removed), Q08 (now includes the (1)-(4) labels of the picture options), Q09 (option text removed), Q10 (stray 'ice-cream.' removed, y-axis title kept), Q18 (statement table excluded), Q22 (answer box removed), Q24 (answer box removed), Q25 (full grid with all gridlines, A and B).
 - figure_refs added: none. has_figure changes: none (Q16 and Q23 numbers are given in the question text).
 - Still imperfect: none (scan is faint in places).
+
+## Answer review
+
+- Q18: final a F, b T; ok (reviewed): Jan about 450, Feb 400, Mar 540, Apr about 450; (a) least is February so False; (b) Jan = Apr so True; key F, T
+- Q22: final 130; ok (reviewed): dial full circle = 500 g, grapes about 350 g, bananas about 220 g; difference 130 g; key 130 g

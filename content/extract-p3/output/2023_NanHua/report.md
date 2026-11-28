@@ -18,3 +18,12 @@
 - Checked and kept: Q02, Q08, Q09, Q10, Q12, Q13, Q16, Q22, Q27, Q28.
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: Q22 (notes are a speckled low-quality scan) and Q26 (grid lines are faint/dashed in the scan itself); both complete and readable.
+
+
+## Answer review
+
+- Q10: 2; unchanged, verified by angle measurement.
+- Q12: 2 (2 kg 450 g); unchanged, dial 2.7 kg.
+- Q22: 67.50; unchanged, note denominations blurry so medium.
+- Q24: 1 ℓ 275 mℓ; unchanged.
+- Q27: drawing answer text made precise, answer_type drawing.

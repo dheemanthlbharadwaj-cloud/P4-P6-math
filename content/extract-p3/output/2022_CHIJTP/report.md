@@ -12,3 +12,8 @@
 
 ## Crop fix
 - Checked 14 figure questions. Re-cropped manually: Q6 (removed leftover option text), Q12 (removed answer table), Q8 (wider margin), Q19 (new crop of the bar graph on page 9). figure_ref: Q20 -> Q19. has_figure changes: none. Still imperfect: none (Q8 keeps handwritten marks from the scan).
+
+## Answer review
+
+- 2022_P3_CHIJTP_EOY_Q31: final '9 h 45 min' (was '9 h 45 min'); confidence high. 3 h 30 + 3 h + 3 h 15 = 9 h 45 min; key agrees
+- 2022_P3_CHIJTP_EOY_Q33: final '17.50' (was '17.50'); confidence high. 13 = 4 sets of 3 + 1: 4 x 4 + 1.50 = 17.50; key agrees

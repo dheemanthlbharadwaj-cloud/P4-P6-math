@@ -1069,8 +1069,8 @@
    18,
    29
   ],
-  "answer_check": "unsure: dial readings (about 1.6 kg and 0.4 kg) roughly match key 1600-400",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): dial is 6 kg per turn, 0.2 kg per tick; A+B reads 1.6 kg, A alone 0.4 kg; B = 1600 - 400 = 1200 g; key agrees",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Nanyang_EOY_Q33",

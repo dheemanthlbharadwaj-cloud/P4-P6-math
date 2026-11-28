@@ -1,971 +1,972 @@
 [
- {
-  "id": "2024_P3_MGS_EOY_Q01",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Four thousand and ninety in numerals is",
-  "options": {
-   "1": "4900",
-   "2": "4090",
-   "3": "4019",
-   "4": "490"
+  {
+    "id": "2024_P3_MGS_EOY_Q01",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Four thousand and ninety in numerals is",
+    "options": {
+      "1": "4900",
+      "2": "4090",
+      "3": "4019",
+      "4": "490"
+    },
+    "answer_key": "2",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option 1 label read as (4) -> (1)"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option 1 label read as (4) -> (1)"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q02",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "In 9875, the value of the digit 8 is",
-  "options": {
-   "1": "8",
-   "2": "80",
-   "3": "800",
-   "4": "8000"
+  {
+    "id": "2024_P3_MGS_EOY_Q02",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "In 9875, the value of the digit 8 is",
+    "options": {
+      "1": "8",
+      "2": "80",
+      "3": "800",
+      "4": "8000"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q03",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 3,
-  "section": "Booklet A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "6132 + 2468 =",
-  "options": {
-   "1": "9800",
-   "2": "8600",
-   "3": "8590",
-   "4": "8500"
+  {
+    "id": "2024_P3_MGS_EOY_Q03",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 3,
+    "section": "Booklet A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "6132 + 2468 =",
+    "options": {
+      "1": "9800",
+      "2": "8600",
+      "3": "8590",
+      "4": "8500"
+    },
+    "answer_key": "2",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q04",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Which of the following is arranged from the greatest to the smallest?",
-  "options": {
-   "1": "653, 635, 536, 563",
-   "2": "536, 563, 635, 365",
-   "3": "365, 356, 563, 536",
-   "4": "653, 635, 563, 536"
+  {
+    "id": "2024_P3_MGS_EOY_Q04",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Which of the following is arranged from the greatest to the smallest?",
+    "options": {
+      "1": "653, 635, 536, 563",
+      "2": "536, 563, 635, 365",
+      "3": "365, 356, 563, 536",
+      "4": "653, 635, 563, 536"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option labels (4)/(i) fixed"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option labels (4)/(i) fixed"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q05",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 5,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "In the figure, how many of the marked angles are acute?",
-  "options": {
-   "1": "6",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2024_P3_MGS_EOY_Q05",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 5,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "In the figure, how many of the marked angles are acute?",
+    "options": {
+      "1": "6",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "3",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "polygon with six marked angles",
+    "ocr_fixes": [
+      "option 1 '(i) 6' -> '(1) 6'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok (reviewed): measured angles ~57, 110, 105, 144, 73, 89 deg; three acute (top-left, notch bottom, bottom-left); key option 3 = \"3\"",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "polygon with six marked angles",
-  "ocr_fixes": [
-   "option 1 '(i) 6' -> '(1) 6'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok (key accepted, not re-counted)",
-  "confidence": "medium"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q06",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 4,
-  "section": "Booklet A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "3415, 3625, 3835, ________, 4255, 4465\nWhat is the missing number in the pattern?",
-  "options": {
-   "1": "3045",
-   "2": "3845",
-   "3": "4035",
-   "4": "4045"
+  {
+    "id": "2024_P3_MGS_EOY_Q06",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 4,
+    "section": "Booklet A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "3415, 3625, 3835, ________, 4255, 4465\nWhat is the missing number in the pattern?",
+    "options": {
+      "1": "3045",
+      "2": "3845",
+      "3": "4035",
+      "4": "4045"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option 1 label (4) -> (1)"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option 1 label (4) -> (1)"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q07",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 5,
-  "section": "Booklet A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{4}{9}$ + $\\frac{1}{3}$ = ?",
-  "options": {
-   "1": "$\\frac{3}{6}$",
-   "2": "$\\frac{5}{9}$",
-   "3": "$\\frac{7}{9}$",
-   "4": "$\\frac{5}{12}$"
+  {
+    "id": "2024_P3_MGS_EOY_Q07",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 5,
+    "section": "Booklet A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{4}{9}$ + $\\frac{1}{3}$ = ?",
+    "options": {
+      "1": "$\\frac{3}{6}$",
+      "2": "$\\frac{5}{9}$",
+      "3": "$\\frac{7}{9}$",
+      "4": "$\\frac{5}{12}$"
+    },
+    "answer_key": "3",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions and '+' garbled, read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions and '+' garbled, read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q08",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 5,
-  "section": "Booklet A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{12}{18}$ = $\\frac{8}{?}$\nWhat is the missing number in the box?",
-  "options": {
-   "1": "10",
-   "2": "12",
-   "3": "14",
-   "4": "24"
+  {
+    "id": "2024_P3_MGS_EOY_Q08",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 5,
+    "section": "Booklet A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{12}{18}$ = $\\frac{8}{?}$\nWhat is the missing number in the box?",
+    "options": {
+      "1": "10",
+      "2": "12",
+      "3": "14",
+      "4": "24"
+    },
+    "answer_key": "2",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q09",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 5,
-  "section": "Booklet A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many whole numbers between 40 and 50 can be divided exactly by 6?",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2024_P3_MGS_EOY_Q09",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 5,
+    "section": "Booklet A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many whole numbers between 40 and 50 can be divided exactly by 6?",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 3"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 3"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q10",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 6,
-  "section": "Booklet A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Melissa finished cleaning her room at 12 00. She spent 1 hour 50 minutes cleaning without taking any break. What time did she start cleaning?",
-  "options": {
-   "1": "13 50",
-   "2": "11 50",
-   "3": "10 50",
-   "4": "10 10"
+  {
+    "id": "2024_P3_MGS_EOY_Q10",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 6,
+    "section": "Booklet A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Melissa finished cleaning her room at 12 00. She spent 1 hour 50 minutes cleaning without taking any break. What time did she start cleaning?",
+    "options": {
+      "1": "13 50",
+      "2": "11 50",
+      "3": "10 50",
+      "4": "10 10"
+    },
+    "answer_key": "4",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "options as printed (24-hour, no colon)"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "options as printed (24-hour, no colon)"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q11",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 8,
-  "section": "Booklet B",
-  "question_no": 11,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the remainder when 369 is divided by 7?",
-  "answer": "5",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 1"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q12",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 8,
-  "section": "Booklet B",
-  "question_no": 12,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Subtract 4825 from 7562.",
-  "answer": "2737",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q13",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 8,
-  "section": "Booklet B",
-  "question_no": 13,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Form the greatest 4-digit even number that is less than 5000 using all the digits shown in the cards below.\n3 8 4 7",
-  "answer": "4738",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "four digit cards 3, 8, 4, 7",
-  "ocr_fixes": [
-   "cards '3 8 4 f' -> '3 8 4 7' (image)"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q14",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 9,
-  "section": "Booklet B",
-  "question_no": 14,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Kelvin had breakfast at the time shown on the clock below.\nThe clock was 5 minutes slow.\nWhat was the actual time in the 24-hour clock?",
-  "answer": "0730",
-  "unit": "",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "analogue clock showing 7:25",
-  "ocr_fixes": [
-   "'stow' -> 'slow'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q15",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 9,
-  "section": "Booklet B",
-  "question_no": 15,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Arrange the fractions in order, beginning with the greatest.\n$\\frac{2}{5}$, $\\frac{2}{3}$, $\\frac{7}{12}$",
-  "answer": "$\\frac{2}{3}$, $\\frac{7}{12}$, $\\frac{2}{5}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 18",
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q16",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 9,
-  "section": "Booklet B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing fraction in the box?",
-  "answer": "$\\frac{4}{10}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "number line from 0 to 8/10 with arrow at a marked tick",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q17",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 10,
-  "section": "Booklet B",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mrs Tan paid for her meal with a ＄50-note and got ＄14.30 change. How much did her meal cost?",
-  "answer": "35.70",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q18",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 10,
-  "section": "Booklet B",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Chee Meng has 7 cups. He pours 86 g of sugar into each cup. What is the total mass of sugar Chee Meng pours into all the cups?",
-  "answer": "602",
-  "unit": "g",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q19",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 11,
-  "section": "Booklet B",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The figure below is drawn on a square grid.\n(a) Name a line that is parallel to line BC.\n(b) Name a line that is perpendicular to line AC.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Name a line that is parallel to line BC."
-   },
-   {
-    "part": "b",
-    "text": "Name a line that is perpendicular to line AC."
-   }
-  ],
-  "answer": "AE; DC",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "AE",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "DC",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "figure ABCDEF on a square grid with lines AB, AC, AE, AF, BC, CD, DE, EF",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q20",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 12,
-  "section": "Booklet B",
-  "question_no": 20,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A minibus can take at most 8 passengers. What is the least number of minibuses needed to take 158 passengers?",
-  "answer": "20",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number split in OCR"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q21",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 12,
-  "section": "Booklet B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mr Lee wants to buy some barb wire to fence up his rectangular garden completely. The length of his garden is 50 m. Its breadth is 32 m. What is the total length of barb wire Mr Lee needs to buy?",
-  "answer": "164",
-  "unit": "m",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangular garden 50 m by 32 m with barb wire fence",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q22",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 13,
-  "section": "Booklet B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph shows the number of tickets sold for a carnival for 3 weeks.\nBased on the information from the bar graph, tick (✓) True or False for the statements below.\n(a) The total number of tickets sold every week is the same for all 3 weeks.\n(b) In week 3, the number of tickets sold on the weekend is three times the number of tickets sold on the weekdays.\n(c) There were fewer tickets sold on weekdays in week 2 than in week 3.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "The total number of tickets sold every week is the same for all 3 weeks."
-   },
-   {
-    "part": "b",
-    "text": "In week 3, the number of tickets sold on the weekend is three times the number of tickets sold on the weekdays."
-   },
-   {
-    "part": "c",
-    "text": "There were fewer tickets sold on weekdays in week 2 than in week 3."
-   }
-  ],
-  "answer": "True; True; False",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "True",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "True",
-    "unit": ""
-   },
-   {
-    "part": "c",
-    "value": "False",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph Tickets sold for a Carnival, weekdays vs weekends, weeks 1-3 (no numbered axis)",
-  "ocr_fixes": [
-   "'b]' legend OCR garbled, read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q23",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 15,
-  "section": "Booklet C",
-  "question_no": 23,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Box A is 2550 g lighter than Box B.\nBox B is 3400 g heavier than Box C.\nBox C weighs 2 kg 180 g.\n(a) What is the mass of Box B?\n(b) What is the mass of Box A? Give your answer in kilograms and grams.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What is the mass of Box B?"
-   },
-   {
-    "part": "b",
-    "text": "What is the mass of Box A? Give your answer in kilograms and grams."
-   }
-  ],
-  "answer": "5580 g; 3 kg 30 g",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "5580",
-    "unit": "g"
-   },
-   {
-    "part": "b",
-    "value": "3 kg 30 g",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q24",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 16,
-  "section": "Booklet C",
-  "question_no": 24,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Ali sold 570 apples.\nHe sold 5 times as many apples as oranges.\nHe sold 38 fewer oranges than pears.\n(a) How many oranges did Ali sell?\n(b) How many pears did Ali sell?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many oranges did Ali sell?"
-   },
-   {
-    "part": "b",
-    "text": "How many pears did Ali sell?"
-   }
-  ],
-  "answer": "114; 152",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "114",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "152",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q25",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 17,
-  "section": "Booklet C",
-  "question_no": 25,
-  "marks": 3,
-  "question_type": "long",
-  "question": "The figure below is drawn in a square grid.\n(a) What is the area of the shaded figure?\n(b) In the square grid below, one side of the rectangle has been drawn for you. Draw three more lines to complete the rectangle so that it has an area equal to the shaded figure in part (a). What is the perimeter of the rectangle drawn?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What is the area of the shaded figure?"
-   },
-   {
-    "part": "b",
-    "text": "In the square grid below, one side of the rectangle has been drawn for you. Draw three more lines to complete the rectangle so that it has an area equal to the shaded figure in part (a). What is the perimeter of the rectangle drawn?"
-   }
-  ],
-  "answer": "20; 24",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "20",
-    "unit": "cm²"
-   },
-   {
-    "part": "b",
-    "value": "24",
-    "unit": "cm"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "shaded figure on a 1 cm square grid; second blank grid with one rectangle side drawn",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok (key accepted; shaded figure not recounted)",
-  "confidence": "medium"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q26",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 18,
-  "section": "Booklet C",
-  "question_no": 26,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Jerry keeps his picture cards in 4 boxes. Each box holds 118 cards except for the last box. The last box has only 79 cards. How many picture cards does Jerry have altogether?",
-  "answer": "433",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_MGS_EOY_Q27",
-  "grade": "P3",
-  "year": "2024",
-  "school": "Methodist Girls'",
-  "exam": "EOY",
-  "source": "(Methodist Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
-  "source_pdf_page": 19,
-  "section": "Booklet C",
-  "question_no": 27,
-  "marks": 3,
-  "question_type": "long",
-  "question": "In an auditorium, 159 people were seated to watch a performance at first. After the first performance, 27 of them left their seats. Then, 4 times as many people as those who left their seats came in to occupy the remaining seats. How many seats are there in the auditorium?",
-  "answer": "240",
-  "unit": "seats",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Do na' margin text removed"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2024_P3_MGS_EOY_Q11",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 8,
+    "section": "Booklet B",
+    "question_no": 11,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the remainder when 369 is divided by 7?",
+    "answer": "5",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 1"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q12",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 8,
+    "section": "Booklet B",
+    "question_no": 12,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Subtract 4825 from 7562.",
+    "answer": "2737",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q13",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 8,
+    "section": "Booklet B",
+    "question_no": 13,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Form the greatest 4-digit even number that is less than 5000 using all the digits shown in the cards below.\n3 8 4 7",
+    "answer": "4738",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "four digit cards 3, 8, 4, 7",
+    "ocr_fixes": [
+      "cards '3 8 4 f' -> '3 8 4 7' (image)"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q14",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 9,
+    "section": "Booklet B",
+    "question_no": 14,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Kelvin had breakfast at the time shown on the clock below.\nThe clock was 5 minutes slow.\nWhat was the actual time in the 24-hour clock?",
+    "answer": "0730",
+    "unit": "",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "analogue clock showing 7:25",
+    "ocr_fixes": [
+      "'stow' -> 'slow'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q15",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 9,
+    "section": "Booklet B",
+    "question_no": 15,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Arrange the fractions in order, beginning with the greatest.\n$\\frac{2}{5}$, $\\frac{2}{3}$, $\\frac{7}{12}$",
+    "answer": "$\\frac{2}{3}$, $\\frac{7}{12}$, $\\frac{2}{5}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 18",
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q16",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 9,
+    "section": "Booklet B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing fraction in the box?",
+    "answer": "$\\frac{4}{10}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "number line from 0 to 8/10 with arrow at a marked tick",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q17",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 10,
+    "section": "Booklet B",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mrs Tan paid for her meal with a ＄50-note and got ＄14.30 change. How much did her meal cost?",
+    "answer": "35.70",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q18",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 10,
+    "section": "Booklet B",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Chee Meng has 7 cups. He pours 86 g of sugar into each cup. What is the total mass of sugar Chee Meng pours into all the cups?",
+    "answer": "602",
+    "unit": "g",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q19",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 11,
+    "section": "Booklet B",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The figure below is drawn on a square grid.\n(a) Name a line that is parallel to line BC.\n(b) Name a line that is perpendicular to line AC.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Name a line that is parallel to line BC."
+      },
+      {
+        "part": "b",
+        "text": "Name a line that is perpendicular to line AC."
+      }
+    ],
+    "answer": "AE; DC",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "AE",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "DC",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "figure ABCDEF on a square grid with lines AB, AC, AE, AF, BC, CD, DE, EF",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q20",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 12,
+    "section": "Booklet B",
+    "question_no": 20,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A minibus can take at most 8 passengers. What is the least number of minibuses needed to take 158 passengers?",
+    "answer": "20",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number split in OCR"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q21",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 12,
+    "section": "Booklet B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mr Lee wants to buy some barb wire to fence up his rectangular garden completely. The length of his garden is 50 m. Its breadth is 32 m. What is the total length of barb wire Mr Lee needs to buy?",
+    "answer": "164",
+    "unit": "m",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangular garden 50 m by 32 m with barb wire fence",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q22",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 13,
+    "section": "Booklet B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph shows the number of tickets sold for a carnival for 3 weeks.\nBased on the information from the bar graph, tick (✓) True or False for the statements below.\n(a) The total number of tickets sold every week is the same for all 3 weeks.\n(b) In week 3, the number of tickets sold on the weekend is three times the number of tickets sold on the weekdays.\n(c) There were fewer tickets sold on weekdays in week 2 than in week 3.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "The total number of tickets sold every week is the same for all 3 weeks."
+      },
+      {
+        "part": "b",
+        "text": "In week 3, the number of tickets sold on the weekend is three times the number of tickets sold on the weekdays."
+      },
+      {
+        "part": "c",
+        "text": "There were fewer tickets sold on weekdays in week 2 than in week 3."
+      }
+    ],
+    "answer": "True; True; False",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "True",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "True",
+        "unit": ""
+      },
+      {
+        "part": "c",
+        "value": "False",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph Tickets sold for a Carnival, weekdays vs weekends, weeks 1-3 (no numbered axis)",
+    "ocr_fixes": [
+      "'b]' legend OCR garbled, read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q23",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 15,
+    "section": "Booklet C",
+    "question_no": 23,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Box A is 2550 g lighter than Box B.\nBox B is 3400 g heavier than Box C.\nBox C weighs 2 kg 180 g.\n(a) What is the mass of Box B?\n(b) What is the mass of Box A? Give your answer in kilograms and grams.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What is the mass of Box B?"
+      },
+      {
+        "part": "b",
+        "text": "What is the mass of Box A? Give your answer in kilograms and grams."
+      }
+    ],
+    "answer": "5580 g; 3 kg 30 g",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "5580",
+        "unit": "g"
+      },
+      {
+        "part": "b",
+        "value": "3 kg 30 g",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q24",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 16,
+    "section": "Booklet C",
+    "question_no": 24,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Ali sold 570 apples.\nHe sold 5 times as many apples as oranges.\nHe sold 38 fewer oranges than pears.\n(a) How many oranges did Ali sell?\n(b) How many pears did Ali sell?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many oranges did Ali sell?"
+      },
+      {
+        "part": "b",
+        "text": "How many pears did Ali sell?"
+      }
+    ],
+    "answer": "114; 152",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "114",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "152",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q25",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 17,
+    "section": "Booklet C",
+    "question_no": 25,
+    "marks": 3,
+    "question_type": "long",
+    "question": "The figure below is drawn in a square grid.\n(a) What is the area of the shaded figure?\n(b) In the square grid below, one side of the rectangle has been drawn for you. Draw three more lines to complete the rectangle so that it has an area equal to the shaded figure in part (a). What is the perimeter of the rectangle drawn?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What is the area of the shaded figure?"
+      },
+      {
+        "part": "b",
+        "text": "In the square grid below, one side of the rectangle has been drawn for you. Draw three more lines to complete the rectangle so that it has an area equal to the shaded figure in part (a). What is the perimeter of the rectangle drawn?"
+      }
+    ],
+    "answer": "20; 24",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "20",
+        "unit": "cm²"
+      },
+      {
+        "part": "b",
+        "value": "24",
+        "unit": "cm"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "shaded figure on a 1 cm square grid; second blank grid with one rectangle side drawn",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok (reviewed): key 20 cm2 and 24 cm kept (a 2 cm by 10 cm rectangle has area 20 and perimeter 24, consistent). The shading is not visible in the scan so the shaded area was not recounted",
+    "confidence": "medium",
+    "answer_type": "drawing"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q26",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 18,
+    "section": "Booklet C",
+    "question_no": 26,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Jerry keeps his picture cards in 4 boxes. Each box holds 118 cards except for the last box. The last box has only 79 cards. How many picture cards does Jerry have altogether?",
+    "answer": "433",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_MGS_EOY_Q27",
+    "grade": "P3",
+    "year": "2024",
+    "school": "Methodist Girls'",
+    "exam": "EOY",
+    "source": "(Methodist Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-MGS.pdf",
+    "source_pdf_page": 19,
+    "section": "Booklet C",
+    "question_no": 27,
+    "marks": 3,
+    "question_type": "long",
+    "question": "In an auditorium, 159 people were seated to watch a performance at first. After the first performance, 27 of them left their seats. Then, 4 times as many people as those who left their seats came in to occupy the remaining seats. How many seats are there in the auditorium?",
+    "answer": "240",
+    "unit": "seats",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Do na' margin text removed"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

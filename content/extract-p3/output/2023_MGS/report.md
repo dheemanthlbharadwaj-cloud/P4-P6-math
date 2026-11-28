@@ -19,3 +19,7 @@
 - Checked 16 crops; re-cropped manually Q21, Q22, Q25, Q31, Q32, Q33, Q34, Q37, Q39 (leftover question text, answer lines, footer and blank areas removed; Q32 now shows the full vertical multiplication; Q33 and Q37 no longer include page furniture; Q34 graph only, the True/False statement table is not part of the figure). Q09, Q10, Q11, Q12, Q15, Q16, Q29 kept.
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: none (page is a low-quality scan).
+
+## Answer review
+- Q9: final unchanged; grid coordinates: L acute, T 108 deg obtuse, P 135 obtuse, Q exactly 90, R 108 obtuse; 3 obtuse; key 3 (page 25) agrees
+- Q31: final unchanged; A about 800 ml, B about 350 ml; pour 150 ml; 800-150 = 650 ml; key agrees

@@ -19,3 +19,9 @@
 - Checked 16 crops. Fixed 7 by manual crop: Q10 (was missing), Q17 (whole vertical subtraction), Q25 (stray text removed), Q27 and Q28 (no white-out; full grid, rectangle A, square B, points A-F), Q34 (lamp-post road figure, was the wrong region), Q24 (left stick was clipped).
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: none (Q8 has some empty margin only; Q30 bar graph is torn in the original).
+
+
+## Answer review
+
+- **2022_P3_PeiHwa_EOY_Q23**: final answer '32' (was '32'). Matches key 32 cm2.
+- **2022_P3_PeiHwa_EOY_Q25**: final answer '2 ℓ 900 mℓ' (was '2 ℓ 900 mℓ'). Matches key.

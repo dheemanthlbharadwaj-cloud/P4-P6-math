@@ -13,3 +13,12 @@
 - Checked 12 figures. Fixed 6: Q30 (leftover text removed), Q38 (blank area and answer line removed), Q4, Q6, Q15, Q17 (excess white margin trimmed).
 - figure_refs added: none. has_figure changes: none (other questions are fully in the text).
 - Still imperfect: none (scan speckle only).
+
+
+## Answer review
+- Q04: beakers read at 100 mℓ per tick (A 700, B 300); 700+300=1000 mℓ; key 4 agrees.
+- Q06: counted whole and half squares: A 9, B 7, C 7, D 10; B and C, key 2 agrees.
+- Q14: pointer 3.4 kg (0.2 kg per tick), 3 kg 400 g; key agrees.
+- Q15: measured the five marked angles: 3 obtuse (top, bottom-left, bottom-right); key 3 agrees.
+- Q17: drawing; AB slope 3 right : 2 down; key shows a parallel line through C.
+- Q25: ruler 100 cm at midpoint, bold tick at 160 cm; 160 cm = 1 m 60 cm; key agrees.

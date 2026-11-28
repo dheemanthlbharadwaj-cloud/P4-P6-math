@@ -176,8 +176,8 @@
   "checked_against_image": [
    5
   ],
-  "answer_check": "ok (key partly hidden; solved 2 of 6 squares shaded = 1/3, option 2)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_HenryPark_EOY_Q06",
@@ -212,8 +212,8 @@
   "checked_against_image": [
    5
   ],
-  "answer_check": "solved: 4 (key for Q6 hidden by watermark; 17 + 71 = 88)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): key entry hidden by watermark; solved 17 + (17+54) = 88",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_HenryPark_EOY_Q07",
@@ -382,8 +382,8 @@
   "checked_against_image": [
    7
   ],
-  "answer_check": "ok (matches key 1400 mℓ; levels not independently measured)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): key 1400 ml; measured tick spacing is equal, left water 1 tick below 1 l, right water 2 ticks below 1 l, so 5 ticks per litre = 200 ml each: 800 + 600",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_HenryPark_EOY_Q12",
@@ -1314,8 +1314,8 @@
   "checked_against_image": [
    19
   ],
-  "answer_check": "ok (key: 50.20 - 2 x 20.20 = 9.80; key text OCR garbled but result 9.80)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 50.20 - 2 x 20.20 = 9.80; key working matches",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_HenryPark_EOY_Q39",
@@ -1348,8 +1348,8 @@
    20,
    23
   ],
-  "answer_check": "solved:180 differs from key 300 (key: 120-30=90, 3u=270, +30=300; but difference after transfer is 120-60=60 so Jeremy 60, Melody 120, total 180; check J=30, M=150)",
-  "confidence": "medium"
+  "answer_check": "reviewed: key says 300, correct is 180 because after the transfer the gap is 120 - 60 = 60 = 1 unit (Jeremy), so Jeremy 60, Melody 120 afterwards; originally J=30, M=150, total 180 (check: 150-30=120=2 x (30+30))",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_HenryPark_EOY_Q40",

@@ -1048,8 +1048,8 @@
   "checked_against_image": [
    14
   ],
-  "answer_check": "unsure: dial pointer slightly past 1 kg, fine ticks hard to read, key 1 kg 250 g accepted",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): dial full circle = 4 kg, pointer 112 degrees past 0 = 1.25 kg = 1 kg 250 g; key 1 kg 250 g",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_CatholicHigh_EOY_Q32",
@@ -1306,8 +1306,8 @@
    "'Heteceived' -> 'He received'"
   ],
   "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 50-2 = 48 spent; 48-12 = 36; 36/2 = 18 for shorts (blouse 30). Key page has no Q39 entry; solved from the printed question",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_CatholicHigh_EOY_Q40",

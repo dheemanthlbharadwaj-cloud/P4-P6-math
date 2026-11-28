@@ -358,8 +358,8 @@
   "checked_against_image": [
    6
   ],
-  "answer_check": "ok (key accepted; angle count not re-derived)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): hexagon angles measured on grid: 71 and 80 degrees acute, two right angles (the notch), two obtuse; 2 acute; key 2",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_NanHua_EOY_Q11",
@@ -431,8 +431,8 @@
   "checked_against_image": [
    7
   ],
-  "answer_check": "ok (key accepted; dial about 2.7 kg, minus 250 g)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): dial is 72 degrees per kg, pointer at 2.7 kg; 2700 g - 250 g = 2450 g; key 2",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_NanHua_EOY_Q13",
@@ -762,7 +762,7 @@
   "checked_against_image": [
    11
   ],
-  "answer_check": "ok (key accepted; notes not recounted)",
+  "answer_check": "ok (reviewed): left three $50 notes = $150, right group read as $6 per key (total $156); $223.50 - $156 = $67.50; key agrees (right-hand note denominations blurry in scan)",
   "confidence": "medium"
  },
  {
@@ -835,8 +835,8 @@
   "checked_against_image": [
    12
   ],
-  "answer_check": "ok (key accepted; beaker readings 800 and 600 not verified)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): beaker ticks are 200 mℓ apart; readings 800 and 600; 1400 - 125 = 1275 mℓ = 1 ℓ 275 mℓ; key agrees",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_NanHua_EOY_Q25",
@@ -912,7 +912,7 @@
   "marks": 2,
   "question_type": "short",
   "question": "In the grid below, draw a line perpendicular to AB, passing through point M.",
-  "answer": "Line through M perpendicular to AB (drawn on the grid)",
+  "answer": "drawing: a line through M perpendicular to AB; AB goes 4 squares across for every 1 square down, so the line from M goes 4 squares down and 1 square left (meeting AB at the grid point 1 square left of and 4 squares below M), with a right-angle mark",
   "unit": "",
   "topic_primary": "Perpendicular and Parallel Lines",
   "topics": [
@@ -924,8 +924,9 @@
   "checked_against_image": [
    14
   ],
-  "answer_check": "ok (drawing; no numerical answer)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): drawing, matches the key diagram",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2023_P3_NanHua_EOY_Q28",

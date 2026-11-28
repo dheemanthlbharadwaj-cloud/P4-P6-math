@@ -1,1384 +1,1385 @@
 [
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q01",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "3456 is 1000 more than ______.",
-  "options": {
-   "1": "2456",
-   "2": "3356",
-   "3": "3556",
-   "4": "4456"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q01",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "3456 is 1000 more than ______.",
+    "options": {
+      "1": "2456",
+      "2": "3356",
+      "3": "3556",
+      "4": "4456"
+    },
+    "answer_key": "1",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q02",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "25 hundreds 7 tens is the same as ______.",
-  "options": {
-   "1": "320",
-   "2": "950",
-   "3": "2570",
-   "4": "3200"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q02",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "25 hundreds 7 tens is the same as ______.",
+    "options": {
+      "1": "320",
+      "2": "950",
+      "3": "2570",
+      "4": "3200"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q03",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "7 groups of 8 = 5 groups of 8 + ______ $\\times$ 8",
-  "options": {
-   "1": "56",
-   "2": "2",
-   "3": "3",
-   "4": "16"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q03",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "7 groups of 8 = 5 groups of 8 + ______ $\\times$ 8",
+    "options": {
+      "1": "56",
+      "2": "2",
+      "3": "3",
+      "4": "16"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "OCR '¢ groups' -> '7 groups'; number label read from image"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "OCR '¢ groups' -> '7 groups'; number label read from image"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q04",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Divide 739 by 7. What is the remainder?",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "5",
-   "4": "4"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q04",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Divide 739 by 7. What is the remainder?",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "5",
+      "4": "4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q05",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "There were 156 marbles in 3 bags. How many marbles were there in 6 such bags?",
-  "options": {
-   "1": "26",
-   "2": "52",
-   "3": "312",
-   "4": "936"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q05",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "There were 156 marbles in 3 bags. How many marbles were there in 6 such bags?",
+    "options": {
+      "1": "26",
+      "2": "52",
+      "3": "312",
+      "4": "936"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q06",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The sum of two numbers is 5326. The bigger number is 3398. What is the smaller number?",
-  "options": {
-   "1": "1928",
-   "2": "1938",
-   "3": "2072",
-   "4": "2672"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q06",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The sum of two numbers is 5326. The bigger number is 3398. What is the smaller number?",
+    "options": {
+      "1": "1928",
+      "2": "1938",
+      "3": "2072",
+      "4": "2672"
+    },
+    "answer_key": "1",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q07",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "John and Ken shared some money equally at first. After John gave Ken ＄36, how much more money did Ken have than John in the end?",
-  "options": {
-   "1": "＄18",
-   "2": "＄54",
-   "3": "＄72",
-   "4": "＄90"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q07",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "John and Ken shared some money equally at first. After John gave Ken ＄36, how much more money did Ken have than John in the end?",
+    "options": {
+      "1": "＄18",
+      "2": "＄54",
+      "3": "＄72",
+      "4": "＄90"
+    },
+    "answer_key": "3",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR",
+      "$ -> fullwidth"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR",
-   "$ -> fullwidth"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q08",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Study the diagram below. Which one of the following shows the correct mass of the watermelon?",
-  "options": {
-   "1": "2005 g",
-   "2": "2050 g",
-   "3": "2450 g",
-   "4": "2500 g"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q08",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Study the diagram below. Which one of the following shows the correct mass of the watermelon?",
+    "options": {
+      "1": "2005 g",
+      "2": "2050 g",
+      "3": "2450 g",
+      "4": "2500 g"
+    },
+    "answer_key": "4",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "watermelon on a dial scale, pointer between 2 and 3 kg",
+    "ocr_fixes": [
+      "options '20509','24509' -> '2050 g','2450 g'"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok (reviewed): dial 45 deg per kg, pointer at ~111 deg = 2.5 kg; key 4 = 2500 g",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "watermelon on a dial scale, pointer between 2 and 3 kg",
-  "ocr_fixes": [
-   "options '20509','24509' -> '2050 g','2450 g'"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok (key 4 = 2500 g; pointer reads about 2.47 kg, 2450 vs 2500 hard to tell by eye)",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q09",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Harold bought 4 boxes of pens. There were 12 pens in each box. He repacked all the pens equally into 8 bags. How many pens were there in each bag?",
-  "options": {
-   "1": "6",
-   "2": "40",
-   "3": "3",
-   "4": "48"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q09",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Harold bought 4 boxes of pens. There were 12 pens in each box. He repacked all the pens equally into 8 bags. How many pens were there in each bag?",
+    "options": {
+      "1": "6",
+      "2": "40",
+      "3": "3",
+      "4": "48"
+    },
+    "answer_key": "1",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as '9,'"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as '9,'"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q10",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the difference between $\\frac{2}{3}$ and $\\frac{1}{9}$.",
-  "options": {
-   "1": "$\\frac{1}{6}$",
-   "2": "$\\frac{5}{9}$",
-   "3": "$\\frac{7}{9}$",
-   "4": "$\\frac{3}{12}$"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q10",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the difference between $\\frac{2}{3}$ and $\\frac{1}{9}$.",
+    "options": {
+      "1": "$\\frac{1}{6}$",
+      "2": "$\\frac{5}{9}$",
+      "3": "$\\frac{7}{9}$",
+      "4": "$\\frac{3}{12}$"
+    },
+    "answer_key": "2",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok (key not legible in OCR text; read from image p25)",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok (key not legible in OCR text; read from image p25)",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q11",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Tom left a party at 9.15 p.m. He spent 2 h 25 min at the party. What time did Tom arrive at the party?",
-  "options": {
-   "1": "6.50 p.m.",
-   "2": "7.10 p.m.",
-   "3": "11.30 p.m.",
-   "4": "11.40 p.m."
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q11",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Tom left a party at 9.15 p.m. He spent 2 h 25 min at the party. What time did Tom arrive at the party?",
+    "options": {
+      "1": "6.50 p.m.",
+      "2": "7.10 p.m.",
+      "3": "11.30 p.m.",
+      "4": "11.40 p.m."
+    },
+    "answer_key": "1",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as '1.'"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as '1.'"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q12",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A book costs ＄20. The book is ＄7.20 cheaper than a calculator. How much is the cost of the calculator?",
-  "options": {
-   "1": "＄7.40",
-   "2": "＄12.80",
-   "3": "＄13.20",
-   "4": "＄27.20"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q12",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A book costs ＄20. The book is ＄7.20 cheaper than a calculator. How much is the cost of the calculator?",
+    "options": {
+      "1": "＄7.40",
+      "2": "＄12.80",
+      "3": "＄13.20",
+      "4": "＄27.20"
+    },
+    "answer_key": "4",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> fullwidth"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> fullwidth"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q13",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following fractions is smaller than $\\frac{1}{2}$?\n$\\frac{4}{8}$, $\\frac{3}{7}$, $\\frac{5}{9}$, $\\frac{6}{11}$",
-  "options": {
-   "1": "$\\frac{5}{9}$",
-   "2": "$\\frac{6}{11}$",
-   "3": "$\\frac{3}{7}$",
-   "4": "$\\frac{4}{8}$"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q13",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following fractions is smaller than $\\frac{1}{2}$?\n$\\frac{4}{8}$, $\\frac{3}{7}$, $\\frac{5}{9}$, $\\frac{6}{11}$",
+    "options": {
+      "1": "$\\frac{5}{9}$",
+      "2": "$\\frac{6}{11}$",
+      "3": "$\\frac{3}{7}$",
+      "4": "$\\frac{4}{8}$"
+    },
+    "answer_key": "3",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q14",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Study the diagram below. Some weights and Object Z are placed on a scale balance. What is the mass of Object Z?",
-  "options": {
-   "1": "100 g",
-   "2": "325 g",
-   "3": "425 g",
-   "4": "650 g"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q14",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Study the diagram below. Some weights and Object Z are placed on a scale balance. What is the mass of Object Z?",
+    "options": {
+      "1": "100 g",
+      "2": "325 g",
+      "3": "425 g",
+      "4": "650 g"
+    },
+    "answer_key": "2",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "scale balance: 500 g, 200 g, 150 g on left; 200 g and two Z on right",
+    "ocr_fixes": [
+      "'3259' -> '325 g'"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "scale balance: 500 g, 200 g, 150 g on left; 200 g and two Z on right",
-  "ocr_fixes": [
-   "'3259' -> '325 g'"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q15",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 8,
-  "section": "A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Rectangle ABCD consists of 4 identical squares placed side by side. The length of each square is 5 cm. What is the area of the rectangle ABCD?",
-  "options": {
-   "1": "20 cm$^2$",
-   "2": "25 cm$^2$",
-   "3": "50 cm$^2$",
-   "4": "100 cm$^2$"
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q15",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 8,
+    "section": "A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Rectangle ABCD consists of 4 identical squares placed side by side. The length of each square is 5 cm. What is the area of the rectangle ABCD?",
+    "options": {
+      "1": "20 cm$^2$",
+      "2": "25 cm$^2$",
+      "3": "50 cm$^2$",
+      "4": "100 cm$^2$"
+    },
+    "answer_key": "4",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle ABCD made of 4 squares, side 5 cm marked",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle ABCD made of 4 squares, side 5 cm marked",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q16",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is seven thousand, one hundred and seven in numerals?",
-  "answer": "7107",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Whatis' -> 'What is'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q17",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 17,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the time shown on the clock?",
-  "answer": "25 minutes to 1",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "minutes",
-    "value": "25",
-    "unit": ""
-   },
-   {
-    "part": "to",
-    "value": "1",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "analogue clock, minute hand at 7, hour hand just before 1",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q18",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 18,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Write 4 km 6 m in metres.",
-  "answer": "4006",
-  "unit": "m",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q19",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 19,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Express $\\frac{6}{10}$ in its simplest form.",
-  "answer": "$\\frac{3}{5}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction garbled, read from image"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q20",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 20,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Express 1 h 34 min in minutes.",
-  "answer": "94",
-  "unit": "min",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'7 h' -> '1 h'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q21",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 21,
-  "marks": 1,
-  "question_type": "short",
-  "question": "The distance from Point A to Point B is 760 m and the distance from Point B to Point C is 320 m. Find the total distance from Point A to Point B to Point C.",
-  "answer": "1080",
-  "unit": "m",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "points A, B, C joined by lines marked 760 m and 320 m",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q22",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Form the smallest 4-digit odd number with the following digits. All the digits must be used. Each digit can only be used once.\n7 0 1 4",
-  "answer": "1047",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q23",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Study the number pattern below. What is the missing number?\n3110, 3220, 3330, ______, 3550, 3660",
-  "answer": "3440",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q24",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The number line below is marked at equal intervals. What is the missing fraction indicated by the arrow on the number line?",
-  "answer": "$\\frac{5}{8}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "number line 0 to 1 in 8 equal parts, arrow at 5th mark, labelled ?",
-  "ocr_fixes": [
-   "garbled OCR, read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q25",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "$\\frac{1}{12}$ + $\\frac{3}{4}$ = ?",
-  "answer": "$\\frac{10}{12}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok (key gives 10/12, equal to 5/6 in simplest form; question does not ask for simplest form)",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q26",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Michael had two ＄50 notes. He bought a bag that cost ＄76.95. How much money had he left?",
-  "answer": "23.05",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'28.' read as 26"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q27",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Richard started doing his homework at 2.45 p.m. He completed his homework at 3.35 p.m. on the same day. How much time did he spend on his homework?",
-  "answer": "50",
-  "unit": "min",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q28",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Express 9091 mℓ in litres and millilitres.",
-  "answer": "9 ℓ 91 mℓ",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "ℓ",
-    "value": "9",
-    "unit": "ℓ"
-   },
-   {
-    "part": "mℓ",
-    "value": "91",
-    "unit": "mℓ"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'9091 ml' unit mℓ"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q29",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The total mass of a mango and a papaya is 876 g. The mass of the papaya is 3 times as heavy as the mango. What is the mass of the mango?",
-  "answer": "219",
-  "unit": "g",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q30",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Line AB is drawn in a square grid. Draw a line perpendicular to line AB through point C.",
-  "answer": "(draw a line through C perpendicular to AB)",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "square grid with line AB and point C (C only faintly printed)",
-  "ocr_fixes": [
-   "OCR text from page header garbled, read from image"
-  ],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok (drawing answer; key page shows the line)",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q31",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 31,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Lines AB, CD, EF and GH are drawn in a square grid. Name the two lines that are parallel to each other.",
-  "answer": "AB and EF",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "square grid with lines AB, CD, EF, GH",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q32",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 32,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Carl arranged some black-and-white beads in a pattern as shown below. He arranged a total of 72 beads. How many black beads did he use?",
-  "answer": "12",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "bead pattern: 1 black then 5 white repeated, first to last",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q33",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 33,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The figure shown is drawn in a square grid. Name all the obtuse angles in the figure.",
-  "answer": "a and c",
-  "unit": "",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "polygon on grid with angles a, b, c, d, e marked",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q34",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 34,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph below shows the number of tickets sold for a concert from Monday to Friday. Study the graph carefully. How many more tickets must be sold on Monday so that the number of tickets sold on both Monday and Friday will be the same?",
-  "answer": "6",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph tickets sold Mon-Fri",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q35",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 18,
-  "section": "B",
-  "question_no": 35,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Study Figure X and Figure Y carefully. Each statement below is either true, false or not possible to tell from the information given. For each statement, put a tick in the correct column.\nFigure X and Figure Y have the same perimeter.\nFigure X and Figure Y have the same area.",
-  "answer": "True, False",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "same perimeter",
-    "value": "True",
-    "unit": ""
-   },
-   {
-    "part": "same area",
-    "value": "False",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "two shaded figures on cm grid, plus True/False/Not possible to tell table",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   18
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q36",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 19,
-  "section": "C",
-  "question_no": 36,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Abby had 1800 stickers. After giving away 657 stickers, she packed the rest of the stickers equally into 9 boxes. How many stickers were there in each box?",
-  "answer": "127",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q37",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 20,
-  "section": "C",
-  "question_no": 37,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Nathan bought a basketball and a pair of shoes for ＄91.50. The basketball cost ＄37.50 less than the pair of shoes. How much did the basketball cost?",
-  "answer": "27",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "word order repaired"
-  ],
-  "checked_against_image": [
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q38",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 21,
-  "section": "C",
-  "question_no": 38,
-  "marks": 3,
-  "question_type": "long",
-  "question": "William filled a container completely with 6 bottles of water. Each bottle of water contained 400 mℓ of water. He then poured 165 mℓ of water out of the container. How much water was left in the container?",
-  "answer": "2235",
-  "unit": "mℓ",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   21
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q39",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 22,
-  "section": "C",
-  "question_no": 39,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Peter placed some pins along a straight line with an equal distance between each of them. The distance from the 1st pin to the 9th pin was 40 cm. The distance from the 9th to the last pin was 50 cm.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Find the distance between the 1st and 2nd pin."
-   },
-   {
-    "part": "b",
-    "text": "How many pins did Peter place along the straight line?"
-   }
-  ],
-  "answer": "(a) 5 cm (b) 19 pins",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "5",
-    "unit": "cm"
-   },
-   {
-    "part": "b",
-    "value": "19",
-    "unit": "pins"
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "straight line of pins, 1st-9th 40 cm, 9th-last 50 cm",
-  "ocr_fixes": [
-   "'27°' -> '2nd'"
-  ],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_CatholicHigh_EOY_Q40",
-  "grade": "P3",
-  "year": "2022",
-  "school": "Catholic High",
-  "exam": "EOY",
-  "source": "(Catholic High) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
-  "source_pdf_page": 23,
-  "section": "C",
-  "question_no": 40,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Black and white counters are arranged to form a pattern. The first three figures of the pattern are shown below. The table shows the number of black and white counters used for each figure.\nFigure 1: white 3, black 1, total 4\nFigure 2: white 3, black 4, total 7\nFigure 3: white 6, black 4, total 10\nFigure 4: white (a), black (b), total 13",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Find the number of white counters for Figure 4."
-   },
-   {
-    "part": "b",
-    "text": "Find the number of black counters for Figure 4."
-   },
-   {
-    "part": "c",
-    "text": "Find the total number of counters for Figure 10."
-   }
-  ],
-  "answer": "(a) 6 (b) 7 (c) 31",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "6",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "7",
-    "unit": ""
-   },
-   {
-    "part": "c",
-    "value": "31",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "counter pattern figures 1-3 and a table of counts",
-  "ocr_fixes": [
-   "table read from image"
-  ],
-  "checked_against_image": [
-   23
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q16",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is seven thousand, one hundred and seven in numerals?",
+    "answer": "7107",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Whatis' -> 'What is'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q17",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 17,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the time shown on the clock?",
+    "answer": "25 minutes to 1",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "minutes",
+        "value": "25",
+        "unit": ""
+      },
+      {
+        "part": "to",
+        "value": "1",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "analogue clock, minute hand at 7, hour hand just before 1",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q18",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 18,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Write 4 km 6 m in metres.",
+    "answer": "4006",
+    "unit": "m",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q19",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 19,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Express $\\frac{6}{10}$ in its simplest form.",
+    "answer": "$\\frac{3}{5}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction garbled, read from image"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q20",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 20,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Express 1 h 34 min in minutes.",
+    "answer": "94",
+    "unit": "min",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'7 h' -> '1 h'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q21",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 21,
+    "marks": 1,
+    "question_type": "short",
+    "question": "The distance from Point A to Point B is 760 m and the distance from Point B to Point C is 320 m. Find the total distance from Point A to Point B to Point C.",
+    "answer": "1080",
+    "unit": "m",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "points A, B, C joined by lines marked 760 m and 320 m",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q22",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Form the smallest 4-digit odd number with the following digits. All the digits must be used. Each digit can only be used once.\n7 0 1 4",
+    "answer": "1047",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q23",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Study the number pattern below. What is the missing number?\n3110, 3220, 3330, ______, 3550, 3660",
+    "answer": "3440",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q24",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The number line below is marked at equal intervals. What is the missing fraction indicated by the arrow on the number line?",
+    "answer": "$\\frac{5}{8}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "number line 0 to 1 in 8 equal parts, arrow at 5th mark, labelled ?",
+    "ocr_fixes": [
+      "garbled OCR, read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q25",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "$\\frac{1}{12}$ + $\\frac{3}{4}$ = ?",
+    "answer": "$\\frac{10}{12}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok (key gives 10/12, equal to 5/6 in simplest form; question does not ask for simplest form)",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q26",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Michael had two ＄50 notes. He bought a bag that cost ＄76.95. How much money had he left?",
+    "answer": "23.05",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'28.' read as 26"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q27",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Richard started doing his homework at 2.45 p.m. He completed his homework at 3.35 p.m. on the same day. How much time did he spend on his homework?",
+    "answer": "50",
+    "unit": "min",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q28",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Express 9091 mℓ in litres and millilitres.",
+    "answer": "9 ℓ 91 mℓ",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "ℓ",
+        "value": "9",
+        "unit": "ℓ"
+      },
+      {
+        "part": "mℓ",
+        "value": "91",
+        "unit": "mℓ"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'9091 ml' unit mℓ"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q29",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The total mass of a mango and a papaya is 876 g. The mass of the papaya is 3 times as heavy as the mango. What is the mass of the mango?",
+    "answer": "219",
+    "unit": "g",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q30",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Line AB is drawn in a square grid. Draw a line perpendicular to line AB through point C.",
+    "answer": "Line through C and the grid point on AB that is 1 square right and 1 square down from A (the middle of AB), drawn at 45 degrees (down-left from C), extended to cross AB; it meets AB at a right angle. C is 2 squares right of A on the same row.",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "square grid with line AB and point C (C only faintly printed)",
+    "ocr_fixes": [
+      "OCR text from page header garbled, read from image"
+    ],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok (reviewed): drawing question; C is whited out in the scan but sits 2 squares right of A, the key shows the perpendicular from C meeting AB at its midpoint",
+    "confidence": "high",
+    "answer_type": "drawing"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q31",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 31,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Lines AB, CD, EF and GH are drawn in a square grid. Name the two lines that are parallel to each other.",
+    "answer": "AB and EF",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "square grid with lines AB, CD, EF, GH",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q32",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 32,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Carl arranged some black-and-white beads in a pattern as shown below. He arranged a total of 72 beads. How many black beads did he use?",
+    "answer": "12",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "bead pattern: 1 black then 5 white repeated, first to last",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q33",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 33,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The figure shown is drawn in a square grid. Name all the obtuse angles in the figure.",
+    "answer": "a and c",
+    "unit": "",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "polygon on grid with angles a, b, c, d, e marked",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q34",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 34,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph below shows the number of tickets sold for a concert from Monday to Friday. Study the graph carefully. How many more tickets must be sold on Monday so that the number of tickets sold on both Monday and Friday will be the same?",
+    "answer": "6",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph tickets sold Mon-Fri",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q35",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 18,
+    "section": "B",
+    "question_no": 35,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Study Figure X and Figure Y carefully. Each statement below is either true, false or not possible to tell from the information given. For each statement, put a tick in the correct column.\nFigure X and Figure Y have the same perimeter.\nFigure X and Figure Y have the same area.",
+    "answer": "True, False",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "same perimeter",
+        "value": "True",
+        "unit": ""
+      },
+      {
+        "part": "same area",
+        "value": "False",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "two shaded figures on cm grid, plus True/False/Not possible to tell table",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      18
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q36",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 19,
+    "section": "C",
+    "question_no": 36,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Abby had 1800 stickers. After giving away 657 stickers, she packed the rest of the stickers equally into 9 boxes. How many stickers were there in each box?",
+    "answer": "127",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q37",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 20,
+    "section": "C",
+    "question_no": 37,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Nathan bought a basketball and a pair of shoes for ＄91.50. The basketball cost ＄37.50 less than the pair of shoes. How much did the basketball cost?",
+    "answer": "27",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "word order repaired"
+    ],
+    "checked_against_image": [
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q38",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 21,
+    "section": "C",
+    "question_no": 38,
+    "marks": 3,
+    "question_type": "long",
+    "question": "William filled a container completely with 6 bottles of water. Each bottle of water contained 400 mℓ of water. He then poured 165 mℓ of water out of the container. How much water was left in the container?",
+    "answer": "2235",
+    "unit": "mℓ",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      21
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q39",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 22,
+    "section": "C",
+    "question_no": 39,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Peter placed some pins along a straight line with an equal distance between each of them. The distance from the 1st pin to the 9th pin was 40 cm. The distance from the 9th to the last pin was 50 cm.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Find the distance between the 1st and 2nd pin."
+      },
+      {
+        "part": "b",
+        "text": "How many pins did Peter place along the straight line?"
+      }
+    ],
+    "answer": "(a) 5 cm (b) 19 pins",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "5",
+        "unit": "cm"
+      },
+      {
+        "part": "b",
+        "value": "19",
+        "unit": "pins"
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "straight line of pins, 1st-9th 40 cm, 9th-last 50 cm",
+    "ocr_fixes": [
+      "'27°' -> '2nd'"
+    ],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_CatholicHigh_EOY_Q40",
+    "grade": "P3",
+    "year": "2022",
+    "school": "Catholic High",
+    "exam": "EOY",
+    "source": "(Catholic High) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-CatholicHigh.pdf",
+    "source_pdf_page": 23,
+    "section": "C",
+    "question_no": 40,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Black and white counters are arranged to form a pattern. The first three figures of the pattern are shown below. The table shows the number of black and white counters used for each figure.\nFigure 1: white 3, black 1, total 4\nFigure 2: white 3, black 4, total 7\nFigure 3: white 6, black 4, total 10\nFigure 4: white (a), black (b), total 13",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Find the number of white counters for Figure 4."
+      },
+      {
+        "part": "b",
+        "text": "Find the number of black counters for Figure 4."
+      },
+      {
+        "part": "c",
+        "text": "Find the total number of counters for Figure 10."
+      }
+    ],
+    "answer": "(a) 6 (b) 7 (c) 31",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "6",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "7",
+        "unit": ""
+      },
+      {
+        "part": "c",
+        "value": "31",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "counter pattern figures 1-3 and a table of counts",
+    "ocr_fixes": [
+      "table read from image"
+    ],
+    "checked_against_image": [
+      23
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

@@ -21,3 +21,17 @@
 - figure_refs added: none.
 - has_figure changes: Q29 true to false (the vertical sum is written out in the question text; there was no crop).
 - Still imperfect: nothing beyond scan quality.
+
+
+## Answer review
+
+- Q05: 1 (9 minutes past 10); unchanged, clock re-read and confirmed.
+- Q10: 1 (150 mℓ); unchanged, ticks 50 mℓ apart, level 350.
+- Q24: (a) 8, (b) 10; unchanged, key (b) 16 is a key error.
+- Q25: 196 -> 198; bars 68+52+34+44 measured against gridlines, key is wrong.
+- Q26: Friday; unchanged.
+- Q27: 11.45 a.m.; unchanged, key "pm" typo.
+- Q32: 1 kg 880 g; unchanged (8030-6150).
+- Q33: 96 cm2; unchanged.
+- Q34: drawing answer text made precise, answer_type drawing.
+- Q35: 4; unchanged.

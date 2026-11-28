@@ -18,3 +18,12 @@
 - Fixed by hand: Q13 (question line removed, option labels (1) to (4) all kept, nothing whited out), Q15 (option text removed), Q20 (question text removed), Q30 (stray "(a)" removed), Q34 (trimmed so the question line is not touched).
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: scan quality only (Q18 "1 l" label is faint in the scan, Q35 bars and grid are faint).
+
+
+## Answer review
+- Q07: key 3 is wrong; 57 tens = 570, +300 = 870 (option 4).
+- Q15: pointer 3 ticks past 1 kg, 50 g per tick; key agrees.
+- Q18: scale 100 mℓ per tick, level 700 mℓ; key agrees.
+- Q29: vertices (1,5),(1,4),(3,2),(3,1),(4,1),(5,4),(6,1),(6,5) give 13 cm2; key agrees.
+- Q32: 7 vertices; interior angles 45, 270, 45, 90, 90, 270, 90: three right angles; key agrees.
+- Q35: drawing; Tamil bar to 14.

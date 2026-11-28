@@ -246,8 +246,8 @@
       5,
       19
     ],
-    "answer_check": "ok",
-    "confidence": "medium"
+    "answer_check": "ok (reviewed): key 3 (1500 ml); Container A surface about 2.2 l, B about 0.7 l by tick count (or 2 l - 500 ml); only option 1500 fits; key agrees",
+    "confidence": "high"
   },
   {
     "id": "2025_P3_ACSJ_EOY_Q08",
@@ -614,8 +614,8 @@
     "checked_against_image": [
       10
     ],
-    "answer_check": "ok",
-    "confidence": "medium"
+    "answer_check": "ok (reviewed): measured the 5 marked angles: left tip acute, top-left about 130 obtuse, top-right about 77 acute, right about 129 obtuse, bottom about 86 acute; 2 obtuse; key agrees",
+    "confidence": "high"
   },
   {
     "id": "2025_P3_ACSJ_EOY_Q19",
@@ -841,8 +841,8 @@
       13,
       19
     ],
-    "answer_check": "solved: 62 differs from key 58 (key '30 + 28')",
-    "confidence": "medium"
+    "answer_check": "reviewed: key says 30 + 28 = 58, correct is 62 because the graph shows Mango Saturday 32 (bar passes the 30 line, dashed line at 32) and Sunday 30; 32 + 30 = 62",
+    "confidence": "high"
   },
   {
     "id": "2025_P3_ACSJ_EOY_Q25",
@@ -874,8 +874,8 @@
       13,
       19
     ],
-    "answer_check": "solved: 918 differs from key 876 (key reads slices 35+58+53=146; graph gives 39+62+52=153)",
-    "confidence": "medium",
+    "answer_check": "reviewed: key says 146 slices x 6 = $876, correct is $918 because graph totals are strawberry 17+22=39, mango 32+30=62, chocolate 18+34=52; 153 slices x 6 = 918 (key used 35, 58, 53)",
+    "confidence": "high",
     "figure_ref": "2025_P3_ACSJ_EOY_Q24"
   },
   {

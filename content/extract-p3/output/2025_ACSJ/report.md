@@ -19,3 +19,9 @@
 - Checked 10 crops; re-cropped manually 6: Q7 (question text removed), Q18 (answer box removed), Q20 (square with 9 cm only), Q22 (egg offer box only), Q23 (map only, no answer box or Sub-Total), Q24 (whole graph with title, all three flavour labels, axis and legend; answer boxes removed).
 - figure_refs added: Q25 -> Q24 (its own wrong crop, which was only an answer box, deleted and removed from figures.json). has_figure changes: none.
 - Still imperfect: Q19 - the scanned page already has a pencilled line through C (the previous owner's answer); it was left in because whiting it would damage the grid lines. Scan noise only otherwise.
+
+## Answer review
+- Q7: final 3 (1500 ml), unchanged; key agrees
+- Q18: final 2, unchanged
+- Q24: answer kept Mango; 62 (key 58 is a misread of the graph)
+- Q25: answer kept 918 (key 876 wrong: misread bars)

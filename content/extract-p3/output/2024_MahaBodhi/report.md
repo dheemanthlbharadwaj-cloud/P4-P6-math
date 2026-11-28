@@ -17,3 +17,7 @@
 - Fixed (manual): Q06 (angle figure only), Q07 (watermelon and mango scales only, replacing the "A-3" footer crop).
 - Checked and kept: Q04, Q08, Q09, Q14, Q16, Q17.
 - figure_refs added: none. has_figure changes: none. Still imperfect: none.
+
+## Answer review
+
+- 2024_P3_MahaBodhi_EOY_Q17: final answer CD; unchanged. ok (reviewed): EF runs up-right at 45 deg, CD runs down-right at 45 deg, so CD is perpendicular to EF; key CD

@@ -15,3 +15,11 @@
 - Q40: checked; the printed picture only shows "3 cupcakes for $8" (the $3 price is in the question text), so the crop is complete.
 - Q21 left as is (two card rows with question text between them whited out; harmless gap).
 - figure_refs added: none. has_figure changes: none. Still imperfect: none.
+
+## Answer review
+
+- 2022_P3_PeiChun_EOY_Q05: final '4' (was '4'); confidence high. figure 4: left and bottom vertices are right angles (measured ~90 deg), top and right are acute -> exactly two; fig 2 has three, fig 1 one, fig 3 none
+- 2022_P3_PeiChun_EOY_Q09: final '2' (was '2'); confidence high. pointer reads ~360 g (just before 400 mark); (360-100)/2 = 130 g
+- 2022_P3_PeiChun_EOY_Q26: final '$\\frac{4}{9}$; $\\frac{7}{8}$' (was '$\\frac{4}{9}$; $\\frac{7}{8}$'); confidence high. page image shows 2/3 - 2/9 = 4/9 and 1/2 + 3/8 = 7/8
+- 2022_P3_PeiChun_EOY_Q37: final '3075 m; 1150 m' (was '3075 m; 1150 m'); confidence high. diagram: A-B 1925 m, A-C 5 km; 5000-1925 = 3075; 3075-1925 = 1150
+- 2022_P3_PeiChun_EOY_Q38: final '9.10; 40.90' (was '9.10; 40.90'); confidence high. (a) 3.80 -> 9.10 was already the stored answer; confirmed

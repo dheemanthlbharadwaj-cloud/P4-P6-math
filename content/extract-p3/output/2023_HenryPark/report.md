@@ -8,3 +8,9 @@
 ## Crop fix
 - Checked 8 crops. Fixed 3 manually: Q17 (axis was cut at 16, now shows to 18), Q25 (white block and missing 90 label restored), Q26 (tricycle white band removed). No figure_refs, no has_figure changes (Q19, Q23 are text only).
 - Still imperfect: scan speckle only.
+
+
+## Answer review
+
+- Q09: 2; unchanged.
+- Q16: "C and A" -> "a and c" (same angles; figure labels are lower-case).

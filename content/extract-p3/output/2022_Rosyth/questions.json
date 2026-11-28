@@ -164,8 +164,8 @@
   "checked_against_image": [
    4
   ],
-  "answer_check": "unsure: key digit for Q5 partly hidden by watermark (reads 1); clock hands are hard to read",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): clock re-read, minute hand at 9 min, hour hand just past 10 = 9 minutes past 10; key digit 1 (partly under watermark) agrees",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q06",
@@ -333,8 +333,8 @@
   "checked_against_image": [
    6
   ],
-  "answer_check": "ok (level read ~350 mℓ, 150 more)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): beaker ticks are 50 mℓ apart, water level at 350 mℓ, 150 more needed; key 1",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q11",
@@ -779,8 +779,8 @@
   "checked_against_image": [
    10
   ],
-  "answer_check": "solved: (a) 8, (b) 10; key says (b) 16, which does not fit 1 = 10/(b) (key error)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): (a) 8 agrees with key; (b) 1 = 10/10, so correct is 10; key says 16, which is wrong for the question as printed",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q25",
@@ -796,7 +796,7 @@
   "marks": 2,
   "question_type": "short",
   "question": "The graph shows the number of bottles four classes collected for a recycling project.\nWhat is the total number of bottles collected by the 4 classes?",
-  "answer": "196",
+  "answer": "198",
   "unit": "",
   "topic_primary": "Bar Graphs",
   "topics": [
@@ -808,8 +808,8 @@
   "checked_against_image": [
    11
   ],
-  "answer_check": "ok (bars read approx 68+52+34+44=198 from crop; key 196, bars not exactly readable, key trusted)",
-  "confidence": "medium"
+  "answer_check": "reviewed: key says 196, correct is 198: bar tops measured against 2-unit gridlines read 68, 52, 34, 44 (sum 198)",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q26",
@@ -835,8 +835,8 @@
   "figure_note": "horizontal bar graph, ice cream cones Mon-Fri",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (graph not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): Tuesday about 55, double = 110 = Friday; key Friday",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q27",
@@ -862,7 +862,7 @@
   "figure_note": "",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "solved: 11.45 a.m.; key says \"11.45 pm\" but the answer line prints a.m. (key typo)",
+  "answer_check": "ok (reviewed): 10.30 a.m. + 1 h 15 min = 11.45 a.m.; key prints \"pm\", typo vs the a.m. printed on the answer line",
   "confidence": "high"
  },
  {
@@ -1023,8 +1023,8 @@
   "figure_note": "two weighing scales with Puppy A and Puppy B",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (scales not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 8030 g - 6150 g = 1880 g = 1 kg 880 g; key agrees",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q33",
@@ -1050,8 +1050,8 @@
   "figure_note": "rectangle ABCD split into 3 identical rectangles, AD = 8 cm",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (96 consistent with 12 cm x 8 cm)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): identical rectangles 4 cm by 8 cm, ABCD = 12 cm x 8 cm = 96 cm2; key agrees",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q34",
@@ -1077,7 +1077,7 @@
     "text": "In the grid below, draw a line perpendicular to XY through Point Z."
    }
   ],
-  "answer": "drawing: (a) line through C parallel to AB; (b) line through Z perpendicular to XY",
+  "answer": "drawing: (a) a line through C parallel to AB (same slope as AB, i.e. AB shifted straight down by the 2 grid squares from A to C); (b) a line through Z meeting XY at a right angle (XY rises 1 square per 2 across, so the line from Z goes up-left 1 square across per 2 squares up)",
   "unit": "",
   "answer_parts": [
    {
@@ -1103,8 +1103,9 @@
   "checked_against_image": [
    25
   ],
-  "answer_check": "ok",
-  "confidence": "high"
+  "answer_check": "ok (reviewed): drawing, matches the key diagram",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q35",
@@ -1130,8 +1131,8 @@
   "figure_note": "figure with marked angles",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (figure not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): of the 5 marked angles, 4 are obtuse (top-left, bottom-left, top-right, right), the bottom-right is acute; key 4",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_Rosyth_EOY_Q36",

@@ -20,3 +20,10 @@
 - Checked 12 crops; re-cropped manually 5 (plus Q4 redone): Q23 (letters complete on grid), Q28 (rectangle with 6 m and 5 m only), Q10 (bar model with Ali/Bella labels, footer removed), Q13 (question line removed), Q4 (coin numbers no longer whited out).
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: scan noise only (speckled notes/coins in Q4, faint scale labels in Q15).
+
+## Answer review
+
+- 2023_P3_MahaBodhi_EOY_Q11: final '1' (was '1'); confidence high. 9 equal sectors, 6 shaded, 3 unshaded -> 1/3
+- 2023_P3_MahaBodhi_EOY_Q22: final '2' (was '2'); confidence high. angles ~81, 82, 119, 119, 140 deg -> 2 acute
+- 2023_P3_MahaBodhi_EOY_Q23: final '3' (was '3'); confidence high. letters L (no), N (2 verticals), T (no), W (parallel slants), Z (top and bottom) -> 3
+- 2023_P3_MahaBodhi_EOY_Q34: final 'a) W and Z b) 6 cm² c) 14 cm' (was 'a) W and Z b) 6 cm² c) 14 cm'); confidence high. areas W=7, Z=7, Y=6, X perimeter 14 (computed from grid); key agrees

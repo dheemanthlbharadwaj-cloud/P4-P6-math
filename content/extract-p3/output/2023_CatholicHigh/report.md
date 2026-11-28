@@ -21,3 +21,8 @@
 - figure_refs added: Q28 -> Q27 (shared bar graph; the empty Q28 crop was deleted).
 - has_figure changes: none (Q09, Q21, Q25 stay off, their sums are in the text).
 - Still imperfect: scan is speckled/dotted (scan quality only).
+
+## Answer review
+
+- Q31: final 1 kg 250 g; ok (reviewed): dial full circle = 4 kg, pointer 112 degrees past 0 = 1.25 kg = 1 kg 250 g; key 1 kg 250 g
+- Q39: final 18; ok (reviewed): 50-2 = 48 spent; 48-12 = 36; 36/2 = 18 for shorts (blouse 30). Key page has no Q39 entry; solved from the printed question

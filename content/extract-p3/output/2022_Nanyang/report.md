@@ -18,3 +18,8 @@
 - Checked 13 crops; re-cropped manually 5: Q12 (number cards, was missing), Q17 (washed out + leftover option text), Q10 (option labels (1)-(4) restored), Q40 (top gridline and chart title kept), Q44 (leftover question text removed).
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: scan noise only (speckled bars in Q40, Q11, Q29).
+
+
+## Answer review
+
+- Q32: 1200 g; unchanged, both dials re-read.

@@ -1,1344 +1,1344 @@
 [
- {
-  "id": "2022_P3_ACSP_EOY_Q01",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "In the number 8273, the digit ______ is in the tens place.",
-  "options": {
-   "1": "7",
-   "2": "2",
-   "3": "3",
-   "4": "8"
+  {
+    "id": "2022_P3_ACSP_EOY_Q01",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "In the number 8273, the digit ______ is in the tens place.",
+    "options": {
+      "1": "7",
+      "2": "2",
+      "3": "3",
+      "4": "8"
+    },
+    "answer_key": "1",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "blank before 'is in the tens place' lost in OCR; the sentence reads 'the digit ___ is in the tens place'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "blank before 'is in the tens place' lost in OCR; the sentence reads 'the digit ___ is in the tens place'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q02",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many hundreds are there in 7200?",
-  "options": {
-   "1": "720",
-   "2": "200",
-   "3": "72",
-   "4": "20"
+  {
+    "id": "2022_P3_ACSP_EOY_Q02",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many hundreds are there in 7200?",
+    "options": {
+      "1": "720",
+      "2": "200",
+      "3": "72",
+      "4": "20"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'2. |' stray bar removed"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'2. |' stray bar removed"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q03",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The capacity of the 1-litre flask is the same as the capacity of 5 glasses. 8 glasses of water are poured into the bucket. What is the volume of water in the bucket?",
-  "options": {
-   "1": "800 mℓ",
-   "2": "1300 mℓ",
-   "3": "1500 mℓ",
-   "4": "1600 mℓ"
+  {
+    "id": "2022_P3_ACSP_EOY_Q03",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The capacity of the 1-litre flask is the same as the capacity of 5 glasses. 8 glasses of water are poured into the bucket. What is the volume of water in the bucket?",
+    "options": {
+      "1": "800 mℓ",
+      "2": "1300 mℓ",
+      "3": "1500 mℓ",
+      "4": "1600 mℓ"
+    },
+    "answer_key": "4",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "1-litre flask, 5 glasses and a bucket",
+    "ocr_fixes": [
+      "'ml' -> 'mℓ'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok (8 x 200 mℓ = 1600 mℓ)",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "1-litre flask, 5 glasses and a bucket",
-  "ocr_fixes": [
-   "'ml' -> 'mℓ'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok (8 x 200 mℓ = 1600 mℓ)",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q04",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the sum of 10 hundreds and 23 ones.",
-  "options": {
-   "1": "33",
-   "2": "123",
-   "3": "330",
-   "4": "1023"
+  {
+    "id": "2022_P3_ACSP_EOY_Q04",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the sum of 10 hundreds and 23 ones.",
+    "options": {
+      "1": "33",
+      "2": "123",
+      "3": "330",
+      "4": "1023"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q05",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the product of 172 and 4.",
-  "options": {
-   "1": "688",
-   "2": "488",
-   "3": "313",
-   "4": "43"
+  {
+    "id": "2022_P3_ACSP_EOY_Q05",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the product of 172 and 4.",
+    "options": {
+      "1": "688",
+      "2": "488",
+      "3": "313",
+      "4": "43"
+    },
+    "answer_key": "1",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q06",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following has the same value as $5 \\times 6$?",
-  "options": {
-   "1": "$5 + 5 + 5 + 5 + 5$",
-   "2": "$6 + 6 + 6 + 6 + 6$",
-   "3": "$5 \\times 5 \\times 5 \\times 5 \\times 5$",
-   "4": "$6 \\times 6 \\times 6 \\times 6 \\times 6$"
+  {
+    "id": "2022_P3_ACSP_EOY_Q06",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following has the same value as $5 \\times 6$?",
+    "options": {
+      "1": "$5 + 5 + 5 + 5 + 5$",
+      "2": "$6 + 6 + 6 + 6 + 6$",
+      "3": "$5 \\times 5 \\times 5 \\times 5 \\times 5$",
+      "4": "$6 \\times 6 \\times 6 \\times 6 \\times 6$"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "options 3 and 4 garbled ('5X5xX5xX5X5'), read as repeated products"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok (key 2: 6 x 5)",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "options 3 and 4 garbled ('5X5xX5xX5X5'), read as repeated products"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok (key 2: 6 x 5)",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q07",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "There are 4 figures below. Which of the figures below has only one acute angle?",
-  "options": {
-   "1": "A",
-   "2": "B",
-   "3": "C",
-   "4": "D"
+  {
+    "id": "2022_P3_ACSP_EOY_Q07",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "There are 4 figures below. Which of the figures below has only one acute angle?",
+    "options": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "answer_key": "1",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "four labelled shapes A, B, C, D",
+    "ocr_fixes": [
+      "question text read from image (OCR of figure was noise)"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "four labelled shapes A, B, C, D",
-  "ocr_fixes": [
-   "question text read from image (OCR of figure was noise)"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q08",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which fraction is not equivalent to $\\frac{2}{3}$?",
-  "options": {
-   "1": "$\\frac{2}{6}$",
-   "2": "$\\frac{4}{6}$",
-   "3": "$\\frac{6}{9}$",
-   "4": "$\\frac{8}{12}$"
+  {
+    "id": "2022_P3_ACSP_EOY_Q08",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which fraction is not equivalent to $\\frac{2}{3}$?",
+    "options": {
+      "1": "$\\frac{2}{6}$",
+      "2": "$\\frac{4}{6}$",
+      "3": "$\\frac{6}{9}$",
+      "4": "$\\frac{8}{12}$"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "question and options garbled/out of order in OCR, read from image; Q number missing"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "question and options garbled/out of order in OCR, read from image; Q number missing"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q09",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "In the figure below, what is the total volume of water in litres and millilitres?",
-  "options": {
-   "1": "1 ℓ 100 mℓ",
-   "2": "1 ℓ 130 mℓ",
-   "3": "1 ℓ 200 mℓ",
-   "4": "1 ℓ 600 mℓ"
+  {
+    "id": "2022_P3_ACSP_EOY_Q09",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "In the figure below, what is the total volume of water in litres and millilitres?",
+    "options": {
+      "1": "1 ℓ 100 mℓ",
+      "2": "1 ℓ 130 mℓ",
+      "3": "1 ℓ 200 mℓ",
+      "4": "1 ℓ 600 mℓ"
+    },
+    "answer_key": "2",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "three beakers with scales (1000 mℓ, 500 mℓ, 100 mℓ)",
+    "ocr_fixes": [
+      "options misread by OCR (12100 me etc.), read from image",
+      "Q number missing"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok (reviewed): 1000 + 100 + 30 = 1130 mℓ = 1 ℓ 130 mℓ",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "three beakers with scales (1000 mℓ, 500 mℓ, 100 mℓ)",
-  "ocr_fixes": [
-   "options misread by OCR (12100 me etc.), read from image",
-   "Q number missing"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok (1000 + ~100 + ~30)",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q10",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the actual time of the clock?",
-  "options": {
-   "1": "45 minutes to 3",
-   "2": "45 minutes to 4",
-   "3": "15 minutes past 5",
-   "4": "15 minutes past 4"
+  {
+    "id": "2022_P3_ACSP_EOY_Q10",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the actual time of the clock?",
+    "options": {
+      "1": "45 minutes to 3",
+      "2": "45 minutes to 4",
+      "3": "15 minutes past 5",
+      "4": "15 minutes past 4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "analogue clock face",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "analogue clock face",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q11",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 11,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Write three thousand, eight hundred and fifty in numerals.",
-  "answer": "3850",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q12",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 12,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Arrange the numbers below from smallest to greatest.\n7213, 1372, 7321, 3127",
-  "answer": "1372, 3127, 7213, 7321",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "stray ' ,' spacing"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q13",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 13,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Study the number pattern below. What is the missing number?\n3898, 3968, ______, 4108, 4178",
-  "answer": "4038",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q14",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 14,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Sally had some oranges. After selling 140 oranges, she had 835 oranges left. How many oranges did she have at first?",
-  "answer": "975",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "solved: no key page entry (key page lacks Q14); solved 835+140=975",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q15",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 15,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the greatest 2-digit number that can be divided by 4 without any remainder?",
-  "answer": "96",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q16",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing fraction in the box? Express your answer in its simplest form.\n$\\frac{3}{4} + \\frac{1}{12} = \\square$",
-  "answer": "$\\frac{5}{6}$",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "equation garbled, read from image"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q17",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 17,
-  "marks": 1,
-  "question_type": "short",
-  "question": "The time shown on the clock is ______ a.m.",
-  "answer": "7.57",
-  "unit": "a.m.",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "analogue clock, hour hand near 8, minute hand near 12",
-  "ocr_fixes": [
-   "Q number read as 5"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q18",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 18,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the missing number in the box?\n$\\frac{4}{12} = \\frac{1}{\\square}$",
-  "answer": "3",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction garbled in OCR, read from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q19",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 19,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the remainder when 157 is divided by 9.",
-  "answer": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 19 after the text"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q20",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 20,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is 8003 − 1975?",
-  "answer": "6028",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q21",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Which two of the fractions below are smaller than $\\frac{1}{2}$?\n$\\frac{2}{8}$, $\\frac{3}{9}$, $\\frac{8}{10}$, $\\frac{9}{12}$",
-  "answer": "$\\frac{2}{8}$ and $\\frac{3}{9}$",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "$\\frac{2}{8}$, $\\frac{3}{9}$",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "number read as 24; fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q22",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the perimeter of Figure A.",
-  "answer": "18",
-  "unit": "cm",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "L-shaped figure A on a 1 cm grid",
-  "ocr_fixes": [
-   "Q number read as 22:"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q23",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "How much more water must be added to make 1 litre?",
-  "answer": "600",
-  "unit": "mℓ",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "beaker with scale (500 mℓ, 1 ℓ) filled to 400 mℓ",
-  "ocr_fixes": [
-   "Q number read as 23:"
-  ],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q24",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "How many sides and angles does the figure below have?",
-  "answer": "5 sides, 5 angles",
-  "answer_parts": [
-   {
-    "part": "sides",
-    "value": "5",
-    "unit": ""
-   },
-   {
-    "part": "angles",
-    "value": "5",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "pentagon drawn on dot grid in a table",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q25",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mrs Tan prepared 104 lunch boxes. She packed 8 lunch boxes in each plastic bag. How many plastic bags did Mrs Tan use?",
-  "answer": "13",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q26",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "3574 people went to Sentosa on Saturday and 199 fewer people went on Sunday than Saturday. How many people went to Sentosa on these two days?",
-  "answer": "6949",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q27",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing number in the box?\n  2 6 7 9\n+ 5 7 ? 8\n  8 4 0 7",
-  "answer": "2",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "vertical addition 2679 + 57?8 = 8407",
-  "ocr_fixes": [
-   "layout garbled, read from image"
-  ],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q28",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the difference between $\\frac{11}{12}$ and $\\frac{1}{4}$. Give your answer in its simplest form.",
-  "answer": "$\\frac{2}{3}$",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled, read from image"
-  ],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q29",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There are 10 lamp posts along Oxford Road. The distance between every two lamp posts is 70 m. What is the distance between the first and the last lamp post?",
-  "answer": "630",
-  "unit": "m",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "lamp posts diagram (First, Second, Third, Last, 70 m, 70 m)",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q30",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Form the greatest 4-digit even number using all the digits shown below.\n2, 9, 1, 4",
-  "answer": "9412",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "four digit cards 2 9 1 4",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q31",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 31,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mrs Raja sold 285 roses last week. She sold 5 times as many roses this week. How many roses did she sell this week?",
-  "answer": "1425",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "question split across pages 17-18"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q32",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 18,
-  "section": "B",
-  "question_no": 32,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A box can contain 5 muffins. What is the least number of boxes needed to contain 119 muffins?",
-  "answer": "24",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Aboxcan' -> 'A box can'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q33",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 19,
-  "section": "B",
-  "question_no": 33,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph below shows the favourite sports of class 4J. Each pupil can only choose 1 sport. Study the graph below and answer Questions 33 and 34.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "The least favourite sport is ______."
-   },
-   {
-    "part": "b",
-    "text": "How many pupils like swimming and soccer altogether?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "Running",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "21",
-    "unit": "pupils"
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph Favourite Sports: Basketball, Running, Swimming, Netball, Soccer",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   19
-  ],
-  "answer_check": "ok (key: Running; 9 + 12 = 21), graph values not re-read",
-  "confidence": "medium"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q34",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 19,
-  "section": "B",
-  "question_no": 34,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There are 20 boys in class 4J. How many girls are there?",
-  "answer": "22",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "uses the bar graph of Q33 (printed above Q33)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high",
-  "figure_ref": "2022_P3_ACSP_EOY_Q33"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q35",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 20,
-  "section": "C",
-  "question_no": 35,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Keith and Tom have 975 stickers. Tom has 55 fewer stickers than Keith. How many stickers does Tom have?",
-  "answer": "460",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q36",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 21,
-  "section": "C",
-  "question_no": 36,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Brent spends the same amount of time every day playing his violin. He starts at 4.10 p.m. and stops at 6.05 p.m.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How long does Brent play on his violin every day?"
-   },
-   {
-    "part": "b",
-    "text": "He continues his practice at 6.30 p.m. for another 1h 45 min. What time does he finish his practice?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "1 h 55 min",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "8.15 p.m.",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 36. before the text"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q37",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 22,
-  "section": "C",
-  "question_no": 37,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Mary wanted to buy a watch for ＄79.55 and a toy that cost ＄5.90 more than the watch.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How much money would she need to buy the two items?"
-   },
-   {
-    "part": "b",
-    "text": "Mary decided to buy 2 watches. She gave the cashier ＄200. How much change would she get?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "165",
-    "unit": "＄"
-   },
-   {
-    "part": "b",
-    "value": "40.90",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'$' -> '＄'",
-   "Q37 number not read by OCR"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q38",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 23,
-  "section": "C",
-  "question_no": 38,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Kate baked 480 cupcakes over the weekend, she sold 284 cupcakes on Saturday and sold all the remaining cupcakes on Sunday. On Monday, Kate baked another 300 cupcakes and sold all the cupcakes at the end of the day. Each cupcake was sold for ＄4.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many cupcakes did Kate sell on Sunday and Monday altogether?"
-   },
-   {
-    "part": "b",
-    "text": "How much money did Kate collect from selling the cupcakes on Saturday and Monday?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "496",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "2336",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division",
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'$4' -> '＄4'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q39",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 24,
-  "section": "C",
-  "question_no": 39,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Some square tiles of the same size are placed around the swimming pool as shown below. The side of each tile is 2 m.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Find the perimeter of the swimming pool."
-   },
-   {
-    "part": "b",
-    "text": "Find the area of the swimming pool."
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "56",
-    "unit": "m"
-   },
-   {
-    "part": "b",
-    "value": "160",
-    "unit": "m²"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "swimming pool surrounded by square tiles, 2 m side",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   24,
-   31
-  ],
-  "answer_check": "ok (pool 10 x 4 tiles = 20 m x 8 m)",
-  "confidence": "high"
- },
- {
-  "id": "2022_P3_ACSP_EOY_Q40",
-  "grade": "P3",
-  "year": "2022",
-  "school": "ACS (Primary)",
-  "exam": "EOY",
-  "source": "(ACS (Primary)) (EOY) (2022)",
-  "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
-  "source_pdf_page": 25,
-  "section": "C",
-  "question_no": 40,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Mrs Tan had a total of 720 chocolates and sweets. She had 3 times as many chocolates as sweets.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many chocolates did Mrs Tan have?"
-   },
-   {
-    "part": "b",
-    "text": "Mrs Tan wanted to give each pupil 5 chocolates and 4 sweets. She gave out all her sweets and had some chocolates left. How many chocolates were given out to her pupils?"
-   }
-  ],
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "540",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "225",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2022_P3_ACSP_EOY_Q11",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 11,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Write three thousand, eight hundred and fifty in numerals.",
+    "answer": "3850",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q12",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 12,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Arrange the numbers below from smallest to greatest.\n7213, 1372, 7321, 3127",
+    "answer": "1372, 3127, 7213, 7321",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "stray ' ,' spacing"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q13",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 13,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Study the number pattern below. What is the missing number?\n3898, 3968, ______, 4108, 4178",
+    "answer": "4038",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q14",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 14,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Sally had some oranges. After selling 140 oranges, she had 835 oranges left. How many oranges did she have at first?",
+    "answer": "975",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok (reviewed): 835 + 140 = 975 (key page skips Q14; solved from the question)",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q15",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 15,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the greatest 2-digit number that can be divided by 4 without any remainder?",
+    "answer": "96",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q16",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing fraction in the box? Express your answer in its simplest form.\n$\\frac{3}{4} + \\frac{1}{12} = \\square$",
+    "answer": "$\\frac{5}{6}$",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "equation garbled, read from image"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q17",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 17,
+    "marks": 1,
+    "question_type": "short",
+    "question": "The time shown on the clock is ______ a.m.",
+    "answer": "7.57",
+    "unit": "a.m.",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "analogue clock, hour hand near 8, minute hand near 12",
+    "ocr_fixes": [
+      "Q number read as 5"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q18",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 18,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the missing number in the box?\n$\\frac{4}{12} = \\frac{1}{\\square}$",
+    "answer": "3",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction garbled in OCR, read from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q19",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 19,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the remainder when 157 is divided by 9.",
+    "answer": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 19 after the text"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q20",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 20,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is 8003 − 1975?",
+    "answer": "6028",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q21",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Which two of the fractions below are smaller than $\\frac{1}{2}$?\n$\\frac{2}{8}$, $\\frac{3}{9}$, $\\frac{8}{10}$, $\\frac{9}{12}$",
+    "answer": "$\\frac{2}{8}$ and $\\frac{3}{9}$",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "$\\frac{2}{8}$, $\\frac{3}{9}$",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "number read as 24; fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q22",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the perimeter of Figure A.",
+    "answer": "18",
+    "unit": "cm",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "L-shaped figure A on a 1 cm grid",
+    "ocr_fixes": [
+      "Q number read as 22:"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q23",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "How much more water must be added to make 1 litre?",
+    "answer": "600",
+    "unit": "mℓ",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "beaker with scale (500 mℓ, 1 ℓ) filled to 400 mℓ",
+    "ocr_fixes": [
+      "Q number read as 23:"
+    ],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q24",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "How many sides and angles does the figure below have?",
+    "answer": "5 sides, 5 angles",
+    "answer_parts": [
+      {
+        "part": "sides",
+        "value": "5",
+        "unit": ""
+      },
+      {
+        "part": "angles",
+        "value": "5",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "pentagon drawn on dot grid in a table",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q25",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mrs Tan prepared 104 lunch boxes. She packed 8 lunch boxes in each plastic bag. How many plastic bags did Mrs Tan use?",
+    "answer": "13",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q26",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "3574 people went to Sentosa on Saturday and 199 fewer people went on Sunday than Saturday. How many people went to Sentosa on these two days?",
+    "answer": "6949",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q27",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing number in the box?\n  2 6 7 9\n+ 5 7 ? 8\n  8 4 0 7",
+    "answer": "2",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "vertical addition 2679 + 57?8 = 8407",
+    "ocr_fixes": [
+      "layout garbled, read from image"
+    ],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q28",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the difference between $\\frac{11}{12}$ and $\\frac{1}{4}$. Give your answer in its simplest form.",
+    "answer": "$\\frac{2}{3}$",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled, read from image"
+    ],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q29",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There are 10 lamp posts along Oxford Road. The distance between every two lamp posts is 70 m. What is the distance between the first and the last lamp post?",
+    "answer": "630",
+    "unit": "m",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "lamp posts diagram (First, Second, Third, Last, 70 m, 70 m)",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q30",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Form the greatest 4-digit even number using all the digits shown below.\n2, 9, 1, 4",
+    "answer": "9412",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "four digit cards 2 9 1 4",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q31",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 31,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mrs Raja sold 285 roses last week. She sold 5 times as many roses this week. How many roses did she sell this week?",
+    "answer": "1425",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "question split across pages 17-18"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q32",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 18,
+    "section": "B",
+    "question_no": 32,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A box can contain 5 muffins. What is the least number of boxes needed to contain 119 muffins?",
+    "answer": "24",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Aboxcan' -> 'A box can'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q33",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 19,
+    "section": "B",
+    "question_no": 33,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph below shows the favourite sports of class 4J. Each pupil can only choose 1 sport. Study the graph below and answer Questions 33 and 34.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "The least favourite sport is ______."
+      },
+      {
+        "part": "b",
+        "text": "How many pupils like swimming and soccer altogether?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "Running",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "21",
+        "unit": "pupils"
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph Favourite Sports: Basketball, Running, Swimming, Netball, Soccer",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      19
+    ],
+    "answer_check": "ok (reviewed): bars basketball 6, running 5, swimming 9, netball 10, soccer 12; least is running, swimming + soccer = 21",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q34",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 19,
+    "section": "B",
+    "question_no": 34,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There are 20 boys in class 4J. How many girls are there?",
+    "answer": "22",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "uses the bar graph of Q33 (printed above Q33)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high",
+    "figure_ref": "2022_P3_ACSP_EOY_Q33"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q35",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 20,
+    "section": "C",
+    "question_no": 35,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Keith and Tom have 975 stickers. Tom has 55 fewer stickers than Keith. How many stickers does Tom have?",
+    "answer": "460",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q36",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 21,
+    "section": "C",
+    "question_no": 36,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Brent spends the same amount of time every day playing his violin. He starts at 4.10 p.m. and stops at 6.05 p.m.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How long does Brent play on his violin every day?"
+      },
+      {
+        "part": "b",
+        "text": "He continues his practice at 6.30 p.m. for another 1h 45 min. What time does he finish his practice?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "1 h 55 min",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "8.15 p.m.",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 36. before the text"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q37",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 22,
+    "section": "C",
+    "question_no": 37,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Mary wanted to buy a watch for ＄79.55 and a toy that cost ＄5.90 more than the watch.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How much money would she need to buy the two items?"
+      },
+      {
+        "part": "b",
+        "text": "Mary decided to buy 2 watches. She gave the cashier ＄200. How much change would she get?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "165",
+        "unit": "＄"
+      },
+      {
+        "part": "b",
+        "value": "40.90",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'$' -> '＄'",
+      "Q37 number not read by OCR"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q38",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 23,
+    "section": "C",
+    "question_no": 38,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Kate baked 480 cupcakes over the weekend, she sold 284 cupcakes on Saturday and sold all the remaining cupcakes on Sunday. On Monday, Kate baked another 300 cupcakes and sold all the cupcakes at the end of the day. Each cupcake was sold for ＄4.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many cupcakes did Kate sell on Sunday and Monday altogether?"
+      },
+      {
+        "part": "b",
+        "text": "How much money did Kate collect from selling the cupcakes on Saturday and Monday?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "496",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "2336",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division",
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'$4' -> '＄4'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q39",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 24,
+    "section": "C",
+    "question_no": 39,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Some square tiles of the same size are placed around the swimming pool as shown below. The side of each tile is 2 m.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Find the perimeter of the swimming pool."
+      },
+      {
+        "part": "b",
+        "text": "Find the area of the swimming pool."
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "56",
+        "unit": "m"
+      },
+      {
+        "part": "b",
+        "value": "160",
+        "unit": "m²"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "swimming pool surrounded by square tiles, 2 m side",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      24,
+      31
+    ],
+    "answer_check": "ok (pool 10 x 4 tiles = 20 m x 8 m)",
+    "confidence": "high"
+  },
+  {
+    "id": "2022_P3_ACSP_EOY_Q40",
+    "grade": "P3",
+    "year": "2022",
+    "school": "ACS (Primary)",
+    "exam": "EOY",
+    "source": "(ACS (Primary)) (EOY) (2022)",
+    "source_pdf": "2022-P3-Maths-EOY-ACSP.pdf",
+    "source_pdf_page": 25,
+    "section": "C",
+    "question_no": 40,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Mrs Tan had a total of 720 chocolates and sweets. She had 3 times as many chocolates as sweets.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many chocolates did Mrs Tan have?"
+      },
+      {
+        "part": "b",
+        "text": "Mrs Tan wanted to give each pupil 5 chocolates and 4 sweets. She gave out all her sweets and had some chocolates left. How many chocolates were given out to her pupils?"
+      }
+    ],
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "540",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "225",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

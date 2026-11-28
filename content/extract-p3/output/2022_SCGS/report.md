@@ -16,3 +16,11 @@
 ## Crop fix
 - Checked 11 crops; fixed 5 (Q14 without question sentence, Q15 table only, Q23 grid only, Q24 beaker as its own crop, Q29 picture graph newly cropped from p14). Q30 crop (footer) removed; figure_ref Q30 -> Q29. No has_figure changes (all other questions are text-only).
 - Still imperfect: Q36 plot is heavily speckled scan noise (scan quality only).
+
+## Answer review
+
+- Q14: final 1; ok (reviewed): clock reads 1.55 (hour hand just before 2, minute hand on 11); 1.55 - 15 min = 1.40 p.m.; key 1
+- Q24: final 200; ok (reviewed): scale 100 mℓ per tick, level at 800 mℓ; 1000-800 = 200 mℓ; key 200 mℓ
+- Q25: final 680; ok (reviewed): dial full circle = 600 g, pointer about 340 g; 340x2 = 680 g; key 680 g
+- Q28: final Line through W perpendicular to AB: AB goes 3 squares right and 3 up from A to B, so the perpendicular goes 1 square down and 1 right at each step from W, through grid points 1, 2 and 3 squares diagonally down-right of W (crossing AB halfway between A and B); reviewed: drawing, key shows the X shape (line from W down-right crossing AB)
+- Q30: final Japan; reviewed: key says Japan; Singapore bar = 16, Japan bar = 32 = 2x16 matches. NOTE the China bar is also 32 on the printed graph, so China fits too; key answer Japan kept

@@ -15,3 +15,9 @@
 - Checked 10 crops; re-cropped manually Q04 (first beaker's left wall was cut), Q06 (the full word LOVE on its grid, letters no longer whited out), Q08 (number line only, stray digits and footer removed), Q22 (the '?' beside the rectangle was missing). Q13, Q14, Q16, Q17, Q25, Q26 kept.
 - figure_refs added: none. has_figure changes: none (Q23 watch time is given in the text).
 - Still imperfect: none.
+
+## Answer review
+
+- 2024_P3_HenryPark_EOY_Q04: final answer 1; unchanged. ok (reviewed): 1000 + 1000 + 100 + 100 + 30 = 2230 mL = 2 L 230 mL (small beakers: 100, 100, ~30); key 1
+- 2024_P3_HenryPark_EOY_Q16: final answer a, c; unchanged. ok (reviewed): measured a ~55 deg, c ~54 deg acute; b ~131, d ~146, e obtuse; key a and c
+- 2024_P3_HenryPark_EOY_Q23: final answer 0805; unchanged. ok (reviewed): watch 10 20 is 15 min slow so actual stop 10 35; minus 2 h 30 min = 08 05; key 08 05

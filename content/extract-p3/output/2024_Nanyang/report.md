@@ -14,3 +14,9 @@
 - Checked all 8 crops on the contact sheet; all pass (whole figure, labels intact, no question text). No changes needed.
 - figure_refs added: none. has_figure changes: none (Q14-Q16 parts are text only).
 - Still imperfect: none (Q5 crop keeps the small unit-square legend; Q13, Q18 have blank margin below).
+
+
+## Answer review
+
+- **2024_P3_Nanyang_EOY_Q08**: final answer '2' (was '2'). Matches key 2.
+- **2024_P3_Nanyang_EOY_Q17**: final answer 'AB and EF; BC and CD' (was 'AB and EF; BC and CD'). Matches key.

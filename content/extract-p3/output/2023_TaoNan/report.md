@@ -15,3 +15,13 @@
 - Checked 13 crops. Fixed 9 manually: Q05, Q06, Q07 (leftover option text removed), Q08 (option labels (1)-(4) added), Q10, Q14 (tight to graph, answer box removed), Q15, Q16 (answer boxes removed), Q21 (now the shape row; earlier crop was blank). Q02, Q09, Q23, Q24 kept.
 - No figure_refs. No has_figure changes (Q13's tick table is an answer grid, text-only).
 - Still imperfect: Q09 point T is not printed on the scan (only R and S).
+
+## Answer review
+
+- 2023_P3_TaoNan_EOY_Q02: final answer 2; 8 (option 2); unchanged. ok (reviewed): 4 corner right angles + 2 each where the horizontal line meets the left and right sides = 8; key 2 = 8
+- 2023_P3_TaoNan_EOY_Q07: final answer 1; key 1 kept, still medium. ok (reviewed): key 1 (A and C) kept; the thick outlines on the faint grid scan could not be traced with certainty, so perimeters not fully recounted
+- 2023_P3_TaoNan_EOY_Q10: final answer 400; 400 g unchanged. ok (reviewed): left scale ~2.7 kg = 3X+Y, right ~1.9 kg = X+Y, so 2X = 0.8 kg, X = 400 g
+- 2023_P3_TaoNan_EOY_Q11: final answer $\frac{1}{3}$, $\frac{4}{9}$, $\frac{3}{6}$; unchanged. ok (reviewed): 1/3 < 4/9 < 3/6 (0.33 < 0.44 < 0.5); matches key
+- 2023_P3_TaoNan_EOY_Q16: final answer B; B unchanged. ok (reviewed): Clare 80 mL; A 80+80=160 overflows (top about 110), C 40+80=120 overflows, B 120+80=200 fits; key B
+- 2023_P3_TaoNan_EOY_Q17: final answer 3976; 9046; (b) 9046 kept; key slip. reviewed: key says (b) 9040, correct is 9046 because 5070 + 3976 = 9046 (key arithmetic slip; part a 3976 agrees)
+- 2023_P3_TaoNan_EOY_Q18: final answer 18 00; 18 00 kept; key wrong. reviewed: key says 18 15, correct is 18 00 because clock 10 min slow means actual end 19 30, minus 1 h 30 min = 18 00 (question image re-read)

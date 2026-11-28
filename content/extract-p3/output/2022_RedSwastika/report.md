@@ -20,3 +20,12 @@
 - figure_refs added: Q15 -> Q14 (price board), Q33 -> Q32 (graphs); Q33's wrong own crop removed.
 - has_figure changes: none (Q3, Q14, Q15, Q32 were already on).
 - Still imperfect: none (scan speckle only).
+
+## Answer review
+All 45 questions re-checked from the page and figure images (no answer key in this paper, every answer solved independently). No answer changed; all set to confidence high, answer_check "ok (reviewed)".
+- Q1-Q7, Q9, Q10, Q12-Q24, Q26-Q31, Q34-Q36, Q38-Q41, Q43-Q45: answers confirmed (e.g. Q3 X=1024 with 2 per tick; Q6 pattern minus 12 gives 34; Q11 E; Q20 five-term block sums to 3, 10 blocks = 30; Q45 Z = 7x4 = 28, side 11, perimeter 44).
+- Q8: 1 m kept (child figure beside shelf; other options implausible).
+- Q25: ink-covered bar = 8 (40 - 5 - 4 - 12 - 11); (a) False, (b) True.
+- Q32/Q33: Graph 1 pears 22, oranges 16, apples 28 gives 12; pears 22 + 4 unsold = 26.
+- Q37: drawing; text answer set (answer_type "drawing"): third dot beyond one end of the base line makes an obtuse triangle.
+- Q42: printed text "if he paid a total of $98" read as Jerry paid $98; $2 per tart; 49 tarts.

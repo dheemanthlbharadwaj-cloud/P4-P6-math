@@ -1,1516 +1,1517 @@
 [
- {
-  "id": "2023_P3_StJoseph_EOY_Q01",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which one of the following numbers has the digit 7 in the hundreds place?",
-  "options": {
-   "1": "2857",
-   "2": "4719",
-   "3": "5073",
-   "4": "7205"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q01",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which one of the following numbers has the digit 7 in the hundreds place?",
+    "options": {
+      "1": "2857",
+      "2": "4719",
+      "3": "5073",
+      "4": "7205"
+    },
+    "answer_key": "2",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 'q.'",
+      "'47419' -> '4719'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 'q.'",
-   "'47419' -> '4719'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q02",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the sum of 35 tens and 78 hundreds.",
-  "options": {
-   "1": "113",
-   "2": "1130",
-   "3": "7835",
-   "4": "8150"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q02",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the sum of 35 tens and 78 hundreds.",
+    "options": {
+      "1": "113",
+      "2": "1130",
+      "3": "7835",
+      "4": "8150"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q03",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the sum of the digits represented by A and B below.\n4 0 5 2\n- 2 6 1 A\n1 4 B 6",
-  "options": {
-   "1": "10",
-   "2": "9",
-   "3": "6",
-   "4": "4"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q03",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the sum of the digits represented by A and B below.\n4 0 5 2\n- 2 6 1 A\n1 4 B 6",
+    "options": {
+      "1": "10",
+      "2": "9",
+      "3": "6",
+      "4": "4"
+    },
+    "answer_key": "2",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "vertical subtraction 4052 - 261A = 14B6",
+    "ocr_fixes": [
+      "working layout read from image"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "vertical subtraction 4052 - 261A = 14B6",
-  "ocr_fixes": [
-   "working layout read from image"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q04",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Find the product of 139 and 7.",
-  "options": {
-   "1": "132",
-   "2": "146",
-   "3": "773",
-   "4": "973"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q04",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Find the product of 139 and 7.",
+    "options": {
+      "1": "132",
+      "2": "146",
+      "3": "773",
+      "4": "973"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q05",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "There were 16 boys and 26 girls in a class. Each pupil was given 8 erasers. How many erasers were given out altogether?",
-  "options": {
-   "1": "128",
-   "2": "208",
-   "3": "326",
-   "4": "336"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q05",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "There were 16 boys and 26 girls in a class. Each pupil was given 8 erasers. How many erasers were given out altogether?",
+    "options": {
+      "1": "128",
+      "2": "208",
+      "3": "326",
+      "4": "336"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q06",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mrs Wong had 148 pencils. She packed them equally into 6 boxes. How many pencils were left unpacked?",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q06",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mrs Wong had 148 pencils. She packed them equally into 6 boxes. How many pencils were left unpacked?",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q07",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many acute angles are there in the figure below?",
-  "options": {
-   "1": "7",
-   "2": "6",
-   "3": "5",
-   "4": "4"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q07",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many acute angles are there in the figure below?",
+    "options": {
+      "1": "7",
+      "2": "6",
+      "3": "5",
+      "4": "4"
+    },
+    "answer_key": "2",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "zigzag (lightning-bolt) polygon",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "zigzag (lightning-bolt) polygon",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "unsure: acute angles not recounted, key 2 (6) accepted",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q08",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Janet had 3 twenty-cent coins and 5 fifty-cent coins. She donated some of the coins. How much money could she possibly have donated?",
-  "options": {
-   "1": "＄0.80",
-   "2": "＄1.80",
-   "3": "＄2.70",
-   "4": "＄3.00"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q08",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Janet had 3 twenty-cent coins and 5 fifty-cent coins. She donated some of the coins. How much money could she possibly have donated?",
+    "options": {
+      "1": "＄0.80",
+      "2": "＄1.80",
+      "3": "＄2.70",
+      "4": "＄3.00"
+    },
+    "answer_key": "3",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'of the.' -> 'of the coins.' line break"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'of the.' -> 'of the coins.' line break"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q09",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A bottle contains 1 ℓ 80 mℓ of water. If the capacity of the bottle is 2 ℓ, how much more water is needed to fill the bottle?",
-  "options": {
-   "1": "20 mℓ",
-   "2": "200 mℓ",
-   "3": "920 mℓ",
-   "4": "1920 mℓ"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q09",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A bottle contains 1 ℓ 80 mℓ of water. If the capacity of the bottle is 2 ℓ, how much more water is needed to fill the bottle?",
+    "options": {
+      "1": "20 mℓ",
+      "2": "200 mℓ",
+      "3": "920 mℓ",
+      "4": "1920 mℓ"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q10",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which one of the following fractions is the smallest?",
-  "options": {
-   "1": "$\\frac{3}{10}$",
-   "2": "$\\frac{1}{2}$",
-   "3": "$\\frac{2}{3}$",
-   "4": "$\\frac{2}{5}$"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q10",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which one of the following fractions is the smallest?",
+    "options": {
+      "1": "$\\frac{3}{10}$",
+      "2": "$\\frac{1}{2}$",
+      "3": "$\\frac{2}{3}$",
+      "4": "$\\frac{2}{5}$"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 40",
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 40",
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q11",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A movie started at 18 30. It lasted 115 minutes. What time did the movie end?",
-  "options": {
-   "1": "08 25",
-   "2": "19 30",
-   "3": "20 00",
-   "4": "20 25"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q11",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A movie started at 18 30. It lasted 115 minutes. What time did the movie end?",
+    "options": {
+      "1": "08 25",
+      "2": "19 30",
+      "3": "20 00",
+      "4": "20 25"
+    },
+    "answer_key": "4",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 114",
+      "option 1 '0825' -> '08 25'"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 114",
-   "option 1 '0825' -> '08 25'"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q12",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The figure below is made up of identical squares. How many more squares must be shaded so that $\\frac{4}{5}$ of the figure is shaded?",
-  "options": {
-   "1": "8",
-   "2": "5",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q12",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The figure below is made up of identical squares. How many more squares must be shaded so that $\\frac{4}{5}$ of the figure is shaded?",
+    "options": {
+      "1": "8",
+      "2": "5",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "3",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "2 by 5 grid of squares, 5 shaded",
+    "ocr_fixes": [
+      "options OCR '(4) 5' -> '(2) 5'"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "2 by 5 grid of squares, 5 shaded",
-  "ocr_fixes": [
-   "options OCR '(4) 5' -> '(2) 5'"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q13",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "James had 3 times as many erasers as Max at first. After James had given 18 erasers to Max, Max had 44 erasers. How many erasers did James have at first?",
-  "options": {
-   "1": "26",
-   "2": "62",
-   "3": "78",
-   "4": "104"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q13",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "James had 3 times as many erasers as Max at first. After James had given 18 erasers to Max, Max had 44 erasers. How many erasers did James have at first?",
+    "options": {
+      "1": "26",
+      "2": "62",
+      "3": "78",
+      "4": "104"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q14",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The figure below is made up of two identical squares. What is the total area of the figure?",
-  "options": {
-   "1": "42 cm²",
-   "2": "49 cm²",
-   "3": "56 cm²",
-   "4": "98 cm²"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q14",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The figure below is made up of two identical squares. What is the total area of the figure?",
+    "options": {
+      "1": "42 cm²",
+      "2": "49 cm²",
+      "3": "56 cm²",
+      "4": "98 cm²"
+    },
+    "answer_key": "4",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "two squares side by side, side 7 cm",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "two squares side by side, side 7 cm",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q15",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mr Tan wants to use the rectangular plot of land as a garden. He wants to build a fence around his garden leaving a 2 m gap for a metal swing gate. The cost of the fencing is ＄9 per metre. How much must he pay to fence his garden?",
-  "options": {
-   "1": "＄216",
-   "2": "＄288",
-   "3": "＄558",
-   "4": "＄576"
+  {
+    "id": "2023_P3_StJoseph_EOY_Q15",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mr Tan wants to use the rectangular plot of land as a garden. He wants to build a fence around his garden leaving a 2 m gap for a metal swing gate. The cost of the fencing is ＄9 per metre. How much must he pay to fence his garden?",
+    "options": {
+      "1": "＄216",
+      "2": "＄288",
+      "3": "＄558",
+      "4": "＄576"
+    },
+    "answer_key": "3",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter",
+      "Multiplication and Division",
+      "Money"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle 24 m by 8 m with a 2 m gap in the top side",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok (perimeter 64 m - 2 m = 62 m, 62 x 9 = 558)",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter",
-   "Multiplication and Division",
-   "Money"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle 24 m by 8 m with a 2 m gap in the top side",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok (perimeter 64 m - 2 m = 62 m, 62 x 9 = 558)",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q16",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 16,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Which digit in the two numbers given below has the same value?\n2856    6825",
-  "answer": "8",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "8",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": true,
-  "figure_note": "two numbers in ovals: 2856 and 6825",
-  "ocr_fixes": [
-   "numbers read from image"
-  ],
-  "checked_against_image": [
-   8,
-   21
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q17",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 17,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Find the difference between 6483 and 259.",
-  "answer": "6224",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "6224",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q18",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 18,
-  "marks": 1,
-  "question_type": "short",
-  "question": "1432 more than 7768 is ______.",
-  "answer": "9200",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "9200",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q19",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 19,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Arrange the following fractions in order. Begin with the greatest.\n$\\frac{1}{3}$, $\\frac{5}{6}$, $\\frac{5}{12}$",
-  "answer": "$\\frac{5}{6}$, $\\frac{5}{12}$, $\\frac{1}{3}$",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "$\\frac{5}{6}$, $\\frac{5}{12}$, $\\frac{1}{3}$",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   9,
-   21
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q20",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 20,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Gary went jogging from 6:20 a.m. to 7:15 a.m. How long did he jog?",
-  "answer": "55",
-  "unit": "min",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "55",
-    "unit": "min"
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q21",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 21,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Mark the right angles inside the figure given below.",
-  "answer": "drawing: mark the right angles inside the figure",
-  "unit": "",
-  "answer_parts": [],
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "irregular polygon with several vertices",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9,
-   21
-  ],
-  "answer_check": "unsure: answer is marks drawn on the figure; the key only reprints the figure without marks, so no text answer recorded",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q22",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Jamie and Angel had a total of 135 hairclips. If Angel were to give Jamie 16 hairclips, Jamie would have 4 times as many hairclips as Angel. How many hairclips did Angel have?",
-  "answer": "43",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "43",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'iotal' -> 'total'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q23",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mrs Tan is 5 times as old as her son, Bryan, who is 9 years old now. How old will Mrs Tan be in 10 years' time?",
-  "answer": "55",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "55",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q24",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Keith had some sweets. He gave 24 of his sweets to his brother and bought another 12 sweets. In the end, Keith had 88 sweets altogether. How many sweets did he have at first?",
-  "answer": "100",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "100",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'24' read from image"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q25",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "One of the lines in the figure below is parallel to CD. Name the line.",
-  "answer": "BE",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "BE",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle ACEF with diagonals AE, BE and CD",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q26",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Peter and Michael started jogging from the same point but in opposite directions. When they stopped jogging at the same time, Peter had jogged 4 times the distance Michael had jogged. Michael jogged 546 m less than Peter. How far apart were they when they stopped jogging?",
-  "answer": "910",
-  "unit": "m",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "910",
-    "unit": "m"
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "Peter and Michael running in opposite directions from a start point on a line",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q27",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A mango cost ＄5. A basket of 4 mangoes cost ＄18. Alicia bought 10 mangoes altogether. What was the least amount of money that she paid for the mangoes?",
-  "answer": "46",
-  "unit": "＄",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "46",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "basket of mangoes, 4 mangoes at ＄18",
-  "ocr_fixes": [
-   "key OCR '546' is '46' (18 x 2 + 10)"
-  ],
-  "checked_against_image": [
-   12,
-   21
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q28",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Ethan has 40 more marbles than Dylan. How many marbles must Ethan give to Dylan so that he will have 8 more marbles than Dylan?",
-  "answer": "16",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "16",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q29",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Simon had 50 more stickers than Mark. After Simon had given 88 stickers to Mark, he was left with 120 stickers. How many stickers did Mark have at first?",
-  "answer": "158",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "158",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q30",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The square is cut into 4 equal parts. What is the area of the shaded part?",
-  "answer": "16",
-  "unit": "cm²",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "16",
-    "unit": "cm²"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "square of side 8 cm cut by both diagonals, bottom part shaded",
-  "ocr_fixes": [
-   "'&cm' read as 8 cm from image"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q31",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 31,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Each [rectangle] has a mass of 450 g. What is the mass of each [circle]?\nExpress your answer in kg and g.",
-  "answer": "1 kg 350 g",
-  "unit": "kg g",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "1",
-    "unit": "kg"
-   },
-   {
-    "part": "",
-    "value": "350",
-    "unit": "g"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "two balance scales: triangle + 2 rectangles = 2 circles; triangle = 4 rectangles",
-  "ocr_fixes": [
-   "inline pictures written as [rectangle] and [circle]"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q32",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 32,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There were 100 Primary 3 pupils in a school. The pupils were allowed to choose only one co-curricular activity (CCA). The graph shows the CCAs that the pupils had chosen.\nSome pupils were absent and did not get to choose a CCA. How many pupils did not choose a CCA?",
-  "answer": "8",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "8",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph: Floorball 18, Badminton 26, Soccer 32, Rugby 16",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q33",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 33,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There were 100 Primary 3 pupils in a school. The pupils were allowed to choose only one co-curricular activity (CCA). The graph shows the CCAs that the pupils had chosen.\n(a) The absentees returned the next day and all of them chose soccer as their CCA. What is the number of pupils who had chosen soccer in the end?\n(b) Some pupils switched from floorball to badminton. The number of pupils in badminton increased to 30. What would be the number of pupils in floorball in the end?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "The absentees returned the next day and all of them chose soccer as their CCA. What is the number of pupils who had chosen soccer in the end?"
-   },
-   {
-    "part": "b",
-    "text": "Some pupils switched from floorball to badminton. The number of pupils in badminton increased to 30. What would be the number of pupils in floorball in the end?"
-   }
-  ],
-  "answer": "40; 14",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "40",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "14",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "same CCA bar graph as Q32",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high",
-  "figure_ref": "2023_P3_StJoseph_EOY_Q32"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q34",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 15,
-  "section": "C",
-  "question_no": 34,
-  "marks": 3,
-  "question_type": "long",
-  "question": "A baker baked 286 cupcakes in the morning.\nHe then baked another 365 cupcakes in the afternoon.\nThe baker sold 483 cupcakes that day.\n(a) How many cupcakes did the baker bake in all?\n(b) How many cupcakes were left at the end of the day?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many cupcakes did the baker bake in all?"
-   },
-   {
-    "part": "b",
-    "text": "How many cupcakes were left at the end of the day?"
-   }
-  ],
-  "answer": "651; 168",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "651",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "168",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q35",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 16,
-  "section": "C",
-  "question_no": 35,
-  "marks": 3,
-  "question_type": "long",
-  "question": "A tank, containing 1850 mℓ of water at first, has a capacity of 4 ℓ.\nAfter some water was poured into the tank, another 860 mℓ of water is needed to fill it up completely.\nHow much water was poured into the tank?\nGive your answer in litres and millilitres.",
-  "answer": "1 ℓ 290 mℓ",
-  "unit": "ℓ mℓ",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "1",
-    "unit": "ℓ"
-   },
-   {
-    "part": "",
-    "value": "290",
-    "unit": "mℓ"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   16,
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q36",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 17,
-  "section": "C",
-  "question_no": 36,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Ethan spent $\\frac{1}{3}$ of his money on food.\nHe spent $\\frac{1}{6}$ of it on magazines and $\\frac{1}{4}$ of it on shoes.\nWhat fraction of his money was left?\nExpress your answer in its simplest form.",
-  "answer": "$\\frac{1}{4}$",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "$\\frac{1}{4}$",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 38",
-   "fractions read from image"
-  ],
-  "checked_against_image": [
-   17,
-   22
-  ],
-  "answer_check": "ok (key treats 1/6 and 1/4 as fractions of his whole money: 4/12+2/12+3/12 = 9/12, left 1/4)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q37",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 18,
-  "section": "C",
-  "question_no": 37,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Michelle worked for 6 days in a week.\nShe worked from 09 00 to 18 00 every day.\n(a) How many hours did she work every day?\n(b) How many hours did she work in 4 weeks?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many hours did she work every day?"
-   },
-   {
-    "part": "b",
-    "text": "How many hours did she work in 4 weeks?"
-   }
-  ],
-  "answer": "9; 216",
-  "unit": "h",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "9",
-    "unit": "h"
-   },
-   {
-    "part": "b",
-    "value": "216",
-    "unit": "h"
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q38",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 19,
-  "section": "C",
-  "question_no": 38,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Shop A sold 487 more marbles than Shop B.\nShop C sold 243 more marbles than Shop B.\nThe three shops sold a total of 1000 marbles.\n(a) How many marbles did Shop A sell?\n(b) How many more marbles did Shop A sell than Shop C?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many marbles did Shop A sell?"
-   },
-   {
-    "part": "b",
-    "text": "How many more marbles did Shop A sell than Shop C?"
-   }
-  ],
-  "answer": "577; 244",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "577",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "244",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StJoseph_EOY_Q39",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Joseph's Institution Junior",
-  "exam": "EOY",
-  "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
-  "source_pdf_page": 20,
-  "section": "C",
-  "question_no": 39,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Thaddeus, Ivan and Ryan had a total of 381 coins.\nIvan had twice as many coins as Ryan and Thaddeus had 56 more coins than Ivan.\n(a) How many coins did Thaddeus have?\n(b) If Ryan's mother gave Ryan another 100 coins, how many coins would Ryan have now?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many coins did Thaddeus have?"
-   },
-   {
-    "part": "b",
-    "text": "If Ryan's mother gave Ryan another 100 coins, how many coins would Ryan have now?"
-   }
-  ],
-  "answer": "186; 165",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "186",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "165",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2023_P3_StJoseph_EOY_Q16",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 16,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Which digit in the two numbers given below has the same value?\n2856    6825",
+    "answer": "8",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "8",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": true,
+    "figure_note": "two numbers in ovals: 2856 and 6825",
+    "ocr_fixes": [
+      "numbers read from image"
+    ],
+    "checked_against_image": [
+      8,
+      21
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q17",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 17,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Find the difference between 6483 and 259.",
+    "answer": "6224",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "6224",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q18",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 18,
+    "marks": 1,
+    "question_type": "short",
+    "question": "1432 more than 7768 is ______.",
+    "answer": "9200",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "9200",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q19",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 19,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Arrange the following fractions in order. Begin with the greatest.\n$\\frac{1}{3}$, $\\frac{5}{6}$, $\\frac{5}{12}$",
+    "answer": "$\\frac{5}{6}$, $\\frac{5}{12}$, $\\frac{1}{3}$",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "$\\frac{5}{6}$, $\\frac{5}{12}$, $\\frac{1}{3}$",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      9,
+      21
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q20",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 20,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Gary went jogging from 6:20 a.m. to 7:15 a.m. How long did he jog?",
+    "answer": "55",
+    "unit": "min",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "55",
+        "unit": "min"
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q21",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 21,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Mark the right angles inside the figure given below.",
+    "answer": "2 right angles: at the top-left corner (where the top edge meets the left vertical edge) and at the bottom corner on the right of the base (base meets the short vertical edge going up). The corner where that vertical meets the step is a 270 deg (reflex) angle, not a right angle.",
+    "unit": "",
+    "answer_parts": [],
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "irregular polygon with several vertices",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9,
+      21
+    ],
+    "answer_check": "reviewed: key reprints figure without marks; measured the 12 vertices, only two interior angles are 90 deg",
+    "confidence": "medium",
+    "answer_type": "drawing"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q22",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Jamie and Angel had a total of 135 hairclips. If Angel were to give Jamie 16 hairclips, Jamie would have 4 times as many hairclips as Angel. How many hairclips did Angel have?",
+    "answer": "43",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "43",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'iotal' -> 'total'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q23",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mrs Tan is 5 times as old as her son, Bryan, who is 9 years old now. How old will Mrs Tan be in 10 years' time?",
+    "answer": "55",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "55",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q24",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Keith had some sweets. He gave 24 of his sweets to his brother and bought another 12 sweets. In the end, Keith had 88 sweets altogether. How many sweets did he have at first?",
+    "answer": "100",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "100",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'24' read from image"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q25",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "One of the lines in the figure below is parallel to CD. Name the line.",
+    "answer": "BE",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "BE",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle ACEF with diagonals AE, BE and CD",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q26",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Peter and Michael started jogging from the same point but in opposite directions. When they stopped jogging at the same time, Peter had jogged 4 times the distance Michael had jogged. Michael jogged 546 m less than Peter. How far apart were they when they stopped jogging?",
+    "answer": "910",
+    "unit": "m",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "910",
+        "unit": "m"
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "Peter and Michael running in opposite directions from a start point on a line",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q27",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A mango cost ＄5. A basket of 4 mangoes cost ＄18. Alicia bought 10 mangoes altogether. What was the least amount of money that she paid for the mangoes?",
+    "answer": "46",
+    "unit": "＄",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "46",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "basket of mangoes, 4 mangoes at ＄18",
+    "ocr_fixes": [
+      "key OCR '546' is '46' (18 x 2 + 10)"
+    ],
+    "checked_against_image": [
+      12,
+      21
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q28",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Ethan has 40 more marbles than Dylan. How many marbles must Ethan give to Dylan so that he will have 8 more marbles than Dylan?",
+    "answer": "16",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "16",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q29",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Simon had 50 more stickers than Mark. After Simon had given 88 stickers to Mark, he was left with 120 stickers. How many stickers did Mark have at first?",
+    "answer": "158",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "158",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q30",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The square is cut into 4 equal parts. What is the area of the shaded part?",
+    "answer": "16",
+    "unit": "cm²",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "16",
+        "unit": "cm²"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "square of side 8 cm cut by both diagonals, bottom part shaded",
+    "ocr_fixes": [
+      "'&cm' read as 8 cm from image"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q31",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 31,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Each [rectangle] has a mass of 450 g. What is the mass of each [circle]?\nExpress your answer in kg and g.",
+    "answer": "1 kg 350 g",
+    "unit": "kg g",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "1",
+        "unit": "kg"
+      },
+      {
+        "part": "",
+        "value": "350",
+        "unit": "g"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "two balance scales: triangle + 2 rectangles = 2 circles; triangle = 4 rectangles",
+    "ocr_fixes": [
+      "inline pictures written as [rectangle] and [circle]"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q32",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 32,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There were 100 Primary 3 pupils in a school. The pupils were allowed to choose only one co-curricular activity (CCA). The graph shows the CCAs that the pupils had chosen.\nSome pupils were absent and did not get to choose a CCA. How many pupils did not choose a CCA?",
+    "answer": "8",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "8",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph: Floorball 18, Badminton 26, Soccer 32, Rugby 16",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q33",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 33,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There were 100 Primary 3 pupils in a school. The pupils were allowed to choose only one co-curricular activity (CCA). The graph shows the CCAs that the pupils had chosen.\n(a) The absentees returned the next day and all of them chose soccer as their CCA. What is the number of pupils who had chosen soccer in the end?\n(b) Some pupils switched from floorball to badminton. The number of pupils in badminton increased to 30. What would be the number of pupils in floorball in the end?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "The absentees returned the next day and all of them chose soccer as their CCA. What is the number of pupils who had chosen soccer in the end?"
+      },
+      {
+        "part": "b",
+        "text": "Some pupils switched from floorball to badminton. The number of pupils in badminton increased to 30. What would be the number of pupils in floorball in the end?"
+      }
+    ],
+    "answer": "40; 14",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "40",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "14",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "same CCA bar graph as Q32",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high",
+    "figure_ref": "2023_P3_StJoseph_EOY_Q32"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q34",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 15,
+    "section": "C",
+    "question_no": 34,
+    "marks": 3,
+    "question_type": "long",
+    "question": "A baker baked 286 cupcakes in the morning.\nHe then baked another 365 cupcakes in the afternoon.\nThe baker sold 483 cupcakes that day.\n(a) How many cupcakes did the baker bake in all?\n(b) How many cupcakes were left at the end of the day?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many cupcakes did the baker bake in all?"
+      },
+      {
+        "part": "b",
+        "text": "How many cupcakes were left at the end of the day?"
+      }
+    ],
+    "answer": "651; 168",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "651",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "168",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q35",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 16,
+    "section": "C",
+    "question_no": 35,
+    "marks": 3,
+    "question_type": "long",
+    "question": "A tank, containing 1850 mℓ of water at first, has a capacity of 4 ℓ.\nAfter some water was poured into the tank, another 860 mℓ of water is needed to fill it up completely.\nHow much water was poured into the tank?\nGive your answer in litres and millilitres.",
+    "answer": "1 ℓ 290 mℓ",
+    "unit": "ℓ mℓ",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "1",
+        "unit": "ℓ"
+      },
+      {
+        "part": "",
+        "value": "290",
+        "unit": "mℓ"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      16,
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q36",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 17,
+    "section": "C",
+    "question_no": 36,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Ethan spent $\\frac{1}{3}$ of his money on food.\nHe spent $\\frac{1}{6}$ of it on magazines and $\\frac{1}{4}$ of it on shoes.\nWhat fraction of his money was left?\nExpress your answer in its simplest form.",
+    "answer": "$\\frac{1}{4}$",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "$\\frac{1}{4}$",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 38",
+      "fractions read from image"
+    ],
+    "checked_against_image": [
+      17,
+      22
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q37",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 18,
+    "section": "C",
+    "question_no": 37,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Michelle worked for 6 days in a week.\nShe worked from 09 00 to 18 00 every day.\n(a) How many hours did she work every day?\n(b) How many hours did she work in 4 weeks?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many hours did she work every day?"
+      },
+      {
+        "part": "b",
+        "text": "How many hours did she work in 4 weeks?"
+      }
+    ],
+    "answer": "9; 216",
+    "unit": "h",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "9",
+        "unit": "h"
+      },
+      {
+        "part": "b",
+        "value": "216",
+        "unit": "h"
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q38",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 19,
+    "section": "C",
+    "question_no": 38,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Shop A sold 487 more marbles than Shop B.\nShop C sold 243 more marbles than Shop B.\nThe three shops sold a total of 1000 marbles.\n(a) How many marbles did Shop A sell?\n(b) How many more marbles did Shop A sell than Shop C?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many marbles did Shop A sell?"
+      },
+      {
+        "part": "b",
+        "text": "How many more marbles did Shop A sell than Shop C?"
+      }
+    ],
+    "answer": "577; 244",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "577",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "244",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StJoseph_EOY_Q39",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Joseph's Institution Junior",
+    "exam": "EOY",
+    "source": "(St. Joseph's Institution Junior) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StJoseph.pdf",
+    "source_pdf_page": 20,
+    "section": "C",
+    "question_no": 39,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Thaddeus, Ivan and Ryan had a total of 381 coins.\nIvan had twice as many coins as Ryan and Thaddeus had 56 more coins than Ivan.\n(a) How many coins did Thaddeus have?\n(b) If Ryan's mother gave Ryan another 100 coins, how many coins would Ryan have now?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many coins did Thaddeus have?"
+      },
+      {
+        "part": "b",
+        "text": "If Ryan's mother gave Ryan another 100 coins, how many coins would Ryan have now?"
+      }
+    ],
+    "answer": "186; 165",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "186",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "165",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

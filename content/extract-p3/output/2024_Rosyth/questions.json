@@ -272,8 +272,8 @@
   "checked_against_image": [
    5
   ],
-  "answer_check": "ok (key 1; the operator is a small symbol, + gives 1/4)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): symbol is +; 1/4 + 1/2 = 3/4 (no option fits with a division sign); key 1",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Rosyth_EOY_Q09",
@@ -404,8 +404,8 @@
   "checked_against_image": [
    7
   ],
-  "answer_check": "solved: no key (the key has no Q12 row; its 'Q12' row is Q11's answer)",
-  "confidence": "medium"
+  "answer_check": "reviewed: no key entry for Q12 (the key row labelled Q12 is Q11). Counted $50+$50+$10+$2+$1+10c+5c = $113.15",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Rosyth_EOY_Q13",
@@ -750,8 +750,8 @@
   "checked_against_image": [
    12
   ],
-  "answer_check": "ok (key CD and CF; BF // CD; not independently verified on the grid)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): CD (4 right, 4 down) and CF (3 left, 3 down) are perpendicular; BF (3 right, 3 down) is parallel to CD; key CD and CF; BF//CD (other valid pairs exist, e.g. AF//BC)",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Rosyth_EOY_Q23",

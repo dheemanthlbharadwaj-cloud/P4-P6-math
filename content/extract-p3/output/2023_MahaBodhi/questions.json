@@ -1,1305 +1,1305 @@
 [
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q01",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "In 4960, the digit 9 is in the ______ place.",
-  "options": {
-   "1": "ones",
-   "2": "tens",
-   "3": "hundreds",
-   "4": "thousands"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q01",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "In 4960, the digit 9 is in the ______ place.",
+    "options": {
+      "1": "ones",
+      "2": "tens",
+      "3": "hundreds",
+      "4": "thousands"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'{n' -> 'In'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'{n' -> 'In'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q02",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following is the greatest odd number?",
-  "options": {
-   "1": "9639",
-   "2": "9643",
-   "3": "9750",
-   "4": "9778"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q02",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following is the greatest odd number?",
+    "options": {
+      "1": "9639",
+      "2": "9643",
+      "3": "9750",
+      "4": "9778"
+    },
+    "answer_key": "2",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q03",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the value of 1000 − 692?",
-  "options": {
-   "1": "307",
-   "2": "308",
-   "3": "448",
-   "4": "492"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q03",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the value of 1000 − 692?",
+    "options": {
+      "1": "307",
+      "2": "308",
+      "3": "448",
+      "4": "492"
+    },
+    "answer_key": "2",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'6927' -> '692?' read as 692",
+      "option 1 read as '(4)307'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'6927' -> '692?' read as 692",
-   "option 1 read as '(4)307'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q04",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Sam has some money as shown below. How much money does Sam have?",
-  "options": {
-   "1": "＄8.10",
-   "2": "＄8.40",
-   "3": "＄8.60",
-   "4": "＄8.80"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q04",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Sam has some money as shown below. How much money does Sam have?",
+    "options": {
+      "1": "＄8.10",
+      "2": "＄8.40",
+      "3": "＄8.60",
+      "4": "＄8.80"
+    },
+    "answer_key": "3",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": true,
+    "figure_note": "＄5 note, ＄2 note, one ＄1 coin, two 20¢ coins, two 10¢ coins",
+    "ocr_fixes": [
+      "'$' -> '＄'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": true,
-  "figure_note": "＄5 note, ＄2 note, one ＄1 coin, two 20¢ coins, two 10¢ coins",
-  "ocr_fixes": [
-   "'$' -> '＄'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q05",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following has the same value as $5 \\times 4$?",
-  "options": {
-   "1": "$4 + 5$",
-   "2": "$4 + 4 + 4 + 4$",
-   "3": "$5 + 5 + 5 + 5$",
-   "4": "$5 + 5 + 5 + 5 + 5$"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q05",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following has the same value as $5 \\times 4$?",
+    "options": {
+      "1": "$4 + 5$",
+      "2": "$4 + 4 + 4 + 4$",
+      "3": "$5 + 5 + 5 + 5$",
+      "4": "$5 + 5 + 5 + 5 + 5$"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "options rebuilt from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "options rebuilt from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q06",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The bar graph shows the favourite fruits of a group of students. Which fruit is the least popular?",
-  "options": {
-   "1": "Banana",
-   "2": "Grape",
-   "3": "Strawberry",
-   "4": "Watermelon"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q06",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The bar graph shows the favourite fruits of a group of students. Which fruit is the least popular?",
+    "options": {
+      "1": "Banana",
+      "2": "Grape",
+      "3": "Strawberry",
+      "4": "Watermelon"
+    },
+    "answer_key": "2",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph: banana 12, grape 6, strawberry 18, watermelon 24",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph: banana 12, grape 6, strawberry 18, watermelon 24",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q07",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{2}{3}=\\frac{?}{12}$ What is the missing numerator in the box?",
-  "options": {
-   "1": "8",
-   "2": "6",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q07",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{2}{3}=\\frac{?}{12}$ What is the missing numerator in the box?",
+    "options": {
+      "1": "8",
+      "2": "6",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction rebuilt from image",
+      "option 4 '40' -> '4'"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction rebuilt from image",
-   "option 4 '40' -> '4'"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q08",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which line is perpendicular to line KL?",
-  "options": {
-   "1": "MN",
-   "2": "OP",
-   "3": "QR",
-   "4": "ST"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q08",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which line is perpendicular to line KL?",
+    "options": {
+      "1": "MN",
+      "2": "OP",
+      "3": "QR",
+      "4": "ST"
+    },
+    "answer_key": "4",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "lines KL, MN, OP, QR, ST crossing",
+    "ocr_fixes": [
+      "Q8 number missing from OCR"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "lines KL, MN, OP, QR, ST crossing",
-  "ocr_fixes": [
-   "Q8 number missing from OCR"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q09",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Stephanie baked 108 cupcakes for a party. She packed 8 cupcakes in each bag. How many cupcakes were left unpacked?",
-  "options": {
-   "1": "5",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q09",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Stephanie baked 108 cupcakes for a party. She packed 8 cupcakes in each bag. How many cupcakes were left unpacked?",
+    "options": {
+      "1": "5",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option 3 '(8)' -> '(3)'"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option 3 '(8)' -> '(3)'"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q10",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Ali has 3 times as many paper clips as Bella. Ali has 78 more paper clips than Bella. How many paper clips do they have altogether?",
-  "options": {
-   "1": "104",
-   "2": "156",
-   "3": "234",
-   "4": "312"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q10",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Ali has 3 times as many paper clips as Bella. Ali has 78 more paper clips than Bella. How many paper clips do they have altogether?",
+    "options": {
+      "1": "104",
+      "2": "156",
+      "3": "234",
+      "4": "312"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "bar model: Ali 3 units, Bella 1 unit",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "bar model: Ali 3 units, Bella 1 unit",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q11",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 8,
-  "section": "A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The circle below is made up of equal parts. What fraction of the circle is not shaded?",
-  "options": {
-   "1": "$\\frac{1}{3}$",
-   "2": "$\\frac{1}{2}$",
-   "3": "$\\frac{3}{5}$",
-   "4": "$\\frac{2}{3}$"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q11",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 8,
+    "section": "A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The circle below is made up of equal parts. What fraction of the circle is not shaded?",
+    "options": {
+      "1": "$\\frac{1}{3}$",
+      "2": "$\\frac{1}{2}$",
+      "3": "$\\frac{3}{5}$",
+      "4": "$\\frac{2}{3}$"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "circle of equal parts, some shaded",
+    "ocr_fixes": [
+      "fractions rebuilt from image"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "circle of equal parts, some shaded",
-  "ocr_fixes": [
-   "fractions rebuilt from image"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok (key 1; shaded count not independently verified)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q12",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 8,
-  "section": "A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Arrange these fractions from the greatest to the smallest. $\\frac{1}{2}$, $\\frac{5}{8}$, $\\frac{3}{10}$, $\\frac{5}{9}$",
-  "options": {
-   "1": "$\\frac{5}{9}$, $\\frac{5}{8}$, $\\frac{1}{2}$, $\\frac{3}{10}$",
-   "2": "$\\frac{3}{10}$, $\\frac{1}{2}$, $\\frac{5}{9}$, $\\frac{5}{8}$",
-   "3": "$\\frac{1}{2}$, $\\frac{3}{10}$, $\\frac{5}{8}$, $\\frac{5}{9}$",
-   "4": "$\\frac{5}{8}$, $\\frac{5}{9}$, $\\frac{1}{2}$, $\\frac{3}{10}$"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q12",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 8,
+    "section": "A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Arrange these fractions from the greatest to the smallest. $\\frac{1}{2}$, $\\frac{5}{8}$, $\\frac{3}{10}$, $\\frac{5}{9}$",
+    "options": {
+      "1": "$\\frac{5}{9}$, $\\frac{5}{8}$, $\\frac{1}{2}$, $\\frac{3}{10}$",
+      "2": "$\\frac{3}{10}$, $\\frac{1}{2}$, $\\frac{5}{9}$, $\\frac{5}{8}$",
+      "3": "$\\frac{1}{2}$, $\\frac{3}{10}$, $\\frac{5}{8}$, $\\frac{5}{9}$",
+      "4": "$\\frac{5}{8}$, $\\frac{5}{9}$, $\\frac{1}{2}$, $\\frac{3}{10}$"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions rebuilt from image"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions rebuilt from image"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q13",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 9,
-  "section": "A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The rectangle below is made up of 5 identical squares. What is the perimeter of the rectangle?",
-  "options": {
-   "1": "30 cm",
-   "2": "36 cm",
-   "3": "45 cm",
-   "4": "48 cm"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q13",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 9,
+    "section": "A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The rectangle below is made up of 5 identical squares. What is the perimeter of the rectangle?",
+    "options": {
+      "1": "30 cm",
+      "2": "36 cm",
+      "3": "45 cm",
+      "4": "48 cm"
+    },
+    "answer_key": "2",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle of 5 squares, side 3 cm",
+    "ocr_fixes": [
+      "Q number '13,'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle of 5 squares, side 3 cm",
-  "ocr_fixes": [
-   "Q number '13,'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q14",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 9,
-  "section": "A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "At first, Edwin had 35 more stickers than Gordon. Gordon then gave 16 stickers to Edwin. How many fewer stickers did Gordon have than Edwin in the end?",
-  "options": {
-   "1": "19",
-   "2": "51",
-   "3": "67",
-   "4": "83"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q14",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 9,
+    "section": "A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "At first, Edwin had 35 more stickers than Gordon. Gordon then gave 16 stickers to Edwin. How many fewer stickers did Gordon have than Edwin in the end?",
+    "options": {
+      "1": "19",
+      "2": "51",
+      "3": "67",
+      "4": "83"
+    },
+    "answer_key": "3",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "options read from image (OCR had 49,54,67,83)"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "options read from image (OCR had 49,54,67,83)"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q15",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 10,
-  "section": "A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The capacity of the jar is as shown below. It takes 2 jars full of water to fill up 4 identical empty bottles completely. What is the capacity of each bottle?",
-  "options": {
-   "1": "60 mℓ",
-   "2": "120 mℓ",
-   "3": "240 mℓ",
-   "4": "480 mℓ"
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q15",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 10,
+    "section": "A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The capacity of the jar is as shown below. It takes 2 jars full of water to fill up 4 identical empty bottles completely. What is the capacity of each bottle?",
+    "options": {
+      "1": "60 mℓ",
+      "2": "120 mℓ",
+      "3": "240 mℓ",
+      "4": "480 mℓ"
+    },
+    "answer_key": "2",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "jar poured into three beakers: 100, 100 and 40 mℓ",
+    "ocr_fixes": [
+      "'mi' -> 'mℓ'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "jar poured into three beakers: 100, 100 and 40 mℓ",
-  "ocr_fixes": [
-   "'mi' -> 'mℓ'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q16",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 16,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Write eight thousand, seven hundred and five in numbers.",
-  "answer": "8705",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q17",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the sum of 6849 and 675.",
-  "answer": "7524",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q18",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing value in the equation? ＄97.25 − ＄18.60 = ?",
-  "answer": "78.65",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'$' -> '＄'"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q19",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There are 9 cookies in a box. How many cookies are there in 6 such boxes?",
-  "answer": "54",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 49"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q20",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 20,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Write 7 kg 9 g in grams.",
-  "answer": "7009",
-  "unit": "g",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q21",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Express $\\frac{42}{48}$ in its simplest form.",
-  "answer": "$\\frac{7}{8}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q22",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "How many of the marked angles inside the figure are acute angles?",
-  "answer": "2",
-  "unit": "",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "pentagon with five marked angles",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok (key 2; angles not measured)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q23",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Five letters are drawn on the square grid. How many of these letters have parallel lines?",
-  "answer": "3",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "five letters drawn on a square grid",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok (key 3; letters not re-checked)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q24",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing number in the number pattern below? 570, 590, 600, 620, 630, 650, 660, 680, ?",
-  "answer": "690",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q25",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing number in the box? $? \\div 8 = 93$ R 4",
-  "answer": "748",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'? | +8' -> '? ÷ 8'"
-  ],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q26",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph shows the number of P3 to P5 students who watched a movie last month. How many more P4 girls than P5 girls watched a movie last month?",
-  "answer": "50",
-  "unit": "students",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "horizontal bar graph, girls and boys for P3 to P5",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q27",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing fraction in the box? $\\frac{1}{9}$ + $\\boxed{?}$ = $\\frac{2}{3}$",
-  "answer": "$\\frac{5}{9}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "equation rebuilt from image"
-  ],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q28",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 28,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The figure below shows a rectangle.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Find its area."
-   },
-   {
-    "part": "b",
-    "text": "Find its perimeter."
-   }
-  ],
-  "answer": "a) 30 m² b) 22 m",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "30",
-    "unit": "m²"
-   },
-   {
-    "part": "b",
-    "value": "22",
-    "unit": "m"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle 6 m by 5 m",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q29",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The difference between two numbers is 546. The greater number is 7 times as big as the smaller number. What is the greater number?",
-  "answer": "637",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 49"
-  ],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q30",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "According to his watch, Tom started painting at 15 45. His watch was 20 minutes fast. He took 35 minutes to complete his painting. According to actual time, what time did Tom complete his painting?",
-  "answer": "16 00",
-  "unit": "",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'15 AS' -> '15 45'"
-  ],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok (key '1600')",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q31",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 18,
-  "section": "C",
-  "question_no": 31,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mrs Lee bought a blouse for ＄41.65. She also bought a pair of shoes for ＄33.80. She gave the cashier a ＄100 note. How much change did she receive?",
-  "answer": "24.55",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q31 text found on page 18 (index had it missing)"
-  ],
-  "checked_against_image": [
-   18
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q32",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 19,
-  "section": "C",
-  "question_no": 32,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mrs Lim had a jug of fruit punch at first. After pouring the fruit punch equally into 8 glasses, she had 250 mℓ of fruit punch left in the jug. Each glass contained 350 mℓ of fruit punch. How much fruit punch was there in the jug at first? Give your answer in litres and millilitres.",
-  "answer": "3 ℓ 50 mℓ",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "ℓ",
-    "value": "3",
-    "unit": "ℓ"
-   },
-   {
-    "part": "mℓ",
-    "value": "50",
-    "unit": "mℓ"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'mb' -> 'mℓ'"
-  ],
-  "checked_against_image": [
-   19
-  ],
-  "answer_check": "ok (key 3050 mℓ, handwritten 3 ℓ 50 mℓ)",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q33",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 20,
-  "section": "C",
-  "question_no": 33,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mrs Tan took 1 h 40 min to make a pizza. Miss Ong took 30 min more than Mrs Tan to bake a cake.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How much time did Miss Ong take to bake the cake? Give your answer in hours and minutes."
-   },
-   {
-    "part": "b",
-    "text": "Miss Ong started baking the cake at 11.10 am. What time did she finish baking the cake?"
-   }
-  ],
-  "answer": "a) 2 h 10 min b) 1.20 p.m.",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "2 h 10 min",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "1.20 p.m.",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'7h 40' -> '1 h 40'"
-  ],
-  "checked_against_image": [
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q34",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 21,
-  "section": "C",
-  "question_no": 34,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Figures W, X, Y and Z are drawn on the square grid.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Which two figures have the same area?"
-   },
-   {
-    "part": "b",
-    "text": "What is the area of Figure Y?"
-   },
-   {
-    "part": "c",
-    "text": "What is the perimeter of Figure X?"
-   }
-  ],
-  "answer": "a) W and Z b) 6 cm² c) 14 cm",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "W and Z",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "6",
-    "unit": "cm²"
-   },
-   {
-    "part": "c",
-    "value": "14",
-    "unit": "cm"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "four figures W, X, Y, Z on 1 cm square grid",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   21
-  ],
-  "answer_check": "ok (key; figures not independently measured)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q35",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 22,
-  "section": "C",
-  "question_no": 35,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Adeline collected 4 times as many stickers as Kathy. They collected 120 stickers altogether.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many stickers did Kathy collect?"
-   },
-   {
-    "part": "b",
-    "text": "Adeline and Kathy decided to pack the 120 stickers equally into packets of 9 to give to their friends. How many stickers were left unpacked?"
-   }
-  ],
-  "answer": "a) 24 b) 3",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "24",
-    "unit": "stickers"
-   },
-   {
-    "part": "b",
-    "value": "3",
-    "unit": "stickers"
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_MahaBodhi_EOY_Q36",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Maha Bodhi",
-  "exam": "EOY",
-  "source": "(Maha Bodhi) (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
-  "source_pdf_page": 23,
-  "section": "C",
-  "question_no": 36,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Some teachers and students from Ubi Primary School attended a concert. There were 98 more students than teachers. The number of male teachers was the same as the number of male students. There were 26 male students and 15 female teachers.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many more male teachers than female teachers were there?"
-   },
-   {
-    "part": "b",
-    "text": "How many students were there?"
-   }
-  ],
-  "answer": "a) 11 b) 139",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "11",
-    "unit": "teachers"
-   },
-   {
-    "part": "b",
-    "value": "139",
-    "unit": "students"
-   }
-  ],
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   23
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q16",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 16,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Write eight thousand, seven hundred and five in numbers.",
+    "answer": "8705",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q17",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the sum of 6849 and 675.",
+    "answer": "7524",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q18",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing value in the equation? ＄97.25 − ＄18.60 = ?",
+    "answer": "78.65",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'$' -> '＄'"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q19",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There are 9 cookies in a box. How many cookies are there in 6 such boxes?",
+    "answer": "54",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 49"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q20",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 20,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Write 7 kg 9 g in grams.",
+    "answer": "7009",
+    "unit": "g",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q21",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Express $\\frac{42}{48}$ in its simplest form.",
+    "answer": "$\\frac{7}{8}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q22",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "How many of the marked angles inside the figure are acute angles?",
+    "answer": "2",
+    "unit": "",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "pentagon with five marked angles",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q23",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Five letters are drawn on the square grid. How many of these letters have parallel lines?",
+    "answer": "3",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "five letters drawn on a square grid",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q24",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing number in the number pattern below? 570, 590, 600, 620, 630, 650, 660, 680, ?",
+    "answer": "690",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q25",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing number in the box? $? \\div 8 = 93$ R 4",
+    "answer": "748",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'? | +8' -> '? ÷ 8'"
+    ],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q26",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph shows the number of P3 to P5 students who watched a movie last month. How many more P4 girls than P5 girls watched a movie last month?",
+    "answer": "50",
+    "unit": "students",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "horizontal bar graph, girls and boys for P3 to P5",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q27",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing fraction in the box? $\\frac{1}{9}$ + $\\boxed{?}$ = $\\frac{2}{3}$",
+    "answer": "$\\frac{5}{9}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "equation rebuilt from image"
+    ],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q28",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 28,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The figure below shows a rectangle.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Find its area."
+      },
+      {
+        "part": "b",
+        "text": "Find its perimeter."
+      }
+    ],
+    "answer": "a) 30 m² b) 22 m",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "30",
+        "unit": "m²"
+      },
+      {
+        "part": "b",
+        "value": "22",
+        "unit": "m"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle 6 m by 5 m",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q29",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The difference between two numbers is 546. The greater number is 7 times as big as the smaller number. What is the greater number?",
+    "answer": "637",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 49"
+    ],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q30",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "According to his watch, Tom started painting at 15 45. His watch was 20 minutes fast. He took 35 minutes to complete his painting. According to actual time, what time did Tom complete his painting?",
+    "answer": "16 00",
+    "unit": "",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'15 AS' -> '15 45'"
+    ],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok (key '1600')",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q31",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 18,
+    "section": "C",
+    "question_no": 31,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mrs Lee bought a blouse for ＄41.65. She also bought a pair of shoes for ＄33.80. She gave the cashier a ＄100 note. How much change did she receive?",
+    "answer": "24.55",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q31 text found on page 18 (index had it missing)"
+    ],
+    "checked_against_image": [
+      18
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q32",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 19,
+    "section": "C",
+    "question_no": 32,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mrs Lim had a jug of fruit punch at first. After pouring the fruit punch equally into 8 glasses, she had 250 mℓ of fruit punch left in the jug. Each glass contained 350 mℓ of fruit punch. How much fruit punch was there in the jug at first? Give your answer in litres and millilitres.",
+    "answer": "3 ℓ 50 mℓ",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "ℓ",
+        "value": "3",
+        "unit": "ℓ"
+      },
+      {
+        "part": "mℓ",
+        "value": "50",
+        "unit": "mℓ"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'mb' -> 'mℓ'"
+    ],
+    "checked_against_image": [
+      19
+    ],
+    "answer_check": "ok (key 3050 mℓ, handwritten 3 ℓ 50 mℓ)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q33",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 20,
+    "section": "C",
+    "question_no": 33,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mrs Tan took 1 h 40 min to make a pizza. Miss Ong took 30 min more than Mrs Tan to bake a cake.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How much time did Miss Ong take to bake the cake? Give your answer in hours and minutes."
+      },
+      {
+        "part": "b",
+        "text": "Miss Ong started baking the cake at 11.10 am. What time did she finish baking the cake?"
+      }
+    ],
+    "answer": "a) 2 h 10 min b) 1.20 p.m.",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "2 h 10 min",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "1.20 p.m.",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'7h 40' -> '1 h 40'"
+    ],
+    "checked_against_image": [
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q34",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 21,
+    "section": "C",
+    "question_no": 34,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Figures W, X, Y and Z are drawn on the square grid.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Which two figures have the same area?"
+      },
+      {
+        "part": "b",
+        "text": "What is the area of Figure Y?"
+      },
+      {
+        "part": "c",
+        "text": "What is the perimeter of Figure X?"
+      }
+    ],
+    "answer": "a) W and Z b) 6 cm² c) 14 cm",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "W and Z",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "6",
+        "unit": "cm²"
+      },
+      {
+        "part": "c",
+        "value": "14",
+        "unit": "cm"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "four figures W, X, Y, Z on 1 cm square grid",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      21
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q35",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 22,
+    "section": "C",
+    "question_no": 35,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Adeline collected 4 times as many stickers as Kathy. They collected 120 stickers altogether.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many stickers did Kathy collect?"
+      },
+      {
+        "part": "b",
+        "text": "Adeline and Kathy decided to pack the 120 stickers equally into packets of 9 to give to their friends. How many stickers were left unpacked?"
+      }
+    ],
+    "answer": "a) 24 b) 3",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "24",
+        "unit": "stickers"
+      },
+      {
+        "part": "b",
+        "value": "3",
+        "unit": "stickers"
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_MahaBodhi_EOY_Q36",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Maha Bodhi",
+    "exam": "EOY",
+    "source": "(Maha Bodhi) (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-MahaBodhi.pdf",
+    "source_pdf_page": 23,
+    "section": "C",
+    "question_no": 36,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Some teachers and students from Ubi Primary School attended a concert. There were 98 more students than teachers. The number of male teachers was the same as the number of male students. There were 26 male students and 15 female teachers.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many more male teachers than female teachers were there?"
+      },
+      {
+        "part": "b",
+        "text": "How many students were there?"
+      }
+    ],
+    "answer": "a) 11 b) 139",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "11",
+        "unit": "teachers"
+      },
+      {
+        "part": "b",
+        "value": "139",
+        "unit": "students"
+      }
+    ],
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      23
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

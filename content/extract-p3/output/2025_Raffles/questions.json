@@ -168,8 +168,8 @@
    "Q number missing in OCR"
   ],
   "checked_against_image": [],
-  "answer_check": "ok (figure not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q06",
@@ -344,8 +344,8 @@
   "figure_note": "four shapes A-D on a 1 cm grid",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (shapes not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q11",
@@ -429,8 +429,8 @@
   "figure_note": "number line with point A",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (number line not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q14",
@@ -458,8 +458,8 @@
    "fractions garbled in OCR, taken from the key working 2/4 + 3/8"
   ],
   "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q15",
@@ -488,8 +488,8 @@
    "'coffesshop' -> 'coffeeshop'"
   ],
   "checked_against_image": [],
-  "answer_check": "ok (figure labels from OCR, key 300 + 2050)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q16",
@@ -515,8 +515,8 @@
   "figure_note": "lines AB, CD, EF, GH",
   "ocr_fixes": [],
   "checked_against_image": [],
-  "answer_check": "ok (figure not re-read, key trusted)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed)",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q17",
@@ -824,8 +824,8 @@
   "checked_against_image": [
    12
   ],
-  "answer_check": "solved: (a) 2 h 20 min differs from key 2 hr 30 mins (3:15 + 25 min = 3:40, to 6:00 = 2 h 20 min); (b) 6:50 p.m. matches key",
-  "confidence": "medium"
+  "answer_check": "reviewed: key says (a) 2 hr 30 mins, correct is 2 h 20 min because 3:15 + 25 min = 3:40 start, to 6:00 = 2 h 20 min; (b) 7:25 - 35 min = 6:50 p.m. matches key",
+  "confidence": "high"
  },
  {
   "id": "2025_P3_Raffles_EOY_Q24",

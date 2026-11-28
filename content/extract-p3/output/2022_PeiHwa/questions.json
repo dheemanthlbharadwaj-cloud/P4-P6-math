@@ -791,8 +791,8 @@
   "checked_against_image": [
    10
   ],
-  "answer_check": "ok (key 32; shaded = 8 squares' area)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): counting whole and half squares in the 4 x 3 grid gives 2 + 3 + 3 = 8 squares of area; 8 x 4 = 32 cm2; matches key",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_PeiHwa_EOY_Q24",
@@ -865,8 +865,8 @@
   "checked_against_image": [
    11
   ],
-  "answer_check": "ok (beaker 3.5 ℓ read from image, key 2 ℓ 900 mℓ)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): beaker scale (ticks every 500 mL up to 5 L) reads 3 L 500 mL; 3500 - 3 x 200 = 2900 mL = 2 L 900 mL; matches key",
+  "confidence": "high"
  },
  {
   "id": "2022_P3_PeiHwa_EOY_Q26",

@@ -311,8 +311,8 @@
   "checked_against_image": [
    6
   ],
-  "answer_check": "ok (key 2; not independently verified from the grid)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 2 pairs (the two vertical lines, and the bottom horizontal with the top-right horizontal); the diagonal has no parallel; key 2",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_HenryPark_EOY_Q10",
@@ -513,12 +513,12 @@
   "marks": 1,
   "question_type": "short",
   "question": "In the figure shown below, which 2 of the marked angles are acute angles?",
-  "answer": "C and A",
+  "answer": "a and c",
   "unit": "",
   "answer_parts": [
    {
     "part": "",
-    "value": "∠C and ∠A",
+    "value": "a and c",
     "unit": ""
    }
   ],
@@ -532,8 +532,8 @@
   "checked_against_image": [
    8
   ],
-  "answer_check": "ok (key 'C and A'; marked angles are lower-case a-g in the figure, key uses capitals; read as c and a)",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): angles measured: a about 63 and c about 73 degrees are acute, b, d, e, f, g are obtuse; key writes them as capitals (C and A), figure labels are lower-case, so answer given as a and c",
+  "confidence": "high"
  },
  {
   "id": "2023_P3_HenryPark_EOY_Q17",

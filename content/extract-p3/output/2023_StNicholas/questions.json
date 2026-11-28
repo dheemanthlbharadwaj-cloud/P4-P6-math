@@ -1,1266 +1,1266 @@
 [
- {
-  "id": "2023_P3_StNicholas_EOY_Q01",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "2 thousands 2 tens is the same as ______.",
-  "options": {
-   "1": "202",
-   "2": "2002",
-   "3": "2020",
-   "4": "2200"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q01",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "2 thousands 2 tens is the same as ______.",
+    "options": {
+      "1": "202",
+      "2": "2002",
+      "3": "2020",
+      "4": "2200"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "question number 't.' -> 1",
+      "option (3) '2028' -> '2020' (image)"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "question number 't.' -> 1",
-   "option (3) '2028' -> '2020' (image)"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q02",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "______ is 100 less than 4902.",
-  "options": {
-   "1": "5002",
-   "2": "4802",
-   "3": "4800",
-   "4": "3902"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q02",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "______ is 100 less than 4902.",
+    "options": {
+      "1": "5002",
+      "2": "4802",
+      "3": "4800",
+      "4": "3902"
+    },
+    "answer_key": "2",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "blank restored"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "blank restored"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q03",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What is the value of $3098 + 5167$?",
-  "options": {
-   "1": "8155",
-   "2": "8165",
-   "3": "8255",
-   "4": "8265"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q03",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What is the value of $3098 + 5167$?",
+    "options": {
+      "1": "8155",
+      "2": "8165",
+      "3": "8255",
+      "4": "8265"
+    },
+    "answer_key": "4",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'3098 + 51677' -> '3098 + 5167'",
+      "option (2) 'ates' -> '8165'"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'3098 + 51677' -> '3098 + 5167'",
-   "option (2) 'ates' -> '8165'"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q04",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Amirah has 7 boxes of cupcakes. There are 8 cupcakes in each box. How many cupcakes does Amirah have altogether?",
-  "options": {
-   "1": "56",
-   "2": "49",
-   "3": "48",
-   "4": "15"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q04",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Amirah has 7 boxes of cupcakes. There are 8 cupcakes in each box. How many cupcakes does Amirah have altogether?",
+    "options": {
+      "1": "56",
+      "2": "49",
+      "3": "48",
+      "4": "15"
+    },
+    "answer_key": "1",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "question number missing in OCR"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "question number missing in OCR"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q05",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "5 km 9 m = ______ m",
-  "options": {
-   "1": "509",
-   "2": "590",
-   "3": "5009",
-   "4": "5900"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q05",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "5 km 9 m = ______ m",
+    "options": {
+      "1": "509",
+      "2": "590",
+      "3": "5009",
+      "4": "5900"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'5Skmom' -> '5 km 9 m'"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'5Skmom' -> '5 km 9 m'"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q06",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many minutes are there in 2 h 18 min?",
-  "options": {
-   "1": "218 min",
-   "2": "138 min",
-   "3": "120 min",
-   "4": "102 min"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q06",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many minutes are there in 2 h 18 min?",
+    "options": {
+      "1": "218 min",
+      "2": "138 min",
+      "3": "120 min",
+      "4": "102 min"
+    },
+    "answer_key": "2",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option numbering (4)/(1) fixed"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option numbering (4)/(1) fixed"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q07",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Arrange the following fractions from the smallest to the greatest.\n$\\frac{2}{3}$, $\\frac{1}{4}$, $\\frac{5}{12}$",
-  "options": {
-   "1": "$\\frac{1}{4}$, $\\frac{5}{12}$, $\\frac{2}{3}$",
-   "2": "$\\frac{1}{4}$, $\\frac{2}{3}$, $\\frac{5}{12}$",
-   "3": "$\\frac{2}{3}$, $\\frac{5}{12}$, $\\frac{1}{4}$",
-   "4": "$\\frac{5}{12}$, $\\frac{2}{3}$, $\\frac{1}{4}$"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q07",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Arrange the following fractions from the smallest to the greatest.\n$\\frac{2}{3}$, $\\frac{1}{4}$, $\\frac{5}{12}$",
+    "options": {
+      "1": "$\\frac{1}{4}$, $\\frac{5}{12}$, $\\frac{2}{3}$",
+      "2": "$\\frac{1}{4}$, $\\frac{2}{3}$, $\\frac{5}{12}$",
+      "3": "$\\frac{2}{3}$, $\\frac{5}{12}$, $\\frac{1}{4}$",
+      "4": "$\\frac{5}{12}$, $\\frac{2}{3}$, $\\frac{1}{4}$"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions garbled in OCR, read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions garbled in OCR, read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q08",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many of the marked angles in the figure below are greater than a right angle?",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "7",
-   "4": "4"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q08",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many of the marked angles in the figure below are greater than a right angle?",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "7",
+      "4": "4"
+    },
+    "answer_key": "4",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "polygon with 7 marked angles (2 reflex)",
+    "ocr_fixes": [
+      "option (1) '14' -> '1'"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok (reviewed)",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "polygon with 7 marked angles (2 reflex)",
-  "ocr_fixes": [
-   "option (1) '14' -> '1'"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "unsure: key 4 accepted (2 reflex + 2 obtuse by eye)",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q09",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The figure below is a square. The length of AB is 8 cm. What is the area of the square?",
-  "options": {
-   "1": "64 cm²",
-   "2": "32 cm²",
-   "3": "16 cm²",
-   "4": "8 cm²"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q09",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The figure below is a square. The length of AB is 8 cm. What is the area of the square?",
+    "options": {
+      "1": "64 cm²",
+      "2": "32 cm²",
+      "3": "16 cm²",
+      "4": "8 cm²"
+    },
+    "answer_key": "1",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "square ABCD with side AB = 8 cm",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "square ABCD with side AB = 8 cm",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q10",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The difference between two numbers is 670. The smaller number is 1780.\nFind the sum of the two numbers.",
-  "options": {
-   "1": "2450",
-   "2": "3120",
-   "3": "4130",
-   "4": "4230"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q10",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The difference between two numbers is 670. The smaller number is 1780.\nFind the sum of the two numbers.",
+    "options": {
+      "1": "2450",
+      "2": "3120",
+      "3": "4130",
+      "4": "4230"
+    },
+    "answer_key": "4",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'40.' -> '10.'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'40.' -> '10.'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q11",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Jinny has ＄249. Karthi has three times as much as Jinny. How much do they have altogether?",
-  "options": {
-   "1": "＄255",
-   "2": "＄498",
-   "3": "＄747",
-   "4": "＄996"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q11",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Jinny has ＄249. Karthi has three times as much as Jinny. How much do they have altogether?",
+    "options": {
+      "1": "＄255",
+      "2": "＄498",
+      "3": "＄747",
+      "4": "＄996"
+    },
+    "answer_key": "4",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'41.' -> '11.'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'41.' -> '11.'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q12",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Look at the model given below. The length of Bar A and Bar B is the same.\nBar B is made up of 3 equal parts.\nWhat is the value of the shaded part?",
-  "options": {
-   "1": "18",
-   "2": "21",
-   "3": "22",
-   "4": "27"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q12",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Look at the model given below. The length of Bar A and Bar B is the same.\nBar B is made up of 3 equal parts.\nWhat is the value of the shaded part?",
+    "options": {
+      "1": "18",
+      "2": "21",
+      "3": "22",
+      "4": "27"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "bar model: Bar A has 7 units of 9; Bar B 3 equal parts, 1 shaded",
+    "ocr_fixes": [
+      "'42.' -> '12.'"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "bar model: Bar A has 7 units of 9; Bar B 3 equal parts, 1 shaded",
-  "ocr_fixes": [
-   "'42.' -> '12.'"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q13",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "A movie starts at 7.25 p.m. It is now 15 minutes to seven. How long will it be before the movie starts?",
-  "options": {
-   "1": "10 min",
-   "2": "25 min",
-   "3": "40 min",
-   "4": "45 min"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q13",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "A movie starts at 7.25 p.m. It is now 15 minutes to seven. How long will it be before the movie starts?",
+    "options": {
+      "1": "10 min",
+      "2": "25 min",
+      "3": "40 min",
+      "4": "45 min"
+    },
+    "answer_key": "3",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'43.' -> '13.'"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'43.' -> '13.'"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q14",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 8,
-  "section": "A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The bar graph below shows the amount of money collected for charity by some Primary 3 classes.\nHow much more was the greatest amount of money collected than the least amount of money collected?",
-  "options": {
-   "1": "＄840",
-   "2": "＄580",
-   "3": "＄320",
-   "4": "＄260"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q14",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 8,
+    "section": "A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The bar graph below shows the amount of money collected for charity by some Primary 3 classes.\nHow much more was the greatest amount of money collected than the least amount of money collected?",
+    "options": {
+      "1": "＄840",
+      "2": "＄580",
+      "3": "＄320",
+      "4": "＄260"
+    },
+    "answer_key": "3",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "vertical bar graph of money collected: 3A 260, 3B 580, 3C 340, 3D 410",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "vertical bar graph of money collected: 3A 260, 3B 580, 3C 340, 3D 410",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q15",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 9,
-  "section": "A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The figure below is made up of 24 rectangles. How many more rectangles must be shaded to show $\\frac{5}{12}$?",
-  "options": {
-   "1": "1",
-   "2": "6",
-   "3": "7",
-   "4": "10"
+  {
+    "id": "2023_P3_StNicholas_EOY_Q15",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 9,
+    "section": "A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The figure below is made up of 24 rectangles. How many more rectangles must be shaded to show $\\frac{5}{12}$?",
+    "options": {
+      "1": "1",
+      "2": "6",
+      "3": "7",
+      "4": "10"
+    },
+    "answer_key": "2",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": true,
+    "figure_note": "4 by 6 grid of rectangles, 4 shaded diagonally",
+    "ocr_fixes": [
+      "'nm' read for option (1) -> '1'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": true,
-  "figure_note": "4 by 6 grid of rectangles, 4 shaded diagonally",
-  "ocr_fixes": [
-   "'nm' read for option (1) -> '1'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q16",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 16,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the value of $9003 - 1279$?",
-  "answer": "7724",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'4. What' -> '16. What'"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q17",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing number in the pattern below?\n4930, 4690, 4450, 4210, $\\boxed{?}$, 3730",
-  "answer": "3970",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'+7.' -> '17.'"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q18",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "short",
-  "question": "______ + ＄3.95 = ＄10",
-  "answer": "6.05",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'＄140' -> '＄10' (image)",
-   "blank restored"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q19",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The mass of a bag is shown on the kitchen scale below. What is the mass of the bag?",
-  "answer": "4 kg 600 g",
-  "unit": "kg g",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "4",
-    "unit": "kg"
-   },
-   {
-    "part": "",
-    "value": "600",
-    "unit": "g"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "school bag on a dial kitchen scale (0-7 kg)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q20",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 20,
-  "marks": 2,
-  "question_type": "short",
-  "question": "$\\frac{1}{4} + \\frac{5}{8} = \\boxed{?}$",
-  "answer": "$\\frac{7}{8}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q21",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Look at the letters below. Which 2 letters have both perpendicular and parallel lines?\nH A M L E T",
-  "answer": "H and E",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "letters H A M L E T",
-  "ocr_fixes": [
-   "question number read as 49 -> 21"
-  ],
-  "checked_against_image": [
-   12
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q22",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the area of Figure A below?",
-  "answer": "8",
-  "unit": "cm²",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "shaded Figure A on 1-cm grid with triangles",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q23",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A number when divided by 5 has a quotient of 38 and a remainder of 3.\nWhat is the number?",
-  "answer": "193",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q24",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "May has 58 stickers. Lynn has 5 times as many stickers as her. How many stickers will Lynn have to give May so that both of them have the same number of stickers?",
-  "answer": "116",
-  "unit": "stickers",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'hér' -> 'her'"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q25",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mindy's watch is six minutes slow. Her watch shows 5.00 p.m. now. What is the actual time?",
-  "answer": "5.06 p.m.",
-  "unit": "",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'5 00' -> '5.00'"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q26",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Use the bar graph below to answer question 26.\nThe bar graph shows the number of pupils visiting the different stations at the Lower Primary Fun Day.\nStation D has twice as many pupils as Station ______.",
-  "answer": "A",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "horizontal bar graph: A 125, B 500, C 350, D 250",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   15
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q27",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "What is the missing number?\n$\\frac{10}{12} = \\frac{\\boxed{?}}{18}$",
-  "answer": "15",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction read from image"
-  ],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q28",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Which of the 2 figures below have the same perimeter?",
-  "answer": "P and S",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "P",
-    "unit": ""
-   },
-   {
-    "part": "",
-    "value": "S",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "four shaded figures P, Q, R, S on 1-cm grid",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   16
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q29",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mrs Devi paid ＄24 for some apples.\n(Picture: 5 apples for ＄3)\nEach statement below is either true or false from the information given. For each statement, put a tick (✓) in the correct column.\nMrs Devi bought 40 apples.\nIf Mrs Devi had bought 30 apples instead, she would have spent ＄4 less.",
-  "answer": "True; False",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "1",
-    "value": "True",
-    "unit": ""
-   },
-   {
-    "part": "2",
-    "value": "False",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Money"
-  ],
-  "has_figure": true,
-  "figure_note": "picture of 5 apples for ＄3",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok (24/3*5=40 true; 30 apples = ＄18, ＄6 less so false)",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q30",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 18,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Nurul has 17 notes in her piggy bank. There are only ＄2 and ＄5 notes in her piggy bank. The total value of the notes is ＄49. How many ＄5 notes are there in her piggy bank?",
-  "answer": "5",
-  "unit": "notes",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Do not write in' margin text removed"
-  ],
-  "checked_against_image": [
-   18
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q31",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 19,
-  "section": "C",
-  "question_no": 31,
-  "marks": 3,
-  "question_type": "long",
-  "question": "There are 960 boys in a hall. There are 395 more boys than girls in the same hall. How many children are there in the hall altogether?",
-  "answer": "1525",
-  "unit": "children",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   19,
-   28
-  ],
-  "answer_check": "ok (key working has OCR/typo '960-395=565'; 960+565=1525)",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q32",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 21,
-  "section": "C",
-  "question_no": 32,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Chong and Jill have 180 cookies altogether. Chong has 30 cookies more than Jill. How many cookies does Jill have?",
-  "answer": "75",
-  "unit": "cookies",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   21
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q33",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 23,
-  "section": "C",
-  "question_no": 33,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Pravin, Hadi and Larry have 442 stamps altogether. Larry has four times as many stamps as Hadi. Pravin has 34 more stamps than Hadi. How many stamps does Hadi have?",
-  "answer": "68",
-  "unit": "stamps",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "comma after Pravin restored"
-  ],
-  "checked_against_image": [
-   23
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q34",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 24,
-  "section": "C",
-  "question_no": 34,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Xiaoting hangs 10 light bulbs at an equal distance apart on a wire. The distance between the 2nd and the 9th light bulb is 280 cm. What is the length of the wire used for hanging the 10 light bulbs?",
-  "answer": "360",
-  "unit": "cm",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "wire with light bulbs, 2nd and 9th labelled",
-  "ocr_fixes": [
-   "'10 0' -> '10'"
-  ],
-  "checked_against_image": [
-   24,
-   28
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q35",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 25,
-  "section": "C",
-  "question_no": 35,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Molly had 800 mℓ of apple juice for a party at first. She bought another 10 bottles of apple juice for the party. Each bottle contained 330 mℓ of apple juice. She served the apple juice to her guests and had 590 mℓ of apple juice left.\n(a) What was the total amount of apple juice she had for the party?\n(b) How much apple juice was served to the guests?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What was the total amount of apple juice she had for the party?"
-   },
-   {
-    "part": "b",
-    "text": "How much apple juice was served to the guests?"
-   }
-  ],
-  "answer": "4100 mℓ; 3510 mℓ",
-  "unit": "mℓ",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "4100",
-    "unit": "mℓ"
-   },
-   {
-    "part": "b",
-    "value": "3510",
-    "unit": "mℓ"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'ef' -> 'left'",
-   "'mi' -> 'mℓ'"
-  ],
-  "checked_against_image": [
-   25,
-   28
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_StNicholas_EOY_Q36",
-  "grade": "P3",
-  "year": "2023",
-  "school": "St. Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(St. Nicholas Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 26,
-  "section": "C",
-  "question_no": 36,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The figures below are formed by sticks. They follow a pattern.\nThe table below shows the number of sticks used for the first four figures.\nFigure Number: 1, 2, 3, 4, 5, 6; Number of sticks used: 6, 11, 16, 21, ..., ?\n(a) How many sticks are used to form Figure 6?\n(b) Which figure has 66 sticks?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many sticks are used to form Figure 6?"
-   },
-   {
-    "part": "b",
-    "text": "Which figure has 66 sticks?"
-   }
-  ],
-  "answer": "31; Figure 13",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "31",
-    "unit": "sticks"
-   },
-   {
-    "part": "b",
-    "value": "13",
-    "unit": "Figure"
-   }
-  ],
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers",
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "stick pattern Figures 1-4 and a table of sticks used",
-  "ocr_fixes": [
-   "OCR table garbled ('44' -> 11); question (a) asks Figure 6 (image)"
-  ],
-  "checked_against_image": [
-   26,
-   28
-  ],
-  "answer_check": "ok (6+5x5=31; (66-6)/5+1=13)",
-  "confidence": "high"
- }
+  {
+    "id": "2023_P3_StNicholas_EOY_Q16",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 16,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the value of $9003 - 1279$?",
+    "answer": "7724",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'4. What' -> '16. What'"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q17",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing number in the pattern below?\n4930, 4690, 4450, 4210, $\\boxed{?}$, 3730",
+    "answer": "3970",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'+7.' -> '17.'"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q18",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "short",
+    "question": "______ + ＄3.95 = ＄10",
+    "answer": "6.05",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'＄140' -> '＄10' (image)",
+      "blank restored"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q19",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The mass of a bag is shown on the kitchen scale below. What is the mass of the bag?",
+    "answer": "4 kg 600 g",
+    "unit": "kg g",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "4",
+        "unit": "kg"
+      },
+      {
+        "part": "",
+        "value": "600",
+        "unit": "g"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "school bag on a dial kitchen scale (0-7 kg)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q20",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 20,
+    "marks": 2,
+    "question_type": "short",
+    "question": "$\\frac{1}{4} + \\frac{5}{8} = \\boxed{?}$",
+    "answer": "$\\frac{7}{8}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q21",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Look at the letters below. Which 2 letters have both perpendicular and parallel lines?\nH A M L E T",
+    "answer": "H and E",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "letters H A M L E T",
+    "ocr_fixes": [
+      "question number read as 49 -> 21"
+    ],
+    "checked_against_image": [
+      12
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q22",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the area of Figure A below?",
+    "answer": "8",
+    "unit": "cm²",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "shaded Figure A on 1-cm grid with triangles",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q23",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A number when divided by 5 has a quotient of 38 and a remainder of 3.\nWhat is the number?",
+    "answer": "193",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q24",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "May has 58 stickers. Lynn has 5 times as many stickers as her. How many stickers will Lynn have to give May so that both of them have the same number of stickers?",
+    "answer": "116",
+    "unit": "stickers",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'hér' -> 'her'"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q25",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mindy's watch is six minutes slow. Her watch shows 5.00 p.m. now. What is the actual time?",
+    "answer": "5.06 p.m.",
+    "unit": "",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'5 00' -> '5.00'"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q26",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Use the bar graph below to answer question 26.\nThe bar graph shows the number of pupils visiting the different stations at the Lower Primary Fun Day.\nStation D has twice as many pupils as Station ______.",
+    "answer": "A",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "horizontal bar graph: A 125, B 500, C 350, D 250",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      15
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q27",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "What is the missing number?\n$\\frac{10}{12} = \\frac{\\boxed{?}}{18}$",
+    "answer": "15",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction read from image"
+    ],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q28",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Which of the 2 figures below have the same perimeter?",
+    "answer": "P and S",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "P",
+        "unit": ""
+      },
+      {
+        "part": "",
+        "value": "S",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "four shaded figures P, Q, R, S on 1-cm grid",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      16
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q29",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mrs Devi paid ＄24 for some apples.\n(Picture: 5 apples for ＄3)\nEach statement below is either true or false from the information given. For each statement, put a tick (✓) in the correct column.\nMrs Devi bought 40 apples.\nIf Mrs Devi had bought 30 apples instead, she would have spent ＄4 less.",
+    "answer": "True; False",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "1",
+        "value": "True",
+        "unit": ""
+      },
+      {
+        "part": "2",
+        "value": "False",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Money"
+    ],
+    "has_figure": true,
+    "figure_note": "picture of 5 apples for ＄3",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok (24/3*5=40 true; 30 apples = ＄18, ＄6 less so false)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q30",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 18,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Nurul has 17 notes in her piggy bank. There are only ＄2 and ＄5 notes in her piggy bank. The total value of the notes is ＄49. How many ＄5 notes are there in her piggy bank?",
+    "answer": "5",
+    "unit": "notes",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Do not write in' margin text removed"
+    ],
+    "checked_against_image": [
+      18
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q31",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 19,
+    "section": "C",
+    "question_no": 31,
+    "marks": 3,
+    "question_type": "long",
+    "question": "There are 960 boys in a hall. There are 395 more boys than girls in the same hall. How many children are there in the hall altogether?",
+    "answer": "1525",
+    "unit": "children",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      19,
+      28
+    ],
+    "answer_check": "ok (key working has OCR/typo '960-395=565'; 960+565=1525)",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q32",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 21,
+    "section": "C",
+    "question_no": 32,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Chong and Jill have 180 cookies altogether. Chong has 30 cookies more than Jill. How many cookies does Jill have?",
+    "answer": "75",
+    "unit": "cookies",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      21
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q33",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 23,
+    "section": "C",
+    "question_no": 33,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Pravin, Hadi and Larry have 442 stamps altogether. Larry has four times as many stamps as Hadi. Pravin has 34 more stamps than Hadi. How many stamps does Hadi have?",
+    "answer": "68",
+    "unit": "stamps",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "comma after Pravin restored"
+    ],
+    "checked_against_image": [
+      23
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q34",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 24,
+    "section": "C",
+    "question_no": 34,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Xiaoting hangs 10 light bulbs at an equal distance apart on a wire. The distance between the 2nd and the 9th light bulb is 280 cm. What is the length of the wire used for hanging the 10 light bulbs?",
+    "answer": "360",
+    "unit": "cm",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "wire with light bulbs, 2nd and 9th labelled",
+    "ocr_fixes": [
+      "'10 0' -> '10'"
+    ],
+    "checked_against_image": [
+      24,
+      28
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q35",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 25,
+    "section": "C",
+    "question_no": 35,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Molly had 800 mℓ of apple juice for a party at first. She bought another 10 bottles of apple juice for the party. Each bottle contained 330 mℓ of apple juice. She served the apple juice to her guests and had 590 mℓ of apple juice left.\n(a) What was the total amount of apple juice she had for the party?\n(b) How much apple juice was served to the guests?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What was the total amount of apple juice she had for the party?"
+      },
+      {
+        "part": "b",
+        "text": "How much apple juice was served to the guests?"
+      }
+    ],
+    "answer": "4100 mℓ; 3510 mℓ",
+    "unit": "mℓ",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "4100",
+        "unit": "mℓ"
+      },
+      {
+        "part": "b",
+        "value": "3510",
+        "unit": "mℓ"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'ef' -> 'left'",
+      "'mi' -> 'mℓ'"
+    ],
+    "checked_against_image": [
+      25,
+      28
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_StNicholas_EOY_Q36",
+    "grade": "P3",
+    "year": "2023",
+    "school": "St. Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(St. Nicholas Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 26,
+    "section": "C",
+    "question_no": 36,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The figures below are formed by sticks. They follow a pattern.\nThe table below shows the number of sticks used for the first four figures.\nFigure Number: 1, 2, 3, 4, 5, 6; Number of sticks used: 6, 11, 16, 21, ..., ?\n(a) How many sticks are used to form Figure 6?\n(b) Which figure has 66 sticks?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many sticks are used to form Figure 6?"
+      },
+      {
+        "part": "b",
+        "text": "Which figure has 66 sticks?"
+      }
+    ],
+    "answer": "31; Figure 13",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "31",
+        "unit": "sticks"
+      },
+      {
+        "part": "b",
+        "value": "13",
+        "unit": "Figure"
+      }
+    ],
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers",
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "stick pattern Figures 1-4 and a table of sticks used",
+    "ocr_fixes": [
+      "OCR table garbled ('44' -> 11); question (a) asks Figure 6 (image)"
+    ],
+    "checked_against_image": [
+      26,
+      28
+    ],
+    "answer_check": "ok (6+5x5=31; (66-6)/5+1=13)",
+    "confidence": "high"
+  }
 ]

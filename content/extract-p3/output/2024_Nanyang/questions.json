@@ -271,8 +271,8 @@
    6,
    19
   ],
-  "answer_check": "ok: key 2; bottom-left angle looks about 90 degrees",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): measured vertex angles: top (marked) ~71, right tip (marked) ~34, top-left ~129, left ~122, bottom ~91 (about a right angle), notch reflex; 2 acute angles matches key. Earlier note about bottom-left was wrong (that angle is obtuse); the bottom vertex is the near-right one.",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Nanyang_EOY_Q09",
@@ -648,8 +648,8 @@
    10,
    20
   ],
-  "answer_check": "ok: key accepted, figure not independently measured",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): on the grid AB and EF both go 2 across and 5 down, so AB // EF; BC goes 3 across 3 up and CD 4 across 4 down (45 degrees each way), so BC is perpendicular to CD; matches key",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Nanyang_EOY_Q18",

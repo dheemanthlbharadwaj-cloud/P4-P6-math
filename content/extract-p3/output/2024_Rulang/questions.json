@@ -103,8 +103,8 @@
   "checked_against_image": [
    2
   ],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): 5 x 9 = 45, option 2; key 2",
+  "confidence": "high"
  },
  {
   "id": "2024_P3_Rulang_EOY_Q04",
@@ -513,7 +513,7 @@
   "marks": 1,
   "question_type": "short",
   "question": "Mark all the obtuse angles inside the figure below.",
-  "answer": "3 obtuse angles marked (top left, bottom left, bottom)",
+  "answer": "3 obtuse angles marked: top-left, bottom-left and bottom (the bottom-right is a right angle and the top-right is acute)",
   "topic_primary": "Angles",
   "topics": [
    "Angles"
@@ -524,8 +524,9 @@
   "checked_against_image": [
    5
   ],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): angles measured from the figure (104, 126, 145 degrees obtuse; 90 and 75 not); matches key marks",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2024_P3_Rulang_EOY_Q17",
@@ -569,7 +570,7 @@
   "marks": 1,
   "question_type": "short",
   "question": "Draw a line which is perpendicular to Line XY and passes through point Z.",
-  "answer": "A line through Z perpendicular to XY (drawing)",
+  "answer": "drawing: a line through Z meeting XY at a right angle; XY rises slightly to the right, so the line from Z runs almost vertically, tilting slightly to the right as it goes down to XY, with a right-angle mark",
   "topic_primary": "Perpendicular and Parallel Lines",
   "topics": [
    "Perpendicular and Parallel Lines"
@@ -580,8 +581,9 @@
   "checked_against_image": [
    6
   ],
-  "answer_check": "ok",
-  "confidence": "medium"
+  "answer_check": "ok (reviewed): drawing, matches the key diagram",
+  "confidence": "high",
+  "answer_type": "drawing"
  },
  {
   "id": "2024_P3_Rulang_EOY_Q19",

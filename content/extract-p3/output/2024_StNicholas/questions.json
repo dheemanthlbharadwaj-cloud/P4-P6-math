@@ -1,967 +1,968 @@
 [
- {
-  "id": "2024_P3_StNicholas_EOY_Q01",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "What is four thousand, one hundred and sixty-two in numbers?",
-  "options": {
-   "1": "4621",
-   "2": "4216",
-   "3": "4162",
-   "4": "4062"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q01",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "What is four thousand, one hundred and sixty-two in numbers?",
+    "options": {
+      "1": "4621",
+      "2": "4216",
+      "3": "4162",
+      "4": "4062"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 4 / OCR garbled"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 4 / OCR garbled"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q02",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "What is the product of 304 and 8?",
-  "options": {
-   "1": "38",
-   "2": "2432",
-   "3": "2512",
-   "4": "2532"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q02",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "What is the product of 304 and 8?",
+    "options": {
+      "1": "38",
+      "2": "2432",
+      "3": "2512",
+      "4": "2532"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 2:"
+    ],
+    "checked_against_image": [
+      3
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 2:"
-  ],
-  "checked_against_image": [
-   3
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q03",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Look at the figure below. Which lines are perpendicular to each other?",
-  "options": {
-   "1": "AB and AD",
-   "2": "AB and CD",
-   "3": "AD and BC",
-   "4": "AD and DC"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q03",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Look at the figure below. Which lines are perpendicular to each other?",
+    "options": {
+      "1": "AB and AD",
+      "2": "AB and CD",
+      "3": "AD and BC",
+      "4": "AD and DC"
+    },
+    "answer_key": "1",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with lines AB, AD, DC, BC",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with lines AB, AD, DC, BC",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q04",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Look at the figure below. What is the area of the figure?",
-  "options": {
-   "1": "16 square units",
-   "2": "14 square units",
-   "3": "12 square units",
-   "4": "10 square units"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q04",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Look at the figure below. What is the area of the figure?",
+    "options": {
+      "1": "16 square units",
+      "2": "14 square units",
+      "3": "12 square units",
+      "4": "10 square units"
+    },
+    "answer_key": "3",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "shaded figure with half-squares on a unit grid",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok (12, counting half squares)",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "shaded figure with half-squares on a unit grid",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok (12, counting half squares)",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q05",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{2}{3} + \\frac{1}{6} = \\boxed{?}$",
-  "options": {
-   "1": "$\\frac{2}{6}$",
-   "2": "$\\frac{3}{6}$",
-   "3": "$\\frac{3}{9}$",
-   "4": "$\\frac{5}{6}$"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q05",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{2}{3} + \\frac{1}{6} = \\boxed{?}$",
+    "options": {
+      "1": "$\\frac{2}{6}$",
+      "2": "$\\frac{3}{6}$",
+      "3": "$\\frac{3}{9}$",
+      "4": "$\\frac{5}{6}$"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "options read from image (OCR lost them)"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "options read from image (OCR lost them)"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q06",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Mdm Sari left her house at 06 55. She took 1 h 15 min to reach her office. What time did Mdm Sari reach her office?",
-  "options": {
-   "1": "08 00",
-   "2": "08 10",
-   "3": "08 30",
-   "4": "05 40"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q06",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Mdm Sari left her house at 06 55. She took 1 h 15 min to reach her office. What time did Mdm Sari reach her office?",
+    "options": {
+      "1": "08 00",
+      "2": "08 10",
+      "3": "08 30",
+      "4": "05 40"
+    },
+    "answer_key": "2",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q07",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Paul bought 3 packets of sweets. James bought twice as many packets of sweets as Paul. There were 27 sweets in each packet. How many sweets did James buy?",
-  "options": {
-   "1": "243",
-   "2": "162",
-   "3": "81",
-   "4": "54"
+  {
+    "id": "2024_P3_StNicholas_EOY_Q07",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Paul bought 3 packets of sweets. James bought twice as many packets of sweets as Paul. There were 27 sweets in each packet. How many sweets did James buy?",
+    "options": {
+      "1": "243",
+      "2": "162",
+      "3": "81",
+      "4": "54"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q08",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 6,
-  "section": "B",
-  "question_no": 8,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Arrange the following numbers in increasing order. 7140, 7014, 7104",
-  "answer": "7014, 7104, 7140",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   6,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q09",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 6,
-  "section": "B",
-  "question_no": 9,
-  "marks": 1,
-  "question_type": "short",
-  "question": "The bar graph shows the number of fruits sold at a fruit stall. What is the total number of fruits sold?",
-  "answer": "26",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "bar graph: apples 10, bananas 8, oranges 3, pears 5",
-  "ocr_fixes": [
-   "Q number missing in OCR"
-  ],
-  "checked_against_image": [
-   6,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q10",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 7,
-  "section": "B",
-  "question_no": 10,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is $\\frac{3}{4} - \\frac{5}{8}$?",
-  "answer": "$\\frac{1}{8}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 'Whatis', fractions read from image"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q11",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 7,
-  "section": "B",
-  "question_no": 11,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Lando bought a toy. He gave the cashier ＄10 and received a change of ＄3.75. How much did the toy cost?",
-  "answer": "6.25",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q12",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 7,
-  "section": "B",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A pencil case costs ＄8. A book costs ＄13 more than the pencil case. Caesar bought 2 such books and one such pencil case. How much money did Caesar spend altogether?",
-  "answer": "50",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'casts' -> 'costs'",
-   "$ -> ＄"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q13",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Draw a line parallel to the given line in the grid below. Use arrowheads to show that the lines are parallel.",
-  "answer": "(line parallel to MN drawn on the grid, with arrowheads)",
-  "unit": "",
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with line MN",
-  "ocr_fixes": [
-   "arrowhead symbol dropped by OCR"
-  ],
-  "checked_against_image": [
-   8,
-   19
-  ],
-  "answer_check": "ok (drawing, key shows the line)",
-  "confidence": "medium"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q14",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 8,
-  "section": "B",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The figure below shows the amount of water in a measuring cup. What is the total amount of water in 6 such measuring cups?",
-  "answer": "1560",
-  "unit": "mℓ",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "measuring cup with 100, 200, 300 mℓ marks, water at about 260 mℓ",
-  "ocr_fixes": [
-   "ml -> mℓ"
-  ],
-  "checked_against_image": [
-   8,
-   19
-  ],
-  "answer_check": "ok (key 1560, printed 'L' is a typo for mℓ)",
-  "confidence": "medium"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q15",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A soccer match started at 23 30 and ended at 01 08 the next day. What was the duration of the soccer match?",
-  "answer": "1 h 38 min",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "h",
-    "value": "1",
-    "unit": "h"
-   },
-   {
-    "part": "min",
-    "value": "38",
-    "unit": "min"
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'Asoccer' -> 'A soccer'"
-  ],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q16",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 9,
-  "section": "B",
-  "question_no": 16,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The bar graph shows the number of books read by four pupils in a month.\n(a) Who read the most number of books?\n(b) Mira read 3 fewer books than ______.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Who read the most number of books?"
-   },
-   {
-    "part": "b",
-    "text": "Mira read 3 fewer books than ______."
-   }
-  ],
-  "answer": "Nora; Kumar",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "Nora",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "Kumar",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "horizontal bar graph: Mira 12, Kumar 15, Nora 18, De Ming 9",
-  "ocr_fixes": [
-   "OCR of graph garbled, read from image"
-  ],
-  "checked_against_image": [
-   9,
-   19
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q17",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 17,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Fill in the blanks with '>', '<' or '='.\n(a) $\\frac{4}{10}$ ___ $\\frac{2}{5}$\n(b) $\\frac{4}{9}$ ___ $\\frac{7}{10}$",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "$\\frac{4}{10}$ ___ $\\frac{2}{5}$"
-   },
-   {
-    "part": "b",
-    "text": "$\\frac{4}{9}$ ___ $\\frac{7}{10}$"
-   }
-  ],
-  "answer": "=; <",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "=",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "<",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fractions read from image",
-   "key symbol for (b) is '<'"
-  ],
-  "checked_against_image": [
-   10,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q18",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 18,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Mindy gave away some food items to some families. Each family received 5 cans of mushrooms and 7 packets of seaweed. Mindy gave away 35 cans of mushrooms altogether. How many packets of seaweed did she give away altogether?",
-  "answer": "49",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "5 cans of mushrooms and 7 packets of seaweed",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q19",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 19,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There are 24 cars and motorcycles altogether. There is a total number of 76 wheels. Each car has 4 wheels and each motorcycle has 2 wheels. How many cars are there?",
-  "answer": "14",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q20",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 12,
-  "section": "C",
-  "question_no": 20,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mr Hoh had 972 satay sticks. He packed the satay sticks equally into 9 containers. How many satay sticks were there in 7 such containers?",
-  "answer": "756",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   12,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q21",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 13,
-  "section": "C",
-  "question_no": 21,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Lionel wanted to run 1 km 50 m. He completed 2 rounds on a running track. Each round is 400 m. How much further did he have to run?",
-  "answer": "250",
-  "unit": "m",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   13,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q22",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 14,
-  "section": "C",
-  "question_no": 22,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Mrs Afiya cut a long string into 4 equal parts. She then used each part to form a rectangular frame. The length of the frame was 29 cm and its breadth was 17 cm.\n(a) What was the perimeter of each rectangular frame?\n(b) How long was the string?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "What was the perimeter of each rectangular frame?"
-   },
-   {
-    "part": "b",
-    "text": "How long was the string?"
-   }
-  ],
-  "answer": "92; 368",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "92",
-    "unit": "cm"
-   },
-   {
-    "part": "b",
-    "value": "368",
-    "unit": "cm"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "rectangle 29 cm by 17 cm",
-  "ocr_fixes": [
-   "'47 com' -> '17 cm'",
-   "marks (a) 2 + (b) 1"
-  ],
-  "checked_against_image": [
-   14,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q23",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 15,
-  "section": "C",
-  "question_no": 23,
-  "marks": 4,
-  "question_type": "long",
-  "question": "The figures below are made up of identical squares. The figures follow a pattern. Study Figures 1, 2 and 3 above and the table below. Figure 1, 2, 3, ..., 6; Number of shaded squares 8, 12, 16, ..., ?\n(a) How many shaded squares are there in Figure 6?\n(b) A figure has a total of 52 shaded squares. What is the figure number?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many shaded squares are there in Figure 6?"
-   },
-   {
-    "part": "b",
-    "text": "A figure has a total of 52 shaded squares. What is the figure number?"
-   }
-  ],
-  "answer": "28; 12",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "28",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "12",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "Figures 1-3 of shaded squares around a white centre, plus a table",
-  "ocr_fixes": [
-   "table read from image",
-   "marks (a) 2 + (b) 2"
-  ],
-  "checked_against_image": [
-   15,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q24",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 16,
-  "section": "C",
-  "question_no": 24,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Ryan had some marbles. Ben had four times as many marbles as Ryan. Doris had 36 marbles more than Ben. The three children had 270 marbles altogether.\n(a) How many marbles did Ryan have?\n(b) Ryan and Ben decided to share their marbles equally. How many marbles did Ben give Ryan?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many marbles did Ryan have?"
-   },
-   {
-    "part": "b",
-    "text": "Ryan and Ben decided to share their marbles equally. How many marbles did Ben give Ryan?"
-   }
-  ],
-  "answer": "26; 39",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "26",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "39",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'ventte st' -> removed margin noise",
-   "marks (a) 2 + (b) 2"
-  ],
-  "checked_against_image": [
-   16,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2024_P3_StNicholas_EOY_Q25",
-  "grade": "P3",
-  "year": "2024",
-  "school": "CHIJ St Nicholas Girls'",
-  "exam": "EOY",
-  "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
-  "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
-  "source_pdf_page": 17,
-  "section": "C",
-  "question_no": 25,
-  "marks": 3,
-  "question_type": "long",
-  "question": "At first, there were some adults and 500 children at the stadium. After another 612 adults and 300 children arrived, there were 3 times as many adults as children in the end.\n(a) How many children were there in the end?\n(b) How many adults were there at first?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many children were there in the end?"
-   },
-   {
-    "part": "b",
-    "text": "How many adults were there at first?"
-   }
-  ],
-  "answer": "800; 1788",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "800",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "1788",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "marks (a) 1 + (b) 2"
-  ],
-  "checked_against_image": [
-   17,
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2024_P3_StNicholas_EOY_Q08",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 6,
+    "section": "B",
+    "question_no": 8,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Arrange the following numbers in increasing order. 7140, 7014, 7104",
+    "answer": "7014, 7104, 7140",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      6,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q09",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 6,
+    "section": "B",
+    "question_no": 9,
+    "marks": 1,
+    "question_type": "short",
+    "question": "The bar graph shows the number of fruits sold at a fruit stall. What is the total number of fruits sold?",
+    "answer": "26",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "bar graph: apples 10, bananas 8, oranges 3, pears 5",
+    "ocr_fixes": [
+      "Q number missing in OCR"
+    ],
+    "checked_against_image": [
+      6,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q10",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 7,
+    "section": "B",
+    "question_no": 10,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is $\\frac{3}{4} - \\frac{5}{8}$?",
+    "answer": "$\\frac{1}{8}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 'Whatis', fractions read from image"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q11",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 7,
+    "section": "B",
+    "question_no": 11,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Lando bought a toy. He gave the cashier ＄10 and received a change of ＄3.75. How much did the toy cost?",
+    "answer": "6.25",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q12",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 7,
+    "section": "B",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A pencil case costs ＄8. A book costs ＄13 more than the pencil case. Caesar bought 2 such books and one such pencil case. How much money did Caesar spend altogether?",
+    "answer": "50",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'casts' -> 'costs'",
+      "$ -> ＄"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q13",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Draw a line parallel to the given line in the grid below. Use arrowheads to show that the lines are parallel.",
+    "answer": "Line parallel to MN (5 units right for every 1 unit up), e.g. from the left edge 2 rows above M to the right edge one row higher, with matching arrowheads on both lines",
+    "unit": "",
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with line MN",
+    "ocr_fixes": [
+      "arrowhead symbol dropped by OCR"
+    ],
+    "checked_against_image": [
+      8,
+      19
+    ],
+    "answer_check": "ok (reviewed): drawing; line parallel to MN, 5 units right and 1 unit up, with arrowheads on both lines",
+    "confidence": "high",
+    "answer_type": "drawing"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q14",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 8,
+    "section": "B",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The figure below shows the amount of water in a measuring cup. What is the total amount of water in 6 such measuring cups?",
+    "answer": "1560",
+    "unit": "mℓ",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "measuring cup with 100, 200, 300 mℓ marks, water at about 260 mℓ",
+    "ocr_fixes": [
+      "ml -> mℓ"
+    ],
+    "checked_against_image": [
+      8,
+      19
+    ],
+    "answer_check": "ok (reviewed): water level 260 mℓ per cup, 260 x 6 = 1560 mℓ (printed L is a typo for mℓ)",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q15",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A soccer match started at 23 30 and ended at 01 08 the next day. What was the duration of the soccer match?",
+    "answer": "1 h 38 min",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "h",
+        "value": "1",
+        "unit": "h"
+      },
+      {
+        "part": "min",
+        "value": "38",
+        "unit": "min"
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'Asoccer' -> 'A soccer'"
+    ],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q16",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 9,
+    "section": "B",
+    "question_no": 16,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The bar graph shows the number of books read by four pupils in a month.\n(a) Who read the most number of books?\n(b) Mira read 3 fewer books than ______.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Who read the most number of books?"
+      },
+      {
+        "part": "b",
+        "text": "Mira read 3 fewer books than ______."
+      }
+    ],
+    "answer": "Nora; Kumar",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "Nora",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "Kumar",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "horizontal bar graph: Mira 12, Kumar 15, Nora 18, De Ming 9",
+    "ocr_fixes": [
+      "OCR of graph garbled, read from image"
+    ],
+    "checked_against_image": [
+      9,
+      19
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q17",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 17,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Fill in the blanks with '>', '<' or '='.\n(a) $\\frac{4}{10}$ ___ $\\frac{2}{5}$\n(b) $\\frac{4}{9}$ ___ $\\frac{7}{10}$",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "$\\frac{4}{10}$ ___ $\\frac{2}{5}$"
+      },
+      {
+        "part": "b",
+        "text": "$\\frac{4}{9}$ ___ $\\frac{7}{10}$"
+      }
+    ],
+    "answer": "=; <",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "=",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "<",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fractions read from image",
+      "key symbol for (b) is '<'"
+    ],
+    "checked_against_image": [
+      10,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q18",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 18,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Mindy gave away some food items to some families. Each family received 5 cans of mushrooms and 7 packets of seaweed. Mindy gave away 35 cans of mushrooms altogether. How many packets of seaweed did she give away altogether?",
+    "answer": "49",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "5 cans of mushrooms and 7 packets of seaweed",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q19",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 19,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There are 24 cars and motorcycles altogether. There is a total number of 76 wheels. Each car has 4 wheels and each motorcycle has 2 wheels. How many cars are there?",
+    "answer": "14",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q20",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 12,
+    "section": "C",
+    "question_no": 20,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mr Hoh had 972 satay sticks. He packed the satay sticks equally into 9 containers. How many satay sticks were there in 7 such containers?",
+    "answer": "756",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      12,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q21",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 13,
+    "section": "C",
+    "question_no": 21,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Lionel wanted to run 1 km 50 m. He completed 2 rounds on a running track. Each round is 400 m. How much further did he have to run?",
+    "answer": "250",
+    "unit": "m",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      13,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q22",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 14,
+    "section": "C",
+    "question_no": 22,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Mrs Afiya cut a long string into 4 equal parts. She then used each part to form a rectangular frame. The length of the frame was 29 cm and its breadth was 17 cm.\n(a) What was the perimeter of each rectangular frame?\n(b) How long was the string?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "What was the perimeter of each rectangular frame?"
+      },
+      {
+        "part": "b",
+        "text": "How long was the string?"
+      }
+    ],
+    "answer": "92; 368",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "92",
+        "unit": "cm"
+      },
+      {
+        "part": "b",
+        "value": "368",
+        "unit": "cm"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "rectangle 29 cm by 17 cm",
+    "ocr_fixes": [
+      "'47 com' -> '17 cm'",
+      "marks (a) 2 + (b) 1"
+    ],
+    "checked_against_image": [
+      14,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q23",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 15,
+    "section": "C",
+    "question_no": 23,
+    "marks": 4,
+    "question_type": "long",
+    "question": "The figures below are made up of identical squares. The figures follow a pattern. Study Figures 1, 2 and 3 above and the table below. Figure 1, 2, 3, ..., 6; Number of shaded squares 8, 12, 16, ..., ?\n(a) How many shaded squares are there in Figure 6?\n(b) A figure has a total of 52 shaded squares. What is the figure number?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many shaded squares are there in Figure 6?"
+      },
+      {
+        "part": "b",
+        "text": "A figure has a total of 52 shaded squares. What is the figure number?"
+      }
+    ],
+    "answer": "28; 12",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "28",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "12",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "Figures 1-3 of shaded squares around a white centre, plus a table",
+    "ocr_fixes": [
+      "table read from image",
+      "marks (a) 2 + (b) 2"
+    ],
+    "checked_against_image": [
+      15,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q24",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 16,
+    "section": "C",
+    "question_no": 24,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Ryan had some marbles. Ben had four times as many marbles as Ryan. Doris had 36 marbles more than Ben. The three children had 270 marbles altogether.\n(a) How many marbles did Ryan have?\n(b) Ryan and Ben decided to share their marbles equally. How many marbles did Ben give Ryan?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many marbles did Ryan have?"
+      },
+      {
+        "part": "b",
+        "text": "Ryan and Ben decided to share their marbles equally. How many marbles did Ben give Ryan?"
+      }
+    ],
+    "answer": "26; 39",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "26",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "39",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'ventte st' -> removed margin noise",
+      "marks (a) 2 + (b) 2"
+    ],
+    "checked_against_image": [
+      16,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2024_P3_StNicholas_EOY_Q25",
+    "grade": "P3",
+    "year": "2024",
+    "school": "CHIJ St Nicholas Girls'",
+    "exam": "EOY",
+    "source": "(CHIJ St Nicholas Girls') (EOY) (2024)",
+    "source_pdf": "2024-P3-Maths-EOY-StNicholas.pdf",
+    "source_pdf_page": 17,
+    "section": "C",
+    "question_no": 25,
+    "marks": 3,
+    "question_type": "long",
+    "question": "At first, there were some adults and 500 children at the stadium. After another 612 adults and 300 children arrived, there were 3 times as many adults as children in the end.\n(a) How many children were there in the end?\n(b) How many adults were there at first?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many children were there in the end?"
+      },
+      {
+        "part": "b",
+        "text": "How many adults were there at first?"
+      }
+    ],
+    "answer": "800; 1788",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "800",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "1788",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "marks (a) 1 + (b) 2"
+    ],
+    "checked_against_image": [
+      17,
+      20
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

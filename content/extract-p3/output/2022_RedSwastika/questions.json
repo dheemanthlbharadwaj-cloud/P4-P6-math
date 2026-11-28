@@ -30,7 +30,7 @@
     "checked_against_image": [
       3
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -66,7 +66,7 @@
     "checked_against_image": [
       3
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -102,7 +102,7 @@
     "checked_against_image": [
       3
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -136,7 +136,7 @@
     "checked_against_image": [
       3
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -170,7 +170,7 @@
     "checked_against_image": [
       3
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -207,7 +207,7 @@
     "checked_against_image": [
       4
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -245,7 +245,7 @@
     "checked_against_image": [
       4
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -282,8 +282,8 @@
     "checked_against_image": [
       4
     ],
-    "answer_check": "solved: no key (estimate)",
-    "confidence": "medium"
+    "answer_check": "ok (reviewed): no key; stick child beside shelf is about 1 m tall and shelf is about as tall, 1 cm/5 cm too small, 5 m too big",
+    "confidence": "high"
   },
   {
     "id": "2022_P3_RedSwastika_EOY_Q09",
@@ -319,7 +319,7 @@
     "checked_against_image": [
       4
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -355,7 +355,7 @@
     "checked_against_image": [
       4
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -389,7 +389,7 @@
     "checked_against_image": [
       5
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -425,7 +425,7 @@
     "checked_against_image": [
       5
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -461,7 +461,7 @@
     "checked_against_image": [
       5
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -498,7 +498,7 @@
     "checked_against_image": [
       6
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -535,7 +535,7 @@
     "checked_against_image": [
       6
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high",
     "figure_ref": "2022_P3_RedSwastika_EOY_Q14"
   },
@@ -570,7 +570,7 @@
     "checked_against_image": [
       6
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -604,7 +604,7 @@
     "checked_against_image": [
       6
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -639,7 +639,7 @@
     "checked_against_image": [
       7
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -676,7 +676,7 @@
     "checked_against_image": [
       7
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -713,7 +713,7 @@
     "checked_against_image": [
       7
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -742,7 +742,7 @@
     "checked_against_image": [
       9
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -773,7 +773,7 @@
     "checked_against_image": [
       9
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -802,7 +802,7 @@
     "checked_against_image": [
       9
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -831,7 +831,7 @@
     "checked_against_image": [
       10
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -885,7 +885,7 @@
     "checked_against_image": [
       10
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed): bars 5,4,12,hidden,11; 40-32 = 8 for 3 books; (a) 11 vs 12 so False; (b) True",
     "confidence": "high"
   },
   {
@@ -914,7 +914,7 @@
     "checked_against_image": [
       11
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -945,7 +945,7 @@
     "checked_against_image": [
       11
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -976,7 +976,7 @@
     "checked_against_image": [
       11
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1008,7 +1008,7 @@
     "checked_against_image": [
       12
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1038,7 +1038,7 @@
     "checked_against_image": [
       12
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1080,7 +1080,7 @@
     "checked_against_image": [
       12
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1111,7 +1111,7 @@
     "checked_against_image": [
       13
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1143,8 +1143,8 @@
     "checked_against_image": [
       13
     ],
-    "answer_check": "solved: no key",
-    "confidence": "medium",
+    "answer_check": "ok (reviewed): Graph 1 pears 22 sold + Graph 2 pears 4 unsold = 26 (axis scale re-measured, 2 per square)",
+    "confidence": "high",
     "figure_ref": "2022_P3_RedSwastika_EOY_Q32"
   },
   {
@@ -1174,7 +1174,7 @@
     "checked_against_image": [
       14
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1206,7 +1206,7 @@
     "checked_against_image": [
       14
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1235,7 +1235,7 @@
     "checked_against_image": [
       14
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1252,7 +1252,7 @@
     "marks": 2,
     "question_type": "short",
     "question": "By joining dots on the grid with 2 straight lines, draw a triangle with one obtuse angle and two acute angles in the space below.",
-    "answer": "(drawing: a triangle with one obtuse angle)",
+    "answer": "Join the right end of the drawn base line to a dot, then join that dot to the left end of the base line, so that the third dot lies beyond one end of the base (e.g. one row up and two columns to the left of the left end). The angle at the base end nearest that dot is then obtuse and the other two are acute.",
     "unit": "",
     "topic_primary": "Angles",
     "topics": [
@@ -1264,8 +1264,9 @@
     "checked_against_image": [
       15
     ],
-    "answer_check": "solved: no key (drawing)",
-    "confidence": "high"
+    "answer_check": "ok (reviewed): drawing task, no key; text answer describes a valid triangle",
+    "confidence": "high",
+    "answer_type": "drawing"
   },
   {
     "id": "2022_P3_RedSwastika_EOY_Q38",
@@ -1295,7 +1296,7 @@
     "checked_against_image": [
       15
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1326,7 +1327,7 @@
     "checked_against_image": [
       15
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1355,7 +1356,7 @@
       "Q number on separate line"
     ],
     "checked_against_image": [],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1405,7 +1406,7 @@
     "figure_note": "",
     "ocr_fixes": [],
     "checked_against_image": [],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1436,8 +1437,8 @@
     "checked_against_image": [
       18
     ],
-    "answer_check": "solved:49 (read 'he' as Jerry; if 98 is the pair's total no whole answer)",
-    "confidence": "medium"
+    "answer_check": "ok (reviewed): \"he\" = Jerry paid $98; 6 more tarts cost $12 more so $2 each; 98/2 = 49 tarts",
+    "confidence": "high"
   },
   {
     "id": "2022_P3_RedSwastika_EOY_Q43",
@@ -1487,7 +1488,7 @@
       "'Clinic' capital, line breaks joined"
     ],
     "checked_against_image": [],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1516,7 +1517,7 @@
       "Q number on separate line"
     ],
     "checked_against_image": [],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   },
   {
@@ -1567,7 +1568,7 @@
     "checked_against_image": [
       21
     ],
-    "answer_check": "solved: no key",
+    "answer_check": "ok (reviewed)",
     "confidence": "high"
   }
 ]

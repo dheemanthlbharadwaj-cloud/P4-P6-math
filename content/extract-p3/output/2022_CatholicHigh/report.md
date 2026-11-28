@@ -20,3 +20,8 @@
 - Checked 14 crops; re-cropped manually: Q14, Q15, Q21, Q24, Q30, Q32, Q34, Q35, Q39, Q40 (Q40 keeps the counters and the table, with the sentence between them whited out). Kept: Q08, Q17, Q31, Q33.
 - figure_refs added: none. has_figure changes: none (Q13, Q22, Q23 have everything in the text).
 - Still imperfect: Q35 has faint show-through text from the scan behind the top of the grid (cannot be removed without touching the '1 cm' labels); Q30 has a faint white smudge on the line AB (scan quality).
+
+## Answer review
+
+- 2022_P3_CatholicHigh_EOY_Q08: final answer 4; unchanged. ok (reviewed): dial 45 deg per kg, pointer at ~111 deg = 2.5 kg; key 4 = 2500 g
+- 2022_P3_CatholicHigh_EOY_Q30: final answer Line through C and the grid point on AB that is 1 square right and 1 square down from A (the middle of AB), drawn at 45 degrees (down-left from C), extended to cross AB; it meets AB at a right angle. C is 2 squares right of A on the same row.; text description of drawing added, answer_type drawing. ok (reviewed): drawing question; C is whited out in the scan but sits 2 squares right of A, the key shows the perpendicular from C meeting AB at its midpoint

@@ -1,1424 +1,1424 @@
 [
- {
-  "id": "2023_P3_Raffles_EOY_Q01",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 1,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "The value of the digit 3 in 7329 is ______.",
-  "options": {
-   "1": "3",
-   "2": "30",
-   "3": "300",
-   "4": "3000"
+  {
+    "id": "2023_P3_Raffles_EOY_Q01",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 1,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "The value of the digit 3 in 7329 is ______.",
+    "options": {
+      "1": "3",
+      "2": "30",
+      "3": "300",
+      "4": "3000"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q02",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 2,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "7000 + 900 + 9 =",
-  "options": {
-   "1": "7999",
-   "2": "7990",
-   "3": "7909",
-   "4": "7099"
+  {
+    "id": "2023_P3_Raffles_EOY_Q02",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 2,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "7000 + 900 + 9 =",
+    "options": {
+      "1": "7999",
+      "2": "7990",
+      "3": "7909",
+      "4": "7099"
+    },
+    "answer_key": "3",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q03",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 3,
-  "section": "A",
-  "question_no": 3,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Eight thousand, nine hundred and thirty-five in numerals is ______.",
-  "options": {
-   "1": "8350",
-   "2": "8395",
-   "3": "8593",
-   "4": "8935"
+  {
+    "id": "2023_P3_Raffles_EOY_Q03",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 3,
+    "section": "A",
+    "question_no": 3,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Eight thousand, nine hundred and thirty-five in numerals is ______.",
+    "options": {
+      "1": "8350",
+      "2": "8395",
+      "3": "8593",
+      "4": "8935"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q04",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 4,
-  "marks": 1,
-  "question_type": "mcq",
-  "question": "Susan has 72 pencils. She wants to pack them equally into 8 goodie bags. How many pencils are there in one bag?",
-  "options": {
-   "1": "8",
-   "2": "9",
-   "3": "64",
-   "4": "72"
+  {
+    "id": "2023_P3_Raffles_EOY_Q04",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 4,
+    "marks": 1,
+    "question_type": "mcq",
+    "question": "Susan has 72 pencils. She wants to pack them equally into 8 goodie bags. How many pencils are there in one bag?",
+    "options": {
+      "1": "8",
+      "2": "9",
+      "3": "64",
+      "4": "72"
+    },
+    "answer_key": "2",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number missing in OCR (Q4)"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number missing in OCR (Q4)"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q05",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 5,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{1}{4} = \\frac{\\square}{12}$\nWhat is the missing number in the box?",
-  "options": {
-   "1": "9",
-   "2": "6",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_Raffles_EOY_Q05",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 5,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{1}{4} = \\frac{\\square}{12}$\nWhat is the missing number in the box?",
+    "options": {
+      "1": "9",
+      "2": "6",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "3",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction garbled in OCR, read from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction garbled in OCR, read from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q06",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 4,
-  "section": "A",
-  "question_no": 6,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{1}{5} + \\frac{1}{10} = \\square$",
-  "options": {
-   "1": "$\\frac{1}{50}$",
-   "2": "$\\frac{2}{5}$",
-   "3": "$\\frac{2}{15}$",
-   "4": "$\\frac{3}{10}$"
+  {
+    "id": "2023_P3_Raffles_EOY_Q06",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 4,
+    "section": "A",
+    "question_no": 6,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{1}{5} + \\frac{1}{10} = \\square$",
+    "options": {
+      "1": "$\\frac{1}{50}$",
+      "2": "$\\frac{2}{5}$",
+      "3": "$\\frac{2}{15}$",
+      "4": "$\\frac{3}{10}$"
+    },
+    "answer_key": "4",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q6 missing in OCR; fractions read from image"
+    ],
+    "checked_against_image": [
+      4
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q6 missing in OCR; fractions read from image"
-  ],
-  "checked_against_image": [
-   4
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q07",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 7,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "$\\frac{2}{3} - \\frac{3}{9} = \\square$",
-  "options": {
-   "1": "$\\frac{1}{3}$",
-   "2": "$\\frac{1}{6}$",
-   "3": "$\\frac{1}{9}$",
-   "4": "$\\frac{5}{12}$"
+  {
+    "id": "2023_P3_Raffles_EOY_Q07",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 7,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "$\\frac{2}{3} - \\frac{3}{9} = \\square$",
+    "options": {
+      "1": "$\\frac{1}{3}$",
+      "2": "$\\frac{1}{6}$",
+      "3": "$\\frac{1}{9}$",
+      "4": "$\\frac{5}{12}$"
+    },
+    "answer_key": "1",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q7 missing in OCR; fractions read from image"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q7 missing in OCR; fractions read from image"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q08",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 8,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Arrange the following numbers from the greatest to the smallest.\n6507, 6057, 6705",
-  "options": {
-   "1": "6057, 6507, 6705",
-   "2": "6507, 6705, 6057",
-   "3": "6705, 6057, 6507",
-   "4": "6705, 6507, 6057"
+  {
+    "id": "2023_P3_Raffles_EOY_Q08",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 8,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Arrange the following numbers from the greatest to the smallest.\n6507, 6057, 6705",
+    "options": {
+      "1": "6057, 6507, 6705",
+      "2": "6507, 6705, 6057",
+      "3": "6705, 6057, 6507",
+      "4": "6705, 6507, 6057"
+    },
+    "answer_key": "4",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q8 missing in OCR",
+      "options columns joined with commas"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "4",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q8 missing in OCR",
-   "options columns joined with commas"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q09",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 5,
-  "section": "A",
-  "question_no": 9,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Ms Chong baked 498 cookies. She ate 6 cookies and gave 60 cookies to her friends. How many cookies were left?",
-  "options": {
-   "1": "432",
-   "2": "438",
-   "3": "492",
-   "4": "564"
+  {
+    "id": "2023_P3_Raffles_EOY_Q09",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 5,
+    "section": "A",
+    "question_no": 9,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Ms Chong baked 498 cookies. She ate 6 cookies and gave 60 cookies to her friends. How many cookies were left?",
+    "options": {
+      "1": "432",
+      "2": "438",
+      "3": "492",
+      "4": "564"
+    },
+    "answer_key": "1",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q9 missing in OCR"
+    ],
+    "checked_against_image": [
+      5
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q9 missing in OCR"
-  ],
-  "checked_against_image": [
-   5
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q10",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 10,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "What does ☆ represent?\n  2 ☆ 6\n×       4\n  9 4 4",
-  "options": {
-   "1": "1",
-   "2": "2",
-   "3": "3",
-   "4": "4"
+  {
+    "id": "2023_P3_Raffles_EOY_Q10",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 10,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "What does ☆ represent?\n  2 ☆ 6\n×       4\n  9 4 4",
+    "options": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "answer_key": "3",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'410.' -> 10.",
+      "symbol read as 'x'"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'410.' -> 10.",
-   "symbol read as 'x'"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q11",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 6,
-  "section": "A",
-  "question_no": 11,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How many minutes are there in 2 h 38 min?",
-  "options": {
-   "1": "40",
-   "2": "98",
-   "3": "158",
-   "4": "238"
+  {
+    "id": "2023_P3_Raffles_EOY_Q11",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 6,
+    "section": "A",
+    "question_no": 11,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How many minutes are there in 2 h 38 min?",
+    "options": {
+      "1": "40",
+      "2": "98",
+      "3": "158",
+      "4": "238"
+    },
+    "answer_key": "3",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "option 3 OCR read 458, image 158"
+    ],
+    "checked_against_image": [
+      6
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "option 3 OCR read 458, image 158"
-  ],
-  "checked_against_image": [
-   6
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q12",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 7,
-  "section": "A",
-  "question_no": 12,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which house is the furthest from the swimming pool?",
-  "options": {
-   "1": "House A",
-   "2": "House B",
-   "3": "House C",
-   "4": "House D"
+  {
+    "id": "2023_P3_Raffles_EOY_Q12",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 7,
+    "section": "A",
+    "question_no": 12,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which house is the furthest from the swimming pool?",
+    "options": {
+      "1": "House A",
+      "2": "House B",
+      "3": "House C",
+      "4": "House D"
+    },
+    "answer_key": "1",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "swimming pool with Houses A 1980 m, B 1 km 800 m, C 1180 m, D 1 km 190 m",
+    "ocr_fixes": [
+      "'12,' -> '12.'",
+      "distances read from image"
+    ],
+    "checked_against_image": [
+      7
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "swimming pool with Houses A 1980 m, B 1 km 800 m, C 1180 m, D 1 km 190 m",
-  "ocr_fixes": [
-   "'12,' -> '12.'",
-   "distances read from image"
-  ],
-  "checked_against_image": [
-   7
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q13",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 8,
-  "section": "A",
-  "question_no": 13,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "How much more water is needed to fill the beaker to 500 mℓ?",
-  "options": {
-   "1": "207 mℓ",
-   "2": "230 mℓ",
-   "3": "270 mℓ",
-   "4": "370 mℓ"
+  {
+    "id": "2023_P3_Raffles_EOY_Q13",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 8,
+    "section": "A",
+    "question_no": 13,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "How much more water is needed to fill the beaker to 500 mℓ?",
+    "options": {
+      "1": "207 mℓ",
+      "2": "230 mℓ",
+      "3": "270 mℓ",
+      "4": "370 mℓ"
+    },
+    "answer_key": "3",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "beaker with scale to 500 mℓ, water at about 230 mℓ",
+    "ocr_fixes": [
+      "ml -> mℓ"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok (reviewed): water level about 230 ml, 500-230=270 ml, key 3",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "beaker with scale to 500 mℓ, water at about 230 mℓ",
-  "ocr_fixes": [
-   "ml -> mℓ"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q14",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 8,
-  "section": "A",
-  "question_no": 14,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Bala bought a notebook and a bottle of orange juice. He gave the cashier ＄50.\nHow much change did he get?",
-  "options": {
-   "1": "＄10.05",
-   "2": "＄39.95",
-   "3": "＄44.70",
-   "4": "＄45.25"
+  {
+    "id": "2023_P3_Raffles_EOY_Q14",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 8,
+    "section": "A",
+    "question_no": 14,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Bala bought a notebook and a bottle of orange juice. He gave the cashier ＄50.\nHow much change did he get?",
+    "options": {
+      "1": "＄10.05",
+      "2": "＄39.95",
+      "3": "＄44.70",
+      "4": "＄45.25"
+    },
+    "answer_key": "2",
+    "topic_primary": "Money",
+    "topics": [
+      "Money"
+    ],
+    "has_figure": true,
+    "figure_note": "orange juice ＄5.30, notebook ＄4.75",
+    "ocr_fixes": [
+      "$ -> ＄",
+      "juice price read from image"
+    ],
+    "checked_against_image": [
+      8
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "2",
-  "topic_primary": "Money",
-  "topics": [
-   "Money"
-  ],
-  "has_figure": true,
-  "figure_note": "orange juice ＄5.30, notebook ＄4.75",
-  "ocr_fixes": [
-   "$ -> ＄",
-   "juice price read from image"
-  ],
-  "checked_against_image": [
-   8
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q15",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 9,
-  "section": "A",
-  "question_no": 15,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "The clock shown below is slower by 5 minutes. What is the correct time?",
-  "options": {
-   "1": "10 25",
-   "2": "10 30",
-   "3": "10 35",
-   "4": "10 55"
+  {
+    "id": "2023_P3_Raffles_EOY_Q15",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 9,
+    "section": "A",
+    "question_no": 15,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "The clock shown below is slower by 5 minutes. What is the correct time?",
+    "options": {
+      "1": "10 25",
+      "2": "10 30",
+      "3": "10 35",
+      "4": "10 55"
+    },
+    "answer_key": "3",
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": true,
+    "figure_note": "analogue clock showing 10:30",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
   },
-  "answer_key": "3",
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": true,
-  "figure_note": "analogue clock showing 10:30",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q16",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 9,
-  "section": "A",
-  "question_no": 16,
-  "marks": 2,
-  "question_type": "mcq",
-  "question": "Which of the following points when joined to point X will make an angle greater than a right angle?",
-  "options": {
-   "1": "A",
-   "2": "B",
-   "3": "C",
-   "4": "D"
+  {
+    "id": "2023_P3_Raffles_EOY_Q16",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 9,
+    "section": "A",
+    "question_no": 16,
+    "marks": 2,
+    "question_type": "mcq",
+    "question": "Which of the following points when joined to point X will make an angle greater than a right angle?",
+    "options": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "answer_key": "1",
+    "topic_primary": "Angles",
+    "topics": [
+      "Angles"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with X joined to Y and to A, B, C, D (angle measured from XY)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      9
+    ],
+    "answer_check": "ok (reviewed): with X at origin XY=(4,2) in grid squares: XB=(2,-4) gives dot 0 so B is exactly a right angle; A=(-1,-3) is obtuse; C, D acute; key 1 (A)",
+    "confidence": "high"
   },
-  "answer_key": "1",
-  "topic_primary": "Angles",
-  "topics": [
-   "Angles"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with X joined to Y and to A, B, C, D (angle measured from XY)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   9
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q17",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 17,
-  "marks": 1,
-  "question_type": "short",
-  "question": "894 $\\div$ 2 = ______",
-  "answer": "447",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'+' -> '$\\div$'"
-  ],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q18",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 10,
-  "section": "B",
-  "question_no": 18,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the mass of the watermelon in grams?",
-  "answer": "2300",
-  "unit": "g",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume"
-  ],
-  "has_figure": true,
-  "figure_note": "watermelon on a dial scale, pointer between 2 kg and 3 kg",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   10
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q19",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 19,
-  "marks": 1,
-  "question_type": "short",
-  "question": "What is the quotient when 58 is divided by 3?",
-  "answer": "19",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q20",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 20,
-  "marks": 1,
-  "question_type": "short",
-  "question": "Express $\\frac{10}{15}$ in its simplest form.",
-  "answer": "$\\frac{2}{3}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "fraction garbled ('55')"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q21",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 11,
-  "section": "B",
-  "question_no": 21,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Arrange the following fractions from the smallest to the greatest.\n$\\frac{4}{7}$, $\\frac{2}{5}$, $\\frac{1}{2}$",
-  "answer": "$\\frac{2}{5}$, $\\frac{1}{2}$, $\\frac{4}{7}$",
-  "unit": "",
-  "topic_primary": "Fractions",
-  "topics": [
-   "Fractions"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "Q number read as 24"
-  ],
-  "checked_against_image": [
-   11
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q22",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 22,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Complete the number pattern.\n8930, 6930, 4930, ______, 930",
-  "answer": "2930",
-  "unit": "",
-  "topic_primary": "Whole Numbers",
-  "topics": [
-   "Whole Numbers"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'{ |' -> blank"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q23",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 23,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Joyce spent ＄3210 on a sofa set. She also bought a piano for ＄5630. How much did she spend altogether?",
-  "answer": "8840",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q24",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 24,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Find the difference between 1072 and 6498.",
-  "answer": "5426",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q25",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 12,
-  "section": "B",
-  "question_no": 25,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Parcel A has a mass of 2240 g. Parcel B has a mass of 1960 g.\nWhat is the total mass of Parcels A and B?\nGive your answer in kilograms and grams.",
-  "answer": "4 kg 200 g",
-  "unit": "kg g",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "4",
-    "unit": "kg"
-   },
-   {
-    "part": "",
-    "value": "200",
-    "unit": "g"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q26",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 26,
-  "marks": 2,
-  "question_type": "short",
-  "question": "315 cm of ribbon is cut into 9 equal pieces. What is the length of each piece of ribbon?",
-  "answer": "35",
-  "unit": "cm",
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q27",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 13,
-  "section": "B",
-  "question_no": 27,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The graph shows the number of stamps collected by four boys.\nHow many more stamps did Justin collect than Muthu?",
-  "answer": "14",
-  "unit": "",
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs"
-  ],
-  "has_figure": true,
-  "figure_note": "horizontal bar graph: Justin about 54, Muthu 40, Timmy 80, Ali 30",
-  "ocr_fixes": [
-   "'coflect' -> 'collect'"
-  ],
-  "checked_against_image": [
-   13
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q28",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 28,
-  "marks": 2,
-  "question_type": "short",
-  "question": "(a) Name the line perpendicular to AF.\n(b) Name the line parallel to CD.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Name the line perpendicular to AF."
-   },
-   {
-    "part": "b",
-    "text": "Name the line parallel to CD."
-   }
-  ],
-  "answer": "GC; BE",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "GC",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "BE",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Perpendicular and Parallel Lines",
-  "topics": [
-   "Perpendicular and Parallel Lines"
-  ],
-  "has_figure": true,
-  "figure_note": "grid with points A-G and joined lines",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q29",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 14,
-  "section": "B",
-  "question_no": 29,
-  "marks": 2,
-  "question_type": "short",
-  "question": "There were 498 children at a concert. There were 24 more children than adults. How many adults and children were there at the concert?",
-  "answer": "972",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'adults' spacing"
-  ],
-  "checked_against_image": [
-   14
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q30",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 30,
-  "marks": 2,
-  "question_type": "short",
-  "question": "A fruit seller packed 107 apples into bags. He packed 7 apples into each bag. How many apples were left unpacked?",
-  "answer": "2",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q31",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 15,
-  "section": "B",
-  "question_no": 31,
-  "marks": 2,
-  "question_type": "short",
-  "question": "The capacity of a bottle is 330 mℓ. What is the total capacity of six bottles?\nGive your answer in litres and millilitres.",
-  "answer": "1 ℓ 980 mℓ",
-  "unit": "ℓ mℓ",
-  "answer_parts": [
-   {
-    "part": "",
-    "value": "1",
-    "unit": "ℓ"
-   },
-   {
-    "part": "",
-    "value": "980",
-    "unit": "mℓ"
-   }
-  ],
-  "topic_primary": "Length, Mass and Volume",
-  "topics": [
-   "Length, Mass and Volume",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "ml -> mℓ"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q32",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 32,
-  "marks": 2,
-  "question_type": "short",
-  "question": "An aeroplane left Hong Kong at 23 45 and reached Singapore at 04 10 the following day. How long was the flight?",
-  "answer": "4 h 25 min",
-  "unit": "h min",
-  "answer_parts": [
-   {
-    "part": "h",
-    "value": "4",
-    "unit": "h"
-   },
-   {
-    "part": "min",
-    "value": "25",
-    "unit": "min"
-   }
-  ],
-  "topic_primary": "Time",
-  "topics": [
-   "Time"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q33",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 16,
-  "section": "B",
-  "question_no": 33,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Doughnuts are sold in boxes of 6. Mrs Tan needs to buy 62 donuts for a party. What is the least number of boxes of doughnuts Mrs Tan needs to buy?",
-  "answer": "11",
-  "unit": "",
-  "topic_primary": "Multiplication and Division",
-  "topics": [
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'party,' -> 'party.'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q34",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 17,
-  "section": "B",
-  "question_no": 34,
-  "marks": 2,
-  "question_type": "short",
-  "question": "Martha cut a square piece of paper into two parts and formed a new shape as shown in Figure A. What is the perimeter of Figure A?",
-  "answer": "44",
-  "unit": "cm",
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "8 cm square cut at 6 cm, two pieces rearranged into an L shape (Figure A)",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   17
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q35",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 18,
-  "section": "C",
-  "question_no": 35,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Emily saved ＄9 a week for 16 weeks. She spent ＄48 on a toy, how much money had she left?",
-  "answer": "96",
-  "unit": "＄",
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q36",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 19,
-  "section": "C",
-  "question_no": 36,
-  "marks": 3,
-  "question_type": "long",
-  "question": "In a carpark, there are 852 motorcycles.\nThere are 87 more motorcycles than vans.\nThere are twice as many cars as vans.\nHow many cars are there in the carpark?",
-  "answer": "1530",
-  "unit": "",
-  "topic_primary": "Addition and Subtraction",
-  "topics": [
-   "Addition and Subtraction",
-   "Multiplication and Division"
-  ],
-  "has_figure": false,
-  "figure_note": "",
-  "ocr_fixes": [
-   "'acarpark' -> 'a carpark'"
-  ],
-  "checked_against_image": [],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q37",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 20,
-  "section": "C",
-  "question_no": 37,
-  "marks": 3,
-  "question_type": "long",
-  "question": "The graph shows the number of children at a carnival.\n(a) On how many days were there more girls than boys at the carnival?\n(b) What is the total number of children at the carnival on Tuesday and Friday?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "On how many days were there more girls than boys at the carnival?"
-   },
-   {
-    "part": "b",
-    "text": "What is the total number of children at the carnival on Tuesday and Friday?"
-   }
-  ],
-  "answer": "2; 325",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "2",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "325",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Bar Graphs",
-  "topics": [
-   "Bar Graphs",
-   "Addition and Subtraction"
-  ],
-  "has_figure": true,
-  "figure_note": "double bar graph boys/girls Mon-Fri",
-  "ocr_fixes": [],
-  "checked_against_image": [
-   20
-  ],
-  "answer_check": "ok",
-  "confidence": "medium"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q38",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 21,
-  "section": "C",
-  "question_no": 38,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Yummy Bakery is having a sale.\nMuffins for Sale: Buy 1 for ＄3, Buy 2 get 1 free!\na) How many muffins must Tom buy to get 5 free muffins?\nb) What is the most number of muffins that can be bought with ＄35?",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "How many muffins must Tom buy to get 5 free muffins?"
-   },
-   {
-    "part": "b",
-    "text": "What is the most number of muffins that can be bought with ＄35?"
-   }
-  ],
-  "answer": "10; 16",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "10",
-    "unit": ""
-   },
-   {
-    "part": "b",
-    "value": "16",
-    "unit": ""
-   }
-  ],
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "sale sign: Muffins for Sale, Buy 1 for ＄3, Buy 2 get 1 free",
-  "ocr_fixes": [
-   "$ -> ＄",
-   "'Mutftins' -> 'Muffins'"
-  ],
-  "checked_against_image": [
-   21
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q39",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 22,
-  "section": "C",
-  "question_no": 39,
-  "marks": 3,
-  "question_type": "long",
-  "question": "Jenny bought 2 cakes and 3 buns for ＄53.40.\nKaren bought 3 cakes and 3 buns for ＄77.40.\na) Find the cost of 1 cake.\nb) Find the cost of 3 buns.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Find the cost of 1 cake."
-   },
-   {
-    "part": "b",
-    "text": "Find the cost of 3 buns."
-   }
-  ],
-  "answer": "24; 5.40",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "24",
-    "unit": "＄"
-   },
-   {
-    "part": "b",
-    "value": "5.40",
-    "unit": "＄"
-   }
-  ],
-  "topic_primary": "Money",
-  "topics": [
-   "Money",
-   "Multiplication and Division"
-  ],
-  "has_figure": true,
-  "figure_note": "pictures of 2 cakes + 3 buns (＄53.40) and 3 cakes + 3 buns (＄77.40)",
-  "ocr_fixes": [
-   "$ -> ＄"
-  ],
-  "checked_against_image": [
-   22
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- },
- {
-  "id": "2023_P3_Raffles_EOY_Q40",
-  "grade": "P3",
-  "year": "2023",
-  "school": "Raffles Girls'",
-  "exam": "EOY",
-  "source": "(Raffles Girls') (EOY) (2023)",
-  "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
-  "source_pdf_page": 23,
-  "section": "C",
-  "question_no": 40,
-  "marks": 4,
-  "question_type": "long",
-  "question": "Adi and Cheryl each had a piece of wire 32 cm long.\na) Adi used his wire to form a rectangle as shown in Fig 1. Find the length of the rectangle.\nb) Cheryl used her wire to form a square as shown in Fig 2. Find the area of the square.",
-  "question_parts": [
-   {
-    "part": "a",
-    "text": "Adi used his wire to form a rectangle as shown in Fig 1. Find the length of the rectangle."
-   },
-   {
-    "part": "b",
-    "text": "Cheryl used her wire to form a square as shown in Fig 2. Find the area of the square."
-   }
-  ],
-  "answer": "10 cm; 64 cm²",
-  "unit": "",
-  "answer_parts": [
-   {
-    "part": "a",
-    "value": "10",
-    "unit": "cm"
-   },
-   {
-    "part": "b",
-    "value": "64",
-    "unit": "cm²"
-   }
-  ],
-  "topic_primary": "Area and Perimeter",
-  "topics": [
-   "Area and Perimeter"
-  ],
-  "has_figure": true,
-  "figure_note": "Fig 1 rectangle with side 6 cm; Fig 2 square",
-  "ocr_fixes": [
-   "'Fig 4' -> 'Fig 1'"
-  ],
-  "checked_against_image": [
-   23
-  ],
-  "answer_check": "ok",
-  "confidence": "high"
- }
+  {
+    "id": "2023_P3_Raffles_EOY_Q17",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 17,
+    "marks": 1,
+    "question_type": "short",
+    "question": "894 $\\div$ 2 = ______",
+    "answer": "447",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'+' -> '$\\div$'"
+    ],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q18",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 10,
+    "section": "B",
+    "question_no": 18,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the mass of the watermelon in grams?",
+    "answer": "2300",
+    "unit": "g",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume"
+    ],
+    "has_figure": true,
+    "figure_note": "watermelon on a dial scale, pointer between 2 kg and 3 kg",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      10
+    ],
+    "answer_check": "ok (reviewed): pointer is 3 small ticks past 2 kg (about 34 degrees at 10 degrees a tick, 100 g each): 2300 g, key 2300",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q19",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 19,
+    "marks": 1,
+    "question_type": "short",
+    "question": "What is the quotient when 58 is divided by 3?",
+    "answer": "19",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q20",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 20,
+    "marks": 1,
+    "question_type": "short",
+    "question": "Express $\\frac{10}{15}$ in its simplest form.",
+    "answer": "$\\frac{2}{3}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "fraction garbled ('55')"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q21",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 11,
+    "section": "B",
+    "question_no": 21,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Arrange the following fractions from the smallest to the greatest.\n$\\frac{4}{7}$, $\\frac{2}{5}$, $\\frac{1}{2}$",
+    "answer": "$\\frac{2}{5}$, $\\frac{1}{2}$, $\\frac{4}{7}$",
+    "unit": "",
+    "topic_primary": "Fractions",
+    "topics": [
+      "Fractions"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "Q number read as 24"
+    ],
+    "checked_against_image": [
+      11
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q22",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 22,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Complete the number pattern.\n8930, 6930, 4930, ______, 930",
+    "answer": "2930",
+    "unit": "",
+    "topic_primary": "Whole Numbers",
+    "topics": [
+      "Whole Numbers"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'{ |' -> blank"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q23",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 23,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Joyce spent ＄3210 on a sofa set. She also bought a piano for ＄5630. How much did she spend altogether?",
+    "answer": "8840",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q24",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 24,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Find the difference between 1072 and 6498.",
+    "answer": "5426",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q25",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 12,
+    "section": "B",
+    "question_no": 25,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Parcel A has a mass of 2240 g. Parcel B has a mass of 1960 g.\nWhat is the total mass of Parcels A and B?\nGive your answer in kilograms and grams.",
+    "answer": "4 kg 200 g",
+    "unit": "kg g",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "4",
+        "unit": "kg"
+      },
+      {
+        "part": "",
+        "value": "200",
+        "unit": "g"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q26",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 26,
+    "marks": 2,
+    "question_type": "short",
+    "question": "315 cm of ribbon is cut into 9 equal pieces. What is the length of each piece of ribbon?",
+    "answer": "35",
+    "unit": "cm",
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q27",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 13,
+    "section": "B",
+    "question_no": 27,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The graph shows the number of stamps collected by four boys.\nHow many more stamps did Justin collect than Muthu?",
+    "answer": "14",
+    "unit": "",
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs"
+    ],
+    "has_figure": true,
+    "figure_note": "horizontal bar graph: Justin about 54, Muthu 40, Timmy 80, Ali 30",
+    "ocr_fixes": [
+      "'coflect' -> 'collect'"
+    ],
+    "checked_against_image": [
+      13
+    ],
+    "answer_check": "ok (reviewed): Justin 54, Muthu 40, difference 14, key 14",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q28",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 28,
+    "marks": 2,
+    "question_type": "short",
+    "question": "(a) Name the line perpendicular to AF.\n(b) Name the line parallel to CD.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Name the line perpendicular to AF."
+      },
+      {
+        "part": "b",
+        "text": "Name the line parallel to CD."
+      }
+    ],
+    "answer": "GC; BE",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "GC",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "BE",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Perpendicular and Parallel Lines",
+    "topics": [
+      "Perpendicular and Parallel Lines"
+    ],
+    "has_figure": true,
+    "figure_note": "grid with points A-G and joined lines",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q29",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 14,
+    "section": "B",
+    "question_no": 29,
+    "marks": 2,
+    "question_type": "short",
+    "question": "There were 498 children at a concert. There were 24 more children than adults. How many adults and children were there at the concert?",
+    "answer": "972",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'adults' spacing"
+    ],
+    "checked_against_image": [
+      14
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q30",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 30,
+    "marks": 2,
+    "question_type": "short",
+    "question": "A fruit seller packed 107 apples into bags. He packed 7 apples into each bag. How many apples were left unpacked?",
+    "answer": "2",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q31",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 15,
+    "section": "B",
+    "question_no": 31,
+    "marks": 2,
+    "question_type": "short",
+    "question": "The capacity of a bottle is 330 mℓ. What is the total capacity of six bottles?\nGive your answer in litres and millilitres.",
+    "answer": "1 ℓ 980 mℓ",
+    "unit": "ℓ mℓ",
+    "answer_parts": [
+      {
+        "part": "",
+        "value": "1",
+        "unit": "ℓ"
+      },
+      {
+        "part": "",
+        "value": "980",
+        "unit": "mℓ"
+      }
+    ],
+    "topic_primary": "Length, Mass and Volume",
+    "topics": [
+      "Length, Mass and Volume",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "ml -> mℓ"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q32",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 32,
+    "marks": 2,
+    "question_type": "short",
+    "question": "An aeroplane left Hong Kong at 23 45 and reached Singapore at 04 10 the following day. How long was the flight?",
+    "answer": "4 h 25 min",
+    "unit": "h min",
+    "answer_parts": [
+      {
+        "part": "h",
+        "value": "4",
+        "unit": "h"
+      },
+      {
+        "part": "min",
+        "value": "25",
+        "unit": "min"
+      }
+    ],
+    "topic_primary": "Time",
+    "topics": [
+      "Time"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q33",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 16,
+    "section": "B",
+    "question_no": 33,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Doughnuts are sold in boxes of 6. Mrs Tan needs to buy 62 donuts for a party. What is the least number of boxes of doughnuts Mrs Tan needs to buy?",
+    "answer": "11",
+    "unit": "",
+    "topic_primary": "Multiplication and Division",
+    "topics": [
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'party,' -> 'party.'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q34",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 17,
+    "section": "B",
+    "question_no": 34,
+    "marks": 2,
+    "question_type": "short",
+    "question": "Martha cut a square piece of paper into two parts and formed a new shape as shown in Figure A. What is the perimeter of Figure A?",
+    "answer": "44",
+    "unit": "cm",
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "8 cm square cut at 6 cm, two pieces rearranged into an L shape (Figure A)",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      17
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q35",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 18,
+    "section": "C",
+    "question_no": 35,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Emily saved ＄9 a week for 16 weeks. She spent ＄48 on a toy, how much money had she left?",
+    "answer": "96",
+    "unit": "＄",
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q36",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 19,
+    "section": "C",
+    "question_no": 36,
+    "marks": 3,
+    "question_type": "long",
+    "question": "In a carpark, there are 852 motorcycles.\nThere are 87 more motorcycles than vans.\nThere are twice as many cars as vans.\nHow many cars are there in the carpark?",
+    "answer": "1530",
+    "unit": "",
+    "topic_primary": "Addition and Subtraction",
+    "topics": [
+      "Addition and Subtraction",
+      "Multiplication and Division"
+    ],
+    "has_figure": false,
+    "figure_note": "",
+    "ocr_fixes": [
+      "'acarpark' -> 'a carpark'"
+    ],
+    "checked_against_image": [],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q37",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 20,
+    "section": "C",
+    "question_no": 37,
+    "marks": 3,
+    "question_type": "long",
+    "question": "The graph shows the number of children at a carnival.\n(a) On how many days were there more girls than boys at the carnival?\n(b) What is the total number of children at the carnival on Tuesday and Friday?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "On how many days were there more girls than boys at the carnival?"
+      },
+      {
+        "part": "b",
+        "text": "What is the total number of children at the carnival on Tuesday and Friday?"
+      }
+    ],
+    "answer": "2; 325",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "2",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "325",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Bar Graphs",
+    "topics": [
+      "Bar Graphs",
+      "Addition and Subtraction"
+    ],
+    "has_figure": true,
+    "figure_note": "double bar graph boys/girls Mon-Fri",
+    "ocr_fixes": [],
+    "checked_against_image": [
+      20
+    ],
+    "answer_check": "ok (reviewed): (a) Mon and Thu girls>boys =2; (b) Tue 110+45=155, Fri 120+50=170 (scan skew checked), total 325; key agrees",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q38",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 21,
+    "section": "C",
+    "question_no": 38,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Yummy Bakery is having a sale.\nMuffins for Sale: Buy 1 for ＄3, Buy 2 get 1 free!\na) How many muffins must Tom buy to get 5 free muffins?\nb) What is the most number of muffins that can be bought with ＄35?",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "How many muffins must Tom buy to get 5 free muffins?"
+      },
+      {
+        "part": "b",
+        "text": "What is the most number of muffins that can be bought with ＄35?"
+      }
+    ],
+    "answer": "10; 16",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "10",
+        "unit": ""
+      },
+      {
+        "part": "b",
+        "value": "16",
+        "unit": ""
+      }
+    ],
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "sale sign: Muffins for Sale, Buy 1 for ＄3, Buy 2 get 1 free",
+    "ocr_fixes": [
+      "$ -> ＄",
+      "'Mutftins' -> 'Muffins'"
+    ],
+    "checked_against_image": [
+      21
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q39",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 22,
+    "section": "C",
+    "question_no": 39,
+    "marks": 3,
+    "question_type": "long",
+    "question": "Jenny bought 2 cakes and 3 buns for ＄53.40.\nKaren bought 3 cakes and 3 buns for ＄77.40.\na) Find the cost of 1 cake.\nb) Find the cost of 3 buns.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Find the cost of 1 cake."
+      },
+      {
+        "part": "b",
+        "text": "Find the cost of 3 buns."
+      }
+    ],
+    "answer": "24; 5.40",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "24",
+        "unit": "＄"
+      },
+      {
+        "part": "b",
+        "value": "5.40",
+        "unit": "＄"
+      }
+    ],
+    "topic_primary": "Money",
+    "topics": [
+      "Money",
+      "Multiplication and Division"
+    ],
+    "has_figure": true,
+    "figure_note": "pictures of 2 cakes + 3 buns (＄53.40) and 3 cakes + 3 buns (＄77.40)",
+    "ocr_fixes": [
+      "$ -> ＄"
+    ],
+    "checked_against_image": [
+      22
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  },
+  {
+    "id": "2023_P3_Raffles_EOY_Q40",
+    "grade": "P3",
+    "year": "2023",
+    "school": "Raffles Girls'",
+    "exam": "EOY",
+    "source": "(Raffles Girls') (EOY) (2023)",
+    "source_pdf": "2023-P3-Maths-EOY-Raffles.pdf",
+    "source_pdf_page": 23,
+    "section": "C",
+    "question_no": 40,
+    "marks": 4,
+    "question_type": "long",
+    "question": "Adi and Cheryl each had a piece of wire 32 cm long.\na) Adi used his wire to form a rectangle as shown in Fig 1. Find the length of the rectangle.\nb) Cheryl used her wire to form a square as shown in Fig 2. Find the area of the square.",
+    "question_parts": [
+      {
+        "part": "a",
+        "text": "Adi used his wire to form a rectangle as shown in Fig 1. Find the length of the rectangle."
+      },
+      {
+        "part": "b",
+        "text": "Cheryl used her wire to form a square as shown in Fig 2. Find the area of the square."
+      }
+    ],
+    "answer": "10 cm; 64 cm²",
+    "unit": "",
+    "answer_parts": [
+      {
+        "part": "a",
+        "value": "10",
+        "unit": "cm"
+      },
+      {
+        "part": "b",
+        "value": "64",
+        "unit": "cm²"
+      }
+    ],
+    "topic_primary": "Area and Perimeter",
+    "topics": [
+      "Area and Perimeter"
+    ],
+    "has_figure": true,
+    "figure_note": "Fig 1 rectangle with side 6 cm; Fig 2 square",
+    "ocr_fixes": [
+      "'Fig 4' -> 'Fig 1'"
+    ],
+    "checked_against_image": [
+      23
+    ],
+    "answer_check": "ok",
+    "confidence": "high"
+  }
 ]

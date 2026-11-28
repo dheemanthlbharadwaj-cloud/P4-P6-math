@@ -7,3 +7,9 @@
 
 ## Crop fix
 - Checked 11 crops; fixed 2 (Q22 square grid re-cropped with all grid and shape lines and letters, nothing whited; Q19 with 1st/5th/last stick labels and ?). No figure_refs, no has_figure changes. Still imperfect: Q12 noisy scan (scan quality only).
+
+## Answer review
+
+- Q08: final 1; ok (reviewed): symbol is +; 1/4 + 1/2 = 3/4 (no option fits with a division sign); key 1
+- Q12: final 113.15; reviewed: no key entry for Q12 (the key row labelled Q12 is Q11). Counted $50+$50+$10+$2+$1+10c+5c = $113.15
+- Q22: final (a) CD and CF, (b) BF and CD; ok (reviewed): CD (4 right, 4 down) and CF (3 left, 3 down) are perpendicular; BF (3 right, 3 down) is parallel to CD; key CD and CF; BF//CD (other valid pairs exist, e.g. AF//BC)

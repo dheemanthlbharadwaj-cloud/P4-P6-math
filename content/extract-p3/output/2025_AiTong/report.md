@@ -25,3 +25,8 @@
 - Checked 12 crops. Fixed 9 by manual crop: Q3, Q7, Q15 (full grid, no white-out, footer and answer lines removed), Q9, Q20 (string line complete), Q21, Q22, Q24, Q25 (footers, page numbers, mark boxes, answer lines and question text removed, trimmed to the figure). Q5, Q16, Q18 kept as they were.
 - figure_refs added: none. has_figure changes: none.
 - Still imperfect: none (scan is faint and noisy, as in the original).
+
+## Answer review
+- Q3: final 2, unchanged
+- Q15: (a) AB ⊥ DE or CD ⊥ DE (key AG ⊥ GE misprint), (b) AB // CD
+- Q26: final (a) 108 (b) 252, unchanged
