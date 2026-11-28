@@ -1,3 +1,5 @@
+> **Resolved 28 Nov 2026:** the owner asked Claude to review and fix all of these; every item was re-solved from the page images (see each paper's report.md "Answer review"), then imported.
+
 # P3 extraction: questions for the owner to check
 
 Generated 27 Nov 2026 from content/extract-p3/output. Fix answers in the editor after import, or tell Claude which to change.

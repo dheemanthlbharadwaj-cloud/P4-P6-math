@@ -1,0 +1,40 @@
+2021_P3_Nanyang_EOY_Q01: OK
+2025_P3_Northland_EOY_Q23: OK
+2022_P3_RedSwastika_EOY_Q38: OK
+2022_P3_Nanyang_EOY_Q28: OK
+2024_P3_Rulang_EOY_Q06: OK
+2023_P3_Rosyth_EOY_Q33: OK
+2022_P3_SCGS_EOY_Q20: OK
+2024_P3_StHilda_EOY_Q13: OK
+2024_P3_StHilda_EOY_Q18: OK
+2023_P3_SCGS_EOY_Q10: OK (AF // BE is the visibly parallel pair; GC/FD and AB/FD are not parallel; hand-drawn figure is slightly skewed, option 4 AB//FD is close in slope but not equal).
+2024_P3_PLMGS_EOY_Q09: OK
+2024_P3_MGS_EOY_Q08: OK
+2025_P3_ACSP_EOY_Q13: OK
+2022_P3_PeiChun_EOY_Q35: OK
+2023_P3_CatholicHigh_EOY_Q18: OK
+2024_P3_Raffles_EOY_Q21: OK
+2024_P3_Raffles_EOY_Q05: OK
+2022_P3_ACSJ_EOY_Q05: OK
+2024_P3_PLMGS_EOY_Q08: OK
+2023_P3_NanHua_EOY_Q28: FIGURE ISSUE (minor): answer 540 cm is correct (9 gaps x 60 cm; 1st and 10th arrows at the ends), but the figure labels only X at the left end; the Y label at the right end is missing/cut off although the question says Line XY.
+2025_P3_Raffles_EOY_Q01: OK
+2025_P3_ACSJ_EOY_Q27: OK
+2022_P3_CatholicHigh_EOY_Q02: OK
+2023_P3_Rosyth_EOY_Q01: OK
+2025_P3_Raffles_EOY_Q02: OK
+2024_P3_PLMGS_EOY_Q16: OK
+2024_P3_MGS_EOY_Q21: OK
+2023_P3_StNicholas_EOY_Q01: OK
+2025_P3_Northland_EOY_Q09: OK
+2025_P3_Northland_EOY_Q02: OK
+2023_P3_CatholicHigh_EOY_Q15: OK
+2022_P3_SCGS_EOY_Q30: OK
+2025_P3_AiTong_EOY_Q21: OK
+2022_P3_SCGS_EOY_Q25: OK (pointer reads about 340 g by estimate, 4 apples = 340 g, 8 apples = 680 g; dial reading is approximate by eye, no contradiction found).
+2022_P3_HenryPark_EOY_Q12: OK
+2022_P3_Rosyth_EOY_Q07: OK
+2023_P3_MGS_EOY_Q38: OK
+2022_P3_Rosyth_EOY_Q03: OK
+2025_P3_Raffles_EOY_Q25: OK
+2023_P3_StJoseph_EOY_Q07: OK
